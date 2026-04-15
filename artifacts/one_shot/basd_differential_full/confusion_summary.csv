@@ -1,0 +1,26 @@
+true_pathology,pred_pathology,count
+Viral pharyngitis,URTI,2568
+Viral pharyngitis,Possible NSTEMI / STEMI,2427
+Viral pharyngitis,Bronchitis,1847
+Acute COPD exacerbation / infection,Bronchitis,1681
+URTI,Bronchitis,1612
+Bronchiectasis,Bronchitis,1569
+Influenza,URTI,1405
+HIV (initial infection),URTI,1216
+Cluster headache,Possible NSTEMI / STEMI,1163
+Bronchospasm / acute asthma exacerbation,Bronchitis,1147
+URTI,Possible NSTEMI / STEMI,1132
+Acute otitis media,URTI,1089
+Localized edema,Possible NSTEMI / STEMI,1038
+Acute otitis media,Possible NSTEMI / STEMI,892
+Unstable angina,Possible NSTEMI / STEMI,865
+PSVT,Anemia,816
+Panic attack,Guillain-Barré syndrome,809
+Acute laryngitis,Possible NSTEMI / STEMI,808
+Pericarditis,Possible NSTEMI / STEMI,790
+Anemia,Possible NSTEMI / STEMI,775
+Pulmonary embolism,Localized edema,767
+Pneumonia,Bronchitis,755
+Bronchitis,URTI,754
+Stable angina,Possible NSTEMI / STEMI,751
+Tuberculosis,Bronchitis,735

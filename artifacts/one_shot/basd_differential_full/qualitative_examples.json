@@ -1,0 +1,138 @@
+[
+  {
+    "case_id": "test:3075",
+    "age": 12,
+    "sex": "M",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.827608048915863,
+    "top5_predictions": [
+      "Cluster headache",
+      "Anemia",
+      "Chagas",
+      "HIV (initial infection)",
+      "Anaphylaxis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:28629",
+    "age": 8,
+    "sex": "M",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.827608048915863,
+    "top5_predictions": [
+      "Cluster headache",
+      "Anemia",
+      "Chagas",
+      "HIV (initial infection)",
+      "Anaphylaxis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:28897",
+    "age": 14,
+    "sex": "M",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.827608048915863,
+    "top5_predictions": [
+      "Cluster headache",
+      "Anemia",
+      "Chagas",
+      "HIV (initial infection)",
+      "Anaphylaxis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:34099",
+    "age": 11,
+    "sex": "M",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.827608048915863,
+    "top5_predictions": [
+      "Cluster headache",
+      "Anemia",
+      "Chagas",
+      "HIV (initial infection)",
+      "Anaphylaxis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:1438",
+    "age": 57,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8025200963020325,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Chagas",
+      "Inguinal hernia",
+      "Pulmonary embolism"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:1814",
+    "age": 48,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8025200963020325,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Chagas",
+      "Inguinal hernia",
+      "Pulmonary embolism"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:5841",
+    "age": 59,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8025200963020325,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Chagas",
+      "Inguinal hernia",
+      "Pulmonary embolism"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:7437",
+    "age": 55,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8025200963020325,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Chagas",
+      "Inguinal hernia",
+      "Pulmonary embolism"
+    ],
+    "correct": false
+  }
+]

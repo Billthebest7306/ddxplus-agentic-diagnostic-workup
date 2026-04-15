@@ -1,0 +1,4 @@
+candidate_name,objective_name,run_name,artifact_dir,best_validate_accuracy,best_validate_macro_f1,test_accuracy,test_macro_f1,test_top5_accuracy,runtime_seconds,reused_existing_run
+basd_pathology,basd_pathology,basd_pathology_full,/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full,0.37706118627687846,0.36256230867031297,0.3782232827122777,0.37300761300571456,0.7303258033583837,960.2693319320679,False
+basd_joint,basd_joint,basd_joint_full,/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_joint_full,0.37595131674317467,0.3609429032417104,0.37723464829144643,0.37013660066372966,0.7260293319655985,993.7221789360046,False
+basd_differential,basd_differential,basd_differential_full,/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_differential_full,0.3192498187968108,0.2955017668625402,0.3194924514416966,0.29389682871462686,0.6277308238372395,464.69753885269165,False

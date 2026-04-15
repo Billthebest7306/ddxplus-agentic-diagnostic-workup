@@ -1,0 +1,62 @@
+[
+  {
+    "age": 1,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.8274815082550049,
+    "top5_predictions": "Sarcoidosis:0.827 | Myocarditis:0.097 | Chagas:0.035 | Acute dystonic reactions:0.016 | Anemia:0.010",
+    "correct": true
+  },
+  {
+    "age": 3,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.8274815082550049,
+    "top5_predictions": "Sarcoidosis:0.827 | Myocarditis:0.097 | Chagas:0.035 | Acute dystonic reactions:0.016 | Anemia:0.010",
+    "correct": true
+  },
+  {
+    "age": 3,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.8274815082550049,
+    "top5_predictions": "Sarcoidosis:0.827 | Myocarditis:0.097 | Chagas:0.035 | Acute dystonic reactions:0.016 | Anemia:0.010",
+    "correct": true
+  },
+  {
+    "age": 80,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Epiglottitis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8030229806900024,
+    "top5_predictions": "Larygospasm:0.803 | Epiglottitis:0.050 | Anaphylaxis:0.017 | Chagas:0.012 | Acute laryngitis:0.012",
+    "correct": false
+  },
+  {
+    "age": 77,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Epiglottitis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8030229806900024,
+    "top5_predictions": "Larygospasm:0.803 | Epiglottitis:0.050 | Anaphylaxis:0.017 | Chagas:0.012 | Acute laryngitis:0.012",
+    "correct": false
+  },
+  {
+    "age": 108,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Epiglottitis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8030229806900024,
+    "top5_predictions": "Larygospasm:0.803 | Epiglottitis:0.050 | Anaphylaxis:0.017 | Chagas:0.012 | Acute laryngitis:0.012",
+    "correct": false
+  }
+]

@@ -1,0 +1,1881 @@
+[
+  {
+    "case_id": "test:102152",
+    "true_pathology": "Panic attack",
+    "predicted_pathology": "Panic attack",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:102152",
+          "age": 48,
+          "sex": "F",
+          "initial_evidence": "E_82",
+          "initial_evidence_summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes",
+          "visible_evidence": [
+            "E_82"
+          ],
+          "visible_findings_text": "- E_82: Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_82",
+              "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_155",
+          "predicted_pathology": "Anemia",
+          "ranked_differential": [
+            "Anemia",
+            "Panic attack",
+            "Unstable angina",
+            "Atrial fibrillation",
+            "Acute pulmonary edema"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Lightheadedness and dizziness suggest possible anemia or cardiac causes, so asking about palpitations is important."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_155",
+          "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:102152",
+          "age": 48,
+          "sex": "F",
+          "initial_evidence": "E_82",
+          "initial_evidence_summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes",
+          "visible_evidence": [
+            "E_82"
+          ],
+          "visible_findings_text": "- E_82: Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes [source=initial_evidence]\n- E_155: Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_82",
+              "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes"
+            },
+            {
+              "root_evidence_id": "E_155",
+              "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_154",
+          "predicted_pathology": "Anemia",
+          "ranked_differential": [
+            "Anemia",
+            "Stable angina",
+            "Unstable angina",
+            "Panic attack",
+            "Atrial fibrillation"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Lightheadedness and dizziness without palpitations suggests possible anemia or cardiac causes; need to check for paleness or other anemia signs."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_154",
+          "question_en": "Is your skin much paler than usual?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Is your skin much paler than usual? -> no"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:102152",
+          "age": 48,
+          "sex": "F",
+          "initial_evidence": "E_82",
+          "initial_evidence_summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes",
+          "visible_evidence": [
+            "E_82"
+          ],
+          "visible_findings_text": "- E_82: Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes [source=initial_evidence]\n- E_155: Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no [source=request]\n- E_154: Is your skin much paler than usual? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_82",
+              "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you feel lightheaded and dizzy or do you feel like you are about to faint? -> yes"
+            },
+            {
+              "root_evidence_id": "E_155",
+              "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no"
+            },
+            {
+              "root_evidence_id": "E_154",
+              "question_en": "Is your skin much paler than usual?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Is your skin much paler than usual? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Panic attack",
+          "ranked_differential": [
+            "Panic attack",
+            "Atrial fibrillation",
+            "Anemia",
+            "Unstable angina",
+            "Possible NSTEMI / STEMI"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Lightheadedness and dizziness without palpitations or pallor suggests possible panic attack but pain presence could clarify cardiac causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:1698",
+    "true_pathology": "Pulmonary embolism",
+    "predicted_pathology": "Pulmonary embolism",
+    "stop_reason": "agent_stop",
+    "num_requests": 2,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "initial_evidence_summary": "Have you been coughing up blood? -> yes",
+          "visible_evidence": [
+            "E_45"
+          ],
+          "visible_findings_text": "- E_45: Have you been coughing up blood? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you been coughing up blood? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_91",
+          "predicted_pathology": "Pneumonia",
+          "ranked_differential": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Bronchiectasis",
+            "Tuberculosis",
+            "Larygospasm"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Hemoptysis in an elderly patient suggests infectious or vascular lung pathology, so fever presence is important to differentiate pneumonia or embolism."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_91",
+          "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "initial_evidence_summary": "Have you been coughing up blood? -> yes",
+          "visible_evidence": [
+            "E_45"
+          ],
+          "visible_findings_text": "- E_45: Have you been coughing up blood? -> yes [source=initial_evidence]\n- E_91: Do you have a fever (either felt or measured with a thermometer)? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you been coughing up blood? -> yes"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_220",
+          "predicted_pathology": "Pulmonary embolism",
+          "ranked_differential": [
+            "Pulmonary embolism",
+            "Pneumonia",
+            "Bronchiectasis",
+            "Bronchitis",
+            "Larygospasm"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Hemoptysis without fever suggests pulmonary embolism; need to check for pleuritic chest pain."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_220",
+          "question_en": "Do you have pain that is increased when you breathe in deeply?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_220"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have pain that is increased when you breathe in deeply? -> yes"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "initial_evidence_summary": "Have you been coughing up blood? -> yes",
+          "visible_evidence": [
+            "E_45",
+            "E_220"
+          ],
+          "visible_findings_text": "- E_45: Have you been coughing up blood? -> yes [source=initial_evidence]\n- E_91: Do you have a fever (either felt or measured with a thermometer)? -> no [source=request]\n- E_220: Do you have pain that is increased when you breathe in deeply? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you been coughing up blood? -> yes"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+            },
+            {
+              "root_evidence_id": "E_220",
+              "question_en": "Do you have pain that is increased when you breathe in deeply?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain that is increased when you breathe in deeply? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "stop",
+          "requested_evidence_id": null,
+          "predicted_pathology": "Pulmonary embolism",
+          "ranked_differential": [
+            "Pulmonary embolism",
+            "Pneumonia",
+            "Bronchiectasis",
+            "Bronchospasm / acute asthma exacerbation",
+            "Acute COPD exacerbation / infection"
+          ],
+          "confidence": 0.0,
+          "brief_reasoning": "Forced stop after repair failure: requested_evidence_id is not currently available."
+        },
+        "error_flags": [
+          "requested_evidence_id is not currently available."
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "test:44119",
+    "true_pathology": "Boerhaave",
+    "predicted_pathology": "Boerhaave",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:44119",
+          "age": 10,
+          "sex": "M",
+          "initial_evidence": "E_66",
+          "initial_evidence_summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes",
+          "visible_evidence": [
+            "E_66"
+          ],
+          "visible_findings_text": "- E_66: Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_201",
+          "predicted_pathology": "Bronchospasm / acute asthma exacerbation",
+          "ranked_differential": [
+            "Bronchospasm / acute asthma exacerbation",
+            "Bronchitis",
+            "Pneumonia",
+            "Acute COPD exacerbation / infection",
+            "Croup"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Shortness of breath in a 10-year-old suggests respiratory causes; cough presence will help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_201",
+          "question_en": "Do you have a cough?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a cough? -> no"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:44119",
+          "age": 10,
+          "sex": "M",
+          "initial_evidence": "E_66",
+          "initial_evidence_summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes",
+          "visible_evidence": [
+            "E_66"
+          ],
+          "visible_findings_text": "- E_66: Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes [source=initial_evidence]\n- E_201: Do you have a cough? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a cough? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Bronchospasm / acute asthma exacerbation",
+          "ranked_differential": [
+            "Bronchospasm / acute asthma exacerbation",
+            "Bronchitis",
+            "Pneumonia",
+            "Acute pulmonary edema"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Shortness of breath without cough suggests possible bronchospasm or asthma exacerbation; asking about pain may help clarify."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:44119",
+          "age": 10,
+          "sex": "M",
+          "initial_evidence": "E_66",
+          "initial_evidence_summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes",
+          "visible_evidence": [
+            "E_66",
+            "E_53"
+          ],
+          "visible_findings_text": "- E_66: Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes [source=initial_evidence]\n- E_201: Do you have a cough? -> no [source=request]\n- E_53: Do you have pain somewhere, related to your reason for consulting? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a cough? -> no"
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_220",
+          "predicted_pathology": "Boerhaave",
+          "ranked_differential": [
+            "Boerhaave",
+            "Spontaneous pneumothorax",
+            "Pulmonary embolism",
+            "Pericarditis",
+            "Myocarditis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Shortness of breath with pain suggests possible serious thoracic pathology; need to characterize pain with breathing."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_220",
+          "question_en": "Do you have pain that is increased when you breathe in deeply?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have pain that is increased when you breathe in deeply? -> no"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:51798",
+    "true_pathology": "Acute rhinosinusitis",
+    "predicted_pathology": "Acute rhinosinusitis",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:51798",
+          "age": 53,
+          "sex": "F",
+          "initial_evidence": "E_181",
+          "initial_evidence_summary": "Do you have nasal congestion or a clear runny nose? -> yes",
+          "visible_evidence": [
+            "E_181"
+          ],
+          "visible_findings_text": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_181",
+              "question_en": "Do you have nasal congestion or a clear runny nose?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have nasal congestion or a clear runny nose? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_201",
+          "predicted_pathology": "Acute rhinosinusitis",
+          "ranked_differential": [
+            "Acute rhinosinusitis",
+            "Allergic sinusitis",
+            "Viral pharyngitis",
+            "Influenza",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Nasal congestion or clear runny nose suggests upper respiratory tract involvement, so cough presence will help differentiate sinusitis, viral infections, or allergies."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_201",
+          "question_en": "Do you have a cough?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_201"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have a cough? -> yes"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:51798",
+          "age": 53,
+          "sex": "F",
+          "initial_evidence": "E_181",
+          "initial_evidence_summary": "Do you have nasal congestion or a clear runny nose? -> yes",
+          "visible_evidence": [
+            "E_181",
+            "E_201"
+          ],
+          "visible_findings_text": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_201: Do you have a cough? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_181",
+              "question_en": "Do you have nasal congestion or a clear runny nose?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have nasal congestion or a clear runny nose? -> yes"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have a cough? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_91",
+          "predicted_pathology": "Acute rhinosinusitis",
+          "ranked_differential": [
+            "Acute rhinosinusitis",
+            "Allergic sinusitis",
+            "URTI",
+            "Bronchitis",
+            "Influenza"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Nasal congestion and cough suggest upper respiratory tract infection or sinusitis, fever presence would help differentiate."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_91",
+          "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_91"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have a fever (either felt or measured with a thermometer)? -> yes"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:51798",
+          "age": 53,
+          "sex": "F",
+          "initial_evidence": "E_181",
+          "initial_evidence_summary": "Do you have nasal congestion or a clear runny nose? -> yes",
+          "visible_evidence": [
+            "E_181",
+            "E_201",
+            "E_91"
+          ],
+          "visible_findings_text": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_201: Do you have a cough? -> yes [source=request]\n- E_91: Do you have a fever (either felt or measured with a thermometer)? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_181",
+              "question_en": "Do you have nasal congestion or a clear runny nose?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have nasal congestion or a clear runny nose? -> yes"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have a cough? -> yes"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have a fever (either felt or measured with a thermometer)? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_77",
+          "predicted_pathology": "Acute rhinosinusitis",
+          "ranked_differential": [
+            "Acute rhinosinusitis",
+            "Viral pharyngitis",
+            "Acute otitis media",
+            "Bronchitis",
+            "Influenza"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Nasal congestion, runny nose, cough, and fever suggest an upper respiratory infection, likely acute rhinosinusitis; sputum characteristics will help refine diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_77",
+          "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a cough that produces colored or more abundant sputum than usual? -> no"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:102369",
+    "true_pathology": "Inguinal hernia",
+    "predicted_pathology": "Whooping cough",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "initial_evidence_summary": "Do you have intense coughing fits? -> yes",
+          "visible_evidence": [
+            "E_203"
+          ],
+          "visible_findings_text": "- E_203: Do you have intense coughing fits? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have intense coughing fits? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_77",
+          "predicted_pathology": "Whooping cough",
+          "ranked_differential": [
+            "Whooping cough",
+            "Bronchitis",
+            "Bronchospasm / acute asthma exacerbation",
+            "Pneumonia",
+            "Acute laryngitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Intense coughing fits suggest a respiratory cause, and sputum characteristics will help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_77",
+          "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a cough that produces colored or more abundant sputum than usual? -> no"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "initial_evidence_summary": "Do you have intense coughing fits? -> yes",
+          "visible_evidence": [
+            "E_203"
+          ],
+          "visible_findings_text": "- E_203: Do you have intense coughing fits? -> yes [source=initial_evidence]\n- E_77: Do you have a cough that produces colored or more abundant sputum than usual? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have intense coughing fits? -> yes"
+            },
+            {
+              "root_evidence_id": "E_77",
+              "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a cough that produces colored or more abundant sputum than usual? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_91",
+          "predicted_pathology": "Whooping cough",
+          "ranked_differential": [
+            "Whooping cough",
+            "Bronchitis",
+            "Bronchospasm / acute asthma exacerbation",
+            "Pneumonia",
+            "Acute COPD exacerbation / infection"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Intense coughing fits suggest whooping cough, but fever presence will help differentiate infectious causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_91",
+          "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "initial_evidence_summary": "Do you have intense coughing fits? -> yes",
+          "visible_evidence": [
+            "E_203"
+          ],
+          "visible_findings_text": "- E_203: Do you have intense coughing fits? -> yes [source=initial_evidence]\n- E_77: Do you have a cough that produces colored or more abundant sputum than usual? -> no [source=request]\n- E_91: Do you have a fever (either felt or measured with a thermometer)? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have intense coughing fits? -> yes"
+            },
+            {
+              "root_evidence_id": "E_77",
+              "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a cough that produces colored or more abundant sputum than usual? -> no"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_202",
+          "predicted_pathology": "Whooping cough",
+          "ranked_differential": [
+            "Whooping cough",
+            "Bronchitis",
+            "Bronchospasm / acute asthma exacerbation",
+            "Pneumonia",
+            "Acute COPD exacerbation / infection"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Intense coughing fits without fever or colored sputum suggest pertussis (whooping cough) as a leading diagnosis, so confirming whooping cough symptoms is important."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_202",
+          "question_en": "Does the person have a whooping cough?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Does the person have a whooping cough? -> no"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:111306",
+    "true_pathology": "Viral pharyngitis",
+    "predicted_pathology": "GERD",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:111306",
+          "age": 41,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "initial_evidence_summary": "Do you have pain somewhere, related to your reason for consulting? -> yes",
+          "visible_evidence": [
+            "E_53"
+          ],
+          "visible_findings_text": "- E_53: Do you have pain somewhere, related to your reason for consulting? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Stable angina",
+          "ranked_differential": [
+            "Stable angina",
+            "Unstable angina",
+            "Myocarditis",
+            "Pericarditis",
+            "Possible NSTEMI / STEMI"
+          ],
+          "confidence": 0.3,
+          "brief_reasoning": "Pain related to consultation suggests a cardiac or chest pain etiology, so characterizing the pain is important for differential."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_161",
+            "E_54_@_V_181"
+          ],
+          "revealed_values": [
+            "V_161",
+            "V_181"
+          ],
+          "revealed_value_labels": [
+            "sensitive",
+            "burning"
+          ],
+          "summary": "Characterize your pain: -> sensitive, burning"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:111306",
+          "age": 41,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "initial_evidence_summary": "Do you have pain somewhere, related to your reason for consulting? -> yes",
+          "visible_evidence": [
+            "E_53",
+            "E_54_@_V_161",
+            "E_54_@_V_181"
+          ],
+          "visible_findings_text": "- E_53: Do you have pain somewhere, related to your reason for consulting? -> yes [source=initial_evidence]\n- E_54: Characterize your pain: -> sensitive, burning [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_161",
+                "V_181"
+              ],
+              "decoded_values": [
+                "sensitive",
+                "burning"
+              ],
+              "summary": "Characterize your pain: -> sensitive, burning"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_220",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Viral pharyngitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Burning, sensitive pain suggests possible GERD but need to check if pain worsens with deep breathing to rule out other causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_220",
+          "question_en": "Do you have pain that is increased when you breathe in deeply?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have pain that is increased when you breathe in deeply? -> no"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:111306",
+          "age": 41,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "initial_evidence_summary": "Do you have pain somewhere, related to your reason for consulting? -> yes",
+          "visible_evidence": [
+            "E_53",
+            "E_54_@_V_161",
+            "E_54_@_V_181"
+          ],
+          "visible_findings_text": "- E_53: Do you have pain somewhere, related to your reason for consulting? -> yes [source=initial_evidence]\n- E_54: Characterize your pain: -> sensitive, burning [source=request]\n- E_220: Do you have pain that is increased when you breathe in deeply? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_161",
+                "V_181"
+              ],
+              "decoded_values": [
+                "sensitive",
+                "burning"
+              ],
+              "summary": "Characterize your pain: -> sensitive, burning"
+            },
+            {
+              "root_evidence_id": "E_220",
+              "question_en": "Do you have pain that is increased when you breathe in deeply?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have pain that is increased when you breathe in deeply? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_173",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Acute laryngitis",
+            "Bronchitis",
+            "Bronchospasm / acute asthma exacerbation",
+            "Pneumonia"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Burning sensitive pain suggests possible GERD, need to confirm if pain ascends from stomach to throat with bitter taste."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_173",
+          "question_en": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth? -> no"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:14185",
+    "true_pathology": "Localized edema",
+    "predicted_pathology": "Anemia",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:14185",
+          "age": 49,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "initial_evidence_summary": "Have you gained weight recently? -> yes",
+          "visible_evidence": [
+            "E_96"
+          ],
+          "visible_findings_text": "- E_96: Have you gained weight recently? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you gained weight recently? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_162",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Stable angina",
+            "Acute laryngitis",
+            "Chronic rhinosinusitis",
+            "Anemia"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Recent weight gain may be related to GERD or cardiac issues, further weight change details needed."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_162",
+          "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Have you had an involuntary weight loss over the last 3 months? -> no"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:14185",
+          "age": 49,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "initial_evidence_summary": "Have you gained weight recently? -> yes",
+          "visible_evidence": [
+            "E_96"
+          ],
+          "visible_findings_text": "- E_96: Have you gained weight recently? -> yes [source=initial_evidence]\n- E_162: Have you had an involuntary weight loss over the last 3 months? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you gained weight recently? -> yes"
+            },
+            {
+              "root_evidence_id": "E_162",
+              "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Have you had an involuntary weight loss over the last 3 months? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_173",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Stable angina",
+            "Unstable angina",
+            "Myocarditis",
+            "Acute pulmonary edema"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Recent weight gain and no involuntary weight loss suggest a metabolic or cardiac cause; GERD is common with weight gain and can cause symptoms needing confirmation."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_173",
+          "question_en": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth? -> no"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:14185",
+          "age": 49,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "initial_evidence_summary": "Have you gained weight recently? -> yes",
+          "visible_evidence": [
+            "E_96"
+          ],
+          "visible_findings_text": "- E_96: Have you gained weight recently? -> yes [source=initial_evidence]\n- E_162: Have you had an involuntary weight loss over the last 3 months? -> no [source=request]\n- E_173: Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you gained weight recently? -> yes"
+            },
+            {
+              "root_evidence_id": "E_162",
+              "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Have you had an involuntary weight loss over the last 3 months? -> no"
+            },
+            {
+              "root_evidence_id": "E_173",
+              "question_en": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Anemia",
+          "ranked_differential": [
+            "Anemia",
+            "SLE",
+            "Chronic rhinosinusitis",
+            "Bronchitis",
+            "Stable angina"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Weight gain without involuntary loss or reflux symptoms suggests considering anemia and systemic causes; pain presence could help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have pain somewhere, related to your reason for consulting? -> yes"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:28167",
+    "true_pathology": "Spontaneous pneumothorax",
+    "predicted_pathology": "Pneumonia",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:28167",
+          "age": 8,
+          "sex": "F",
+          "initial_evidence": "E_14",
+          "initial_evidence_summary": "Do you have chest pain even at rest? -> yes",
+          "visible_evidence": [
+            "E_14"
+          ],
+          "visible_findings_text": "- E_14: Do you have chest pain even at rest? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_14",
+              "question_en": "Do you have chest pain even at rest?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have chest pain even at rest? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_220",
+          "predicted_pathology": "Pericarditis",
+          "ranked_differential": [
+            "Pericarditis",
+            "Myocarditis",
+            "Acute pulmonary edema",
+            "Stable angina",
+            "Unstable angina"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Chest pain at rest suggests possible cardiac or pulmonary cause, need to check if pain worsens with deep breathing to assess pericarditis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_220",
+          "question_en": "Do you have pain that is increased when you breathe in deeply?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_220"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Do you have pain that is increased when you breathe in deeply? -> yes"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:28167",
+          "age": 8,
+          "sex": "F",
+          "initial_evidence": "E_14",
+          "initial_evidence_summary": "Do you have chest pain even at rest? -> yes",
+          "visible_evidence": [
+            "E_14",
+            "E_220"
+          ],
+          "visible_findings_text": "- E_14: Do you have chest pain even at rest? -> yes [source=initial_evidence]\n- E_220: Do you have pain that is increased when you breathe in deeply? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_14",
+              "question_en": "Do you have chest pain even at rest?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have chest pain even at rest? -> yes"
+            },
+            {
+              "root_evidence_id": "E_220",
+              "question_en": "Do you have pain that is increased when you breathe in deeply?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain that is increased when you breathe in deeply? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_66",
+          "predicted_pathology": "Pneumonia",
+          "ranked_differential": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Acute pulmonary edema",
+            "Bronchitis",
+            "Spontaneous pneumothorax"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Chest pain at rest and increased with deep breathing suggests a pulmonary cause, needing assessment of breathing difficulty."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_66",
+          "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_66"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:28167",
+          "age": 8,
+          "sex": "F",
+          "initial_evidence": "E_14",
+          "initial_evidence_summary": "Do you have chest pain even at rest? -> yes",
+          "visible_evidence": [
+            "E_14",
+            "E_220",
+            "E_66"
+          ],
+          "visible_findings_text": "- E_14: Do you have chest pain even at rest? -> yes [source=initial_evidence]\n- E_220: Do you have pain that is increased when you breathe in deeply? -> yes [source=request]\n- E_66: Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_14",
+              "question_en": "Do you have chest pain even at rest?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have chest pain even at rest? -> yes"
+            },
+            {
+              "root_evidence_id": "E_220",
+              "question_en": "Do you have pain that is increased when you breathe in deeply?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Do you have pain that is increased when you breathe in deeply? -> yes"
+            },
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_91",
+          "predicted_pathology": "Pneumonia",
+          "ranked_differential": [
+            "Pneumonia",
+            "Pulmonary embolism",
+            "Acute pulmonary edema",
+            "Bronchitis",
+            "Acute COPD exacerbation / infection"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Chest pain at rest, increased with deep breath, and significant shortness of breath suggest pneumonia or other pulmonary pathology; fever presence would help confirm infection."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_91",
+          "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:31431",
+    "true_pathology": "Guillain-Barr\u00e9 syndrome",
+    "predicted_pathology": "Myasthenia gravis",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:31431",
+          "age": 3,
+          "sex": "M",
+          "initial_evidence": "E_156",
+          "initial_evidence_summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes",
+          "visible_evidence": [
+            "E_156"
+          ],
+          "visible_findings_text": "- E_156: Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes [source=initial_evidence]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_156",
+              "question_en": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_83",
+          "predicted_pathology": "Myasthenia gravis",
+          "ranked_differential": [
+            "Myasthenia gravis",
+            "Guillain-Barr\u00e9 syndrome",
+            "Epiglottitis",
+            "Acute laryngitis"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Facial weakness in a young child suggests neuromuscular or neurological causes, Myasthenia gravis is a key consideration."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_83",
+          "question_en": "Have you noticed weakness in your facial muscles and/or eyes?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_83"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Have you noticed weakness in your facial muscles and/or eyes? -> yes"
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:31431",
+          "age": 3,
+          "sex": "M",
+          "initial_evidence": "E_156",
+          "initial_evidence_summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes",
+          "visible_evidence": [
+            "E_156",
+            "E_83"
+          ],
+          "visible_findings_text": "- E_156: Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes [source=initial_evidence]\n- E_83: Have you noticed weakness in your facial muscles and/or eyes? -> yes [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_156",
+              "question_en": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes"
+            },
+            {
+              "root_evidence_id": "E_83",
+              "question_en": "Have you noticed weakness in your facial muscles and/or eyes?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you noticed weakness in your facial muscles and/or eyes? -> yes"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_90",
+          "predicted_pathology": "Myasthenia gravis",
+          "ranked_differential": [
+            "Myasthenia gravis",
+            "Guillain-Barr\u00e9 syndrome",
+            "Epiglottitis",
+            "Acute laryngitis"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Facial weakness and muscle weakness suggest a neuromuscular disorder like Myasthenia gravis; fatigue worsening symptoms would support this."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_90",
+          "question_en": "Do your symptoms of muscle weakness increase with fatigue and/or stress?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": [],
+          "revealed_value_labels": [],
+          "summary": "Do your symptoms of muscle weakness increase with fatigue and/or stress? -> no"
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:31431",
+          "age": 3,
+          "sex": "M",
+          "initial_evidence": "E_156",
+          "initial_evidence_summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes",
+          "visible_evidence": [
+            "E_156",
+            "E_83"
+          ],
+          "visible_findings_text": "- E_156: Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes [source=initial_evidence]\n- E_83: Have you noticed weakness in your facial muscles and/or eyes? -> yes [source=request]\n- E_90: Do your symptoms of muscle weakness increase with fatigue and/or stress? -> no [source=request]",
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_156",
+              "question_en": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved? -> yes"
+            },
+            {
+              "root_evidence_id": "E_83",
+              "question_en": "Have you noticed weakness in your facial muscles and/or eyes?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ],
+              "decoded_values": [
+                "yes"
+              ],
+              "summary": "Have you noticed weakness in your facial muscles and/or eyes? -> yes"
+            },
+            {
+              "root_evidence_id": "E_90",
+              "question_en": "Do your symptoms of muscle weakness increase with fatigue and/or stress?",
+              "source": "request",
+              "status": "absent",
+              "values": [],
+              "decoded_values": [],
+              "summary": "Do your symptoms of muscle weakness increase with fatigue and/or stress? -> no"
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_176",
+          "predicted_pathology": "Myasthenia gravis",
+          "ranked_differential": [
+            "Myasthenia gravis",
+            "Guillain-Barr\u00e9 syndrome",
+            "Epiglottitis",
+            "Acute laryngitis"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Facial muscle weakness without fatigue worsening suggests possible Myasthenia gravis; need to check for other limb or facial weakness."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_176",
+          "question_en": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_176"
+          ],
+          "revealed_values": [
+            "present"
+          ],
+          "revealed_value_labels": [
+            "yes"
+          ],
+          "summary": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face? -> yes"
+        }
+      }
+    ]
+  }
+]

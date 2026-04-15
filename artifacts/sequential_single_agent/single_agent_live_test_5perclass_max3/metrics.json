@@ -1,0 +1,22 @@
+{
+  "run_name": "single_agent_live_test_5perclass_max3",
+  "num_cases": 245,
+  "runtime_seconds": 1680.5151019096375,
+  "metrics": {
+    "accuracy": 0.044897959183673466,
+    "top3_accuracy": 0.08979591836734693,
+    "top5_accuracy": 0.1469387755102041,
+    "macro_f1": 0.03482077511538625,
+    "mean_requests": 2.963265306122449,
+    "stop_before_cap_rate": 0.036734693877551024,
+    "mean_api_calls": 3.036734693877551,
+    "total_input_tokens": 3264910,
+    "total_output_tokens": 63926,
+    "total_estimated_cost": null,
+    "turn_distribution": {
+      "2": 9,
+      "3": 236
+    }
+  },
+  "notes": "Live API-backed sequential baseline."
+}

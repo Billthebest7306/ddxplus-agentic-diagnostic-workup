@@ -1,0 +1,26 @@
+true_pathology,pred_pathology,count
+URTI,Viral pharyngitis,4594
+Acute otitis media,Viral pharyngitis,2718
+Cluster headache,Viral pharyngitis,2151
+Acute laryngitis,Viral pharyngitis,2082
+Chronic rhinosinusitis,Viral pharyngitis,1711
+Bronchitis,Viral pharyngitis,1595
+Localized edema,Viral pharyngitis,1380
+GERD,Viral pharyngitis,1329
+Influenza,Viral pharyngitis,1312
+Tuberculosis,Viral pharyngitis,1300
+Pulmonary embolism,Viral pharyngitis,1226
+Pneumonia,Viral pharyngitis,1169
+Allergic sinusitis,Viral pharyngitis,1149
+Anemia,Viral pharyngitis,1059
+Bronchiectasis,Viral pharyngitis,1049
+Acute rhinosinusitis,Viral pharyngitis,1048
+Pericarditis,Viral pharyngitis,981
+Influenza,URTI,948
+HIV (initial infection),URTI,946
+PSVT,Anemia,928
+Pulmonary neoplasm,Viral pharyngitis,909
+HIV (initial infection),Viral pharyngitis,865
+Stable angina,Viral pharyngitis,846
+Possible NSTEMI / STEMI,Viral pharyngitis,792
+Sarcoidosis,Viral pharyngitis,785

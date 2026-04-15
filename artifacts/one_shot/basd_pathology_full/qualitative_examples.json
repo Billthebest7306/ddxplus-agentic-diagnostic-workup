@@ -1,0 +1,138 @@
+[
+  {
+    "case_id": "test:2",
+    "age": 49,
+    "sex": "M",
+    "initial_evidence": "E_128",
+    "true_pathology": "Acute dystonic reactions",
+    "predicted_pathology": "Acute dystonic reactions",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Acute dystonic reactions",
+      "Myasthenia gravis",
+      "HIV (initial infection)",
+      "Sarcoidosis",
+      "Tuberculosis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:25",
+    "age": 47,
+    "sex": "F",
+    "initial_evidence": "E_128",
+    "true_pathology": "Acute dystonic reactions",
+    "predicted_pathology": "Acute dystonic reactions",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Acute dystonic reactions",
+      "Myasthenia gravis",
+      "HIV (initial infection)",
+      "Sarcoidosis",
+      "Tuberculosis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:32",
+    "age": 4,
+    "sex": "M",
+    "initial_evidence": "E_179",
+    "true_pathology": "Anemia",
+    "predicted_pathology": "Anemia",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Anemia",
+      "SLE",
+      "GERD",
+      "Tuberculosis",
+      "Myasthenia gravis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:65",
+    "age": 46,
+    "sex": "F",
+    "initial_evidence": "E_150",
+    "true_pathology": "Inguinal hernia",
+    "predicted_pathology": "Inguinal hernia",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Inguinal hernia",
+      "Pneumonia",
+      "HIV (initial infection)",
+      "Spontaneous pneumothorax",
+      "SLE"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:14958",
+    "age": 72,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8287522792816162,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Epiglottitis",
+      "HIV (initial infection)",
+      "Scombroid food poisoning"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:18274",
+    "age": 66,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8287522792816162,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Epiglottitis",
+      "HIV (initial infection)",
+      "Scombroid food poisoning"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:22151",
+    "age": 63,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8287522792816162,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Epiglottitis",
+      "HIV (initial infection)",
+      "Scombroid food poisoning"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:22646",
+    "age": 71,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8287522792816162,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Epiglottitis",
+      "HIV (initial infection)",
+      "Scombroid food poisoning"
+    ],
+    "correct": false
+  }
+]

@@ -1,0 +1,9 @@
+numpy<2.3
+pandas
+torch
+matplotlib
+tqdm
+requests
+nbformat
+jupyterlab
+ipykernel

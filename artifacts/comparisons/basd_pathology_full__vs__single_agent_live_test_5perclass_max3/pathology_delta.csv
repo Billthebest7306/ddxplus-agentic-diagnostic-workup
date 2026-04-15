@@ -1,0 +1,50 @@
+pathology,count,one_shot_accuracy,sequential_accuracy,delta_accuracy
+Cluster headache,5,0.0,0.4,0.4
+Panic attack,5,0.0,0.2,0.2
+Pulmonary embolism,5,0.2,0.4,0.2
+Influenza,5,0.0,0.0,0.0
+Stable angina,5,0.2,0.2,0.0
+SLE,5,0.0,0.0,0.0
+Chagas,5,0.0,0.0,0.0
+Scombroid food poisoning,5,0.0,0.0,0.0
+Bronchitis,5,0.0,0.0,0.0
+Tuberculosis,5,0.0,0.0,0.0
+Pancreatic neoplasm,5,0.0,0.0,0.0
+Unstable angina,5,0.0,0.0,0.0
+Anaphylaxis,5,0.0,0.0,0.0
+Pneumonia,5,0.0,0.0,0.0
+Acute rhinosinusitis,5,0.0,0.0,0.0
+Acute pulmonary edema,5,0.0,0.0,0.0
+HIV (initial infection),5,0.0,0.0,0.0
+Pericarditis,5,0.2,0.0,-0.2
+Myocarditis,5,0.2,0.0,-0.2
+Spontaneous pneumothorax,5,0.2,0.0,-0.2
+Spontaneous rib fracture,5,0.2,0.0,-0.2
+Possible NSTEMI / STEMI,5,0.2,0.0,-0.2
+Ebola,5,0.2,0.0,-0.2
+GERD,5,0.4,0.2,-0.2
+Epiglottitis,5,0.4,0.2,-0.2
+Croup,5,0.2,0.0,-0.2
+Bronchospasm / acute asthma exacerbation,5,0.2,0.0,-0.2
+Boerhaave,5,0.2,0.0,-0.2
+Atrial fibrillation,5,0.2,0.0,-0.2
+Acute otitis media,5,0.2,0.0,-0.2
+Acute laryngitis,5,0.2,0.0,-0.2
+Pulmonary neoplasm,5,0.2,0.0,-0.2
+URTI,5,0.4,0.0,-0.4
+Myasthenia gravis,5,0.4,0.0,-0.4
+Bronchiolitis,5,0.4,0.0,-0.4
+Sarcoidosis,5,0.4,0.0,-0.4
+Bronchiectasis,5,0.4,0.0,-0.4
+Viral pharyngitis,5,1.0,0.6,-0.4
+Acute COPD exacerbation / infection,5,0.6,0.0,-0.6
+PSVT,5,0.6,0.0,-0.6
+Localized edema,5,0.8,0.0,-0.8
+Inguinal hernia,5,0.8,0.0,-0.8
+Chronic rhinosinusitis,5,0.8,0.0,-0.8
+Allergic sinusitis,5,0.8,0.0,-0.8
+Larygospasm,5,1.0,0.0,-1.0
+Acute dystonic reactions,5,1.0,0.0,-1.0
+Guillain-Barré syndrome,5,1.0,0.0,-1.0
+Anemia,5,1.0,0.0,-1.0
+Whooping cough,5,1.0,0.0,-1.0

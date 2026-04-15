@@ -1,0 +1,1960 @@
+[
+  {
+    "case_id": "test:103936",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:103936",
+          "age": 24,
+          "sex": "M",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Influenza"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Initial evidence suggests an infectious or inflammatory upper respiratory condition, pain presence will help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_89",
+            "E_55_@_V_108",
+            "E_55_@_V_109",
+            "E_55_@_V_125",
+            "E_55_@_V_126"
+          ],
+          "revealed_values": [
+            "V_89",
+            "V_108",
+            "V_109",
+            "V_125",
+            "V_126"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:103936",
+          "age": 24,
+          "sex": "M",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_89",
+            "E_55_@_V_108",
+            "E_55_@_V_109",
+            "E_55_@_V_125",
+            "E_55_@_V_126"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_89",
+                "V_108",
+                "V_109",
+                "V_125",
+                "V_126"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Spontaneous pneumothorax",
+          "ranked_differential": [
+            "Spontaneous pneumothorax",
+            "Pulmonary embolism",
+            "Acute pulmonary edema",
+            "Pneumonia",
+            "Bronchospasm / acute asthma exacerbation"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain characteristics are crucial to differentiate between respiratory and cardiac causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_180",
+            "E_54_@_V_192"
+          ],
+          "revealed_values": [
+            "V_180",
+            "V_192"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:103936",
+          "age": 24,
+          "sex": "M",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_89",
+            "E_55_@_V_108",
+            "E_55_@_V_109",
+            "E_55_@_V_125",
+            "E_55_@_V_126",
+            "E_54_@_V_180",
+            "E_54_@_V_192"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_89",
+                "V_108",
+                "V_109",
+                "V_125",
+                "V_126"
+              ]
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_180",
+                "V_192"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_59",
+          "predicted_pathology": "Cluster headache",
+          "ranked_differential": [
+            "Cluster headache",
+            "Spontaneous pneumothorax",
+            "Boerhaave",
+            "Anaphylaxis",
+            "Acute laryngitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain characteristics are crucial to differentiate cluster headache from other causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_59",
+          "question_en": "How fast did the pain appear?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_59_@_9"
+          ],
+          "revealed_values": [
+            "9"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:107229",
+    "true_pathology": "Panic attack",
+    "predicted_pathology": "Panic attack",
+    "stop_reason": "agent_stop",
+    "num_requests": 2,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:107229",
+          "age": 54,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Stable angina",
+            "Acute laryngitis",
+            "Bronchitis",
+            "Pneumonia"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics are crucial to differentiate common causes like GERD, angina, and respiratory infections."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_55",
+            "E_55_@_V_84",
+            "E_55_@_V_104",
+            "E_55_@_V_153",
+            "E_55_@_V_187"
+          ],
+          "revealed_values": [
+            "V_55",
+            "V_84",
+            "V_104",
+            "V_153",
+            "V_187"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:107229",
+          "age": 54,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_55",
+            "E_55_@_V_84",
+            "E_55_@_V_104",
+            "E_55_@_V_153",
+            "E_55_@_V_187"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_55",
+                "V_84",
+                "V_104",
+                "V_153",
+                "V_187"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Stable angina",
+          "ranked_differential": [
+            "Stable angina",
+            "Unstable angina",
+            "Possible NSTEMI / STEMI",
+            "Myocarditis",
+            "Pericarditis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain characterization is crucial to differentiate cardiac causes such as angina or myocarditis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_182"
+          ],
+          "revealed_values": [
+            "V_182"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:107229",
+          "age": 54,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_55",
+            "E_55_@_V_84",
+            "E_55_@_V_104",
+            "E_55_@_V_153",
+            "E_55_@_V_187",
+            "E_54_@_V_182"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_55",
+                "V_84",
+                "V_104",
+                "V_153",
+                "V_187"
+              ]
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_182"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "stop",
+          "requested_evidence_id": null,
+          "predicted_pathology": "Panic attack",
+          "ranked_differential": [
+            "Panic attack"
+          ],
+          "confidence": 0.0,
+          "brief_reasoning": "Forced stop after repair failure: requested_evidence_id is not currently available."
+        },
+        "error_flags": [
+          "requested_evidence_id is not currently available."
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "test:108589",
+    "true_pathology": "GERD",
+    "predicted_pathology": "GERD",
+    "stop_reason": "agent_stop",
+    "num_requests": 2,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:108589",
+          "age": 27,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Allergic sinusitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Initial evidence suggests an upper respiratory or throat-related condition, so pain presence will help refine diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_103",
+            "E_55_@_V_104",
+            "E_55_@_V_187",
+            "E_55_@_V_197"
+          ],
+          "revealed_values": [
+            "V_103",
+            "V_104",
+            "V_187",
+            "V_197"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:108589",
+          "age": 27,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_103",
+            "E_55_@_V_104",
+            "E_55_@_V_187",
+            "E_55_@_V_197"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_103",
+                "V_104",
+                "V_187",
+                "V_197"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Bronchitis",
+          "ranked_differential": [
+            "Bronchitis",
+            "URTI",
+            "Influenza",
+            "Pneumonia",
+            "Acute rhinosinusitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence suggests respiratory infection; characterizing pain will help differentiate among common respiratory pathologies."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_112",
+            "E_54_@_V_180"
+          ],
+          "revealed_values": [
+            "V_112",
+            "V_180"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:108589",
+          "age": 27,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_103",
+            "E_55_@_V_104",
+            "E_55_@_V_187",
+            "E_55_@_V_197",
+            "E_54_@_V_112",
+            "E_54_@_V_180"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_103",
+                "V_104",
+                "V_187",
+                "V_197"
+              ]
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_112",
+                "V_180"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "stop",
+          "requested_evidence_id": null,
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD"
+          ],
+          "confidence": 0.0,
+          "brief_reasoning": "Forced stop after repair failure: requested_evidence_id is not currently available."
+        },
+        "error_flags": [
+          "requested_evidence_id is not currently available."
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "test:112295",
+    "true_pathology": "Epiglottitis",
+    "predicted_pathology": "Epiglottitis",
+    "stop_reason": "agent_stop",
+    "num_requests": 2,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:112295",
+          "age": 36,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Influenza"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Presence of E_53 suggests symptoms possibly related to upper respiratory infection, pain presence will help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_20",
+            "E_55_@_V_21",
+            "E_55_@_V_26",
+            "E_55_@_V_53",
+            "E_55_@_V_148"
+          ],
+          "revealed_values": [
+            "V_20",
+            "V_21",
+            "V_26",
+            "V_53",
+            "V_148"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:112295",
+          "age": 36,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_20",
+            "E_55_@_V_21",
+            "E_55_@_V_26",
+            "E_55_@_V_53",
+            "E_55_@_V_148"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_20",
+                "V_21",
+                "V_26",
+                "V_53",
+                "V_148"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Boerhaave",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Acute rhinosinusitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain characteristics are crucial to differentiate GERD from other causes of chest or throat pain."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_179",
+            "E_54_@_V_192"
+          ],
+          "revealed_values": [
+            "V_179",
+            "V_192"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:112295",
+          "age": 36,
+          "sex": "F",
+          "initial_evidence": "E_53",
+          "visible_evidence": [
+            "E_53",
+            "E_55_@_V_20",
+            "E_55_@_V_21",
+            "E_55_@_V_26",
+            "E_55_@_V_53",
+            "E_55_@_V_148",
+            "E_54_@_V_179",
+            "E_54_@_V_192"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_20",
+                "V_21",
+                "V_26",
+                "V_53",
+                "V_148"
+              ]
+            },
+            {
+              "root_evidence_id": "E_54",
+              "question_en": "Characterize your pain:",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_179",
+                "V_192"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "stop",
+          "requested_evidence_id": null,
+          "predicted_pathology": "Epiglottitis",
+          "ranked_differential": [
+            "Epiglottitis"
+          ],
+          "confidence": 0.0,
+          "brief_reasoning": "Forced stop after repair failure: requested_evidence_id is not currently available."
+        },
+        "error_flags": [
+          "requested_evidence_id is not currently available."
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "test:1698",
+    "true_pathology": "Pulmonary embolism",
+    "predicted_pathology": "Pulmonary embolism",
+    "stop_reason": "agent_stop",
+    "num_requests": 2,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "visible_evidence": [
+            "E_45"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Stable angina",
+          "ranked_differential": [
+            "Stable angina",
+            "Unstable angina",
+            "Possible NSTEMI / STEMI",
+            "Myocarditis",
+            "Pericarditis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Age and initial evidence suggest cardiac issues, need to clarify presence and nature of pain."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_55",
+            "E_55_@_V_56",
+            "E_55_@_V_127",
+            "E_55_@_V_128",
+            "E_55_@_V_170"
+          ],
+          "revealed_values": [
+            "V_55",
+            "V_56",
+            "V_127",
+            "V_128",
+            "V_170"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "visible_evidence": [
+            "E_45",
+            "E_55_@_V_55",
+            "E_55_@_V_56",
+            "E_55_@_V_127",
+            "E_55_@_V_128",
+            "E_55_@_V_170"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_55",
+                "V_56",
+                "V_127",
+                "V_128",
+                "V_170"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Unstable angina",
+          "ranked_differential": [
+            "Unstable angina",
+            "Stable angina",
+            "Myocarditis",
+            "Possible NSTEMI / STEMI",
+            "Acute pulmonary edema"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Age and initial evidence suggest cardiac issues; pain characteristics are needed to refine diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:1698",
+          "age": 74,
+          "sex": "M",
+          "initial_evidence": "E_45",
+          "visible_evidence": [
+            "E_45",
+            "E_55_@_V_55",
+            "E_55_@_V_56",
+            "E_55_@_V_127",
+            "E_55_@_V_128",
+            "E_55_@_V_170",
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_55",
+                "V_56",
+                "V_127",
+                "V_128",
+                "V_170"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "stop",
+          "requested_evidence_id": null,
+          "predicted_pathology": "Pulmonary embolism",
+          "ranked_differential": [
+            "Pulmonary embolism"
+          ],
+          "confidence": 0.0,
+          "brief_reasoning": "Forced stop after repair failure: requested_evidence_id is not currently available."
+        },
+        "error_flags": [
+          "requested_evidence_id is not currently available."
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "test:102369",
+    "true_pathology": "Inguinal hernia",
+    "predicted_pathology": "Unstable angina",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "visible_evidence": [
+            "E_203"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Stable angina",
+          "ranked_differential": [
+            "Stable angina",
+            "Unstable angina",
+            "Possible NSTEMI / STEMI",
+            "Myocarditis",
+            "Pericarditis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics are crucial to differentiate cardiac causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_88",
+            "E_55_@_V_99",
+            "E_55_@_V_100",
+            "E_55_@_V_168",
+            "E_55_@_V_169"
+          ],
+          "revealed_values": [
+            "V_88",
+            "V_99",
+            "V_100",
+            "V_168",
+            "V_169"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "visible_evidence": [
+            "E_203",
+            "E_55_@_V_88",
+            "E_55_@_V_99",
+            "E_55_@_V_100",
+            "E_55_@_V_168",
+            "E_55_@_V_169"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_88",
+                "V_99",
+                "V_100",
+                "V_168",
+                "V_169"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Pulmonary embolism",
+          "ranked_differential": [
+            "Pulmonary embolism",
+            "Pneumonia",
+            "Acute pulmonary edema",
+            "Bronchospasm / acute asthma exacerbation",
+            "Acute COPD exacerbation / infection"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics are crucial to differentiate cardiopulmonary causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:102369",
+          "age": 53,
+          "sex": "M",
+          "initial_evidence": "E_203",
+          "visible_evidence": [
+            "E_203",
+            "E_55_@_V_88",
+            "E_55_@_V_99",
+            "E_55_@_V_100",
+            "E_55_@_V_168",
+            "E_55_@_V_169",
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_203",
+              "question_en": "Do you have intense coughing fits?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_88",
+                "V_99",
+                "V_100",
+                "V_168",
+                "V_169"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Unstable angina",
+          "ranked_differential": [
+            "Unstable angina",
+            "Stable angina",
+            "Possible NSTEMI / STEMI",
+            "Myocarditis",
+            "Pericarditis"
+          ],
+          "confidence": 0.6,
+          "brief_reasoning": "Characterizing the pain will help differentiate cardiac causes such as unstable angina or NSTEMI from other pathologies."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_183"
+          ],
+          "revealed_values": [
+            "V_183"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:10264",
+    "true_pathology": "Pulmonary embolism",
+    "predicted_pathology": "Acute laryngitis",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:10264",
+          "age": 33,
+          "sex": "F",
+          "initial_evidence": "E_159",
+          "visible_evidence": [
+            "E_159"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_159",
+              "question_en": "Did you lose consciousness?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Allergic sinusitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Initial evidence suggests an upper respiratory issue, need to confirm presence and location of pain."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:10264",
+          "age": 33,
+          "sex": "F",
+          "initial_evidence": "E_159",
+          "visible_evidence": [
+            "E_159",
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_159",
+              "question_en": "Did you lose consciousness?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Bronchitis",
+          "ranked_differential": [
+            "Bronchitis",
+            "Pneumonia",
+            "Acute COPD exacerbation / infection",
+            "URTI",
+            "Influenza"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics will help differentiate respiratory infections and inflammatory conditions."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_52",
+            "E_55_@_V_56",
+            "E_55_@_V_101",
+            "E_55_@_V_128",
+            "E_55_@_V_171"
+          ],
+          "revealed_values": [
+            "V_52",
+            "V_56",
+            "V_101",
+            "V_128",
+            "V_171"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:10264",
+          "age": 33,
+          "sex": "F",
+          "initial_evidence": "E_159",
+          "visible_evidence": [
+            "E_159",
+            "E_53",
+            "E_55_@_V_52",
+            "E_55_@_V_56",
+            "E_55_@_V_101",
+            "E_55_@_V_128",
+            "E_55_@_V_171"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_159",
+              "question_en": "Did you lose consciousness?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_52",
+                "V_56",
+                "V_101",
+                "V_128",
+                "V_171"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Acute laryngitis",
+          "ranked_differential": [
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Viral pharyngitis",
+            "Croup"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Pain characteristics will help differentiate between upper respiratory infections and other causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_161"
+          ],
+          "revealed_values": [
+            "V_161"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:108632",
+    "true_pathology": "Guillain-Barr\u00e9 syndrome",
+    "predicted_pathology": "Viral pharyngitis",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:108632",
+          "age": 20,
+          "sex": "F",
+          "initial_evidence": "E_93",
+          "visible_evidence": [
+            "E_93"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_93",
+              "question_en": "Do you have numbness, loss of sensation or tingling in the feet?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_97",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Whooping cough",
+            "Acute rhinosinusitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Presence of E_93 suggests symptoms that could be related to upper respiratory tract infection, so asking about sore throat is logical next step."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_97",
+          "question_en": "Do you have a sore throat?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:108632",
+          "age": 20,
+          "sex": "F",
+          "initial_evidence": "E_93",
+          "visible_evidence": [
+            "E_93"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_93",
+              "question_en": "Do you have numbness, loss of sensation or tingling in the feet?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_97",
+              "question_en": "Do you have a sore throat?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Acute rhinosinusitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Patient is young with symptom E_93 present, likely related to upper respiratory or throat infection, pain characteristics will help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:108632",
+          "age": 20,
+          "sex": "F",
+          "initial_evidence": "E_93",
+          "visible_evidence": [
+            "E_93"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_93",
+              "question_en": "Do you have numbness, loss of sensation or tingling in the feet?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_97",
+              "question_en": "Do you have a sore throat?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Acute rhinosinusitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics are important to differentiate common upper respiratory infections."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:110154",
+    "true_pathology": "Localized edema",
+    "predicted_pathology": "GERD",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:110154",
+          "age": 46,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "visible_evidence": [
+            "E_96"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Acute laryngitis",
+            "Viral pharyngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Initial evidence suggests upper respiratory or gastrointestinal symptoms, need to clarify presence and location of pain."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_55_@_V_34",
+            "E_55_@_V_35",
+            "E_55_@_V_51",
+            "E_55_@_V_52",
+            "E_55_@_V_73"
+          ],
+          "revealed_values": [
+            "V_34",
+            "V_35",
+            "V_51",
+            "V_52",
+            "V_73"
+          ]
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:110154",
+          "age": 46,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "visible_evidence": [
+            "E_96",
+            "E_55_@_V_34",
+            "E_55_@_V_35",
+            "E_55_@_V_51",
+            "E_55_@_V_52",
+            "E_55_@_V_73"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_34",
+                "V_35",
+                "V_51",
+                "V_52",
+                "V_73"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Viral pharyngitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence and characteristics are crucial to differentiate common respiratory and digestive causes."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "present",
+          "revealed_tokens": [
+            "E_53"
+          ],
+          "revealed_values": [
+            "present"
+          ]
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:110154",
+          "age": 46,
+          "sex": "F",
+          "initial_evidence": "E_96",
+          "visible_evidence": [
+            "E_96",
+            "E_55_@_V_34",
+            "E_55_@_V_35",
+            "E_55_@_V_51",
+            "E_55_@_V_52",
+            "E_55_@_V_73",
+            "E_53"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_96",
+              "question_en": "Have you gained weight recently?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "V_34",
+                "V_35",
+                "V_51",
+                "V_52",
+                "V_73"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "GERD",
+          "ranked_differential": [
+            "GERD",
+            "Boerhaave",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Pneumonia"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain characteristics are crucial to differentiate GERD and esophageal rupture (Boerhaave) in this middle-aged female with chest symptoms."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "present",
+          "revealed_tokens": [
+            "E_54_@_V_161",
+            "E_54_@_V_180"
+          ],
+          "revealed_values": [
+            "V_161",
+            "V_180"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "case_id": "test:110419",
+    "true_pathology": "Acute dystonic reactions",
+    "predicted_pathology": "Bronchitis",
+    "stop_reason": "max_requests_reached",
+    "num_requests": 3,
+    "trace": [
+      {
+        "turn_index": 1,
+        "visible_context_before": {
+          "case_id": "test:110419",
+          "age": 19,
+          "sex": "F",
+          "initial_evidence": "E_205",
+          "visible_evidence": [
+            "E_205"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_53",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Epiglottitis",
+            "Acute rhinosinusitis",
+            "Bronchitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Initial evidence suggests an upper respiratory condition, pain location and characteristics are needed to refine diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_53",
+          "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      },
+      {
+        "turn_index": 2,
+        "visible_context_before": {
+          "case_id": "test:110419",
+          "age": 19,
+          "sex": "F",
+          "initial_evidence": "E_205",
+          "visible_evidence": [
+            "E_205"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_55",
+          "predicted_pathology": "Viral pharyngitis",
+          "ranked_differential": [
+            "Viral pharyngitis",
+            "Acute laryngitis",
+            "Acute rhinosinusitis",
+            "Bronchitis",
+            "Influenza"
+          ],
+          "confidence": 0.5,
+          "brief_reasoning": "Initial evidence suggests an upper respiratory condition, pain presence would help narrow diagnosis."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_55",
+          "question_en": "Do you feel pain somewhere?",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      },
+      {
+        "turn_index": 3,
+        "visible_context_before": {
+          "case_id": "test:110419",
+          "age": 19,
+          "sex": "F",
+          "initial_evidence": "E_205",
+          "visible_evidence": [
+            "E_205"
+          ],
+          "evidence_ledger": [
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "source": "initial_evidence",
+              "status": "present",
+              "values": [
+                "present"
+              ]
+            },
+            {
+              "root_evidence_id": "E_53",
+              "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            },
+            {
+              "root_evidence_id": "E_55",
+              "question_en": "Do you feel pain somewhere?",
+              "source": "request",
+              "status": "absent",
+              "values": []
+            }
+          ]
+        },
+        "agent_response": {
+          "decision": "request",
+          "requested_evidence_id": "E_54",
+          "predicted_pathology": "Bronchitis",
+          "ranked_differential": [
+            "Bronchitis",
+            "URTI",
+            "Influenza",
+            "Pneumonia",
+            "Acute rhinosinusitis"
+          ],
+          "confidence": 0.4,
+          "brief_reasoning": "Pain presence suggests respiratory infection; characterizing pain will help differentiate between bronchitis, URTI, and pneumonia."
+        },
+        "error_flags": [],
+        "reveal_payload": {
+          "root_evidence_id": "E_54",
+          "question_en": "Characterize your pain:",
+          "status": "absent",
+          "revealed_tokens": [],
+          "revealed_values": []
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "run_pair_name": "basd_pathology_full__vs__single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini",
+  "num_paired_cases": 49,
+  "one_shot": {
+    "accuracy": 0.3877551020408163,
+    "top3_accuracy": 0.6530612244897959,
+    "top5_accuracy": 0.7755102040816326,
+    "macro_f1": 0.3294460641399417
+  },
+  "sequential": {
+    "accuracy": 0.24489795918367346,
+    "top3_accuracy": 0.3673469387755102,
+    "top5_accuracy": 0.4897959183673469,
+    "macro_f1": 0.1595238095238095
+  },
+  "win_loss": {
+    "both_correct": 7,
+    "sequential_only_correct": 5,
+    "one_shot_only_correct": 12,
+    "both_wrong": 25
+  },
+  "mean_requests": 1.9183673469387754,
+  "stop_rate_before_cap": 0.6938775510204082,
+  "turn_distribution": {
+    "0": 2,
+    "1": 15,
+    "2": 17,
+    "3": 15
+  },
+  "total_input_tokens": 563729,
+  "total_output_tokens": 13966,
+  "total_estimated_cost": null,
+  "source_artifacts": {
+    "one_shot_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full",
+    "sequential_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini",
+    "one_shot_metrics": {
+      "run_name": "basd_pathology_full",
+      "candidate_name": "basd_pathology",
+      "objective_name": "basd_pathology",
+      "description": "Gold-pathology cross-entropy only.",
+      "run_config": {
+        "seed": 2919,
+        "batch_size": 512,
+        "learning_rate": 0.0003469,
+        "hidden_sizes": [
+          2048,
+          2048,
+          2048
+        ],
+        "dropout": 0.0,
+        "weight_decay": 0.0,
+        "num_workers": 0,
+        "device": "auto",
+        "subset": {
+          "train": null,
+          "validate": null,
+          "test": null
+        },
+        "max_epochs": 30,
+        "patience": 5,
+        "run_mode": "full",
+        "candidate_name": "basd_pathology",
+        "objective_name": "basd_pathology",
+        "description": "Gold-pathology cross-entropy only."
+      },
+      "device": "mps",
+      "train_size": 1025602,
+      "validate_size": 132448,
+      "test_size": 134529,
+      "best_validate_accuracy": 0.37706118627687846,
+      "best_validate_macro_f1": 0.36256230867031297,
+      "test_loss": 1.8559076740778078,
+      "test_metrics": {
+        "accuracy": 0.3782232827122777,
+        "top3_accuracy": 0.6154583770042147,
+        "top5_accuracy": 0.7303258033583837,
+        "macro_f1": 0.37300761300571456,
+        "DDR": 0.5422694427517072,
+        "DDP": 0.5436257139009419,
+        "DDF1": 0.40598476180893484,
+        "DDR@3": 0.33801386070413564,
+        "DDP@3": 0.40325877691798795,
+        "DDF1@3": 0.34650199337441495,
+        "DDR@5": 0.3598590886227752,
+        "DDP@5": 0.44709182902323424,
+        "DDF1@5": 0.3591355531178915
+      },
+      "runtime_seconds": 960.2693319320679
+    },
+    "sequential_metrics": {
+      "run_name": "single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini",
+      "num_cases": 49,
+      "runtime_seconds": 234.50309872627258,
+      "metrics": {
+        "accuracy": 0.24489795918367346,
+        "top3_accuracy": 0.3673469387755102,
+        "top5_accuracy": 0.4897959183673469,
+        "macro_f1": 0.1595238095238095,
+        "mean_requests": 1.9183673469387754,
+        "stop_before_cap_rate": 0.6938775510204082,
+        "mean_api_calls": 2.673469387755102,
+        "total_input_tokens": 563729,
+        "total_output_tokens": 13966,
+        "total_estimated_cost": null,
+        "turn_distribution": {
+          "0": 2,
+          "1": 15,
+          "2": 17,
+          "3": 15
+        }
+      },
+      "notes": "Live API-backed sequential baseline."
+    }
+  }
+}

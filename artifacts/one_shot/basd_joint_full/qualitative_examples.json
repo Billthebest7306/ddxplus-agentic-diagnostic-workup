@@ -1,0 +1,138 @@
+[
+  {
+    "case_id": "test:256",
+    "age": 1,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.9416282176971436,
+    "top5_predictions": [
+      "Sarcoidosis",
+      "Myocarditis",
+      "Chagas",
+      "Acute dystonic reactions",
+      "SLE"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:11120",
+    "age": 3,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.9416282176971436,
+    "top5_predictions": [
+      "Sarcoidosis",
+      "Myocarditis",
+      "Chagas",
+      "Acute dystonic reactions",
+      "SLE"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:13657",
+    "age": 3,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.9416282176971436,
+    "top5_predictions": [
+      "Sarcoidosis",
+      "Myocarditis",
+      "Chagas",
+      "Acute dystonic reactions",
+      "SLE"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:18903",
+    "age": 4,
+    "sex": "F",
+    "initial_evidence": "E_163",
+    "true_pathology": "Sarcoidosis",
+    "predicted_pathology": "Sarcoidosis",
+    "top1_confidence": 0.9416282176971436,
+    "top5_predictions": [
+      "Sarcoidosis",
+      "Myocarditis",
+      "Chagas",
+      "Acute dystonic reactions",
+      "SLE"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:7237",
+    "age": 66,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8596676588058472,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Inguinal hernia",
+      "GERD",
+      "Localized edema"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:11697",
+    "age": 71,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8596676588058472,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Inguinal hernia",
+      "GERD",
+      "Localized edema"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:12286",
+    "age": 66,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8596676588058472,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Inguinal hernia",
+      "GERD",
+      "Localized edema"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:12794",
+    "age": 74,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.8596676588058472,
+    "top5_predictions": [
+      "Larygospasm",
+      "Anaphylaxis",
+      "Inguinal hernia",
+      "GERD",
+      "Localized edema"
+    ],
+    "correct": false
+  }
+]

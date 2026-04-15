@@ -1,0 +1,62 @@
+[
+  {
+    "age": 68,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Larygospasm",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.7947355508804321,
+    "top5_predictions": "Larygospasm:0.795 | Anaphylaxis:0.063 | Inguinal hernia:0.017 | Chagas:0.009 | Pulmonary embolism:0.008",
+    "correct": true
+  },
+  {
+    "age": 29,
+    "sex": "F",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.7884585857391357,
+    "top5_predictions": "Cluster headache:0.788 | Chagas:0.116 | Anemia:0.092 | HIV (initial infection):0.001 | Bronchitis:0.001",
+    "correct": true
+  },
+  {
+    "age": 25,
+    "sex": "F",
+    "initial_evidence": "E_127",
+    "true_pathology": "Cluster headache",
+    "predicted_pathology": "Cluster headache",
+    "top1_confidence": 0.7884585857391357,
+    "top5_predictions": "Cluster headache:0.788 | Chagas:0.116 | Anemia:0.092 | HIV (initial infection):0.001 | Bronchitis:0.001",
+    "correct": true
+  },
+  {
+    "age": 60,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.7947355508804321,
+    "top5_predictions": "Larygospasm:0.795 | Anaphylaxis:0.063 | Inguinal hernia:0.017 | Chagas:0.009 | Pulmonary embolism:0.008",
+    "correct": false
+  },
+  {
+    "age": 73,
+    "sex": "M",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.7801882028579712,
+    "top5_predictions": "Larygospasm:0.780 | Anaphylaxis:0.066 | Inguinal hernia:0.017 | Chagas:0.010 | Pulmonary embolism:0.009",
+    "correct": false
+  },
+  {
+    "age": 46,
+    "sex": "F",
+    "initial_evidence": "E_194",
+    "true_pathology": "Anaphylaxis",
+    "predicted_pathology": "Larygospasm",
+    "top1_confidence": 0.7636492252349854,
+    "top5_predictions": "Larygospasm:0.764 | Anaphylaxis:0.060 | Inguinal hernia:0.018 | Chagas:0.011 | Pulmonary embolism:0.009",
+    "correct": false
+  }
+]

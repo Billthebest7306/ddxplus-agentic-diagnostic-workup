@@ -1,0 +1,54 @@
+{
+  "run_name": "basd_differential_full",
+  "candidate_name": "basd_differential",
+  "objective_name": "basd_differential",
+  "description": "Soft cross-entropy against the DDXPlus differential distribution.",
+  "run_config": {
+    "seed": 2919,
+    "batch_size": 512,
+    "learning_rate": 0.0003469,
+    "hidden_sizes": [
+      2048,
+      2048,
+      2048
+    ],
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "num_workers": 0,
+    "device": "auto",
+    "subset": {
+      "train": null,
+      "validate": null,
+      "test": null
+    },
+    "max_epochs": 30,
+    "patience": 5,
+    "run_mode": "full",
+    "candidate_name": "basd_differential",
+    "objective_name": "basd_differential",
+    "description": "Soft cross-entropy against the DDXPlus differential distribution."
+  },
+  "device": "mps",
+  "train_size": 1025602,
+  "validate_size": 132448,
+  "test_size": 134529,
+  "best_validate_accuracy": 0.3192498187968108,
+  "best_validate_macro_f1": 0.2955017668625402,
+  "test_loss": 2.915762085902525,
+  "test_metrics": {
+    "accuracy": 0.3194924514416966,
+    "top3_accuracy": 0.5179329363928967,
+    "top5_accuracy": 0.6277308238372395,
+    "macro_f1": 0.29389682871462686,
+    "DDR": 0.9319576472278805,
+    "DDP": 0.3968063243176277,
+    "DDF1": 0.5091047993441309,
+    "DDR@3": 0.4524823643972676,
+    "DDP@3": 0.40725543686986937,
+    "DDF1@3": 0.4200254220279643,
+    "DDR@5": 0.5274194907169955,
+    "DDP@5": 0.4360178846196731,
+    "DDF1@5": 0.46033528853812955
+  },
+  "runtime_seconds": 464.69753885269165
+}

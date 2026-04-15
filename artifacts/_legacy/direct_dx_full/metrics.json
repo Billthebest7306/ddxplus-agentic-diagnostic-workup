@@ -1,0 +1,45 @@
+{
+  "run_config": {
+    "seed": 2919,
+    "batch_size": 512,
+    "learning_rate": 0.0003469,
+    "hidden_sizes": [
+      2048,
+      2048,
+      2048
+    ],
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "num_workers": 0,
+    "device": "auto",
+    "name": "direct_dx_full",
+    "subset": {
+      "train": null,
+      "validate": null,
+      "test": null
+    },
+    "max_epochs": 30,
+    "patience": 5
+  },
+  "device": "mps",
+  "train_size": 1025602,
+  "validate_size": 132448,
+  "test_size": 134529,
+  "best_validate_accuracy": 0.31832115245228315,
+  "test_loss": 2.908351049822399,
+  "test_metrics": {
+    "accuracy": 0.3181098499208349,
+    "top3_accuracy": 0.5158813341361342,
+    "top5_accuracy": 0.6378773349984018,
+    "macro_f1": 0.3124130768146029,
+    "DDR": 0.9327445516849371,
+    "DDP": 0.40066003129559136,
+    "DDF1": 0.5118874637767452,
+    "DDR@3": 0.45466033345970014,
+    "DDP@3": 0.4112471412607443,
+    "DDF1@3": 0.4235874792795606,
+    "DDR@5": 0.525196426049402,
+    "DDP@5": 0.4343489755616509,
+    "DDF1@5": 0.45846021044379764
+  }
+}

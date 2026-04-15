@@ -1,0 +1,54 @@
+{
+  "run_name": "basd_joint_full",
+  "candidate_name": "basd_joint",
+  "objective_name": "basd_joint",
+  "description": "Gold pathology cross-entropy + 0.5 * soft differential cross-entropy.",
+  "run_config": {
+    "seed": 2919,
+    "batch_size": 512,
+    "learning_rate": 0.0003469,
+    "hidden_sizes": [
+      2048,
+      2048,
+      2048
+    ],
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "num_workers": 0,
+    "device": "auto",
+    "subset": {
+      "train": null,
+      "validate": null,
+      "test": null
+    },
+    "max_epochs": 30,
+    "patience": 5,
+    "run_mode": "full",
+    "candidate_name": "basd_joint",
+    "objective_name": "basd_joint",
+    "description": "Gold pathology cross-entropy + 0.5 * soft differential cross-entropy."
+  },
+  "device": "mps",
+  "train_size": 1025602,
+  "validate_size": 132448,
+  "test_size": 134529,
+  "best_validate_accuracy": 0.37595131674317467,
+  "best_validate_macro_f1": 0.3609429032417104,
+  "test_loss": 3.5970046679930308,
+  "test_metrics": {
+    "accuracy": 0.37723464829144643,
+    "top3_accuracy": 0.6087758029867166,
+    "top5_accuracy": 0.7260293319655985,
+    "macro_f1": 0.37013660066372966,
+    "DDR": 0.7807994732005658,
+    "DDP": 0.4638188391875649,
+    "DDF1": 0.5125476714187057,
+    "DDR@3": 0.42930644445931104,
+    "DDP@3": 0.38604563576131046,
+    "DDF1@3": 0.39821550248149723,
+    "DDR@5": 0.4894777334255069,
+    "DDP@5": 0.4037973225103882,
+    "DDF1@5": 0.425919843564738
+  },
+  "runtime_seconds": 993.7221789360046
+}
