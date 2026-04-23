@@ -1,0 +1,25 @@
+{
+  "run_name": "single_agent_refined_live_test_1perclass_4budgets_anchor_guard_budget_scaling_v1",
+  "budget": 16,
+  "num_cases": 10,
+  "runtime_seconds": 421.3059070110321,
+  "metrics": {
+    "accuracy": 0.8,
+    "top3_accuracy": 0.8,
+    "top5_accuracy": 0.9,
+    "macro_f1": 0.6969696969696969,
+    "mean_requests": 15.2,
+    "stop_before_cap_rate": 0.8,
+    "mean_api_calls": 16.0,
+    "total_input_tokens": 340156,
+    "total_output_tokens": 18540,
+    "total_estimated_cost": null,
+    "mean_deterministic_margin": 4.646354681842909,
+    "drift_override_rate": 0.0,
+    "turn_distribution": {
+      "15": 8,
+      "16": 2
+    }
+  },
+  "notes": "Live API-backed refined single-agent sequential policy."
+}

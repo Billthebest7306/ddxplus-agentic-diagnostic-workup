@@ -1,0 +1,3 @@
+case_id,source_row_index,split,AGE,SEX,true_pathology,predicted_pathology,correct,ranked_differential,num_requests,stop_reason,api_calls,input_tokens,output_tokens,estimated_cost,initial_evidence,error_flags
+test:38475,38475,test,56,M,Acute COPD exacerbation / infection,Acute pulmonary edema,False,"[""Acute pulmonary edema"", ""Pulmonary embolism"", ""Acute COPD exacerbation / infection"", ""Pneumonia"", ""Bronchospasm / acute asthma exacerbation""]",17,agent_stop,18,77904,1764,,E_66,[]
+test:51200,51200,test,21,M,Acute dystonic reactions,Acute dystonic reactions,True,"[""Acute dystonic reactions"", ""Myasthenia gravis"", ""Epiglottitis"", ""Acute laryngitis"", ""Panic attack""]",10,agent_stop,11,47465,1188,,E_192,[]

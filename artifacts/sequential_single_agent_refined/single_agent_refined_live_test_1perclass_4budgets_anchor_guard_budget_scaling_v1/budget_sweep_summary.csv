@@ -1,0 +1,5 @@
+budget,num_cases,runtime_seconds,accuracy,top3_accuracy,top5_accuracy,macro_f1,mean_requests,stop_before_cap_rate,mean_api_calls,total_input_tokens,total_output_tokens,total_estimated_cost,mean_deterministic_margin,drift_override_rate,turn_distribution,one_shot_accuracy_same_cases,one_shot_top3_same_cases,one_shot_top5_same_cases,seq_only_wins,one_shot_only_wins,both_correct,both_wrong
+8,10,0.004914045333862305,0.8,0.8,0.8,0.7272727272727273,7.3,0.7,8.0,153866,9312,,3.677039449652819,0.0,"{'7': 7, '8': 3}",0.3,0.4,0.4,5,0,3,2
+16,10,421.3059070110321,0.8,0.8,0.9,0.6969696969696969,15.2,0.8,16.0,340156,18540,,4.646354681842909,0.0,"{'15': 8, '16': 2}",0.3,0.4,0.4,5,0,3,2
+24,10,693.2047147750854,0.9,0.9,0.9,0.8181818181818182,22.6,0.9,23.5,540055,27177,,6.054104174565743,0.0,"{'18': 1, '23': 8, '24': 1}",0.3,0.4,0.4,6,0,3,1
+32,10,1011.2540190219879,0.9,0.9,0.9,0.8181818181818182,31.1,0.9,32.0,801610,36778,,6.918748314661042,0.0,"{'31': 9, '32': 1}",0.3,0.4,0.4,6,0,3,1

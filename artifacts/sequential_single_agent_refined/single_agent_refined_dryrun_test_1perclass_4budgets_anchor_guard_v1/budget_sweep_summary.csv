@@ -1,0 +1,5 @@
+budget,num_cases,runtime_seconds,accuracy,top3_accuracy,top5_accuracy,macro_f1,mean_requests,stop_before_cap_rate,mean_api_calls,total_input_tokens,total_output_tokens,total_estimated_cost,mean_deterministic_margin,drift_override_rate,turn_distribution,one_shot_accuracy_same_cases,one_shot_top3_same_cases,one_shot_top5_same_cases,seq_only_wins,one_shot_only_wins,both_correct,both_wrong
+1,10,0.04033613204956055,0.2,0.3,0.5,0.14285714285714285,0.0,1.0,1.0,0,0,,0.9690249165450368,0.0,{'0': 10},0.3,0.4,0.4,0,1,2,7
+3,10,0.07420182228088379,0.4,0.6,0.9,0.26666666666666666,2.0,1.0,3.0,0,0,,1.4029949338519059,0.0,{'2': 10},0.3,0.4,0.4,1,0,3,6
+5,10,0.11119794845581055,0.7,0.8,0.8,0.5555555555555555,4.0,1.0,5.0,0,0,,2.1329505491560066,0.0,{'4': 10},0.3,0.4,0.4,4,0,3,3
+8,10,0.16357183456420898,0.6,0.6,0.6,0.46153846153846156,7.0,1.0,8.0,0,0,,3.057189787535807,0.0,{'7': 10},0.3,0.4,0.4,3,0,3,4

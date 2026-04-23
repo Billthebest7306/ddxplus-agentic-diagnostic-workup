@@ -1,0 +1,24 @@
+{
+  "run_name": "single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1",
+  "budget": 8,
+  "num_cases": 10,
+  "runtime_seconds": 232.7977442741394,
+  "metrics": {
+    "accuracy": 0.2,
+    "top3_accuracy": 0.4,
+    "top5_accuracy": 0.4,
+    "macro_f1": 0.125,
+    "mean_requests": 7.0,
+    "stop_before_cap_rate": 0.9,
+    "mean_api_calls": 7.9,
+    "total_input_tokens": 126753,
+    "total_output_tokens": 9403,
+    "total_estimated_cost": null,
+    "turn_distribution": {
+      "6": 1,
+      "7": 8,
+      "8": 1
+    }
+  },
+  "notes": "Live API-backed improved single-agent sequential baseline."
+}

@@ -1,0 +1,29 @@
+{
+  "run_name": "single_agent_live_test_1perclass_max222_10cases_unrestricted_v5_gpt41mini_10casepilot",
+  "num_cases": 10,
+  "runtime_seconds": 368.0023066997528,
+  "metrics": {
+    "accuracy": 0.4,
+    "top3_accuracy": 0.5,
+    "top5_accuracy": 0.5,
+    "macro_f1": 0.07482993197278912,
+    "mean_requests": 8.6,
+    "stop_before_cap_rate": 1.0,
+    "mean_api_calls": 9.7,
+    "total_input_tokens": 422371,
+    "total_output_tokens": 10136,
+    "total_estimated_cost": null,
+    "turn_distribution": {
+      "0": 1,
+      "3": 1,
+      "5": 1,
+      "7": 1,
+      "8": 1,
+      "9": 2,
+      "12": 1,
+      "15": 1,
+      "18": 1
+    }
+  },
+  "notes": "Live API-backed sequential baseline."
+}

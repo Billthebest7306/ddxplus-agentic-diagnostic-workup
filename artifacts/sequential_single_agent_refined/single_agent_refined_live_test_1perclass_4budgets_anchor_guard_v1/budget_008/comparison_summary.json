@@ -1,0 +1,34 @@
+{
+  "budget": 8,
+  "num_paired_cases": 10,
+  "sequential": {
+    "accuracy": 0.8,
+    "top3_accuracy": 0.8,
+    "top5_accuracy": 0.8,
+    "macro_f1": 0.6666666666666666,
+    "mean_requests": 7.3,
+    "stop_before_cap_rate": 0.7,
+    "mean_api_calls": 8.0,
+    "total_input_tokens": 154098,
+    "total_output_tokens": 7812,
+    "total_estimated_cost": null,
+    "mean_deterministic_margin": 2.9701204426451078,
+    "drift_override_rate": 0.0,
+    "turn_distribution": {
+      "7": 7,
+      "8": 3
+    }
+  },
+  "one_shot": {
+    "accuracy": 0.3,
+    "top3_accuracy": 0.4,
+    "top5_accuracy": 0.4,
+    "macro_f1": 0.1875
+  },
+  "win_loss": {
+    "both_correct": 3,
+    "sequential_only_correct": 5,
+    "one_shot_only_correct": 0,
+    "both_wrong": 2
+  }
+}

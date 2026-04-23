@@ -1,0 +1,11 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE
+test:51200,Acute dystonic reactions,21,M,E_192
+test:64576,Chagas,26,F,E_175
+test:7615,Croup,7,F,E_202
+test:16444,Ebola,0,F,E_66
+test:31431,Guillain-Barré syndrome,3,M,E_156
+test:50802,Pneumonia,33,M,E_175
+test:1698,Pulmonary embolism,74,M,E_45
+test:8795,Stable angina,62,M,E_218
+test:73303,Tuberculosis,51,F,E_45
+test:93175,Whooping cough,27,F,E_112

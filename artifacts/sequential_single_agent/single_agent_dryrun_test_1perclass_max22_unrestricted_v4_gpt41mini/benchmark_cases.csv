@@ -1,0 +1,50 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE
+test:38475,Acute COPD exacerbation / infection,56,M,E_66
+test:51200,Acute dystonic reactions,21,M,E_192
+test:35216,Acute laryngitis,49,F,E_53
+test:76676,Acute otitis media,36,F,E_114
+test:36731,Acute pulmonary edema,54,M,E_66
+test:51798,Acute rhinosinusitis,53,F,E_181
+test:27560,Allergic sinusitis,91,F,E_170
+test:35011,Anaphylaxis,13,F,E_53
+test:45913,Anemia,71,M,E_89
+test:100142,Atrial fibrillation,54,F,E_218
+test:44119,Boerhaave,10,M,E_66
+test:78118,Bronchiectasis,20,M,E_201
+test:40981,Bronchiolitis,1,M,E_32
+test:123633,Bronchitis,83,F,E_201
+test:133132,Bronchospasm / acute asthma exacerbation,36,M,E_201
+test:64576,Chagas,26,F,E_175
+test:72093,Chronic rhinosinusitis,25,M,E_182
+test:20109,Cluster headache,33,F,E_53
+test:7615,Croup,7,F,E_202
+test:16444,Ebola,0,F,E_66
+test:104410,Epiglottitis,8,F,E_212
+test:85140,GERD,11,F,E_173
+test:31431,Guillain-Barré syndrome,3,M,E_156
+test:69056,HIV (initial infection),59,M,E_162
+test:62069,Influenza,67,F,E_94
+test:102369,Inguinal hernia,53,M,E_203
+test:71803,Larygospasm,70,F,E_194
+test:14185,Localized edema,49,F,E_96
+test:29692,Myasthenia gravis,44,F,E_65
+test:103777,Myocarditis,29,F,E_217
+test:7249,PSVT,41,M,E_155
+test:114771,Pancreatic neoplasm,88,F,E_89
+test:102152,Panic attack,48,F,E_82
+test:73884,Pericarditis,18,F,E_155
+test:50802,Pneumonia,33,M,E_175
+test:25228,Possible NSTEMI / STEMI,59,M,E_50
+test:1698,Pulmonary embolism,74,M,E_45
+test:2179,Pulmonary neoplasm,35,M,E_161
+test:58489,SLE,15,F,E_53
+test:96504,Sarcoidosis,40,M,E_66
+test:43860,Scombroid food poisoning,42,M,E_129
+test:28167,Spontaneous pneumothorax,8,F,E_14
+test:93804,Spontaneous rib fracture,53,F,E_216
+test:8795,Stable angina,62,M,E_218
+test:73303,Tuberculosis,51,F,E_45
+test:88906,URTI,40,M,E_53
+test:69125,Unstable angina,57,M,E_53
+test:111306,Viral pharyngitis,41,F,E_53
+test:93175,Whooping cough,27,F,E_112

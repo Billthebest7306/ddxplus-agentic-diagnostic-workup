@@ -1,0 +1,2466 @@
+[
+  {
+    "label": "sequential_only_win",
+    "case_id": "test:81691",
+    "true_pathology": "Croup",
+    "sequential_prediction": "Croup",
+    "one_shot_prediction": "Viral pharyngitis",
+    "num_requests": 4,
+    "stop_reason": "agent_stop",
+    "trace": {
+      "case_id": "test:81691",
+      "budget": 5,
+      "true_pathology": "Croup",
+      "predicted_pathology": "Croup",
+      "raw_predicted_pathology": "Croup",
+      "stop_reason": "agent_stop",
+      "num_requests": 4,
+      "trace": [
+        {
+          "turn_index": 1,
+          "visible_context_before": {
+            "case_id": "test:81691",
+            "age": 9,
+            "sex": "F",
+            "visible_ledger": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]",
+            "request_history_text": "- no additional requests yet",
+            "diagnosis_history_text": "- turn 1: pred=Bronchiolitis, det_top=Bronchiolitis, margin=0.60, decision=request, confidence=0.55"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Bronchiolitis",
+                2.0507807955555557
+              ],
+              [
+                "Allergic sinusitis",
+                1.4514262797359436
+              ],
+              [
+                "URTI",
+                1.3344948438222666
+              ],
+              [
+                "Viral pharyngitis",
+                0.9496555014002672
+              ],
+              [
+                "Influenza",
+                0.73028124
+              ]
+            ],
+            "normalized_weights": {
+              "Bronchiolitis": 0.7515450602201122,
+              "Allergic sinusitis": 0.12223010346346905,
+              "URTI": 0.08576128472399691,
+              "Viral pharyngitis": 0.026719345460940725,
+              "Influenza": 0.013744206131480904
+            },
+            "margin": 0.5993545158196121,
+            "top_score": 2.0507807955555557,
+            "second_score": 1.4514262797359436,
+            "stability_turns": 0,
+            "prior_strength": "moderate",
+            "anchor_top1": "Viral pharyngitis",
+            "anchor_margin": 0.051288723945617676,
+            "unresolved_mass": 0.24845493977988775
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_214",
+              "question_en": "Have you noticed a wheezing sound when you exhale?",
+              "parent_root_id": "E_214",
+              "is_child": false,
+              "score": 0.8631,
+              "weighted_present_rate": 0.7515,
+              "pair_gap": 0.9065,
+              "top12_gap": 1.0,
+              "global_present_rate": 0.0705,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.91; top12_gap=1.00; global_present=0.07"
+            },
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "parent_root_id": "E_66",
+              "is_child": false,
+              "score": 0.8311,
+              "weighted_present_rate": 0.7515,
+              "pair_gap": 0.9065,
+              "top12_gap": 1.0,
+              "global_present_rate": 0.3904,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.91; top12_gap=1.00; global_present=0.39"
+            },
+            {
+              "root_evidence_id": "E_142",
+              "question_en": "Does your mother suffer from asthma?",
+              "parent_root_id": "E_142",
+              "is_child": false,
+              "score": 0.7881,
+              "weighted_present_rate": 0.6012,
+              "pair_gap": 0.7252,
+              "top12_gap": 0.8,
+              "global_present_rate": 0.0001,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.73; top12_gap=0.80; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_209",
+              "question_en": "Are your vaccinations up to date?",
+              "parent_root_id": "E_209",
+              "is_child": false,
+              "score": 0.7825,
+              "weighted_present_rate": 0.6012,
+              "pair_gap": 0.7252,
+              "top12_gap": 0.8,
+              "global_present_rate": 0.0563,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.73; top12_gap=0.80; global_present=0.06"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "parent_root_id": "E_91",
+              "is_child": false,
+              "score": 0.7102,
+              "weighted_present_rate": 0.8365,
+              "pair_gap": 0.6505,
+              "top12_gap": 1.0,
+              "global_present_rate": 0.2192,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.65; top12_gap=1.00; global_present=0.22"
+            },
+            {
+              "root_evidence_id": "E_23",
+              "question_en": "Do you ever temporarily stop breathing while you\u2019re asleep?",
+              "parent_root_id": "E_23",
+              "is_child": false,
+              "score": 0.6708,
+              "weighted_present_rate": 0.4509,
+              "pair_gap": 0.5439,
+              "top12_gap": 0.6,
+              "global_present_rate": 0.0001,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.54; top12_gap=0.60; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_183",
+              "question_en": "Do you live in a rural area?",
+              "parent_root_id": "E_183",
+              "is_child": false,
+              "score": 0.6708,
+              "weighted_present_rate": 0.4509,
+              "pair_gap": 0.5439,
+              "top12_gap": 0.6,
+              "global_present_rate": 0.0001,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.54; top12_gap=0.60; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_195",
+              "question_en": "Do you live in the suburbs?",
+              "parent_root_id": "E_195",
+              "is_child": false,
+              "score": 0.6708,
+              "weighted_present_rate": 0.4509,
+              "pair_gap": 0.5439,
+              "top12_gap": 0.6,
+              "global_present_rate": 0.0001,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.54; top12_gap=0.60; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_48",
+              "question_en": "Do you live with 4 or more people?",
+              "parent_root_id": "E_48",
+              "is_child": false,
+              "score": 0.6094,
+              "weighted_present_rate": 0.529,
+              "pair_gap": 0.3886,
+              "top12_gap": 0.6,
+              "global_present_rate": 0.1016,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.39; top12_gap=0.60; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_169",
+              "question_en": "Is your nose or the back of your throat itchy?",
+              "parent_root_id": "E_169",
+              "is_child": false,
+              "score": 0.5332,
+              "weighted_present_rate": 0.0944,
+              "pair_gap": 0.4021,
+              "top12_gap": 0.7721,
+              "global_present_rate": 0.0125,
+              "dominant_pair": "Bronchiolitis vs Allergic sinusitis",
+              "reason": "separates Bronchiolitis vs Allergic sinusitis; pair_gap=0.40; top12_gap=0.77; global_present=0.01"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.8631,
+            "deterministic_margin": 0.5993545158196121,
+            "stability_turns": 0,
+            "unresolved_mass": 0.24845493977988775
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_214",
+            "predicted_pathology": "Bronchiolitis",
+            "ranked_differential": [
+              "Bronchiolitis",
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza"
+            ],
+            "confidence": 0.5518579934803146,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_214",
+            "predicted_pathology": "Bronchiolitis",
+            "ranked_differential": [
+              "Bronchiolitis",
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza"
+            ],
+            "confidence": 0.5518579934803146,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_214",
+            "predicted_pathology": "Bronchiolitis",
+            "ranked_differential": [
+              "Bronchiolitis",
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza"
+            ],
+            "confidence": 0.5518579934803146,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_214",
+            "question_en": "Have you noticed a wheezing sound when you exhale?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Have you noticed a wheezing sound when you exhale? -> no"
+          }
+        },
+        {
+          "turn_index": 2,
+          "visible_context_before": {
+            "case_id": "test:81691",
+            "age": 9,
+            "sex": "F",
+            "visible_ledger": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_214: Have you noticed a wheezing sound when you exhale? -> no [source=request]",
+            "request_history_text": "- turn 1: Have you noticed a wheezing sound when you exhale? -> no",
+            "diagnosis_history_text": "- turn 1: pred=Bronchiolitis, det_top=Bronchiolitis, margin=0.60, decision=request, confidence=0.55\n- turn 2: pred=Allergic sinusitis, det_top=Allergic sinusitis, margin=0.12, decision=request, confidence=0.50"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Allergic sinusitis",
+                1.4805857942248326
+              ],
+              [
+                "URTI",
+                1.3636543583111556
+              ],
+              [
+                "Viral pharyngitis",
+                0.9788150158891561
+              ],
+              [
+                "Influenza",
+                0.7594407544888889
+              ],
+              [
+                "Croup",
+                0.7332163226844903
+              ]
+            ],
+            "normalized_weights": {
+              "Allergic sinusitis": 0.46804702731090125,
+              "URTI": 0.3283995778129019,
+              "Viral pharyngitis": 0.10231448604168096,
+              "Influenza": 0.052629709378512565,
+              "Croup": 0.04860919945600318
+            },
+            "margin": 0.11693143591367705,
+            "top_score": 1.4805857942248326,
+            "second_score": 1.3636543583111556,
+            "stability_turns": 1,
+            "prior_strength": "moderate",
+            "anchor_top1": "Viral pharyngitis",
+            "anchor_margin": 0.051288723945617676,
+            "unresolved_mass": 0.5319529726890988
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_169",
+              "question_en": "Is your nose or the back of your throat itchy?",
+              "parent_root_id": "E_169",
+              "is_child": false,
+              "score": 0.7061,
+              "weighted_present_rate": 0.3614,
+              "pair_gap": 0.5847,
+              "top12_gap": 0.7721,
+              "global_present_rate": 0.0125,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.58; top12_gap=0.77; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "parent_root_id": "E_91",
+              "is_child": false,
+              "score": 0.6535,
+              "weighted_present_rate": 0.3565,
+              "pair_gap": 0.5458,
+              "top12_gap": 0.7043,
+              "global_present_rate": 0.2192,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.55; top12_gap=0.70; global_present=0.22"
+            },
+            {
+              "root_evidence_id": "E_97",
+              "question_en": "Do you have a sore throat?",
+              "parent_root_id": "E_97",
+              "is_child": false,
+              "score": 0.6511,
+              "weighted_present_rate": 0.2821,
+              "pair_gap": 0.5426,
+              "top12_gap": 0.7705,
+              "global_present_rate": 0.0953,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.54; top12_gap=0.77; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_48",
+              "question_en": "Do you live with 4 or more people?",
+              "parent_root_id": "E_48",
+              "is_child": false,
+              "score": 0.6319,
+              "weighted_present_rate": 0.2989,
+              "pair_gap": 0.5256,
+              "top12_gap": 0.7125,
+              "global_present_rate": 0.1016,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.53; top12_gap=0.71; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_170",
+              "question_en": "Do you have severe itching in one or both eyes?",
+              "parent_root_id": "E_170",
+              "is_child": false,
+              "score": 0.6287,
+              "weighted_present_rate": 0.3152,
+              "pair_gap": 0.5101,
+              "top12_gap": 0.6735,
+              "global_present_rate": 0.0109,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.51; top12_gap=0.67; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_41",
+              "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+              "parent_root_id": "E_41",
+              "is_child": false,
+              "score": 0.6199,
+              "weighted_present_rate": 0.294,
+              "pair_gap": 0.5245,
+              "top12_gap": 0.6468,
+              "global_present_rate": 0.0926,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.52; top12_gap=0.65; global_present=0.09"
+            },
+            {
+              "root_evidence_id": "E_124",
+              "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+              "parent_root_id": "E_124",
+              "is_child": false,
+              "score": 0.6163,
+              "weighted_present_rate": 0.3143,
+              "pair_gap": 0.5085,
+              "top12_gap": 0.6715,
+              "global_present_rate": 0.1181,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.51; top12_gap=0.67; global_present=0.12"
+            },
+            {
+              "root_evidence_id": "E_226",
+              "question_en": "Are you more likely to develop common allergies than the general population?",
+              "parent_root_id": "E_226",
+              "is_child": false,
+              "score": 0.6001,
+              "weighted_present_rate": 0.3018,
+              "pair_gap": 0.4883,
+              "top12_gap": 0.6448,
+              "global_present_rate": 0.0706,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.49; top12_gap=0.64; global_present=0.07"
+            },
+            {
+              "root_evidence_id": "E_86",
+              "question_en": "Do you have any close family members who suffer from allergies (any type), hay fever or eczema?",
+              "parent_root_id": "E_86",
+              "is_child": false,
+              "score": 0.5884,
+              "weighted_present_rate": 0.2912,
+              "pair_gap": 0.4712,
+              "top12_gap": 0.6222,
+              "global_present_rate": 0.0101,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.47; top12_gap=0.62; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_49",
+              "question_en": "Do you attend or work in a daycare?",
+              "parent_root_id": "E_49",
+              "is_child": false,
+              "score": 0.576,
+              "weighted_present_rate": 0.2704,
+              "pair_gap": 0.4802,
+              "top12_gap": 0.6,
+              "global_present_rate": 0.1001,
+              "dominant_pair": "Allergic sinusitis vs URTI",
+              "reason": "separates Allergic sinusitis vs URTI; pair_gap=0.48; top12_gap=0.60; global_present=0.10"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7061,
+            "deterministic_margin": 0.11693143591367705,
+            "stability_turns": 1,
+            "unresolved_mass": 0.5319529726890988
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_169",
+            "predicted_pathology": "Allergic sinusitis",
+            "ranked_differential": [
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup"
+            ],
+            "confidence": 0.4957249159010089,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_169",
+            "predicted_pathology": "Allergic sinusitis",
+            "ranked_differential": [
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup"
+            ],
+            "confidence": 0.4957249159010089,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_169",
+            "predicted_pathology": "Allergic sinusitis",
+            "ranked_differential": [
+              "Allergic sinusitis",
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup"
+            ],
+            "confidence": 0.4957249159010089,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_169",
+            "question_en": "Is your nose or the back of your throat itchy?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Is your nose or the back of your throat itchy? -> no"
+          }
+        },
+        {
+          "turn_index": 3,
+          "visible_context_before": {
+            "case_id": "test:81691",
+            "age": 9,
+            "sex": "F",
+            "visible_ledger": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_214: Have you noticed a wheezing sound when you exhale? -> no [source=request]\n- E_169: Is your nose or the back of your throat itchy? -> no [source=request]",
+            "request_history_text": "- turn 1: Have you noticed a wheezing sound when you exhale? -> no\n- turn 2: Is your nose or the back of your throat itchy? -> no",
+            "diagnosis_history_text": "- turn 1: pred=Bronchiolitis, det_top=Bronchiolitis, margin=0.60, decision=request, confidence=0.55\n- turn 2: pred=Allergic sinusitis, det_top=Allergic sinusitis, margin=0.12, decision=request, confidence=0.50\n- turn 3: pred=URTI, det_top=URTI, margin=0.38, decision=request, confidence=0.60"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "URTI",
+                1.367316531466711
+              ],
+              [
+                "Viral pharyngitis",
+                0.9824771890447116
+              ],
+              [
+                "Influenza",
+                0.7631029276444444
+              ],
+              [
+                "Croup",
+                0.7368784958400458
+              ],
+              [
+                "Cluster headache",
+                0.6210082440897721
+              ]
+            ],
+            "normalized_weights": {
+              "URTI": 0.580038193787084,
+              "Viral pharyngitis": 0.18071372100143698,
+              "Influenza": 0.09295761514298835,
+              "Croup": 0.08585635962650279,
+              "Cluster headache": 0.06043411044198769
+            },
+            "margin": 0.38483934242199946,
+            "top_score": 1.367316531466711,
+            "second_score": 0.9824771890447116,
+            "stability_turns": 1,
+            "prior_strength": "moderate",
+            "anchor_top1": "Viral pharyngitis",
+            "anchor_margin": 0.051288723945617676,
+            "unresolved_mass": 0.419961806212916
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_97",
+              "question_en": "Do you have a sore throat?",
+              "parent_root_id": "E_97",
+              "is_child": false,
+              "score": 0.7411,
+              "weighted_present_rate": 0.4983,
+              "pair_gap": 0.5716,
+              "top12_gap": 0.7705,
+              "global_present_rate": 0.0953,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.57; top12_gap=0.77; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_50",
+              "question_en": "Have you had significantly increased sweating?",
+              "parent_root_id": "E_50",
+              "is_child": false,
+              "score": 0.6328,
+              "weighted_present_rate": 0.4322,
+              "pair_gap": 0.4682,
+              "top12_gap": 0.6377,
+              "global_present_rate": 0.1271,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.47; top12_gap=0.64; global_present=0.13"
+            },
+            {
+              "root_evidence_id": "E_222",
+              "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+              "parent_root_id": "E_222",
+              "is_child": false,
+              "score": 0.6306,
+              "weighted_present_rate": 0.3693,
+              "pair_gap": 0.5074,
+              "top12_gap": 0.6366,
+              "global_present_rate": 0.065,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.51; top12_gap=0.64; global_present=0.06"
+            },
+            {
+              "root_evidence_id": "E_41",
+              "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+              "parent_root_id": "E_41",
+              "is_child": false,
+              "score": 0.5402,
+              "weighted_present_rate": 0.5193,
+              "pair_gap": 0.4581,
+              "top12_gap": 0.1505,
+              "global_present_rate": 0.0926,
+              "dominant_pair": "URTI vs Influenza",
+              "reason": "separates URTI vs Influenza; pair_gap=0.46; top12_gap=0.15; global_present=0.09"
+            },
+            {
+              "root_evidence_id": "E_49",
+              "question_en": "Do you attend or work in a daycare?",
+              "parent_root_id": "E_49",
+              "is_child": false,
+              "score": 0.5068,
+              "weighted_present_rate": 0.4776,
+              "pair_gap": 0.414,
+              "top12_gap": 0.1169,
+              "global_present_rate": 0.1001,
+              "dominant_pair": "URTI vs Influenza",
+              "reason": "separates URTI vs Influenza; pair_gap=0.41; top12_gap=0.12; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_48",
+              "question_en": "Do you live with 4 or more people?",
+              "parent_root_id": "E_48",
+              "is_child": false,
+              "score": 0.5061,
+              "weighted_present_rate": 0.5279,
+              "pair_gap": 0.4401,
+              "top12_gap": 0.0782,
+              "global_present_rate": 0.1016,
+              "dominant_pair": "URTI vs Influenza",
+              "reason": "separates URTI vs Influenza; pair_gap=0.44; top12_gap=0.08; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_227",
+              "question_en": "Are you immunosuppressed?",
+              "parent_root_id": "E_227",
+              "is_child": false,
+              "score": 0.4985,
+              "weighted_present_rate": 0.1621,
+              "pair_gap": 0.3883,
+              "top12_gap": 0.6118,
+              "global_present_rate": 0.0648,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.39; top12_gap=0.61; global_present=0.06"
+            },
+            {
+              "root_evidence_id": "E_144",
+              "question_en": "Do you have diffuse (widespread) muscle pain?",
+              "parent_root_id": "E_144",
+              "is_child": false,
+              "score": 0.4726,
+              "weighted_present_rate": 0.4014,
+              "pair_gap": 0.4515,
+              "top12_gap": 0.5791,
+              "global_present_rate": 0.0944,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.45; top12_gap=0.58; global_present=0.09"
+            },
+            {
+              "root_evidence_id": "E_77",
+              "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+              "parent_root_id": "E_77",
+              "is_child": false,
+              "score": 0.4354,
+              "weighted_present_rate": 0.2373,
+              "pair_gap": 0.3261,
+              "top12_gap": 0.4092,
+              "global_present_rate": 0.0976,
+              "dominant_pair": "URTI vs Viral pharyngitis",
+              "reason": "separates URTI vs Viral pharyngitis; pair_gap=0.33; top12_gap=0.41; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "parent_root_id": "E_201",
+              "is_child": false,
+              "score": 0.4284,
+              "weighted_present_rate": 0.5841,
+              "pair_gap": 0.3399,
+              "top12_gap": 0.0742,
+              "global_present_rate": 0.31,
+              "dominant_pair": "URTI vs Croup",
+              "reason": "separates URTI vs Croup; pair_gap=0.34; top12_gap=0.07; global_present=0.31"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7411,
+            "deterministic_margin": 0.38483934242199946,
+            "stability_turns": 1,
+            "unresolved_mass": 0.419961806212916
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_97",
+            "predicted_pathology": "URTI",
+            "ranked_differential": [
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup",
+              "Cluster headache"
+            ],
+            "confidence": 0.6046646553328399,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_97",
+            "predicted_pathology": "URTI",
+            "ranked_differential": [
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup",
+              "Cluster headache"
+            ],
+            "confidence": 0.6046646553328399,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_97",
+            "predicted_pathology": "URTI",
+            "ranked_differential": [
+              "URTI",
+              "Viral pharyngitis",
+              "Influenza",
+              "Croup",
+              "Cluster headache"
+            ],
+            "confidence": 0.6046646553328399,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_97",
+            "question_en": "Do you have a sore throat?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Do you have a sore throat? -> no"
+          }
+        },
+        {
+          "turn_index": 4,
+          "visible_context_before": {
+            "case_id": "test:81691",
+            "age": 9,
+            "sex": "F",
+            "visible_ledger": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_214: Have you noticed a wheezing sound when you exhale? -> no [source=request]\n- E_169: Is your nose or the back of your throat itchy? -> no [source=request]\n- E_97: Do you have a sore throat? -> no [source=request]",
+            "request_history_text": "- turn 1: Have you noticed a wheezing sound when you exhale? -> no\n- turn 2: Is your nose or the back of your throat itchy? -> no\n- turn 3: Do you have a sore throat? -> no",
+            "diagnosis_history_text": "- turn 2: pred=Allergic sinusitis, det_top=Allergic sinusitis, margin=0.12, decision=request, confidence=0.50\n- turn 3: pred=URTI, det_top=URTI, margin=0.38, decision=request, confidence=0.60\n- turn 4: pred=Viral pharyngitis, det_top=Viral pharyngitis, margin=0.25, decision=request, confidence=0.62"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Viral pharyngitis",
+                1.0268085571447116
+              ],
+              [
+                "Croup",
+                0.7812098639400459
+              ],
+              [
+                "Cluster headache",
+                0.6653396121897721
+              ],
+              [
+                "Acute otitis media",
+                0.6529274221070808
+              ],
+              [
+                "Chronic rhinosinusitis",
+                0.5069267823444038
+              ]
+            ],
+            "normalized_weights": {
+              "Viral pharyngitis": 0.4276219525881306,
+              "Croup": 0.20316146412204045,
+              "Cluster headache": 0.14300492606161327,
+              "Acute otitis media": 0.13772602427439049,
+              "Chronic rhinosinusitis": 0.08848563295382528
+            },
+            "margin": 0.24559869320466576,
+            "top_score": 1.0268085571447116,
+            "second_score": 0.7812098639400459,
+            "stability_turns": 1,
+            "prior_strength": "moderate",
+            "anchor_top1": "Viral pharyngitis",
+            "anchor_margin": 0.051288723945617676,
+            "unresolved_mass": 0.5723780474118694
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_41",
+              "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+              "parent_root_id": "E_41",
+              "is_child": false,
+              "score": 0.6777,
+              "weighted_present_rate": 0.341,
+              "pair_gap": 0.5357,
+              "top12_gap": 0.7973,
+              "global_present_rate": 0.0926,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.54; top12_gap=0.80; global_present=0.09"
+            },
+            {
+              "root_evidence_id": "E_49",
+              "question_en": "Do you attend or work in a daycare?",
+              "parent_root_id": "E_49",
+              "is_child": false,
+              "score": 0.6177,
+              "weighted_present_rate": 0.3066,
+              "pair_gap": 0.4816,
+              "top12_gap": 0.7169,
+              "global_present_rate": 0.1001,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.48; top12_gap=0.72; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "parent_root_id": "E_201",
+              "is_child": false,
+              "score": 0.5919,
+              "weighted_present_rate": 0.408,
+              "pair_gap": 0.4295,
+              "top12_gap": 0.6113,
+              "global_present_rate": 0.31,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.43; top12_gap=0.61; global_present=0.31"
+            },
+            {
+              "root_evidence_id": "E_79",
+              "question_en": "Do you smoke cigarettes?",
+              "parent_root_id": "E_79",
+              "is_child": false,
+              "score": 0.5672,
+              "weighted_present_rate": 0.3258,
+              "pair_gap": 0.4472,
+              "top12_gap": 0.6075,
+              "global_present_rate": 0.2853,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.45; top12_gap=0.61; global_present=0.29"
+            },
+            {
+              "root_evidence_id": "E_48",
+              "question_en": "Do you live with 4 or more people?",
+              "parent_root_id": "E_48",
+              "is_child": false,
+              "score": 0.5568,
+              "weighted_present_rate": 0.2712,
+              "pair_gap": 0.4262,
+              "top12_gap": 0.6343,
+              "global_present_rate": 0.1016,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.43; top12_gap=0.63; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_227",
+              "question_en": "Are you immunosuppressed?",
+              "parent_root_id": "E_227",
+              "is_child": false,
+              "score": 0.5439,
+              "weighted_present_rate": 0.2616,
+              "pair_gap": 0.411,
+              "top12_gap": 0.6118,
+              "global_present_rate": 0.0648,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.41; top12_gap=0.61; global_present=0.06"
+            },
+            {
+              "root_evidence_id": "E_194",
+              "question_en": "Have you noticed a high pitched sound when breathing in?",
+              "parent_root_id": "E_194",
+              "is_child": false,
+              "score": 0.5138,
+              "weighted_present_rate": 0.1515,
+              "pair_gap": 0.3314,
+              "top12_gap": 0.7458,
+              "global_present_rate": 0.0366,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.33; top12_gap=0.75; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_45",
+              "question_en": "Have you been coughing up blood?",
+              "parent_root_id": "E_45",
+              "is_child": false,
+              "score": 0.4975,
+              "weighted_present_rate": 0.2366,
+              "pair_gap": 0.3718,
+              "top12_gap": 0.5534,
+              "global_present_rate": 0.0982,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.37; top12_gap=0.55; global_present=0.10"
+            },
+            {
+              "root_evidence_id": "E_202",
+              "question_en": "Does the person have a whooping cough?",
+              "parent_root_id": "E_202",
+              "is_child": false,
+              "score": 0.4794,
+              "weighted_present_rate": 0.1377,
+              "pair_gap": 0.3013,
+              "top12_gap": 0.678,
+              "global_present_rate": 0.0013,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.30; top12_gap=0.68; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_4",
+              "question_en": "Have you or any member of your family ever had croup?",
+              "parent_root_id": "E_4",
+              "is_child": false,
+              "score": 0.4604,
+              "weighted_present_rate": 0.1308,
+              "pair_gap": 0.2862,
+              "top12_gap": 0.6441,
+              "global_present_rate": 0.0013,
+              "dominant_pair": "Viral pharyngitis vs Croup",
+              "reason": "separates Viral pharyngitis vs Croup; pair_gap=0.29; top12_gap=0.64; global_present=0.00"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.6777,
+            "deterministic_margin": 0.24559869320466576,
+            "stability_turns": 1,
+            "unresolved_mass": 0.5723780474118694
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_41",
+            "predicted_pathology": "Viral pharyngitis",
+            "ranked_differential": [
+              "Viral pharyngitis",
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_41",
+            "predicted_pathology": "Viral pharyngitis",
+            "ranked_differential": [
+              "Viral pharyngitis",
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_41",
+            "predicted_pathology": "Viral pharyngitis",
+            "ranked_differential": [
+              "Viral pharyngitis",
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_41",
+            "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Have you been in contact with a person with similar symptoms in the past 2 weeks? -> no"
+          }
+        },
+        {
+          "turn_index": 5,
+          "visible_context_before": {
+            "case_id": "test:81691",
+            "age": 9,
+            "sex": "F",
+            "visible_ledger": "- E_181: Do you have nasal congestion or a clear runny nose? -> yes [source=initial_evidence]\n- E_214: Have you noticed a wheezing sound when you exhale? -> no [source=request]\n- E_169: Is your nose or the back of your throat itchy? -> no [source=request]\n- E_97: Do you have a sore throat? -> no [source=request]\n- E_41: Have you been in contact with a person with similar symptoms in the past 2 weeks? -> no [source=request]",
+            "request_history_text": "- turn 1: Have you noticed a wheezing sound when you exhale? -> no\n- turn 2: Is your nose or the back of your throat itchy? -> no\n- turn 3: Do you have a sore throat? -> no\n- turn 4: Have you been in contact with a person with similar symptoms in the past 2 weeks? -> no",
+            "diagnosis_history_text": "- turn 3: pred=URTI, det_top=URTI, margin=0.38, decision=request, confidence=0.60\n- turn 4: pred=Viral pharyngitis, det_top=Viral pharyngitis, margin=0.25, decision=request, confidence=0.62\n- turn 5: pred=Croup, det_top=Croup, margin=0.12, decision=stop, confidence=0.65"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Croup",
+                0.8237844835956014
+              ],
+              [
+                "Cluster headache",
+                0.7079142318453276
+              ],
+              [
+                "Acute otitis media",
+                0.6955020417626363
+              ],
+              [
+                "Chronic rhinosinusitis",
+                0.5495014019999593
+              ],
+              [
+                "Pneumonia",
+                0.33903472557536635
+              ]
+            ],
+            "normalized_weights": {
+              "Croup": 0.3281351216606903,
+              "Cluster headache": 0.23097361999280222,
+              "Acute otitis media": 0.22244743079806079,
+              "Chronic rhinosinusitis": 0.1429170835128702,
+              "Pneumonia": 0.0755267440355765
+            },
+            "margin": 0.11587025175027377,
+            "top_score": 0.8237844835956014,
+            "second_score": 0.7079142318453276,
+            "stability_turns": 1,
+            "prior_strength": "moderate",
+            "anchor_top1": "Viral pharyngitis",
+            "anchor_margin": 0.051288723945617676,
+            "unresolved_mass": 0.6718648783393097
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_194",
+              "question_en": "Have you noticed a high pitched sound when breathing in?",
+              "parent_root_id": "E_194",
+              "is_child": false,
+              "score": 0.5891,
+              "weighted_present_rate": 0.2447,
+              "pair_gap": 0.4308,
+              "top12_gap": 0.7458,
+              "global_present_rate": 0.0366,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.43; top12_gap=0.75; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_25",
+              "question_en": "Have any of your family members been diagnosed with cluster headaches?",
+              "parent_root_id": "E_25",
+              "is_child": false,
+              "score": 0.5831,
+              "weighted_present_rate": 0.1936,
+              "pair_gap": 0.39,
+              "top12_gap": 0.8381,
+              "global_present_rate": 0.0185,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.39; top12_gap=0.84; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_91",
+              "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+              "parent_root_id": "E_91",
+              "is_child": false,
+              "score": 0.5811,
+              "weighted_present_rate": 0.3908,
+              "pair_gap": 0.3999,
+              "top12_gap": 0.6441,
+              "global_present_rate": 0.2192,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.40; top12_gap=0.64; global_present=0.22"
+            },
+            {
+              "root_evidence_id": "E_219",
+              "question_en": "Are your symptoms more prominent at night?",
+              "parent_root_id": "E_219",
+              "is_child": false,
+              "score": 0.5511,
+              "weighted_present_rate": 0.2554,
+              "pair_gap": 0.403,
+              "top12_gap": 0.6441,
+              "global_present_rate": 0.0325,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.40; top12_gap=0.64; global_present=0.03"
+            },
+            {
+              "root_evidence_id": "E_202",
+              "question_en": "Does the person have a whooping cough?",
+              "parent_root_id": "E_202",
+              "is_child": false,
+              "score": 0.5478,
+              "weighted_present_rate": 0.2225,
+              "pair_gap": 0.3916,
+              "top12_gap": 0.678,
+              "global_present_rate": 0.0013,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.39; top12_gap=0.68; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_184",
+              "question_en": "Do you take medication that dilates your blood vessels?",
+              "parent_root_id": "E_184",
+              "is_child": false,
+              "score": 0.5255,
+              "weighted_present_rate": 0.1705,
+              "pair_gap": 0.3436,
+              "top12_gap": 0.7383,
+              "global_present_rate": 0.0163,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.34; top12_gap=0.74; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_4",
+              "question_en": "Have you or any member of your family ever had croup?",
+              "parent_root_id": "E_4",
+              "is_child": false,
+              "score": 0.5254,
+              "weighted_present_rate": 0.2113,
+              "pair_gap": 0.372,
+              "top12_gap": 0.6441,
+              "global_present_rate": 0.0013,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.37; top12_gap=0.64; global_present=0.00"
+            },
+            {
+              "root_evidence_id": "E_66",
+              "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+              "parent_root_id": "E_66",
+              "is_child": false,
+              "score": 0.5182,
+              "weighted_present_rate": 0.2597,
+              "pair_gap": 0.406,
+              "top12_gap": 0.6441,
+              "global_present_rate": 0.3904,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.41; top12_gap=0.64; global_present=0.39"
+            },
+            {
+              "root_evidence_id": "E_78",
+              "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+              "parent_root_id": "E_78",
+              "is_child": false,
+              "score": 0.5145,
+              "weighted_present_rate": 0.2011,
+              "pair_gap": 0.3672,
+              "top12_gap": 0.6657,
+              "global_present_rate": 0.1184,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.37; top12_gap=0.67; global_present=0.12"
+            },
+            {
+              "root_evidence_id": "E_209",
+              "question_en": "Are your vaccinations up to date?",
+              "parent_root_id": "E_209",
+              "is_child": false,
+              "score": 0.488,
+              "weighted_present_rate": 0.3048,
+              "pair_gap": 0.3128,
+              "top12_gap": 0.5085,
+              "global_present_rate": 0.0563,
+              "dominant_pair": "Croup vs Cluster headache",
+              "reason": "separates Croup vs Cluster headache; pair_gap=0.31; top12_gap=0.51; global_present=0.06"
+            }
+          ],
+          "stop_signal": {
+            "level": "moderate_stop",
+            "reason": "The budget is nearly exhausted and the top competing diagnoses are reasonably separated.",
+            "top_shortlist_score": 0.5891,
+            "deterministic_margin": 0.11587025175027377,
+            "stability_turns": 1,
+            "unresolved_mass": 0.6718648783393097
+          },
+          "raw_agent_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Croup",
+            "ranked_differential": [
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis",
+              "Pneumonia"
+            ],
+            "confidence": 0.6454914553850601,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "agent_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Croup",
+            "ranked_differential": [
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis",
+              "Pneumonia"
+            ],
+            "confidence": 0.6454914553850601,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "policy_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Croup",
+            "ranked_differential": [
+              "Croup",
+              "Cluster headache",
+              "Acute otitis media",
+              "Chronic rhinosinusitis",
+              "Pneumonia"
+            ],
+            "confidence": 0.6454914553850601,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "policy_flags": [],
+          "error_flags": []
+        }
+      ]
+    }
+  },
+  {
+    "label": "both_correct",
+    "case_id": "test:104857",
+    "true_pathology": "Acute dystonic reactions",
+    "sequential_prediction": "Acute dystonic reactions",
+    "one_shot_prediction": "Acute dystonic reactions",
+    "num_requests": 4,
+    "stop_reason": "agent_stop",
+    "trace": {
+      "case_id": "test:104857",
+      "budget": 5,
+      "true_pathology": "Acute dystonic reactions",
+      "predicted_pathology": "Acute dystonic reactions",
+      "raw_predicted_pathology": "Acute dystonic reactions",
+      "stop_reason": "agent_stop",
+      "num_requests": 4,
+      "trace": [
+        {
+          "turn_index": 1,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]",
+            "request_history_text": "- no additional requests yet",
+            "diagnosis_history_text": "- turn 1: pred=Myasthenia gravis, det_top=Myasthenia gravis, margin=0.41, decision=request, confidence=0.51"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Myasthenia gravis",
+                1.9952392291971464
+              ],
+              [
+                "Acute dystonic reactions",
+                1.5845150402183807
+              ],
+              [
+                "Guillain-Barr\u00e9 syndrome",
+                -0.008073965797562921
+              ],
+              [
+                "Tuberculosis",
+                -0.008106342660109246
+              ],
+              [
+                "Epiglottitis",
+                -0.008113232605872333
+              ]
+            ],
+            "normalized_weights": {
+              "Myasthenia gravis": 0.7722131481591562,
+              "Acute dystonic reactions": 0.22243654192299916,
+              "Guillain-Barr\u00e9 syndrome": 0.0017835657041249625,
+              "Tuberculosis": 0.0017833907240372491,
+              "Epiglottitis": 0.001783353489682428
+            },
+            "margin": 0.4107241889787656,
+            "top_score": 1.9952392291971464,
+            "second_score": 1.5845150402183807,
+            "stability_turns": 0,
+            "prior_strength": "strong",
+            "anchor_top1": "Acute dystonic reactions",
+            "anchor_margin": 0.15338054299354553,
+            "unresolved_mass": 0.2277868518408438
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_63",
+              "question_en": "Do you have difficulty articulating words/speaking?",
+              "parent_root_id": "E_63",
+              "is_child": false,
+              "score": 0.7798,
+              "weighted_present_rate": 0.5645,
+              "pair_gap": 0.7261,
+              "top12_gap": 0.731,
+              "global_present_rate": 0.0119,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.73; top12_gap=0.73; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_52",
+              "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+              "parent_root_id": "E_52",
+              "is_child": false,
+              "score": 0.7745,
+              "weighted_present_rate": 0.555,
+              "pair_gap": 0.7138,
+              "top12_gap": 0.7187,
+              "global_present_rate": 0.0117,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.71; top12_gap=0.72; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.7665,
+              "weighted_present_rate": 0.5436,
+              "pair_gap": 0.6941,
+              "top12_gap": 0.7023,
+              "global_present_rate": 0.0246,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.69; top12_gap=0.70; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_28",
+              "question_en": "Are there any members of your family who have been diagnosed myasthenia gravis?",
+              "parent_root_id": "E_28",
+              "is_child": false,
+              "score": 0.7324,
+              "weighted_present_rate": 0.4916,
+              "pair_gap": 0.6322,
+              "top12_gap": 0.6366,
+              "global_present_rate": 0.0103,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.63; top12_gap=0.64; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_84",
+              "question_en": "Do you feel weakness in both arms and/or both legs?",
+              "parent_root_id": "E_84",
+              "is_child": false,
+              "score": 0.7218,
+              "weighted_present_rate": 0.4802,
+              "pair_gap": 0.6138,
+              "top12_gap": 0.6201,
+              "global_present_rate": 0.0247,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.61; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_176",
+              "question_en": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",
+              "parent_root_id": "E_176",
+              "is_child": false,
+              "score": 0.6504,
+              "weighted_present_rate": 0.4292,
+              "pair_gap": 0.5479,
+              "top12_gap": 0.5544,
+              "global_present_rate": 0.0208,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.55; top12_gap=0.55; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.6471,
+              "weighted_present_rate": 0.1557,
+              "pair_gap": 0.6824,
+              "top12_gap": 0.6954,
+              "global_present_rate": 0.0413,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.68; top12_gap=0.70; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_147",
+              "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+              "parent_root_id": "E_147",
+              "is_child": false,
+              "score": 0.6457,
+              "weighted_present_rate": 0.1541,
+              "pair_gap": 0.6766,
+              "top12_gap": 0.6928,
+              "global_present_rate": 0.018,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.68; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_168",
+              "question_en": "Do you have trouble keeping your tongue in your mouth?",
+              "parent_root_id": "E_168",
+              "is_child": false,
+              "score": 0.6416,
+              "weighted_present_rate": 0.153,
+              "pair_gap": 0.6716,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.67; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_15",
+              "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+              "parent_root_id": "E_15",
+              "is_child": false,
+              "score": 0.6416,
+              "weighted_present_rate": 0.153,
+              "pair_gap": 0.6716,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Myasthenia gravis vs Acute dystonic reactions",
+              "reason": "separates Myasthenia gravis vs Acute dystonic reactions; pair_gap=0.67; top12_gap=0.69; global_present=0.02"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7798,
+            "deterministic_margin": 0.4107241889787656,
+            "stability_turns": 0,
+            "unresolved_mass": 0.2277868518408438
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_63",
+            "predicted_pathology": "Myasthenia gravis",
+            "ranked_differential": [
+              "Myasthenia gravis",
+              "Acute dystonic reactions",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.5103593215753284,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_63",
+            "predicted_pathology": "Myasthenia gravis",
+            "ranked_differential": [
+              "Myasthenia gravis",
+              "Acute dystonic reactions",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.5103593215753284,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_63",
+            "predicted_pathology": "Myasthenia gravis",
+            "ranked_differential": [
+              "Myasthenia gravis",
+              "Acute dystonic reactions",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.5103593215753284,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_63",
+            "question_en": "Do you have difficulty articulating words/speaking?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Do you have difficulty articulating words/speaking? -> no"
+          }
+        },
+        {
+          "turn_index": 2,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]\n- E_63: Do you have difficulty articulating words/speaking? -> no [source=request]",
+            "request_history_text": "- turn 1: Do you have difficulty articulating words/speaking? -> no",
+            "diagnosis_history_text": "- turn 1: pred=Myasthenia gravis, det_top=Myasthenia gravis, margin=0.41, decision=request, confidence=0.51\n- turn 2: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=1.19, decision=request, confidence=0.62"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Acute dystonic reactions",
+                1.5879658827072696
+              ],
+              [
+                "Myasthenia gravis",
+                0.4022131663185462
+              ],
+              [
+                "Guillain-Barr\u00e9 syndrome",
+                -0.004623123308674032
+              ],
+              [
+                "Tuberculosis",
+                -0.004655500171220357
+              ],
+              [
+                "Epiglottitis",
+                -0.004662390116983444
+              ]
+            ],
+            "normalized_weights": {
+              "Acute dystonic reactions": 0.9509648050704224,
+              "Myasthenia gravis": 0.0261614513256569,
+              "Guillain-Barr\u00e9 syndrome": 0.00762513298170508,
+              "Tuberculosis": 0.007624384903607996,
+              "Epiglottitis": 0.00762422571860777
+            },
+            "margin": 1.1857527163887234,
+            "top_score": 1.5879658827072696,
+            "second_score": 0.4022131663185462,
+            "stability_turns": 1,
+            "prior_strength": "strong",
+            "anchor_top1": "Acute dystonic reactions",
+            "anchor_margin": 0.15338054299354553,
+            "unresolved_mass": 0.04903519492957764
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_147",
+              "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+              "parent_root_id": "E_147",
+              "is_child": false,
+              "score": 0.7151,
+              "weighted_present_rate": 0.6588,
+              "pair_gap": 0.6815,
+              "top12_gap": 0.6928,
+              "global_present_rate": 0.018,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.68; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_168",
+              "question_en": "Do you have trouble keeping your tongue in your mouth?",
+              "parent_root_id": "E_168",
+              "is_child": false,
+              "score": 0.7132,
+              "weighted_present_rate": 0.6539,
+              "pair_gap": 0.6764,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.68; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_15",
+              "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+              "parent_root_id": "E_15",
+              "is_child": false,
+              "score": 0.7132,
+              "weighted_present_rate": 0.6539,
+              "pair_gap": 0.6764,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.68; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_192",
+              "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+              "parent_root_id": "E_192",
+              "is_child": false,
+              "score": 0.7037,
+              "weighted_present_rate": 0.6295,
+              "pair_gap": 0.6512,
+              "top12_gap": 0.662,
+              "global_present_rate": 0.0172,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.65; top12_gap=0.66; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_193",
+              "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+              "parent_root_id": "E_193",
+              "is_child": false,
+              "score": 0.6914,
+              "weighted_present_rate": 0.5977,
+              "pair_gap": 0.6183,
+              "top12_gap": 0.6285,
+              "global_present_rate": 0.0163,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.62; top12_gap=0.63; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_128",
+              "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+              "parent_root_id": "E_128",
+              "is_child": false,
+              "score": 0.6886,
+              "weighted_present_rate": 0.5904,
+              "pair_gap": 0.6107,
+              "top12_gap": 0.6208,
+              "global_present_rate": 0.0161,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.61; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.676,
+              "weighted_present_rate": 0.6658,
+              "pair_gap": 0.598,
+              "top12_gap": 0.6954,
+              "global_present_rate": 0.0413,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.60; top12_gap=0.70; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_180",
+              "question_en": "Are you unable to control the direction of your eyes?",
+              "parent_root_id": "E_180",
+              "is_child": false,
+              "score": 0.6753,
+              "weighted_present_rate": 0.5562,
+              "pair_gap": 0.5753,
+              "top12_gap": 0.5848,
+              "global_present_rate": 0.0152,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.58; top12_gap=0.58; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "parent_root_id": "E_205",
+              "is_child": false,
+              "score": 0.5456,
+              "weighted_present_rate": 0.6185,
+              "pair_gap": 0.6398,
+              "top12_gap": 0.6504,
+              "global_present_rate": 0.0169,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.64; top12_gap=0.65; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.5253,
+              "weighted_present_rate": 0.024,
+              "pair_gap": 0.4903,
+              "top12_gap": 0.7023,
+              "global_present_rate": 0.0246,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.49; top12_gap=0.70; global_present=0.02"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7151,
+            "deterministic_margin": 1.1857527163887234,
+            "stability_turns": 1,
+            "unresolved_mass": 0.04903519492957764
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_147",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_147",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_147",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_147",
+            "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+            "status": "present",
+            "revealed_tokens": [
+              "E_147"
+            ],
+            "revealed_values": [
+              "present"
+            ],
+            "revealed_value_labels": [
+              "yes"
+            ],
+            "summary": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes"
+          }
+        },
+        {
+          "turn_index": 3,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]\n- E_63: Do you have difficulty articulating words/speaking? -> no [source=request]\n- E_147: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes [source=request]",
+            "request_history_text": "- turn 1: Do you have difficulty articulating words/speaking? -> no\n- turn 2: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes",
+            "diagnosis_history_text": "- turn 1: pred=Myasthenia gravis, det_top=Myasthenia gravis, margin=0.41, decision=request, confidence=0.51\n- turn 2: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=1.19, decision=request, confidence=0.62\n- turn 3: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=2.80, decision=request, confidence=0.62"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Acute dystonic reactions",
+                3.1965159786450643
+              ],
+              [
+                "Myasthenia gravis",
+                0.3970464201185462
+              ],
+              [
+                "Guillain-Barr\u00e9 syndrome",
+                -0.009789869508674033
+              ],
+              [
+                "Tuberculosis",
+                -0.009822246371220358
+              ],
+              [
+                "Epiglottitis",
+                -0.009829136316983445
+              ]
+            ],
+            "normalized_weights": {
+              "Acute dystonic reactions": 0.9996123383066352,
+              "Myasthenia gravis": 0.00020682680136888912,
+              "Guillain-Barr\u00e9 syndrome": 6.028265958898915e-05,
+              "Tuberculosis": 6.027674544462201e-05,
+              "Epiglottitis": 6.0275486962284286e-05
+            },
+            "margin": 2.799469558526518,
+            "top_score": 3.1965159786450643,
+            "second_score": 0.3970464201185462,
+            "stability_turns": 1,
+            "prior_strength": "strong",
+            "anchor_top1": "Acute dystonic reactions",
+            "anchor_margin": 0.15338054299354553,
+            "unresolved_mass": 0.0003876616933647936
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_168",
+              "question_en": "Do you have trouble keeping your tongue in your mouth?",
+              "parent_root_id": "E_168",
+              "is_child": false,
+              "score": 0.7058,
+              "weighted_present_rate": 0.6874,
+              "pair_gap": 0.6876,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.69; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_15",
+              "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+              "parent_root_id": "E_15",
+              "is_child": false,
+              "score": 0.7058,
+              "weighted_present_rate": 0.6874,
+              "pair_gap": 0.6876,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.69; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_192",
+              "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+              "parent_root_id": "E_192",
+              "is_child": false,
+              "score": 0.6966,
+              "weighted_present_rate": 0.6617,
+              "pair_gap": 0.6619,
+              "top12_gap": 0.662,
+              "global_present_rate": 0.0172,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.66; top12_gap=0.66; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_193",
+              "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+              "parent_root_id": "E_193",
+              "is_child": false,
+              "score": 0.6847,
+              "weighted_present_rate": 0.6283,
+              "pair_gap": 0.6285,
+              "top12_gap": 0.6285,
+              "global_present_rate": 0.0163,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.63; top12_gap=0.63; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_128",
+              "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+              "parent_root_id": "E_128",
+              "is_child": false,
+              "score": 0.6819,
+              "weighted_present_rate": 0.6206,
+              "pair_gap": 0.6207,
+              "top12_gap": 0.6208,
+              "global_present_rate": 0.0161,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.62; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_180",
+              "question_en": "Are you unable to control the direction of your eyes?",
+              "parent_root_id": "E_180",
+              "is_child": false,
+              "score": 0.6691,
+              "weighted_present_rate": 0.5846,
+              "pair_gap": 0.5848,
+              "top12_gap": 0.5848,
+              "global_present_rate": 0.0152,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.58; top12_gap=0.58; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.6678,
+              "weighted_present_rate": 0.6951,
+              "pair_gap": 0.6038,
+              "top12_gap": 0.6954,
+              "global_present_rate": 0.0413,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.60; top12_gap=0.70; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "parent_root_id": "E_205",
+              "is_child": false,
+              "score": 0.5402,
+              "weighted_present_rate": 0.6501,
+              "pair_gap": 0.6503,
+              "top12_gap": 0.6504,
+              "global_present_rate": 0.0169,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.65; top12_gap=0.65; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.5168,
+              "weighted_present_rate": 0.0002,
+              "pair_gap": 0.4904,
+              "top12_gap": 0.7023,
+              "global_present_rate": 0.0246,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.49; top12_gap=0.70; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_84",
+              "question_en": "Do you feel weakness in both arms and/or both legs?",
+              "parent_root_id": "E_84",
+              "is_child": false,
+              "score": 0.4789,
+              "weighted_present_rate": 0.0002,
+              "pair_gap": 0.447,
+              "top12_gap": 0.6201,
+              "global_present_rate": 0.0247,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.45; top12_gap=0.62; global_present=0.02"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7058,
+            "deterministic_margin": 2.799469558526518,
+            "stability_turns": 1,
+            "unresolved_mass": 0.0003876616933647936
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_168",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_168",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_168",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_168",
+            "question_en": "Do you have trouble keeping your tongue in your mouth?",
+            "status": "present",
+            "revealed_tokens": [
+              "E_168"
+            ],
+            "revealed_values": [
+              "present"
+            ],
+            "revealed_value_labels": [
+              "yes"
+            ],
+            "summary": "Do you have trouble keeping your tongue in your mouth? -> yes"
+          }
+        },
+        {
+          "turn_index": 4,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]\n- E_63: Do you have difficulty articulating words/speaking? -> no [source=request]\n- E_147: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes [source=request]\n- E_168: Do you have trouble keeping your tongue in your mouth? -> yes [source=request]",
+            "request_history_text": "- turn 1: Do you have difficulty articulating words/speaking? -> no\n- turn 2: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes\n- turn 3: Do you have trouble keeping your tongue in your mouth? -> yes",
+            "diagnosis_history_text": "- turn 2: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=1.19, decision=request, confidence=0.62\n- turn 3: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=2.80, decision=request, confidence=0.62\n- turn 4: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=4.39, decision=request, confidence=0.62"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Acute dystonic reactions",
+                4.784794357546493
+              ],
+              [
+                "Myasthenia gravis",
+                0.3919227251185462
+              ],
+              [
+                "Guillain-Barr\u00e9 syndrome",
+                -0.014913564508674034
+              ],
+              [
+                "Tuberculosis",
+                -0.014945941371220359
+              ],
+              [
+                "Epiglottitis",
+                -0.014952831316983446
+              ]
+            ],
+            "normalized_weights": {
+              "Acute dystonic reactions": 0.9999968980636771,
+              "Myasthenia gravis": 1.6549573474187672e-06,
+              "Guillain-Barr\u00e9 syndrome": 4.823612305003152e-07,
+              "Tuberculosis": 4.823139075392235e-07,
+              "Epiglottitis": 4.823038375938506e-07
+            },
+            "margin": 4.392871632427946,
+            "top_score": 4.784794357546493,
+            "second_score": 0.3919227251185462,
+            "stability_turns": 2,
+            "prior_strength": "strong",
+            "anchor_top1": "Acute dystonic reactions",
+            "anchor_margin": 0.15338054299354553,
+            "unresolved_mass": 3.1019363229134456e-06
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_15",
+              "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+              "parent_root_id": "E_15",
+              "is_child": false,
+              "score": 0.7058,
+              "weighted_present_rate": 0.6877,
+              "pair_gap": 0.6877,
+              "top12_gap": 0.6877,
+              "global_present_rate": 0.0178,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.69; top12_gap=0.69; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_192",
+              "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+              "parent_root_id": "E_192",
+              "is_child": false,
+              "score": 0.6966,
+              "weighted_present_rate": 0.662,
+              "pair_gap": 0.662,
+              "top12_gap": 0.662,
+              "global_present_rate": 0.0172,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.66; top12_gap=0.66; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_193",
+              "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+              "parent_root_id": "E_193",
+              "is_child": false,
+              "score": 0.6846,
+              "weighted_present_rate": 0.6285,
+              "pair_gap": 0.6285,
+              "top12_gap": 0.6285,
+              "global_present_rate": 0.0163,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.63; top12_gap=0.63; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_128",
+              "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+              "parent_root_id": "E_128",
+              "is_child": false,
+              "score": 0.6819,
+              "weighted_present_rate": 0.6208,
+              "pair_gap": 0.6208,
+              "top12_gap": 0.6208,
+              "global_present_rate": 0.0161,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.62; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_180",
+              "question_en": "Are you unable to control the direction of your eyes?",
+              "parent_root_id": "E_180",
+              "is_child": false,
+              "score": 0.669,
+              "weighted_present_rate": 0.5848,
+              "pair_gap": 0.5848,
+              "top12_gap": 0.5848,
+              "global_present_rate": 0.0152,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.58; top12_gap=0.58; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.6678,
+              "weighted_present_rate": 0.6954,
+              "pair_gap": 0.6039,
+              "top12_gap": 0.6954,
+              "global_present_rate": 0.0413,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.60; top12_gap=0.70; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "parent_root_id": "E_205",
+              "is_child": false,
+              "score": 0.5401,
+              "weighted_present_rate": 0.6504,
+              "pair_gap": 0.6504,
+              "top12_gap": 0.6504,
+              "global_present_rate": 0.0169,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.65; top12_gap=0.65; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.5167,
+              "weighted_present_rate": 0.0,
+              "pair_gap": 0.4904,
+              "top12_gap": 0.7023,
+              "global_present_rate": 0.0246,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.49; top12_gap=0.70; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_84",
+              "question_en": "Do you feel weakness in both arms and/or both legs?",
+              "parent_root_id": "E_84",
+              "is_child": false,
+              "score": 0.4789,
+              "weighted_present_rate": 0.0,
+              "pair_gap": 0.4469,
+              "top12_gap": 0.6201,
+              "global_present_rate": 0.0247,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.45; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_52",
+              "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+              "parent_root_id": "E_52",
+              "is_child": false,
+              "score": 0.4755,
+              "weighted_present_rate": 0.0,
+              "pair_gap": 0.3834,
+              "top12_gap": 0.7187,
+              "global_present_rate": 0.0117,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.38; top12_gap=0.72; global_present=0.01"
+            }
+          ],
+          "stop_signal": {
+            "level": "continue",
+            "reason": "The leading diagnoses are not cleanly separated yet and there are still valuable discriminative questions available.",
+            "top_shortlist_score": 0.7058,
+            "deterministic_margin": 4.392871632427946,
+            "stability_turns": 2,
+            "unresolved_mass": 3.1019363229134456e-06
+          },
+          "raw_agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_15",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_15",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_15",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.62,
+            "brief_reasoning": "Dry-run mode requests the best separating question from the deterministic shortlist."
+          },
+          "policy_flags": [],
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_15",
+            "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Have you started or taken any antipsychotic medication within the last 7 days? -> no"
+          }
+        },
+        {
+          "turn_index": 5,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]\n- E_63: Do you have difficulty articulating words/speaking? -> no [source=request]\n- E_147: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes [source=request]\n- E_168: Do you have trouble keeping your tongue in your mouth? -> yes [source=request]\n- E_15: Have you started or taken any antipsychotic medication within the last 7 days? -> no [source=request]",
+            "request_history_text": "- turn 1: Do you have difficulty articulating words/speaking? -> no\n- turn 2: Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> yes\n- turn 3: Do you have trouble keeping your tongue in your mouth? -> yes\n- turn 4: Have you started or taken any antipsychotic medication within the last 7 days? -> no",
+            "diagnosis_history_text": "- turn 3: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=2.80, decision=request, confidence=0.62\n- turn 4: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=4.39, decision=request, confidence=0.62\n- turn 5: pred=Acute dystonic reactions, det_top=Acute dystonic reactions, margin=2.98, decision=stop, confidence=0.95"
+          },
+          "deterministic_state": {
+            "top_candidates": [
+              [
+                "Acute dystonic reactions",
+                3.372709384113236
+              ],
+              [
+                "Myasthenia gravis",
+                0.39733106984076844
+              ],
+              [
+                "Guillain-Barr\u00e9 syndrome",
+                -0.009505219786451812
+              ],
+              [
+                "Tuberculosis",
+                -0.009537596648998137
+              ],
+              [
+                "Epiglottitis",
+                -0.009544486594761224
+              ]
+            ],
+            "normalized_weights": {
+              "Acute dystonic reactions": 0.9997724803994984,
+              "Myasthenia gravis": 0.00012138715799350814,
+              "Guillain-Barr\u00e9 syndrome": 3.53800410554441e-05,
+              "Tuberculosis": 3.537657002958122e-05,
+              "Epiglottitis": 3.537583142320453e-05
+            },
+            "margin": 2.9753783142724672,
+            "top_score": 3.372709384113236,
+            "second_score": 0.39733106984076844,
+            "stability_turns": 3,
+            "prior_strength": "strong",
+            "anchor_top1": "Acute dystonic reactions",
+            "anchor_margin": 0.15338054299354553,
+            "unresolved_mass": 0.00022751960050160225
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_192",
+              "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+              "parent_root_id": "E_192",
+              "is_child": false,
+              "score": 0.6966,
+              "weighted_present_rate": 0.6618,
+              "pair_gap": 0.6619,
+              "top12_gap": 0.662,
+              "global_present_rate": 0.0172,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.66; top12_gap=0.66; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_193",
+              "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+              "parent_root_id": "E_193",
+              "is_child": false,
+              "score": 0.6847,
+              "weighted_present_rate": 0.6284,
+              "pair_gap": 0.6285,
+              "top12_gap": 0.6285,
+              "global_present_rate": 0.0163,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.63; top12_gap=0.63; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_128",
+              "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+              "parent_root_id": "E_128",
+              "is_child": false,
+              "score": 0.6819,
+              "weighted_present_rate": 0.6207,
+              "pair_gap": 0.6208,
+              "top12_gap": 0.6208,
+              "global_present_rate": 0.0161,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.62; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_180",
+              "question_en": "Are you unable to control the direction of your eyes?",
+              "parent_root_id": "E_180",
+              "is_child": false,
+              "score": 0.6691,
+              "weighted_present_rate": 0.5847,
+              "pair_gap": 0.5848,
+              "top12_gap": 0.5848,
+              "global_present_rate": 0.0152,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.58; top12_gap=0.58; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.6678,
+              "weighted_present_rate": 0.6952,
+              "pair_gap": 0.6039,
+              "top12_gap": 0.6954,
+              "global_present_rate": 0.0413,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.60; top12_gap=0.70; global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "parent_root_id": "E_205",
+              "is_child": false,
+              "score": 0.5401,
+              "weighted_present_rate": 0.6502,
+              "pair_gap": 0.6503,
+              "top12_gap": 0.6504,
+              "global_present_rate": 0.0169,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.65; top12_gap=0.65; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.5168,
+              "weighted_present_rate": 0.0001,
+              "pair_gap": 0.4904,
+              "top12_gap": 0.7023,
+              "global_present_rate": 0.0246,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.49; top12_gap=0.70; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_84",
+              "question_en": "Do you feel weakness in both arms and/or both legs?",
+              "parent_root_id": "E_84",
+              "is_child": false,
+              "score": 0.4789,
+              "weighted_present_rate": 0.0001,
+              "pair_gap": 0.447,
+              "top12_gap": 0.6201,
+              "global_present_rate": 0.0247,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.45; top12_gap=0.62; global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_52",
+              "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+              "parent_root_id": "E_52",
+              "is_child": false,
+              "score": 0.4755,
+              "weighted_present_rate": 0.0001,
+              "pair_gap": 0.3834,
+              "top12_gap": 0.7187,
+              "global_present_rate": 0.0117,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.38; top12_gap=0.72; global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_28",
+              "question_en": "Are there any members of your family who have been diagnosed myasthenia gravis?",
+              "parent_root_id": "E_28",
+              "is_child": false,
+              "score": 0.4326,
+              "weighted_present_rate": 0.0001,
+              "pair_gap": 0.3396,
+              "top12_gap": 0.6366,
+              "global_present_rate": 0.0103,
+              "dominant_pair": "Acute dystonic reactions vs Myasthenia gravis",
+              "reason": "separates Acute dystonic reactions vs Myasthenia gravis; pair_gap=0.34; top12_gap=0.64; global_present=0.01"
+            }
+          ],
+          "stop_signal": {
+            "level": "moderate_stop",
+            "reason": "The budget is nearly exhausted and the top competing diagnoses are reasonably separated.",
+            "top_shortlist_score": 0.6966,
+            "deterministic_margin": 2.9753783142724672,
+            "stability_turns": 3,
+            "unresolved_mass": 0.00022751960050160225
+          },
+          "raw_agent_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.95,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "agent_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.95,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "policy_response": {
+            "decision": "stop",
+            "requested_evidence_id": null,
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.95,
+            "brief_reasoning": "Dry-run mode stops at the budget limit using the deterministic diagnosis state."
+          },
+          "policy_flags": [],
+          "error_flags": []
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,215 @@
+[
+  {
+    "label": "both_correct",
+    "case_id": "test:104857",
+    "true_pathology": "Acute dystonic reactions",
+    "sequential_prediction": "Acute dystonic reactions",
+    "one_shot_prediction": "Acute dystonic reactions",
+    "num_requests": 1,
+    "stop_reason": "max_requests_reached",
+    "trace": {
+      "case_id": "test:104857",
+      "budget": 1,
+      "true_pathology": "Acute dystonic reactions",
+      "predicted_pathology": "Acute dystonic reactions",
+      "stop_reason": "max_requests_reached",
+      "num_requests": 1,
+      "trace": [
+        {
+          "turn_index": 1,
+          "visible_context_before": {
+            "case_id": "test:104857",
+            "age": 18,
+            "sex": "M",
+            "visible_ledger": "- E_172: Do you have a hard time opening/raising one or both eyelids? -> yes [source=initial_evidence]",
+            "request_history_text": "- no additional requests yet",
+            "diagnosis_history_text": "- turn 1: pred=Acute dystonic reactions, confidence=0.58, decision=request"
+          },
+          "shortlist": [
+            {
+              "root_evidence_id": "E_62",
+              "question_en": "Do you regularly take stimulant drugs?",
+              "parent_root_id": "E_62",
+              "is_child": false,
+              "score": 0.4657,
+              "weighted_present_rate": 0.401,
+              "weighted_std": 0.3436,
+              "contrast": 0.6954,
+              "global_present_rate": 0.0413,
+              "reason": "contrast=0.70, weighted_present=0.40, global_present=0.04"
+            },
+            {
+              "root_evidence_id": "E_147",
+              "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+              "parent_root_id": "E_147",
+              "is_child": false,
+              "score": 0.4602,
+              "weighted_present_rate": 0.3995,
+              "weighted_std": 0.3423,
+              "contrast": 0.6928,
+              "global_present_rate": 0.018,
+              "reason": "contrast=0.69, weighted_present=0.40, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_63",
+              "question_en": "Do you have difficulty articulating words/speaking?",
+              "parent_root_id": "E_63",
+              "is_child": false,
+              "score": 0.4575,
+              "weighted_present_rate": 0.3094,
+              "weighted_std": 0.3612,
+              "contrast": 0.731,
+              "global_present_rate": 0.0119,
+              "reason": "contrast=0.73, weighted_present=0.31, global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_168",
+              "question_en": "Do you have trouble keeping your tongue in your mouth?",
+              "parent_root_id": "E_168",
+              "is_child": false,
+              "score": 0.4568,
+              "weighted_present_rate": 0.3965,
+              "weighted_std": 0.3398,
+              "contrast": 0.6877,
+              "global_present_rate": 0.0178,
+              "reason": "contrast=0.69, weighted_present=0.40, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_15",
+              "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+              "parent_root_id": "E_15",
+              "is_child": false,
+              "score": 0.4568,
+              "weighted_present_rate": 0.3965,
+              "weighted_std": 0.3398,
+              "contrast": 0.6877,
+              "global_present_rate": 0.0178,
+              "reason": "contrast=0.69, weighted_present=0.40, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_65",
+              "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+              "parent_root_id": "E_65",
+              "is_child": false,
+              "score": 0.4522,
+              "weighted_present_rate": 0.2972,
+              "weighted_std": 0.347,
+              "contrast": 0.7444,
+              "global_present_rate": 0.0246,
+              "reason": "contrast=0.74, weighted_present=0.30, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_52",
+              "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+              "parent_root_id": "E_52",
+              "is_child": false,
+              "score": 0.4498,
+              "weighted_present_rate": 0.3042,
+              "weighted_std": 0.3551,
+              "contrast": 0.7187,
+              "global_present_rate": 0.0117,
+              "reason": "contrast=0.72, weighted_present=0.30, global_present=0.01"
+            },
+            {
+              "root_evidence_id": "E_192",
+              "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+              "parent_root_id": "E_192",
+              "is_child": false,
+              "score": 0.4397,
+              "weighted_present_rate": 0.3817,
+              "weighted_std": 0.3271,
+              "contrast": 0.662,
+              "global_present_rate": 0.0172,
+              "reason": "contrast=0.66, weighted_present=0.38, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_205",
+              "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+              "parent_root_id": "E_205",
+              "is_child": false,
+              "score": 0.432,
+              "weighted_present_rate": 0.375,
+              "weighted_std": 0.3214,
+              "contrast": 0.6504,
+              "global_present_rate": 0.0169,
+              "reason": "contrast=0.65, weighted_present=0.38, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_84",
+              "question_en": "Do you feel weakness in both arms and/or both legs?",
+              "parent_root_id": "E_84",
+              "is_child": false,
+              "score": 0.4221,
+              "weighted_present_rate": 0.2625,
+              "weighted_std": 0.3064,
+              "contrast": 0.7466,
+              "global_present_rate": 0.0247,
+              "reason": "contrast=0.75, weighted_present=0.26, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_193",
+              "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+              "parent_root_id": "E_193",
+              "is_child": false,
+              "score": 0.4175,
+              "weighted_present_rate": 0.3624,
+              "weighted_std": 0.3106,
+              "contrast": 0.6285,
+              "global_present_rate": 0.0163,
+              "reason": "contrast=0.63, weighted_present=0.36, global_present=0.02"
+            },
+            {
+              "root_evidence_id": "E_128",
+              "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+              "parent_root_id": "E_128",
+              "is_child": false,
+              "score": 0.4124,
+              "weighted_present_rate": 0.358,
+              "weighted_std": 0.3067,
+              "contrast": 0.6208,
+              "global_present_rate": 0.0161,
+              "reason": "contrast=0.62, weighted_present=0.36, global_present=0.02"
+            }
+          ],
+          "deterministic_candidate_weights": {
+            "Acute dystonic reactions": 0.5766301540701169,
+            "Myasthenia gravis": 0.42321433226039007,
+            "Guillain-Barr\u00e9 syndrome": 7.996514094735158e-05,
+            "Tuberculosis": 3.978703508005339e-05,
+            "Epiglottitis": 3.5761493465757506e-05
+          },
+          "stop_signal": {
+            "level": "continue",
+            "reason": "There are still shortlisted actions with meaningful discriminative value.",
+            "stable_turns": 0,
+            "top_shortlist_score": 0.4657
+          },
+          "agent_response": {
+            "decision": "request",
+            "requested_evidence_id": "E_15",
+            "predicted_pathology": "Acute dystonic reactions",
+            "ranked_differential": [
+              "Acute dystonic reactions",
+              "Myasthenia gravis",
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis",
+              "Epiglottitis"
+            ],
+            "confidence": 0.58,
+            "brief_reasoning": "Recent antipsychotic medication use strongly supports or excludes acute dystonic reactions."
+          },
+          "error_flags": [],
+          "reveal_payload": {
+            "root_evidence_id": "E_15",
+            "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+            "status": "absent",
+            "revealed_tokens": [],
+            "revealed_values": [],
+            "revealed_value_labels": [],
+            "summary": "Have you started or taken any antipsychotic medication within the last 7 days? -> no"
+          }
+        }
+      ]
+    }
+  }
+]

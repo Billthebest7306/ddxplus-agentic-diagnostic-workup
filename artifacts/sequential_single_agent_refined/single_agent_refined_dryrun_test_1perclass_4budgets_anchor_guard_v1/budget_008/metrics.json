@@ -1,0 +1,24 @@
+{
+  "run_name": "single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1",
+  "budget": 8,
+  "num_cases": 10,
+  "runtime_seconds": 0.16357183456420898,
+  "metrics": {
+    "accuracy": 0.6,
+    "top3_accuracy": 0.6,
+    "top5_accuracy": 0.6,
+    "macro_f1": 0.46153846153846156,
+    "mean_requests": 7.0,
+    "stop_before_cap_rate": 1.0,
+    "mean_api_calls": 8.0,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "total_estimated_cost": null,
+    "mean_deterministic_margin": 3.057189787535807,
+    "drift_override_rate": 0.0,
+    "turn_distribution": {
+      "7": 10
+    }
+  },
+  "notes": "Dry-run budget sweep results are deterministic policy-validation only."
+}

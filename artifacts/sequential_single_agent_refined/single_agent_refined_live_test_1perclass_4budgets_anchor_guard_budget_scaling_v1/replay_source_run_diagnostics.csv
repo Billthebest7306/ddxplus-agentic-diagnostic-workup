@@ -1,0 +1,11 @@
+budget,case_id,true_pathology,source_prediction,refined_state_prediction,source_correct,refined_state_correct,refined_margin,prior_strength,num_requests
+8,test:104857,Acute dystonic reactions,Myasthenia gravis,Acute dystonic reactions,False,True,0.1751497220629017,strong,7
+8,test:51421,Chagas,Viral pharyngitis,Sarcoidosis,False,False,0.06209163561620068,weak,7
+8,test:81691,Croup,Allergic sinusitis,Croup,False,True,0.10483243363413108,moderate,7
+8,test:77908,Ebola,Scombroid food poisoning,Bronchiolitis,False,False,0.05991598629999961,moderate,7
+8,test:34242,Guillain-Barré syndrome,Myasthenia gravis,Guillain-Barré syndrome,False,True,0.9235743074535789,strong,7
+8,test:95923,Pneumonia,Bronchospasm / acute asthma exacerbation,Panic attack,False,False,0.8363265425860027,weak,7
+8,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,True,3.6584866095246937,moderate,7
+8,test:16097,Stable angina,Acute COPD exacerbation / infection,Pulmonary neoplasm,False,False,0.7651930644594025,weak,7
+8,test:107472,Tuberculosis,Viral pharyngitis,Tuberculosis,False,True,1.6177495613415684,moderate,8
+8,test:19424,Whooping cough,Whooping cough,Whooping cough,True,True,9.35906410327973,strong,6

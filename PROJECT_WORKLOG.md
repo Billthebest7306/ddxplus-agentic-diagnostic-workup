@@ -753,3 +753,333 @@ Purpose:
 - summarize the current results
 - explain why the multi-agent stage has not been built yet
 - provide a clear roadmap for the next technical steps
+
+### Temporary Unrestricted Pilot Config
+
+Notebook 02 was temporarily reconfigured for a cheap unrestricted-capability test:
+
+- `MAX_REQUESTS = 222`
+- `SEQUENTIAL_SAMPLE_PER_CLASS = 1`
+- `SEQUENTIAL_MAX_CASES = 10`
+- `RUN_VERSION = "unrestricted_v5_gpt41mini_10casepilot"`
+
+Purpose:
+
+- let the sequential agent request essentially all reachable evidence
+- but only on a small deterministic 10-case pilot to control API cost
+
+Implementation detail:
+
+- the notebook first builds the standard 49-case `1-per-class` sample
+- then deterministically downsamples it to 10 cases
+- the run name now includes the case cap so it does not resume the aborted unrestricted run artifacts
+
+### Unrestricted 10-Case GPT-4.1-Mini Pilot Result
+
+Artifact:
+
+- `artifacts/sequential_single_agent/single_agent_live_test_1perclass_max222_10cases_unrestricted_v5_gpt41mini_10casepilot/`
+
+Metrics:
+
+- accuracy: `0.40`
+- top-3: `0.50`
+- top-5: `0.50`
+- macro-F1: `0.0748`
+- mean requests: `8.6`
+- stop-before-cap rate: `1.0`
+- mean API calls: `9.7`
+- total tokens: `422,371` input / `10,136` output
+
+Interpretation:
+
+- letting `gpt-4.1-mini` request much more evidence materially improved it versus the capped 3-turn version
+- on the same 10 cases:
+  - unrestricted `gpt-4.1-mini`: `0.40`
+  - capped `gpt-4.1-mini` (`v2`) on same 10 cases: `0.20`
+  - capped `gpt-5.4-mini` (`v3`) on same 10 cases: `0.30`
+- this suggests the 3-turn budget was a real bottleneck for `gpt-4.1-mini`
+
+But:
+
+- the unrestricted sequential result still did not beat the one-shot baseline on the same 10 cases
+- one-shot `basd_pathology_full` reached `0.50` on that slice
+- win/loss on the 10 paired cases was:
+  - both correct: `2`
+  - sequential only correct: `2`
+  - one-shot only correct: `3`
+  - both wrong: `3`
+
+Behavioral note:
+
+- the model now shows real value from extended questioning on some cases, e.g. `Pneumonia`
+- but it is still inefficient, sometimes using `9+` requests on cases that a strong policy should resolve much faster
+- some obvious failures remain, e.g. `Croup -> Whooping cough`, `Tuberculosis -> Pulmonary embolism`
+
+Current conclusion:
+
+- unrestricted evidence access helps the LLM
+- so diagnosis quality is not purely capped by model ability; turn budget matters
+- however, the current sequential policy is still not efficient or accurate enough to outperform the strong one-shot baseline
+
+## 26. Proposed Improvement 1 Notebook
+
+A new notebook was added:
+
+- [04_single_agent_structured_policy_improvement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/04_single_agent_structured_policy_improvement.ipynb)
+
+Purpose:
+
+- keep the system **single-agent**
+- improve the sequential policy without jumping yet to deeper algorithmic ledger methods
+- make the workup more structured, stateful, and controlled than notebook 02
+
+Main additions:
+
+- deterministic evidence ledger / state manager as the episode source of truth
+- decoded evidence and value rendering only; no token-id-only reasoning
+- legal-action handling with parent-child gating preserved
+- deterministic **action shortlisting** each turn
+- optional **one-shot prior differential** merged in as advisory context
+- deterministic **stop guidance**
+- evaluation across **multiple request budgets** in one run
+- saved artifacts and plots per budget
+
+Artifact root used by the default dry-run proof of concept:
+
+- `artifacts/sequential_single_agent_improved/single_agent_improved_dryrun_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1/`
+
+Proof-of-concept validation status:
+
+- the notebook JSON is valid
+- all code cells compile
+- the notebook was executed end-to-end in dry-run mode
+- it produced:
+  - per-budget `predictions.csv`, `traces.jsonl`, `metrics.json`
+  - paired one-shot comparison files
+  - cached shortlist stats
+  - six budget-analysis plots
+
+Default dry-run configuration:
+
+- `RUN_LIVE_API = False`
+- `ALLOW_DRY_RUN_BENCHMARK = True`
+- `REQUEST_BUDGETS = [1, 3, 5, 8]`
+- `SEQUENTIAL_SAMPLE_PER_CLASS = 1`
+- `SEQUENTIAL_MAX_CASES = 10`
+- `SHORTLIST_SIZE = 12`
+- `SHORTLIST_STATS_SOURCE = "validate"`
+- `SHORTLIST_STATS_MAX_ROWS = 30000`
+
+Intended next live use:
+
+- keep the same notebook structure
+- enable `RUN_LIVE_API = True`
+- choose a small deterministic benchmark first
+- inspect performance, stop behavior, request usage, and one-shot gap across budgets
+
+### First Live Result For Proposed Improvement 1
+
+Live artifact root:
+
+- `artifacts/sequential_single_agent_improved/single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1/`
+
+Budget sweep on the 10-case live sample:
+
+- budget `1`: accuracy `0.30`
+- budget `3`: accuracy `0.20`
+- budget `5`: accuracy `0.10`
+- budget `8`: accuracy `0.20`
+
+On the same 10 cases, one-shot accuracy stayed:
+
+- `0.30`
+
+Interpretation:
+
+- the notebook is operationally sound
+- the structured ledger / shortlist pipeline works
+- but this first structured-policy version did **not** deliver a meaningful empirical improvement
+- larger budgets actually introduced drift on several cases rather than helping consistently
+
+Main observed failure mode:
+
+- extra requests often caused the model to move away from an initially plausible diagnosis
+- stop behavior became more efficient, but not more correct
+- the deterministic shortlist still appears too generic
+
+Report written at:
+
+- [proposed_improvement_1_results.md](/Users/bilalawan/claw/assignments/baseline_model/reports/proposed_improvement_1_results.md)
+
+### Sequential Policy Refinement (Notebook 05)
+
+New successor notebook created:
+
+- [05_single_agent_structured_policy_refinement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/05_single_agent_structured_policy_refinement.ipynb)
+
+Reason for creating notebook 05:
+
+- notebook 04 was no longer failing because of opaque evidence access
+- the main failure mode had become **diagnostic drift**
+- the shortlist and stop logic were still following the model's last differential too closely
+- higher budgets often hurt because extra evidence was not being revised into the differential well
+
+Main policy changes in notebook 05:
+
+- deterministic diagnosis-state manager
+  - anchors the evolving differential using one-shot priors plus revealed evidence
+  - computes top candidates, margin, unresolved mass, and prior strength
+- stronger shortlist logic
+  - scores questions by how well they separate the current competing diagnoses
+  - penalizes generic high-frequency questions more aggressively
+  - limits repeated overexposure to the same parent-question family
+- policy controller
+  - can force a request when the agent tries to stop while the deterministic differential is still unresolved
+  - can force a stop when the deterministic state is stable and the remaining shortlist is weak
+  - can override drift-heavy diagnosis jumps when the deterministic state is clearly anchored elsewhere
+- replay diagnostics
+  - replays the earlier live notebook 04 run on the same revealed evidence
+  - measures how much the refined diagnosis-state logic would have improved the final predictions without spending more API budget
+
+Notebook 05 default configuration:
+
+- `RUN_LIVE_API = False`
+- `ALLOW_DRY_RUN_BENCHMARK = True`
+- `RUN_REPLAY_DIAGNOSTICS = True`
+- `REQUEST_BUDGETS = [1, 3, 5, 8]`
+- `SEQUENTIAL_SAMPLE_PER_CLASS = 1`
+- `SEQUENTIAL_MAX_CASES = 10`
+- artifact root family: `artifacts/sequential_single_agent_refined/`
+
+Validation status:
+
+- notebook 05 JSON is valid
+- all updated code cells executed end-to-end via `nbconvert`
+- the safe env bootstrap cell was patched so headless execution no longer fails on `getpass()`
+
+Notebook 05 artifact root from the executed dry-run:
+
+- `artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1/`
+
+Dry-run sweep results for notebook 05:
+
+- budget `1`: accuracy `0.20`
+- budget `3`: accuracy `0.40`
+- budget `5`: accuracy `0.70`
+- budget `8`: accuracy `0.60`
+
+Interpretation:
+
+- unlike notebook 04, extra evidence is now being used productively by the refined policy logic
+- the best offline policy point on this 10-case slice is around budget `5`
+- the refined controller is not just cleaner; it materially changes the direction of the budget/performance curve
+
+Replay diagnostics against notebook 04 live traces:
+
+- source budget `1`: `0.30` -> refined state on same revealed evidence: `0.20`
+- source budget `3`: `0.20` -> refined state: `0.40`
+- source budget `5`: `0.10` -> refined state: `0.50`
+- source budget `8`: `0.20` -> refined state: `0.60`
+
+Interpretation of replay:
+
+- the refined state manager is weaker on 1-turn diagnosis because it is less eager to overtrust a thin first clue
+- once several turns of evidence are available, it clearly outperforms the earlier live sequential policy on the **same revealed evidence**
+- this strongly supports the diagnosis that the main remaining bottleneck was belief revision / drift control, not lack of information access
+
+Current honest project state after notebook 05:
+
+- the sequential system is still not proven live-better than the one-shot baseline
+- but we now have strong evidence that the notebook 04 failure was not the final verdict on the idea
+- notebook 05 gives a materially stronger controller and a much sharper explanation of what was going wrong
+
+Report written at:
+
+- [sequential_policy_refinement_report.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_policy_refinement_report.md)
+
+### Live Notebook 05 Outcome
+
+The live refined run has now completed:
+
+- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
+
+Live budget sweep results on the 10-case sample:
+
+- budget `1`: accuracy `0.20`
+- budget `3`: accuracy `0.20`, top-5 `0.80`
+- budget `5`: accuracy `0.50`
+- budget `8`: accuracy `0.80`
+
+Paired one-shot accuracy on the same 10 cases remained:
+
+- `0.30`
+
+Meaning:
+
+- notebook 05 now clearly beats the one-shot baseline at higher budgets
+- the project is no longer in the “sequential looks empirically hopeless” state
+
+Most important comparison against notebook 04:
+
+- notebook 04 budget `5`: `0.10` -> notebook 05 budget `5`: `0.50`
+- notebook 04 budget `8`: `0.20` -> notebook 05 budget `8`: `0.80`
+
+This is the strongest evidence so far that the main issue really was sequential policy quality, not the impossibility of the idea.
+
+Sequential-only wins at budget `8`:
+
+- `Chagas`
+- `Ebola`
+- `Pulmonary embolism`
+- `Stable angina`
+- `Tuberculosis`
+
+Remaining failures at budget `8`:
+
+- `Croup -> Viral pharyngitis`
+- `Pneumonia -> Myasthenia gravis`
+
+Important interpretation:
+
+- gains came mainly from the refined diagnosis-state, shortlist, and prompt behavior
+- `drift_override_rate` stayed `0.0`, so the improvement was not just brute-force postprocessing
+
+Updated report with the live notebook 05 results:
+
+- [sequential_policy_refinement_report.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_policy_refinement_report.md)
+
+### Budget Scaling Successor Notebook
+
+Created a minimal successor notebook for the plateau / saturation question:
+
+- [06_single_agent_budget_scaling.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/06_single_agent_budget_scaling.ipynb)
+
+Purpose:
+
+- keep notebook 05 policy logic unchanged
+- change only the default budget sweep to larger values
+- test whether sequential gains continue to improve, plateau, or regress as the request budget increases substantially
+
+Default experiment changes in notebook 06:
+
+- `REQUEST_BUDGETS = [8, 16, 24, 32]`
+- `RUN_VERSION = "anchor_guard_budget_scaling_v1"`
+
+Everything else is intentionally kept aligned with notebook 05 so the scaling experiment is a clean continuation rather than a new method.
+
+### Git Handoff / README
+
+Added root repo documentation:
+
+- [README.md](/Users/bilalawan/claw/assignments/baseline_model/README.md)
+
+Purpose of the README:
+
+- explain the project structure and notebook progression
+- identify which notebooks are historical versus current
+- document how to run the project
+- document artifact layout and experiment hygiene
+- make it explicit that every meaningful notebook/result change must also update the worklog
+
+This was added so collaborator handoff is less dependent on chat context.

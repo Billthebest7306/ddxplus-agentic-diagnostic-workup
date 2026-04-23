@@ -1,0 +1,2 @@
+budget,num_cases,source_accuracy,refined_state_accuracy,mean_refined_margin,accuracy_gain
+8,10,0.2,0.6,1.756238396625821,0.39999999999999997

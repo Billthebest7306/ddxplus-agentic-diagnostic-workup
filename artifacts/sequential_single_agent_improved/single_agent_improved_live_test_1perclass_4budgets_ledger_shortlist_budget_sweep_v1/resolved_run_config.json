@@ -1,0 +1,23 @@
+{
+  "run_name": "single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1",
+  "run_live_api": true,
+  "allow_dry_run_benchmark": false,
+  "resume_if_available": true,
+  "request_budgets": [
+    1,
+    3,
+    5,
+    8
+  ],
+  "split_name": "test",
+  "random_seed": 2919,
+  "sequential_sample_per_class": 1,
+  "sequential_max_cases": 10,
+  "shortlist_size": 12,
+  "shortlist_stats_source": "validate",
+  "shortlist_stats_max_rows": 30000,
+  "use_one_shot_prior": true,
+  "one_shot_prior_top_k": 5,
+  "llm_base_url": "https://api.openai.com/v1",
+  "llm_model": "gpt-4.1-mini"
+}
