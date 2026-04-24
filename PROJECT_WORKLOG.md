@@ -1135,3 +1135,13 @@ Current recommendation captured in those reports:
 - do **not** claim novelty from “multiple agents share memory” alone
 - claim novelty from a diagnosis-specific ledger protocol with support/contradiction tracking, validation, and stop control
 - use a controller-constrained multi-agent design with planner, synthesizer, critic, optional retriever, and stop agent
+
+An additional design-freeze note was added at:
+
+- [architecture_v1_freeze_and_experimental_scope.md](reports/architecture_v1_freeze_and_experimental_scope.md)
+
+Purpose:
+
+- define what is fixed in the next implementation cycle
+- prevent unnecessary churn in top-level architecture
+- make the ledger/control protocol the main experimental variable
