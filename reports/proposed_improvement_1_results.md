@@ -4,11 +4,11 @@
 
 This report summarizes the first live run of:
 
-- [04_single_agent_structured_policy_improvement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/04_single_agent_structured_policy_improvement.ipynb)
+- [04_single_agent_structured_policy_improvement.ipynb](notebooks/04_single_agent_structured_policy_improvement.ipynb)
 
 Artifact root:
 
-- [single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_improved/single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1)
+- [single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1](artifacts/sequential_single_agent_improved/single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1)
 
 This notebook was designed to test a more structured single-agent policy with:
 
@@ -50,7 +50,7 @@ So the current evidence does **not** support the claim that this first structure
 
 ## Budget Sweep Summary
 
-From [budget_sweep_summary.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_improved/single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1/budget_sweep_summary.csv):
+From [budget_sweep_summary.csv](artifacts/sequential_single_agent_improved/single_agent_improved_live_test_1perclass_4budgets_ledger_shortlist_budget_sweep_v1/budget_sweep_summary.csv):
 
 - budget `1`
   - sequential accuracy: `0.30`

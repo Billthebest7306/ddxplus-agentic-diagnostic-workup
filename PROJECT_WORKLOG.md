@@ -59,20 +59,20 @@ Important ideas taken from them:
 
 Main notebooks:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
 
 Helper script:
 
-- [download_ddxplus.py](/Users/bilalawan/claw/assignments/baseline_model/scripts/download_ddxplus.py)
+- [download_ddxplus.py](scripts/download_ddxplus.py)
 
 Reports:
 
-- [baseline_summary.md](/Users/bilalawan/claw/assignments/baseline_model/reports/baseline_summary.md)
-- [baseline_results_and_next_steps.md](/Users/bilalawan/claw/assignments/baseline_model/reports/baseline_results_and_next_steps.md)
-- [results_assessment.md](/Users/bilalawan/claw/assignments/baseline_model/reports/results_assessment.md)
-- [sequential_api_guide.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_api_guide.md)
+- [baseline_summary.md](reports/baseline_summary.md)
+- [baseline_results_and_next_steps.md](reports/baseline_results_and_next_steps.md)
+- [results_assessment.md](reports/results_assessment.md)
+- [sequential_api_guide.md](reports/sequential_api_guide.md)
 
 Artifact layout:
 
@@ -83,7 +83,9 @@ Artifact layout:
 
 Dataset location:
 
-- `.data/ddxplus/22687585/`
+- default local repo path: `dataset/`
+- machine-specific override: `DDXPLUS_DATASET_DIR`
+- legacy fallback still supported: `.data/ddxplus/22687585/`
 
 ## 5. DDXPlus Dataset Facts Used In The Project
 
@@ -576,25 +578,25 @@ and notebook outputs should not be saved with secrets printed.
 
 Main work files:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
 
 Best one-shot artifact:
 
-- [selected_model.json](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/selected_model.json)
-- [basd_pathology_full metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full/metrics.json)
+- [selected_model.json](artifacts/one_shot/selected_model.json)
+- [basd_pathology_full metrics](artifacts/one_shot/basd_pathology_full/metrics.json)
 
 Patched sequential pilot artifact:
 
-- [decoded_gated_v2 metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/metrics.json)
-- [decoded_gated_v2 predictions](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/predictions.csv)
-- [decoded_gated_v2 traces](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/traces.jsonl)
+- [decoded_gated_v2 metrics](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/metrics.json)
+- [decoded_gated_v2 predictions](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/predictions.csv)
+- [decoded_gated_v2 traces](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v2/traces.jsonl)
 
 Diagnostic reports:
 
-- [results_assessment.md](/Users/bilalawan/claw/assignments/baseline_model/reports/results_assessment.md)
-- [baseline_results_and_next_steps.md](/Users/bilalawan/claw/assignments/baseline_model/reports/baseline_results_and_next_steps.md)
+- [results_assessment.md](reports/results_assessment.md)
+- [baseline_results_and_next_steps.md](reports/baseline_results_and_next_steps.md)
 
 ## 24. One-Sentence Summary For Future Context Recovery
 
@@ -744,7 +746,7 @@ Avoid jumping straight to expensive larger API runs without changing the policy,
 
 A meeting-ready project summary was added at:
 
-- [INSTRUCTOR_GUIDE.md](/Users/bilalawan/claw/assignments/baseline_model/INSTRUCTOR_GUIDE.md)
+- [INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md)
 
 Purpose:
 
@@ -826,7 +828,7 @@ Current conclusion:
 
 A new notebook was added:
 
-- [04_single_agent_structured_policy_improvement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/04_single_agent_structured_policy_improvement.ipynb)
+- [04_single_agent_structured_policy_improvement.ipynb](notebooks/04_single_agent_structured_policy_improvement.ipynb)
 
 Purpose:
 
@@ -910,13 +912,13 @@ Main observed failure mode:
 
 Report written at:
 
-- [proposed_improvement_1_results.md](/Users/bilalawan/claw/assignments/baseline_model/reports/proposed_improvement_1_results.md)
+- [proposed_improvement_1_results.md](reports/proposed_improvement_1_results.md)
 
 ### Sequential Policy Refinement (Notebook 05)
 
 New successor notebook created:
 
-- [05_single_agent_structured_policy_refinement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/05_single_agent_structured_policy_refinement.ipynb)
+- [05_single_agent_structured_policy_refinement.ipynb](notebooks/05_single_agent_structured_policy_refinement.ipynb)
 
 Reason for creating notebook 05:
 
@@ -996,13 +998,13 @@ Current honest project state after notebook 05:
 
 Report written at:
 
-- [sequential_policy_refinement_report.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_policy_refinement_report.md)
+- [sequential_policy_refinement_report.md](reports/sequential_policy_refinement_report.md)
 
 ### Live Notebook 05 Outcome
 
 The live refined run has now completed:
 
-- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
+- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
 
 Live budget sweep results on the 10-case sample:
 
@@ -1047,13 +1049,13 @@ Important interpretation:
 
 Updated report with the live notebook 05 results:
 
-- [sequential_policy_refinement_report.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_policy_refinement_report.md)
+- [sequential_policy_refinement_report.md](reports/sequential_policy_refinement_report.md)
 
 ### Budget Scaling Successor Notebook
 
 Created a minimal successor notebook for the plateau / saturation question:
 
-- [06_single_agent_budget_scaling.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/06_single_agent_budget_scaling.ipynb)
+- [06_single_agent_budget_scaling.ipynb](notebooks/06_single_agent_budget_scaling.ipynb)
 
 Purpose:
 
@@ -1072,7 +1074,7 @@ Everything else is intentionally kept aligned with notebook 05 so the scaling ex
 
 Added root repo documentation:
 
-- [README.md](/Users/bilalawan/claw/assignments/baseline_model/README.md)
+- [README.md](README.md)
 
 Purpose of the README:
 
@@ -1083,3 +1085,53 @@ Purpose of the README:
 - make it explicit that every meaningful notebook/result change must also update the worklog
 
 This was added so collaborator handoff is less dependent on chat context.
+
+## 27. Repo Cleanup And Path Standardization
+
+A repo cleanup pass was applied so collaborators on different devices do not need the dataset in the same absolute location.
+
+What changed:
+
+- the default dataset fallback was standardized to `dataset/`
+- a machine-local override is now supported via `DDXPLUS_DATASET_DIR`
+- the downloader now accepts both `--output-dir` and the older `--dataset-dir` alias, but `--output-dir` is the canonical flag
+- notebooks `01`, `02`, `04`, `05`, and `06` were updated to resolve dataset paths in this order:
+  1. `DDXPLUS_DATASET_DIR`
+  2. `dataset/`
+  3. legacy `.data/ddxplus/22687585/`
+- `scikit-learn` was added to `requirements.txt` because notebooks `04` to `06` import `sklearn.metrics`
+- `dataset/` was added to `.gitignore` so local dataset copies are not accidentally committed
+
+Why this matters:
+
+- the repo now has a single documented default local dataset location
+- collaborators can still keep the data elsewhere without editing notebooks
+- old notebooks remain backward-compatible with legacy local setups
+
+What did **not** change:
+
+- experiment logic
+- prompts
+- budgets
+- saved artifacts
+
+So this cleanup should not require rerunning historical experiments. It is an environment and reproducibility fix, not a methodological change.
+
+## 28. Ledger Novelty And Multi-Agent Architecture Notes
+
+Two new design reports were added for the instructor-facing discussion of project novelty and next-stage architecture:
+
+- [evidence_ledger_algorithm_and_improvements.md](reports/evidence_ledger_algorithm_and_improvements.md)
+- [proposed_multi_agent_architecture.md](reports/proposed_multi_agent_architecture.md)
+
+Purpose:
+
+- clarify that the evidence ledger is not strong enough as a novelty claim if presented only as shared memory
+- reframe the real method as an evidence-gated differential ledger that constrains requests, diagnosis updates, critique, and stopping
+- provide a concrete multi-agent architecture centered on the ledger rather than free-form inter-agent chat
+
+Current recommendation captured in those reports:
+
+- do **not** claim novelty from “multiple agents share memory” alone
+- claim novelty from a diagnosis-specific ledger protocol with support/contradiction tracking, validation, and stop control
+- use a controller-constrained multi-agent design with planner, synthesizer, critic, optional retriever, and stop agent

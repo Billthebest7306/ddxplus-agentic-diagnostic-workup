@@ -15,7 +15,7 @@ In short: the ledger was recording the state correctly, but the policy was still
 
 A successor notebook was created:
 
-- [05_single_agent_structured_policy_refinement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/05_single_agent_structured_policy_refinement.ipynb)
+- [05_single_agent_structured_policy_refinement.ipynb](notebooks/05_single_agent_structured_policy_refinement.ipynb)
 
 The core refinements stay within the same single-agent architecture:
 
@@ -40,11 +40,11 @@ Two cheap validation passes were run.
 
 Artifact root:
 
-- [single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1)
+- [single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1](artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1)
 
 Replay summary:
 
-- [replay_source_run_summary.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1/replay_source_run_summary.csv)
+- [replay_source_run_summary.csv](artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1/replay_source_run_summary.csv)
 
 Results on the exact same revealed evidence as notebook 04:
 
@@ -62,7 +62,7 @@ Interpretation:
 
 Budget sweep summary:
 
-- [budget_sweep_summary.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1/budget_sweep_summary.csv)
+- [budget_sweep_summary.csv](artifacts/sequential_single_agent_refined/single_agent_refined_dryrun_test_1perclass_4budgets_anchor_guard_v1/budget_sweep_summary.csv)
 
 Dry-run results on the 10-case benchmark:
 
@@ -117,11 +117,11 @@ The live run has now been completed.
 
 Live artifact root:
 
-- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
+- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
 
 Live budget sweep summary:
 
-- [budget_sweep_summary.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_sweep_summary.csv)
+- [budget_sweep_summary.csv](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_sweep_summary.csv)
 
 Live results on the 10-case benchmark:
 

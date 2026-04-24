@@ -11,18 +11,18 @@ The project now has a proper baseline ladder scaffold instead of a single notebo
 
 The implemented notebooks are:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
 
 ## What The Best Available Results Are Right Now
 
 The strongest *available* empirical one-shot numbers in the folder still come from the archived full differential-trained run:
 
-- [metrics.json](/Users/bilalawan/claw/assignments/baseline_model/artifacts/_legacy/direct_dx_full/metrics.json)
-- [predictions.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/_legacy/direct_dx_full/predictions.csv)
-- [qualitative_examples.json](/Users/bilalawan/claw/assignments/baseline_model/artifacts/_legacy/direct_dx_full/qualitative_examples.json)
-- [confusion_summary.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/_legacy/direct_dx_full/confusion_summary.csv)
+- [metrics.json](artifacts/_legacy/direct_dx_full/metrics.json)
+- [predictions.csv](artifacts/_legacy/direct_dx_full/predictions.csv)
+- [qualitative_examples.json](artifacts/_legacy/direct_dx_full/qualitative_examples.json)
+- [confusion_summary.csv](artifacts/_legacy/direct_dx_full/confusion_summary.csv)
 
 Those metrics are:
 

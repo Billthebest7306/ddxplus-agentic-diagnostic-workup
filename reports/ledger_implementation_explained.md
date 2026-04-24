@@ -4,8 +4,8 @@ This note explains where the deterministic ledger was implemented, how it works,
 
 Primary implementation files:
 
-- [05_single_agent_structured_policy_refinement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/05_single_agent_structured_policy_refinement.ipynb)
-- [06_single_agent_budget_scaling.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/06_single_agent_budget_scaling.ipynb)
+- [05_single_agent_structured_policy_refinement.ipynb](notebooks/05_single_agent_structured_policy_refinement.ipynb)
+- [06_single_agent_budget_scaling.ipynb](notebooks/06_single_agent_budget_scaling.ipynb)
 
 `06` keeps the same ledger and policy logic as `05`. It only changes the default request budgets.
 
@@ -390,7 +390,7 @@ This is the real orchestration flow:
 
 A good example is the refined live run for pulmonary embolism:
 
-- [budget_008 traces.jsonl](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_008/traces.jsonl)
+- [budget_008 traces.jsonl](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_008/traces.jsonl)
 
 The sequence was:
 
@@ -412,7 +412,7 @@ This is the kind of stateful workup that the ledger enabled:
 
 That result is visible in:
 
-- [budget_008 predictions.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_008/predictions.csv)
+- [budget_008 predictions.csv](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1/budget_008/predictions.csv)
 
 ## 12. Why This Actually Worked
 

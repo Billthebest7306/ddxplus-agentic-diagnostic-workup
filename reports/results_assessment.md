@@ -18,11 +18,11 @@ There is also one important integrity note: the first sequential run was slightl
 
 Artifacts:
 
-- [selected_model.json](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/selected_model.json)
-- [run_registry_full.csv](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/run_registry_full.csv)
-- [basd_pathology_full metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full/metrics.json)
-- [basd_joint_full metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_joint_full/metrics.json)
-- [basd_differential_full metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_differential_full/metrics.json)
+- [selected_model.json](artifacts/one_shot/selected_model.json)
+- [run_registry_full.csv](artifacts/one_shot/run_registry_full.csv)
+- [basd_pathology_full metrics](artifacts/one_shot/basd_pathology_full/metrics.json)
+- [basd_joint_full metrics](artifacts/one_shot/basd_joint_full/metrics.json)
+- [basd_differential_full metrics](artifacts/one_shot/basd_differential_full/metrics.json)
 
 Full-split results:
 
@@ -52,10 +52,10 @@ Takeaway:
 
 Artifacts:
 
-- [sequential metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/metrics.json)
-- [sequential predictions](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/predictions.csv)
-- [sequential traces](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/traces.jsonl)
-- [sequential config](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/resolved_run_config.json)
+- [sequential metrics](artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/metrics.json)
+- [sequential predictions](artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/predictions.csv)
+- [sequential traces](artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/traces.jsonl)
+- [sequential config](artifacts/sequential_single_agent/single_agent_live_test_5perclass_max3/resolved_run_config.json)
 
 Reported live-run numbers on the 245-case benchmark:
 
@@ -113,15 +113,15 @@ On the non-error subset only, accuracy is:
 
 - `2.97%`
 
-I patched [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb) so that fallback no longer uses hidden differential information. The live sequential run and the comparison notebook should be rerun before using final numbers in a writeup.
+I patched [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb) so that fallback no longer uses hidden differential information. The live sequential run and the comparison notebook should be rerun before using final numbers in a writeup.
 
 ## 4. Paired Comparison
 
 Artifacts:
 
-- [comparison summary](/Users/bilalawan/claw/assignments/baseline_model/artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/summary_metrics.json)
-- [paired case results](/Users/bilalawan/claw/assignments/baseline_model/artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/paired_case_results.csv)
-- [pathology delta](/Users/bilalawan/claw/assignments/baseline_model/artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/pathology_delta.csv)
+- [comparison summary](artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/summary_metrics.json)
+- [paired case results](artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/paired_case_results.csv)
+- [pathology delta](artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_5perclass_max3/pathology_delta.csv)
 
 Current paired comparison on the same 245 cases:
 

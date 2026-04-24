@@ -184,7 +184,7 @@ That makes it the cleanest non-agentic benchmark.
 
 The one-shot notebook is:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
 
 It evaluates three related one-shot models:
 
@@ -300,7 +300,7 @@ That limitation is exactly why the sequential and later multi-agent stages matte
 
 The sequential notebook is:
 
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
 
 Its setup is:
 
@@ -565,25 +565,25 @@ The most honest summary to give right now is:
 
 Main notebooks:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
 
 Useful persistent context:
 
-- [PROJECT_WORKLOG.md](/Users/bilalawan/claw/assignments/baseline_model/PROJECT_WORKLOG.md)
+- [PROJECT_WORKLOG.md](PROJECT_WORKLOG.md)
 
 Best one-shot artifacts:
 
-- [selected_model.json](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/selected_model.json)
-- [basd_pathology_full metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full/metrics.json)
+- [selected_model.json](artifacts/one_shot/selected_model.json)
+- [basd_pathology_full metrics](artifacts/one_shot/basd_pathology_full/metrics.json)
 
 Current sequential pilot:
 
-- [gpt-5.4-mini metrics](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/metrics.json)
-- [gpt-5.4-mini predictions](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/predictions.csv)
-- [gpt-5.4-mini traces](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/traces.jsonl)
+- [gpt-5.4-mini metrics](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/metrics.json)
+- [gpt-5.4-mini predictions](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/predictions.csv)
+- [gpt-5.4-mini traces](artifacts/sequential_single_agent/single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/traces.jsonl)
 
 Paired comparison:
 
-- [comparison summary](/Users/bilalawan/claw/assignments/baseline_model/artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/summary_metrics.json)
+- [comparison summary](artifacts/comparisons/basd_pathology_full__vs__single_agent_live_test_1perclass_max3_decoded_gated_v3_gpt54mini/summary_metrics.json)

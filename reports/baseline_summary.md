@@ -2,11 +2,11 @@
 
 The submission is now organized around three notebook-first artifacts:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
 
-The only separate code file is [download_ddxplus.py](/Users/bilalawan/claw/assignments/baseline_model/scripts/download_ddxplus.py), which downloads the official English DDXPlus release from Figshare into `.data/ddxplus/22687585`.
+The only separate code file is [download_ddxplus.py](scripts/download_ddxplus.py), which downloads the official English DDXPlus release from Figshare into the repo-local `dataset/` folder by default.
 
 ## What Each Notebook Does
 
@@ -74,6 +74,8 @@ Download DDXPlus:
 ```bash
 python3 scripts/download_ddxplus.py
 ```
+
+If your local dataset lives somewhere else, set `DDXPLUS_DATASET_DIR` before running the notebooks.
 
 Suggested execution order:
 

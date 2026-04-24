@@ -17,46 +17,46 @@ The current research direction is:
 
 Main folders:
 
-- [notebooks](/Users/bilalawan/claw/assignments/baseline_model/notebooks)
-- [artifacts](/Users/bilalawan/claw/assignments/baseline_model/artifacts)
-- [reports](/Users/bilalawan/claw/assignments/baseline_model/reports)
-- [scripts](/Users/bilalawan/claw/assignments/baseline_model/scripts)
-- [PROJECT_WORKLOG.md](/Users/bilalawan/claw/assignments/baseline_model/PROJECT_WORKLOG.md)
+- [notebooks](notebooks)
+- [artifacts](artifacts)
+- [reports](reports)
+- [scripts](scripts)
+- [PROJECT_WORKLOG.md](PROJECT_WORKLOG.md)
 
 Supporting docs:
 
-- [INSTRUCTOR_GUIDE.md](/Users/bilalawan/claw/assignments/baseline_model/INSTRUCTOR_GUIDE.md)
-- [PROJECT_WORKLOG.md](/Users/bilalawan/claw/assignments/baseline_model/PROJECT_WORKLOG.md)
+- [INSTRUCTOR_GUIDE.md](INSTRUCTOR_GUIDE.md)
+- [PROJECT_WORKLOG.md](PROJECT_WORKLOG.md)
 
 Dataset helper:
 
-- [download_ddxplus.py](/Users/bilalawan/claw/assignments/baseline_model/scripts/download_ddxplus.py)
+- [download_ddxplus.py](scripts/download_ddxplus.py)
 
 ## Current Notebook Map
 
 Notebook progression:
 
-- [01_one_shot_classifier_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/01_one_shot_classifier_baselines.ipynb)
+- [01_one_shot_classifier_baselines.ipynb](notebooks/01_one_shot_classifier_baselines.ipynb)
   - trains and compares one-shot BASD-style classifiers
   - produces the selected one-shot comparator
 
-- [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb)
+- [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb)
   - earlier sequential baseline
   - useful mainly as historical reference now
 
-- [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb)
+- [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb)
   - compares one-shot and sequential outputs on aligned cases
 
-- [04_single_agent_structured_policy_improvement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/04_single_agent_structured_policy_improvement.ipynb)
+- [04_single_agent_structured_policy_improvement.ipynb](notebooks/04_single_agent_structured_policy_improvement.ipynb)
   - first structured-policy sequential improvement
   - cleaner ledger, legality, and shortlisting
   - important intermediate step, but empirically weaker than the current refined version
 
-- [05_single_agent_structured_policy_refinement.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/05_single_agent_structured_policy_refinement.ipynb)
+- [05_single_agent_structured_policy_refinement.ipynb](notebooks/05_single_agent_structured_policy_refinement.ipynb)
   - current main refined sequential notebook
   - adds anchored deterministic diagnosis state, stronger shortlist scoring, and improved stop/request behavior
 
-- [06_single_agent_budget_scaling.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/06_single_agent_budget_scaling.ipynb)
+- [06_single_agent_budget_scaling.ipynb](notebooks/06_single_agent_budget_scaling.ipynb)
   - same policy as notebook 05
   - only changes default request budgets to study scaling and plateau behavior
 
@@ -68,14 +68,14 @@ The current best live small-sample sequential result comes from the refined note
 
 Relevant artifact roots:
 
-- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
-- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_budget_scaling_v1](/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_budget_scaling_v1)
+- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_v1)
+- [single_agent_refined_live_test_1perclass_4budgets_anchor_guard_budget_scaling_v1](artifacts/sequential_single_agent_refined/single_agent_refined_live_test_1perclass_4budgets_anchor_guard_budget_scaling_v1)
 
 Important caution:
 
-- these later live sequential results were run with `gpt-5.4-mini`
-- earlier structured-policy notebook 04 live runs used `gpt-4.1-mini`
-- so backbone and policy changed together unless an ablation is run explicitly
+- notebook `05` live runs used `gpt-5.4-mini`
+- notebook `04` live runs and notebook `06` budget-scaling runs currently use `gpt-4.1-mini`
+- so the current artifact tree still mixes policy and backbone changes unless an explicit ablation is run
 
 ## Setup
 
@@ -85,15 +85,26 @@ Install dependencies:
 python3 -m pip install -r requirements.txt
 ```
 
-Download the DDXPlus dataset into `.data/`:
+Download the DDXPlus dataset into the repo-local `dataset/` folder:
 
 ```bash
 python3 scripts/download_ddxplus.py
 ```
 
-The dataset is not committed to git. The repo assumes:
+The dataset is not committed to git. The repo now uses this path resolution order:
 
-- `.data/ddxplus/22687585/`
+1. `DDXPLUS_DATASET_DIR` if set
+2. `dataset/`
+3. legacy fallback: `.data/ddxplus/22687585/`
+
+Examples:
+
+```bash
+export DDXPLUS_DATASET_DIR="/absolute/path/to/your/local/ddxplus"
+python3 scripts/download_ddxplus.py --output-dir "$DDXPLUS_DATASET_DIR"
+```
+
+If you and a collaborator keep the dataset in different places on different machines, set `DDXPLUS_DATASET_DIR` locally and do not commit the dataset directory.
 
 ## Running The Project
 
@@ -171,7 +182,7 @@ Use the same notebook only when:
 
 After every meaningful change, update:
 
-- [PROJECT_WORKLOG.md](/Users/bilalawan/claw/assignments/baseline_model/PROJECT_WORKLOG.md)
+- [PROJECT_WORKLOG.md](PROJECT_WORKLOG.md)
 
 This is mandatory for continuity.
 
@@ -190,7 +201,7 @@ Treat the worklog as the persistent research memory for the repo.
 
 If a result matters, write a report in:
 
-- [reports](/Users/bilalawan/claw/assignments/baseline_model/reports)
+- [reports](reports)
 
 Do this when:
 
@@ -204,6 +215,7 @@ Never commit:
 
 - real API keys
 - notebook outputs containing real API keys
+- `dataset/`
 - `.data/`
 
 Before pushing:
@@ -225,10 +237,10 @@ This matters because the comparison story in this repo depends heavily on exact 
 
 If Hassan is continuing immediately, the best starting point is:
 
-- read [README.md](/Users/bilalawan/claw/assignments/baseline_model/README.md)
-- read [PROJECT_WORKLOG.md](/Users/bilalawan/claw/assignments/baseline_model/PROJECT_WORKLOG.md)
-- inspect [sequential_policy_refinement_report.md](/Users/bilalawan/claw/assignments/baseline_model/reports/sequential_policy_refinement_report.md)
-- inspect [ledger_implementation_explained.md](/Users/bilalawan/claw/assignments/baseline_model/reports/ledger_implementation_explained.md)
+- read [README.md](README.md)
+- read [PROJECT_WORKLOG.md](PROJECT_WORKLOG.md)
+- inspect [sequential_policy_refinement_report.md](reports/sequential_policy_refinement_report.md)
+- inspect [ledger_implementation_explained.md](reports/ledger_implementation_explained.md)
 - continue from notebook `05` or `06`
 
 ## Current Practical Recommendation

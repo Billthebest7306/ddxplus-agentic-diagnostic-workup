@@ -4,6 +4,7 @@ torch
 matplotlib
 tqdm
 requests
+scikit-learn
 nbformat
 jupyterlab
 ipykernel

@@ -1,6 +1,6 @@
 # Sequential API Guide
 
-This guide explains how to run [02_single_agent_sequential_baseline.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/02_single_agent_sequential_baseline.ipynb) with a real API-backed model.
+This guide explains how to run [02_single_agent_sequential_baseline.ipynb](notebooks/02_single_agent_sequential_baseline.ipynb) with a real API-backed model.
 
 ## What The Notebook Expects
 
@@ -161,4 +161,4 @@ If those fields stay `None`, cost values remain empty and the rest of the evalua
 3. Switch `RUN_LIVE_API = True`.
 4. Fill the API placeholders or export the env vars.
 5. Run the benchmark execution cell.
-6. After it finishes, open [03_compare_baselines.ipynb](/Users/bilalawan/claw/assignments/baseline_model/notebooks/03_compare_baselines.ipynb) to compare against the selected one-shot model.
+6. After it finishes, open [03_compare_baselines.ipynb](notebooks/03_compare_baselines.ipynb) to compare against the selected one-shot model.

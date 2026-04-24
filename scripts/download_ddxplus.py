@@ -7,12 +7,13 @@ import argparse
 from dataclasses import dataclass, asdict
 import hashlib
 import json
+import os
 from pathlib import Path
 import urllib.request
 
 
 FIGSHARE_ARTICLE_ID = 22687585
-DEFAULT_DATASET_DIR = Path(".data/ddxplus/22687585")
+DEFAULT_DATASET_DIR = Path(os.environ.get("DDXPLUS_DATASET_DIR", "dataset"))
 MANIFEST_FILE = "manifest.json"
 
 
@@ -68,8 +69,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Download the DDXPlus English dataset from Figshare.")
     parser.add_argument(
         "--output-dir",
-        default=str(DEFAULT_DATASET_DIR),
+        dest="output_dir",
+        default=None,
         help="Target directory for the dataset files.",
+    )
+    parser.add_argument(
+        "--dataset-dir",
+        dest="output_dir",
+        help=argparse.SUPPRESS,
     )
     parser.add_argument(
         "--metadata-only",
@@ -83,7 +90,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    output_dir = Path(args.output_dir).expanduser().resolve()
+    output_dir = Path(args.output_dir or DEFAULT_DATASET_DIR).expanduser().resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     manifest = fetch_figshare_manifest()
     (output_dir / MANIFEST_FILE).write_text(
