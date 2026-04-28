@@ -1,0 +1,33 @@
+{
+  "accuracy": 0.9,
+  "top3_accuracy": 0.9,
+  "top5_accuracy": 0.9,
+  "macro_f1": 0.8181818181818182,
+  "mean_requests": 11.8,
+  "utility": -1.6960000000000002,
+  "stop_before_cap_rate": 0.8,
+  "mean_api_calls": 12.6,
+  "total_input_tokens": 269060,
+  "total_output_tokens": 14902,
+  "total_estimated_cost": null,
+  "mean_deterministic_margin": 3.602434364411031,
+  "mean_marginal_value_final": 0.1662399127869155,
+  "mean_utility_continue_final": -0.053760087213084465,
+  "drift_override_rate": 0.0,
+  "cost_forced_stop_rate": 0.0,
+  "cost_forced_request_rate": 0.0,
+  "turn_distribution": {
+    "3": 1,
+    "6": 1,
+    "7": 1,
+    "8": 3,
+    "14": 1,
+    "16": 1,
+    "24": 2
+  },
+  "run_name": "single_agent_cost_sensitive_live_test_1perclass_cap24_6lambdas_lambda_cost_v1",
+  "evidence_cost_lambda": 0.22,
+  "max_request_cap": 24,
+  "num_cases": 10,
+  "runtime_seconds": 351.08538794517517
+}

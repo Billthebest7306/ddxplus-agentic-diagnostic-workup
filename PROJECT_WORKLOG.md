@@ -1145,3 +1145,696 @@ Purpose:
 - define what is fixed in the next implementation cycle
 - prevent unnecessary churn in top-level architecture
 - make the ledger/control protocol the main experimental variable
+
+## 29. Rigorous Single-Agent Evaluation Phase
+
+The next phase was implemented without moving into deeper algorithmic ledger methods, multi-agent systems, model ablations, probabilistic belief-state modeling, graph inference, RL, or learned policies.
+
+The user explicitly fixed the scope:
+
+- keep the LLM backbone fixed to `gpt-4.1-mini`
+- do not run model ablations yet
+- make the current refined single-agent system more rigorous, reproducible, fairly evaluated, and evidence-efficient
+- work in successor notebooks rather than destructively rewriting historical notebooks
+
+### Deterministic API Fixes
+
+Small reproducibility fixes were applied to notebooks `05`, `06`, and the new `08`:
+
+- default LLM model is now `gpt-4.1-mini`
+- `TEMPERATURE = 0.0`
+- `TOP_P = 1.0`
+- OpenAI-compatible request bodies include both `temperature` and `top_p`
+- resolved run configs log deterministic controls
+- the secure API bootstrap cell no longer prompts for `getpass()` during non-live execution
+
+This matters because notebook execution should not block during dry runs or CI-style validation, and live runs should not silently use stochastic API settings.
+
+### New Notebook 07: Full-Evidence One-Shot Comparator
+
+Added:
+
+- [07_full_evidence_one_shot_comparator.ipynb](notebooks/07_full_evidence_one_shot_comparator.ipynb)
+
+Purpose:
+
+- train a full-evidence direct diagnosis comparator
+- reveal every DDXPlus root evidence field as present/value or absent
+- estimate the full-information ceiling available in DDXPlus
+- compare against the initial-evidence one-shot baseline
+
+Important fairness rule:
+
+- full-evidence predictions and probabilities are evaluation-only
+- they must not be used inside live sequential policy, action selection, stop logic, prompting, or diagnosis updates
+
+Implementation note:
+
+- the full-evidence encoder uses a precomputed all-absent evidence template
+- per patient, it copies that template, sets demographics, and applies only present/value roots
+- this avoids repeatedly applying all 223 absent root observations per row
+
+Status:
+
+- notebook created
+- code cells parse cleanly
+- full training has not been executed in this pass
+
+Report:
+
+- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
+
+### New Notebook 08: Cost-Sensitive Sequential Lambda Sweep
+
+Added:
+
+- [08_cost_sensitive_sequential_lambda_sweep.ipynb](notebooks/08_cost_sensitive_sequential_lambda_sweep.ipynb)
+
+Purpose:
+
+- replace arbitrary request-budget sweeps with a cost-sensitive evidence acquisition experiment
+- use a generous request cap as a safety ceiling
+- sweep evidence cost `lambda`
+- test whether the policy can stop earlier when more evidence is not worth the cost
+
+Default validation settings:
+
+- `RUN_LIVE_API = False`
+- `ALLOW_DRY_RUN_BENCHMARK = True`
+- `LLM_MODEL = "gpt-4.1-mini"`
+- `TEMPERATURE = 0.0`
+- `TOP_P = 1.0`
+- `EVIDENCE_COST_LAMBDAS = [0.00, 0.03, 0.06, 0.10, 0.15, 0.22]`
+- `MAX_REQUEST_CAP = 24`
+- `SEQUENTIAL_SAMPLE_PER_CLASS = 1`
+- `SEQUENTIAL_MAX_CASES = 10`
+
+Policy addition:
+
+- a lightweight deterministic marginal-value estimate for another evidence request
+- uses current shortlist score, diagnostic margin, unresolved mass, recent margin gain, stability, and remaining cap
+- compares marginal evidence value against `lambda`
+- can force stop when value is below cost
+- can force request when value clearly exceeds cost and the diagnosis is unresolved
+
+This remains within the current architecture:
+
+- single agent
+- deterministic ledger
+- decoded evidence
+- legal action gating
+- one-shot prior anchoring
+- shortlist tied to competing diagnoses
+- drift/stability controls
+
+Validation:
+
+- notebook 08 executed end-to-end in dry-run mode
+- artifact root:
+  - `artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_dryrun_test_1perclass_cap24_6lambdas_lambda_cost_v1/`
+- plots and per-lambda artifacts were written successfully
+
+Important caveat:
+
+- dry-run metrics are contract checks only
+- they are not live LLM scientific results
+
+Report:
+
+- [lambda_cost_sensitive_policy_report.md](reports/lambda_cost_sensitive_policy_report.md)
+
+### New Notebook 09: Matched-Evidence Integrated Comparison
+
+Added:
+
+- [09_matched_evidence_integrated_comparison.ipynb](notebooks/09_matched_evidence_integrated_comparison.ipynb)
+
+Purpose:
+
+- compare initial-evidence one-shot, sequential prediction, matched-evidence one-shot, and full-evidence one-shot on the same cases
+- separate the value of evidence acquisition from the value of LLM sequential reasoning
+
+Matched-evidence comparator:
+
+- reads sequential `traces.jsonl`
+- reconstructs exactly the evidence roots revealed by the policy
+- encodes demographics + initial evidence + revealed fields as a bag-of-evidence state
+- does not include turn order, unrevealed evidence, hidden labels, hidden differentials, or full-evidence predictions
+
+Scientific interpretation:
+
+- if sequential beats matched-evidence one-shot, LLM reasoning over acquired evidence is adding value
+- if matched-evidence one-shot beats sequential, the sequential system may still be useful as an evidence acquisition controller while a direct classifier handles final diagnosis
+- if both trail full-evidence one-shot, the policy is not acquiring enough of the right evidence
+
+Validation:
+
+- notebook 09 executed successfully against the notebook 08 dry-run artifact
+- artifact root:
+  - `artifacts/integrated_comparisons/single_agent_cost_sensitive_dryrun_test_1perclass_cap24_6lambdas_lambda_cost_v1__matched_integrated_v1/`
+- at that time, notebook 07 had not yet been run, so matched/full-evidence columns were `NaN` in the dry-run validation output
+- this was later superseded by the final live integrated comparison recorded in section 31
+
+Report:
+
+- [matched_evidence_integrated_comparison_report.md](reports/matched_evidence_integrated_comparison_report.md)
+
+### Phase Report
+
+Added:
+
+- [phase_next_rigorous_evaluation_plan.md](reports/phase_next_rigorous_evaluation_plan.md)
+
+This report summarizes the new phase, current status, dry-run validation, and recommended next live runs.
+
+### Recommended Next Steps
+
+1. Run notebook 07 to create full-evidence one-shot artifacts.
+2. Run notebook 08 live on the 10-case pilot with `gpt-4.1-mini`.
+3. If results are coherent, run notebook 08 on the 49-case balanced pilot.
+4. Rerun notebook 09 after full-evidence and live lambda artifacts exist.
+5. Use notebook 09 to decide whether final diagnosis should remain with the LLM or be delegated to a direct classifier after sequential evidence gathering.
+
+## 30. Full-Evidence Deduplication Robustness Check
+
+Notebook 07 was updated with a non-destructive deduplication robustness section.
+
+Reason:
+
+- the full-evidence one-shot model showed extremely high validation accuracy very early
+- a code audit found no obvious direct target leakage into the feature vector
+- however, exact duplicate rows exist across the official DDXPlus splits
+
+What was added:
+
+- a post-training section named `Deduplicated Robustness Check`
+- official train/validate/test metrics remain unchanged
+- validation/test rows can be filtered if their signatures appear in training
+- two duplicate definitions are reported:
+  - `raw_row_signature`: full raw patient-row signature
+  - `feature_signature`: `AGE`, `SEX`, `EVIDENCES`, and `INITIAL_EVIDENCE`
+- the selected trained checkpoint is reloaded
+- metrics are recomputed on filtered validation/test subsets
+
+Artifacts written inside the selected full-evidence run directory:
+
+- `dedup_robustness_summary.csv`
+- `dedup_robustness_summary.json`
+- `dedup_metrics_validate_raw_row_signature.json`
+- `dedup_metrics_validate_feature_signature.json`
+- `dedup_metrics_test_raw_row_signature.json`
+- `dedup_metrics_test_feature_signature.json`
+- matching `dedup_predictions_*` CSV files
+
+Important interpretation:
+
+- official metrics are still reported for comparability with the released split
+- deduplicated metrics are a robustness check against cross-split duplicate contamination
+- the full-evidence baseline remains a ceiling-style comparator
+- full evidence must still not be used inside the live sequential policy
+
+Updated report:
+
+- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
+
+## 31. Final Comparator Results Integrated Into Reports
+
+The final available artifacts for the rigorous evaluation phase were inspected and summarized.
+
+New summary report:
+
+- [final_results_summary.md](reports/final_results_summary.md)
+
+Updated reports:
+
+- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
+- [lambda_cost_sensitive_policy_report.md](reports/lambda_cost_sensitive_policy_report.md)
+- [matched_evidence_integrated_comparison_report.md](reports/matched_evidence_integrated_comparison_report.md)
+- [phase_next_rigorous_evaluation_plan.md](reports/phase_next_rigorous_evaluation_plan.md)
+- [README.md](README.md)
+
+### Full-Evidence One-Shot Result
+
+Artifact:
+
+- `artifacts/one_shot_full_evidence/full_evidence_pathology_full/`
+
+Official full-split result:
+
+- best validation accuracy: `0.9954`
+- best validation macro-F1: `0.9943`
+- test accuracy: `0.9958`
+- test top-3 accuracy: `1.0000`
+- test top-5 accuracy: `1.0000`
+- test macro-F1: `0.9948`
+
+Dedup robustness result:
+
+- train-overlap duplicate rows exist in validation/test
+- validation duplicates removed: about `1.2%` to `1.4%`
+- test duplicates removed: about `1.4%` to `1.5%`
+- deduplicated validation/test accuracy remained effectively unchanged
+- deduplicated test accuracy stayed about `0.9958`
+
+Interpretation:
+
+- duplicate contamination exists but does not explain the near-ceiling full-evidence result
+- DDXPlus contains enough structured evidence for highly accurate diagnosis when full evidence is visible
+- this remains a ceiling comparator and must not be used inside the live sequential policy
+
+### Cost-Sensitive Sequential Live Pilot
+
+Artifact:
+
+- `artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_6lambdas_lambda_cost_v1/`
+
+Live settings:
+
+- model: `gpt-4.1-mini`
+- temperature: `0.0`
+- top-p: `1.0`
+- request cap: `24`
+- cases: `10`
+- lambdas: `[0.00, 0.03, 0.06, 0.10, 0.15, 0.22]`
+
+Main result:
+
+- accuracy stayed at `0.900` across all lambda values
+- mean requests dropped from `18.4` to `11.8`
+- input tokens dropped from `429,339` to `269,060`
+- stop-before-cap rate improved from `0.70` to `0.80`
+
+Interpretation:
+
+- the lambda controller materially improved evidence efficiency on the pilot slice
+- the best practical lambda range is currently `0.10` to `0.22`
+- the result is promising but still small-sample
+
+### Integrated Matched-Evidence Comparison
+
+Artifact:
+
+- `artifacts/integrated_comparisons/single_agent_cost_sensitive_live_test_1perclass_cap24_6lambdas_lambda_cost_v1__matched_integrated_v1/`
+
+On the same 10 live pilot cases:
+
+- initial-evidence one-shot accuracy: `0.300`
+- sequential accuracy: `0.900`
+- matched-evidence one-shot accuracy: `0.600` to `0.700`
+- full-evidence one-shot accuracy: `1.000`
+- sequential recovered about `0.857` of the full-evidence gain
+- matched-evidence one-shot recovered about `0.429` to `0.571` of the full-evidence gain
+
+Interpretation:
+
+- sequential is adding value beyond the initial evidence baseline
+- sequential also beats the current matched-evidence direct comparator on the same acquired evidence
+- this suggests the LLM is not merely selecting useful evidence; it is also using that evidence effectively in this pilot
+- caveat: the matched comparator reuses the full-evidence model on partial evidence, so a future partial-evidence-trained comparator would be stronger
+
+Persistent miss:
+
+- `test:81691`, true pathology `Croup`
+
+This case should be used for the next qualitative trace debugging pass.
+
+### Current Recommendation
+
+Do not run another broad exploratory sweep immediately.
+
+Run a cost-controlled 49-case balanced validation with:
+
+- notebook: `08_cost_sensitive_sequential_lambda_sweep.ipynb`
+- model: `gpt-4.1-mini`
+- temperature: `0.0`
+- top-p: `1.0`
+- lambdas: `[0.10, 0.15, 0.22]`
+- request cap: `24`
+- `SEQUENTIAL_SAMPLE_PER_CLASS = 1`
+- `SEQUENTIAL_MAX_CASES = None`
+
+Then rerun notebook 09 against that 49-case artifact.
+
+## 32. Wide Lambda Sweep Configuration For Cost-Controlled Follow-Up
+
+Notebook 08 and notebook 09 were reconfigured for the next live experiment.
+
+Reason:
+
+- the previous 10-case run showed flat `0.900` accuracy across all lambda values
+- with only 10 cases, accuracy moves in increments of `0.10`, so the run cannot reveal smaller performance differences
+- the previous lambda range did not push evidence cost high enough to find the cutoff where accuracy begins to drop
+- API cost from the prior 10-case, 6-lambda run was about `$0.93`, so the next run needs to stay near a `$2` budget
+
+Notebook 08 changes:
+
+- `EVIDENCE_COST_LAMBDAS = [0.10, 0.22, 0.35, 0.50, 0.75]`
+- `SEQUENTIAL_MAX_CASES = 24`
+- `MAX_REQUEST_CAP = 24`
+- `ALLOW_DRY_RUN_BENCHMARK = False`
+- `RUN_VERSION = "lambda_cost_24case_wide_sweep_v1"`
+
+Expected notebook 08 artifact:
+
+- `artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/`
+
+Notebook 09 changes:
+
+- `SEQUENTIAL_RUN_NAME = "single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1"`
+- `OUTPUT_VERSION = "matched_integrated_24case_wide_sweep_v1"`
+
+Expected notebook 09 artifact:
+
+- `artifacts/integrated_comparisons/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1__matched_integrated_24case_wide_sweep_v1/`
+
+Interpretation goal:
+
+- identify whether lambda values above `0.22` begin to reduce accuracy
+- keep enough cases to improve accuracy resolution from `0.10` steps to about `0.042` steps
+- keep the experiment likely near the user's API budget
+
+Stop-policy note:
+
+- `MAX_REQUEST_CAP` is a hard upper bound because the sequential loop runs for at most `MAX_REQUEST_CAP` turns
+- it is also visible to the policy through `remaining_budget`, prompt construction, and the final forced-stop path
+- the cap is not the main experimental variable in notebook 08; lambda is the main variable
+- the cap should be interpreted as a safety ceiling, not as unlimited evidence access
+
+## 33. Wide Lambda Sweep Results
+
+The 24-case wide lambda sweep completed and produced the cutoff behavior that the 10-case pilot could not show.
+
+Sequential artifact:
+
+- `artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/`
+
+Integrated comparison artifact:
+
+- `artifacts/integrated_comparisons/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1__matched_integrated_24case_wide_sweep_v1/`
+
+Settings:
+
+- model: `gpt-4.1-mini`
+- temperature: `0.0`
+- top-p: `1.0`
+- request cap: `24`
+- cases: `24`
+- lambdas: `[0.10, 0.22, 0.35, 0.50, 0.75]`
+
+Sequential results:
+
+| Lambda | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests | Cap hits |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0.10 | 0.917 | 0.917 | 0.917 | 0.846 | 13.0 | 4/24 |
+| 0.22 | 0.875 | 0.875 | 0.917 | 0.795 | 10.7 | 2/24 |
+| 0.35 | 0.875 | 0.875 | 0.875 | 0.813 | 8.3 | 1/24 |
+| 0.50 | 0.417 | 0.625 | 0.750 | 0.274 | 2.2 | 0/24 |
+| 0.75 | 0.375 | 0.583 | 0.708 | 0.288 | 1.0 | 0/24 |
+
+Integrated matched-evidence results:
+
+| Lambda | Initial one-shot acc | Sequential acc | Matched-evidence acc | Full-evidence acc |
+|---:|---:|---:|---:|---:|
+| 0.10 | 0.333 | 0.917 | 0.625 | 1.000 |
+| 0.22 | 0.333 | 0.875 | 0.708 | 1.000 |
+| 0.35 | 0.333 | 0.875 | 0.667 | 1.000 |
+| 0.50 | 0.333 | 0.417 | 0.333 | 1.000 |
+| 0.75 | 0.333 | 0.375 | 0.250 | 1.000 |
+
+Interpretation:
+
+- the run now shows a clear accuracy-efficiency frontier
+- `lambda = 0.10` is the strongest accuracy setting, with `22/24` correct
+- `lambda = 0.22` and `lambda = 0.35` preserve high accuracy while reducing evidence use
+- `lambda = 0.35` gives `21/24` correct with about `8.3` requests per case
+- `lambda = 0.50` and `lambda = 0.75` are too aggressive and stop after too little evidence
+- sequential beats matched-evidence one-shot at every lambda in this run
+- at useful lambdas, there were no cases where matched-evidence one-shot was correct while sequential was wrong
+
+Persistent hard cases:
+
+- `test:81691`, true `Croup`
+- `test:62878`, true `Pericarditis`
+
+Updated recommendation:
+
+- next run should be a 49-case balanced validation with lambdas `[0.10, 0.22, 0.35]`
+- avoid spending API budget on `0.50+` unless the stop policy is changed
+
+## 34. Partial-Evidence Matched Comparator Added
+
+A stronger matched-information comparator was added.
+
+New notebook:
+
+- [10_partial_evidence_one_shot_comparator.ipynb](notebooks/10_partial_evidence_one_shot_comparator.ipynb)
+
+Updated notebook:
+
+- [09_matched_evidence_integrated_comparison.ipynb](notebooks/09_matched_evidence_integrated_comparison.ipynb)
+
+New report:
+
+- [partial_evidence_matched_comparator.md](reports/partial_evidence_matched_comparator.md)
+
+Reason:
+
+- notebook 09 previously used the full-evidence one-shot model on partial evidence states for the matched comparator
+- this was fair as a first check, but imperfect because the model was trained with all evidence visible
+- the stronger comparator should be trained to diagnose from incomplete evidence states
+
+What the sequential traces provide:
+
+- requested evidence root IDs
+- reveal payloads
+- present/absent/value summaries
+- request counts per case
+- evidence-root request frequencies
+
+Notebook 10 uses this to train a policy-shaped partial-evidence direct classifier:
+
+- demographics are always visible
+- initial evidence is always visible
+- additional requested roots are sampled from the sequential policy's observed request distribution
+- if a sampled root is present in the training patient row, its true value is encoded
+- if a sampled root is absent, it is encoded as absent
+- all unrequested fields remain unknown
+
+Fairness rule:
+
+- notebook 10 trains only on official train/validation rows
+- it does not train on sequential test labels
+- it does not use hidden full evidence at matched-evaluation time
+- it does not train a separate model per test case
+
+Notebook 09 update:
+
+- added discovery of `artifacts/one_shot_partial_evidence/selected_model.json`
+- if a partial-evidence model exists, matched predictions use it
+- if no partial-evidence model exists, notebook 09 falls back to the old full-evidence-model-on-partial-state comparator
+- changed notebook 09 `OUTPUT_VERSION` to `matched_integrated_partial_policy_v1` so the new comparison does not overwrite the previous fallback comparison
+- `paired_case_results.csv` now includes `matched_model_source`
+- `resolved_comparison_config.json` records the partial-evidence model path and matched model source
+
+Expected workflow:
+
+1. Run notebook 10 to train the partial-evidence matched model.
+2. Rerun notebook 09.
+3. Compare sequential vs the stronger matched-evidence one-shot.
+
+Interpretation:
+
+- if partial-evidence matched one-shot beats sequential, the sequential policy may be best used as an evidence acquisition controller with a direct classifier for final diagnosis
+- if sequential still beats partial-evidence matched one-shot, the claim that LLM reasoning adds value over the acquired evidence becomes stronger
+
+### Notebook 10 Path/Loader Fix
+
+Notebook 10 hit a local loader issue when reading the official DDXPlus patient zips.
+
+Problem:
+
+- the release zip members are named `release_train_patients`, `release_validate_patients`, and `release_test_patients`
+- they do not necessarily end in `.csv`
+- notebook 10 originally searched only for members ending in `.csv`, which raised `FileNotFoundError`
+
+Fix:
+
+- updated notebook 10 `load_patient_split(...)` to match the robust loader used in the earlier notebooks
+- it now uses a `.csv` member if present, otherwise falls back to the first non-directory member in the zip
+- also made project-root discovery walk upward through all parent directories instead of checking only `cwd` and `cwd.parent`
+- cleared stale notebook error outputs after patching
+
+Validation:
+
+- notebook 10 code cells parse cleanly
+- the patched loader successfully reads the local train/validate/test release zips
+
+### Notebook 10 Trace Discovery Fix
+
+Notebook 10 hit a second issue while loading the sequential policy mask distribution.
+
+Problem:
+
+- `lambda_dirs(...)` returned lambda artifact directories such as `lambda_0p100`
+- `load_policy_mask_distribution(...)` then tried to open those directories as files
+- this raised `IsADirectoryError`
+
+Fix:
+
+- replaced `lambda_dirs(...)` with `lambda_trace_files(...)`
+- the function now returns each `lambda_*/traces.jsonl` file directly
+- cleared stale notebook outputs after patching
+
+Validation:
+
+- notebook 10 code cells parse cleanly
+- trace discovery now finds five trace files for the 24-case wide sweep
+- mask loading finds `120` policy masks with mean request count about `7.06`
+
+### Notebook 10 Ground-Up Rebuild
+
+Notebook 10 was rebuilt from scratch after repeated incremental issues.
+
+Reason:
+
+- the previous notebook had accumulated brittle fixes
+- failures came from multiple assumptions:
+  - DDXPlus zip members do not necessarily end in `.csv`
+  - sequential lambda artifacts are directories, not trace files
+  - `INITIAL_EVIDENCE` can be a bare token like `E_172`, not a Python list string
+- rebuilding was cleaner than continuing to patch the old execution path
+
+New implementation properties:
+
+- explicit project-root discovery through parent traversal
+- robust DDXPlus split loader matching earlier notebooks
+- robust evidence-list parser that handles both list strings and bare tokens
+- single trace-loading path that returns `lambda_*/traces.jsonl` files
+- explicit preflight summary of dataset zip members and trace masks
+- empirical trace-mask sampling from the sequential policy's observed requested root sets
+- BASD-compatible partial-evidence encoding
+- checkpoint format compatible with notebook 09
+- `smoke`, `quick`, `final`, and `full` run modes
+- default mode is `final`
+
+Validation performed:
+
+- notebook code cells parse cleanly
+- direct smoke harness validated:
+  - local DDXPlus split loading
+  - evidence parsing
+  - trace mask extraction
+  - partial-state encoding
+  - one small train/evaluate pass
+- smoke harness found `feature_size = 922`
+- smoke harness found `120` sequential trace masks
+
+Run guidance:
+
+- use notebook 10 in default `final` mode for the stronger matched comparator
+- if only checking execution, set environment variable `PARTIAL_EVIDENCE_RUN_MODE=smoke`
+- after notebook 10 completes, rerun notebook 09 so it uses the new partial-evidence selected model
+
+## 35. Partial-Evidence Comparator Results And Updated Interpretation
+
+Notebook 10 was run successfully in `final` mode.
+
+Selected partial-evidence model:
+
+- `artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2/`
+
+Notebook 9 was rerun using the selected partial-evidence model.
+
+Integrated comparison artifact:
+
+- `artifacts/integrated_comparisons/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1__matched_integrated_partial_policy_v1/`
+
+Notebook 10 standalone metrics:
+
+| Split | Accuracy | Top-3 | Top-5 | Macro-F1 |
+|---|---:|---:|---:|---:|
+| Validation | 0.513 | 0.739 | 0.827 | 0.507 |
+| Test | 0.515 | 0.741 | 0.827 | 0.519 |
+
+Training setup:
+
+- train rows: `300,000`
+- validation rows: `40,000`
+- test rows: `39,998`
+- feature size: `922`
+- model: `[2048, 2048, 2048]` MLP with dropout `0.10`
+- best epoch: `5`
+- runtime: about `198` seconds on `mps`
+
+Integrated 24-case partial-matched comparison:
+
+| Lambda | Sequential acc | Partial matched acc | Partial matched top-3 | Partial matched top-5 | Mean requests |
+|---:|---:|---:|---:|---:|---:|
+| 0.10 | 0.917 | 0.875 | 1.000 | 1.000 | 13.0 |
+| 0.22 | 0.875 | 0.875 | 1.000 | 1.000 | 10.7 |
+| 0.35 | 0.875 | 0.833 | 0.958 | 0.958 | 8.3 |
+| 0.50 | 0.417 | 0.458 | 0.708 | 0.792 | 2.2 |
+| 0.75 | 0.375 | 0.375 | 0.583 | 0.708 | 1.0 |
+
+Win/loss against sequential:
+
+| Lambda | Both correct | Sequential only correct | Matched only correct | Both wrong |
+|---:|---:|---:|---:|---:|
+| 0.10 | 21 | 1 | 0 | 2 |
+| 0.22 | 20 | 1 | 1 | 2 |
+| 0.35 | 20 | 1 | 0 | 3 |
+| 0.50 | 9 | 1 | 2 | 12 |
+| 0.75 | 8 | 1 | 1 | 14 |
+
+Interpretation update:
+
+- the old full-evidence-model fallback was too weak as a matched comparator
+- the new partial-evidence direct classifier closes most of the gap to the sequential LLM
+- at `lambda = 0.10`, sequential beats the partial matched comparator by one case
+- at `lambda = 0.22`, sequential and partial matched tie on top-1 accuracy
+- at `lambda = 0.35`, sequential beats partial matched by one case
+- partial matched has excellent top-3/top-5 ranking quality at useful lambdas
+- therefore, the strongest current claim is about targeted evidence acquisition, not about LLM final diagnosis being clearly superior
+
+Current research implication:
+
+- the sequential policy is useful because it chooses evidence that makes cases highly diagnosable
+- the final diagnostic head could be the LLM, the partial-evidence classifier, or a hybrid/adjudicated combination
+- the next rigorous evaluation should compare this hybrid idea on the 49-case balanced slice
+
+## 36. Best Current Research Direction To Carry Forward
+
+Based on the latest notebook 08, 09, and 10 results, the strongest current research direction is:
+
+**A controlled sequential evidence-acquisition system with a flexible final diagnostic head.**
+
+This is more defensible than claiming that the LLM alone is the main source of diagnostic performance. The evidence now suggests:
+
+- initial-evidence one-shot diagnosis is weak compared with informed workup
+- full-evidence one-shot diagnosis is near-ceiling, which means DDXPlus contains enough information for high diagnostic performance when the right evidence is visible
+- cost-sensitive sequential workup can acquire a targeted subset of evidence and reach strong small-sample accuracy
+- the partial-evidence direct classifier can use the sequentially acquired evidence almost as well as the LLM on the current 24-case slice
+- therefore, the project should emphasize evidence selection, evidence efficiency, and final-head comparison rather than only LLM diagnostic reasoning
+
+Practical architecture direction:
+
+- use the sequential LLM/policy as the workup controller
+- keep the deterministic ledger as the source of truth for visible evidence, requested evidence, legality, and revealed values
+- use the partial-evidence classifier as a serious matched-information diagnostic comparator
+- test a hybrid final decision strategy where the LLM and partial-evidence classifier can agree, disagree, or trigger adjudication
+- later multi-agent work should improve evidence acquisition and coordination, not simply add debate around the same weak information state
+
+Next rigorous experiment:
+
+- run the 49-case balanced evaluation slice
+- keep `gpt-4.1-mini` fixed
+- use deterministic API settings: `temperature = 0.0`, `top_p = 1.0`
+- focus on useful lambdas: `0.10`, `0.22`, and `0.35`
+- compare sequential LLM final answers, partial-evidence classifier final answers, and a simple hybrid/adjudicated rule
+- report accuracy, top-3/top-5, macro-F1, mean requests, stop behavior, and disagreement cases
+
+Scientific framing:
+
+The best current research question is:
+
+Can a structured sequential diagnostic workup controller approach full-evidence diagnostic performance while acquiring only a limited targeted subset of evidence, and should final diagnosis be made by the LLM, a neural classifier, or a hybrid of both?

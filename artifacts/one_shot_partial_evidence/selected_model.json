@@ -1,0 +1,6 @@
+{
+  "selected_run_name": "partial_evidence_one_shot_final_policy_masked_v2",
+  "selected_artifact_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2",
+  "selection_metric": "validate_accuracy_then_macro_f1",
+  "notes": "Partial-evidence one-shot comparator trained on empirical sequential request masks. Use for matched-evidence comparison in notebook 09."
+}

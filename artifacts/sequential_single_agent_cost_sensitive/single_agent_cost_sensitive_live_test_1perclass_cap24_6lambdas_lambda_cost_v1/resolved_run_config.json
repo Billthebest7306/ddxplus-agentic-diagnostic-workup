@@ -1,0 +1,40 @@
+{
+  "run_name": "single_agent_cost_sensitive_live_test_1perclass_cap24_6lambdas_lambda_cost_v1",
+  "run_live_api": true,
+  "allow_dry_run_benchmark": true,
+  "resume_if_available": true,
+  "evidence_cost_lambdas": [
+    0.0,
+    0.03,
+    0.06,
+    0.1,
+    0.15,
+    0.22
+  ],
+  "max_request_cap": 24,
+  "split_name": "test",
+  "random_seed": 2919,
+  "determinism": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "case_sampling_seed": 2919,
+    "shortlist_tie_breakers": [
+      "score_desc",
+      "is_child",
+      "question_en",
+      "root_evidence_id"
+    ],
+    "case_order": "PATHOLOGY_then_source_row_index_after_seeded_sample"
+  },
+  "sequential_sample_per_class": 1,
+  "sequential_max_cases": 10,
+  "shortlist_size": 10,
+  "shortlist_stats_source": "validate",
+  "shortlist_stats_max_rows": 30000,
+  "use_one_shot_prior": true,
+  "one_shot_prior_top_k": 5,
+  "llm_base_url": "https://api.openai.com/v1",
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0
+}

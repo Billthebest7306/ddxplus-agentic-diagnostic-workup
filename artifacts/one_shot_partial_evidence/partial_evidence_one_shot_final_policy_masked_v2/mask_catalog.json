@@ -1,0 +1,488 @@
+{
+  "source_run": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1",
+  "trace_files": [
+    "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/traces.jsonl",
+    "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p220/traces.jsonl",
+    "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p350/traces.jsonl",
+    "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p500/traces.jsonl",
+    "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p750/traces.jsonl"
+  ],
+  "request_counts": [
+    14,
+    13,
+    7,
+    22,
+    6,
+    11,
+    24,
+    12,
+    24,
+    8,
+    9,
+    11,
+    11,
+    7,
+    8,
+    24,
+    24,
+    11,
+    10,
+    7,
+    23,
+    11,
+    10,
+    6,
+    8,
+    10,
+    6,
+    22,
+    6,
+    9,
+    23,
+    9,
+    24,
+    8,
+    6,
+    6,
+    10,
+    6,
+    4,
+    23,
+    24,
+    6,
+    7,
+    6,
+    16,
+    7,
+    7,
+    3,
+    5,
+    9,
+    6,
+    12,
+    1,
+    8,
+    22,
+    7,
+    17,
+    7,
+    3,
+    6,
+    9,
+    3,
+    1,
+    3,
+    24,
+    14,
+    7,
+    5,
+    16,
+    6,
+    6,
+    3,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    2,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    9,
+    9,
+    1,
+    5,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "top_requested_roots": [
+    {
+      "root_id": "E_214",
+      "count": 46,
+      "question_en": "Have you noticed a wheezing sound when you exhale?"
+    },
+    {
+      "root_id": "E_129",
+      "count": 43,
+      "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?"
+    },
+    {
+      "root_id": "E_151",
+      "count": 41,
+      "question_en": "Do you have swelling in one or more areas of your body?"
+    },
+    {
+      "root_id": "E_181",
+      "count": 32,
+      "question_en": "Do you have nasal congestion or a clear runny nose?"
+    },
+    {
+      "root_id": "E_124",
+      "count": 25,
+      "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?"
+    },
+    {
+      "root_id": "E_45",
+      "count": 25,
+      "question_en": "Have you been coughing up blood?"
+    },
+    {
+      "root_id": "E_91",
+      "count": 25,
+      "question_en": "Do you have a fever (either felt or measured with a thermometer)?"
+    },
+    {
+      "root_id": "E_201",
+      "count": 21,
+      "question_en": "Do you have a cough?"
+    },
+    {
+      "root_id": "E_66",
+      "count": 21,
+      "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?"
+    },
+    {
+      "root_id": "E_41",
+      "count": 20,
+      "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?"
+    },
+    {
+      "root_id": "E_79",
+      "count": 20,
+      "question_en": "Do you smoke cigarettes?"
+    },
+    {
+      "root_id": "E_194",
+      "count": 16,
+      "question_en": "Have you noticed a high pitched sound when breathing in?"
+    },
+    {
+      "root_id": "E_77",
+      "count": 16,
+      "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?"
+    },
+    {
+      "root_id": "E_25",
+      "count": 15,
+      "question_en": "Have any of your family members been diagnosed with cluster headaches?"
+    },
+    {
+      "root_id": "E_70",
+      "count": 15,
+      "question_en": "Are you significantly overweight compared to people of the same height as you?"
+    },
+    {
+      "root_id": "E_97",
+      "count": 14,
+      "question_en": "Do you have a sore throat?"
+    },
+    {
+      "root_id": "E_21",
+      "count": 14,
+      "question_en": "Have you ever had a spontaneous pneumothorax?"
+    },
+    {
+      "root_id": "E_148",
+      "count": 14,
+      "question_en": "Are you feeling nauseous or do you feel like vomiting?"
+    },
+    {
+      "root_id": "E_63",
+      "count": 13,
+      "question_en": "Do you have difficulty articulating words/speaking?"
+    },
+    {
+      "root_id": "E_0",
+      "count": 13,
+      "question_en": "Have you recently had a viral infection?"
+    },
+    {
+      "root_id": "E_155",
+      "count": 12,
+      "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?"
+    },
+    {
+      "root_id": "E_209",
+      "count": 12,
+      "question_en": "Are your vaccinations up to date?"
+    },
+    {
+      "root_id": "E_175",
+      "count": 12,
+      "question_en": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?"
+    },
+    {
+      "root_id": "E_73",
+      "count": 12,
+      "question_en": "In the last month, have you been in contact with anyone infected with the Ebola virus?"
+    },
+    {
+      "root_id": "E_65",
+      "count": 11,
+      "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?"
+    },
+    {
+      "root_id": "E_84",
+      "count": 11,
+      "question_en": "Do you feel weakness in both arms and/or both legs?"
+    },
+    {
+      "root_id": "E_212",
+      "count": 11,
+      "question_en": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?"
+    },
+    {
+      "root_id": "E_216",
+      "count": 11,
+      "question_en": "Do you have pain that is increased with movement?"
+    },
+    {
+      "root_id": "E_169",
+      "count": 10,
+      "question_en": "Is your nose or the back of your throat itchy?"
+    },
+    {
+      "root_id": "E_76",
+      "count": 10,
+      "question_en": "Do you feel slightly dizzy or lightheaded?"
+    },
+    {
+      "root_id": "E_147",
+      "count": 8,
+      "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?"
+    },
+    {
+      "root_id": "E_218",
+      "count": 8,
+      "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?"
+    },
+    {
+      "root_id": "E_120",
+      "count": 8,
+      "question_en": "Do you have polyps in your nose?"
+    },
+    {
+      "root_id": "E_162",
+      "count": 8,
+      "question_en": "Have you had an involuntary weight loss over the last 3 months?"
+    },
+    {
+      "root_id": "E_203",
+      "count": 8,
+      "question_en": "Do you have intense coughing fits?"
+    },
+    {
+      "root_id": "E_106",
+      "count": 7,
+      "question_en": "Do you have heart failure?"
+    },
+    {
+      "root_id": "E_146",
+      "count": 7,
+      "question_en": "Are you taking any new oral anticoagulants ((NOACs)?"
+    },
+    {
+      "root_id": "E_220",
+      "count": 7,
+      "question_en": "Do you have pain that is increased when you breathe in deeply?"
+    },
+    {
+      "root_id": "E_78",
+      "count": 7,
+      "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?"
+    },
+    {
+      "root_id": "E_222",
+      "count": 7,
+      "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?"
+    },
+    {
+      "root_id": "E_15",
+      "count": 6,
+      "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?"
+    },
+    {
+      "root_id": "E_62",
+      "count": 6,
+      "question_en": "Do you regularly take stimulant drugs?"
+    },
+    {
+      "root_id": "E_114",
+      "count": 6,
+      "question_en": "Are you more irritable or has your mood been very unstable recently?"
+    },
+    {
+      "root_id": "E_166",
+      "count": 6,
+      "question_en": "Did you vomit after coughing?"
+    },
+    {
+      "root_id": "E_196",
+      "count": 6,
+      "question_en": "Have you had surgery within the last month?"
+    },
+    {
+      "root_id": "E_223",
+      "count": 6,
+      "question_en": "Are there members of your family who have been diagnosed with pancreatic cancer?"
+    },
+    {
+      "root_id": "E_189",
+      "count": 6,
+      "question_en": "Have you had sexual intercourse with an HIV-positive partner in the past 12 months?"
+    },
+    {
+      "root_id": "E_191",
+      "count": 6,
+      "question_en": "Are you a former smoker?"
+    },
+    {
+      "root_id": "E_217",
+      "count": 5,
+      "question_en": "Are your symptoms worse when lying down and alleviated while sitting up?"
+    },
+    {
+      "root_id": "E_142",
+      "count": 5,
+      "question_en": "Does your mother suffer from asthma?"
+    }
+  ],
+  "examples": [
+    {
+      "lambda": "lambda_0p100",
+      "case_id": "test:104857",
+      "true_pathology": "Acute dystonic reactions",
+      "num_requested_roots": 14,
+      "requested_roots": [
+        "E_128",
+        "E_147",
+        "E_15",
+        "E_155",
+        "E_168",
+        "E_180",
+        "E_192",
+        "E_193",
+        "E_201",
+        "E_205",
+        "E_62",
+        "E_63",
+        "E_65",
+        "E_84"
+      ]
+    },
+    {
+      "lambda": "lambda_0p100",
+      "case_id": "test:33118",
+      "true_pathology": "Acute otitis media",
+      "num_requested_roots": 13,
+      "requested_roots": [
+        "E_1",
+        "E_114",
+        "E_124",
+        "E_129",
+        "E_166",
+        "E_169",
+        "E_194",
+        "E_209",
+        "E_214",
+        "E_25",
+        "E_41",
+        "E_66",
+        "E_97"
+      ]
+    },
+    {
+      "lambda": "lambda_0p100",
+      "case_id": "test:93930",
+      "true_pathology": "Acute pulmonary edema",
+      "num_requested_roots": 7,
+      "requested_roots": [
+        "E_106",
+        "E_175",
+        "E_217",
+        "E_218",
+        "E_5",
+        "E_66",
+        "E_8"
+      ]
+    },
+    {
+      "lambda": "lambda_0p100",
+      "case_id": "test:88250",
+      "true_pathology": "Allergic sinusitis",
+      "num_requested_roots": 22,
+      "requested_roots": [
+        "E_120",
+        "E_124",
+        "E_129",
+        "E_151",
+        "E_155",
+        "E_169",
+        "E_170",
+        "E_181",
+        "E_194",
+        "E_207",
+        "E_209",
+        "E_212",
+        "E_216",
+        "E_226",
+        "E_25",
+        "E_41",
+        "E_45",
+        "E_66",
+        "E_77",
+        "E_79",
+        "E_86",
+        "E_91"
+      ]
+    },
+    {
+      "lambda": "lambda_0p100",
+      "case_id": "test:90978",
+      "true_pathology": "Bronchiolitis",
+      "num_requested_roots": 6,
+      "requested_roots": [
+        "E_142",
+        "E_166",
+        "E_181",
+        "E_209",
+        "E_214",
+        "E_91"
+      ]
+    }
+  ]
+}

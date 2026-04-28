@@ -1,0 +1,11 @@
+true_pathology,pred_pathology,count
+Acute rhinosinusitis,Chronic rhinosinusitis,330
+Chronic rhinosinusitis,Acute rhinosinusitis,102
+Acute laryngitis,Viral pharyngitis,72
+Unstable angina,Stable angina,48
+Unstable angina,Possible NSTEMI / STEMI,4
+Stable angina,Possible NSTEMI / STEMI,3
+Viral pharyngitis,Acute laryngitis,1
+Acute COPD exacerbation / infection,Bronchitis,1
+Bronchitis,Bronchiectasis,1
+Bronchitis,Bronchiolitis,1

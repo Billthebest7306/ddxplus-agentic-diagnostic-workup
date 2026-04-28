@@ -1,0 +1,2 @@
+candidate_name,objective_name,run_name,artifact_dir,best_validate_accuracy,best_validate_macro_f1,test_accuracy,test_macro_f1,test_top5_accuracy,runtime_seconds,reused_existing_run
+full_evidence_pathology,basd_pathology,full_evidence_pathology_full,/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_full_evidence/full_evidence_pathology_full,0.995386868808891,0.9942942665826326,0.9958150287298649,0.9948422508176441,1.0,1557.4977779388428,False

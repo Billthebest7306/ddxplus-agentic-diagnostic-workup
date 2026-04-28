@@ -1,0 +1,44 @@
+{
+  "run_name": "partial_evidence_one_shot_final_policy_masked_v2",
+  "run_mode": "final",
+  "run_version": "policy_masked_v2",
+  "seed": 2919,
+  "sequential_trace_source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1",
+  "masking_policy": "initial evidence plus empirical requested root sets from sequential traces",
+  "feature_size": 922,
+  "num_classes": 49,
+  "hidden_sizes": [
+    2048,
+    2048,
+    2048
+  ],
+  "dropout": 0.1,
+  "learning_rate": 0.0003469,
+  "batch_size": 512,
+  "weight_decay": 1e-05,
+  "device": "mps",
+  "train_rows": 300000,
+  "validate_rows": 40000,
+  "test_rows": 39998,
+  "train_examples_after_augmentation": 300000,
+  "validate_examples_after_augmentation": 40000,
+  "test_examples_after_augmentation": 39998,
+  "augmentations_per_train_row": 1,
+  "augmentations_per_eval_row": 1,
+  "best_epoch": 5,
+  "best_validate_accuracy": 0.513325,
+  "best_validate_macro_f1": 0.5074883638497275,
+  "validate_metrics": {
+    "accuracy": 0.513325,
+    "top3_accuracy": 0.7394,
+    "top5_accuracy": 0.827375,
+    "macro_f1": 0.5074883638497275
+  },
+  "test_metrics": {
+    "accuracy": 0.515250762538127,
+    "top3_accuracy": 0.7413870693534677,
+    "top5_accuracy": 0.8273663683184159,
+    "macro_f1": 0.5187722515897814
+  },
+  "runtime_seconds": 198.39587879180908
+}

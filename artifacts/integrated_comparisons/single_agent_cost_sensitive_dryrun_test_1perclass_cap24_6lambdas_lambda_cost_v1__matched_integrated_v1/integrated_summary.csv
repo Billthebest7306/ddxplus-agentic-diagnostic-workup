@@ -1,0 +1,7 @@
+condition_kind,condition_value,num_cases,mean_requests,initial_accuracy,initial_top3,initial_top5,sequential_accuracy,sequential_top3,sequential_top5,sequential_macro_f1,matched_accuracy,matched_top3,matched_top5,matched_macro_f1,full_accuracy,full_top3,full_top5,full_macro_f1,sequential_fraction_full_evidence_gain_recovered,matched_fraction_full_evidence_gain_recovered,sequential_gap_to_full,matched_gap_to_full,matched_minus_sequential_accuracy
+lambda,0.0,10,17.6,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,
+lambda,0.03,10,16.2,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,
+lambda,0.06,10,15.2,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,
+lambda,0.1,10,14.6,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,
+lambda,0.15,10,12.2,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,
+lambda,0.22,10,11.3,0.3,0.4,0.4,1.0,1.0,1.0,1.0,,,,,,,,,,,,,

@@ -1,0 +1,138 @@
+[
+  {
+    "case_id": "test:0",
+    "age": 49,
+    "sex": "F",
+    "initial_evidence": "E_201",
+    "true_pathology": "GERD",
+    "predicted_pathology": "GERD",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "GERD",
+      "Boerhaave",
+      "Viral pharyngitis",
+      "Pancreatic neoplasm",
+      "Whooping cough"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:1",
+    "age": 2,
+    "sex": "M",
+    "initial_evidence": "E_53",
+    "true_pathology": "Bronchitis",
+    "predicted_pathology": "Bronchitis",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Bronchitis",
+      "Pneumonia",
+      "SLE",
+      "Bronchiectasis",
+      "Viral pharyngitis"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:2",
+    "age": 49,
+    "sex": "M",
+    "initial_evidence": "E_128",
+    "true_pathology": "Acute dystonic reactions",
+    "predicted_pathology": "Acute dystonic reactions",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "Acute dystonic reactions",
+      "Localized edema",
+      "Myasthenia gravis",
+      "Larygospasm",
+      "Boerhaave"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:4",
+    "age": 70,
+    "sex": "F",
+    "initial_evidence": "E_201",
+    "true_pathology": "URTI",
+    "predicted_pathology": "URTI",
+    "top1_confidence": 1.0,
+    "top5_predictions": [
+      "URTI",
+      "Influenza",
+      "Ebola",
+      "Chagas",
+      "Croup"
+    ],
+    "correct": true
+  },
+  {
+    "case_id": "test:25698",
+    "age": 28,
+    "sex": "M",
+    "initial_evidence": "E_53",
+    "true_pathology": "Acute laryngitis",
+    "predicted_pathology": "Viral pharyngitis",
+    "top1_confidence": 0.9927749633789062,
+    "top5_predictions": [
+      "Viral pharyngitis",
+      "Acute laryngitis",
+      "GERD",
+      "Pulmonary neoplasm",
+      "URTI"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:53619",
+    "age": 55,
+    "sex": "F",
+    "initial_evidence": "E_53",
+    "true_pathology": "Unstable angina",
+    "predicted_pathology": "Stable angina",
+    "top1_confidence": 0.9859193563461304,
+    "top5_predictions": [
+      "Stable angina",
+      "Unstable angina",
+      "Possible NSTEMI / STEMI",
+      "Pulmonary neoplasm",
+      "Bronchitis"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:115414",
+    "age": 61,
+    "sex": "F",
+    "initial_evidence": "E_89",
+    "true_pathology": "Unstable angina",
+    "predicted_pathology": "Stable angina",
+    "top1_confidence": 0.9832624197006226,
+    "top5_predictions": [
+      "Stable angina",
+      "Unstable angina",
+      "Pulmonary neoplasm",
+      "Possible NSTEMI / STEMI",
+      "Acute laryngitis"
+    ],
+    "correct": false
+  },
+  {
+    "case_id": "test:134127",
+    "age": 12,
+    "sex": "M",
+    "initial_evidence": "E_53",
+    "true_pathology": "Acute laryngitis",
+    "predicted_pathology": "Viral pharyngitis",
+    "top1_confidence": 0.9816958904266357,
+    "top5_predictions": [
+      "Viral pharyngitis",
+      "Acute laryngitis",
+      "Bronchitis",
+      "Influenza",
+      "Acute rhinosinusitis"
+    ],
+    "correct": false
+  }
+]

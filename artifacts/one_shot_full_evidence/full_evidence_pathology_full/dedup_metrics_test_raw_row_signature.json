@@ -1,0 +1,26 @@
+{
+  "run_name": "full_evidence_pathology_full",
+  "split": "test",
+  "dedup_type": "raw_row_signature",
+  "official_rows": 134529,
+  "duplicate_rows_removed": 1823,
+  "deduplicated_rows": 132706,
+  "duplicate_fraction": 0.013550981572746397,
+  "metrics": {
+    "num_rows": 132706,
+    "loss": 0.011530357261869616,
+    "accuracy": 0.9957575392220397,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "macro_f1": 0.9948339910812246,
+    "DDR": 0.21429927536275906,
+    "DDP": 0.995806708061429,
+    "DDF1": 0.30874508961387465,
+    "DDR@3": 0.36855530269919967,
+    "DDP@3": 0.9247823509612727,
+    "DDF1@3": 0.5110246208410572,
+    "DDR@5": 0.2794283353176698,
+    "DDP@5": 0.9683377792513777,
+    "DDF1@5": 0.40670661414335396
+  }
+}

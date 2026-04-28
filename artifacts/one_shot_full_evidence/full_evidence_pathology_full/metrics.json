@@ -1,0 +1,54 @@
+{
+  "run_name": "full_evidence_pathology_full",
+  "candidate_name": "full_evidence_pathology",
+  "objective_name": "basd_pathology",
+  "description": "Gold-pathology cross-entropy with every DDXPlus root evidence field visible.",
+  "run_config": {
+    "seed": 2919,
+    "batch_size": 512,
+    "learning_rate": 0.0003469,
+    "hidden_sizes": [
+      2048,
+      2048,
+      2048
+    ],
+    "dropout": 0.0,
+    "weight_decay": 0.0,
+    "num_workers": 0,
+    "device": "auto",
+    "subset": {
+      "train": null,
+      "validate": null,
+      "test": null
+    },
+    "max_epochs": 30,
+    "patience": 5,
+    "run_mode": "full",
+    "candidate_name": "full_evidence_pathology",
+    "objective_name": "basd_pathology",
+    "description": "Gold-pathology cross-entropy with every DDXPlus root evidence field visible."
+  },
+  "device": "mps",
+  "train_size": 1025602,
+  "validate_size": 132448,
+  "test_size": 134529,
+  "best_validate_accuracy": 0.995386868808891,
+  "best_validate_macro_f1": 0.9942942665826326,
+  "test_loss": 0.011374155211980808,
+  "test_metrics": {
+    "accuracy": 0.9958150287298649,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "macro_f1": 0.9948422508176441,
+    "DDR": 0.2183379932478622,
+    "DDP": 0.9958635312832179,
+    "DDF1": 0.3124713527780758,
+    "DDR@3": 0.3716422976954163,
+    "DDP@3": 0.9255191569599616,
+    "DDF1@3": 0.5135623793630617,
+    "DDR@5": 0.2830881569525282,
+    "DDP@5": 0.9686999333477045,
+    "DDF1@5": 0.40988714653723696
+  },
+  "runtime_seconds": 1557.4977779388428
+}

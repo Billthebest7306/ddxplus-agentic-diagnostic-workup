@@ -1,0 +1,6 @@
+{
+  "sequential_run_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_dryrun_test_1perclass_cap24_6lambdas_lambda_cost_v1",
+  "initial_one_shot_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full",
+  "full_evidence_dir": null,
+  "fairness_rule": "Full-evidence predictions are evaluation-only and are not used by the live sequential policy."
+}

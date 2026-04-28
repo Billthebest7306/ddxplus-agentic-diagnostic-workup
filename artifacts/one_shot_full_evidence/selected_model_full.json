@@ -1,0 +1,24 @@
+{
+  "mode": "full",
+  "selection_metric": {
+    "primary": "best_validate_accuracy",
+    "tiebreaker": "best_validate_macro_f1"
+  },
+  "selected_run_name": "full_evidence_pathology_full",
+  "selected_artifact_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_full_evidence/full_evidence_pathology_full",
+  "candidate_rankings": [
+    {
+      "candidate_name": "full_evidence_pathology",
+      "objective_name": "basd_pathology",
+      "run_name": "full_evidence_pathology_full",
+      "artifact_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_full_evidence/full_evidence_pathology_full",
+      "best_validate_accuracy": 0.995386868808891,
+      "best_validate_macro_f1": 0.9942942665826326,
+      "test_accuracy": 0.9958150287298649,
+      "test_macro_f1": 0.9948422508176441,
+      "test_top5_accuracy": 1.0,
+      "runtime_seconds": 1557.4977779388428,
+      "reused_existing_run": false
+    }
+  ]
+}
