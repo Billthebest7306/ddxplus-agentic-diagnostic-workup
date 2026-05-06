@@ -1,0 +1,8 @@
+case_id,true_pathology,turn_index,requested_evidence_id
+test:34242,Guillain-Barré syndrome,1,E_63
+test:34242,Guillain-Barré syndrome,2,E_157
+test:34242,Guillain-Barré syndrome,3,E_0
+test:95923,Pneumonia,1,E_124
+test:95923,Pneumonia,2,E_214
+test:95923,Pneumonia,3,E_227
+test:95923,Pneumonia,4,E_129

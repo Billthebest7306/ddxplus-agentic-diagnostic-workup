@@ -1,0 +1,48 @@
+{
+  "hybrid_accuracy": 1.0,
+  "hybrid_top3_accuracy": 1.0,
+  "hybrid_top5_accuracy": 1.0,
+  "hybrid_macro_f1": 1.0,
+  "llm_final_accuracy": 1.0,
+  "llm_final_top3_accuracy": 1.0,
+  "llm_final_top5_accuracy": 1.0,
+  "llm_final_macro_f1": 1.0,
+  "mlp_final_accuracy": 1.0,
+  "mlp_final_top3_accuracy": 1.0,
+  "mlp_final_top5_accuracy": 1.0,
+  "mlp_final_macro_f1": 1.0,
+  "accuracy": 1.0,
+  "top3_accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "macro_f1": 1.0,
+  "mean_requests": 10.0,
+  "utility": 0.0,
+  "stop_before_cap_rate": 1.0,
+  "cap_hit_count": 0,
+  "mean_api_calls": 11.0,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_estimated_cost": null,
+  "mean_mlp_confidence": 1.0,
+  "mean_mlp_margin": 0.9999999670454622,
+  "mean_mlp_entropy": 2.464444576708754e-07,
+  "llm_mlp_top1_agreement_rate": 1.0,
+  "mlp_in_llm_top3_rate": 1.0,
+  "disagreement_triggered_continue_rate": 0.0,
+  "hybrid_mlp_forced_stop_rate": 0.0,
+  "turn_distribution": {
+    "6": 1,
+    "14": 1
+  },
+  "hybrid_final_source_distribution": {
+    "llm_mlp_agreement": 2
+  },
+  "stop_reason_distribution": {
+    "agent_stop": 2
+  },
+  "run_name": "hybrid_mlp_feedback_dryrun_test_1perclass_cap24_1lambdas_smoke_test2",
+  "evidence_cost_lambda": 0.1,
+  "max_request_cap": 24,
+  "num_cases": 2,
+  "runtime_seconds": 0.17322111129760742
+}

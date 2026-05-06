@@ -1,0 +1,178 @@
+case_id,true_pathology,turn_index,requested_evidence_id
+test:104857,Acute dystonic reactions,1,E_65
+test:33118,Acute otitis media,1,E_97
+test:33118,Acute otitis media,2,E_169
+test:33118,Acute otitis media,3,E_41
+test:33118,Acute otitis media,4,E_124
+test:33118,Acute otitis media,5,E_114
+test:93930,Acute pulmonary edema,1,E_66
+test:93930,Acute pulmonary edema,2,E_196
+test:93930,Acute pulmonary edema,3,E_129
+test:93930,Acute pulmonary edema,4,E_5
+test:93930,Acute pulmonary edema,5,E_106
+test:88250,Allergic sinusitis,1,E_41
+test:88250,Allergic sinusitis,2,E_45
+test:88250,Allergic sinusitis,3,E_103
+test:88250,Allergic sinusitis,4,E_219
+test:88250,Allergic sinusitis,5,E_164
+test:88250,Allergic sinusitis,6,E_223
+test:88250,Allergic sinusitis,7,E_188
+test:88250,Allergic sinusitis,8,E_151
+test:88250,Allergic sinusitis,9,E_215
+test:88250,Allergic sinusitis,10,E_187
+test:88250,Allergic sinusitis,11,E_92
+test:88250,Allergic sinusitis,12,E_214
+test:88250,Allergic sinusitis,13,E_91
+test:88250,Allergic sinusitis,14,E_129
+test:88250,Allergic sinusitis,15,E_71
+test:88250,Allergic sinusitis,16,E_210
+test:88250,Allergic sinusitis,17,E_157
+test:88250,Allergic sinusitis,18,E_172
+test:88250,Allergic sinusitis,19,E_162
+test:88250,Allergic sinusitis,20,E_181
+test:88250,Allergic sinusitis,21,E_97
+test:88250,Allergic sinusitis,22,E_169
+test:90978,Bronchiolitis,1,E_214
+test:29123,Bronchospasm / acute asthma exacerbation,1,E_41
+test:29123,Bronchospasm / acute asthma exacerbation,2,E_77
+test:29123,Bronchospasm / acute asthma exacerbation,3,E_103
+test:29123,Bronchospasm / acute asthma exacerbation,4,E_45
+test:29123,Bronchospasm / acute asthma exacerbation,5,E_124
+test:51421,Chagas,1,E_41
+test:51421,Chagas,2,E_194
+test:51421,Chagas,3,E_114
+test:51421,Chagas,4,E_77
+test:51421,Chagas,5,E_94
+test:51421,Chagas,6,E_189
+test:51421,Chagas,7,E_161
+test:51421,Chagas,8,E_129
+test:51421,Chagas,9,E_97
+test:51421,Chagas,10,E_169
+test:51421,Chagas,11,E_182
+test:51421,Chagas,12,E_52
+test:51421,Chagas,13,E_155
+test:51421,Chagas,14,E_82
+test:51421,Chagas,15,E_201
+test:46152,Cluster headache,1,E_41
+test:46152,Cluster headache,2,E_151
+test:46152,Cluster headache,3,E_25
+test:81691,Croup,1,E_41
+test:81691,Croup,2,E_169
+test:81691,Croup,3,E_201
+test:81691,Croup,4,E_194
+test:81691,Croup,5,E_25
+test:81691,Croup,6,E_66
+test:81691,Croup,7,E_129
+test:81691,Croup,8,E_77
+test:81691,Croup,9,E_219
+test:81691,Croup,10,E_146
+test:81691,Croup,11,E_3
+test:81691,Croup,12,E_220
+test:81691,Croup,13,E_81
+test:81691,Croup,14,E_217
+test:81691,Croup,15,E_84
+test:81691,Croup,16,E_148
+test:81691,Croup,17,E_155
+test:81691,Croup,18,E_147
+test:81691,Croup,19,E_9
+test:81691,Croup,20,E_52
+test:81691,Croup,21,E_208
+test:81691,Croup,22,E_103
+test:81691,Croup,23,E_164
+test:77908,Ebola,1,E_91
+test:77908,Ebola,2,E_129
+test:77908,Ebola,3,E_175
+test:77908,Ebola,4,E_201
+test:77908,Ebola,5,E_45
+test:77908,Ebola,6,E_181
+test:77908,Ebola,7,E_208
+test:77908,Ebola,8,E_223
+test:77908,Ebola,9,E_188
+test:77908,Ebola,10,E_77
+test:77908,Ebola,11,E_212
+test:77908,Ebola,12,E_162
+test:77908,Ebola,13,E_124
+test:77908,Ebola,14,E_214
+test:77908,Ebola,15,E_97
+test:77908,Ebola,16,E_48
+test:77908,Ebola,17,E_222
+test:77908,Ebola,18,E_88
+test:77908,Ebola,19,E_41
+test:77908,Ebola,20,E_50
+test:77908,Ebola,21,E_227
+test:77908,Ebola,22,E_219
+test:77908,Ebola,23,E_49
+test:77908,Ebola,24,E_148
+test:34242,Guillain-Barré syndrome,1,E_63
+test:34242,Guillain-Barré syndrome,2,E_157
+test:34242,Guillain-Barré syndrome,3,E_0
+test:106010,HIV (initial infection),1,E_45
+test:106010,HIV (initial infection),2,E_91
+test:106010,HIV (initial infection),3,E_201
+test:8666,Influenza,1,E_41
+test:8666,Influenza,2,E_129
+test:8666,Influenza,3,E_201
+test:38202,Inguinal hernia,1,E_129
+test:133888,Larygospasm,1,E_66
+test:2801,Pancreatic neoplasm,1,E_223
+test:62878,Pericarditis,1,E_214
+test:62878,Pericarditis,2,E_77
+test:62878,Pericarditis,3,E_70
+test:62878,Pericarditis,4,E_212
+test:62878,Pericarditis,5,E_129
+test:62878,Pericarditis,6,E_84
+test:62878,Pericarditis,7,E_151
+test:62878,Pericarditis,8,E_217
+test:62878,Pericarditis,9,E_201
+test:62878,Pericarditis,10,E_155
+test:62878,Pericarditis,11,E_157
+test:62878,Pericarditis,12,E_62
+test:62878,Pericarditis,13,E_3
+test:62878,Pericarditis,14,E_220
+test:62878,Pericarditis,15,E_81
+test:62878,Pericarditis,16,E_164
+test:62878,Pericarditis,17,E_111
+test:62878,Pericarditis,18,E_219
+test:62878,Pericarditis,19,E_41
+test:62878,Pericarditis,20,E_25
+test:62878,Pericarditis,21,E_79
+test:62878,Pericarditis,22,E_148
+test:62878,Pericarditis,23,E_146
+test:62878,Pericarditis,24,E_0
+test:95923,Pneumonia,1,E_124
+test:95923,Pneumonia,2,E_214
+test:95923,Pneumonia,3,E_227
+test:95923,Pneumonia,4,E_129
+test:23687,Pulmonary embolism,1,E_3
+test:23687,Pulmonary embolism,2,E_217
+test:23687,Pulmonary embolism,3,E_151
+test:133024,Scombroid food poisoning,1,E_148
+test:133024,Scombroid food poisoning,2,E_79
+test:133024,Scombroid food poisoning,3,E_203
+test:133024,Scombroid food poisoning,4,E_77
+test:133024,Scombroid food poisoning,5,E_201
+test:133024,Scombroid food poisoning,6,E_91
+test:133024,Scombroid food poisoning,7,E_66
+test:133024,Scombroid food poisoning,8,E_89
+test:133024,Scombroid food poisoning,9,E_187
+test:133024,Scombroid food poisoning,10,E_92
+test:16097,Stable angina,1,E_124
+test:16097,Stable angina,2,E_214
+test:16097,Stable angina,3,E_79
+test:16097,Stable angina,4,E_162
+test:16097,Stable angina,5,E_220
+test:16097,Stable angina,6,E_218
+test:16097,Stable angina,7,E_14
+test:16097,Stable angina,8,E_13
+test:16097,Stable angina,9,E_148
+test:107472,Tuberculosis,1,E_41
+test:107472,Tuberculosis,2,E_114
+test:107472,Tuberculosis,3,E_201
+test:107472,Tuberculosis,4,E_77
+test:107472,Tuberculosis,5,E_88
+test:107472,Tuberculosis,6,E_129
+test:107472,Tuberculosis,7,E_45
+test:107472,Tuberculosis,8,E_79
+test:107472,Tuberculosis,9,E_208
+test:13402,URTI,1,E_129
+test:19424,Whooping cough,1,E_209

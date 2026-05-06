@@ -1,0 +1,4 @@
+condition_value,num_cases,mean_requests,mean_revealed_root_count,llm_final_correct_count,llm_final_accuracy,mlp_online_correct_count,mlp_online_accuracy,hybrid_final_correct_count,hybrid_final_accuracy,matched_correct_count,matched_accuracy,full_accuracy,hybrid_minus_matched_accuracy,hybrid_minus_llm_accuracy
+0.1,24,9.666666666666666,10.666666666666666,21,0.875,20,0.8333333333333334,20,0.8333333333333334,20,0.8333333333333334,1.0,0.0,-0.04166666666666663
+0.22,24,7.458333333333333,8.458333333333334,21,0.875,21,0.875,21,0.875,21,0.875,1.0,0.0,0.0
+0.35,24,5.875,6.875,20,0.8333333333333334,20,0.8333333333333334,20,0.8333333333333334,20,0.8333333333333334,1.0,0.0,0.0

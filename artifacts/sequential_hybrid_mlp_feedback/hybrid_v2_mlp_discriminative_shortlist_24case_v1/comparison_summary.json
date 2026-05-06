@@ -1,0 +1,147 @@
+{
+  "hybrid_v2_metrics": {
+    "agreement_hybrid_accuracy": 0.875,
+    "agreement_hybrid_top3_accuracy": 0.9583333333333334,
+    "agreement_hybrid_top5_accuracy": 0.9583333333333334,
+    "agreement_hybrid_macro_f1": 0.8402777777777777,
+    "llm_final_accuracy": 0.875,
+    "llm_final_top3_accuracy": 0.9583333333333334,
+    "llm_final_top5_accuracy": 0.9583333333333334,
+    "llm_final_macro_f1": 0.8402777777777777,
+    "mlp_final_accuracy": 0.8333333333333334,
+    "mlp_final_top3_accuracy": 0.875,
+    "mlp_final_top5_accuracy": 0.9166666666666666,
+    "mlp_final_macro_f1": 0.7435897435897435,
+    "conservative_hybrid_accuracy": 0.875,
+    "conservative_hybrid_top3_accuracy": 0.9583333333333334,
+    "conservative_hybrid_top5_accuracy": 0.9583333333333334,
+    "conservative_hybrid_macro_f1": 0.8402777777777777,
+    "accuracy": 0.875,
+    "top3_accuracy": 0.9583333333333334,
+    "top5_accuracy": 0.9583333333333334,
+    "macro_f1": 0.8402777777777777,
+    "mean_requests": 7.375,
+    "median_requests": 3.5,
+    "mean_visible_roots_including_initial": 8.375,
+    "stop_before_cap_rate": 0.9166666666666666,
+    "selected_stop_rule_rate": 0.75,
+    "cap_hit_count": 2,
+    "mean_api_calls": 8.291666666666666,
+    "total_input_tokens": 509158,
+    "total_output_tokens": 23249,
+    "total_estimated_cost": null,
+    "mean_mlp_confidence": 0.8866956823815902,
+    "mean_mlp_margin": 0.8543722805410047,
+    "mean_mlp_entropy": 0.12435120743895815,
+    "llm_mlp_agreement_rate": 0.875,
+    "stop_reason_distribution": {
+      "agent_stop": 4,
+      "max_requests_reached": 2,
+      "selected_mlp_stop": 18
+    },
+    "request_distribution": {
+      "1": 7,
+      "3": 5,
+      "4": 1,
+      "5": 3,
+      "9": 2,
+      "10": 1,
+      "15": 1,
+      "22": 1,
+      "23": 1,
+      "24": 2
+    },
+    "agreement_hybrid_source_distribution": {
+      "agreement": 21,
+      "fallback_llm_disagreement": 3
+    },
+    "conservative_hybrid_source_distribution": {
+      "llm_mlp_agreement": 21,
+      "prefer_llm_disagreement": 3
+    },
+    "run_name": "hybrid_v2_mlp_discriminative_shortlist_24case_v1",
+    "max_request_cap": 24,
+    "num_cases": 24,
+    "runtime_seconds": 778.9861598014832,
+    "selected_stop_policy": {
+      "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+      "min_requests": 1,
+      "mlp_confidence_min": 0.7,
+      "mlp_margin_min": 0.2,
+      "mlp_entropy_max": 0.1,
+      "mlp_stability_min": 0,
+      "official_final_head": "agreement_hybrid_final",
+      "source_notebook": "12_stopping_policy_ablation.ipynb"
+    },
+    "shortlist_strategy": "mlp_discriminative_v2"
+  },
+  "reference_systems": [
+    {
+      "system": "notebook13_hybrid_v1_selected_stop",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.583333333333333,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1/metrics.json"
+    },
+    {
+      "system": "notebook08_lambda_0p100_llm_only",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8461538461538461,
+      "mean_requests": 13.041666666666666,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/metrics.json"
+    },
+    {
+      "system": "notebook11_lambda_0p220_hybrid_v1",
+      "accuracy": 0.875,
+      "top3_accuracy": 0.9583333333333334,
+      "top5_accuracy": 0.9583333333333334,
+      "macro_f1": 0.8133333333333332,
+      "mean_requests": 7.458333333333333,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/lambda_0p220/metrics.json"
+    },
+    {
+      "system": "notebook12_offline_selected_stop",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.875,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/stopping_policy_ablation/stopping_policy_ablation_24case_v1/selected_stopping_policy.json"
+    }
+  ],
+  "promotion_decision": {
+    "decision": "reject_keep_notebook13_v1",
+    "num_cases": 24,
+    "correct_count": 21,
+    "accuracy": 0.875,
+    "top5_accuracy": 0.9583333333333334,
+    "mean_requests": 7.375,
+    "v1_accuracy": 0.9166666666666666,
+    "v1_top5_accuracy": 0.9166666666666666,
+    "v1_mean_requests": 6.583333333333333,
+    "request_delta_vs_v1": 0.791666666666667,
+    "top5_delta_vs_v1": 0.04166666666666674,
+    "outcome_counts": {
+      "both_correct": 20,
+      "v1_only_correct": 2,
+      "both_wrong": 1,
+      "v2_only_correct": 1
+    },
+    "fixed_hard_cases": [
+      "test:62878"
+    ],
+    "new_hard_failures": [],
+    "conditions": {
+      "accuracy_preserved_and_requests_low": false,
+      "accuracy_improved_with_reasonable_requests": false,
+      "accuracy_preserved_with_v1_or_better_budget_and_quality_gain": false,
+      "reject_low_accuracy": true,
+      "reject_no_efficiency_or_quality_gain": false
+    },
+    "promotion_rule": "Promote if v2 preserves 22/24 with <=5.8 requests, reaches >=23/24 with <=8 requests, or preserves 22/24 within v1 budget while improving top-5 or a persistent hard case."
+  }
+}

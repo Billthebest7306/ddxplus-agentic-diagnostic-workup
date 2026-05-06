@@ -1,0 +1,5 @@
+final_head,accuracy,top5_accuracy
+Agreement hybrid,1.0,1.0
+Conservative hybrid,1.0,1.0
+LLM final,1.0,1.0
+MLP final,1.0,1.0

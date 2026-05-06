@@ -1,0 +1,23 @@
+{
+  "run_name": "stopping_policy_ablation_24case_v1",
+  "offline_replay_only": true,
+  "no_api_calls": true,
+  "main_replay_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100",
+  "observed_notebook08_run_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1",
+  "hybrid_reference_run_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1",
+  "partial_model_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2",
+  "target_mean_requests": 7.5,
+  "num_main_cases": 24,
+  "num_turn_feature_rows": 333,
+  "num_policy_specs": 309,
+  "num_policy_summary_rows": 1236,
+  "mlp_reconstruction_check": {
+    "available": true,
+    "lambda": 0.22,
+    "num_cases": 24,
+    "match_count": 24,
+    "match_rate": 1.0,
+    "mismatches": []
+  },
+  "replay_limitation": "Offline replay tests alternative stopping points along saved traces. It cannot test how the LLM would choose different future evidence after an altered stop/continue decision."
+}

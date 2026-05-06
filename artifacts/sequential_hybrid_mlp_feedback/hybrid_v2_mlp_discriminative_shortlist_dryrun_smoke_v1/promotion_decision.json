@@ -1,0 +1,26 @@
+{
+  "decision": "reject_keep_notebook13_v1",
+  "num_cases": 2,
+  "correct_count": 2,
+  "accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "mean_requests": 3.5,
+  "v1_accuracy": 0.9166666666666666,
+  "v1_top5_accuracy": 0.9166666666666666,
+  "v1_mean_requests": 6.583333333333333,
+  "request_delta_vs_v1": -3.083333333333333,
+  "top5_delta_vs_v1": 0.08333333333333337,
+  "outcome_counts": {
+    "both_correct": 2
+  },
+  "fixed_hard_cases": [],
+  "new_hard_failures": [],
+  "conditions": {
+    "accuracy_preserved_and_requests_low": false,
+    "accuracy_improved_with_reasonable_requests": false,
+    "accuracy_preserved_with_v1_or_better_budget_and_quality_gain": false,
+    "reject_low_accuracy": true,
+    "reject_no_efficiency_or_quality_gain": false
+  },
+  "promotion_rule": "Promote if v2 preserves 22/24 with <=5.8 requests, reaches >=23/24 with <=8 requests, or preserves 22/24 within v1 budget while improving top-5 or a persistent hard case."
+}

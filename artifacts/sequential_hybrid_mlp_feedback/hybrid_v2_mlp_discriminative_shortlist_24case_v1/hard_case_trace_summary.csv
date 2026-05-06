@@ -1,0 +1,49 @@
+case_id,true_pathology,turn_index,requested_evidence_id,decision,predicted_pathology,mlp_top1,mlp_confidence,stop_level
+test:81691,Croup,1,E_41,request,Viral pharyngitis,Viral pharyngitis,0.24371308088302612,continue
+test:81691,Croup,2,E_169,request,Bronchiolitis,Allergic sinusitis,0.2541173994541168,continue
+test:81691,Croup,3,E_201,request,Bronchiolitis,Acute otitis media,0.18088823556900024,continue
+test:81691,Croup,4,E_194,request,Croup,Croup,0.7525357007980347,continue
+test:81691,Croup,5,E_25,request,Cluster headache,Cluster headache,0.4947962760925293,continue
+test:81691,Croup,6,E_66,request,Acute otitis media,Acute otitis media,0.6752854585647583,continue
+test:81691,Croup,7,E_129,request,Bronchitis,Pneumonia,0.47729170322418213,continue
+test:81691,Croup,8,E_77,request,Bronchitis,Bronchitis,0.7540702223777771,continue
+test:81691,Croup,9,E_219,request,Bronchiolitis,Bronchitis,0.3687227666378021,continue
+test:81691,Croup,10,E_146,request,Bronchiolitis,Anemia,0.586686909198761,continue
+test:81691,Croup,11,E_3,request,Bronchiolitis,Pericarditis,0.6170787811279297,continue
+test:81691,Croup,12,E_220,request,Bronchiolitis,Pericarditis,0.6170787811279297,continue
+test:81691,Croup,13,E_81,request,Bronchiolitis,Panic attack,0.8597036004066467,continue
+test:81691,Croup,14,E_217,request,Bronchiolitis,Myocarditis,0.363559365272522,continue
+test:81691,Croup,15,E_84,request,Bronchiolitis,Guillain-Barré syndrome,0.5444014668464661,continue
+test:81691,Croup,16,E_148,request,Bronchiolitis,Boerhaave,0.23754319548606873,continue
+test:81691,Croup,17,E_155,request,Bronchiolitis,Sarcoidosis,0.25047627091407776,continue
+test:81691,Croup,18,E_147,request,Bronchiolitis,Acute dystonic reactions,0.5255979895591736,continue
+test:81691,Croup,19,E_9,request,Bronchiolitis,Sarcoidosis,0.5634560585021973,continue
+test:81691,Croup,20,E_52,request,Bronchiolitis,Myasthenia gravis,0.295097291469574,continue
+test:81691,Croup,21,E_208,request,Bronchiolitis,Anemia,0.3877886235713959,continue
+test:81691,Croup,22,E_103,request,Bronchiolitis,Chronic rhinosinusitis,0.2823537290096283,continue
+test:81691,Croup,23,E_164,request,Bronchiolitis,Atrial fibrillation,0.41033363342285156,continue
+test:81691,Croup,24,,stop,Bronchiolitis,Bronchitis,0.7024443745613098,continue
+test:62878,Pericarditis,1,E_214,request,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,0.07442177087068558,continue
+test:62878,Pericarditis,2,E_77,request,Pulmonary neoplasm,Bronchiectasis,0.06023067235946655,continue
+test:62878,Pericarditis,3,E_70,request,Pulmonary neoplasm,Possible NSTEMI / STEMI,0.07218176126480103,continue
+test:62878,Pericarditis,4,E_212,request,Epiglottitis,Epiglottitis,0.13157005608081818,continue
+test:62878,Pericarditis,5,E_129,request,Pneumonia,Pneumonia,0.25127699971199036,continue
+test:62878,Pericarditis,6,E_84,request,Guillain-Barré syndrome,Guillain-Barré syndrome,0.18211771547794342,continue
+test:62878,Pericarditis,7,E_151,request,Pericarditis,Pericarditis,0.23499014973640442,continue
+test:62878,Pericarditis,8,E_217,request,Pericarditis,Pericarditis,0.23299948871135712,continue
+test:62878,Pericarditis,9,E_201,request,Pulmonary neoplasm,Tuberculosis,0.12082301080226898,continue
+test:62878,Pericarditis,10,E_155,request,Panic attack,Panic attack,0.2688639760017395,continue
+test:62878,Pericarditis,11,E_157,request,PSVT,Panic attack,0.5631618499755859,continue
+test:62878,Pericarditis,12,E_62,request,PSVT,PSVT,0.4539724290370941,continue
+test:62878,Pericarditis,13,E_3,request,PSVT,Pericarditis,0.2688552737236023,continue
+test:62878,Pericarditis,14,E_220,request,Pericarditis,Pericarditis,0.2688552737236023,continue
+test:62878,Pericarditis,15,E_81,request,PSVT,Panic attack,0.4138675928115845,continue
+test:62878,Pericarditis,16,E_164,request,PSVT,Atrial fibrillation,0.2921833395957947,continue
+test:62878,Pericarditis,17,E_111,request,PSVT,Panic attack,0.15941175818443298,continue
+test:62878,Pericarditis,18,E_219,request,PSVT,Bronchitis,0.2638935446739197,continue
+test:62878,Pericarditis,19,E_41,request,PSVT,Viral pharyngitis,0.15871408581733704,continue
+test:62878,Pericarditis,20,E_25,request,PSVT,Cluster headache,0.15571175515651703,continue
+test:62878,Pericarditis,21,E_79,request,PSVT,Pulmonary neoplasm,0.12304674088954926,continue
+test:62878,Pericarditis,22,E_148,request,PSVT,Boerhaave,0.15524175763130188,continue
+test:62878,Pericarditis,23,E_146,request,PSVT,Anemia,0.1503777652978897,continue
+test:62878,Pericarditis,24,E_0,request,Pericarditis,Pericarditis,0.17523153126239777,continue

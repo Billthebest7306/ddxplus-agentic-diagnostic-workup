@@ -1,0 +1,25 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE,prior_available
+test:104857,Acute dystonic reactions,18,M,E_172,True
+test:33118,Acute otitis media,77,F,E_181,True
+test:93930,Acute pulmonary edema,42,M,E_151,True
+test:88250,Allergic sinusitis,33,F,E_201,True
+test:90978,Bronchiolitis,0,M,E_23,True
+test:29123,Bronchospasm / acute asthma exacerbation,40,M,E_201,True
+test:51421,Chagas,7,M,E_91,True
+test:46152,Cluster headache,40,F,E_53,True
+test:81691,Croup,9,F,E_181,True
+test:77908,Ebola,35,F,E_51,True
+test:34242,Guillain-Barré syndrome,16,M,E_84,True
+test:106010,HIV (initial infection),58,M,E_162,True
+test:8666,Influenza,20,F,E_91,True
+test:38202,Inguinal hernia,29,M,E_203,True
+test:133888,Larygospasm,35,M,E_194,True
+test:2801,Pancreatic neoplasm,90,F,E_51,True
+test:62878,Pericarditis,35,F,E_66,True
+test:95923,Pneumonia,24,F,E_66,True
+test:23687,Pulmonary embolism,31,F,E_220,True
+test:133024,Scombroid food poisoning,63,M,E_129,True
+test:16097,Stable angina,51,F,E_66,True
+test:107472,Tuberculosis,64,M,E_91,True
+test:13402,URTI,25,M,E_144,True
+test:19424,Whooping cough,62,M,E_166,True

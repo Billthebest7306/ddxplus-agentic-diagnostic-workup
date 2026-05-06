@@ -1,0 +1,10 @@
+{
+  "sequential_run_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_dryrun_test_1perclass_cap24_1lambdas_smoke_test2",
+  "sequential_artifact_family": "hybrid_mlp_feedback",
+  "initial_one_shot_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot/basd_pathology_full",
+  "full_evidence_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_full_evidence/full_evidence_pathology_full",
+  "partial_evidence_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2",
+  "matched_model_source": "partial_evidence_one_shot",
+  "hybrid_columns_detected": true,
+  "fairness_rule": "Full-evidence predictions are evaluation-only and are not used by live sequential/hybrid policy. Partial-evidence matched model is trained only from official train/validation rows and policy-shaped masks, not test labels."
+}

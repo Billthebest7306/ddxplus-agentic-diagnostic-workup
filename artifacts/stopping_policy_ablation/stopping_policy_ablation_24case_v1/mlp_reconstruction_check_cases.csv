@@ -1,0 +1,25 @@
+case_id,mlp_predicted_pathology,mlp_pred,match
+test:104857,Acute dystonic reactions,Acute dystonic reactions,True
+test:33118,Acute otitis media,Acute otitis media,True
+test:93930,Acute pulmonary edema,Acute pulmonary edema,True
+test:88250,Allergic sinusitis,Allergic sinusitis,True
+test:90978,Bronchiolitis,Bronchiolitis,True
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True
+test:51421,Chagas,Chagas,True
+test:46152,Cluster headache,Cluster headache,True
+test:81691,Acute otitis media,Acute otitis media,True
+test:77908,Ebola,Ebola,True
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,True
+test:106010,HIV (initial infection),HIV (initial infection),True
+test:8666,HIV (initial infection),HIV (initial infection),True
+test:38202,Inguinal hernia,Inguinal hernia,True
+test:133888,Larygospasm,Larygospasm,True
+test:2801,Pancreatic neoplasm,Pancreatic neoplasm,True
+test:62878,Panic attack,Panic attack,True
+test:95923,Pneumonia,Pneumonia,True
+test:23687,Pulmonary embolism,Pulmonary embolism,True
+test:133024,Scombroid food poisoning,Scombroid food poisoning,True
+test:16097,Stable angina,Stable angina,True
+test:107472,Tuberculosis,Tuberculosis,True
+test:13402,URTI,URTI,True
+test:19424,Whooping cough,Whooping cough,True

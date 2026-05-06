@@ -69,10 +69,10 @@ Helper script:
 
 Reports:
 
-- [baseline_summary.md](reports/baseline_summary.md)
-- [baseline_results_and_next_steps.md](reports/baseline_results_and_next_steps.md)
-- [results_assessment.md](reports/results_assessment.md)
-- [sequential_api_guide.md](reports/sequential_api_guide.md)
+- [baseline_summary.md](reports/baselines/baseline_summary.md)
+- [baseline_results_and_next_steps.md](reports/baselines/baseline_results_and_next_steps.md)
+- [results_assessment.md](reports/baselines/results_assessment.md)
+- [sequential_api_guide.md](reports/baselines/sequential_api_guide.md)
 
 Artifact layout:
 
@@ -595,8 +595,8 @@ Patched sequential pilot artifact:
 
 Diagnostic reports:
 
-- [results_assessment.md](reports/results_assessment.md)
-- [baseline_results_and_next_steps.md](reports/baseline_results_and_next_steps.md)
+- [results_assessment.md](reports/baselines/results_assessment.md)
+- [baseline_results_and_next_steps.md](reports/baselines/baseline_results_and_next_steps.md)
 
 ## 24. One-Sentence Summary For Future Context Recovery
 
@@ -912,7 +912,7 @@ Main observed failure mode:
 
 Report written at:
 
-- [proposed_improvement_1_results.md](reports/proposed_improvement_1_results.md)
+- [proposed_improvement_1_results.md](reports/baselines/proposed_improvement_1_results.md)
 
 ### Sequential Policy Refinement (Notebook 05)
 
@@ -998,7 +998,7 @@ Current honest project state after notebook 05:
 
 Report written at:
 
-- [sequential_policy_refinement_report.md](reports/sequential_policy_refinement_report.md)
+- [sequential_policy_refinement_report.md](reports/hybrid/sequential_policy_refinement_report.md)
 
 ### Live Notebook 05 Outcome
 
@@ -1049,7 +1049,7 @@ Important interpretation:
 
 Updated report with the live notebook 05 results:
 
-- [sequential_policy_refinement_report.md](reports/sequential_policy_refinement_report.md)
+- [sequential_policy_refinement_report.md](reports/hybrid/sequential_policy_refinement_report.md)
 
 ### Budget Scaling Successor Notebook
 
@@ -1121,8 +1121,8 @@ So this cleanup should not require rerunning historical experiments. It is an en
 
 Two new design reports were added for the instructor-facing discussion of project novelty and next-stage architecture:
 
-- [evidence_ledger_algorithm_and_improvements.md](reports/evidence_ledger_algorithm_and_improvements.md)
-- [proposed_multi_agent_architecture.md](reports/proposed_multi_agent_architecture.md)
+- [evidence_ledger_algorithm_and_improvements.md](reports/architecture/evidence_ledger_algorithm_and_improvements.md)
+- [proposed_multi_agent_architecture.md](reports/architecture/proposed_multi_agent_architecture.md)
 
 Purpose:
 
@@ -1138,7 +1138,7 @@ Current recommendation captured in those reports:
 
 An additional design-freeze note was added at:
 
-- [architecture_v1_freeze_and_experimental_scope.md](reports/architecture_v1_freeze_and_experimental_scope.md)
+- [architecture_v1_freeze_and_experimental_scope.md](reports/architecture/architecture_v1_freeze_and_experimental_scope.md)
 
 Purpose:
 
@@ -1202,7 +1202,7 @@ Status:
 
 Report:
 
-- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
+- [full_evidence_one_shot_comparator.md](reports/baselines/full_evidence_one_shot_comparator.md)
 
 ### New Notebook 08: Cost-Sensitive Sequential Lambda Sweep
 
@@ -1261,7 +1261,7 @@ Important caveat:
 
 Report:
 
-- [lambda_cost_sensitive_policy_report.md](reports/lambda_cost_sensitive_policy_report.md)
+- [lambda_cost_sensitive_policy_report.md](reports/baselines/lambda_cost_sensitive_policy_report.md)
 
 ### New Notebook 09: Matched-Evidence Integrated Comparison
 
@@ -1297,13 +1297,13 @@ Validation:
 
 Report:
 
-- [matched_evidence_integrated_comparison_report.md](reports/matched_evidence_integrated_comparison_report.md)
+- [matched_evidence_integrated_comparison_report.md](reports/baselines/matched_evidence_integrated_comparison_report.md)
 
 ### Phase Report
 
 Added:
 
-- [phase_next_rigorous_evaluation_plan.md](reports/phase_next_rigorous_evaluation_plan.md)
+- [phase_next_rigorous_evaluation_plan.md](reports/project/phase_next_rigorous_evaluation_plan.md)
 
 This report summarizes the new phase, current status, dry-run validation, and recommended next live runs.
 
@@ -1355,7 +1355,7 @@ Important interpretation:
 
 Updated report:
 
-- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
+- [full_evidence_one_shot_comparator.md](reports/baselines/full_evidence_one_shot_comparator.md)
 
 ## 31. Final Comparator Results Integrated Into Reports
 
@@ -1367,10 +1367,10 @@ New summary report:
 
 Updated reports:
 
-- [full_evidence_one_shot_comparator.md](reports/full_evidence_one_shot_comparator.md)
-- [lambda_cost_sensitive_policy_report.md](reports/lambda_cost_sensitive_policy_report.md)
-- [matched_evidence_integrated_comparison_report.md](reports/matched_evidence_integrated_comparison_report.md)
-- [phase_next_rigorous_evaluation_plan.md](reports/phase_next_rigorous_evaluation_plan.md)
+- [full_evidence_one_shot_comparator.md](reports/baselines/full_evidence_one_shot_comparator.md)
+- [lambda_cost_sensitive_policy_report.md](reports/baselines/lambda_cost_sensitive_policy_report.md)
+- [matched_evidence_integrated_comparison_report.md](reports/baselines/matched_evidence_integrated_comparison_report.md)
+- [phase_next_rigorous_evaluation_plan.md](reports/project/phase_next_rigorous_evaluation_plan.md)
 - [README.md](README.md)
 
 ### Full-Evidence One-Shot Result
@@ -1595,7 +1595,7 @@ Updated notebook:
 
 New report:
 
-- [partial_evidence_matched_comparator.md](reports/partial_evidence_matched_comparator.md)
+- [partial_evidence_matched_comparator.md](reports/baselines/partial_evidence_matched_comparator.md)
 
 Reason:
 
@@ -1838,3 +1838,966 @@ Scientific framing:
 The best current research question is:
 
 Can a structured sequential diagnostic workup controller approach full-evidence diagnostic performance while acquiring only a limited targeted subset of evidence, and should final diagnosis be made by the LLM, a neural classifier, or a hybrid of both?
+
+## 37. Future Direction: Online LLM-MLP Hybrid Workup Controller
+
+A future idea worth preserving is an **online hybrid system** that is stronger than the current matched-evidence comparator.
+
+Important distinction:
+
+- current matched-evidence comparator is offline/retrospective
+- the sequential LLM has already acquired evidence
+- the partial-evidence MLP is then evaluated afterward on exactly that acquired evidence
+- this proves that LLM-acquired evidence can be useful for a neural diagnostic head, but the neural head does not influence the workup while it is happening
+
+The proposed hybrid should be online:
+
+```text
+current ledger state
+    -> partial-evidence MLP updates diagnosis distribution
+    -> LLM sees selected MLP belief signals
+    -> stop/request logic uses MLP confidence, LLM diagnosis, and disagreement
+    -> LLM requests next legal evidence if uncertainty/disagreement remains
+    -> ledger reveals only that requested evidence
+    -> loop repeats
+```
+
+This is **not GAN-like** and should not be framed as adversarial training. The MLP and LLM are not opponents. They have different roles:
+
+- `LLM`: flexible evidence-acquisition planner and clinical-language reasoner
+- `MLP`: stable structured diagnostic belief estimator over the BASD-style evidence state
+- `ledger`: deterministic source of truth for visible evidence, hidden evidence, legal actions, revealed values, and traceability
+- `stop/request policy`: uses confidence, margin, stability, disagreement, and evidence cost
+
+Possible hybrid levels:
+
+1. One-way hybrid:
+   - LLM gathers evidence
+   - MLP makes final diagnosis
+   - this is closest to the current matched-comparator result
+
+2. Confidence-gated hybrid:
+   - MLP runs after each reveal
+   - stop if MLP confidence/margin is high enough
+   - otherwise LLM asks another evidence question
+
+3. Disagreement-aware hybrid:
+   - LLM and MLP both maintain top-k differentials
+   - if they agree, stop
+   - if they disagree, ask a discriminative question targeted at the competing hypotheses
+
+4. MLP-guided question selection:
+   - MLP identifies uncertain top competing pathologies
+   - LLM chooses a legal evidence question that separates those pathologies
+   - this keeps the LLM in control of language/action selection while grounding its choices in a neural belief state
+
+Why this may matter:
+
+- our latest results suggest the partial-evidence MLP is competitive with the LLM once evidence has been acquired
+- this means the best architecture may be to use the LLM for evidence control and the MLP for calibrated final diagnosis or confidence signals
+- online MLP feedback could improve lambda behavior by making stopping depend on diagnostic margin rather than only hand-designed heuristic value
+- disagreement between LLM and MLP can be used as a trigger for more evidence instead of forcing an early final answer
+
+How to evaluate it later:
+
+- compare against current notebook 08 cost-sensitive LLM-only sequential policy
+- compare against notebook 09 offline matched-evidence MLP
+- use the same balanced 49-case slice first
+- keep `gpt-4.1-mini` fixed for continuity
+- report accuracy, top-3/top-5, macro-F1, mean requests, disagreement rate, stop-before-cap rate, and evidence-efficiency utility
+
+Claim discipline:
+
+- do not claim this is a new paradigm like GANs
+- do not claim hybrid superiority until tested
+- frame it as a practical division of labor between evidence acquisition and structured diagnosis
+- cite active feature acquisition as older related work, and position the novelty around LLM-led evidence control plus deterministic ledger plus matched/online diagnostic-head analysis
+
+## 38. Current Roadmap Before Next Implementation Phase
+
+This section records the current project direction before starting the next round of implementation.
+
+The main clarification:
+
+- the broad ideas of evidence acquisition, diagnostic agents, RL workup policies, LLM medical agents, and classifier-assisted diagnosis already exist
+- our novelty should be framed around the specific combination and application:
+  - DDXPlus structured diagnostic workup
+  - deterministic evidence ledger
+  - LLM-controlled legal evidence acquisition
+  - BASD-style partial-evidence MLP diagnostic head
+  - matched-evidence decomposition
+  - cost-sensitive stopping
+  - future online LLM-MLP feedback
+  - future architecture-agnostic algorithmic ledger signals
+
+Working novelty statement:
+
+> Prior DDXPlus work studies trained RL/supervised diagnostic agents, and recent medical LLM-agent work studies interactive diagnosis. Our project studies a ledger-gated LLM evidence-acquisition controller on DDXPlus, evaluates it against BASD-style neural diagnostic heads under matched evidence, and develops a path toward online hybrid feedback and algorithmic ledger-guided evidence selection.
+
+### Roadmap Stage 1: Freeze The Evaluation Frame
+
+Before adding more architecture, the comparator story should stay stable.
+
+Keep these as named comparator families:
+
+- initial-evidence one-shot
+- full-evidence one-shot ceiling
+- offline matched-evidence partial MLP
+- current LLM-only cost-sensitive sequential policy
+- future online hybrid LLM-MLP policy
+- later heuristic or simple non-LLM evidence-acquisition baseline
+- published DDXPlus AARLC/BASD numbers as external reference points
+
+Rules:
+
+- do not casually replace old comparators after interpreting results
+- if a comparator improves, version it as a new comparator
+- report what each comparator is meant to answer
+- avoid the vague claim "agentic beats one-shot"
+- use the better question: where does value come from, evidence acquisition or final diagnosis?
+
+### Roadmap Stage 2: Implement Online Hybrid Before Multi-Agent
+
+The next implementation target should be the online hybrid.
+
+Reason:
+
+- it is the smallest meaningful step beyond the current matched comparator
+- it directly tests whether MLP feedback improves evidence efficiency and stopping
+- it gives the future algorithmic ledger a useful consumer
+
+Planned online hybrid loop:
+
+```text
+ledger state
+    -> partial-evidence MLP predicts top-k diagnosis distribution
+    -> compute confidence, margin, entropy, stability, and LLM-MLP agreement
+    -> LLM receives selected belief signals plus legal/shortlisted evidence actions
+    -> stop if confidence/agreement is sufficient under current lambda
+    -> otherwise request one legal evidence field
+    -> ledger reveals present/absent/value information
+    -> repeat
+```
+
+Initial hybrid variants to test:
+
+- MLP-final:
+  - LLM chooses evidence
+  - MLP makes final diagnosis
+
+- confidence-gated:
+  - MLP confidence/margin controls stopping
+  - LLM chooses questions when uncertainty remains
+
+- disagreement-aware:
+  - LLM and MLP top-k predictions are compared
+  - disagreement triggers more targeted evidence requests
+
+Expected value:
+
+- may reduce unnecessary evidence requests
+- may stabilize final diagnosis
+- may give cleaner lambda behavior
+- may show whether the LLM is better used as question selector than final classifier
+
+### Roadmap Stage 3: Build Architecture-Agnostic Algorithmic Ledger
+
+The algorithmic ledger should not be dependent on any one controller.
+
+It should sit between the deterministic environment ledger and the policy/controller:
+
+```text
+DDXPlus environment
+    -> deterministic evidence ledger
+    -> algorithmic ledger signals
+    -> controller/policy
+    -> final diagnostic head
+```
+
+The algorithmic ledger should expose reusable signals:
+
+- visible evidence state
+- requested evidence history
+- legal actions
+- top competing diagnoses
+- belief distribution from MLP or other diagnostic head
+- confidence/margin/entropy
+- diagnosis stability across turns
+- discriminative evidence candidates
+- severity-aware risk flags
+- contradiction or consistency warnings
+- expected-value proxy for asking another question
+- cost-sensitive stop score
+
+Consumers:
+
+- single-agent LLM can receive ledger signals in the prompt
+- online hybrid can use MLP belief and disagreement signals
+- multi-agent system can share one ledger as the common source of truth
+- heuristic baseline can use ledger scores directly without LLM
+- future evolutionary search can tune ledger weights/rules
+
+Design principle:
+
+- the ledger should be a reusable state-and-signal layer, not hardwired to the online hybrid
+
+### Roadmap Stage 4: Add Multi-Agent Only After Ledger Signals Are Stable
+
+Do not jump to multi-agent next.
+
+Reason:
+
+- multi-agent without shared state can become prompt choreography
+- it increases cost and variance
+- it may not improve evidence acquisition unless roles are grounded in ledger signals
+
+Possible later multi-agent roles:
+
+- evidence planner:
+  - proposes the next most discriminative evidence request
+
+- diagnosis tracker:
+  - maintains top competing diagnoses
+
+- severity/safety reviewer:
+  - checks whether severe alternatives have been ruled out
+
+- adjudicator:
+  - resolves LLM/MLP disagreement or asks for more evidence
+
+Multi-agent should be justified only if each role consumes a different view of the ledger and improves a measurable metric.
+
+### Roadmap Stage 5: Consider Evolutionary Optimization As A Later Strategy Tuner
+
+Evolutionary algorithms are relevant, but they should not replace the agentic system.
+
+Best use:
+
+- optimize weights or rules inside the algorithmic ledger
+- tune stopping thresholds
+- tune evidence-score weights
+- tune disagreement triggers
+- tune severity-aware tradeoffs
+
+Example score:
+
+```text
+score(question) =
+    w1 * uncertainty_reduction
+  + w2 * diagnosis_discrimination
+  + w3 * severity_ruleout
+  + w4 * evidence_frequency
+  - w5 * evidence_cost
+```
+
+Evolutionary search could optimize the `w` values on validation episodes.
+
+Why this is useful:
+
+- keeps the policy interpretable
+- avoids immediately moving into opaque RL
+- can improve evidence strategy while preserving LLM/ledger architecture
+
+Why it is later, not next:
+
+- it needs stable ledger signals first
+- it needs a clear validation protocol
+- it should optimize an existing strategy layer, not redefine the whole project
+
+### Roadmap Stage 6: External Benchmark Alignment
+
+To make the project harder to criticize, future reports should align more directly with the original DDXPlus paper.
+
+Add official or paper-aligned metrics where feasible:
+
+- interaction length / mean requests
+- ground-truth pathology top-1 accuracy
+- ground-truth pathology included in differential
+- positive evidence recall
+- differential diagnosis recall
+- differential diagnosis precision
+- differential diagnosis F1
+
+Use published DDXPlus AARLC/BASD results as external anchors.
+
+Important caveat:
+
+- if our live API experiments use small balanced slices, do not present them as full benchmark replacements
+- label them as controlled pilots until a larger run is performed
+
+### Current Recommended Order
+
+1. Keep the current evaluation frame fixed.
+2. Implement online hybrid LLM-MLP controller.
+3. Compare online hybrid to LLM-only sequential and offline matched MLP.
+4. Add architecture-agnostic algorithmic ledger signals.
+5. Test ledger signals with single-agent and hybrid controllers.
+6. Add heuristic evidence-acquisition baseline.
+7. Only then evaluate whether multi-agent roles are useful.
+8. Consider evolutionary optimization of ledger weights/rules after the ledger is stable.
+
+Current guiding question:
+
+> Can a ledger-controlled LLM/hybrid diagnostic workup system select a small, targeted subset of DDXPlus evidence that approaches full-evidence performance, while remaining more interpretable and controllable than trained black-box acquisition policies?
+
+## 39. Hybrid V1 Implementation Started
+
+Hybrid v1 was implemented as the next successor notebook.
+
+New notebook:
+
+- `notebooks/11_online_hybrid_mlp_feedback.ipynb`
+
+Updated notebook:
+
+- `notebooks/09_matched_evidence_integrated_comparison.ipynb`
+
+New report scaffold:
+
+- `reports/hybrid/hybrid_mlp_feedback_report.md`
+
+Purpose:
+
+- keep the current single-agent evidence-acquisition setup
+- load the selected partial-evidence MLP from notebook 10
+- run the MLP after each ledger update
+- expose compact MLP belief signals to the LLM prompt
+- use MLP confidence, margin, entropy, stability, and LLM/MLP agreement for stopping/final-head adjudication
+- save LLM-final, MLP-final, and hybrid-final outputs from the same trace
+
+Artifact root:
+
+- `artifacts/sequential_hybrid_mlp_feedback/<run_name>/`
+
+Default settings:
+
+- `LLM_MODEL = gpt-4.1-mini`
+- `temperature = 0.0`
+- `top_p = 1.0`
+- `MAX_REQUEST_CAP = 24`
+- lambdas: `[0.10, 0.22, 0.35]`
+- default live API mode is controlled directly in the notebook with `RUN_LIVE_API`
+- dry-run benchmark artifacts are controlled directly in the notebook with `ALLOW_DRY_RUN_BENCHMARK`
+
+Important scope boundary:
+
+- hybrid v1 is not multi-agent
+- hybrid v1 does not implement graph inference or algorithmic ledger reasoning
+- LLM still chooses evidence
+- MLP acts as a diagnostic belief monitor and final-head candidate
+
+Evaluation update:
+
+- notebook 09 can now discover `artifacts/sequential_hybrid_mlp_feedback`
+- comparison outputs include:
+  - initial one-shot
+  - full-evidence ceiling
+  - offline matched MLP
+  - hybrid LLM-final
+  - hybrid online MLP-final
+  - hybrid adjudicated final
+
+Next action:
+
+- run notebook 11 in dry-run smoke mode
+- then run a live 24-case pilot with lambdas `[0.10, 0.22, 0.35]`
+- rerun notebook 09 against the hybrid artifact
+
+Status: completed and superseded by section 40.
+
+## 40. Hybrid V1 Live Results And Interpretation
+
+Notebook `11` has now been run live and notebook `09` has been rerun against the hybrid artifact.
+
+Hybrid artifact:
+
+- `artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/`
+
+Integrated comparison artifact:
+
+- `artifacts/integrated_comparisons/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1__hybrid_v1_integrated_v1/`
+
+Reports updated:
+
+- `reports/hybrid/hybrid_mlp_feedback_report.md`
+- `reports/final_results_summary.md`
+- `README.md`
+
+Run settings:
+
+- model: `gpt-4.1-mini`
+- temperature: `0.0`
+- top_p: `1.0`
+- sample: 24 balanced test cases
+- request cap: `24`
+- lambdas: `[0.10, 0.22, 0.35]`
+- partial MLP source: `artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2/`
+
+Hybrid results:
+
+| Lambda | Hybrid acc | Top-3 | Top-5 | Macro-F1 | Mean requests | Stop before cap | Cap hits |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0.10 | 0.833 | 1.000 | 1.000 | 0.756 | 9.7 | 0.875 | 3 |
+| 0.22 | 0.875 | 0.958 | 0.958 | 0.813 | 7.5 | 0.917 | 2 |
+| 0.35 | 0.833 | 0.917 | 0.917 | 0.744 | 5.9 | 0.958 | 1 |
+
+Comparison against notebook `08` on the same useful lambdas:
+
+| Lambda | Notebook 08 acc | Notebook 08 requests | Hybrid acc | Hybrid requests | Interpretation |
+|---:|---:|---:|---:|---:|---|
+| 0.10 | 0.917 | 13.0 | 0.833 | 9.7 | fewer requests, worse accuracy |
+| 0.22 | 0.875 | 10.7 | 0.875 | 7.5 | same accuracy, about 30% fewer requests |
+| 0.35 | 0.875 | 8.3 | 0.833 | 5.9 | fewer requests, one extra error |
+
+Integrated comparison results:
+
+| Lambda | Initial one-shot | Hybrid final | LLM final | Online MLP final | Matched MLP | Full evidence |
+|---:|---:|---:|---:|---:|---:|---:|
+| 0.10 | 0.333 | 0.833 | 0.875 | 0.833 | 0.833 | 1.000 |
+| 0.22 | 0.333 | 0.875 | 0.875 | 0.875 | 0.875 | 1.000 |
+| 0.35 | 0.333 | 0.833 | 0.833 | 0.833 | 0.833 | 1.000 |
+
+Interpretation:
+
+- hybrid v1 did not improve raw accuracy over notebook `08`
+- hybrid v1 did improve evidence efficiency at the useful `lambda = 0.22` point
+- at `lambda = 0.22`, hybrid matches notebook `08` accuracy while reducing mean requests from `10.7` to `7.5`
+- hybrid v1 did not prove that final adjudication is better than LLM-final or MLP-final
+- at `lambda = 0.10`, the hybrid final rule hurt one case by trusting a high-confidence wrong MLP over a correct LLM
+- MLP confidence is not calibrated enough to safely override the LLM in disagreements
+
+Persistent hybrid errors:
+
+- `test:81691`, true `Croup`
+- `test:8666`, true `Influenza`
+- `test:62878`, true `Pericarditis`
+- at lambda `0.35`, `test:51421`, true `Chagas`, also fails
+
+Scientific takeaway:
+
+Hybrid v1 is a useful evidence-efficiency result, not a final-diagnosis breakthrough. The partial-evidence MLP appears helpful for stopping and stability, but final-head arbitration should be more conservative.
+
+Recommended next step:
+
+1. Do not run a larger hybrid benchmark yet.
+2. Patch the hybrid final rule so high-confidence MLP does not override the LLM by default in disagreements.
+3. Keep MLP feedback in the prompt and stopping logic.
+4. Rerun the same 24-case slice at `lambda = 0.22` only.
+5. If the same `0.875` accuracy with roughly `7.5` requests holds, then run a 49-case balanced pilot.
+
+Current best claim:
+
+> Online MLP feedback can make the ledger-controlled sequential workup more evidence-efficient, but the current hybrid final-adjudication rule is not yet better than the individual LLM or MLP heads.
+
+## 41. Notebook 09 Evidence-Budget Comparison Upgrade
+
+Notebook `09` was updated after reviewing the integrated comparison graphs.
+
+Reason:
+
+- lambda is a controller setting, not the actual amount of evidence acquired
+- the previous plots were useful but too lambda-centric
+- the project needs clearer evidence-efficiency graphs showing accuracy/ranking quality against actual request counts and visible evidence roots
+
+Notebook updated:
+
+- `notebooks/09_matched_evidence_integrated_comparison.ipynb`
+
+New/updated artifacts:
+
+- `artifacts/integrated_comparisons/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1__hybrid_v1_integrated_v1/evidence_budget_summary.csv`
+- `artifacts/integrated_comparisons/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1__hybrid_v1_integrated_v1/evidence_efficiency_frontier.csv`
+- `artifacts/integrated_comparisons/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1__hybrid_v1_integrated_v1/case_outcome_matrix.csv`
+- `figures/accuracy_vs_mean_requests_integrated.png`
+- `figures/top5_vs_mean_requests_integrated.png`
+- `figures/accuracy_vs_revealed_roots_integrated.png`
+- `figures/top5_vs_revealed_roots_integrated.png`
+- `figures/evidence_usage_by_policy_setting.png`
+- lambda-based figures are preserved
+
+New report:
+
+- `reports/baselines/integrated_evidence_budget_comparison_report.md`
+
+Key evidence-budget table:
+
+| Lambda | Mean requests | Mean visible roots incl. initial | Hybrid acc | Online MLP acc | Offline matched MLP acc | Hybrid top-5 | Offline matched top-5 |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0.10 | 9.7 | 10.7 | 0.833 | 0.833 | 0.833 | 1.000 | 1.000 |
+| 0.22 | 7.5 | 8.5 | 0.875 | 0.875 | 0.875 | 0.958 | 0.958 |
+| 0.35 | 5.9 | 6.9 | 0.833 | 0.833 | 0.833 | 0.917 | 0.917 |
+
+Interpretation:
+
+- yes, the hybrid run maintains matched-MLP accuracy with less evidence at `lambda = 0.22` and `lambda = 0.35`
+- at `lambda = 0.10`, it loses one case versus the previous notebook `08` matched-MLP result because it stops earlier
+- top-5 ranking quality for online MLP, hybrid final, and offline matched MLP moves together
+- the current benefit is evidence efficiency, not better final diagnosis
+- the actual evidence-count plots are now more scientifically useful than lambda-only plots
+
+Current best result:
+
+- `lambda = 0.22`
+- `21/24` correct
+- `7.46` mean requested evidence fields
+- `8.46` mean visible roots including initial evidence
+- same top-1 accuracy as the old matched-MLP setup at that lambda, with about 30% fewer requests
+
+## 42. Notebook 12 Stopping-Policy Ablation
+
+Implemented a new offline ablation notebook:
+
+- `notebooks/12_stopping_policy_ablation.ipynb`
+
+Purpose:
+
+- determine whether hybrid v1's evidence-efficiency gain comes from the partial-evidence MLP providing a genuinely better stopping signal
+- compare MLP-guided stopping against LLM-only stopping at matched evidence budgets
+- avoid extra API usage by replaying existing notebook `08` and notebook `11` traces
+
+Main replay source:
+
+- `artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/`
+
+Hybrid reference source:
+
+- `artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/`
+
+New artifact root:
+
+- `artifacts/stopping_policy_ablation/stopping_policy_ablation_24case_v1/`
+
+New report:
+
+- `reports/hybrid/stopping_policy_ablation_report.md`
+
+Notebook behavior:
+
+- no API calls
+- reconstructs turn-level ledger states from saved traces
+- runs the notebook `10` partial-evidence MLP at every saved turn
+- extracts LLM confidence, differential, stability, deterministic margin, marginal value, MLP confidence, MLP margin, MLP entropy, and LLM/MLP agreement signals
+- sweeps LLM-only, deterministic-state, marginal-value, MLP-confidence, LLM/MLP-agreement, and conservative hybrid stopping rules
+- evaluates LLM-final, MLP-final, conservative hybrid final, and agreement hybrid final heads from the same simulated stop turn
+
+Validation:
+
+| Item | Result |
+|---|---:|
+| Replay cases | 24 |
+| Turn-level rows | 333 |
+| Policy specs | 309 |
+| Case-policy rows | 7,416 |
+| Policy summary rows | 1,236 |
+| MLP reconstruction match against notebook 11 | 24/24 |
+
+Observed references:
+
+| System | Lambda | Correct | Accuracy | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook 08 LLM-only | 0.10 | 22/24 | 0.917 | 13.04 |
+| Notebook 08 LLM-only | 0.22 | 21/24 | 0.875 | 10.67 |
+| Notebook 08 LLM-only | 0.35 | 21/24 | 0.875 | 8.33 |
+| Notebook 11 hybrid v1 | 0.22 | 21/24 | 0.875 | 7.46 |
+
+Matched-budget ablation at about `7.5` requests:
+
+| Policy group | Final head | Correct | Accuracy | Mean requests |
+|---|---|---:|---:|---:|
+| Best pure LLM-only stop | LLM | 20/24 | 0.833 | 6.33 |
+| Best MLP-guided stop | LLM | 22/24 | 0.917 | 6.88 |
+| Best MLP-guided stop | MLP | 22/24 | 0.917 | 6.25 |
+| Best MLP-guided stop | conservative hybrid | 22/24 | 0.917 | 6.88 |
+| Best MLP-guided stop | agreement hybrid | 22/24 | 0.917 | 6.88 |
+
+Selected policy:
+
+- `mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0`
+- selected final head: `agreement_hybrid_final`
+- accuracy: `0.9167`
+- mean requests: `6.875`
+- median requests: `4.5`
+
+Selected-policy errors:
+
+| Case | True pathology | Predicted pathology | Requests | Interpretation |
+|---|---|---|---:|---|
+| `test:81691` | `Croup` | `Acute otitis media` | 7 | high-confidence false agreement between LLM and MLP |
+| `test:62878` | `Pericarditis` | `Panic attack` | 23 | remained wrong at end of trace; likely question-selection/trajectory failure |
+
+Additional sweep finding:
+
+| Policy | Final head | Correct | Accuracy | Mean requests | Note |
+|---|---|---:|---:|---:|---|
+| `llm_conf_ge_0.85_stab_2` | MLP | 23/24 | 0.958 | 9.83 | highest offline accuracy; stop signal itself does not use MLP |
+| `det_margin_ge_3.00_unres_le_0.05` | MLP | 23/24 | 0.958 | 9.96 | similar high-accuracy point |
+
+Interpretation:
+
+- this is the clearest evidence so far that MLP feedback helps stopping, not merely final diagnosis
+- on fixed notebook `08` evidence trajectories, MLP-guided stopping preserves the high-accuracy `22/24` result with roughly half the requests of notebook `08` lambda `0.10`
+- the best pure LLM-only stopping rule at the same approximate budget reaches only `20/24`
+- this supports a stronger hybrid framing: the MLP should act as an online diagnostic confidence/stopping monitor, while final diagnosis can remain conservative
+- the higher-budget `23/24` replay result suggests the MLP final head may become the best diagnostic head once enough targeted evidence is acquired
+
+Important limitation:
+
+- this is offline replay
+- it tests when to stop along an already-recorded evidence trajectory
+- it does not prove that the LLM would ask the same future questions in a live run under the selected stop policy
+
+Next recommended step:
+
+- implement the selected MLP-guided stopping rule in a live successor run
+- keep `gpt-4.1-mini`, `temperature = 0.0`, and `top_p = 1.0`
+- run the same 24-case slice first
+- avoid another wide lambda sweep
+- compare against notebook `08` lambda `0.10` and notebook `11` lambda `0.22`
+- if that works, test a second accuracy-biased live policy targeting about `9-10` requests with MLP final diagnosis
+
+## 43. Notebook 13 Live Selected-Stop Confirmation
+
+Implemented the live confirmation notebook:
+
+- `notebooks/13_live_selected_hybrid_stopping_confirmation.ipynb`
+
+Purpose:
+
+- take notebook `12`'s selected MLP-guided stop rule out of offline replay
+- use it inside the actual sequential LLM loop
+- verify whether the offline `22/24` at about `6.875` requests can survive live interaction
+
+Default artifact root:
+
+- `artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1/`
+
+Dry-run smoke artifact:
+
+- `artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_dryrun_smoke_v1/`
+
+New report:
+
+- `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
+
+Selected stop rule:
+
+| Parameter | Value |
+|---|---:|
+| minimum requested fields | 1 |
+| MLP confidence minimum | 0.70 |
+| MLP margin minimum | 0.20 |
+| MLP entropy maximum | 0.10 |
+| MLP stability minimum | 0 |
+
+Notebook behavior:
+
+- single selected stop policy, not a lambda sweep
+- `RUN_LIVE_API = False` by default
+- `gpt-4.1-mini`, `temperature = 0.0`, `top_p = 1.0`
+- same 24-case slice as notebooks `08`, `11`, and `12`
+- LLM still chooses evidence requests
+- partial-evidence MLP supplies online confidence, margin, entropy, top-k predictions, and stop signal
+- final heads saved from the same trace:
+  - LLM final
+  - MLP final
+  - agreement hybrid final
+  - conservative hybrid final
+
+Dry-run validation completed:
+
+| Check | Result |
+|---|---|
+| Notebook code parse | passed |
+| Dry-run smoke cases | 2 |
+| Live API calls | none |
+| Predictions written | yes |
+| Traces written | yes |
+| Raw response log written | yes |
+| Metrics written | yes |
+| Figures written | yes |
+| Qualitative examples written | yes |
+
+Dry-run smoke result:
+
+- `2/2` correct
+- mean requests: `6.0`
+- selected stop rule fired for both smoke cases
+
+This is not a scientific result. It only validates the notebook wiring.
+
+Live run instructions:
+
+- use the notebook `08`-style interactive `getpass` key bootstrap or set `LLM_API_KEY`
+- set `RUN_LIVE_API = True`
+- keep `ALLOW_DRY_RUN_BENCHMARK = False`
+- keep `SEQUENTIAL_MAX_CASES = 24`
+- restart kernel and run all cells
+
+Acceptance target:
+
+- preferred: `22/24` correct with `6-7.5` mean requests
+- acceptable: `21/24` correct with clear request reduction versus notebook `08`
+- failure: below notebook `11` accuracy without meaningful request reduction
+
+Live result completed:
+
+| System | Correct | Accuracy | Top-5 | Macro-F1 | Mean requests |
+|---|---:|---:|---:|---:|---:|
+| Notebook `08`, lambda `0.10` | 22/24 | 0.917 | 0.917 | 0.846 | 13.04 |
+| Notebook `11`, lambda `0.22` | 21/24 | 0.875 | 0.958 | 0.813 | 7.46 |
+| Notebook `12`, offline selected stop | 22/24 | 0.917 | 0.917 | 0.867 | 6.875 |
+| Notebook `13`, live selected stop | 22/24 | 0.917 | 0.917 | 0.867 | 6.58 |
+
+Notebook `13` live details:
+
+- median requests: `4.5`
+- stop-before-cap rate: `1.0`
+- cap hits: `0`
+- selected stop rule fired: `20/24`
+- LLM/MLP top-1 agreement: `23/24`
+- input tokens: `410,536`
+- output tokens: `20,979`
+- runtime: about `717` seconds
+
+Efficiency interpretation:
+
+- versus notebook `08`, notebook `13` used `49.5%` fewer requests and `42.2%` fewer input tokens with the same `22/24` accuracy
+- versus notebook `11`, notebook `13` used `11.7%` fewer requests and improved accuracy by one case
+- live result matches the offline notebook `12` accuracy and slightly improves mean requests (`6.58` vs `6.875`)
+
+Final-head result:
+
+- agreement hybrid, conservative hybrid, LLM final, and MLP final all reached `22/24`
+- MLP final had better top-5 (`0.958`) than the other heads (`0.917`)
+- final arbitration is not the bottleneck in this run
+
+Live errors:
+
+| Case | True pathology | Prediction | Requests | Stop reason |
+|---|---|---|---:|---|
+| `test:81691` | `Croup` | `Chagas` | 23 | selected MLP stop |
+| `test:62878` | `Pericarditis` | `Anemia` | 16 | agent stop |
+
+Current interpretation:
+
+- this is the strongest evidence-efficiency result so far
+- the MLP stop signal is now confirmed both offline and live
+- the next bottleneck is not whether to stop, but how to avoid bad evidence trajectories for hard diseases like `Croup` and `Pericarditis`
+- next possible experiment is either a larger 49-case live confirmation or targeted hard-case policy work before scaling
+
+## 44. Evaluation Scale Policy Going Forward
+
+Use the 24-case balanced slice for method development and candidate selection, not for final statistical claims.
+
+Reason:
+
+- on 24 cases, one case changes accuracy by `4.17` percentage points, so accuracy differences are coarse and sometimes visually confusing
+- 24 cases are still useful for comparing request efficiency, stop behavior, token usage, hard-case traces, and whether a new policy is obviously worse
+- repeated 49-case live runs are more expensive, so they should be reserved for confirmation after a method is frozen
+
+Current policy:
+
+- develop v2-style ideas on the same 24-case slice first
+- promote only if the new method preserves about `22/24` accuracy while reducing requests, improves hard-case traces, or clearly improves ranking quality
+- use 49 cases near the end as a broader confirmation run, ideally after freezing the selected method and avoiding further prompt/policy tuning
+
+## 45. Notebook 14 Hybrid V2 Candidate: MLP-Discriminative Shortlist
+
+Implemented a new candidate notebook:
+
+- `notebooks/14_hybrid_v2_mlp_discriminative_shortlist.ipynb`
+
+Purpose:
+
+- keep notebook `13`'s proven hybrid v1 stop policy and final-head setup
+- change only the question-selection layer
+- test whether MLP-guided evidence shortlisting can preserve v1 accuracy while reducing mean requests or improving hard-case trajectories
+
+Key method change:
+
+```text
+current ledger-visible evidence
+  -> partial-evidence MLP top competing diagnoses
+  -> score legal unrevealed DDXPlus root evidence fields
+  -> shortlist fields with high diagnostic separation and MLP entropy reduction
+  -> LLM chooses from that shortlist
+  -> notebook 12 selected MLP stop rule decides when to stop
+```
+
+V2 shortlisting score:
+
+```text
+score = penalty * (
+  0.35 * mlp_pair_gap
+  + 0.25 * top1_vs_rest_gap
+  + 0.25 * entropy_gain
+  + 0.10 * split_balance
+  + 0.05 * disagreement_gap
+)
+```
+
+Where:
+
+- `mlp_pair_gap` separates the MLP top competing diagnoses using train/validate-derived pathology evidence rates
+- `top1_vs_rest_gap` separates the MLP top diagnosis from the remaining top competitors
+- `entropy_gain` estimates how much the MLP's uncertainty would drop under counterfactual reveal states for that evidence field
+- `split_balance` favors questions that plausibly divide the competing diagnoses rather than being almost always present/absent
+- `disagreement_gap` boosts fields that separate the deterministic anchor from the MLP top diagnosis when they disagree
+- `penalty` preserves v1's generic/global/child-action penalties
+
+Fairness rule:
+
+- no hidden test labels are used
+- no full-evidence predictions are used
+- no unrevealed test evidence is used
+- aggregate evidence rates are allowed because they are derived from non-test policy statistics, not from the current case label
+
+Default notebook state:
+
+- `RUN_LIVE_API = False`
+- `ALLOW_DRY_RUN_BENCHMARK = False`
+- `SEQUENTIAL_MAX_CASES = 24`
+- fixed LLM model: `gpt-4.1-mini`
+- fixed API determinism: `temperature = 0.0`, `top_p = 1.0`
+
+Live artifact target:
+
+- `artifacts/sequential_hybrid_mlp_feedback/hybrid_v2_mlp_discriminative_shortlist_24case_v1/`
+
+Dry-run smoke validation completed without live API calls:
+
+- smoke artifact: `artifacts/sequential_hybrid_mlp_feedback/hybrid_v2_mlp_discriminative_shortlist_dryrun_smoke_v1/`
+- 2 dry-run cases executed
+- predictions, traces, raw response logs, metrics, v1-v2 paired comparison, promotion decision, shortlist component diagnostics, request-frequency tables, and figures were written
+- code-cell static parse passed
+
+Promotion rule:
+
+- promote v2 to a 49-case confirmation only if it preserves about `22/24` accuracy while lowering requests, reaches `23/24` with reasonable requests, or preserves `22/24` while improving top-5/hard-case behavior
+- if v2 fails those criteria, notebook `13` remains the frozen proposed method
+
+Live v2 result completed:
+
+| System | Correct | Accuracy | Top-5 | Macro-F1 | Mean requests | Input tokens |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `13` hybrid v1 selected stop | 22/24 | 0.917 | 0.917 | 0.867 | 6.58 | 410,536 |
+| Notebook `14` hybrid v2 MLP shortlist | 21/24 | 0.875 | 0.958 | 0.840 | 7.38 | 509,158 |
+
+V2 promotion decision:
+
+- `reject_keep_notebook13_v1`
+
+Paired v1-v2 outcomes:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 20 |
+| V1 only correct | 2 |
+| V2 only correct | 1 |
+| Both wrong | 1 |
+
+Case-level interpretation:
+
+- v2 fixed `test:62878` / `Pericarditis`, but only after hitting the full 24-request cap
+- v2 still failed `test:81691` / `Croup`, despite briefly considering Croup early and spending 23 requests
+- v2 introduced new failures on `Chagas` and `Influenza`
+- v2 improved top-5 from `0.917` to `0.958`, but lost top-1 accuracy and used more evidence
+
+Scientific interpretation:
+
+- v2 is an informative negative result, not a project failure
+- MLP-driven shortlisting mechanically works and produces discriminative questions, but direct MLP control of the shortlist can amplify unstable/wrong MLP competitors
+- the strongest current claim remains notebook `13`: MLP as an online stopping signal is useful; MLP as direct question-selection controller is not yet proven
+
+New report:
+
+- `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
+
+## 46. Notebook 13 Final 49-Case Confirmation
+
+After rejecting notebook `14` as the main method, notebook `13` was frozen as the proposed hybrid v1 system and rerun on a broader 49-case balanced live slice.
+
+Notebook:
+
+- `notebooks/13_live_selected_hybrid_stopping_confirmation.ipynb`
+
+Artifact:
+
+- `artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1/`
+
+Fixed settings:
+
+- LLM: `gpt-4.1-mini`
+- temperature: `0.0`
+- top-p: `1.0`
+- request cap: `24`
+- cases: `49`
+- stop rule: notebook `12` selected MLP-guided stop rule
+
+Final 49-case result:
+
+| Metric | Value |
+|---|---:|
+| Agreement-hybrid accuracy | 43/49 = 0.878 |
+| LLM-final accuracy | 43/49 = 0.878 |
+| MLP-final accuracy | 41/49 = 0.837 |
+| Conservative-hybrid accuracy | 43/49 = 0.878 |
+| Top-3 accuracy | 0.918 |
+| Top-5 accuracy | 0.939 |
+| Macro-F1 | 0.845 |
+| Mean requests | 6.59 |
+| Median requests | 5.0 |
+| Mean visible roots including initial | 7.59 |
+| Stop-before-cap rate | 0.980 |
+| Cap hits | 1 |
+| Selected stop-rule fired | 36/49 = 0.735 |
+| LLM/MLP agreement | 46/49 = 0.939 |
+| Input tokens | 823,478 |
+| Output tokens | 42,721 |
+
+Comparison to 24-case pilot:
+
+| Run | Accuracy | Top-5 | Mean requests |
+|---|---:|---:|---:|
+| Notebook `13`, 24 cases | 0.917 | 0.917 | 6.58 |
+| Notebook `13`, 49 cases | 0.878 | 0.939 | 6.59 |
+
+Interpretation:
+
+- the 24-case result was optimistic but not misleading about evidence efficiency
+- top-1 accuracy dropped on the broader slice, but top-5 improved and mean requests stayed almost identical
+- the final claim should use the 49-case result as the main proposed-method result
+- notebook `13` remains the strongest current method
+- notebook `14` remains a negative ablation showing that direct MLP-driven question shortlisting is not automatically better
+
+49-case error cases:
+
+| Case | True pathology | Prediction | Requests | Stop reason |
+|---|---|---|---:|---|
+| `test:38475` | `Acute COPD exacerbation / infection` | `Myocarditis` | 24 | max requests reached |
+| `test:111176` | `Acute rhinosinusitis` | `Chronic rhinosinusitis` | 8 | selected MLP stop |
+| `test:81691` | `Croup` | `Anemia` | 19 | agent stop |
+| `test:8666` | `Influenza` | `HIV (initial infection)` | 3 | agent stop |
+| `test:62878` | `Pericarditis` | `Anemia` | 15 | agent stop |
+| `test:125508` | `Unstable angina` | `Anemia` | 2 | agent stop |
+
+Final project framing:
+
+- lower bound: initial-evidence MLP, `0.378` full-test accuracy
+- ceiling: full-evidence MLP, `0.996` full-test accuracy
+- sequential baseline: notebook `08`, `22/24` at `13.04` requests on the 24-case slice
+- proposed method: notebook `13`, `43/49` at `6.59` requests on the final confirmation
+- negative ablation: notebook `14`, `21/24` at `7.38` requests, not promoted
+
+Final report added:
+
+- `reports/final_report.md`
+
+Report organization added:
+
+- current final reports remain in `reports/`
+- baseline reports moved under `reports/baselines/`
+- hybrid/sequential policy reports moved under `reports/hybrid/`
+- architecture and ledger reports moved under `reports/architecture/`
+- planning/claims reports moved under `reports/project/`
+- index added at `reports/README.md`
