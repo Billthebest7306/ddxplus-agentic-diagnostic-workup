@@ -1623,3 +1623,18 @@ Candidate-pool oracle:
 | All exploded graph/Bayes/MLP/ranked candidates | 49/49 |
 
 Notebook `29` is not promoted because it does not reach `47/49`. It does, however, sharpen the next research target: candidate availability is strong enough; calibrated selection among top-1 and rank-2/rank-3 confounders is the bottleneck.
+
+Post-run deep analysis after the rerun sharpened this further:
+
+| Candidate signal family | Oracle correct |
+|---|---:|
+| Source top-1 only | 44/49 |
+| Ranked differential top-2 | 47/49 |
+| Ranked differential top-3 | 48/49 |
+| Graph top-1 | 45/49 |
+| Graph top-2 | 49/49 |
+| Bayes top-1 | 45/49 |
+| Bayes top-2 | 49/49 |
+| MLP top-3 | 48/49 |
+
+The remaining misses are not missing from the mathematical ledger: Acute rhinosinusitis, Bronchitis, and Influenza are all rank 2 under the LLM differential, graph, Bayes, and usually MLP. Panic attack is not in the LLM ranked differential, but graph and Bayes still place it rank 2. The next useful controller is therefore a pairwise or abstaining confounder adjudicator, not another broad candidate-pool expansion.

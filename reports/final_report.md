@@ -434,6 +434,8 @@ The live Notebook `28` result was `44/49`, with base at `42/49`, two wins, zero 
 
 Notebook `29` implemented that next offline final-head step. It keeps Notebook `28`'s live traces frozen, explodes base/branch ranked differentials plus graph/Bayes/MLP top candidates, and scores them with a train/validate-calibrated L2 logistic resolver. The selected fixed policy reaches `45/49`, with one win and zero regressions versus Notebook `28`. It fixes Croup by promoting the `graph_bayes_scout` rank-3 differential candidate. The full exploded candidate pool contains the true label in all `49/49`, so the next problem is calibrated top-1-vs-rank-2 selection, not wider candidate generation.
 
+The rerun/post-hoc analysis makes that even clearer: graph top-2 and Bayes top-2 each contain the true label in all `49/49` cases, while graph top-1 and Bayes top-1 reach only `45/49`. The ledger is mathematically surfacing the right neighborhood, but it is overconfident in the wrong nearest neighbor.
+
 ## Error Analysis
 
 Notebook `13` originally had six misses on the 49-case confirmation. Notebook `23` fixes four of them, so the remaining final-head errors after graph/Bayes rescue are:
@@ -589,7 +591,7 @@ Notebook `27` is that prospective live test. It improved its own live base from 
 
 ### Slide 19. Error Analysis
 
-Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `27` shows that confidence/contradiction triggers miss consensus wrong-answer cases. Notebook `28` shows that some of those misses are already present as rank-2/rank-3 differential entries, but were not scored as final candidates. Notebook `29` scores those candidates and recovers Croup, but the learned resolver still trusts wrong graph/Bayes/MLP rank-1 consensus in acute-vs-chronic rhinosinusitis, Bronchitis-vs-URTI, Influenza-vs-HIV-initial-infection, and Panic-attack-vs-Myocarditis confusions.
+Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `27` shows that confidence/contradiction triggers miss consensus wrong-answer cases. Notebook `28` shows that some of those misses are already present as rank-2/rank-3 differential entries, but were not scored as final candidates. Notebook `29` scores those candidates and recovers Croup, but the learned resolver still trusts wrong graph/Bayes/MLP rank-1 consensus in acute-vs-chronic rhinosinusitis, Bronchitis-vs-URTI, Influenza-vs-HIV-initial-infection, and Panic-attack-vs-Myocarditis confusions. In the first three, the true diagnosis is rank 2 in the LLM differential, graph, Bayes, and MLP; Panic attack is graph/Bayes rank 2 but absent from the LLM differential.
 
 ### Slide 20. Claims And Limitations
 

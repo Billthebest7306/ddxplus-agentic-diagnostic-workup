@@ -534,6 +534,7 @@ For the next clean experiment:
 - treat notebook `27` as a completed partial live confirmation of targeted branching, not a promoted result: branches recovered Myocarditis and Panic attack, but the selected raw-Bayes-only resolver regressed COPD and reached only `43/49`
 - treat notebook `28` as a completed learned-gate branching live test, not a promoted result: it improved its own base from `42/49` to `44/49` with zero regressions, but the scored candidate pool itself had only a `44/49` oracle
 - treat notebook `29` as a completed offline ranked-differential adjudicator, not a promoted result: it improves Notebook `28` to `45/49` with zero regressions, while showing that ranked top-2/top-3 candidate availability has a `47/49` to `48/49` oracle
+- the Notebook `29` rerun/post-hoc analysis sharpens this: graph top-2 and Bayes top-2 each have `49/49` oracle coverage, while graph top-1 and Bayes top-1 reach only `45/49`
 - the next clean experiment should focus on top-1-vs-rank-2 confounder adjudication rather than candidate-pool expansion alone
 - use notebook `25` if collecting more live base trajectories; it runs rescue-disabled base replicates for the branching/divergence lab
 - still present notebook `13` as the live evidence-acquisition backbone; present Notebook `23` as an offline enhancement candidate rather than a live-confirmed replacement

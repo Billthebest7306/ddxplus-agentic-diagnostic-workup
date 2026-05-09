@@ -93,6 +93,54 @@ The candidate-pool ceiling is now very high:
 
 This is the key finding: after Notebook `29`, the candidate pool is no longer the obvious bottleneck. The hard problem is calibrated selection among close confounders.
 
+## Post-Run Deep Analysis
+
+After the user reran Notebook `29`, an additional post-hoc analysis was added under the same artifact root:
+
+- `posthoc_candidate_pool_signal_oracle.csv`
+- `posthoc_case_true_candidate_score_gaps.csv`
+- `posthoc_remaining_miss_score_gaps.csv`
+- `posthoc_ranked_true_candidate_opportunities.csv`
+- `posthoc_notebook29_deep_analysis.json`
+- `figures/posthoc_candidate_pool_signal_oracle.png`
+- `figures/posthoc_remaining_miss_score_gaps.png`
+
+The deeper result is stronger than the first oracle table:
+
+| Candidate signal family | Oracle correct |
+|---|---:|
+| Source top-1 only | 44/49 |
+| Ranked differential top-2 | 47/49 |
+| Ranked differential top-3 | 48/49 |
+| Graph top-1 | 45/49 |
+| Graph top-2 | 49/49 |
+| Graph top-3 | 49/49 |
+| Bayes top-1 | 45/49 |
+| Bayes top-2 | 49/49 |
+| Bayes top-3 | 49/49 |
+| MLP top-3 | 48/49 |
+
+This changes the diagnosis of the bottleneck. Graph and Bayes are not missing the right diagnosis; they are placing it at rank 2 in the hard cases while assigning too much final confidence to the wrong rank-1 neighbor.
+
+Remaining misses after Notebook `29`:
+
+| Case | True pathology | Selected prediction | Selected score - true score | True diff rank | True graph rank | True Bayes rank | True MLP rank |
+|---|---|---|---:|---:|---:|---:|---:|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis | 0.209 | 2 | 2 | 2 | 3 |
+| `test:11655` | Bronchitis | URTI | 0.105 | 2 | 2 | 2 | 2 |
+| `test:76022` | Panic attack | Myocarditis | 0.082 | not ranked | 2 | 2 | 11 |
+| `test:8666` | Influenza | HIV initial infection | 0.230 | 2 | 2 | 2 | 2 |
+
+Three of the four misses have the same structure: the LLM differential, graph ledger, Bayes posterior, and MLP all put the true diagnosis at rank 2 or rank 3, but the rank-1 confounder is scored enough higher that a global candidate scorer will not override it. Panic attack is slightly different: it is not in the LLM differential, but graph and Bayes still place it rank 2.
+
+The most useful next control question is therefore narrower than "can we add more candidates?":
+
+```text
+Can a pairwise or abstaining confounder adjudicator decide when graph/Bayes/MLP rank-2
+should challenge a rank-1 consensus anchor, using train/validate-derived confounder pairs
+and no 49-case label tuning?
+```
+
 ## Remaining Misses
 
 | Case | True pathology | Notebook `29` prediction | Observation |
@@ -124,4 +172,9 @@ Required artifacts were written:
 - `hard_case_listwise_audits.json`
 - `selected_listwise_policy.json`
 - `hard_case_rank_movement.csv`
+- `posthoc_candidate_pool_signal_oracle.csv`
+- `posthoc_case_true_candidate_score_gaps.csv`
+- `posthoc_remaining_miss_score_gaps.csv`
+- `posthoc_ranked_true_candidate_opportunities.csv`
+- `posthoc_notebook29_deep_analysis.json`
 - figures under `figures/`

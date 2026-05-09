@@ -11,3 +11,10 @@ candidate_pool_oracle_summary.csv,True,475
 hard_case_listwise_audits.json,True,23276
 selected_listwise_policy.json,True,2052
 hard_case_rank_movement.csv,True,754
+posthoc_candidate_pool_signal_oracle.csv,True,1276
+posthoc_case_true_candidate_score_gaps.csv,True,13157
+posthoc_remaining_miss_score_gaps.csv,True,1554
+posthoc_ranked_true_candidate_opportunities.csv,True,5381
+posthoc_notebook29_deep_analysis.json,True,2704
+figures/posthoc_candidate_pool_signal_oracle.png,True,98579
+figures/posthoc_remaining_miss_score_gaps.png,True,84329

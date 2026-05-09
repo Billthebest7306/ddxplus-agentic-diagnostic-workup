@@ -4764,3 +4764,62 @@ Execution checks:
 - static parse of all Notebook `29` code cells passed
 - Notebook `29` executed top-to-bottom through a local cell runner because `nbconvert`/`nbclient` are not installed
 - required artifacts and figures were written
+
+## 73. Notebook 29 Post-Run Deep Analysis
+
+After the user reran Notebook `29`, the latest artifacts were inspected again. The rerun refreshed Notebook outputs and `resolved_run_config.json`, but the selected metrics remained stable:
+
+| Metric | Value |
+|---|---:|
+| Notebook `29` selected correct | 45/49 |
+| Wins vs Notebook `28` | 1 |
+| Regressions vs Notebook `28` | 0 |
+| Changed predictions | 1 |
+
+Additional post-hoc artifacts were generated under:
+
+- `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
+
+New post-hoc files:
+
+- `posthoc_candidate_pool_signal_oracle.csv`
+- `posthoc_case_true_candidate_score_gaps.csv`
+- `posthoc_remaining_miss_score_gaps.csv`
+- `posthoc_ranked_true_candidate_opportunities.csv`
+- `posthoc_notebook29_deep_analysis.json`
+- `figures/posthoc_candidate_pool_signal_oracle.png`
+- `figures/posthoc_remaining_miss_score_gaps.png`
+
+The deeper candidate-availability result:
+
+| Candidate signal family | Oracle correct |
+|---|---:|
+| Source top-1 only | 44/49 |
+| Ranked differential top-2 | 47/49 |
+| Ranked differential top-3 | 48/49 |
+| Graph top-1 | 45/49 |
+| Graph top-2 | 49/49 |
+| Graph top-3 | 49/49 |
+| Bayes top-1 | 45/49 |
+| Bayes top-2 | 49/49 |
+| Bayes top-3 | 49/49 |
+| MLP top-3 | 48/49 |
+
+This is the key analysis update: graph and Bayes are not failing to surface the right diagnosis. In the remaining hard cases, the true diagnosis is usually graph rank `2` and Bayes rank `2`, but the selected scorer remains over-loyal to the wrong rank-1 anchor.
+
+Remaining misses after Notebook `29`:
+
+| Case | True pathology | Selected prediction | Selected score - true score | True differential rank | True graph rank | True Bayes rank | True MLP rank |
+|---|---|---|---:|---:|---:|---:|---:|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis | 0.209 | 2 | 2 | 2 | 3 |
+| `test:11655` | Bronchitis | URTI | 0.105 | 2 | 2 | 2 | 2 |
+| `test:76022` | Panic attack | Myocarditis | 0.082 | not ranked | 2 | 2 | 11 |
+| `test:8666` | Influenza | HIV initial infection | 0.230 | 2 | 2 | 2 | 2 |
+
+Interpretation:
+
+- Candidate expansion has now mostly done its job.
+- Top-1 graph/Bayes is not enough, because it reaches only `45/49`.
+- Top-2 graph/Bayes contains the target answer in all cases, so the mathematical ledger is surfacing the right neighborhood.
+- The next credible model should be pairwise or abstaining, focused on top-1-vs-rank-2 confounder resolution.
+- A global multicandidate logistic scorer is too blunt for near-neighbor disease pairs where all heads prefer the same wrong anchor.

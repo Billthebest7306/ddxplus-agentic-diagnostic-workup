@@ -1,0 +1,17 @@
+candidate_pool,correct_count,num_cases,accuracy,missing_cases
+source_top1_only,44,49,0.8979591836734694,"[""test:111176"", ""test:11655"", ""test:76022"", ""test:81691"", ""test:8666""]"
+ranked_top1_only,44,49,0.8979591836734694,"[""test:111176"", ""test:11655"", ""test:76022"", ""test:81691"", ""test:8666""]"
+ranked_top2_only,47,49,0.9591836734693877,"[""test:76022"", ""test:81691""]"
+ranked_top3_only,48,49,0.9795918367346939,"[""test:76022""]"
+ranked_top5_only,48,49,0.9795918367346939,"[""test:76022""]"
+graph_top1_only,45,49,0.9183673469387755,"[""test:111176"", ""test:11655"", ""test:76022"", ""test:8666""]"
+graph_top2_only,49,49,1.0,[]
+graph_top3_only,49,49,1.0,[]
+bayes_top1_only,45,49,0.9183673469387755,"[""test:111176"", ""test:11655"", ""test:76022"", ""test:8666""]"
+bayes_top2_only,49,49,1.0,[]
+bayes_top3_only,49,49,1.0,[]
+mlp_top1_only,40,49,0.8163265306122449,"[""test:111176"", ""test:11655"", ""test:19160"", ""test:35039"", ""test:52755"", ""test:62878"", ""test:76022"", ""test:81691"", ""test:8666""]"
+mlp_top2_only,45,49,0.9183673469387755,"[""test:111176"", ""test:62878"", ""test:76022"", ""test:81691""]"
+mlp_top3_only,48,49,0.9795918367346939,"[""test:76022""]"
+ranked_top3_or_graph_bayes_top3,49,49,1.0,[]
+all_exploded_candidates,49,49,1.0,[]

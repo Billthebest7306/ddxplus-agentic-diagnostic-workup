@@ -1,0 +1,75 @@
+{
+  "selected_policy_correct": "45/49",
+  "wins_vs_notebook28": 1,
+  "regressions_vs_notebook28": 0,
+  "oracle_findings": {
+    "source_top1_only": "44/49",
+    "ranked_top1_only": "44/49",
+    "ranked_top2_only": "47/49",
+    "ranked_top3_only": "48/49",
+    "ranked_top5_only": "48/49",
+    "graph_top1_only": "45/49",
+    "graph_top2_only": "49/49",
+    "graph_top3_only": "49/49",
+    "bayes_top1_only": "45/49",
+    "bayes_top2_only": "49/49",
+    "bayes_top3_only": "49/49",
+    "mlp_top1_only": "40/49",
+    "mlp_top2_only": "45/49",
+    "mlp_top3_only": "48/49",
+    "ranked_top3_or_graph_bayes_top3": "49/49",
+    "all_exploded_candidates": "49/49"
+  },
+  "remaining_misses": [
+    {
+      "case_id": "test:111176",
+      "true_pathology": "Acute rhinosinusitis",
+      "selected_prediction": "Chronic rhinosinusitis",
+      "selected_minus_true_score": 0.2085731782332665,
+      "best_true_differential_rank": 2.0,
+      "best_true_graph_rank": 2.0,
+      "best_true_bayes_rank": 2.0,
+      "best_true_mlp_rank": 3.0
+    },
+    {
+      "case_id": "test:11655",
+      "true_pathology": "Bronchitis",
+      "selected_prediction": "URTI",
+      "selected_minus_true_score": 0.1051770351933442,
+      "best_true_differential_rank": 2.0,
+      "best_true_graph_rank": 2.0,
+      "best_true_bayes_rank": 2.0,
+      "best_true_mlp_rank": 2.0
+    },
+    {
+      "case_id": "test:76022",
+      "true_pathology": "Panic attack",
+      "selected_prediction": "Myocarditis",
+      "selected_minus_true_score": 0.08249535446420642,
+      "best_true_differential_rank": 99.0,
+      "best_true_graph_rank": 2.0,
+      "best_true_bayes_rank": 2.0,
+      "best_true_mlp_rank": 11.0
+    },
+    {
+      "case_id": "test:8666",
+      "true_pathology": "Influenza",
+      "selected_prediction": "HIV (initial infection)",
+      "selected_minus_true_score": 0.23047610578214084,
+      "best_true_differential_rank": 2.0,
+      "best_true_graph_rank": 2.0,
+      "best_true_bayes_rank": 2.0,
+      "best_true_mlp_rank": 2.0
+    }
+  ],
+  "interpretation": "Graph top-3 and Bayes top-3 each contain the true label for every case, but the selected scorer remains over-loyal to rank-1 consensus. The next model should be pairwise or abstaining over top-1 versus close ranked/graph/Bayes alternatives, not another broad candidate expansion.",
+  "generated_files": [
+    "posthoc_candidate_pool_signal_oracle.csv",
+    "posthoc_case_true_candidate_score_gaps.csv",
+    "posthoc_remaining_miss_score_gaps.csv",
+    "posthoc_ranked_true_candidate_opportunities.csv",
+    "posthoc_notebook29_deep_analysis.json",
+    "figures/posthoc_candidate_pool_signal_oracle.png",
+    "figures/posthoc_remaining_miss_score_gaps.png"
+  ]
+}
