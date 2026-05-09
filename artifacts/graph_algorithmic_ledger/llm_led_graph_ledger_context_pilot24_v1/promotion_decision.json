@@ -1,0 +1,10 @@
+{
+  "run_name": "llm_led_graph_ledger_context_pilot24_v1",
+  "run_scope": "pilot24",
+  "dry_run_only": false,
+  "promote_to_final49": false,
+  "promote_over_notebook13": false,
+  "reason": "Does not meet pilot24 promotion rule; keep Notebook 13 frozen.",
+  "correct_count": 20,
+  "mean_requests": 6.125
+}

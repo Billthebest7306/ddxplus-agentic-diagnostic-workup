@@ -1,0 +1,38 @@
+{
+  "num_cases": 2,
+  "accuracy": 1.0,
+  "num_correct": 2,
+  "top3_accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "macro_f1": 1.0,
+  "base_accuracy": 1.0,
+  "base_num_correct": 2,
+  "wins_vs_base": 0,
+  "regressions_vs_base": 0,
+  "changed_predictions": 0,
+  "branch_trigger_rate": 0.0,
+  "branches_spawned_total": 0,
+  "mean_branches_spawned": 0.0,
+  "mean_selected_requests": 6.0,
+  "mean_base_requests": 6.0,
+  "mean_total_branch_requests": 6.0,
+  "total_api_calls": 14,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "selection_source_distribution": {
+    "base": 2
+  },
+  "stop_reason_distribution": {
+    "selected_mlp_stop": 2
+  },
+  "run_name": "mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1",
+  "runtime_seconds": 0.13776111602783203,
+  "run_live_api": false,
+  "allow_dry_run_benchmark": true,
+  "branch_trigger_name": "branch_trigger_mlp_v1",
+  "branch_trigger_threshold": 0.39999999999999997,
+  "branch_budget": 3,
+  "branch_judge_name": "calibrated_graph_bayes_mlp_resolver_v1",
+  "promotion_decision": "pending_full_49case_run"
+}

@@ -1,0 +1,8 @@
+{
+  "run_name": "llm_led_graph_ledger_context_pilot24_dryrun_smoke_v1",
+  "run_scope": "pilot24",
+  "dry_run_only": true,
+  "promote_to_final49": false,
+  "promote_over_notebook13": false,
+  "reason": "Dry-run smoke artifacts are not promotion evidence."
+}

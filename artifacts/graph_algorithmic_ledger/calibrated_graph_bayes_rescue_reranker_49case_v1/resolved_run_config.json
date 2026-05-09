@@ -1,0 +1,13 @@
+{
+  "notebook": "23_calibrated_graph_bayes_rescue_reranker.ipynb",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_49case_v1",
+  "seed": 2919,
+  "synthetic_train_nrows_loaded": 80000,
+  "synthetic_validate_nrows_loaded": 40000,
+  "synthetic_train_states": 8000,
+  "synthetic_validate_states": 4000,
+  "max_rescue_requests": 3,
+  "total_request_cap": 24,
+  "reranker_tie_graph_eps": 0.02,
+  "api_usage": "none"
+}

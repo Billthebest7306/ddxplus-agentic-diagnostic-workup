@@ -1,0 +1,50 @@
+case_id,true_pathology,notebook13_predicted_pathology,notebook22_predicted_pathology,rescue_predicted_pathology,notebook13_correct,notebook22_correct,rescue_correct,decision_source,num_requests_notebook13,extra_requests,num_requests_rescue,extra_requested_roots,stop_reason,win_loss_vs_notebook13,improvement_vs_notebook13,regression_vs_notebook13
+test:38475,Acute COPD exacerbation / infection,Myocarditis,Myocarditis,Acute COPD exacerbation / infection,False,False,True,prior_recovery_certificate,24,0,24,[],max_requests_reached,rescue_only_correct,True,False
+test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False
+test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,True,True,rescue_abstained,1,3,4,"[""E_194"", ""E_66"", ""E_190""]",agent_stop,both_correct,False,False
+test:33118,Acute otitis media,Acute otitis media,Acute otitis media,Acute otitis media,True,True,True,notebook13_reference,7,0,7,[],selected_mlp_stop,both_correct,False,False
+test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,True,True,notebook13_reference,4,0,4,[],selected_mlp_stop,both_correct,False,False
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,False,False,notebook13_reference,8,0,8,[],selected_mlp_stop,both_wrong,False,False
+test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,True,True,notebook13_reference,18,0,18,[],selected_mlp_stop,both_correct,False,False
+test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,True,True,notebook13_reference,3,0,3,[],selected_mlp_stop,both_correct,False,False
+test:18744,Anemia,Anemia,Anemia,Anemia,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False
+test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:11198,Boerhaave,Boerhaave,Boerhaave,Boerhaave,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,True,True,rescue_abstained,0,3,3,"[""E_181"", ""E_66"", ""E_4""]",agent_stop,both_correct,False,False
+test:11655,Bronchitis,Bronchitis,Bronchitis,Bronchitis,True,True,True,notebook13_reference,10,0,10,[],selected_mlp_stop,both_correct,False,False
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:51421,Chagas,Chagas,Chagas,Chagas,True,True,True,notebook13_reference,23,0,23,[],selected_mlp_stop,both_correct,False,False
+test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,True,notebook13_reference,7,0,7,[],selected_mlp_stop,both_correct,False,False
+test:46152,Cluster headache,Cluster headache,Cluster headache,Cluster headache,True,True,True,notebook13_reference,6,0,6,[],selected_mlp_stop,both_correct,False,False
+test:81691,Croup,Anemia,Croup,Croup,False,True,True,conservative_graph_critic,19,0,19,[],agent_stop,rescue_only_correct,True,False
+test:77908,Ebola,Ebola,Ebola,Ebola,True,True,True,notebook13_reference,6,0,6,[],selected_mlp_stop,both_correct,False,False
+test:91516,Epiglottitis,Epiglottitis,Epiglottitis,Epiglottitis,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:96956,GERD,GERD,GERD,GERD,True,True,True,notebook13_reference,5,0,5,[],selected_mlp_stop,both_correct,False,False
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,True,notebook13_reference,3,0,3,[],selected_mlp_stop,both_correct,False,False
+test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),HIV (initial infection),True,True,True,notebook13_reference,3,0,3,[],selected_mlp_stop,both_correct,False,False
+test:8666,Influenza,HIV (initial infection),HIV (initial infection),Influenza,False,False,True,graph_bayes_rescue_rerank,3,3,6,"[""E_79"", ""E_77"", ""E_66""]",agent_stop,rescue_only_correct,True,False
+test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,True,True,rescue_abstained,1,3,4,"[""E_53"", ""E_220"", ""E_166""]",agent_stop,both_correct,False,False
+test:133888,Larygospasm,Larygospasm,Larygospasm,Larygospasm,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False
+test:89477,Localized edema,Localized edema,Localized edema,Localized edema,True,True,True,notebook13_reference,2,0,2,[],selected_mlp_stop,both_correct,False,False
+test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,True,True,notebook13_reference,2,0,2,[],selected_mlp_stop,both_correct,False,False
+test:35039,Myocarditis,Myocarditis,Myocarditis,Myocarditis,True,True,True,notebook13_reference,15,0,15,[],selected_mlp_stop,both_correct,False,False
+test:51611,PSVT,PSVT,PSVT,PSVT,True,True,True,notebook13_reference,13,0,13,[],agent_stop,both_correct,False,False
+test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,notebook13_reference,2,0,2,[],selected_mlp_stop,both_correct,False,False
+test:76022,Panic attack,Panic attack,Panic attack,Panic attack,True,True,True,notebook13_reference,15,0,15,[],selected_mlp_stop,both_correct,False,False
+test:62878,Pericarditis,Anemia,Anemia,Anemia,False,False,False,notebook13_reference,15,0,15,[],agent_stop,both_wrong,False,False
+test:95923,Pneumonia,Pneumonia,Pneumonia,Pneumonia,True,True,True,notebook13_reference,9,0,9,[],selected_mlp_stop,both_correct,False,False
+test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,True,notebook13_reference,12,0,12,[],selected_mlp_stop,both_correct,False,False
+test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,True,True,notebook13_reference,3,0,3,[],selected_mlp_stop,both_correct,False,False
+test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,True,True,notebook13_reference,6,0,6,[],selected_mlp_stop,both_correct,False,False
+test:52755,SLE,SLE,SLE,SLE,True,True,True,notebook13_reference,7,0,7,[],agent_stop,both_correct,False,False
+test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,True,True,notebook13_reference,12,0,12,[],agent_stop,both_correct,False,False
+test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,True,True,notebook13_reference,4,0,4,[],selected_mlp_stop,both_correct,False,False
+test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,True,notebook13_reference,3,0,3,[],selected_mlp_stop,both_correct,False,False
+test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False
+test:16097,Stable angina,Stable angina,Stable angina,Stable angina,True,True,True,notebook13_reference,11,0,11,[],agent_stop,both_correct,False,False
+test:107472,Tuberculosis,Tuberculosis,Tuberculosis,Tuberculosis,True,True,True,notebook13_reference,6,0,6,[],selected_mlp_stop,both_correct,False,False
+test:13402,URTI,URTI,URTI,URTI,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False
+test:125508,Unstable angina,Anemia,Anemia,Unstable angina,False,False,True,graph_bayes_rescue_rerank,2,3,5,"[""E_53"", ""E_105"", ""E_108""]",agent_stop,rescue_only_correct,True,False
+test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,True,True,rescue_abstained,2,3,5,"[""E_50"", ""E_222"", ""E_144""]",agent_stop,both_correct,False,False
+test:19424,Whooping cough,Whooping cough,Whooping cough,Whooping cough,True,True,True,notebook13_reference,1,0,1,[],selected_mlp_stop,both_correct,False,False

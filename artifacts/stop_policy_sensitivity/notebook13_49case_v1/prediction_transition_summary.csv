@@ -1,0 +1,148 @@
+case_id,true_pathology,head,num_states,first_prediction,last_prediction,first_correct,last_correct,ever_correct,first_correct_turn,wrong_to_correct,stays_correct,stays_wrong,correct_to_wrong
+test:100664,Myasthenia gravis,llm,3,Epiglottitis,Myasthenia gravis,False,True,True,2.0,1.0,1.0,0.0,0.0
+test:104857,Acute dystonic reactions,llm,2,Acute dystonic reactions,Acute dystonic reactions,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:105129,Pulmonary neoplasm,llm,7,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,True,True,4.0,2.0,0.0,3.0,1.0
+test:106010,HIV (initial infection),llm,4,Pulmonary neoplasm,HIV (initial infection),False,True,True,2.0,1.0,2.0,0.0,0.0
+test:107472,Tuberculosis,llm,7,Bronchiolitis,Tuberculosis,False,True,True,3.0,1.0,4.0,1.0,0.0
+test:111176,Acute rhinosinusitis,llm,9,Tuberculosis,Chronic rhinosinusitis,False,False,False,,0.0,0.0,8.0,0.0
+test:11198,Boerhaave,llm,6,Viral pharyngitis,Boerhaave,False,True,True,4.0,1.0,2.0,2.0,0.0
+test:112233,Bronchiectasis,llm,6,Tuberculosis,Bronchiectasis,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:11342,Atrial fibrillation,llm,6,PSVT,Atrial fibrillation,False,True,True,2.0,1.0,4.0,0.0,0.0
+test:11655,Bronchitis,llm,11,Viral pharyngitis,Bronchitis,False,True,True,9.0,1.0,2.0,7.0,0.0
+test:121319,Anaphylaxis,llm,4,HIV (initial infection),Anaphylaxis,False,True,True,3.0,1.0,1.0,1.0,0.0
+test:125508,Unstable angina,llm,3,Anemia,Anemia,False,False,False,,0.0,0.0,2.0,0.0
+test:130566,Chronic rhinosinusitis,llm,8,Tuberculosis,Chronic rhinosinusitis,False,True,True,3.0,1.0,5.0,1.0,0.0
+test:133024,Scombroid food poisoning,llm,5,HIV (initial infection),Scombroid food poisoning,False,True,True,3.0,1.0,2.0,1.0,0.0
+test:133888,Larygospasm,llm,2,Larygospasm,Larygospasm,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:13402,URTI,llm,2,URTI,URTI,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:16097,Stable angina,llm,12,Bronchiolitis,Stable angina,False,True,True,8.0,1.0,4.0,6.0,0.0
+test:18744,Anemia,llm,2,Anemia,Anemia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:19160,Possible NSTEMI / STEMI,llm,13,URTI,Possible NSTEMI / STEMI,False,True,True,3.0,2.0,8.0,1.0,1.0
+test:19424,Whooping cough,llm,2,Whooping cough,Whooping cough,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:23687,Pulmonary embolism,llm,4,Spontaneous rib fracture,Pulmonary embolism,False,True,True,4.0,1.0,0.0,2.0,0.0
+test:2801,Pancreatic neoplasm,llm,3,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:29123,Bronchospasm / acute asthma exacerbation,llm,6,Tuberculosis,Bronchospasm / acute asthma exacerbation,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:33118,Acute otitis media,llm,8,Bronchiolitis,Acute otitis media,False,True,True,6.0,2.0,0.0,4.0,1.0
+test:34242,Guillain-Barré syndrome,llm,4,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,True,1.0,1.0,1.0,0.0,1.0
+test:35039,Myocarditis,llm,16,Pericarditis,Myocarditis,False,True,True,4.0,2.0,1.0,11.0,1.0
+test:36032,Sarcoidosis,llm,13,Viral pharyngitis,Sarcoidosis,False,True,True,11.0,1.0,2.0,9.0,0.0
+test:38202,Inguinal hernia,llm,2,Inguinal hernia,Inguinal hernia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:38475,Acute COPD exacerbation / infection,llm,25,Bronchiolitis,Myocarditis,False,False,True,20.0,1.0,0.0,22.0,1.0
+test:39033,Viral pharyngitis,llm,3,Viral pharyngitis,Viral pharyngitis,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:46152,Cluster headache,llm,7,Viral pharyngitis,Cluster headache,False,True,True,2.0,2.0,2.0,1.0,1.0
+test:51421,Chagas,llm,24,Bronchiolitis,Chagas,False,True,True,6.0,2.0,4.0,16.0,1.0
+test:51611,PSVT,llm,14,Viral pharyngitis,PSVT,False,True,True,13.0,1.0,1.0,11.0,0.0
+test:52755,SLE,llm,8,HIV (initial infection),SLE,False,True,True,4.0,1.0,4.0,2.0,0.0
+test:58986,Acute laryngitis,llm,2,Acute laryngitis,Acute laryngitis,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:62878,Pericarditis,llm,16,Bronchiolitis,Anemia,False,False,False,,0.0,0.0,15.0,0.0
+test:71107,Spontaneous rib fracture,llm,2,Spontaneous rib fracture,Spontaneous rib fracture,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:749,Spontaneous pneumothorax,llm,4,Spontaneous rib fracture,Spontaneous pneumothorax,False,True,True,2.0,1.0,2.0,0.0,0.0
+test:76022,Panic attack,llm,16,PSVT,Panic attack,False,True,True,3.0,2.0,1.0,11.0,1.0
+test:77908,Ebola,llm,7,Pancreatic neoplasm,Ebola,False,True,True,5.0,1.0,2.0,3.0,0.0
+test:81691,Croup,llm,20,Bronchiolitis,Anemia,False,False,True,5.0,1.0,0.0,17.0,1.0
+test:8666,Influenza,llm,4,Bronchiolitis,HIV (initial infection),False,False,False,,0.0,0.0,3.0,0.0
+test:88250,Allergic sinusitis,llm,19,Tuberculosis,Allergic sinusitis,False,True,True,17.0,1.0,2.0,15.0,0.0
+test:89477,Localized edema,llm,3,Localized edema,Localized edema,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:90978,Bronchiolitis,llm,1,Bronchiolitis,Bronchiolitis,True,True,True,1.0,0.0,0.0,0.0,0.0
+test:91516,Epiglottitis,llm,6,Bronchiolitis,Epiglottitis,False,True,True,4.0,1.0,2.0,2.0,0.0
+test:93930,Acute pulmonary edema,llm,5,Localized edema,Acute pulmonary edema,False,True,True,2.0,1.0,3.0,0.0,0.0
+test:95923,Pneumonia,llm,10,Bronchiolitis,Pneumonia,False,True,True,10.0,1.0,0.0,8.0,0.0
+test:96956,GERD,llm,6,GERD,GERD,True,True,True,1.0,1.0,1.0,2.0,1.0
+test:100664,Myasthenia gravis,mlp,3,Epiglottitis,Myasthenia gravis,False,True,True,2.0,1.0,1.0,0.0,0.0
+test:104857,Acute dystonic reactions,mlp,2,Acute dystonic reactions,Acute dystonic reactions,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:105129,Pulmonary neoplasm,mlp,7,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,True,True,4.0,2.0,1.0,2.0,1.0
+test:106010,HIV (initial infection),mlp,4,Pulmonary neoplasm,HIV (initial infection),False,True,True,2.0,1.0,2.0,0.0,0.0
+test:107472,Tuberculosis,mlp,7,Viral pharyngitis,Tuberculosis,False,True,True,5.0,1.0,2.0,3.0,0.0
+test:111176,Acute rhinosinusitis,mlp,9,URTI,Chronic rhinosinusitis,False,False,False,,0.0,0.0,8.0,0.0
+test:11198,Boerhaave,mlp,6,Viral pharyngitis,Boerhaave,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:112233,Bronchiectasis,mlp,6,Viral pharyngitis,Bronchiectasis,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:11342,Atrial fibrillation,mlp,6,PSVT,Atrial fibrillation,False,True,True,2.0,1.0,4.0,0.0,0.0
+test:11655,Bronchitis,mlp,11,Viral pharyngitis,Bronchitis,False,True,True,10.0,1.0,1.0,8.0,0.0
+test:121319,Anaphylaxis,mlp,4,Inguinal hernia,Anaphylaxis,False,True,True,4.0,1.0,0.0,2.0,0.0
+test:125508,Unstable angina,mlp,3,Anemia,Anemia,False,False,False,,0.0,0.0,2.0,0.0
+test:130566,Chronic rhinosinusitis,mlp,8,Viral pharyngitis,Chronic rhinosinusitis,False,True,True,3.0,1.0,5.0,1.0,0.0
+test:133024,Scombroid food poisoning,mlp,5,Inguinal hernia,Scombroid food poisoning,False,True,True,4.0,1.0,1.0,2.0,0.0
+test:133888,Larygospasm,mlp,2,Larygospasm,Larygospasm,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:13402,URTI,mlp,2,URTI,URTI,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:16097,Stable angina,mlp,12,Bronchospasm / acute asthma exacerbation,Stable angina,False,True,True,6.0,2.0,4.0,4.0,1.0
+test:18744,Anemia,mlp,2,Anemia,Anemia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:19160,Possible NSTEMI / STEMI,mlp,13,URTI,URTI,False,False,True,3.0,1.0,3.0,7.0,1.0
+test:19424,Whooping cough,mlp,2,Whooping cough,Whooping cough,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:23687,Pulmonary embolism,mlp,4,Pericarditis,Pulmonary embolism,False,True,True,3.0,1.0,1.0,1.0,0.0
+test:2801,Pancreatic neoplasm,mlp,3,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:29123,Bronchospasm / acute asthma exacerbation,mlp,6,Viral pharyngitis,Bronchospasm / acute asthma exacerbation,False,True,True,4.0,1.0,2.0,2.0,0.0
+test:33118,Acute otitis media,mlp,8,URTI,Acute otitis media,False,True,True,5.0,2.0,1.0,3.0,1.0
+test:34242,Guillain-Barré syndrome,mlp,4,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,True,1.0,1.0,1.0,0.0,1.0
+test:35039,Myocarditis,mlp,16,Pericarditis,Myocarditis,False,True,True,12.0,3.0,0.0,10.0,2.0
+test:36032,Sarcoidosis,mlp,13,Viral pharyngitis,Sarcoidosis,False,True,True,13.0,1.0,0.0,11.0,0.0
+test:38202,Inguinal hernia,mlp,2,Inguinal hernia,Inguinal hernia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:38475,Acute COPD exacerbation / infection,mlp,25,Bronchospasm / acute asthma exacerbation,Guillain-Barré syndrome,False,False,True,3.0,2.0,2.0,18.0,2.0
+test:39033,Viral pharyngitis,mlp,3,Viral pharyngitis,Viral pharyngitis,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:46152,Cluster headache,mlp,7,Viral pharyngitis,Cluster headache,False,True,True,3.0,1.0,4.0,1.0,0.0
+test:51421,Chagas,mlp,24,Viral pharyngitis,Chagas,False,True,True,24.0,1.0,0.0,22.0,0.0
+test:51611,PSVT,mlp,14,Viral pharyngitis,PSVT,False,True,True,13.0,1.0,1.0,11.0,0.0
+test:52755,SLE,mlp,8,Inguinal hernia,Scombroid food poisoning,False,False,False,,0.0,0.0,7.0,0.0
+test:58986,Acute laryngitis,mlp,2,Acute laryngitis,Acute laryngitis,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:62878,Pericarditis,mlp,16,Bronchospasm / acute asthma exacerbation,Anemia,False,False,False,,0.0,0.0,15.0,0.0
+test:71107,Spontaneous rib fracture,mlp,2,Pericarditis,Spontaneous rib fracture,False,True,True,2.0,1.0,0.0,0.0,0.0
+test:749,Spontaneous pneumothorax,mlp,4,Pericarditis,Spontaneous pneumothorax,False,True,True,3.0,1.0,1.0,1.0,0.0
+test:76022,Panic attack,mlp,16,PSVT,Panic attack,False,True,True,13.0,1.0,3.0,11.0,0.0
+test:77908,Ebola,mlp,7,Pancreatic neoplasm,Ebola,False,True,True,6.0,1.0,1.0,4.0,0.0
+test:81691,Croup,mlp,20,Viral pharyngitis,Anemia,False,False,False,,0.0,0.0,19.0,0.0
+test:8666,Influenza,mlp,4,Viral pharyngitis,HIV (initial infection),False,False,False,,0.0,0.0,3.0,0.0
+test:88250,Allergic sinusitis,mlp,19,Viral pharyngitis,Allergic sinusitis,False,True,True,16.0,1.0,3.0,14.0,0.0
+test:89477,Localized edema,mlp,3,Localized edema,Localized edema,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:90978,Bronchiolitis,mlp,1,Bronchiolitis,Bronchiolitis,True,True,True,1.0,0.0,0.0,0.0,0.0
+test:91516,Epiglottitis,mlp,6,Viral pharyngitis,Epiglottitis,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:93930,Acute pulmonary edema,mlp,5,Localized edema,Acute pulmonary edema,False,True,True,3.0,1.0,2.0,1.0,0.0
+test:95923,Pneumonia,mlp,10,Bronchospasm / acute asthma exacerbation,Pneumonia,False,True,True,6.0,1.0,4.0,4.0,0.0
+test:96956,GERD,mlp,6,GERD,GERD,True,True,True,1.0,1.0,0.0,3.0,1.0
+test:100664,Myasthenia gravis,hybrid,3,Epiglottitis,Myasthenia gravis,False,True,True,2.0,1.0,1.0,0.0,0.0
+test:104857,Acute dystonic reactions,hybrid,2,Acute dystonic reactions,Acute dystonic reactions,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:105129,Pulmonary neoplasm,hybrid,7,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,True,True,4.0,2.0,0.0,3.0,1.0
+test:106010,HIV (initial infection),hybrid,4,Pulmonary neoplasm,HIV (initial infection),False,True,True,2.0,1.0,2.0,0.0,0.0
+test:107472,Tuberculosis,hybrid,7,Bronchiolitis,Tuberculosis,False,True,True,3.0,1.0,4.0,1.0,0.0
+test:111176,Acute rhinosinusitis,hybrid,9,Tuberculosis,Chronic rhinosinusitis,False,False,False,,0.0,0.0,8.0,0.0
+test:11198,Boerhaave,hybrid,6,Viral pharyngitis,Boerhaave,False,True,True,4.0,1.0,2.0,2.0,0.0
+test:112233,Bronchiectasis,hybrid,6,Tuberculosis,Bronchiectasis,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:11342,Atrial fibrillation,hybrid,6,PSVT,Atrial fibrillation,False,True,True,2.0,1.0,4.0,0.0,0.0
+test:11655,Bronchitis,hybrid,11,Viral pharyngitis,Bronchitis,False,True,True,9.0,1.0,2.0,7.0,0.0
+test:121319,Anaphylaxis,hybrid,4,HIV (initial infection),Anaphylaxis,False,True,True,3.0,1.0,1.0,1.0,0.0
+test:125508,Unstable angina,hybrid,3,Anemia,Anemia,False,False,False,,0.0,0.0,2.0,0.0
+test:130566,Chronic rhinosinusitis,hybrid,8,Tuberculosis,Chronic rhinosinusitis,False,True,True,3.0,1.0,5.0,1.0,0.0
+test:133024,Scombroid food poisoning,hybrid,5,HIV (initial infection),Scombroid food poisoning,False,True,True,3.0,1.0,2.0,1.0,0.0
+test:133888,Larygospasm,hybrid,2,Larygospasm,Larygospasm,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:13402,URTI,hybrid,2,URTI,URTI,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:16097,Stable angina,hybrid,12,Bronchiolitis,Stable angina,False,True,True,8.0,1.0,4.0,6.0,0.0
+test:18744,Anemia,hybrid,2,Anemia,Anemia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:19160,Possible NSTEMI / STEMI,hybrid,13,URTI,Possible NSTEMI / STEMI,False,True,True,3.0,2.0,8.0,1.0,1.0
+test:19424,Whooping cough,hybrid,2,Whooping cough,Whooping cough,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:23687,Pulmonary embolism,hybrid,4,Spontaneous rib fracture,Pulmonary embolism,False,True,True,4.0,1.0,0.0,2.0,0.0
+test:2801,Pancreatic neoplasm,hybrid,3,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:29123,Bronchospasm / acute asthma exacerbation,hybrid,6,Tuberculosis,Bronchospasm / acute asthma exacerbation,False,True,True,5.0,1.0,1.0,3.0,0.0
+test:33118,Acute otitis media,hybrid,8,Bronchiolitis,Acute otitis media,False,True,True,6.0,2.0,0.0,4.0,1.0
+test:34242,Guillain-Barré syndrome,hybrid,4,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,True,1.0,1.0,1.0,0.0,1.0
+test:35039,Myocarditis,hybrid,16,Pericarditis,Myocarditis,False,True,True,4.0,2.0,1.0,11.0,1.0
+test:36032,Sarcoidosis,hybrid,13,Viral pharyngitis,Sarcoidosis,False,True,True,11.0,1.0,2.0,9.0,0.0
+test:38202,Inguinal hernia,hybrid,2,Inguinal hernia,Inguinal hernia,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:38475,Acute COPD exacerbation / infection,hybrid,25,Bronchiolitis,Myocarditis,False,False,True,20.0,1.0,0.0,22.0,1.0
+test:39033,Viral pharyngitis,hybrid,3,Viral pharyngitis,Viral pharyngitis,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:46152,Cluster headache,hybrid,7,Viral pharyngitis,Cluster headache,False,True,True,2.0,2.0,2.0,1.0,1.0
+test:51421,Chagas,hybrid,24,Bronchiolitis,Chagas,False,True,True,6.0,2.0,4.0,16.0,1.0
+test:51611,PSVT,hybrid,14,Viral pharyngitis,PSVT,False,True,True,13.0,1.0,1.0,11.0,0.0
+test:52755,SLE,hybrid,8,HIV (initial infection),SLE,False,True,True,4.0,1.0,4.0,2.0,0.0
+test:58986,Acute laryngitis,hybrid,2,Acute laryngitis,Acute laryngitis,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:62878,Pericarditis,hybrid,16,Bronchiolitis,Anemia,False,False,False,,0.0,0.0,15.0,0.0
+test:71107,Spontaneous rib fracture,hybrid,2,Spontaneous rib fracture,Spontaneous rib fracture,True,True,True,1.0,0.0,1.0,0.0,0.0
+test:749,Spontaneous pneumothorax,hybrid,4,Spontaneous rib fracture,Spontaneous pneumothorax,False,True,True,2.0,1.0,2.0,0.0,0.0
+test:76022,Panic attack,hybrid,16,PSVT,Panic attack,False,True,True,3.0,2.0,1.0,11.0,1.0
+test:77908,Ebola,hybrid,7,Pancreatic neoplasm,Ebola,False,True,True,5.0,1.0,2.0,3.0,0.0
+test:81691,Croup,hybrid,20,Bronchiolitis,Anemia,False,False,True,5.0,1.0,0.0,17.0,1.0
+test:8666,Influenza,hybrid,4,Bronchiolitis,HIV (initial infection),False,False,False,,0.0,0.0,3.0,0.0
+test:88250,Allergic sinusitis,hybrid,19,Tuberculosis,Allergic sinusitis,False,True,True,17.0,1.0,2.0,15.0,0.0
+test:89477,Localized edema,hybrid,3,Localized edema,Localized edema,True,True,True,1.0,0.0,2.0,0.0,0.0
+test:90978,Bronchiolitis,hybrid,1,Bronchiolitis,Bronchiolitis,True,True,True,1.0,0.0,0.0,0.0,0.0
+test:91516,Epiglottitis,hybrid,6,Bronchiolitis,Epiglottitis,False,True,True,4.0,1.0,2.0,2.0,0.0
+test:93930,Acute pulmonary edema,hybrid,5,Localized edema,Acute pulmonary edema,False,True,True,2.0,1.0,3.0,0.0,0.0
+test:95923,Pneumonia,hybrid,10,Bronchiolitis,Pneumonia,False,True,True,10.0,1.0,0.0,8.0,0.0
+test:96956,GERD,hybrid,6,GERD,GERD,True,True,True,1.0,1.0,1.0,2.0,1.0

@@ -1,0 +1,19 @@
+requested_root,requested_question,count,mean_graph_rank,mean_information_gain
+E_83,Have you noticed weakness in your facial muscles and/or eyes?,2,7.0,0.406
+E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,2,6.0,0.3851
+E_106,Do you have heart failure?,2,8.0,0.3504
+E_18,Do you have cystic fibrosis?,2,8.0,0.3328
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,2,11.0,0.2815
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",2,1.0,0.2122
+E_102,Are you consulting because you have high blood pressure?,2,1.0,0.204
+E_12,Do you have a known severe food allergy?,2,15.0,0.1992
+E_206,Do you have painful mouth ulcers or sores?,2,1.0,0.1959
+E_46,Have you had 2 or more asthma attacks in the past year?,2,8.0,0.1693
+E_201,Do you have a cough?,2,2.0,0.156
+E_107,Have you ever had a stroke?,2,1.0,0.1522
+E_95,Do you have Parkinson’s disease?,2,1.0,0.1396
+E_27,Have you ever had a sexually transmitted infection?,2,1.0,0.119
+E_64,Do you feel out of breath with minimal physical effort?,2,1.0,0.111
+E_142,Does your mother suffer from asthma?,2,1.0,0.1023
+E_63,Do you have difficulty articulating words/speaking?,2,1.0,0.0737
+E_5,Have you ever had fluid in your lungs?,2,1.0,0.0461

@@ -1,0 +1,128 @@
+{
+  "graph_context_metrics": {
+    "agreement_hybrid_accuracy": 0.8333333333333334,
+    "agreement_hybrid_top3_accuracy": 0.9583333333333334,
+    "agreement_hybrid_top5_accuracy": 0.9583333333333334,
+    "agreement_hybrid_macro_f1": 0.7435897435897435,
+    "llm_final_accuracy": 0.8333333333333334,
+    "llm_final_top3_accuracy": 0.9583333333333334,
+    "llm_final_top5_accuracy": 0.9583333333333334,
+    "llm_final_macro_f1": 0.7435897435897435,
+    "mlp_final_accuracy": 0.8333333333333334,
+    "mlp_final_top3_accuracy": 0.9166666666666666,
+    "mlp_final_top5_accuracy": 0.9583333333333334,
+    "mlp_final_macro_f1": 0.7435897435897435,
+    "conservative_hybrid_accuracy": 0.8333333333333334,
+    "conservative_hybrid_top3_accuracy": 0.9583333333333334,
+    "conservative_hybrid_top5_accuracy": 0.9583333333333334,
+    "conservative_hybrid_macro_f1": 0.7435897435897435,
+    "accuracy": 0.8333333333333334,
+    "top3_accuracy": 0.9583333333333334,
+    "top5_accuracy": 0.9583333333333334,
+    "macro_f1": 0.7435897435897435,
+    "mean_requests": 6.125,
+    "median_requests": 4.0,
+    "mean_visible_roots_including_initial": 7.125,
+    "stop_before_cap_rate": 0.9583333333333334,
+    "selected_stop_rule_rate": 0.875,
+    "cap_hit_count": 1,
+    "mean_api_calls": 7.083333333333333,
+    "total_input_tokens": 774614,
+    "total_output_tokens": 19513,
+    "total_estimated_cost": null,
+    "mean_mlp_confidence": 0.9350727548201879,
+    "mean_mlp_margin": 0.9094262711855663,
+    "mean_mlp_entropy": 0.07766534098685907,
+    "llm_mlp_agreement_rate": 1.0,
+    "stop_reason_distribution": {
+      "agent_stop": 2,
+      "max_requests_reached": 1,
+      "selected_mlp_stop": 21
+    },
+    "request_distribution": {
+      "1": 5,
+      "2": 4,
+      "3": 2,
+      "4": 3,
+      "5": 1,
+      "6": 1,
+      "7": 2,
+      "8": 1,
+      "10": 1,
+      "11": 1,
+      "18": 1,
+      "20": 1,
+      "24": 1
+    },
+    "agreement_hybrid_source_distribution": {
+      "agreement": 24
+    },
+    "conservative_hybrid_source_distribution": {
+      "llm_mlp_agreement": 24
+    },
+    "mean_num_graph_warnings_final": 3.4583333333333335,
+    "mean_num_unresolved_pairs_final": 2.875,
+    "mean_final_top_diagnosis_support": 6.6355,
+    "mean_final_top_diagnosis_contradiction": 0.9834166666666668,
+    "mean_warnings_resolved_count": 2.0,
+    "mean_graph_context_tokens_estimate": 2048.5416666666665,
+    "run_name": "llm_led_graph_ledger_context_pilot24_v1",
+    "run_scope": "pilot24",
+    "max_request_cap": 24,
+    "num_cases": 24,
+    "runtime_seconds": 597.78741979599,
+    "selected_stop_policy": {
+      "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+      "min_requests": 1,
+      "mlp_confidence_min": 0.7,
+      "mlp_margin_min": 0.2,
+      "mlp_entropy_max": 0.1,
+      "mlp_stability_min": 0,
+      "official_final_head": "agreement_hybrid_final",
+      "source_notebook": "12_stopping_policy_ablation.ipynb"
+    },
+    "graph_context_influence": "advisory_prompt_context_only"
+  },
+  "reference_systems": [
+    {
+      "system": "notebook13_hybrid_v1_24case",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.583333333333333,
+      "num_cases": 24,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1/metrics.json"
+    },
+    {
+      "system": "notebook13_hybrid_v1_49case",
+      "accuracy": 0.8775510204081632,
+      "top3_accuracy": 0.9183673469387755,
+      "top5_accuracy": 0.9387755102040817,
+      "macro_f1": 0.8448979591836734,
+      "mean_requests": 6.591836734693878,
+      "num_cases": 49,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1/metrics.json"
+    },
+    {
+      "system": "notebook17_hard_graph_shortlist_24case",
+      "accuracy": 0.8333333333333334,
+      "top3_accuracy": 0.8333333333333334,
+      "top5_accuracy": 0.875,
+      "macro_f1": 0.7435897435897435,
+      "mean_requests": 6.208333333333333,
+      "num_cases": 24,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_v1/metrics.json"
+    },
+    {
+      "system": "notebook18_graph_advisory_24case",
+      "accuracy": 0.875,
+      "top3_accuracy": 0.875,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.7948717948717949,
+      "mean_requests": 7.666666666666667,
+      "num_cases": 24,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_advisory_hybrid_shortlist_pilot24_v1/metrics.json"
+    }
+  ]
+}

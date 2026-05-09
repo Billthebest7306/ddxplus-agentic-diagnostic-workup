@@ -1,0 +1,76 @@
+{
+  "notebook": "16_graph_algorithmic_evidence_ledger_offline_analysis.ipynb",
+  "method": "MedKGI-style DDXPlus-native graph evidence ledger offline replay",
+  "source_notebook13_run": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+  "artifact_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1",
+  "train_rows_for_graph_stats": 1025602,
+  "num_pathologies": 49,
+  "num_root_evidence_fields": 223,
+  "max_outcome_states_per_root": 80,
+  "notebook13_reference": {
+    "accuracy": 0.8775510204081632,
+    "top3_accuracy": 0.9183673469387755,
+    "top5_accuracy": 0.9387755102040817,
+    "mean_requests": 6.591836734693878,
+    "correct_count": 43,
+    "num_cases": 49
+  },
+  "request_quality_summary": [
+    {
+      "notebook13_final_correct": false,
+      "num_requests": 71,
+      "mean_graph_rank": 9.732394366197184,
+      "median_graph_rank": 6.0,
+      "mean_graph_score": 0.23259935872452842,
+      "mean_information_gain": 0.1938743070532631,
+      "top1_rate": 0.18309859154929578,
+      "top3_rate": 0.352112676056338,
+      "top10_rate": 0.676056338028169
+    },
+    {
+      "notebook13_final_correct": true,
+      "num_requests": 252,
+      "mean_graph_rank": 6.611111111111111,
+      "median_graph_rank": 4.0,
+      "mean_graph_score": 0.283162351361209,
+      "mean_information_gain": 0.24729232956048894,
+      "top1_rate": 0.18253968253968253,
+      "top3_rate": 0.45634920634920634,
+      "top10_rate": 0.7936507936507936
+    }
+  ],
+  "selected_graph_policy": {
+    "policy_name": "graph_cert_info_le_0.30",
+    "info_threshold": 0.3,
+    "is_mlp_only_reference": false,
+    "accuracy": 0.8775510204081632,
+    "correct_count": 43,
+    "top3_accuracy": 0.9183673469387755,
+    "top5_accuracy": 0.9387755102040817,
+    "mean_requests": 6.591836734693878,
+    "median_requests": 5.0,
+    "blocked_by_trace_end_count": 42,
+    "graph_certificate_stop_count": 6,
+    "notebook13_terminal_fallback_count": 43,
+    "selection_reason": "primary_preserve_43_of_49_and_reduce_or_match_requests",
+    "base_stop_policy": {
+      "min_requests": 1,
+      "mlp_confidence_min": 0.7,
+      "mlp_margin_min": 0.2,
+      "mlp_entropy_max": 0.1,
+      "mlp_stability_min": 0
+    },
+    "offline_replay_limitation": "Replay can stop earlier on recorded trajectories, but cannot continue beyond a Notebook 13 trace that ended before the graph certificate fired."
+  },
+  "offline_limitations": [
+    "No API calls are made, so this notebook cannot observe how the LLM would ask different future questions under a graph shortlist.",
+    "Policies that require continuing past an early Notebook 13 stop are marked as trace-limited rather than claimed as improved.",
+    "True labels are used only after scoring for evaluation and hard-case reporting."
+  ],
+  "promotion_decision": {
+    "ready_for_live_notebook17": true,
+    "recommended_live_scope": "conditional_graph_shortlist_pilot_not_stop_policy_replacement",
+    "reason": "Graph action scores are informative and highlight low-yield trajectories in hard cases; offline stop replay alone does not prove a better stop policy.",
+    "do_not_claim_offline_stop_improvement": true
+  }
+}

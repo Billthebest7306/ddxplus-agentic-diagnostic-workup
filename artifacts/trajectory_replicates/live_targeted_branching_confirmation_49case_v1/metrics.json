@@ -1,0 +1,41 @@
+{
+  "num_cases": 49,
+  "accuracy": 0.8775510204081632,
+  "num_correct": 43,
+  "top3_accuracy": 0.9183673469387755,
+  "top5_accuracy": 0.9387755102040817,
+  "macro_f1": 0.8367346938775511,
+  "base_accuracy": 0.8571428571428571,
+  "base_num_correct": 42,
+  "wins_vs_base": 2,
+  "regressions_vs_base": 1,
+  "changed_predictions": 3,
+  "branch_trigger_rate": 0.1836734693877551,
+  "branches_spawned_total": 18,
+  "mean_branches_spawned": 0.3673469387755102,
+  "mean_selected_requests": 6.816326530612245,
+  "mean_base_requests": 6.918367346938775,
+  "mean_total_branch_requests": 11.448979591836734,
+  "total_api_calls": 620,
+  "total_input_tokens": 1494774,
+  "total_output_tokens": 70267,
+  "selection_source_distribution": {
+    "base": 42,
+    "counteranchor_scout": 1,
+    "graph_bayes_scout": 6
+  },
+  "stop_reason_distribution": {
+    "agent_stop": 6,
+    "max_requests_reached": 1,
+    "selected_mlp_stop": 42
+  },
+  "run_name": "live_targeted_branching_confirmation_49case_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/live_targeted_branching_confirmation_49case_v1",
+  "runtime_seconds": 1879.808494091034,
+  "run_live_api": true,
+  "allow_dry_run_benchmark": false,
+  "branch_trigger_name": "hybrid_suspicion_v1",
+  "branch_budget": 2,
+  "branch_judge_name": "highest_raw_bayes_posterior",
+  "promotion_decision": "not_promoted_keep_notebook13_or_prior_confirmed_method"
+}

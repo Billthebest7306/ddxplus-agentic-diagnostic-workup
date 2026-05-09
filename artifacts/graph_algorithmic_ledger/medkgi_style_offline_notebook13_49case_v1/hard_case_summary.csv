@@ -1,0 +1,7 @@
+case_id,true_pathology,notebook13_prediction,num_requests,terminal_graph_score,terminal_graph_information_gain,mean_actual_request_rank,requests_outside_top10
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,8,0.2850556531575453,0.19787617461750823,7.375,1
+test:125508,Unstable angina,Anemia,2,0.35623694546281715,0.30793201337756004,12.0,1
+test:38475,Acute COPD exacerbation / infection,Myocarditis,24,0.2967221014452298,0.21127259648449304,10.166666666666666,9
+test:62878,Pericarditis,Anemia,15,0.34319139704510343,0.28148206463630565,6.733333333333333,3
+test:81691,Croup,Anemia,19,0.40440800218975176,0.3327603810935364,12.368421052631579,8
+test:8666,Influenza,HIV (initial infection),3,0.617827281526152,0.7896962849104173,9.333333333333334,1

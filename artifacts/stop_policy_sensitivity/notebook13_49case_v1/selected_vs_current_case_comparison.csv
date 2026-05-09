@@ -1,0 +1,50 @@
+case_id,true_pathology,current_predicted_pathology,current_correct,current_top5_correct,current_num_requests,current_stop_source,selected_predicted_pathology,selected_correct,selected_top5_correct,selected_num_requests,selected_stop_source,request_delta_selected_minus_current,correctness_change
+test:100664,Myasthenia gravis,Myasthenia gravis,True,True,2,threshold_fired,Myasthenia gravis,True,True,2,threshold_fired,0,both_correct
+test:104857,Acute dystonic reactions,Acute dystonic reactions,True,True,1,threshold_fired,Acute dystonic reactions,True,True,1,observed_final_fallback,0,both_correct
+test:105129,Pulmonary neoplasm,Pulmonary neoplasm,True,True,6,threshold_fired,Pulmonary neoplasm,True,True,6,threshold_fired,0,both_correct
+test:106010,HIV (initial infection),HIV (initial infection),True,True,3,threshold_fired,HIV (initial infection),True,True,3,threshold_fired,0,both_correct
+test:107472,Tuberculosis,Tuberculosis,True,True,6,threshold_fired,Tuberculosis,True,True,6,threshold_fired,0,both_correct
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,False,True,8,threshold_fired,Chronic rhinosinusitis,False,True,8,observed_final_fallback,0,both_wrong
+test:11198,Boerhaave,Boerhaave,True,True,5,threshold_fired,Boerhaave,True,True,5,threshold_fired,0,both_correct
+test:112233,Bronchiectasis,Bronchiectasis,True,True,5,threshold_fired,Bronchiectasis,True,True,5,threshold_fired,0,both_correct
+test:11342,Atrial fibrillation,Atrial fibrillation,True,True,5,threshold_fired,Atrial fibrillation,True,True,5,threshold_fired,0,both_correct
+test:11655,Bronchitis,Bronchitis,True,True,10,threshold_fired,Bronchitis,True,True,10,threshold_fired,0,both_correct
+test:121319,Anaphylaxis,Anaphylaxis,True,True,3,threshold_fired,Anaphylaxis,True,True,3,threshold_fired,0,both_correct
+test:125508,Unstable angina,Anemia,False,False,2,observed_final_fallback,Anemia,False,False,2,observed_final_fallback,0,both_wrong
+test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,7,threshold_fired,Chronic rhinosinusitis,True,True,7,observed_final_fallback,0,both_correct
+test:133024,Scombroid food poisoning,Scombroid food poisoning,True,True,4,threshold_fired,Scombroid food poisoning,True,True,4,threshold_fired,0,both_correct
+test:133888,Larygospasm,Larygospasm,True,True,1,threshold_fired,Larygospasm,True,True,1,observed_final_fallback,0,both_correct
+test:13402,URTI,URTI,True,True,1,threshold_fired,URTI,True,True,1,observed_final_fallback,0,both_correct
+test:16097,Stable angina,Stable angina,True,True,11,observed_final_fallback,Stable angina,True,True,11,observed_final_fallback,0,both_correct
+test:18744,Anemia,Anemia,True,True,1,threshold_fired,Anemia,True,True,0,threshold_fired,-1,both_correct
+test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,12,threshold_fired,Possible NSTEMI / STEMI,True,True,12,observed_final_fallback,0,both_correct
+test:19424,Whooping cough,Whooping cough,True,True,1,threshold_fired,Whooping cough,True,True,0,threshold_fired,-1,both_correct
+test:23687,Pulmonary embolism,Pulmonary embolism,True,True,3,threshold_fired,Pulmonary embolism,True,True,3,threshold_fired,0,both_correct
+test:2801,Pancreatic neoplasm,Pancreatic neoplasm,True,True,2,threshold_fired,Pancreatic neoplasm,True,True,2,observed_final_fallback,0,both_correct
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,5,threshold_fired,Bronchospasm / acute asthma exacerbation,True,True,5,threshold_fired,0,both_correct
+test:33118,Acute otitis media,Acute otitis media,True,True,7,threshold_fired,Acute otitis media,True,True,7,observed_final_fallback,0,both_correct
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,3,threshold_fired,Guillain-Barré syndrome,True,True,3,threshold_fired,0,both_correct
+test:35039,Myocarditis,Myocarditis,True,True,15,threshold_fired,Myocarditis,True,True,15,threshold_fired,0,both_correct
+test:36032,Sarcoidosis,Sarcoidosis,True,True,12,observed_final_fallback,Sarcoidosis,True,True,12,observed_final_fallback,0,both_correct
+test:38202,Inguinal hernia,Inguinal hernia,True,True,1,observed_final_fallback,Inguinal hernia,True,True,1,observed_final_fallback,0,both_correct
+test:38475,Acute COPD exacerbation / infection,Myocarditis,False,False,24,observed_final_fallback,Myocarditis,False,False,24,observed_final_fallback,0,both_wrong
+test:39033,Viral pharyngitis,Viral pharyngitis,True,True,2,observed_final_fallback,Viral pharyngitis,True,True,2,observed_final_fallback,0,both_correct
+test:46152,Cluster headache,Cluster headache,True,True,6,threshold_fired,Cluster headache,True,True,6,threshold_fired,0,both_correct
+test:51421,Chagas,Chagas,True,True,23,threshold_fired,Chagas,True,True,23,observed_final_fallback,0,both_correct
+test:51611,PSVT,PSVT,True,True,13,observed_final_fallback,PSVT,True,True,13,observed_final_fallback,0,both_correct
+test:52755,SLE,SLE,True,True,7,observed_final_fallback,SLE,True,True,7,observed_final_fallback,0,both_correct
+test:58986,Acute laryngitis,Acute laryngitis,True,True,1,observed_final_fallback,Acute laryngitis,True,True,1,observed_final_fallback,0,both_correct
+test:62878,Pericarditis,Anemia,False,False,15,observed_final_fallback,Anemia,False,False,15,observed_final_fallback,0,both_wrong
+test:71107,Spontaneous rib fracture,Spontaneous rib fracture,True,True,1,threshold_fired,Spontaneous rib fracture,True,True,1,threshold_fired,0,both_correct
+test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,3,threshold_fired,Spontaneous pneumothorax,True,True,3,threshold_fired,0,both_correct
+test:76022,Panic attack,Panic attack,True,True,15,threshold_fired,Panic attack,True,True,15,observed_final_fallback,0,both_correct
+test:77908,Ebola,Ebola,True,True,6,threshold_fired,Ebola,True,True,6,threshold_fired,0,both_correct
+test:81691,Croup,Anemia,False,True,19,observed_final_fallback,Anemia,False,True,19,observed_final_fallback,0,both_wrong
+test:8666,Influenza,HIV (initial infection),False,True,3,observed_final_fallback,HIV (initial infection),False,True,3,observed_final_fallback,0,both_wrong
+test:88250,Allergic sinusitis,Allergic sinusitis,True,True,18,threshold_fired,Allergic sinusitis,True,True,18,threshold_fired,0,both_correct
+test:89477,Localized edema,Localized edema,True,True,2,threshold_fired,Localized edema,True,True,2,observed_final_fallback,0,both_correct
+test:90978,Bronchiolitis,Bronchiolitis,True,True,0,observed_final_fallback,Bronchiolitis,True,True,0,observed_final_fallback,0,both_correct
+test:91516,Epiglottitis,Epiglottitis,True,True,5,threshold_fired,Epiglottitis,True,True,5,threshold_fired,0,both_correct
+test:93930,Acute pulmonary edema,Acute pulmonary edema,True,True,4,threshold_fired,Acute pulmonary edema,True,True,4,threshold_fired,0,both_correct
+test:95923,Pneumonia,Pneumonia,True,True,9,threshold_fired,Pneumonia,True,True,9,threshold_fired,0,both_correct
+test:96956,GERD,GERD,True,True,5,threshold_fired,GERD,True,True,5,threshold_fired,0,both_correct

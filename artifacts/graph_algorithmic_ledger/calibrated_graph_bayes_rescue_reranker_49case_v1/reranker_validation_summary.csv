@@ -1,0 +1,7 @@
+model_name,C,reference_accuracy,reranker_top1_accuracy,delta_vs_reference,selected_C,selected_min_score,selected_min_score_margin,selected_validate_accuracy,selected_validate_changes,selected_validate_improvements,selected_validate_regressions
+l2_logistic_C0.05,0.05,0.56175,0.6725,0.11075000000000002,,,,,,,
+l2_logistic_C0.1,0.1,0.56175,0.67075,0.10899999999999999,,,,,,,
+l2_logistic_C0.2,0.2,0.56175,0.671,0.10925000000000007,,,,,,,
+l2_logistic_C0.5,0.5,0.56175,0.6725,0.11075000000000002,,,,,,,
+l2_logistic_C1.0,1.0,0.56175,0.673,0.11125000000000007,,,,,,,
+,,,,,1.0,0.4,-0.2,0.673,1048.0,562.0,117.0

@@ -1,0 +1,3 @@
+case_id,true_pathology,num_replicates,unique_predictions,unique_request_counts,all_predictions_same,all_correctness_same,prediction_by_replicate,correct_by_replicate,requests_by_replicate
+test:34242,Guillain-Barré syndrome,3,1,1,True,True,"{""r01"": ""Guillain-Barr\u00e9 syndrome"", ""r02"": ""Guillain-Barr\u00e9 syndrome"", ""r03"": ""Guillain-Barr\u00e9 syndrome""}","{""r01"": true, ""r02"": true, ""r03"": true}","{""r01"": 3, ""r02"": 3, ""r03"": 3}"
+test:95923,Pneumonia,3,1,1,True,True,"{""r01"": ""Pneumonia"", ""r02"": ""Pneumonia"", ""r03"": ""Pneumonia""}","{""r01"": true, ""r02"": true, ""r03"": true}","{""r01"": 9, ""r02"": 9, ""r03"": 9}"

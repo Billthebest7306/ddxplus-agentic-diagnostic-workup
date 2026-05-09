@@ -1,0 +1,7 @@
+case_id,turn_index,requested_root,requested_question,graph_rank,graph_score,information_gain,split_balance,weighted_present_rate,outside_graph_top10
+test:34242,1,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",1,0.5495,0.5808,0.5501,0.275,False
+test:34242,2,E_0,Have you recently had a viral infection?,1,0.3354,0.2498,0.8832,0.5584,False
+test:95923,1,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.2775,0.2346,0.5537,0.2769,False
+test:95923,2,E_214,Have you noticed a wheezing sound when you exhale?,1,0.3769,0.2909,0.931,0.5345,False
+test:95923,3,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.3751,0.2802,0.9707,0.5147,False
+test:95923,4,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.4188,0.4218,0.4792,0.2396,False

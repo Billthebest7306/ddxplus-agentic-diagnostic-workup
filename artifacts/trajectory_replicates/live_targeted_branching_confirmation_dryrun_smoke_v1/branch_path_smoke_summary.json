@@ -1,0 +1,26 @@
+{
+  "case_id": "test:34242",
+  "base_prediction": "Guillain-Barr\u00e9 syndrome",
+  "branch_prediction": "Guillain-Barr\u00e9 syndrome",
+  "base_requests": 3,
+  "branch_requests": 2,
+  "branch_avoid_roots": [
+    "E_157",
+    "E_63"
+  ],
+  "chosen_branch_id": "graph_bayes_scout_path_smoke",
+  "scored_candidates": [
+    {
+      "branch_id": "base_path_smoke",
+      "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+      "pred_bayes_posterior": 0.9995482885684857,
+      "pred_graph_score": 4.8514130902551855
+    },
+    {
+      "branch_id": "graph_bayes_scout_path_smoke",
+      "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+      "pred_bayes_posterior": 0.9999999809952137,
+      "pred_graph_score": 9.0
+    }
+  ]
+}

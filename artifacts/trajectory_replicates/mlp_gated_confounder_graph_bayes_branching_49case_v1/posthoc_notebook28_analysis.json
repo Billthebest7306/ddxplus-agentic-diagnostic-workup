@@ -1,0 +1,14 @@
+{
+  "artifact_root": "artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1",
+  "selected_accuracy": "44/49",
+  "base_accuracy": "42/49",
+  "current_scored_candidate_oracle": "44/49",
+  "top2_ranked_differential_candidate_oracle": "47/49",
+  "top3_ranked_differential_candidate_oracle": "48/49",
+  "interpretation": "Notebook 28 did not fail mainly at the final judge. Its current scored candidate pool only supports a 44/49 oracle, but adding ranked-differential pseudo-candidates from base/branch outputs lifts the oracle to 47/49 at top-2 and 48/49 at top-3.",
+  "generated_files": [
+    "posthoc_candidate_pool_oracle_summary.csv",
+    "posthoc_miss_candidate_coverage.csv",
+    "posthoc_notebook28_analysis.json"
+  ]
+}

@@ -1,0 +1,1403 @@
+{
+  "test:111176": {
+    "true_pathology": "Acute rhinosinusitis",
+    "notebook13_predicted_pathology": "Chronic rhinosinusitis",
+    "graph_only_predicted_pathology": "Chronic rhinosinusitis",
+    "graph_adjudicator_predicted_pathology": "Chronic rhinosinusitis",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": false,
+    "override_fired": false,
+    "num_requests": 8,
+    "stop_reason": "selected_mlp_stop",
+    "graph_margin": 2.2940182597135284,
+    "reference_graph_score": 7.427146294925754,
+    "graph_top1_score": 7.427146294925754,
+    "top_graph_diagnoses": [
+      {
+        "disease": "Chronic rhinosinusitis",
+        "graph_rank": 1,
+        "graph_net_support": 7.427146294925754,
+        "graph_positive_support": 8.511700012739986,
+        "graph_contradiction": 1.0845537178142324,
+        "graph_posterior": 0.9083394801595748,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Acute rhinosinusitis",
+        "graph_rank": 2,
+        "graph_net_support": 5.133128035212225,
+        "graph_positive_support": 7.634377995370545,
+        "graph_contradiction": 2.50124996015832,
+        "graph_posterior": 0.09161545002395545,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Allergic sinusitis",
+        "graph_rank": 3,
+        "graph_net_support": -3.1430916133197857,
+        "graph_positive_support": 2.856908386680214,
+        "graph_contradiction": 6.0,
+        "graph_posterior": 2.3315900583301123e-05,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "URTI",
+        "graph_rank": 4,
+        "graph_net_support": -4.756397106381042,
+        "graph_positive_support": 2.703807564453351,
+        "graph_contradiction": 7.460204670834393,
+        "graph_posterior": 4.645179723004738e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Influenza",
+        "graph_rank": 5,
+        "graph_net_support": -4.828424260886543,
+        "graph_positive_support": 2.563498449507581,
+        "graph_contradiction": 7.391922710394124,
+        "graph_posterior": 4.322365875550105e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Viral pharyngitis",
+        "graph_rank": 6,
+        "graph_net_support": -4.870147928789147,
+        "graph_positive_support": 2.32732744914545,
+        "graph_contradiction": 7.197475377934597,
+        "graph_posterior": 4.145731459043781e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 7,
+        "graph_net_support": -5.20038670317815,
+        "graph_positive_support": 2.4201927770097282,
+        "graph_contradiction": 7.620579480187878,
+        "graph_posterior": 2.9797531646512635e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute otitis media",
+        "graph_rank": 8,
+        "graph_net_support": -5.300093769316229,
+        "graph_positive_support": 1.9478001726102079,
+        "graph_contradiction": 7.247893941926437,
+        "graph_posterior": 2.6969820815611613e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 9,
+        "graph_net_support": -6.406011330160627,
+        "graph_positive_support": 2.0930628809079925,
+        "graph_contradiction": 8.49907421106862,
+        "graph_posterior": 8.924505611342449e-07,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Cluster headache",
+        "graph_rank": 10,
+        "graph_net_support": -7.323435109715034,
+        "graph_positive_support": 1.6765648902849657,
+        "graph_contradiction": 9.0,
+        "graph_posterior": 3.565759778970444e-07,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_201",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_201 -> present [initial]"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_45",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Have you been coughing up blood?",
+        "summary": "Have you been coughing up blood? -> no"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_77",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "summary": "Do you have a cough that produces colored or more abundant sputum than usual? -> no"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_120",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 3,
+        "question_en": "Do you have polyps in your nose?",
+        "summary": "Do you have polyps in your nose? -> yes"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_209",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 4,
+        "question_en": "Are your vaccinations up to date?",
+        "summary": "Are your vaccinations up to date? -> no"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_91",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 5,
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_181",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 6,
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "summary": "Do you have nasal congestion or a clear runny nose? -> yes"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_182",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 7,
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "summary": "Do you have greenish or yellowish nasal discharge? -> no"
+      },
+      {
+        "case_id": "test:111176",
+        "root_evidence_id": "E_103",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 8,
+        "question_en": "Have you lost your sense of smell?",
+        "summary": "Have you lost your sense of smell? -> yes"
+      }
+    ]
+  },
+  "test:125508": {
+    "true_pathology": "Unstable angina",
+    "notebook13_predicted_pathology": "Anemia",
+    "graph_only_predicted_pathology": "Anemia",
+    "graph_adjudicator_predicted_pathology": "Anemia",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": false,
+    "override_fired": false,
+    "num_requests": 2,
+    "stop_reason": "agent_stop",
+    "graph_margin": 0.5703580035640647,
+    "reference_graph_score": 2.8166238262614667,
+    "graph_top1_score": 2.8166238262614667,
+    "top_graph_diagnoses": [
+      {
+        "disease": "Anemia",
+        "graph_rank": 1,
+        "graph_net_support": 2.8166238262614667,
+        "graph_positive_support": 2.8166238262614667,
+        "graph_contradiction": 0.0,
+        "graph_posterior": 0.41699308421079634,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Ebola",
+        "graph_rank": 2,
+        "graph_net_support": 2.246265822697402,
+        "graph_positive_support": 2.246265822697402,
+        "graph_contradiction": 0.0,
+        "graph_posterior": 0.23573578752234853,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Unstable angina",
+        "graph_rank": 3,
+        "graph_net_support": 1.1898028125018056,
+        "graph_positive_support": 2.1133183924135692,
+        "graph_contradiction": 0.9235155799117636,
+        "graph_posterior": 0.08196141791243988,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Stable angina",
+        "graph_rank": 4,
+        "graph_net_support": 1.1448886519224835,
+        "graph_positive_support": 2.0825839696648067,
+        "graph_contradiction": 0.9376953177423234,
+        "graph_posterior": 0.07836163536045365,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Possible NSTEMI / STEMI",
+        "graph_rank": 5,
+        "graph_net_support": 1.0953372464039828,
+        "graph_positive_support": 2.145303048523266,
+        "graph_contradiction": 1.0499658021192833,
+        "graph_posterior": 0.07457333899286235,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pancreatic neoplasm",
+        "graph_rank": 6,
+        "graph_net_support": 0.15058462164875186,
+        "graph_positive_support": 2.0452180346798596,
+        "graph_contradiction": 1.8946334130311078,
+        "graph_posterior": 0.028992304491864986,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary neoplasm",
+        "graph_rank": 7,
+        "graph_net_support": -0.240227232023277,
+        "graph_positive_support": 2.18890688341738,
+        "graph_contradiction": 2.429134115440657,
+        "graph_posterior": 0.019613509298771478,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "SLE",
+        "graph_rank": 8,
+        "graph_net_support": -1.7877648262211605,
+        "graph_positive_support": 1.96432225190228,
+        "graph_contradiction": 3.7520870781234406,
+        "graph_posterior": 0.0041731910565940234,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Localized edema",
+        "graph_rank": 9,
+        "graph_net_support": -2.476662709916128,
+        "graph_positive_support": 0.523337290083872,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.0020954809571764287,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary embolism",
+        "graph_rank": 10,
+        "graph_net_support": -2.476880444519558,
+        "graph_positive_support": 0.523119555480442,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.0020950247481292734,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:125508",
+        "root_evidence_id": "E_89",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_89 -> present [initial]"
+      },
+      {
+        "case_id": "test:125508",
+        "root_evidence_id": "E_129",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "summary": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> no"
+      },
+      {
+        "case_id": "test:125508",
+        "root_evidence_id": "E_79",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Do you smoke cigarettes?",
+        "summary": "Do you smoke cigarettes? -> no"
+      }
+    ]
+  },
+  "test:38475": {
+    "true_pathology": "Acute COPD exacerbation / infection",
+    "notebook13_predicted_pathology": "Myocarditis",
+    "graph_only_predicted_pathology": "Scombroid food poisoning",
+    "graph_adjudicator_predicted_pathology": "Myocarditis",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": false,
+    "override_fired": false,
+    "num_requests": 24,
+    "stop_reason": "max_requests_reached",
+    "graph_margin": 0.29035628393997825,
+    "reference_graph_score": -2.23665599758243,
+    "graph_top1_score": 0.8802150183159733,
+    "top_graph_diagnoses": [
+      {
+        "disease": "Scombroid food poisoning",
+        "graph_rank": 1,
+        "graph_net_support": 0.8802150183159733,
+        "graph_positive_support": 4.545220108630724,
+        "graph_contradiction": 3.66500509031475,
+        "graph_posterior": 0.2996189773694661,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 2,
+        "graph_net_support": 0.589858734375995,
+        "graph_positive_support": 3.778889019080246,
+        "graph_contradiction": 3.1890302847042515,
+        "graph_posterior": 0.22411410243928134,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchospasm / acute asthma exacerbation",
+        "graph_rank": 3,
+        "graph_net_support": -0.3014097173374125,
+        "graph_positive_support": 5.297571417360367,
+        "graph_contradiction": 5.5989811346977785,
+        "graph_posterior": 0.09191707908598595,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute COPD exacerbation / infection",
+        "graph_rank": 4,
+        "graph_net_support": -0.7866128647925372,
+        "graph_positive_support": 4.998478623274812,
+        "graph_contradiction": 5.78509148806735,
+        "graph_posterior": 0.056581592353900284,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Guillain-Barré syndrome",
+        "graph_rank": 5,
+        "graph_net_support": -1.2863764959912227,
+        "graph_positive_support": 2.864281687797674,
+        "graph_contradiction": 4.150658183788897,
+        "graph_posterior": 0.034326583312512066,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Sarcoidosis",
+        "graph_rank": 6,
+        "graph_net_support": -1.333089462309526,
+        "graph_positive_support": 2.768475930510175,
+        "graph_contradiction": 4.101565392819701,
+        "graph_posterior": 0.03275996240403451,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myasthenia gravis",
+        "graph_rank": 7,
+        "graph_net_support": -1.3418035697084012,
+        "graph_positive_support": 3.0284620990135314,
+        "graph_contradiction": 4.370265668721932,
+        "graph_posterior": 0.0324757287929893,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 8,
+        "graph_net_support": -1.4326113880207496,
+        "graph_positive_support": 2.7897708453568217,
+        "graph_contradiction": 4.222382233377571,
+        "graph_posterior": 0.029656614472949247,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "PSVT",
+        "graph_rank": 9,
+        "graph_net_support": -1.5405570816461465,
+        "graph_positive_support": 2.665595001078948,
+        "graph_contradiction": 4.206152082725095,
+        "graph_posterior": 0.02662204127490773,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Boerhaave",
+        "graph_rank": 10,
+        "graph_net_support": -1.6063968038172203,
+        "graph_positive_support": 2.7387274388785308,
+        "graph_contradiction": 4.345124242695751,
+        "graph_posterior": 0.02492570922630482,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_66",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_66 -> present [initial]"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_91",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_124",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "summary": "Do you have asthma or have you ever had to use a bronchodilator in the past? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_79",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 3,
+        "question_en": "Do you smoke cigarettes?",
+        "summary": "Do you smoke cigarettes? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_151",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 4,
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "summary": "Do you have swelling in one or more areas of your body? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_0",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 5,
+        "question_en": "Have you recently had a viral infection?",
+        "summary": "Have you recently had a viral infection? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_63",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 6,
+        "question_en": "Do you have difficulty articulating words/speaking?",
+        "summary": "Do you have difficulty articulating words/speaking? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_76",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 7,
+        "question_en": "Do you feel slightly dizzy or lightheaded?",
+        "summary": "Do you feel slightly dizzy or lightheaded? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_148",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 8,
+        "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+        "summary": "Are you feeling nauseous or do you feel like vomiting? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_70",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 9,
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "summary": "Are you significantly overweight compared to people of the same height as you? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_220",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 10,
+        "question_en": "Do you have pain that is increased when you breathe in deeply?",
+        "summary": "Do you have pain that is increased when you breathe in deeply? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_129",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 11,
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "summary": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_147",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 12,
+        "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+        "summary": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_201",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 13,
+        "question_en": "Do you have a cough?",
+        "summary": "Do you have a cough? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_212",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 14,
+        "question_en": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?",
+        "summary": "Have you noticed that the tone of your voice has become deeper, softer or hoarse? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_25",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 15,
+        "question_en": "Have any of your family members been diagnosed with cluster headaches?",
+        "summary": "Have any of your family members been diagnosed with cluster headaches? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_194",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 16,
+        "question_en": "Have you noticed a high pitched sound when breathing in?",
+        "summary": "Have you noticed a high pitched sound when breathing in? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_146",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 17,
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "summary": "Are you taking any new oral anticoagulants ((NOACs)? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_214",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 18,
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "summary": "Have you noticed a wheezing sound when you exhale? -> yes"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_181",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 19,
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "summary": "Do you have nasal congestion or a clear runny nose? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_72",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 20,
+        "question_en": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?",
+        "summary": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_142",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 21,
+        "question_en": "Does your mother suffer from asthma?",
+        "summary": "Does your mother suffer from asthma? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_116",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 22,
+        "question_en": "Have you had a cold in the last 2 weeks?",
+        "summary": "Have you had a cold in the last 2 weeks? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_125",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 23,
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "summary": "Have you ever been diagnosed with gastroesophageal reflux? -> no"
+      },
+      {
+        "case_id": "test:38475",
+        "root_evidence_id": "E_217",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 24,
+        "question_en": "Are your symptoms worse when lying down and alleviated while sitting up?",
+        "summary": "Are your symptoms worse when lying down and alleviated while sitting up? -> no"
+      }
+    ]
+  },
+  "test:62878": {
+    "true_pathology": "Pericarditis",
+    "notebook13_predicted_pathology": "Anemia",
+    "graph_only_predicted_pathology": "Anemia",
+    "graph_adjudicator_predicted_pathology": "Anemia",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": false,
+    "override_fired": false,
+    "num_requests": 15,
+    "stop_reason": "agent_stop",
+    "graph_margin": 0.22515153174548796,
+    "reference_graph_score": 1.4846891179082615,
+    "graph_top1_score": 1.4846891179082615,
+    "top_graph_diagnoses": [
+      {
+        "disease": "Anemia",
+        "graph_rank": 1,
+        "graph_net_support": 1.4846891179082615,
+        "graph_positive_support": 2.3772119334678767,
+        "graph_contradiction": 0.8925228155596155,
+        "graph_posterior": 0.11118203443611532,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Guillain-Barré syndrome",
+        "graph_rank": 2,
+        "graph_net_support": 1.2595375861627736,
+        "graph_positive_support": 2.4101957699516707,
+        "graph_contradiction": 1.1506581837888974,
+        "graph_posterior": 0.08876720566310345,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Sarcoidosis",
+        "graph_rank": 3,
+        "graph_net_support": 1.213624638528042,
+        "graph_positive_support": 2.3151900313477425,
+        "graph_contradiction": 1.101565392819701,
+        "graph_posterior": 0.08478378658259418,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myasthenia gravis",
+        "graph_rank": 4,
+        "graph_net_support": 1.1369067425494142,
+        "graph_positive_support": 2.563529740918949,
+        "graph_contradiction": 1.4266229983695344,
+        "graph_posterior": 0.07852259616308316,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 5,
+        "graph_net_support": 1.1048579978889712,
+        "graph_positive_support": 2.3340581414871955,
+        "graph_contradiction": 1.2292001435982238,
+        "graph_posterior": 0.07604594430181409,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "PSVT",
+        "graph_rank": 6,
+        "graph_net_support": 1.0074268419166503,
+        "graph_positive_support": 2.2135789246417454,
+        "graph_contradiction": 1.2061520827250944,
+        "graph_posterior": 0.0689862032666085,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Boerhaave",
+        "graph_rank": 7,
+        "graph_net_support": 0.9434824027434783,
+        "graph_positive_support": 2.288606645439229,
+        "graph_contradiction": 1.3451242426957506,
+        "graph_posterior": 0.0647129989705684,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Panic attack",
+        "graph_rank": 8,
+        "graph_net_support": 0.7280143256112958,
+        "graph_positive_support": 2.2658893807482485,
+        "graph_contradiction": 1.5378750551369527,
+        "graph_posterior": 0.052169290420129764,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myocarditis",
+        "graph_rank": 9,
+        "graph_net_support": 0.42725535756460387,
+        "graph_positive_support": 2.4873150236395913,
+        "graph_contradiction": 2.060059666074987,
+        "graph_posterior": 0.03861863946429808,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 10,
+        "graph_net_support": 0.3975685115396116,
+        "graph_positive_support": 2.1111697178958657,
+        "graph_contradiction": 1.7136012063562536,
+        "graph_posterior": 0.03748902417879253,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_66",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_66 -> present [initial]"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_181",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "summary": "Do you have nasal congestion or a clear runny nose? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_124",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "summary": "Do you have asthma or have you ever had to use a bronchodilator in the past? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_79",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 3,
+        "question_en": "Do you smoke cigarettes?",
+        "summary": "Do you smoke cigarettes? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_151",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 4,
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "summary": "Do you have swelling in one or more areas of your body? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_65",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 5,
+        "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+        "summary": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_0",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 6,
+        "question_en": "Have you recently had a viral infection?",
+        "summary": "Have you recently had a viral infection? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_76",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 7,
+        "question_en": "Do you feel slightly dizzy or lightheaded?",
+        "summary": "Do you feel slightly dizzy or lightheaded? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_148",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 8,
+        "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+        "summary": "Are you feeling nauseous or do you feel like vomiting? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_201",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 9,
+        "question_en": "Do you have a cough?",
+        "summary": "Do you have a cough? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_70",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 10,
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "summary": "Are you significantly overweight compared to people of the same height as you? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_129",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 11,
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "summary": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_15",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 12,
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "summary": "Have you started or taken any antipsychotic medication within the last 7 days? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_194",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 13,
+        "question_en": "Have you noticed a high pitched sound when breathing in?",
+        "summary": "Have you noticed a high pitched sound when breathing in? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_220",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 14,
+        "question_en": "Do you have pain that is increased when you breathe in deeply?",
+        "summary": "Do you have pain that is increased when you breathe in deeply? -> no"
+      },
+      {
+        "case_id": "test:62878",
+        "root_evidence_id": "E_175",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 15,
+        "question_en": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+        "summary": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today? -> no"
+      }
+    ]
+  },
+  "test:81691": {
+    "true_pathology": "Croup",
+    "notebook13_predicted_pathology": "Anemia",
+    "graph_only_predicted_pathology": "Croup",
+    "graph_adjudicator_predicted_pathology": "Croup",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": true,
+    "override_fired": true,
+    "num_requests": 19,
+    "stop_reason": "agent_stop",
+    "graph_margin": 2.0726588161448474,
+    "reference_graph_score": -2.359106092366937,
+    "graph_top1_score": 1.1772464468711072,
+    "top_graph_diagnoses": [
+      {
+        "disease": "Croup",
+        "graph_rank": 1,
+        "graph_net_support": 1.1772464468711072,
+        "graph_positive_support": 3.072059728392806,
+        "graph_contradiction": 1.8948132815216985,
+        "graph_posterior": 0.49481064392906865,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 2,
+        "graph_net_support": -0.8954123692737402,
+        "graph_positive_support": 2.104587630726261,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.062272277058529085,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 3,
+        "graph_net_support": -1.2005459824250833,
+        "graph_positive_support": 3.4382139451140277,
+        "graph_contradiction": 4.638759927539111,
+        "graph_posterior": 0.04589621824837963,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 4,
+        "graph_net_support": -1.4121659788253327,
+        "graph_positive_support": 2.1432119577622046,
+        "graph_contradiction": 3.5553779365875373,
+        "graph_posterior": 0.037142531929181474,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute otitis media",
+        "graph_rank": 5,
+        "graph_net_support": -1.7696657638902076,
+        "graph_positive_support": 2.214568406532171,
+        "graph_contradiction": 3.9842341704223787,
+        "graph_posterior": 0.025978335511130803,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary neoplasm",
+        "graph_rank": 6,
+        "graph_net_support": -1.8477095244454675,
+        "graph_positive_support": 2.029842611774308,
+        "graph_contradiction": 3.877552136219775,
+        "graph_posterior": 0.024027984707649205,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 7,
+        "graph_net_support": -1.9168358608981722,
+        "graph_positive_support": 1.782930339359306,
+        "graph_contradiction": 3.6997662002574785,
+        "graph_posterior": 0.022423126158988404,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiectasis",
+        "graph_rank": 8,
+        "graph_net_support": -1.9622783492272924,
+        "graph_positive_support": 1.9010790876371289,
+        "graph_contradiction": 3.8633574368644212,
+        "graph_posterior": 0.02142696886120334,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Guillain-Barré syndrome",
+        "graph_rank": 9,
+        "graph_net_support": -1.987507426396466,
+        "graph_positive_support": 2.163150757392431,
+        "graph_contradiction": 4.150658183788897,
+        "graph_posterior": 0.020893148423518127,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Cluster headache",
+        "graph_rank": 10,
+        "graph_net_support": -1.9883236710346044,
+        "graph_positive_support": 2.783920590731228,
+        "graph_contradiction": 4.772244261765833,
+        "graph_posterior": 0.020876101461335807,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_181",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_181 -> present [initial]"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_214",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "summary": "Have you noticed a wheezing sound when you exhale? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_169",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Is your nose or the back of your throat itchy?",
+        "summary": "Is your nose or the back of your throat itchy? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_97",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 3,
+        "question_en": "Do you have a sore throat?",
+        "summary": "Do you have a sore throat? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_41",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 4,
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "summary": "Have you been in contact with a person with similar symptoms in the past 2 weeks? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_194",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 5,
+        "question_en": "Have you noticed a high pitched sound when breathing in?",
+        "summary": "Have you noticed a high pitched sound when breathing in? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_201",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 6,
+        "question_en": "Do you have a cough?",
+        "summary": "Do you have a cough? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_25",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 7,
+        "question_en": "Have any of your family members been diagnosed with cluster headaches?",
+        "summary": "Have any of your family members been diagnosed with cluster headaches? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_66",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 8,
+        "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+        "summary": "Are you experiencing shortness of breath or difficulty breathing in a significant way? -> yes"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_151",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 9,
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "summary": "Do you have swelling in one or more areas of your body? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_91",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 10,
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "summary": "Do you have a fever (either felt or measured with a thermometer)? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_155",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 11,
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "summary": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_129",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 12,
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "summary": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_52",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 13,
+        "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+        "summary": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_105",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 14,
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "summary": "Have you ever had a heart attack or do you have angina (chest pain)? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_211",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 15,
+        "question_en": "Have you vomited several times or have you made several efforts to vomit?",
+        "summary": "Have you vomited several times or have you made several efforts to vomit? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_70",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 16,
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "summary": "Are you significantly overweight compared to people of the same height as you? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_0",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 17,
+        "question_en": "Have you recently had a viral infection?",
+        "summary": "Have you recently had a viral infection? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_21",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 18,
+        "question_en": "Have you ever had a spontaneous pneumothorax?",
+        "summary": "Have you ever had a spontaneous pneumothorax? -> no"
+      },
+      {
+        "case_id": "test:81691",
+        "root_evidence_id": "E_24",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 19,
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "summary": "Have you ever had a diagnosis of anemia? -> no"
+      }
+    ]
+  },
+  "test:8666": {
+    "true_pathology": "Influenza",
+    "notebook13_predicted_pathology": "HIV (initial infection)",
+    "graph_only_predicted_pathology": "HIV (initial infection)",
+    "graph_adjudicator_predicted_pathology": "HIV (initial infection)",
+    "notebook13_correct": false,
+    "graph_adjudicator_correct": false,
+    "override_fired": false,
+    "num_requests": 3,
+    "stop_reason": "agent_stop",
+    "graph_margin": 2.001204585408302,
+    "reference_graph_score": 3.9121157598798524,
+    "graph_top1_score": 3.9121157598798524,
+    "top_graph_diagnoses": [
+      {
+        "disease": "HIV (initial infection)",
+        "graph_rank": 1,
+        "graph_net_support": 3.9121157598798524,
+        "graph_positive_support": 3.9121157598798524,
+        "graph_contradiction": 0.0,
+        "graph_posterior": 0.7550700166174346,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Influenza",
+        "graph_rank": 2,
+        "graph_net_support": 1.9109111744715508,
+        "graph_positive_support": 3.2785706039613114,
+        "graph_contradiction": 1.3676594294897604,
+        "graph_posterior": 0.1020645949616667,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pneumonia",
+        "graph_rank": 3,
+        "graph_net_support": 1.8737504566893224,
+        "graph_positive_support": 3.2795964742253574,
+        "graph_contradiction": 1.4058460175360348,
+        "graph_posterior": 0.09834140794548178,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "SLE",
+        "graph_rank": 4,
+        "graph_net_support": -0.7019651879488291,
+        "graph_positive_support": 2.2980348120511707,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.007483716555979687,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Inguinal hernia",
+        "graph_rank": 5,
+        "graph_net_support": -0.7323667153484663,
+        "graph_positive_support": 2.2676332846515335,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.0072596237829415594,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Epiglottitis",
+        "graph_rank": 6,
+        "graph_net_support": -1.328861606771621,
+        "graph_positive_support": 1.671138393228379,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.003998155443107413,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Scombroid food poisoning",
+        "graph_rank": 7,
+        "graph_net_support": -1.4050895211712553,
+        "graph_positive_support": 2.2927412501250046,
+        "graph_contradiction": 3.69783077129626,
+        "graph_posterior": 0.003704710807848109,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 8,
+        "graph_net_support": -1.4737425551039864,
+        "graph_positive_support": 1.5262574448960136,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.0034589053535494197,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anaphylaxis",
+        "graph_rank": 9,
+        "graph_net_support": -1.4957043241028836,
+        "graph_positive_support": 2.351543594196094,
+        "graph_contradiction": 3.8472479182989776,
+        "graph_posterior": 0.0033837697485082155,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Croup",
+        "graph_rank": 10,
+        "graph_net_support": -1.5150262707582138,
+        "graph_positive_support": 1.4849737292417862,
+        "graph_contradiction": 3.0,
+        "graph_posterior": 0.003319016325586884,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ],
+    "final_visible_evidence": [
+      {
+        "case_id": "test:8666",
+        "root_evidence_id": "E_91",
+        "outcome_state": "present",
+        "source": "initial_evidence",
+        "turn_index": 0,
+        "question_en": "",
+        "summary": "E_91 -> present [initial]"
+      },
+      {
+        "case_id": "test:8666",
+        "root_evidence_id": "E_214",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 1,
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "summary": "Have you noticed a wheezing sound when you exhale? -> no"
+      },
+      {
+        "case_id": "test:8666",
+        "root_evidence_id": "E_201",
+        "outcome_state": "absent",
+        "source": "request",
+        "turn_index": 2,
+        "question_en": "Do you have a cough?",
+        "summary": "Do you have a cough? -> no"
+      },
+      {
+        "case_id": "test:8666",
+        "root_evidence_id": "E_129",
+        "outcome_state": "present",
+        "source": "request",
+        "turn_index": 3,
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "summary": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? -> yes"
+      }
+    ]
+  }
+}

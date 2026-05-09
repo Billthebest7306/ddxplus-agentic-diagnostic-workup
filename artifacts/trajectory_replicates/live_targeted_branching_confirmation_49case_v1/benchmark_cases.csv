@@ -1,0 +1,50 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE,prior_available
+test:38475,Acute COPD exacerbation / infection,56,M,E_66,False
+test:104857,Acute dystonic reactions,18,M,E_172,False
+test:58986,Acute laryngitis,0,F,E_212,False
+test:33118,Acute otitis media,77,F,E_181,False
+test:93930,Acute pulmonary edema,42,M,E_151,False
+test:111176,Acute rhinosinusitis,4,F,E_201,False
+test:88250,Allergic sinusitis,33,F,E_201,False
+test:121319,Anaphylaxis,29,M,E_129,False
+test:18744,Anemia,7,F,E_179,False
+test:11342,Atrial fibrillation,66,M,E_155,False
+test:11198,Boerhaave,35,M,E_53,False
+test:112233,Bronchiectasis,11,M,E_201,False
+test:90978,Bronchiolitis,0,M,E_23,False
+test:11655,Bronchitis,27,F,E_53,False
+test:29123,Bronchospasm / acute asthma exacerbation,40,M,E_201,False
+test:51421,Chagas,7,M,E_91,False
+test:130566,Chronic rhinosinusitis,70,M,E_201,False
+test:46152,Cluster headache,40,F,E_53,False
+test:81691,Croup,9,F,E_181,False
+test:77908,Ebola,35,F,E_51,False
+test:91516,Epiglottitis,105,F,E_91,False
+test:96956,GERD,1,M,E_217,False
+test:34242,Guillain-Barré syndrome,16,M,E_84,False
+test:106010,HIV (initial infection),58,M,E_162,False
+test:8666,Influenza,20,F,E_91,False
+test:38202,Inguinal hernia,29,M,E_203,False
+test:133888,Larygospasm,35,M,E_194,False
+test:89477,Localized edema,2,F,E_151,False
+test:100664,Myasthenia gravis,17,M,E_65,False
+test:35039,Myocarditis,36,F,E_217,False
+test:51611,PSVT,52,M,E_53,False
+test:2801,Pancreatic neoplasm,90,F,E_51,False
+test:76022,Panic attack,36,M,E_155,False
+test:62878,Pericarditis,35,F,E_66,False
+test:95923,Pneumonia,24,F,E_66,False
+test:19160,Possible NSTEMI / STEMI,66,M,E_50,False
+test:23687,Pulmonary embolism,31,F,E_220,False
+test:105129,Pulmonary neoplasm,36,F,E_161,False
+test:52755,SLE,7,M,E_129,False
+test:36032,Sarcoidosis,37,F,E_53,False
+test:133024,Scombroid food poisoning,63,M,E_129,False
+test:749,Spontaneous pneumothorax,24,M,E_220,False
+test:71107,Spontaneous rib fracture,63,M,E_220,False
+test:16097,Stable angina,51,F,E_66,False
+test:107472,Tuberculosis,64,M,E_91,False
+test:13402,URTI,25,M,E_144,False
+test:125508,Unstable angina,36,M,E_89,False
+test:39033,Viral pharyngitis,66,F,E_53,False
+test:19424,Whooping cough,62,M,E_166,False

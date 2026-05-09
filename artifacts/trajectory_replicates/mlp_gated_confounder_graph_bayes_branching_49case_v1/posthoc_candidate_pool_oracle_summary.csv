@@ -1,0 +1,10 @@
+candidate_pool,correct_count,num_cases,accuracy,miss_recoveries_vs_selected
+current_scored_candidates,44,49,0.8979591836734694,0
+current_candidates_plus_all_candidate_ranked_top1,44,49,0.8979591836734694,0
+current_candidates_plus_all_candidate_ranked_top2,47,49,0.9591836734693877,3
+current_candidates_plus_all_candidate_ranked_top3,48,49,0.9795918367346939,4
+current_candidates_plus_all_candidate_ranked_top5,48,49,0.9795918367346939,4
+selected_final_ranked_differential_top1,44,49,0.8979591836734694,0
+selected_final_ranked_differential_top2,47,49,0.9591836734693877,3
+selected_final_ranked_differential_top3,47,49,0.9591836734693877,3
+selected_final_ranked_differential_top5,47,49,0.9591836734693877,3

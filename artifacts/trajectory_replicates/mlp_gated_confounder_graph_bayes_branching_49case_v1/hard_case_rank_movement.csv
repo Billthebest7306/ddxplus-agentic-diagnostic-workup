@@ -1,0 +1,8 @@
+case_id,true_pathology,base_predicted_pathology,predicted_pathology,base_pred_graph_rank,selected_pred_graph_rank,base_pred_bayes_posterior,selected_pred_bayes_posterior
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,1,1,0.9414890066947528,0.9414890066947528
+test:11655,Bronchitis,URTI,URTI,1,1,0.8480524662055084,0.8480524662055084
+test:81691,Croup,Acute otitis media,Acute otitis media,1,1,0.3222362042577427,0.3222362042577427
+test:8666,Influenza,HIV (initial infection),HIV (initial infection),1,1,0.7923865077792398,0.7923865077792398
+test:35039,Myocarditis,Sarcoidosis,Myocarditis,4,1,0.0004478116124583,0.5726152766047735
+test:76022,Panic attack,Myocarditis,Myocarditis,1,1,0.3834910828344186,0.3834910828344186
+test:62878,Pericarditis,Panic attack,Pericarditis,5,1,0.1399076168682593,0.9994166821530316

@@ -1,0 +1,70 @@
+root_evidence_id,question_en,count
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",98
+E_201,Do you have a cough?,97
+E_50,Have you had significantly increased sweating?,96
+E_89,Do you constantly feel fatigued or do you have non-restful sleep?,88
+E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,81
+E_70,Are you significantly overweight compared to people of the same height as you?,80
+E_125,Have you ever been diagnosed with gastroesophageal reflux?,77
+E_148,Are you feeling nauseous or do you feel like vomiting?,74
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",74
+E_194,Have you noticed a high pitched sound when breathing in?,72
+E_220,Do you have pain that is increased when you breathe in deeply?,68
+E_226,Are you more likely to develop common allergies than the general population?,64
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,64
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,63
+E_91,Do you have a fever (either felt or measured with a thermometer)?,59
+E_144,Do you have diffuse (widespread) muscle pain?,58
+E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,53
+E_79,Do you smoke cigarettes?,52
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,51
+E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,47
+E_181,Do you have nasal congestion or a clear runny nose?,44
+E_97,Do you have a sore throat?,43
+E_105,Have you ever had a heart attack or do you have angina (chest pain)?,40
+E_120,Do you have polyps in your nose?,38
+E_123,Do you have a chronic obstructive pulmonary disease (COPD)?,35
+E_69,Do you have diabetes?,35
+E_116,Have you had a cold in the last 2 weeks?,34
+E_49,Do you attend or work in a daycare?,33
+E_151,Do you have swelling in one or more areas of your body?,31
+E_48,Do you live with 4 or more people?,31
+E_104,Do you have high blood pressure or do you take medications to treat high blood pressure?,27
+E_214,Have you noticed a wheezing sound when you exhale?,26
+E_51,Have you had diarrhea or an increase in stool frequency?,24
+E_118,Have you ever had pneumonia?,22
+E_208,"Is your BMI less than 18.5, or are you underweight?",21
+E_45,Have you been coughing up blood?,21
+E_162,Have you had an involuntary weight loss over the last 3 months?,19
+E_227,Are you immunosuppressed?,19
+E_55,Do you feel pain somewhere?,19
+E_54,Characterize your pain:,19
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,18
+E_76,Do you feel slightly dizzy or lightheaded?,15
+E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,15
+E_134,How intense is the pain caused by the rash?,15
+E_161,Have you recently had a loss of appetite or do you get full more quickly then usually?,14
+E_106,Do you have heart failure?,12
+E_130,What color is the rash?,12
+E_136,How severe is the itching?,12
+E_135,Is the lesion (or are the lesions) larger than 1cm?,12
+E_88,Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?,11
+E_133,Where is the affected region located?,11
+E_103,Have you lost your sense of smell?,6
+E_53,"Do you have pain somewhere, related to your reason for consulting?",6
+E_131,Do your lesions peel off?,5
+E_196,Have you had surgery within the last month?,5
+E_222,Are you exposed to secondhand cigarette smoke on a daily basis?,4
+E_92,Did your cheeks suddenly turn red?,4
+E_182,Do you have greenish or yellowish nasal discharge?,3
+E_132,Is the rash swollen?,3
+E_146,Are you taking any new oral anticoagulants ((NOACs)?,2
+E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",2
+E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,2
+E_42,Have you been in contact with or ate something that you have an allergy to?,1
+E_159,Did you lose consciousness?,1
+E_152,Where is the swelling located?,1
+E_209,Are your vaccinations up to date?,1
+E_56,How intense is the pain?,1
+E_216,Do you have pain that is increased with movement?,1
+E_166,Did you vomit after coughing?,1

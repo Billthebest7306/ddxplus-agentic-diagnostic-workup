@@ -2793,6 +2793,109 @@ Final report added:
 
 - `reports/final_report.md`
 
+## 47. Notebook 15 Stop-Policy Sensitivity And Evidence-Trajectory Diagnostics
+
+Notebook `15` was added as an offline analysis notebook for the final Notebook `13` 49-case live run.
+
+Notebook:
+
+- `notebooks/15_notebook13_stop_policy_sensitivity.ipynb`
+
+Artifact root:
+
+- `artifacts/stop_policy_sensitivity/notebook13_49case_v1/`
+
+Report:
+
+- `reports/hybrid/notebook13_stop_policy_sensitivity_report.md`
+
+Purpose:
+
+- inspect which evidence fields were requested
+- compare request counts for correct vs incorrect cases
+- inspect hard-case trajectories
+- quantify wrong-to-correct and correct-to-wrong prediction transitions over turns
+- run an offline sweep over MLP stop thresholds without any API calls
+
+Important implementation detail:
+
+- the notebook parses Notebook `13` traces for turn-level states
+- for observed final states, it treats Notebook `13` `predictions.csv` as authoritative so recovered metrics match the final saved run
+- the max-cap case is given a synthetic final state after the 24th reveal because its trace has no explicit no-reveal stop turn
+
+Recovered current Notebook `13` rule:
+
+| Threshold | Value |
+|---|---:|
+| minimum requests | 1 |
+| MLP confidence | `>= 0.70` |
+| MLP margin | `>= 0.20` |
+| MLP entropy | `<= 0.10` |
+
+Recovered current-rule metrics:
+
+| Metric | Value |
+|---|---:|
+| Accuracy | 43/49 = 0.878 |
+| Top-3 | 0.918 |
+| Top-5 | 0.939 |
+| Macro-F1 | 0.845 |
+| Mean requests | 6.59 |
+| Median requests | 5.0 |
+| Threshold-fired rate | 36/49 = 0.735 |
+
+Threshold-sweep finding:
+
+- no offline threshold variant improves above `43/49`
+- the best tie reaches the same `43/49` and `0.939` top-5 at `6.55` mean requests
+- this only saves about `0.04` mean requests relative to Notebook `13`
+- the apparent saving comes from stopping two already-easy correct cases one turn earlier
+- therefore threshold tuning alone is not a meaningful improvement
+
+Evidence-request findings:
+
+- Notebook `13` requested `323` evidence fields across `49` cases
+- top requested evidence fields were broad clinical discriminators:
+  - `E_129`: skin lesions/redness/problems, `21` requests
+  - `E_151`: swelling, `20` requests
+  - `E_201`: cough, `14` requests
+  - `E_79`: smoking, `13` requests
+  - `E_91`: fever, `11` requests
+
+Request allocation:
+
+| Final correctness | Cases | Mean requests | Median requests | Range |
+|---|---:|---:|---:|---|
+| Incorrect | 6 | 11.83 | 11.5 | 2-24 |
+| Correct | 43 | 5.86 | 5.0 | 0-23 |
+
+Interpretation:
+
+- incorrect cases generally used more evidence, not less
+- this means the remaining failures are not mostly caused by too few requests
+- some failures are early wrong stops, but several are long wrong trajectories
+
+Prediction-transition finding:
+
+| Head | Wrong-to-correct | Correct-to-wrong | Stable correct | Stable wrong |
+|---|---:|---:|---:|---:|
+| LLM | 40 | 11 | 79 | 193 |
+| Hybrid | 40 | 11 | 79 | 193 |
+| MLP | 38 | 10 | 66 | 209 |
+
+Interpretation:
+
+- extra evidence often helps because wrong-to-correct transitions exceed correct-to-wrong transitions
+- extra evidence can still hurt because correct-to-wrong transitions exist
+- the biggest remaining issue is stable wrong belief, not simply under-questioning
+
+Final takeaway:
+
+- Notebook `13` remains the frozen proposed method
+- Notebook `15` supports keeping the current stop thresholds
+- the next high-value improvement is not threshold tweaking
+- further progress should focus on contradiction handling, hard-case trajectory repair, or better question selection for persistent wrong-belief cases
+
 Report organization added:
 
 - current final reports remain in `reports/`
@@ -2801,3 +2904,1779 @@ Report organization added:
 - architecture and ledger reports moved under `reports/architecture/`
 - planning/claims reports moved under `reports/project/`
 - index added at `reports/README.md`
+
+## 48. Algorithmic Evidence Ledger Research Phase
+
+After reviewing MEDDxAgent and the Notebook `15` stop-policy diagnostics, the next planned method improvement is an **algorithmic evidence ledger**.
+
+New research/design notes:
+
+- `research/algorithmic_evidence_ledger_research.md`
+- `research/algorithmic_evidence_ledger_design_plan.md`
+
+Core motivation:
+
+- Notebook `13` already has a strong MLP-guided stop rule.
+- Notebook `15` showed threshold tuning alone does not improve beyond `43/49`.
+- Incorrect cases usually requested more evidence than correct cases, so the remaining bottleneck is not simply "ask more."
+- Remaining failures are better described as wrong-belief trajectories, unresolved competing diagnoses, contradiction handling, and diagnostic drift.
+
+Research grounding:
+
+- DDXPlus and AARLC justify evidence acquisition with classifier uncertainty/entropy.
+- Active feature acquisition and cost-sensitive classification justify asking only high-value evidence.
+- MediQ and ALFA show that LLM question-asking needs structured guidance.
+- MEDDxAgent establishes interactive LLM DDx as prior work, so our novelty should be narrower.
+- TriMediQ supports the idea that structured intermediate representations improve multi-turn medical reasoning.
+
+Planned ledger concept:
+
+- name: **Evidence-Gated Differential Ledger** (`EGDL`)
+- role: deterministic control layer, not just memory
+- inputs: visible DDXPlus evidence, partial-evidence MLP belief, LLM differential, train-derived pathology/evidence statistics
+- outputs: support/contradiction signals, unresolved-pair flags, drift warnings, candidate action values, and stop certificates
+
+Recommended implementation sequence:
+
+1. build Notebook `16`, an offline algorithmic-ledger analysis over Notebook `13` 49-case traces
+2. validate that ledger signals explain or flag current hard cases without API calls
+3. only after offline validation, build Notebook `17` as a live confirmation run
+
+Notebook `16` should answer:
+
+- can the ledger flag wrong final stops before they happen?
+- do unresolved diagnosis pairs predict errors?
+- do contradiction/drift flags explain hard cases?
+- can a stop certificate preserve `43/49` while reducing or better justifying requests?
+- which high-value evidence fields were missed or delayed?
+
+Notebook `17` should only be run if Notebook `16` produces actionable evidence.
+
+## 49. Graph Algorithmic Ledger Research Update
+
+After further discussion, the ledger direction was refined from a deterministic scoring ledger into a more explicitly **graph-structured algorithmic evidence ledger**.
+
+New research/design files:
+
+- `research/graph_algorithmic_evidence_ledger_prior_work.md`
+- `research/graph_algorithmic_evidence_ledger_design.md`
+
+Reason for revision:
+
+- The original "algorithmic ledger" design was useful but too close to tables of deterministic scores.
+- The stronger and more defensible version is a patient-specific graph where evidence outcomes, pathologies, candidate requests, and unresolved differential pairs are nodes connected by signed support/contradiction/discriminator edges.
+- This better matches the original project ambition around graphs and a real algorithmic ledger.
+
+Important prior-work finding:
+
+- MedKGI is very close to the graph direction: medical KG alignment, information-gain inquiry, structured diagnostic records, and hypothesis-driven termination.
+- Therefore the project should not claim generic novelty for "KG + interactive diagnosis."
+- The project distinction should be DDXPlus-native graph construction over official evidence root slots, online partial-evidence MLP belief, exact legal evidence reveals, and matched-evidence evaluation.
+
+Planned graph method:
+
+- name: **Graph Evidence Ledger Controller** (`GEL-C`)
+- build a global DDXPlus evidence graph from train-derived `P(outcome | pathology)` statistics
+- build a dynamic patient episode graph from visible evidence only
+- compute signed support and contradiction edges from observed outcomes to active diseases
+- construct unresolved disease-pair nodes for top competing diagnoses
+- score candidate evidence roots by information gain, pair separation, contradiction probing, graph centrality, split balance, redundancy penalty, and generic penalty
+- require a graph stop certificate before final diagnosis
+
+Next notebook should be:
+
+- `notebooks/16_graph_algorithmic_evidence_ledger_offline_analysis.ipynb`
+
+This notebook should be offline only and should answer whether graph signals explain or flag the current Notebook `13` failures before any new live API run.
+
+## 50. Notebook 16 MedKGI-Style Graph Ledger V1
+
+Notebook `16` was implemented as the first algorithmic graph-ledger version.
+
+Notebook:
+
+- `notebooks/16_graph_algorithmic_evidence_ledger_offline_analysis.ipynb`
+
+Artifacts:
+
+- `artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1/`
+
+Report:
+
+- `reports/algorithmic_ledger/medkgi_style_graph_ledger_v1_report.md`
+
+What was built:
+
+- a DDXPlus-native global evidence graph from the training split only
+- pathology nodes, root evidence nodes, and outcome-state nodes represented through exported edge tables
+- train-derived outcome probabilities, log-odds support, mutual information, root entropy, and present-rate statistics
+- replay of Notebook `13` 49-case traces with visible evidence only
+- MedKGI-style candidate scoring using expected information gain, split balance, global MI, and generic/redundancy penalties
+- actual-request graph-rank analysis
+- offline graph stop-certificate replay
+- hard-case graph audits
+
+Key numbers:
+
+| Item | Result |
+|---|---:|
+| Train rows used for graph stats | `1,025,602` |
+| Root evidence fields | `223` |
+| Pathologies | `49` |
+| Notebook `13` reference accuracy | `43/49 = 0.878` |
+| Notebook `13` reference mean requests | `6.59` |
+
+Request-quality result:
+
+| Final outcome | Requests | Mean graph rank | Mean graph score | Mean information gain | Top-10 rate |
+|---|---:|---:|---:|---:|---:|
+| Incorrect final diagnosis | `71` | `9.73` | `0.233` | `0.194` | `0.676` |
+| Correct final diagnosis | `252` | `6.61` | `0.283` | `0.247` | `0.794` |
+
+Interpretation:
+
+- graph scores are meaningful: correct trajectories requested more graph-informative evidence
+- failed trajectories often requested lower-ranked evidence and retained high unresolved graph value
+- hard cases such as COPD, Croup, Influenza, Pericarditis, and Unstable angina show evidence-trajectory problems, not just stop-threshold problems
+
+Stop-certificate result:
+
+- strict graph thresholds `0.03` through `0.20` did not fire on recorded trajectories
+- threshold `0.30` fired on only `6/49` cases
+- threshold `1.00` behaves like an MLP-only reference and should not be treated as a meaningful graph gate
+- offline replay does not prove that a graph stop certificate improves Notebook `13`
+
+Current conclusion:
+
+Notebook `16` supports a conditional live graph-shortlist pilot, not a stop-policy replacement claim.
+
+Recommended next step:
+
+- build Notebook `17` as a live MedKGI-style graph-shortlist pilot
+- keep the Notebook `13` MLP-guided stop rule fixed
+- replace only the evidence shortlist with graph top-10 candidates
+- compare against Notebook `13` on the same cases, request count, hard-case outcomes, and request graph value
+
+## 51. Notebook 17 Live MedKGI Graph Shortlist Pilot
+
+Notebook `17` was implemented as the first live algorithmic-ledger pilot.
+
+Notebook:
+
+- `notebooks/17_live_medkgi_graph_shortlist_pilot.ipynb`
+
+Report/run guide:
+
+- `reports/algorithmic_ledger/live_medkgi_graph_shortlist_pilot.md`
+
+Dry-run artifact:
+
+- `artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_dryrun_smoke_v1/`
+
+What changed from Notebook `13`:
+
+- the LLM loop is still single-agent
+- the LLM model remains fixed to `gpt-4.1-mini`
+- deterministic API settings remain `temperature = 0.0`, `top_p = 1.0`
+- the selected MLP stop rule is unchanged
+- final heads are unchanged
+- only the evidence shortlist changed
+
+New shortlist method:
+
+- loads or rebuilds train-derived graph stats from Notebook `16`
+- builds the active differential from MLP top-5, previous LLM differential, deterministic candidates, and the prior anchor
+- scores legal unrevealed roots by:
+
+```text
+score = penalty * (0.80 * information_gain + 0.15 * split_balance + 0.05 * global_mi)
+```
+
+- exposes graph top-10 legal roots to the LLM
+- includes graph score, information gain, split balance, weighted present rate, and active diseases in the prompt
+
+Run scopes:
+
+- `RUN_SCOPE = "pilot24"` compares against Notebook `13` 24-case selected-stop run
+- `RUN_SCOPE = "final49"` compares against Notebook `13` 49-case selected-stop run
+- default is safe: `RUN_LIVE_API = False`, `ALLOW_DRY_RUN_BENCHMARK = True`, `DRY_RUN_MAX_CASES = 2`
+
+Dry-run validation:
+
+- Notebook `17` executed successfully without API calls
+- all expected artifact files were written
+- `promotion_decision.json` correctly marks the smoke result as `dry_run_smoke_not_for_promotion`
+
+Next action:
+
+- run `pilot24` live first
+- only run `final49` if the 24-case live pilot is not clearly worse than Notebook `13`
+- evaluate primarily against accuracy, mean requests, hard-case outcomes, and graph request quality
+
+## 52. Notebook 17 Live Pilot Result
+
+Notebook `17` has now been run live on the 24-case pilot scope.
+
+Artifact:
+
+- `artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_v1/`
+
+Updated report:
+
+- `reports/algorithmic_ledger/live_medkgi_graph_shortlist_pilot.md`
+
+Additional paired artifact:
+
+- `artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_v1/notebook13_vs_graph_paired_case_results.csv`
+
+Live result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid v1 | 22/24 | 0.917 | 0.917 | 0.917 | 0.867 | 6.58 |
+| Notebook `08` lambda `0.10` LLM-only | 22/24 | 0.917 | 0.917 | 0.917 | 0.846 | 13.04 |
+| Notebook `12` offline selected stop | 22/24 | 0.917 | 0.917 | 0.917 | 0.867 | 6.88 |
+| Notebook `17` graph shortlist pilot | 20/24 | 0.833 | 0.833 | 0.875 | 0.744 | 6.21 |
+
+Graph-specific metrics from Notebook `17`:
+
+| Metric | Value |
+|---|---:|
+| Mean requested graph rank | 1.76 |
+| Mean requested information gain | 0.373 |
+| Requests outside graph top-10 | 0 |
+| Mean graph shortlist size | 10.0 |
+| Stop-before-cap rate | 0.958 |
+| Cap-hit count | 1 |
+
+Paired outcome against Notebook `13`:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 20 |
+| Notebook `13` only correct | 2 |
+| Notebook `17` only correct | 0 |
+| Both wrong | 2 |
+
+Case-level notes:
+
+- `test:51421` Chagas was correct in Notebook `13` but became Sarcoidosis in Notebook `17`
+- `test:77908` Ebola was correct in Notebook `13` but became HIV initial infection in Notebook `17`
+- `test:81691` Croup remained wrong
+- `test:62878` Pericarditis remained wrong and used more requests than Notebook `13`
+- Notebook `17` fixed no cases that Notebook `13` got wrong
+
+Promotion decision:
+
+- `reject_keep_notebook13_v1`
+
+Interpretation:
+
+Notebook `17` is a useful negative result. The graph shortlist is mechanically high quality by its own scoring system: requested fields are high-ranked, information-gain values are strong, and no request falls outside the graph top-10. But diagnosis got worse. That means the problem is not whether the graph can rank evidence under an active differential; it is whether the active differential and hard graph pruning are safe enough to control the LLM action space.
+
+The likely failure mode is over-constrained question selection. If the active differential is already biased or missing the true disease family, the graph top-10 efficiently asks questions that separate the wrong candidates. This can reduce request count slightly while harming diagnostic accuracy.
+
+Current project decision:
+
+- Notebook `13` remains the frozen proposed method.
+- Do not run Notebook `17` `final49` for this graph-replacement v1.
+- If graph work continues, use graph scores as advisory/blended shortlist features rather than a hard replacement shortlist.
+
+Next graph direction, if needed:
+
+```text
+Notebook 13 shortlist diversity
++ graph top-ranked discriminative fields
++ rare/critical disease safety roots
++ guard against pruning diseases absent from current active top-k
+```
+
+This keeps the algorithmic ledger useful without letting it collapse the action space around a potentially wrong active belief.
+
+## 53. Notebook 18 Graph-Advisory Hybrid Shortlist
+
+Notebook `18` was implemented as the successor to the rejected Notebook `17` graph-replacement shortlist.
+
+Notebook:
+
+- `notebooks/18_graph_advisory_hybrid_shortlist.ipynb`
+
+Report:
+
+- `reports/algorithmic_ledger/graph_advisory_hybrid_shortlist_report.md`
+
+Dry-run artifact:
+
+- `artifacts/graph_algorithmic_ledger/live_graph_advisory_hybrid_shortlist_pilot24_dryrun_smoke_v1/`
+
+What changed from Notebook `17`:
+
+- graph no longer hard-replaces the action shortlist
+- Notebook `13` shortlist diversity is preserved
+- graph information gain becomes an advisory/reranking feature
+- rare disease-specific train-derived support can force decisive evidence fields into the candidate pool
+- agent stop can be conservatively overridden when the MLP is uncertain and high-value or rare evidence remains
+
+Advisory score:
+
+```text
+score =
+  0.45 * notebook13_score_norm
++ 0.25 * graph_information_gain_norm
++ 0.20 * disease_specific_support_norm
++ 0.10 * split_balance
+```
+
+Rare-support rule:
+
+```text
+rare_support_candidate if:
+  active disease contains pathology with root outcome log_odds_support >= 5.0
+  and root global_present_rate <= 0.05
+  and candidate root is legal and unrevealed
+```
+
+Why this matters:
+
+- Notebook `17` failed partly because decisive rare fields such as Ebola contact/bleeding and Chagas weight-loss evidence had low global MI
+- Notebook `18` explicitly adds disease-specific log-odds support so rare high-specificity evidence is not pruned out
+- this tests whether the graph ledger is better as an advisory layer than as a hard controller
+
+Validation completed:
+
+- all code cells parse successfully
+- safe dry-run executed top-to-bottom with `nbclient`
+- no live API calls were made
+- `INTERACTIVE_API_KEY_BOOTSTRAP = False` by default, so dry runs do not prompt
+- expected artifacts were written, including:
+  - `metrics.json`
+  - `predictions.csv`
+  - `traces.jsonl`
+  - `reference_comparison.csv`
+  - `notebook13_vs_notebook18_paired_case_results.csv`
+  - `notebook17_vs_notebook18_paired_case_results.csv`
+  - `advisory_shortlist_components.csv`
+  - `rare_evidence_coverage.csv`
+  - `agent_stop_safety_checks.csv`
+  - `agent_stop_safety_overrides.csv`
+  - `promotion_decision.json`
+  - figures under `figures/`
+
+Dry-run metrics are not scientific results. They only prove that the notebook executes and writes the expected artifacts.
+
+Next action:
+
+- run Notebook `18` live on `pilot24`
+- do not rerun Notebooks `13` or `17`; Notebook `18` compares against their existing artifacts
+- do not run `final49` unless `pilot24` meets the promotion rule
+
+Promotion rule:
+
+- promote if `correct_count >= 22` and mean requests `<= 6.58`
+- promote if `correct_count >= 23` and mean requests `<= 8.0`
+- reject if `correct_count <= 21`
+- reject if it repeats Notebook `17`'s Chagas/Ebola failures
+
+## 54. Notebook 18 Live Pilot Result
+
+Notebook `18` has now been run live on the 24-case pilot slice.
+
+Artifact:
+
+- `artifacts/graph_algorithmic_ledger/live_graph_advisory_hybrid_shortlist_pilot24_v1/`
+
+Updated report:
+
+- `reports/algorithmic_ledger/graph_advisory_hybrid_shortlist_report.md`
+
+Live result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid v1 | 22/24 | 0.917 | 0.917 | 0.917 | 0.867 | 6.58 |
+| Notebook `17` hard graph shortlist | 20/24 | 0.833 | 0.833 | 0.875 | 0.744 | 6.21 |
+| Notebook `18` graph-advisory shortlist | 21/24 | 0.875 | 0.875 | 0.917 | 0.795 | 7.67 |
+
+Paired result against Notebook `13`:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 21 |
+| Notebook `13` only correct | 1 |
+| Notebook `18` only correct | 0 |
+| Both wrong | 2 |
+
+Paired result against Notebook `17`:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 19 |
+| Notebook `18` only correct | 2 |
+| Notebook `17` only correct | 1 |
+| Both wrong | 2 |
+
+Case-level interpretation:
+
+- Notebook `18` recovered Notebook `17`'s Chagas failure: `test:51421` went from Sarcoidosis/wrong to Chagas/correct.
+- Notebook `18` recovered Notebook `17`'s Ebola failure: `test:77908` went from HIV initial infection/wrong to Ebola/correct.
+- Notebook `18` introduced a new Stable angina failure: `test:16097` went from Stable angina/correct in Notebook `13` and Notebook `17` to Boerhaave/wrong.
+- Croup (`test:81691`) and Pericarditis (`test:62878`) remain persistent hard cases.
+
+Graph/advisory diagnostics:
+
+| Metric | Value |
+|---|---:|
+| Mean requested graph rank | 5.12 |
+| Mean requested information gain | 0.242 |
+| Mean top graph score at stop | 0.796 |
+| Requests outside pure graph top-10 | 17 |
+| Agent-stop safety overrides | 8 |
+| Cap-hit count | 3 |
+
+The `requests outside pure graph top-10` value is expected because Notebook `18` deliberately restores Notebook `13` diversity and rare-support fields. Unlike Notebook `17`, graph scores no longer hard-control the action space.
+
+Research decision:
+
+- Notebook `18` is rejected under the written promotion rule because it scored only `21/24` and used more requests than Notebook `13`.
+- The generated artifact labels the result as conditional review, but the research interpretation should follow the predeclared rule: `correct_count <= 21` means reject.
+- Notebook `13` remains the frozen proposed method.
+- Notebook `18` is still useful as a diagnostic ablation: graph advisory support can fix some rare-disease failures, but it also adds trajectory complexity and does not yet improve the main method.
+
+Current graph conclusion:
+
+- hard graph replacement is too restrictive
+- graph-advisory blending is safer than hard replacement
+- neither graph variant beats Notebook `13`
+- graph information is currently strongest as an audit/explanation layer, not as the promoted live controller
+
+Recommended next step:
+
+- do not run Notebook `18` on `final49`
+- keep Notebook `13` as the main proposed system for final presentation
+- use Notebooks `16`, `17`, and `18` as rigorous algorithmic-ledger ablations showing why graph control needs stronger belief-correction logic before promotion
+
+## 55. Bayesian VOI Algorithmic Ledger Research Direction
+
+After Notebook `17` and Notebook `18`, the next proposed algorithmic direction is a Bayesian value-of-information evidence ledger.
+
+New research note:
+
+- `research/bayesian_voi_algorithmic_ledger_research.md`
+
+Updated literature map:
+
+- `research/project_literature_map.md`
+
+Why this direction:
+
+- Notebook `13` is already strong at stopping.
+- Notebook `17` and Notebook `18` show that graph ranking alone does not reliably improve question selection.
+- The remaining failure mode is wrong belief recovery, not simply early stopping.
+- A Bayesian VOI ledger directly maintains a posterior over all `49` diagnoses and asks evidence questions based on expected posterior improvement.
+
+Core idea:
+
+```text
+visible evidence
+-> Bayesian posterior over all DDXPlus pathologies
+-> support and contradiction accounting
+-> expected value of each legal unrevealed evidence field
+-> request field if value exceeds evidence cost
+-> stop only when posterior, MLP, and remaining VOI agree
+```
+
+Research basis:
+
+- Bayesian medical inquiry and QMR-style disease inference
+- active diagnosis via entropy/information-gain test selection
+- cost-sensitive feature acquisition and classification
+- AARLC-style entropy alignment between inquiry and classifier
+- MedKGI-style information-guided inquiry, but with posterior-level VOI instead of graph-edge-only ranking
+
+What we have to work with:
+
+- DDXPlus train split for likelihood tables:
+  - `P(evidence_outcome | pathology)`
+  - disease priors
+  - log-likelihood ratios
+  - root mutual information
+  - rare disease-specific support
+- DDXPlus test environment:
+  - hidden evidence can be revealed only when requested
+  - this allows an offline deterministic VOI agent with no API calls
+- existing MLP artifacts:
+  - initial-evidence one-shot
+  - full-evidence ceiling
+  - partial-evidence policy-shaped MLP
+- existing traces:
+  - Notebook `13` 49-case traces
+  - Notebook `17`/`18` graph failure traces
+
+Recommended next notebook:
+
+```text
+notebooks/19_bayesian_voi_algorithmic_ledger_offline.ipynb
+```
+
+Notebook `19` should be offline-only:
+
+- build train-derived Bayesian likelihood tables
+- calibrate posterior on validation
+- replay Notebook `13` traces with Bayesian posterior/VOI diagnostics
+- run a deterministic Bayesian VOI agent that requests evidence from the DDXPlus environment without using test labels
+- compare Bayes-only, MLP-only, and fused final heads
+- audit hard cases: Croup, Pericarditis, Stable angina, Chagas, Ebola
+
+Promotion condition:
+
+- do not make a live Notebook `20` until Notebook `19` shows a real signal
+- a real signal means matching or beating Notebook `13`, improving persistent hard cases, or reducing requests at matched accuracy
+
+Interpretation:
+
+This is the strongest next mathematical direction. It does not claim Bayesian/VOI diagnosis is new. The project-specific contribution would be a DDXPlus-native Bayesian VOI ledger fused with the BASD-style partial-evidence MLP and optionally used to constrain the LLM evidence-acquisition agent.
+
+## 56. Notebook 19 Bayesian VOI Algorithmic Ledger Offline
+
+Notebook `19` has been implemented as the next offline algorithmic-ledger candidate.
+
+New notebook:
+
+- `notebooks/19_bayesian_voi_algorithmic_ledger_offline.ipynb`
+
+New report:
+
+- `reports/algorithmic_ledger/bayesian_voi_ledger_offline_report.md`
+
+Artifact roots:
+
+- smoke: `artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1_smoke/`
+- full: `artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/`
+
+What changed:
+
+- built train-only Bayesian disease/evidence likelihood tables
+- added disease priors, age/sex likelihoods, root outcome likelihoods, root mutual information, and root log-odds support
+- implemented a `BayesianEvidenceLedger` that tracks visible evidence, requested evidence, legal roots, posterior state, contradiction score, and request history
+- fused Bayesian posterior with the selected partial-evidence MLP posterior using fixed log-linear pooling
+- selected evidence by one-step value of information over legal unrevealed DDXPlus evidence roots
+- added a stop certificate requiring confidence, margin, entropy, low remaining VOI, low contradiction, and Bayes/MLP/fused agreement
+- saved posterior calibration, policy sweep, traces, candidate scores, hard-case audits, comparison rows, and figures
+
+VOI utility:
+
+```text
+utility =
+  0.55 * expected_fused_entropy_reduction
++ 0.20 * expected_margin_gain
++ 0.15 * contradiction_resolution_gain
++ 0.10 * rare_recovery_bonus
+- lambda_cost
+- redundancy_penalty
+```
+
+Stop certificate:
+
+```text
+stop if:
+  fused_confidence >= 0.70
+  fused_margin >= 0.20
+  fused_entropy <= 0.35
+  max_remaining_utility <= 0
+  contradiction_score <= 1.5
+  min_requests >= 1
+  Bayes/MLP/fused agreement is acceptable
+```
+
+Validation completed:
+
+- static code-cell parse passed
+- source notebook has no outputs
+- no API adapter, `LLM_API_KEY`, or live HTTP call path exists
+- smoke execution completed top-to-bottom with `BAYESIAN_VOI_SMOKE_MODE=1`
+- smoke artifacts and figures were written successfully
+
+Smoke metrics:
+
+| Metric | Value |
+|---|---:|
+| Cases | 3 |
+| Fused correct | 2/3 |
+| Fused accuracy | 0.667 |
+| Mean requests | 2.67 |
+| Stop-before-cap rate | 0.667 |
+| Cap-hit count | 1 |
+
+Full 49-case result:
+
+| Lambda | Fused correct | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests | Cap hits |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0.00 | 33/49 | 0.673 | 0.837 | 0.878 | 0.620 | 22.37 | 28 |
+| 0.02 | 26/49 | 0.531 | 0.735 | 0.837 | 0.461 | 7.98 | 4 |
+| 0.05 | 26/49 | 0.531 | 0.633 | 0.776 | 0.447 | 5.65 | 1 |
+| 0.10 | 25/49 | 0.510 | 0.653 | 0.776 | 0.424 | 4.43 | 1 |
+| 0.15 | 24/49 | 0.490 | 0.633 | 0.776 | 0.396 | 4.33 | 1 |
+
+Reference:
+
+| System | Correct | Accuracy | Top-5 | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid v1 | 43/49 | 0.878 | 0.939 | 6.59 |
+| Notebook `19` best fused, lambda `0.00` | 33/49 | 0.673 | 0.878 | 22.37 |
+| Notebook `19` near-budget, lambda `0.02` | 26/49 | 0.531 | 0.837 | 7.98 |
+
+Paired result against Notebook `13` at lambda `0.00`:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 32 |
+| Notebook `19` only correct | 1 |
+| Notebook `13` only correct | 11 |
+| Both wrong | 5 |
+
+The one Notebook `19` fix over Notebook `13` was `test:125508` Unstable angina, where Notebook `13` predicted Anemia and Notebook `19` predicted Unstable angina. This did not offset the eleven regressions.
+
+Main failure interpretation:
+
+- Notebook `19` is not a close miss; it is a negative algorithmic ablation.
+- Lambda `0.00` asked far more evidence than Notebook `13` but still performed much worse, so the main issue is not early stopping.
+- Higher lambdas reduced requests but collapsed accuracy further.
+- The VOI policy over-requested generic/global roots such as palpitations, cough, sweating, fatigue, asthma history, obesity, and GERD.
+- The partial-evidence MLP became overconfident on VOI-generated evidence subsets that differ from the trace distribution it was trained on.
+- Bayes-only at lambda `0.00` reached `0.714`, better than fused/MLP, but still far below Notebook `13`.
+- The Bayesian naive-independence model is useful as an audit signal, but not strong enough as a replacement controller.
+
+Promotion decision:
+
+- `do_not_promote_yet`
+- do not create a live Notebook `20` from this version
+- keep Notebook `13` as the frozen proposed method
+- use Notebook `19` as evidence that posterior-level VOI is not automatically enough unless it is calibrated to the same evidence-trajectory distribution as the partial-evidence classifier
+
+Next possible direction:
+
+- if continuing algorithmic work, use Bayesian VOI as an advisory feature inside the Notebook `13` shortlist rather than a replacement controller
+- alternatively, train a partial-evidence MLP on VOI-generated trajectories before trusting MLP feedback on those trajectories
+
+## 57. Algorithmic Ledger Reset: LLM-Led Graph Ledger Context
+
+After reviewing the intent of the project, the algorithmic-ledger direction has been reset.
+
+New research folder:
+
+- `research/llm_led_algorithmic_ledger_v2/`
+
+New files:
+
+- `research/llm_led_algorithmic_ledger_v2/README.md`
+- `research/llm_led_algorithmic_ledger_v2/01_prior_work.md`
+- `research/llm_led_algorithmic_ledger_v2/02_design_plan.md`
+- `research/llm_led_algorithmic_ledger_v2/03_notebook20_plan.md`
+
+Reason for reset:
+
+- Notebooks `17`, `18`, and `19` tested graph/Bayesian/VOI logic mostly as replacement controllers or heavy shortlist controllers.
+- That was not the intended architecture.
+- The intended architecture is that the LLM remains the question chooser while the graph/algorithmic ledger provides structured case understanding.
+
+Corrected architecture:
+
+```text
+DDXPlus environment
+-> deterministic evidence ledger
+-> graph evidence ledger updates support/contradiction/unresolved pairs
+-> prompt compiler gives compact graph state to LLM
+-> LLM chooses next evidence request
+-> DDXPlus reveals answer
+-> partial-evidence MLP evaluates stop readiness
+-> repeat
+```
+
+What the graph ledger should do:
+
+- track which revealed evidence supports each active diagnosis
+- track which revealed evidence contradicts each active diagnosis
+- identify unresolved competing diagnosis pairs
+- suggest missing discriminators as advisory context
+- warn when LLM, MLP, and graph support disagree
+- improve state understanding and trace explainability
+
+What it should not do:
+
+- replace the LLM as the question chooser
+- hard-filter the action space to graph top-k fields
+- force Bayesian/VOI actions
+- override the LLM except for legality or schema repair
+
+Online research consulted:
+
+- DDXPlus NeurIPS 2022
+- MedKGI
+- Think-on-Graph
+- Dr.Knows / KG-augmented diagnosis prediction
+- MEDDxAgent
+- KoSEL
+- MedKA
+- MDAgents
+- KG4Diagnosis
+
+Main research conclusion:
+
+The corrected direction is closer to knowledge-graph-augmented LLM reasoning than active feature acquisition. The graph ledger should be an intelligent memory/reasoning substrate, not a replacement policy.
+
+Recommended next notebook:
+
+```text
+notebooks/20_llm_led_graph_ledger_context.ipynb
+```
+
+Notebook `20` should adapt Notebook `13`, not Notebook `17`, `18`, or `19`.
+
+Fixed first implementation:
+
+- keep `gpt-4.1-mini`
+- keep Notebook `13` LLM-led question loop
+- keep Notebook `13` base action menu
+- keep Notebook `13` partial-evidence MLP stop rule
+- add one compact `GRAPH LEDGER CONTEXT` prompt section
+- evaluate first on the same 24-case pilot slice
+
+Promotion logic:
+
+- promote to 49 cases only if pilot24 does not regress against Notebook `13`
+- success can be better accuracy, same accuracy with fewer requests, or same accuracy with materially better hard-case trace coherence
+
+Interpretation:
+
+This resolves the mismatch between the user's intended algorithmic ledger and the last few algorithmic experiments. The failed notebooks remain useful as negative ablations, but they should not be treated as tests of the intended graph-ledger support architecture.
+
+## 58. Notebook 20 Implemented: LLM-Led Graph Ledger Context
+
+Implemented:
+
+- `notebooks/20_llm_led_graph_ledger_context.ipynb`
+- `reports/algorithmic_ledger/llm_led_graph_ledger_context_report.md`
+
+Artifact root for default dry-run:
+
+- `artifacts/graph_algorithmic_ledger/llm_led_graph_ledger_context_pilot24_dryrun_smoke_v1/`
+
+Artifact root for live pilot:
+
+- `artifacts/graph_algorithmic_ledger/llm_led_graph_ledger_context_pilot24_v1/`
+
+Core implementation decision:
+
+- Notebook `20` was cloned from Notebook `13`, not from Notebooks `17`, `18`, or `19`.
+- The LLM remains the evidence-request chooser.
+- The Notebook `13` deterministic action menu remains in place.
+- The Notebook `13` MLP-guided stop rule remains unchanged.
+- The graph ledger is used only as prompt context.
+
+New graph context components:
+
+- active differential from MLP, previous LLM differential, deterministic state, and prior
+- support score for each active diagnosis from revealed evidence
+- contradiction score for each active diagnosis from revealed evidence
+- unresolved diagnosis pairs
+- advisory discriminator fields
+- consistency warnings when LLM, MLP, and graph support disagree
+
+New output files:
+
+- `graph_context_by_turn.csv`
+- `warning_resolution_summary.csv`
+- `hard_case_graph_context_audit.json`
+- `promotion_decision.json`
+
+New prediction columns:
+
+- `num_graph_warnings_final`
+- `num_unresolved_pairs_final`
+- `final_top_diagnosis_support`
+- `final_top_diagnosis_contradiction`
+- `warnings_resolved_count`
+- `graph_context_tokens_estimate`
+
+Validation completed:
+
+- static parse passed for all Notebook `20` code cells
+- dry-run executed top-to-bottom with no API key
+- default notebook state is safe:
+  - `RUN_LIVE_API = False`
+  - `ALLOW_DRY_RUN_BENCHMARK = True`
+  - `RUN_SCOPE = "pilot24"`
+  - `DRY_RUN_MAX_CASES = 2`
+- all required dry-run artifacts were written
+
+Dry-run smoke metrics:
+
+| Metric | Value |
+|---|---:|
+| Cases | 2 |
+| Accuracy | 1.000 |
+| Top-5 | 1.000 |
+| Mean requests | 6.500 |
+| Stop-before-cap rate | 1.000 |
+
+Important interpretation:
+
+- These dry-run numbers are not scientific evidence.
+- They only prove the notebook path works: prompt construction, graph context, traces, predictions, and artifact writing.
+
+Live `pilot24` result:
+
+| System | Accuracy | Top-3 | Top-5 | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid v1 | 0.917 | 0.917 | 0.917 | 6.58 |
+| Notebook `20` LLM-led graph context | 0.833 | 0.958 | 0.958 | 6.13 |
+
+Promotion decision:
+
+- Notebook `20` is not promoted to `final49` because top-1 accuracy dropped.
+- The `23/24` top-3/top-5 result is still useful because it shows graph context can improve ranking quality.
+
+Current recommendation:
+
+- Use Notebook `21` to test whether graph context can act as a critic/adjudicator.
+- Keep Notebook `13` frozen as the proposed method unless a graph-context variant beats it live.
+
+## 59. Notebook 21 Implemented: Graph-Context Policy Lab
+
+Implemented:
+
+- `notebooks/21_graph_context_policy_lab.ipynb`
+- `reports/algorithmic_ledger/graph_context_policy_lab_report.md`
+
+Artifact root:
+
+- `artifacts/graph_algorithmic_ledger/graph_context_policy_lab_24case_v1/`
+
+Purpose:
+
+Notebook `21` was added after live Notebook `20` produced a mixed result. Notebook `20` degraded top-1 accuracy versus Notebook `13`, but improved ranking quality to `23/24` top-3 and top-5 on the 24-case pilot. Notebook `21` asks whether graph-ledger information can be used as a critic, guardrail, or adjudicator to convert that top-5 signal into better top-1 accuracy without new API calls.
+
+Important implementation boundaries:
+
+- offline-only
+- no API calls
+- no model training
+- no changes to Notebook `13` or Notebook `20`
+- labels are used only for evaluation and oracle upper-bound analysis
+- non-oracle variants use only visible trace evidence, ranked differentials, MLP feedback, and reconstructed graph context
+
+Inputs compared:
+
+| Run | Accuracy | Top-3 | Top-5 | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid v1 | 0.917 | 0.917 | 0.917 | 6.58 |
+| Notebook `17` hard graph shortlist | 0.833 | 0.833 | 0.875 | 6.21 |
+| Notebook `18` graph-advisory shortlist | 0.875 | 0.875 | 0.917 | 7.67 |
+| Notebook `20` LLM-led graph context | 0.833 | 0.958 | 0.958 | 6.13 |
+
+Experiments run:
+
+- graph feature diagnostics
+- top-3/top-5 graph adjudication rules
+- LLM/MLP consensus adjudicators
+- stop guard flagging and replay where future turns existed
+- drift guards for stable graph-supported diagnoses
+- combined graph guard/adjudication variants
+- oracle top-3/top-5 upper bounds for Notebook `20`
+
+Main result:
+
+- No non-oracle policy variant beat Notebook `13`.
+- The best selected experimental variant was `drift_guard_notebook13_tc1.0_delta0.5`.
+- It matched Notebook `13` at `22/24 = 0.917` accuracy and `6.58` mean requests, but changed one wrong case into another wrong case.
+- Therefore it is not a real improvement and should not be promoted.
+
+Oracle result:
+
+| Variant | Accuracy | Top-3 | Top-5 | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook `20` oracle top-3 | 0.958 | 0.958 | 0.958 | 6.13 |
+| Notebook `20` oracle top-5 | 0.958 | 0.958 | 0.958 | 6.13 |
+
+Interpretation:
+
+- Notebook `20`'s top-5 improvement is a real signal, not just noise.
+- The graph context plus LLM trace often contains the correct answer in the ranked differential.
+- The current problem is adjudication: choosing the right top-1 from the ranked set without using labels.
+
+Graph diagnostic signal:
+
+For Notebook `20`, wrong final top-1 predictions had much higher graph contradiction than correct predictions.
+
+| Feature | Correct mean | Wrong mean | Wrong - correct |
+|---|---:|---:|---:|
+| Top contradiction | 0.377 | 4.015 | +3.638 |
+| Top contradiction minus support | -6.964 | 0.906 | +7.870 |
+| Top net support | 6.964 | -0.906 | -7.870 |
+
+This is useful because it means the graph ledger can identify suspect answers. It is not enough by itself because the graph threshold rules still cannot reliably choose the correct alternative.
+
+Selection decision:
+
+```text
+no_promotable_candidate
+```
+
+Recommendation:
+
+- Do not create a live Notebook `22` from the current hand-threshold graph adjudicators.
+- Keep Notebook `13` as the frozen proposed method.
+- Treat Notebook `21` as evidence that graph context is useful as an audit/critic signal.
+- If continuing graph-ledger work, the next credible direction is a calibrated or learned adjudicator trained on development traces, not more hand-picked graph thresholds.
+
+Current interpretation:
+
+Notebook `21` strengthens the project scientifically even though it does not produce a new method. It shows that the graph ledger has diagnostic signal, but also prevents overclaiming. The defensible claim is now:
+
+> Graph-ledger context improves ranking signal and flags suspect predictions, but simple rule-based graph adjudication is not yet enough to outperform the frozen Notebook `13` hybrid sequential method.
+
+## 60. Handoff Decision After Notebook 21 Artifact Inspection
+
+Inspected:
+
+- `README.md`
+- `PROJECT_WORKLOG.md`
+- `reports/final_results_summary.md`
+- `reports/final_report.md`
+- latest reports under `reports/algorithmic_ledger/`
+- `artifacts/graph_algorithmic_ledger/graph_context_policy_lab_24case_v1/`
+
+Key artifact checks:
+
+- Notebook `13` 24-case pilot cases are all contained in the Notebook `13` 49-case confirmation: `24/24` overlap.
+- Notebook `20` graph-context pilot uses the same 24 cases as Notebook `13` pilot.
+- Notebook `21` has `96` final states across Notebooks `13`, `17`, `18`, and `20`, but these are four correlated runs over the same `24` cases, not independent train/dev examples.
+- Notebook `21` tested `614` variant summaries and selected no promotable live candidate.
+- The best non-oracle variant only matched Notebook `13`; it did not produce a real improvement.
+
+Decision:
+
+- Do not create Notebook `22` for a learned or calibrated graph adjudicator from the current traces alone.
+- The current data are useful for critic/audit analysis, but they are not sufficient for a defensible held-out learned adjudicator because the only graph-context ranking trace is the same 24-case pilot slice.
+- Keep Notebook `13` as the frozen proposed method for the course deliverable.
+- Treat Notebooks `16-21` as diagnostic and negative algorithmic-ledger ablations that sharpen the future-work story.
+
+Report hygiene completed:
+
+- Updated `README.md` current practical recommendation to make the train/dev limitation explicit.
+- Updated `reports/final_report.md` with the 2026-05-08 handoff decision.
+- Updated `reports/final_results_summary.md` so its artifact list and headline table include the latest graph/VOI ledger runs.
+
+Next likely step:
+
+- Finalize the written report/presentation around Notebook `13`.
+- Only revisit graph adjudication if separate graph-context development traces are created or reserved for strict validation.
+
+## 61. Notebook 22 Implemented: Graph Posterior Final Adjudicator
+
+Implemented:
+
+- `notebooks/22_graph_posterior_final_adjudicator.ipynb`
+- `reports/algorithmic_ledger/graph_posterior_final_adjudicator_report.md`
+
+Artifact root:
+
+- `artifacts/graph_algorithmic_ledger/graph_posterior_final_adjudicator_49case_v1/`
+
+Purpose:
+
+Notebook `22` tests the graph ledger in a different role from Notebooks `17-21`. It does not change the Notebook `13` evidence-acquisition trajectory, does not call an API, and does not use graph information as a live question controller. Instead, it reconstructs the final visible evidence state from Notebook `13` traces and computes a train-derived graph posterior over all `49` pathologies.
+
+Primary graph score:
+
+```text
+graph_score(disease) =
+  sum over revealed evidence outcomes:
+    clip(log_odds_support(outcome -> disease), -3, 3)
+```
+
+Selected conservative critic:
+
+```text
+override Notebook 13 top-1 only if:
+  graph_top1 differs from Notebook 13 top-1
+  graph_margin >= 1.0
+  graph_score(Notebook 13 top-1) < 0
+  graph_score(graph_top1) > 0
+```
+
+Validation completed:
+
+- static parse passed for all Notebook `22` code cells
+- notebook code cells executed top-to-bottom with no API key and no live API path
+- Notebook `13` reference metrics were recovered exactly:
+  - `43/49 = 0.878` accuracy
+  - `0.918` top-3
+  - `0.939` top-5
+  - `6.59` mean requests
+- all expected artifacts were written
+
+Main 49-case result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid | 43/49 | 0.878 | 0.918 | 0.939 | 0.845 | 6.59 |
+| Graph-only final head | 44/49 | 0.898 | 0.959 | 0.980 | n/a | 6.59 |
+| Notebook `22` conservative graph critic | 44/49 | 0.898 | 0.939 | 0.939 | 0.867 | 6.59 |
+
+Paired result against Notebook `13`:
+
+| Outcome | Cases |
+|---|---:|
+| Both correct | 43 |
+| Notebook `22` only correct | 1 |
+| Notebook `13` only correct | 0 |
+| Both wrong | 5 |
+
+The only changed prediction:
+
+| Case | True pathology | Notebook `13` | Notebook `22` | Result |
+|---|---|---|---|---|
+| `test:81691` | Croup | Anemia | Croup | fixed |
+
+Promotion decision:
+
+```text
+offline_candidate_promoted
+```
+
+Interpretation:
+
+- Notebook `22` is the first graph-ledger variant to improve over Notebook `13` on the 49-case artifact.
+- The improvement comes from using graph information as a final-state mathematical critic, not as a replacement evidence controller.
+- Notebook `13` remains the live evidence-acquisition method.
+- Notebook `22` should be described as an offline final-head enhancement candidate until confirmed on held-out or live traces.
+
+Post-run analysis:
+
+- The selected critic fired exactly once on the 49-case run.
+- The single override fixed `test:81691` Croup:
+  - Notebook `13`: Anemia, graph score `-2.359`
+  - graph top-1: Croup, graph score `1.177`
+  - graph margin: `2.073`
+- The 24-case sanity slice showed the same pattern, improving from `22/24` to `23/24` by fixing Croup while leaving Pericarditis wrong.
+- The remaining 49-case errors after Notebook `22` are COPD/Myocarditis, acute-vs-chronic rhinosinusitis, Influenza/HIV initial infection, Pericarditis/Anemia, and Unstable angina/Anemia.
+- The most useful technical lesson is that graph support is credible as a final-state critic but still not sufficient as a standalone final head or controller. In COPD, for example, the graph correctly distrusted Notebook `13`'s Myocarditis answer but preferred the wrong alternative, so the conservative abstention rule prevented a regression.
+
+Report/doc updates completed:
+
+- added the Notebook `22` report under `reports/algorithmic_ledger/`
+- updated `README.md`
+- updated `reports/README.md`
+- updated `reports/final_results_summary.md`
+- updated `reports/final_report.md`
+
+Next likely step:
+
+- The Croup-only gain is useful but not ambitious enough by itself. A result that changes the project should aim for at least `47/49`.
+- The post-run rescue ceiling supports that target:
+  - Notebook `13` top-1 or graph top-1 oracle: `44/49`
+  - Notebook `13` top-1 or graph top-2 oracle: `46/49`
+  - Notebook `13` top-1 or graph top-3 oracle: `47/49`
+  - Notebook `13` top-1 or graph top-5 oracle: `48/49`
+  - Notebook `13` top-1 or union of LLM/MLP/graph top-5 oracle: `48/49`
+- The next credible notebook should therefore be a calibrated graph/LLM/MLP final reranker or a graph-triggered rescue continuation, not another hand threshold over the same six errors.
+- The rule must be trained/calibrated from train/validate-derived partial evidence states or fresh held-out traces. Directly tuning on the 49-case errors would not be defensible.
+
+## 62. Notebook 23 Implemented: Calibrated Graph-Bayes Rescue Reranker
+
+Implemented:
+
+- `notebooks/23_calibrated_graph_bayes_rescue_reranker.ipynb`
+- `reports/algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_report.md`
+
+Artifact root:
+
+- `artifacts/graph_algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_49case_v1/`
+
+Purpose:
+
+Notebook `23` tests the larger graph-ledger opportunity identified after Notebook `22`: can graph top-2/top-3 rescue signal be converted into a defensible result near `47/49` without tuning directly on the six Notebook `13` misses?
+
+Method:
+
+- keep Notebook `13` as the first-pass live workup trace
+- generate `8,000` train and `4,000` validate synthetic partial evidence states from DDXPlus train/validate splits
+- train an L2 logistic candidate reranker over graph, Bayes, MLP, prior, and rank features
+- select a fixed policy named `calibrated_graph_bayes_rescue_v1`
+- apply three certificates:
+  - prior recovery
+  - Notebook `22` conservative graph critic
+  - graph/Bayes rescue continuation for suspicious early `agent_stop` cases
+- after rescue continuation, select the final candidate with the trained L2 reranker, using graph rank only as a near-tie breaker and graph support as an accept guard
+
+Validation completed:
+
+- static parse passed for all Notebook `23` code cells
+- notebook code cells executed top-to-bottom with no API key and no live API path
+- Notebook `13` reference metrics were recovered exactly:
+  - `43/49 = 0.878` accuracy
+  - `0.918` top-3
+  - `0.939` top-5
+  - `6.59` mean requests
+- Notebook `22` reference metrics were recovered:
+  - `44/49 = 0.898` accuracy
+  - `0` regressions against Notebook `13`
+- all expected artifacts were written
+
+Main 49-case result:
+
+| System | Correct | Accuracy | Mean requests | Extra requests | Improvements | Regressions |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `13` selected-stop hybrid | 43/49 | 0.878 | 6.59 | 0 | 0 | 0 |
+| Notebook `22` graph critic | 44/49 | 0.898 | 6.59 | 0 | 1 | 0 |
+| Notebook `23` graph-Bayes rescue | 47/49 | 0.959 | 6.96 | 18 total | 4 | 0 |
+
+Fixed Notebook `13` misses:
+
+| Case | True pathology | Notebook `13` | Notebook `23` | Source |
+|---|---|---|---|---|
+| `test:38475` | Acute COPD exacerbation / infection | Myocarditis | Acute COPD exacerbation / infection | prior recovery |
+| `test:81691` | Croup | Anemia | Croup | graph critic |
+| `test:8666` | Influenza | HIV initial infection | Influenza | rescue rerank |
+| `test:125508` | Unstable angina | Anemia | Unstable angina | rescue rerank |
+
+Remaining errors:
+
+- `test:111176`: Acute rhinosinusitis predicted as Chronic rhinosinusitis
+- `test:62878`: Pericarditis predicted as Anemia
+
+Promotion decision:
+
+```text
+offline_candidate_promoted
+```
+
+Interpretation:
+
+- Notebook `23` is now the strongest algorithmic-ledger result.
+- It reaches the `47/49` target with only a small evidence-cost increase, from `6.59` to `6.96` mean requests.
+- Notebook `13` remains the live-confirmed acquisition backbone.
+- Notebook `23` should be presented as the offline graph/Bayes rescue enhancement candidate; later Notebook `24` tested it live and did not promote it.
+
+## 63. Notebook 24 Implemented: Live Graph-Bayes Rescue Confirmation
+
+Implemented:
+
+- `notebooks/24_live_graph_bayes_rescue_confirmation.ipynb`
+- `reports/algorithmic_ledger/live_graph_bayes_rescue_confirmation_report.md`
+
+Dry-run artifact root:
+
+- `artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_dryrun_smoke_v1/`
+
+Live artifact root:
+
+- `artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1/`
+
+Purpose:
+
+Notebook `24` is the live-confirmation wrapper for the Notebook `23` graph/Bayes rescue candidate. It keeps the Notebook `13` LLM-led evidence acquisition loop unchanged, then applies the frozen Notebook `23` rescue policy after the base stop.
+
+Implementation:
+
+- cloned the Notebook `13` live workup backbone
+- changed the artifact family to `artifacts/graph_algorithmic_ledger/`
+- set safe defaults:
+  - `RUN_LIVE_API = False`
+  - `ALLOW_DRY_RUN_BENCHMARK = True`
+  - `DRY_RUN_MAX_CASES = 2`
+- kept fixed live settings:
+  - `gpt-4.1-mini`
+  - `temperature = 0.0`
+  - `top_p = 1.0`
+  - `MAX_REQUEST_CAP = 24`
+- rebuilt the Notebook `23` calibrated L2 reranker from its train/validate synthetic feature artifact
+- loaded Notebook `16` graph statistics and Notebook `19` Bayesian likelihoods
+- applied the frozen Notebook `23` certificates:
+  - prior recovery
+  - conservative graph critic
+  - graph/Bayes rescue continuation for suspicious early `agent_stop`
+  - post-rescue reranker accept guard
+
+Dry-run validation:
+
+| Check | Result |
+|---|---|
+| Static parse | passed |
+| Dry-run execution | passed |
+| Cases | 2 |
+| Base Notebook `13` dry-run accuracy | 2/2 |
+| Rescue dry-run accuracy | 2/2 |
+| Extra rescue requests | 0 |
+| Required artifacts | written |
+| Source notebook outputs | stripped |
+
+Interpretation:
+
+- The dry-run is not scientific evidence.
+- It confirms that the live Notebook `13` backbone, trace reconstruction, frozen Notebook `23` rescue policy, reranker scoring, and artifact writing all work in one notebook.
+- Notebook `24` was ready for the paid 49-case live confirmation run; section 64 records the completed live result.
+
+How to run live:
+
+1. Open `notebooks/24_live_graph_bayes_rescue_confirmation.ipynb`.
+2. Set `RUN_LIVE_API = True`.
+3. Set `ALLOW_DRY_RUN_BENCHMARK = False`.
+4. Keep `SEQUENTIAL_MAX_CASES = 49`.
+5. Run top-to-bottom with the API key provided through the interactive prompt or `LLM_API_KEY`.
+
+Promotion criteria:
+
+- strong confirmation: at least `46/49` correct with zero regressions versus the live Notebook `13` base prediction
+- ideal confirmation: `47/49` correct with mean total requests `<= 7.25`
+
+Current status:
+
+```text
+implemented_dryrun_validated_then_live_completed_not_promoted
+```
+
+## 64. Notebook 24 Live Result: Rescue Not Promoted, Base Workup Stronger Than Expected
+
+Live artifact root:
+
+- `artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1/`
+
+Reports updated:
+
+- `reports/algorithmic_ledger/live_graph_bayes_rescue_confirmation_report.md`
+- `reports/algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_report.md`
+- `reports/final_results_summary.md`
+- `reports/final_report.md`
+- `reports/project/project_direction_and_claims_assessment.md`
+- `README.md`
+
+Live result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Macro-F1 | Mean requests |
+|---|---:|---:|---:|---:|---:|---:|
+| Original Notebook `13` artifact | 43/49 | 0.878 | 0.918 | 0.939 | 0.845 | 6.59 |
+| Notebook `23` offline rescue candidate | 47/49 | 0.959 | n/a | n/a | n/a | 6.96 |
+| Notebook `24` fresh live base workup | 45/49 | 0.918 | 0.939 | 0.939 | 0.895 | 6.20 |
+| Notebook `24` live graph/Bayes rescue | 45/49 | 0.918 | 0.939 | 0.939 | 0.895 | 6.39 |
+
+Notebook `24` did not promote the graph/Bayes rescue layer:
+
+- improvements versus the fresh live base: `0`
+- regressions versus the fresh live base: `0`
+- changed predictions: `1`
+- extra rescue requests: `9`
+- promotion status: `not_promoted`
+
+The one changed prediction was `test:76022` Panic attack:
+
+- fresh live base predicted Anaphylaxis
+- rescue changed it to PSVT through the prior-recovery certificate
+- both were wrong, so it was neither an improvement nor a regression
+
+The rescue continuation spent extra evidence on three already-correct cases and then abstained:
+
+| Case | True pathology | Extra requested roots | Outcome |
+|---|---|---|---|
+| `test:58986` | Acute laryngitis | `E_194`, `E_66`, `E_190` | stayed correct |
+| `test:90978` | Bronchiolitis | `E_181`, `E_66`, `E_4` | stayed correct |
+| `test:38202` | Inguinal hernia | `E_53`, `E_220`, `E_166` | stayed correct |
+
+The important positive result is the fresh live base trajectory:
+
+- original Notebook `13` artifact: `43/49`, `6.59` mean requests
+- fresh Notebook `13`-style base inside Notebook `24`: `45/49`, `6.20` mean requests
+
+Changed outcomes between the original Notebook `13` artifact and the Notebook `24` live base:
+
+| Case | True pathology | Original Notebook `13` | Notebook `24` live base | Result |
+|---|---|---|---|---|
+| `test:125508` | Unstable angina | Anemia | Unstable angina | fixed |
+| `test:81691` | Croup | Anemia | Croup | fixed |
+| `test:8666` | Influenza | HIV (initial infection) | Influenza | fixed |
+| `test:76022` | Panic attack | Panic attack | Anaphylaxis | regression |
+| `test:38475` | Acute COPD exacerbation / infection | Myocarditis | Anemia | still wrong |
+
+Remaining Notebook `24` live rescue errors:
+
+- `test:111176`: Acute rhinosinusitis predicted as Chronic rhinosinusitis
+- `test:38475`: Acute COPD exacerbation / infection predicted as Anemia
+- `test:62878`: Pericarditis predicted as Anemia
+- `test:76022`: Panic attack predicted as PSVT
+
+Interpretation:
+
+- Notebook `23` remains the strongest offline graph/Bayes enhancement candidate, but it is not live-confirmed.
+- Notebook `24` strengthens the base architecture claim: LLM-led evidence acquisition plus MLP-guided stopping appears robust in the `43-45/49` range with roughly `6-6.6` requests.
+- The offline rescue did not transfer because the fresh live trajectory changed the failure pattern. Cases that Notebook `23` fixed offline, such as Croup, Influenza, and Unstable angina, were already fixed by the fresh live base; a new Panic attack regression appeared instead.
+- Future graph/Bayes work should focus on live-trajectory calibration and trigger selectivity, not more broad controller replacements.
+
+Current project position:
+
+- defend Notebook `13` / Notebook `24` base as the live evidence-efficient workup method
+- present Notebook `23` as a strong offline mathematical enhancement
+- present Notebook `24` as a useful live confirmation attempt that did not promote the rescue layer
+- do not claim the graph/Bayes rescue is a live-confirmed improvement
+
+## 65. Notebook 25 Implemented: Live Base Trajectory Replicates
+
+Implemented:
+
+- `notebooks/25_live_base_trajectory_replicates.ipynb`
+- `reports/algorithmic_ledger/live_base_trajectory_replicates_report.md`
+
+Purpose:
+
+Notebook `25` collects repeated Notebook `13`-style base trajectories so a later offline branching lab can study live LLM divergence without graph/Bayes rescue confounding the measurement.
+
+Design:
+
+- cloned the Notebook `24` live base workup shell
+- removed the Notebook `23`/`24` graph-Bayes rescue intervention
+- keeps the Notebook `13` selected-stop evidence acquisition loop and MLP-guided stopping
+- runs three replicate roots from one notebook:
+  - `replicate_r01`
+  - `replicate_r02`
+  - `replicate_r03`
+- writes parent-level aggregate files:
+  - `replicate_summary.csv`
+  - `replicate_case_predictions.csv`
+  - `replicate_case_stability.csv`
+  - `replicate_stability_summary.json`
+
+Dry-run validation:
+
+| Check | Result |
+|---|---|
+| Static parse | passed |
+| Dry-run execution | passed |
+| Replicates | 3 |
+| Dry-run cases per replicate | 2 |
+| Artifact contract | passed |
+| Live API use | none |
+
+Dry-run artifact root:
+
+- `artifacts/trajectory_replicates/notebook13_style_live_base_replicates_dryrun_smoke_v1/`
+
+Live target artifact root:
+
+- `artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/`
+
+How to run live:
+
+1. Open `notebooks/25_live_base_trajectory_replicates.ipynb`.
+2. Set `RUN_LIVE_API = True`.
+3. Set `ALLOW_DRY_RUN_BENCHMARK = False`.
+4. Keep `REPLICATE_IDS = ["r01", "r02", "r03"]`.
+5. Run top-to-bottom.
+
+Interpretation:
+
+This is not a new method result yet. It is data collection for the proposed branching trajectory lab. The key constraint is that all future branch-trigger features must be derived from current visible state, not from knowing that a specific test case diverged historically.
+
+## 66. Notebook 26 Implemented: Offline Branching Trajectory Lab
+
+Implemented:
+
+- `notebooks/26_offline_branching_trajectory_lab.ipynb`
+- `reports/algorithmic_ledger/offline_branching_trajectory_lab_report.md`
+
+Artifact root:
+
+- `artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1/`
+
+Inputs:
+
+- Notebook `13` frozen 49-case artifact
+- Notebook `24` fresh live base trajectory
+- Notebook `25` live base replicates `r01`, `r02`, and `r03`
+- Notebook `16` train-derived graph edges
+- Notebook `19` Bayesian likelihood tables
+
+Validation:
+
+| Check | Result |
+|---|---|
+| Static parse | passed |
+| Top-to-bottom execution | passed through a local notebook runner |
+| Live API calls | none |
+| Required artifacts | written |
+
+Observed base trajectory accuracy:
+
+| Run | Correct | Accuracy | Mean requests |
+|---|---:|---:|---:|
+| Notebook `13` frozen | 43/49 | 0.878 | 6.59 |
+| Notebook `24` base | 45/49 | 0.918 | 6.20 |
+| Notebook `25` r01 | 44/49 | 0.898 | 7.00 |
+| Notebook `25` r02 | 42/49 | 0.857 | 7.02 |
+| Notebook `25` r03 | 42/49 | 0.857 | 6.82 |
+
+Divergence findings:
+
+- same final prediction across all five trajectories: `41/49`
+- prediction instability cases: `8/49`
+- correctness instability cases: `7/49`
+- majority-vote accuracy across the five trajectories: `43/49`
+- oracle best-of-five accuracy: `47/49`
+- Notebook `13` misses with at least one alternate correct trajectory: `4`
+- same-prefix divergent states: `64`
+- same-prefix divergent states with downstream correctness instability: `10`
+
+The result strongly supports the user's branching hypothesis but rejects naive voting. The useful signal is not that more agents automatically help; it is that a small number of fragile states create alternate trajectories, and a graph/Bayes/MLP judge can sometimes select the right branch.
+
+Best diagnostic Notebook `13` branch policy:
+
+```text
+trigger=hybrid_suspicion_v1
+branch_budget=2
+judge=highest_bayes_posterior
+```
+
+Notebook `13` scope result:
+
+| Metric | Value |
+|---|---:|
+| Accuracy | 47/49 = 0.959 |
+| Base accuracy | 43/49 = 0.878 |
+| Wins versus base | 4 |
+| Regressions versus base | 0 |
+| Branch trigger rate | 0.184 |
+| Mean branches spawned | 0.367 |
+| Mean selected requests | 6.86 |
+| Mean total branch requests | 9.18 |
+
+Fixed Notebook `13` misses:
+
+- `test:125508` Unstable angina
+- `test:38475` Acute COPD exacerbation / infection
+- `test:81691` Croup
+- `test:8666` Influenza
+
+Remaining misses:
+
+- `test:111176` Acute rhinosinusitis predicted as Chronic rhinosinusitis
+- `test:62878` Pericarditis predicted as Anemia
+
+Current interpretation:
+
+- Notebook `26` is not a promoted live method because it reuses observed trajectories and evaluates policies on the 49-case labels.
+- It is the strongest evidence so far that multi-agent branching is worth a prospective live confirmation.
+- The next credible notebook should be a fixed live branching confirmation: run one base branch, apply the `hybrid_suspicion_v1` trigger, spawn at most two alternate base-style branches only when triggered, and adjudicate with a pre-fixed graph/Bayes/MLP judge.
+- Do not use majority vote as the main method; the offline lab shows majority vote stays at `43/49`.
+
+## 67. Replicate Final-Layer Graph/Bayes Quickcheck
+
+Added a quick offline final-layer graph/Bayes replay over the three Notebook `25` live base replicate traces.
+
+Output:
+
+- `artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1/replicate_graph_bayes_final_layer_quickcheck.csv`
+
+Design:
+
+- reconstruct final visible evidence from each replicate trace
+- compute train-derived graph support from Notebook `16`
+- compute Bayesian posterior from Notebook `19`
+- evaluate:
+  - base replicate prediction
+  - strict conservative graph/Bayes final layer
+  - raw graph top-1 diagnostic head
+  - raw Bayes top-1 diagnostic head
+
+Result:
+
+| Replicate | Base | Strict final layer | Raw graph top-1 | Raw Bayes top-1 |
+|---|---:|---:|---:|---:|
+| `r01` | 44/49 | 44/49 | 45/49 | 45/49 |
+| `r02` | 42/49 | 42/49 | 44/49 | 44/49 |
+| `r03` | 42/49 | 42/49 | 44/49 | 44/49 |
+
+The strict conservative final layer did not fire on any replicate. The raw graph and Bayes top-1 heads improved all three replicates diagnostically with zero regressions:
+
+- `r01`: 1 win, 0 regressions
+- `r02`: 2 wins, 0 regressions
+- `r03`: 2 wins, 0 regressions
+
+Interpretation:
+
+- Graph/Bayes remains useful on fresh replicate trajectories.
+- The existing conservative override is too cautious for these trajectories.
+- This supports using graph/Bayes as the branch judge in the multi-agent policy, not necessarily as a blunt single final-head override.
+- This quickcheck is diagnostic only and should not be reported as a promoted method.
+
+## 68. Notebook 27 Live Targeted Branching Confirmation
+
+Implemented the prospective live multi-agent branching notebook:
+
+- `notebooks/27_live_targeted_branching_confirmation.ipynb`
+- `reports/algorithmic_ledger/live_targeted_branching_confirmation_report.md`
+
+Live artifact root:
+
+- `artifacts/trajectory_replicates/live_targeted_branching_confirmation_49case_v1/`
+
+Dry-run smoke artifact root:
+
+- `artifacts/trajectory_replicates/live_targeted_branching_confirmation_dryrun_smoke_v1/`
+
+Frozen prospective policy:
+
+```text
+trigger=hybrid_suspicion_v1
+branch_budget=2
+judge=highest_raw_bayes_posterior
+```
+
+Design:
+
+- run the Notebook `13` selected-stop workup once as the base branch
+- compute terminal label-free suspicion signals from the visible ledger, MLP state, raw graph support, and raw Bayesian posterior
+- if the trigger fires, launch at most two fresh-context full workup branches from the original initial evidence
+- branch prompts receive structured ledger state and branch-role directives, not base free-text reasoning
+- branch roles are `graph_bayes_scout` and `counteranchor_scout`
+- final adjudication selects the completed branch whose own final prediction has the highest raw Bayesian posterior, using graph support, MLP confidence, and base order only as tie-breakers
+
+Validation completed:
+
+- static parsed all Notebook `27` code cells
+- executed a two-case no-spend dry run with `NOTEBOOK27_RUN_LIVE_API=0 NOTEBOOK27_ALLOW_DRY_RUN=1`
+- dry-run artifact contract passed
+- dry-run result was `2/2`, with no branch triggers because both smoke cases were stable
+- executed an additional no-spend forced branch-path smoke on one case to confirm a fresh branch can run, apply the early divergent-root guard, and be scored by the raw Bayes judge
+
+Interpretation:
+
+- This was the clean live confirmation notebook for the Notebook `26` branching hypothesis.
+- The full live result later completed; section 69 records the outcome.
+- Notebook `13` remains the defended live backbone because Notebook `27` did not reach a promotable result.
+
+## 69. Notebook 27 Live Result And Branching Findings
+
+The full 49-case Notebook `27` live targeted-branching confirmation completed.
+
+Artifact root:
+
+- `artifacts/trajectory_replicates/live_targeted_branching_confirmation_49case_v1/`
+
+Headline result:
+
+| Metric | Value |
+|---|---:|
+| Base branch accuracy | 42/49 = 0.857 |
+| Targeted branching accuracy | 43/49 = 0.878 |
+| Top-3 accuracy | 0.918 |
+| Top-5 accuracy | 0.939 |
+| Wins versus base | 2 |
+| Regressions versus base | 1 |
+| Triggered cases | 9/49 |
+| Branches spawned | 18 |
+| Mean base requests | 6.92 |
+| Mean selected requests | 6.82 |
+| Mean total branch requests | 11.45 |
+
+Promotion decision:
+
+```text
+not_promoted_keep_notebook13_or_prior_confirmed_method
+```
+
+Paired changes:
+
+| Case | True pathology | Base prediction | Branch-selected prediction | Outcome |
+|---|---|---|---|---|
+| `test:35039` | Myocarditis | Sarcoidosis | Myocarditis | win |
+| `test:76022` | Panic attack | Anaphylaxis | Panic attack | win |
+| `test:38475` | Acute COPD exacerbation / infection | Acute COPD exacerbation / infection | Bronchospasm / acute asthma exacerbation | regression |
+
+Branch-candidate ceiling:
+
+| System | Correct |
+|---|---:|
+| Base branch only | 42/49 |
+| Notebook `27` selected judge | 43/49 |
+| Oracle over actual base + spawned branch predictions | 44/49 |
+
+This means the live branches did contain useful alternate trajectories, but not enough to reach `47/49` by branch selection alone.
+
+Raw graph/Bayes diagnostic replay over the Notebook `27` base final state:
+
+| Diagnostic head | Correct |
+|---|---:|
+| Base branch prediction | 42/49 |
+| Raw graph top-1 | 45/49 |
+| Raw Bayes top-1 | 45/49 |
+
+Raw graph and Bayes both fixed:
+
+- `test:35039` Myocarditis
+- `test:76022` Panic attack
+- `test:19160` Possible NSTEMI / STEMI
+
+with no base-correct regressions in this diagnostic replay.
+
+Main failure modes:
+
+- **Silent confident wrong cases** did not trigger branching because graph, Bayes, MLP, and LLM all agreed with the wrong answer:
+  - `test:111176`: Acute rhinosinusitis predicted as Chronic rhinosinusitis
+  - `test:11655`: Bronchitis predicted as URTI
+  - `test:81691`: Croup predicted as Acute otitis media
+- **Triggered but no correct LLM branch**:
+  - `test:19160`: graph/Bayes top-1 was Possible NSTEMI / STEMI, but both spawned branches ended Acute laryngitis
+  - `test:62878`: Pericarditis remained unresolved; branches ended Chagas and Spontaneous pneumothorax
+- **Resolver regression**:
+  - `test:38475`: the base COPD answer was graph rank `1` and Bayes rank `1`, but the raw-Bayes-only resolver chose the asthma/bronchospasm branch because its posterior was slightly higher
+
+Interpretation:
+
+- Notebook `27` partially validates the multi-agent hypothesis: branches can escape lock-in on some live cases.
+- The selected raw-Bayes branch resolver is not good enough and should not be promoted.
+- Confidence/contradiction triggers miss consensus wrong-answer failures.
+- The next credible direction is a confounder-coverage branch classifier plus a cautious graph/Bayes/MLP resolver with graph/Bayes pseudo-candidates and base protection.
+
+## 70. Notebook 28 Implemented: MLP-Gated Confounder Graph-Bayes Branching
+
+Implemented `notebooks/28_mlp_gated_confounder_graph_bayes_branching.ipynb`.
+
+Artifact root for the no-spend smoke run:
+
+- `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1/`
+
+Planned live root:
+
+- `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1/`
+
+Notebook `28` is the successor to Notebook `27`. The key change is that branching is now a learned decision:
+
+```text
+branch_trigger_mlp_v1_probability >= 0.40
+```
+
+The branch-trigger MLP is trained only on train/validate synthetic partial evidence states. It uses diagnostic MLP belief features, graph support/rank/contradiction features, Bayesian posterior/rank features, graph-Bayes agreement, request-count features, and pairwise confounder coverage.
+
+The actual branches remain fresh-context LLM workup agents. If the learned gate fires, the notebook can spawn up to three branches:
+
+- `graph_bayes_scout`
+- `confounder_pair_scout`
+- `counteranchor_scout`
+
+The final resolver scores the base prediction, completed branch predictions, and graph/Bayes/MLP pseudo-candidates. It also includes base protection when the base answer is graph rank `1` and Bayes rank `1`.
+
+No-spend dry-run validation passed top to bottom:
+
+| Check | Result |
+|---|---:|
+| Dry-run cases | 2 |
+| Base accuracy | 2/2 |
+| Notebook `28` selected accuracy | 2/2 |
+| Branch trigger rate | 0/2 |
+| Mean selected requests | 6.0 |
+| Mean total branch requests | 6.0 |
+
+Calibration diagnostics:
+
+| Model | Key validation result |
+|---|---:|
+| Branch-trigger MLP | AUC `0.939`, average precision `0.896`, threshold `0.40`, recall `0.951` in the dry-run implementation; live artifacts later selected threshold `0.375` with AUC `0.954` and average precision `0.931` |
+| Candidate resolver | AUC `0.955`, average precision `0.811` |
+
+The notebook writes a richer evaluation suite: trigger probability histograms, threshold curves, request-cost plots, pseudo-candidate counts, resolver score diagnostics, graph/Bayes/MLP agreement heatmap, confounder coverage plots, hard-case rank movement, branch MLP calibration, ROC/PR curves, and feature importance.
+
+Current status:
+
+- implemented and smoke-tested
+- live 49-case run completed; section 71 records the result
+- not promoted because the live result did not reach the promotion rule
+- Notebook `13` remains the defended live backbone for now
+
+## 71. Notebook 28 Live Result And Post-Hoc Candidate-Pool Analysis
+
+The full 49-case Notebook `28` live run completed.
+
+Artifact root:
+
+- `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1/`
+
+Post-hoc analysis artifacts added after reading the live outputs:
+
+- `posthoc_candidate_pool_oracle_summary.csv`
+- `posthoc_miss_candidate_coverage.csv`
+- `posthoc_notebook28_analysis.json`
+
+Headline result:
+
+| Metric | Value |
+|---|---:|
+| Base branch accuracy | 42/49 = 0.857 |
+| Notebook `28` selected accuracy | 44/49 = 0.898 |
+| Top-3 accuracy | 0.959 |
+| Top-5 accuracy | 0.959 |
+| Wins versus base | 2 |
+| Regressions versus base | 0 |
+| Changed predictions | 2 |
+| Branch trigger rate | 4/49 = 0.082 |
+| Branches spawned | 12 |
+| Mean base requests | 6.92 |
+| Mean selected requests | 6.63 |
+| Mean total branch requests | 9.96 |
+
+Selection sources:
+
+| Source | Selected cases |
+|---|---:|
+| Base | 47 |
+| `counteranchor_scout` | 1 |
+| `pseudo_graph_top1` | 1 |
+
+Paired wins:
+
+| Case | True pathology | Base prediction | Notebook `28` prediction | Source |
+|---|---|---|---|---|
+| `test:35039` | Myocarditis | Sarcoidosis | Myocarditis | `pseudo_graph_top1` |
+| `test:62878` | Pericarditis | Panic attack | Pericarditis | `counteranchor_scout` |
+
+Promotion decision:
+
+```text
+not_promoted_keep_notebook13_or_prior_confirmed_method
+```
+
+Notebook `28` improved its own live base by two cases with zero regressions, and the base-protection mechanism prevented the COPD-style regression observed in Notebook `27`. However, the selected method reached only `44/49`, below the `47/49` promotion target and below the fresh Notebook `24` base result of `45/49`.
+
+The most important post-hoc finding is that the final judge was not the main bottleneck. The actual scored candidate pool had only a `44/49` oracle ceiling:
+
+| Candidate pool | Oracle correct |
+|---|---:|
+| Current scored candidates | 44/49 |
+| Current candidates plus all candidate ranked top-1 | 44/49 |
+| Current candidates plus all candidate ranked top-2 | 47/49 |
+| Current candidates plus all candidate ranked top-3 | 48/49 |
+| Current candidates plus all candidate ranked top-5 | 48/49 |
+| Selected final ranked differential top-2 only | 47/49 |
+
+Remaining misses:
+
+| Case | True pathology | Prediction | Key observation |
+|---|---|---|---|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis | Correct disease was rank 2 in the final differential. |
+| `test:11655` | Bronchitis | URTI | Correct disease was rank 2 in the final differential and was also the challenger. |
+| `test:81691` | Croup | Acute otitis media | Branching fired, but no scored candidate was Croup; a branch differential had Croup at rank 3. |
+| `test:8666` | Influenza | HIV (initial infection) | Correct disease was rank 2 in the final differential and was also the challenger. |
+| `test:76022` | Panic attack | Myocarditis | Correct disease did not appear in the scored pool or top-5 differential. |
+
+Interpretation:
+
+- Notebook `28` is a cleaner live branching system than Notebook `27`: fewer triggers, no regressions, and a better selected score.
+- The branch MLP under-fired on live trajectories. It was calibrated to branch at about `50%` on synthetic validation states but fired on only `4/49` live cases.
+- Silent consensus-wrong cases remain hard because graph, Bayes, MLP, and LLM can all support the same wrong anchor.
+- The next credible iteration should expand the final candidate pool rather than simply spawn more branches.
+
+Next iteration direction:
+
+```text
+Notebook 29: listwise differential graph-Bayes-MLP adjudicator
+```
+
+The candidate pool should include base ranked top-5, branch ranked top-5, graph top-5, Bayes top-5, MLP top-5, and confounder challengers. A calibrated resolver should then choose among candidates using graph/Bayes/MLP support, rank position, contradiction, confounder coverage, and request-state features. The post-hoc Notebook `28` oracle shows this is the first direction with a direct path back to `47/49+`.

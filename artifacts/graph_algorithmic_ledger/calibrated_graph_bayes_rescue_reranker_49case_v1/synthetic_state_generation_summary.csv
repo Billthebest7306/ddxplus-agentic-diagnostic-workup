@@ -1,0 +1,3 @@
+split,states,candidate_rows,reference_accuracy,prior_accuracy,mean_visible_roots
+train_synthetic,8000,67319,0.568125,0.3785,7.550875
+validate_synthetic,4000,33601,0.56175,0.37325,7.74975

@@ -1,0 +1,6 @@
+{
+  "cases": 49,
+  "all_predictions_same": 45,
+  "prediction_instability_cases": 4,
+  "correctness_instability_cases": 3
+}

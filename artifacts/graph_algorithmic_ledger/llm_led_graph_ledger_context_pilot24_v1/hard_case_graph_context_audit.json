@@ -1,0 +1,5653 @@
+{
+  "test:51421": {
+    "true_pathology": "Chagas",
+    "predicted_pathology": "Sarcoidosis",
+    "correct": false,
+    "num_requests": 20,
+    "turns": [
+      {
+        "turn_index": 1,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_129",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs HIV (initial infection).",
+            "diagnoses": [
+              "URTI",
+              "HIV (initial infection)"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_181"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs Croup.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Croup"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 0.107,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.903,
+            "suggested_roots": [
+              "E_129",
+              "E_181"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Croup"
+            ],
+            "support_gap": 0.439,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.695,
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 0.535,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.651,
+            "suggested_roots": [
+              "E_129",
+              "E_181"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_129",
+          "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condit",
+          "separates": [
+            "Viral pharyngitis",
+            "HIV (initial infection)"
+          ],
+          "rate_gap": 1.0,
+          "global_present_rate": 0.166,
+          "graph_mi": 0.19,
+          "score": 0.819
+        }
+      },
+      {
+        "turn_index": 2,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_214",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis Viral pharyngitis.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "Viral pharyngitis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs Tuberculosis.",
+            "diagnoses": [
+              "URTI",
+              "Tuberculosis"
+            ],
+            "suggested_roots": [
+              "E_97",
+              "E_66"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Acute otitis media.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "suggested_roots": [
+              "E_48",
+              "E_209"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.228,
+            "best_discriminator_gap": 0.77,
+            "unresolved_score": 0.627,
+            "suggested_roots": [
+              "E_97",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.082,
+            "best_discriminator_gap": 0.634,
+            "unresolved_score": 0.586,
+            "suggested_roots": [
+              "E_48",
+              "E_209"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.347,
+            "best_discriminator_gap": 0.77,
+            "unresolved_score": 0.572,
+            "suggested_roots": [
+              "E_97",
+              "E_48"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_97",
+          "question": "Do you have a sore throat?",
+          "separates": [
+            "Viral pharyngitis",
+            "URTI"
+          ],
+          "rate_gap": 0.77,
+          "global_present_rate": 0.095,
+          "graph_mi": 0.1,
+          "score": 0.616
+        }
+      },
+      {
+        "turn_index": 3,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_181",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis URTI.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "URTI"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Acute otitis media.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "suggested_roots": [
+              "E_41",
+              "E_48"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Tuberculosis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Tuberculosis"
+            ],
+            "suggested_roots": [
+              "E_41",
+              "E_181"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.079,
+            "best_discriminator_gap": 0.797,
+            "unresolved_score": 0.739,
+            "suggested_roots": [
+              "E_41",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.197,
+            "best_discriminator_gap": 0.797,
+            "unresolved_score": 0.666,
+            "suggested_roots": [
+              "E_41",
+              "E_181"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.232,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.657,
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_181",
+          "question": "Do you have nasal congestion or a clear runny nose?",
+          "separates": [
+            "URTI",
+            "Tuberculosis"
+          ],
+          "rate_gap": 0.81,
+          "global_present_rate": 0.198,
+          "graph_mi": 0.143,
+          "score": 0.681
+        }
+      },
+      {
+        "turn_index": 4,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_212",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis URTI differs from MLP top diagnosis Tuberculosis.",
+            "diagnoses": [
+              "URTI",
+              "Tuberculosis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Tuberculosis vs Acute laryngitis.",
+            "diagnoses": [
+              "Tuberculosis",
+              "Acute laryngitis"
+            ],
+            "suggested_roots": [
+              "E_212",
+              "E_45"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs URTI.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Tuberculosis",
+              "Acute laryngitis"
+            ],
+            "support_gap": 0.149,
+            "best_discriminator_gap": 0.865,
+            "unresolved_score": 0.753,
+            "suggested_roots": [
+              "E_212",
+              "E_45"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "support_gap": 0.071,
+            "best_discriminator_gap": 0.553,
+            "unresolved_score": 0.516,
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          },
+          {
+            "pair": [
+              "Acute laryngitis",
+              "Viral pharyngitis"
+            ],
+            "support_gap": 1.246,
+            "best_discriminator_gap": 0.865,
+            "unresolved_score": 0.385,
+            "suggested_roots": [
+              "E_212",
+              "E_45"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_212",
+          "question": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?",
+          "separates": [
+            "Tuberculosis",
+            "Acute laryngitis"
+          ],
+          "rate_gap": 0.865,
+          "global_present_rate": 0.036,
+          "graph_mi": 0.058,
+          "score": 0.665
+        }
+      },
+      {
+        "turn_index": 5,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_201",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs URTI.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Acute rhinosinusitis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Acute rhinosinusitis"
+            ],
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "support_gap": 0.071,
+            "best_discriminator_gap": 0.553,
+            "unresolved_score": 0.516,
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Acute rhinosinusitis"
+            ],
+            "support_gap": 0.376,
+            "best_discriminator_gap": 0.553,
+            "unresolved_score": 0.402,
+            "suggested_roots": [
+              "E_45",
+              "E_201"
+            ]
+          },
+          {
+            "pair": [
+              "Tuberculosis",
+              "Acute rhinosinusitis"
+            ],
+            "support_gap": 1.017,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.37,
+            "suggested_roots": [
+              "E_45",
+              "E_208"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_45",
+          "question": "Have you been coughing up blood?",
+          "separates": [
+            "Tuberculosis",
+            "URTI"
+          ],
+          "rate_gap": 0.746,
+          "global_present_rate": 0.098,
+          "graph_mi": 0.1,
+          "score": 0.599
+        }
+      },
+      {
+        "turn_index": 6,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_194",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Tuberculosis differs from MLP top diagnosis Croup.",
+            "diagnoses": [
+              "Tuberculosis",
+              "Croup"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.676,
+            "contradiction": 2.283
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Tuberculosis more than it supports it.",
+            "diagnoses": [
+              "Tuberculosis"
+            ],
+            "support": 1.666,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Croup vs Chagas.",
+            "diagnoses": [
+              "Croup",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_194",
+              "E_202"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Croup",
+              "Chagas"
+            ],
+            "support_gap": 1.1,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.355,
+            "suggested_roots": [
+              "E_194",
+              "E_202"
+            ]
+          },
+          {
+            "pair": [
+              "Croup",
+              "URTI"
+            ],
+            "support_gap": 1.469,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.302,
+            "suggested_roots": [
+              "E_194",
+              "E_202"
+            ]
+          },
+          {
+            "pair": [
+              "Croup",
+              "Tuberculosis"
+            ],
+            "support_gap": 3.196,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.178,
+            "suggested_roots": [
+              "E_194",
+              "E_202"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_194",
+          "question": "Have you noticed a high pitched sound when breathing in?",
+          "separates": [
+            "Croup",
+            "Chagas"
+          ],
+          "rate_gap": 0.746,
+          "global_present_rate": 0.037,
+          "graph_mi": 0.067,
+          "score": 0.577
+        }
+      },
+      {
+        "turn_index": 7,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_175",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Croup differs from MLP top diagnosis Acute otitis media.",
+            "diagnoses": [
+              "Croup",
+              "Acute otitis media"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.722,
+            "contradiction": 2.283
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Tuberculosis more than it supports it.",
+            "diagnoses": [
+              "Tuberculosis"
+            ],
+            "support": 1.71,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute otitis media vs Chagas.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute otitis media",
+              "Chagas"
+            ],
+            "support_gap": 1.739,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.23,
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 2.568,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.177,
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "Tuberculosis",
+              "Chagas"
+            ],
+            "support_gap": 4.296,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.119,
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_175",
+          "question": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle ache",
+          "separates": [
+            "Acute otitis media",
+            "Chagas"
+          ],
+          "rate_gap": 0.63,
+          "global_present_rate": 0.042,
+          "graph_mi": 0.059,
+          "score": 0.491
+        }
+      },
+      {
+        "turn_index": 8,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_146",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chagas differs from MLP top diagnosis Anemia.",
+            "diagnoses": [
+              "Chagas",
+              "Anemia"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Anemia more than it supports it.",
+            "diagnoses": [
+              "Anemia"
+            ],
+            "support": 1.022,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts GERD more than it supports it.",
+            "diagnoses": [
+              "GERD"
+            ],
+            "support": 0.608,
+            "contradiction": 4.818
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Panic attack more than it supports it.",
+            "diagnoses": [
+              "Panic attack"
+            ],
+            "support": 0.992,
+            "contradiction": 4.0
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Anemia",
+              "Panic attack"
+            ],
+            "support_gap": 0.03,
+            "best_discriminator_gap": 0.798,
+            "unresolved_score": 0.775,
+            "suggested_roots": [
+              "E_146",
+              "E_208"
+            ]
+          },
+          {
+            "pair": [
+              "Anemia",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.73,
+            "best_discriminator_gap": 0.798,
+            "unresolved_score": 0.461,
+            "suggested_roots": [
+              "E_146",
+              "E_24"
+            ]
+          },
+          {
+            "pair": [
+              "Anemia",
+              "GERD"
+            ],
+            "support_gap": 1.232,
+            "best_discriminator_gap": 0.798,
+            "unresolved_score": 0.358,
+            "suggested_roots": [
+              "E_146",
+              "E_208"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_146",
+          "question": "Are you taking any new oral anticoagulants ((NOACs)?",
+          "separates": [
+            "Anemia",
+            "GERD"
+          ],
+          "rate_gap": 0.798,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.065,
+          "score": 0.617
+        }
+      },
+      {
+        "turn_index": 9,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_22",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Anemia differs from MLP top diagnosis Guillain-Barr\u00e9 syndrome.",
+            "diagnoses": [
+              "Anemia",
+              "Guillain-Barr\u00e9 syndrome"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Guillain-Barr\u00e9 syndrome more than it supports it.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome"
+            ],
+            "support": 1.03,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchiectasis more than it supports it.",
+            "diagnoses": [
+              "Bronchiectasis"
+            ],
+            "support": 0.644,
+            "contradiction": 4.863
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Tuberculosis more than it supports it.",
+            "diagnoses": [
+              "Tuberculosis"
+            ],
+            "support": 1.793,
+            "contradiction": 4.0
+          }
+        ],
+        "unresolved_pairs": [],
+        "top_advisory": null
+      },
+      {
+        "turn_index": 10,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_78",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Guillain-Barr\u00e9 syndrome.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Guillain-Barr\u00e9 syndrome"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Guillain-Barr\u00e9 syndrome more than it supports it.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome"
+            ],
+            "support": 1.065,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchiectasis more than it supports it.",
+            "diagnoses": [
+              "Bronchiectasis"
+            ],
+            "support": 0.678,
+            "contradiction": 4.863
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Tuberculosis more than it supports it.",
+            "diagnoses": [
+              "Tuberculosis"
+            ],
+            "support": 1.827,
+            "contradiction": 4.0
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.762,
+            "best_discriminator_gap": 0.591,
+            "unresolved_score": 0.335,
+            "suggested_roots": [
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Bronchiectasis",
+              "Tuberculosis"
+            ],
+            "support_gap": 2.012,
+            "best_discriminator_gap": 0.591,
+            "unresolved_score": 0.196,
+            "suggested_roots": [
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Tuberculosis",
+              "Acute otitis media"
+            ],
+            "support_gap": 2.558,
+            "best_discriminator_gap": 0.591,
+            "unresolved_score": 0.166,
+            "suggested_roots": [
+              "E_78"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_78",
+          "question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+          "separates": [
+            "Guillain-Barr\u00e9 syndrome",
+            "Tuberculosis"
+          ],
+          "rate_gap": 0.591,
+          "global_present_rate": 0.118,
+          "graph_mi": 0.108,
+          "score": 0.49
+        }
+      },
+      {
+        "turn_index": 11,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_84",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Guillain-Barr\u00e9 syndrome.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Guillain-Barr\u00e9 syndrome"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Guillain-Barr\u00e9 syndrome more than it supports it.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome"
+            ],
+            "support": 1.19,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchiectasis more than it supports it.",
+            "diagnoses": [
+              "Bronchiectasis"
+            ],
+            "support": 0.803,
+            "contradiction": 4.863
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Guillain-Barr\u00e9 syndrome vs Bronchiectasis.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Bronchiectasis"
+            ],
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Bronchiectasis"
+            ],
+            "support_gap": 1.25,
+            "best_discriminator_gap": 0.747,
+            "unresolved_score": 0.332,
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          },
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Viral pharyngitis"
+            ],
+            "support_gap": 2.811,
+            "best_discriminator_gap": 0.747,
+            "unresolved_score": 0.196,
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          },
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Acute otitis media"
+            ],
+            "support_gap": 3.321,
+            "best_discriminator_gap": 0.747,
+            "unresolved_score": 0.173,
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_84",
+          "question": "Do you feel weakness in both arms and/or both legs?",
+          "separates": [
+            "Guillain-Barr\u00e9 syndrome",
+            "Viral pharyngitis"
+          ],
+          "rate_gap": 0.747,
+          "global_present_rate": 0.025,
+          "graph_mi": 0.048,
+          "score": 0.572
+        }
+      },
+      {
+        "turn_index": 12,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_155",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Acute otitis media.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Acute otitis media"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pulmonary embolism more than it supports it.",
+            "diagnoses": [
+              "Pulmonary embolism"
+            ],
+            "support": 1.226,
+            "contradiction": 4.0
+          }
+        ],
+        "unresolved_pairs": [],
+        "top_advisory": null
+      },
+      {
+        "turn_index": 13,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_79",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Viral pharyngitis.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Viral pharyngitis"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.308,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute otitis media vs Acute rhinosinusitis.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Acute rhinosinusitis"
+            ],
+            "suggested_roots": [
+              "E_79"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Acute otitis media.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "suggested_roots": [
+              "E_79"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute otitis media",
+              "Acute rhinosinusitis"
+            ],
+            "support_gap": 0.702,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.416,
+            "suggested_roots": [
+              "E_79"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.505,
+            "best_discriminator_gap": 0.608,
+            "unresolved_score": 0.404,
+            "suggested_roots": [
+              "E_79"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Acute rhinosinusitis"
+            ],
+            "support_gap": 2.614,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.196,
+            "suggested_roots": [
+              "E_79",
+              "E_62"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_79",
+          "question": "Do you smoke cigarettes?",
+          "separates": [
+            "Acute dystonic reactions",
+            "Acute rhinosinusitis"
+          ],
+          "rate_gap": 0.708,
+          "global_present_rate": 0.285,
+          "graph_mi": 0.152,
+          "score": 0.631
+        }
+      },
+      {
+        "turn_index": 14,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_196",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Viral pharyngitis differs from MLP top diagnosis Acute dystonic reactions.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Acute dystonic reactions"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.647,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Tuberculosis more than it supports it.",
+            "diagnoses": [
+              "Tuberculosis"
+            ],
+            "support": 2.274,
+            "contradiction": 4.791
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pulmonary embolism more than it supports it.",
+            "diagnoses": [
+              "Pulmonary embolism"
+            ],
+            "support": 1.649,
+            "contradiction": 4.0
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Pulmonary embolism"
+            ],
+            "support_gap": 0.002,
+            "best_discriminator_gap": 0.951,
+            "unresolved_score": 0.949,
+            "suggested_roots": [
+              "E_196",
+              "E_151"
+            ]
+          },
+          {
+            "pair": [
+              "Tuberculosis",
+              "Pulmonary embolism"
+            ],
+            "support_gap": 0.166,
+            "best_discriminator_gap": 0.951,
+            "unresolved_score": 0.816,
+            "suggested_roots": [
+              "E_196",
+              "E_151"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Tuberculosis"
+            ],
+            "support_gap": 0.164,
+            "best_discriminator_gap": 0.695,
+            "unresolved_score": 0.597,
+            "suggested_roots": [
+              "E_62",
+              "E_147"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_196",
+          "question": "Have you had surgery within the last month?",
+          "separates": [
+            "Acute dystonic reactions",
+            "Pulmonary embolism"
+          ],
+          "rate_gap": 0.951,
+          "global_present_rate": 0.04,
+          "graph_mi": 0.064,
+          "score": 0.732
+        }
+      },
+      {
+        "turn_index": 15,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_62",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.686,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 2.135,
+            "contradiction": 2.839
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute dystonic reactions vs URTI.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_62",
+              "E_147"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "URTI"
+            ],
+            "support_gap": 1.611,
+            "best_discriminator_gap": 0.695,
+            "unresolved_score": 0.266,
+            "suggested_roots": [
+              "E_62",
+              "E_147"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Acute otitis media"
+            ],
+            "support_gap": 3.317,
+            "best_discriminator_gap": 0.695,
+            "unresolved_score": 0.161,
+            "suggested_roots": [
+              "E_62",
+              "E_147"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Chagas"
+            ],
+            "support_gap": 4.012,
+            "best_discriminator_gap": 0.695,
+            "unresolved_score": 0.139,
+            "suggested_roots": [
+              "E_62",
+              "E_147"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_62",
+          "question": "Do you regularly take stimulant drugs?",
+          "separates": [
+            "Acute dystonic reactions",
+            "Acute otitis media"
+          ],
+          "rate_gap": 0.695,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.061,
+          "score": 0.54
+        }
+      },
+      {
+        "turn_index": 16,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_166",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.686,
+            "contradiction": 5.21
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Whooping cough more than it supports it.",
+            "diagnoses": [
+              "Whooping cough"
+            ],
+            "support": 1.689,
+            "contradiction": 4.0
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Allergic sinusitis more than it supports it.",
+            "diagnoses": [
+              "Allergic sinusitis"
+            ],
+            "support": 1.118,
+            "contradiction": 6.547
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 2.18,
+            "contradiction": 2.839
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Whooping cough"
+            ],
+            "support_gap": 1.212,
+            "best_discriminator_gap": 0.993,
+            "unresolved_score": 0.449,
+            "suggested_roots": [
+              "E_166",
+              "E_209"
+            ]
+          },
+          {
+            "pair": [
+              "Whooping cough",
+              "URTI"
+            ],
+            "support_gap": 1.652,
+            "best_discriminator_gap": 0.993,
+            "unresolved_score": 0.374,
+            "suggested_roots": [
+              "E_166",
+              "E_209"
+            ]
+          },
+          {
+            "pair": [
+              "Whooping cough",
+              "Allergic sinusitis"
+            ],
+            "support_gap": 3.119,
+            "best_discriminator_gap": 0.993,
+            "unresolved_score": 0.241,
+            "suggested_roots": [
+              "E_166",
+              "E_209"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_166",
+          "question": "Did you vomit after coughing?",
+          "separates": [
+            "Acute dystonic reactions",
+            "Whooping cough"
+          ],
+          "rate_gap": 0.993,
+          "global_present_rate": 0.005,
+          "graph_mi": 0.016,
+          "score": 0.748
+        }
+      },
+      {
+        "turn_index": 17,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_148",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Whooping cough differs from MLP top diagnosis Acute otitis media.",
+            "diagnoses": [
+              "Whooping cough",
+              "Acute otitis media"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 2.186,
+            "contradiction": 2.839
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.692,
+            "contradiction": 5.21
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute otitis media vs Chagas.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_148",
+              "E_51"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute otitis media",
+              "Chagas"
+            ],
+            "support_gap": 0.693,
+            "best_discriminator_gap": 0.577,
+            "unresolved_score": 0.341,
+            "suggested_roots": [
+              "E_148",
+              "E_51"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "URTI"
+            ],
+            "support_gap": 1.704,
+            "best_discriminator_gap": 0.647,
+            "unresolved_score": 0.239,
+            "suggested_roots": [
+              "E_41"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 2.397,
+            "best_discriminator_gap": 0.647,
+            "unresolved_score": 0.19,
+            "suggested_roots": [
+              "E_41",
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_41",
+          "question": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+          "separates": [
+            "Acute otitis media",
+            "URTI"
+          ],
+          "rate_gap": 0.647,
+          "global_present_rate": 0.093,
+          "graph_mi": 0.106,
+          "score": 0.523
+        }
+      },
+      {
+        "turn_index": 18,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_1",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Sarcoidosis differs from MLP top diagnosis Acute otitis media.",
+            "diagnoses": [
+              "Sarcoidosis",
+              "Acute otitis media"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.807,
+            "contradiction": 5.21
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 2.305,
+            "contradiction": 2.839
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute otitis media vs Viral pharyngitis.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Viral pharyngitis"
+            ],
+            "suggested_roots": [
+              "E_114",
+              "E_1"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute otitis media",
+              "Viral pharyngitis"
+            ],
+            "support_gap": 1.456,
+            "best_discriminator_gap": 0.554,
+            "unresolved_score": 0.226,
+            "suggested_roots": [
+              "E_114",
+              "E_1"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "URTI"
+            ],
+            "support_gap": 1.699,
+            "best_discriminator_gap": 0.554,
+            "unresolved_score": 0.205,
+            "suggested_roots": [
+              "E_114",
+              "E_1"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "URTI"
+            ],
+            "support_gap": 2.87,
+            "best_discriminator_gap": 0.577,
+            "unresolved_score": 0.149,
+            "suggested_roots": [
+              "E_66"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_66",
+          "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+          "separates": [
+            "Acute otitis media",
+            "Acute dystonic reactions"
+          ],
+          "rate_gap": 0.577,
+          "global_present_rate": 0.39,
+          "graph_mi": 0.138,
+          "score": 0.564
+        }
+      },
+      {
+        "turn_index": 19,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_9",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute otitis media differs from MLP top diagnosis Acute dystonic reactions.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Acute dystonic reactions"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 1.821,
+            "contradiction": 5.21
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 2.32,
+            "contradiction": 2.839
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Allergic sinusitis more than it supports it.",
+            "diagnoses": [
+              "Allergic sinusitis"
+            ],
+            "support": 1.252,
+            "contradiction": 6.547
+          }
+        ],
+        "unresolved_pairs": [],
+        "top_advisory": null
+      },
+      {
+        "turn_index": 20,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_66",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute otitis media more than it supports it.",
+            "diagnoses": [
+              "Acute otitis media"
+            ],
+            "support": 2.267,
+            "contradiction": 5.889
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Sarcoidosis vs HIV (initial infection).",
+            "diagnoses": [
+              "Sarcoidosis",
+              "HIV (initial infection)"
+            ],
+            "suggested_roots": [
+              "E_66",
+              "E_70"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chagas vs HIV (initial infection).",
+            "diagnoses": [
+              "Chagas",
+              "HIV (initial infection)"
+            ],
+            "suggested_roots": [
+              "E_66",
+              "E_189"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Sarcoidosis",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 0.644,
+            "best_discriminator_gap": 0.732,
+            "unresolved_score": 0.445,
+            "suggested_roots": [
+              "E_66",
+              "E_70"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 1.963,
+            "best_discriminator_gap": 0.721,
+            "unresolved_score": 0.243,
+            "suggested_roots": [
+              "E_66",
+              "E_189"
+            ]
+          },
+          {
+            "pair": [
+              "Sarcoidosis",
+              "Chagas"
+            ],
+            "support_gap": 2.607,
+            "best_discriminator_gap": 0.732,
+            "unresolved_score": 0.203,
+            "suggested_roots": [
+              "E_70",
+              "E_198"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_66",
+          "question": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+          "separates": [
+            "Sarcoidosis",
+            "HIV (initial infection)"
+          ],
+          "rate_gap": 0.664,
+          "global_present_rate": 0.39,
+          "graph_mi": 0.138,
+          "score": 0.629
+        }
+      },
+      {
+        "turn_index": 21,
+        "agent_decision": "stop",
+        "requested_evidence_id": null,
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Acute dystonic reactions more than it supports it.",
+            "diagnoses": [
+              "Acute dystonic reactions"
+            ],
+            "support": 2.257,
+            "contradiction": 9.21
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Anemia more than it supports it.",
+            "diagnoses": [
+              "Anemia"
+            ],
+            "support": 2.342,
+            "contradiction": 9.603
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Sarcoidosis vs Chagas.",
+            "diagnoses": [
+              "Sarcoidosis",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_70",
+              "E_198"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Sarcoidosis",
+              "Chagas"
+            ],
+            "support_gap": 2.469,
+            "best_discriminator_gap": 0.732,
+            "unresolved_score": 0.211,
+            "suggested_roots": [
+              "E_70",
+              "E_198"
+            ]
+          },
+          {
+            "pair": [
+              "Sarcoidosis",
+              "Acute dystonic reactions"
+            ],
+            "support_gap": 8.593,
+            "best_discriminator_gap": 0.732,
+            "unresolved_score": 0.076,
+            "suggested_roots": [
+              "E_70",
+              "E_198"
+            ]
+          },
+          {
+            "pair": [
+              "Sarcoidosis",
+              "Anemia"
+            ],
+            "support_gap": 8.901,
+            "best_discriminator_gap": 0.732,
+            "unresolved_score": 0.074,
+            "suggested_roots": [
+              "E_70",
+              "E_198"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_70",
+          "question": "Are you significantly overweight compared to people of the same height as you?",
+          "separates": [
+            "Sarcoidosis",
+            "Chagas"
+          ],
+          "rate_gap": 0.732,
+          "global_present_rate": 0.109,
+          "graph_mi": 0.106,
+          "score": 0.592
+        }
+      }
+    ]
+  },
+  "test:81691": {
+    "true_pathology": "Croup",
+    "predicted_pathology": "Bronchitis",
+    "correct": false,
+    "num_requests": 10,
+    "turns": [
+      {
+        "turn_index": 1,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_91",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs Allergic sinusitis.",
+            "diagnoses": [
+              "URTI",
+              "Allergic sinusitis"
+            ],
+            "suggested_roots": [
+              "E_91",
+              "E_169"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Allergic sinusitis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Allergic sinusitis"
+            ],
+            "suggested_roots": [
+              "E_169",
+              "E_48"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "Allergic sinusitis"
+            ],
+            "support_gap": 0.051,
+            "best_discriminator_gap": 0.772,
+            "unresolved_score": 0.735,
+            "suggested_roots": [
+              "E_91",
+              "E_169"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Allergic sinusitis"
+            ],
+            "support_gap": 0.173,
+            "best_discriminator_gap": 0.772,
+            "unresolved_score": 0.658,
+            "suggested_roots": [
+              "E_169",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "Allergic sinusitis",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.412,
+            "best_discriminator_gap": 0.772,
+            "unresolved_score": 0.547,
+            "suggested_roots": [
+              "E_169",
+              "E_91"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_91",
+          "question": "Do you have a fever (either felt or measured with a thermometer)?",
+          "separates": [
+            "URTI",
+            "Allergic sinusitis"
+          ],
+          "rate_gap": 0.704,
+          "global_present_rate": 0.219,
+          "graph_mi": 0.14,
+          "score": 0.608
+        }
+      },
+      {
+        "turn_index": 2,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_169",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis Allergic sinusitis.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "Allergic sinusitis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Chronic rhinosinusitis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Chronic rhinosinusitis"
+            ],
+            "suggested_roots": [
+              "E_124",
+              "E_226"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs Chronic rhinosinusitis.",
+            "diagnoses": [
+              "URTI",
+              "Chronic rhinosinusitis"
+            ],
+            "suggested_roots": [
+              "E_124",
+              "E_226"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Chronic rhinosinusitis"
+            ],
+            "support_gap": 0.281,
+            "best_discriminator_gap": 0.849,
+            "unresolved_score": 0.663,
+            "suggested_roots": [
+              "E_124",
+              "E_226"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Chronic rhinosinusitis"
+            ],
+            "support_gap": 0.598,
+            "best_discriminator_gap": 0.849,
+            "unresolved_score": 0.531,
+            "suggested_roots": [
+              "E_124",
+              "E_226"
+            ]
+          },
+          {
+            "pair": [
+              "Allergic sinusitis",
+              "Chronic rhinosinusitis"
+            ],
+            "support_gap": 0.601,
+            "best_discriminator_gap": 0.772,
+            "unresolved_score": 0.482,
+            "suggested_roots": [
+              "E_169",
+              "E_170"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_124",
+          "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+          "separates": [
+            "Viral pharyngitis",
+            "Chronic rhinosinusitis"
+          ],
+          "rate_gap": 0.849,
+          "global_present_rate": 0.118,
+          "graph_mi": 0.135,
+          "score": 0.686
+        }
+      },
+      {
+        "turn_index": 3,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_41",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Allergic sinusitis differs from MLP top diagnosis Viral pharyngitis.",
+            "diagnoses": [
+              "Allergic sinusitis",
+              "Viral pharyngitis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs Chronic rhinosinusitis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Chronic rhinosinusitis"
+            ],
+            "suggested_roots": [
+              "E_41",
+              "E_49"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Viral pharyngitis vs URTI.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_227",
+              "E_201"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "Chronic rhinosinusitis"
+            ],
+            "support_gap": 0.28,
+            "best_discriminator_gap": 0.797,
+            "unresolved_score": 0.623,
+            "suggested_roots": [
+              "E_41",
+              "E_49"
+            ]
+          },
+          {
+            "pair": [
+              "Viral pharyngitis",
+              "URTI"
+            ],
+            "support_gap": 0.317,
+            "best_discriminator_gap": 0.612,
+            "unresolved_score": 0.465,
+            "suggested_roots": [
+              "E_227",
+              "E_201"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Allergic sinusitis"
+            ],
+            "support_gap": 0.575,
+            "best_discriminator_gap": 0.712,
+            "unresolved_score": 0.452,
+            "suggested_roots": [
+              "E_48",
+              "E_79"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_79",
+          "question": "Do you smoke cigarettes?",
+          "separates": [
+            "Allergic sinusitis",
+            "Chronic rhinosinusitis"
+          ],
+          "rate_gap": 0.746,
+          "global_present_rate": 0.285,
+          "graph_mi": 0.152,
+          "score": 0.661
+        }
+      },
+      {
+        "turn_index": 4,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_201",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Viral pharyngitis differs from MLP top diagnosis Chronic rhinosinusitis.",
+            "diagnoses": [
+              "Viral pharyngitis",
+              "Chronic rhinosinusitis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chronic rhinosinusitis vs Cluster headache.",
+            "diagnoses": [
+              "Chronic rhinosinusitis",
+              "Cluster headache"
+            ],
+            "suggested_roots": [
+              "E_201",
+              "E_120"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chronic rhinosinusitis vs Acute otitis media.",
+            "diagnoses": [
+              "Chronic rhinosinusitis",
+              "Acute otitis media"
+            ],
+            "suggested_roots": [
+              "E_120",
+              "E_124"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chronic rhinosinusitis",
+              "Cluster headache"
+            ],
+            "support_gap": 0.155,
+            "best_discriminator_gap": 0.899,
+            "unresolved_score": 0.778,
+            "suggested_roots": [
+              "E_201",
+              "E_120"
+            ]
+          },
+          {
+            "pair": [
+              "Chronic rhinosinusitis",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.66,
+            "best_discriminator_gap": 0.899,
+            "unresolved_score": 0.542,
+            "suggested_roots": [
+              "E_120",
+              "E_124"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "Cluster headache"
+            ],
+            "support_gap": 0.815,
+            "best_discriminator_gap": 0.838,
+            "unresolved_score": 0.462,
+            "suggested_roots": [
+              "E_25",
+              "E_184"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_201",
+          "question": "Do you have a cough?",
+          "separates": [
+            "Chronic rhinosinusitis",
+            "Cluster headache"
+          ],
+          "rate_gap": 0.815,
+          "global_present_rate": 0.31,
+          "graph_mi": 0.169,
+          "score": 0.721
+        }
+      },
+      {
+        "turn_index": 5,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_25",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chronic rhinosinusitis differs from MLP top diagnosis Croup.",
+            "diagnoses": [
+              "Chronic rhinosinusitis",
+              "Croup"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.002,
+            "contradiction": 2.243
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Croup vs Cluster headache.",
+            "diagnoses": [
+              "Croup",
+              "Cluster headache"
+            ],
+            "suggested_roots": [
+              "E_25",
+              "E_66"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Croup vs Acute otitis media.",
+            "diagnoses": [
+              "Croup",
+              "Acute otitis media"
+            ],
+            "suggested_roots": [
+              "E_66",
+              "E_194"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Croup",
+              "Cluster headache"
+            ],
+            "support_gap": 0.856,
+            "best_discriminator_gap": 0.838,
+            "unresolved_score": 0.452,
+            "suggested_roots": [
+              "E_25",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "Croup",
+              "Acute otitis media"
+            ],
+            "support_gap": 0.72,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.434,
+            "suggested_roots": [
+              "E_66",
+              "E_194"
+            ]
+          },
+          {
+            "pair": [
+              "Cluster headache",
+              "Acute otitis media"
+            ],
+            "support_gap": 1.576,
+            "best_discriminator_gap": 0.838,
+            "unresolved_score": 0.325,
+            "suggested_roots": [
+              "E_25",
+              "E_184"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_25",
+          "question": "Have any of your family members been diagnosed with cluster headaches?",
+          "separates": [
+            "Croup",
+            "Cluster headache"
+          ],
+          "rate_gap": 0.838,
+          "global_present_rate": 0.018,
+          "graph_mi": 0.035,
+          "score": 0.638
+        }
+      },
+      {
+        "turn_index": 6,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_194",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 0.919,
+            "contradiction": 2.378
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.02,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pulmonary embolism more than it supports it.",
+            "diagnoses": [
+              "Pulmonary embolism"
+            ],
+            "support": 0.766,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pneumonia vs Pulmonary embolism.",
+            "diagnoses": [
+              "Pneumonia",
+              "Pulmonary embolism"
+            ],
+            "suggested_roots": [
+              "E_151",
+              "E_219"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pneumonia",
+              "Pulmonary embolism"
+            ],
+            "support_gap": 1.774,
+            "best_discriminator_gap": 0.896,
+            "unresolved_score": 0.323,
+            "suggested_roots": [
+              "E_151",
+              "E_219"
+            ]
+          },
+          {
+            "pair": [
+              "Bronchitis",
+              "Pulmonary embolism"
+            ],
+            "support_gap": 2.01,
+            "best_discriminator_gap": 0.896,
+            "unresolved_score": 0.298,
+            "suggested_roots": [
+              "E_151",
+              "E_219"
+            ]
+          },
+          {
+            "pair": [
+              "Croup",
+              "Bronchitis"
+            ],
+            "support_gap": 2.27,
+            "best_discriminator_gap": 0.746,
+            "unresolved_score": 0.228,
+            "suggested_roots": [
+              "E_194",
+              "E_202"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_151",
+          "question": "Do you have swelling in one or more areas of your body?",
+          "separates": [
+            "Croup",
+            "Pulmonary embolism"
+          ],
+          "rate_gap": 0.896,
+          "global_present_rate": 0.102,
+          "graph_mi": 0.14,
+          "score": 0.716
+        }
+      },
+      {
+        "turn_index": 7,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_106",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Croup differs from MLP top diagnosis Acute otitis media.",
+            "diagnoses": [
+              "Croup",
+              "Acute otitis media"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.064,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 0.963,
+            "contradiction": 2.378
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Bronchitis vs Pneumonia.",
+            "diagnoses": [
+              "Bronchitis",
+              "Pneumonia"
+            ],
+            "suggested_roots": [
+              "E_106"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Bronchitis",
+              "Pneumonia"
+            ],
+            "support_gap": 0.236,
+            "best_discriminator_gap": 0.725,
+            "unresolved_score": 0.587,
+            "suggested_roots": [
+              "E_106"
+            ]
+          },
+          {
+            "pair": [
+              "Pneumonia",
+              "Cluster headache"
+            ],
+            "support_gap": 1.572,
+            "best_discriminator_gap": 0.725,
+            "unresolved_score": 0.282,
+            "suggested_roots": [
+              "E_106"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "Pneumonia"
+            ],
+            "support_gap": 1.786,
+            "best_discriminator_gap": 0.725,
+            "unresolved_score": 0.26,
+            "suggested_roots": [
+              "E_106"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_106",
+          "question": "Do you have heart failure?",
+          "separates": [
+            "Acute otitis media",
+            "Pneumonia"
+          ],
+          "rate_gap": 0.725,
+          "global_present_rate": 0.057,
+          "graph_mi": 0.082,
+          "score": 0.569
+        }
+      },
+      {
+        "turn_index": 8,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_208",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.122,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 0.963,
+            "contradiction": 3.65
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Bronchitis vs Pneumonia.",
+            "diagnoses": [
+              "Bronchitis",
+              "Pneumonia"
+            ],
+            "suggested_roots": [
+              "E_208"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Bronchitis",
+              "Pneumonia"
+            ],
+            "support_gap": 1.567,
+            "best_discriminator_gap": 0.614,
+            "unresolved_score": 0.239,
+            "suggested_roots": [
+              "E_208"
+            ]
+          },
+          {
+            "pair": [
+              "Croup",
+              "Pneumonia"
+            ],
+            "support_gap": 2.555,
+            "best_discriminator_gap": 0.614,
+            "unresolved_score": 0.173,
+            "suggested_roots": [
+              "E_208"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "Pneumonia"
+            ],
+            "support_gap": 3.117,
+            "best_discriminator_gap": 0.614,
+            "unresolved_score": 0.149,
+            "suggested_roots": [
+              "E_208"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_208",
+          "question": "Is your BMI less than 18.5, or are you underweight?",
+          "separates": [
+            "Acute otitis media",
+            "Pneumonia"
+          ],
+          "rate_gap": 0.614,
+          "global_present_rate": 0.065,
+          "graph_mi": 0.084,
+          "score": 0.489
+        }
+      },
+      {
+        "turn_index": 9,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_155",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute otitis media differs from MLP top diagnosis Bronchitis.",
+            "diagnoses": [
+              "Acute otitis media",
+              "Bronchitis"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.19,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 0.963,
+            "contradiction": 4.562
+          }
+        ],
+        "unresolved_pairs": [],
+        "top_advisory": null
+      },
+      {
+        "turn_index": 10,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_78",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Bronchitis.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Bronchitis"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.274,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 1.047,
+            "contradiction": 4.562
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Bronchitis",
+              "Pneumonia"
+            ],
+            "support_gap": 2.547,
+            "best_discriminator_gap": 0.627,
+            "unresolved_score": 0.177,
+            "suggested_roots": [
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Pneumonia",
+              "Croup"
+            ],
+            "support_gap": 3.53,
+            "best_discriminator_gap": 0.627,
+            "unresolved_score": 0.138,
+            "suggested_roots": [
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Acute otitis media",
+              "Pneumonia"
+            ],
+            "support_gap": 4.097,
+            "best_discriminator_gap": 0.627,
+            "unresolved_score": 0.123,
+            "suggested_roots": [
+              "E_78"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_78",
+          "question": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+          "separates": [
+            "Bronchitis",
+            "Pneumonia"
+          ],
+          "rate_gap": 0.627,
+          "global_present_rate": 0.118,
+          "graph_mi": 0.108,
+          "score": 0.517
+        }
+      },
+      {
+        "turn_index": 11,
+        "agent_decision": "stop",
+        "requested_evidence_id": null,
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis Bronchitis.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "Bronchitis"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Bronchitis more than it supports it.",
+            "diagnoses": [
+              "Bronchitis"
+            ],
+            "support": 1.4,
+            "contradiction": 2.243
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pneumonia more than it supports it.",
+            "diagnoses": [
+              "Pneumonia"
+            ],
+            "support": 1.047,
+            "contradiction": 5.418
+          }
+        ],
+        "unresolved_pairs": [],
+        "top_advisory": null
+      }
+    ]
+  },
+  "test:77908": {
+    "true_pathology": "Ebola",
+    "predicted_pathology": "Ebola",
+    "correct": true,
+    "num_requests": 7,
+    "turns": [
+      {
+        "turn_index": 1,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_223",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pancreatic neoplasm vs Chagas.",
+            "diagnoses": [
+              "Pancreatic neoplasm",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_223",
+              "E_70"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pancreatic neoplasm vs Scombroid food poisoning.",
+            "diagnoses": [
+              "Pancreatic neoplasm",
+              "Scombroid food poisoning"
+            ],
+            "suggested_roots": [
+              "E_223",
+              "E_70"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pancreatic neoplasm",
+              "Chagas"
+            ],
+            "support_gap": 0.066,
+            "best_discriminator_gap": 0.745,
+            "unresolved_score": 0.699,
+            "suggested_roots": [
+              "E_223",
+              "E_70"
+            ]
+          },
+          {
+            "pair": [
+              "Pancreatic neoplasm",
+              "Scombroid food poisoning"
+            ],
+            "support_gap": 0.084,
+            "best_discriminator_gap": 0.745,
+            "unresolved_score": 0.687,
+            "suggested_roots": [
+              "E_223",
+              "E_70"
+            ]
+          },
+          {
+            "pair": [
+              "Pancreatic neoplasm",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 0.197,
+            "best_discriminator_gap": 0.745,
+            "unresolved_score": 0.622,
+            "suggested_roots": [
+              "E_223",
+              "E_70"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_223",
+          "question": "Are there members of your family who have been diagnosed with pancreatic cancer?",
+          "separates": [
+            "Pancreatic neoplasm",
+            "HIV (initial infection)"
+          ],
+          "rate_gap": 0.745,
+          "global_present_rate": 0.014,
+          "graph_mi": 0.029,
+          "score": 0.566
+        }
+      },
+      {
+        "turn_index": 2,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_91",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Pancreatic neoplasm differs from MLP top diagnosis HIV (initial infection).",
+            "diagnoses": [
+              "Pancreatic neoplasm",
+              "HIV (initial infection)"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs Scombroid food poisoning.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Scombroid food poisoning"
+            ],
+            "suggested_roots": [
+              "E_91",
+              "E_66"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chagas vs Scombroid food poisoning.",
+            "diagnoses": [
+              "Chagas",
+              "Scombroid food poisoning"
+            ],
+            "suggested_roots": [
+              "E_91",
+              "E_214"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Scombroid food poisoning"
+            ],
+            "support_gap": 0.281,
+            "best_discriminator_gap": 0.864,
+            "unresolved_score": 0.674,
+            "suggested_roots": [
+              "E_91",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Scombroid food poisoning"
+            ],
+            "support_gap": 0.018,
+            "best_discriminator_gap": 0.61,
+            "unresolved_score": 0.599,
+            "suggested_roots": [
+              "E_91",
+              "E_214"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Chagas"
+            ],
+            "support_gap": 0.263,
+            "best_discriminator_gap": 0.61,
+            "unresolved_score": 0.483,
+            "suggested_roots": [
+              "E_66",
+              "E_91"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_91",
+          "question": "Do you have a fever (either felt or measured with a thermometer)?",
+          "separates": [
+            "HIV (initial infection)",
+            "Pancreatic neoplasm"
+          ],
+          "rate_gap": 0.864,
+          "global_present_rate": 0.219,
+          "graph_mi": 0.14,
+          "score": 0.728
+        }
+      },
+      {
+        "turn_index": 3,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_129",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Pancreatic neoplasm more than it supports it.",
+            "diagnoses": [
+              "Pancreatic neoplasm"
+            ],
+            "support": 2.433,
+            "contradiction": 5.382
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs Chagas.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs Ebola.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Ebola"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Chagas"
+            ],
+            "support_gap": 0.665,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.601,
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Ebola"
+            ],
+            "support_gap": 0.928,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.519,
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          },
+          {
+            "pair": [
+              "Ebola",
+              "Pancreatic neoplasm"
+            ],
+            "support_gap": 6.14,
+            "best_discriminator_gap": 0.718,
+            "unresolved_score": 0.101,
+            "suggested_roots": [
+              "E_129",
+              "E_66"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_129",
+          "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condit",
+          "separates": [
+            "HIV (initial infection)",
+            "Chagas"
+          ],
+          "rate_gap": 1.0,
+          "global_present_rate": 0.166,
+          "graph_mi": 0.19,
+          "score": 0.819
+        }
+      },
+      {
+        "turn_index": 4,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_214",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis HIV (initial infection) differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.575,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chagas vs Ebola.",
+            "diagnoses": [
+              "Chagas",
+              "Ebola"
+            ],
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs URTI.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chagas",
+              "Ebola"
+            ],
+            "support_gap": 0.266,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.498,
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "URTI"
+            ],
+            "support_gap": 2.544,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.229,
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 3.515,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.14,
+            "suggested_roots": [
+              "E_175",
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_181",
+          "question": "Do you have nasal congestion or a clear runny nose?",
+          "separates": [
+            "Chagas",
+            "URTI"
+          ],
+          "rate_gap": 0.81,
+          "global_present_rate": 0.198,
+          "graph_mi": 0.143,
+          "score": 0.681
+        }
+      },
+      {
+        "turn_index": 5,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_41",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.655,
+            "contradiction": 4.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chagas vs Ebola.",
+            "diagnoses": [
+              "Chagas",
+              "Ebola"
+            ],
+            "suggested_roots": [
+              "E_41",
+              "E_73"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs Ebola.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "Ebola"
+            ],
+            "suggested_roots": [
+              "E_41",
+              "E_73"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chagas",
+              "Ebola"
+            ],
+            "support_gap": 0.268,
+            "best_discriminator_gap": 0.917,
+            "unresolved_score": 0.723,
+            "suggested_roots": [
+              "E_41",
+              "E_73"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Ebola"
+            ],
+            "support_gap": 3.246,
+            "best_discriminator_gap": 0.917,
+            "unresolved_score": 0.216,
+            "suggested_roots": [
+              "E_41",
+              "E_73"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "URTI"
+            ],
+            "support_gap": 2.541,
+            "best_discriminator_gap": 0.758,
+            "unresolved_score": 0.214,
+            "suggested_roots": [
+              "E_201",
+              "E_9"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_41",
+          "question": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+          "separates": [
+            "Chagas",
+            "Ebola"
+          ],
+          "rate_gap": 0.875,
+          "global_present_rate": 0.093,
+          "graph_mi": 0.106,
+          "score": 0.695
+        }
+      },
+      {
+        "turn_index": 6,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_73",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chagas differs from MLP top diagnosis URTI.",
+            "diagnoses": [
+              "Chagas",
+              "URTI"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts HIV (initial infection) more than it supports it.",
+            "diagnoses": [
+              "HIV (initial infection)"
+            ],
+            "support": 4.196,
+            "contradiction": 8.0
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs Chagas.",
+            "diagnoses": [
+              "URTI",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 0.481,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.547,
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 3.995,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.162,
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Ebola"
+            ],
+            "support_gap": 5.473,
+            "best_discriminator_gap": 0.917,
+            "unresolved_score": 0.142,
+            "suggested_roots": [
+              "E_73",
+              "E_181"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_73",
+          "question": "In the last month, have you been in contact with anyone infected with the Ebola virus?",
+          "separates": [
+            "URTI",
+            "Ebola"
+          ],
+          "rate_gap": 0.917,
+          "global_present_rate": 0.001,
+          "graph_mi": 0.002,
+          "score": 0.688
+        }
+      },
+      {
+        "turn_index": 7,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_178",
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 4.191,
+            "contradiction": 7.778
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 3.71,
+            "contradiction": 5.783
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts HIV (initial infection) more than it supports it.",
+            "diagnoses": [
+              "HIV (initial infection)"
+            ],
+            "support": 4.196,
+            "contradiction": 10.945
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: URTI vs Chagas.",
+            "diagnoses": [
+              "URTI",
+              "Chagas"
+            ],
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 1.514,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.322,
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 3.162,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.195,
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "HIV (initial infection)"
+            ],
+            "support_gap": 4.676,
+            "best_discriminator_gap": 0.61,
+            "unresolved_score": 0.107,
+            "suggested_roots": [
+              "E_66",
+              "E_97"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_181",
+          "question": "Do you have nasal congestion or a clear runny nose?",
+          "separates": [
+            "Ebola",
+            "URTI"
+          ],
+          "rate_gap": 0.81,
+          "global_present_rate": 0.198,
+          "graph_mi": 0.143,
+          "score": 0.681
+        }
+      },
+      {
+        "turn_index": 8,
+        "agent_decision": "stop",
+        "requested_evidence_id": null,
+        "warnings": [
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts HIV (initial infection) more than it supports it.",
+            "diagnoses": [
+              "HIV (initial infection)"
+            ],
+            "support": 4.196,
+            "contradiction": 13.887
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 4.191,
+            "contradiction": 11.553
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 3.71,
+            "contradiction": 7.562
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: HIV (initial infection) vs URTI.",
+            "diagnoses": [
+              "HIV (initial infection)",
+              "URTI"
+            ],
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "URTI"
+            ],
+            "support_gap": 2.329,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.243,
+            "suggested_roots": [
+              "E_181",
+              "E_48"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 3.509,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.18,
+            "suggested_roots": [
+              "E_181",
+              "E_97"
+            ]
+          },
+          {
+            "pair": [
+              "HIV (initial infection)",
+              "Chagas"
+            ],
+            "support_gap": 5.838,
+            "best_discriminator_gap": 0.658,
+            "unresolved_score": 0.096,
+            "suggested_roots": [
+              "E_66",
+              "E_144"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_181",
+          "question": "Do you have nasal congestion or a clear runny nose?",
+          "separates": [
+            "Ebola",
+            "URTI"
+          ],
+          "rate_gap": 0.81,
+          "global_present_rate": 0.198,
+          "graph_mi": 0.143,
+          "score": 0.681
+        }
+      }
+    ]
+  },
+  "test:62878": {
+    "true_pathology": "Pericarditis",
+    "predicted_pathology": "URTI",
+    "correct": false,
+    "num_requests": 24,
+    "turns": [
+      {
+        "turn_index": 1,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_124",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Bronchospasm / acute asthma exacerbation vs Acute COPD exacerbation / infection.",
+            "diagnoses": [
+              "Bronchospasm / acute asthma exacerbation",
+              "Acute COPD exacerbation / infection"
+            ],
+            "suggested_roots": [
+              "E_124",
+              "E_214"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Bronchospasm / acute asthma exacerbation vs Possible NSTEMI / STEMI.",
+            "diagnoses": [
+              "Bronchospasm / acute asthma exacerbation",
+              "Possible NSTEMI / STEMI"
+            ],
+            "suggested_roots": [
+              "E_124",
+              "E_214"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Bronchospasm / acute asthma exacerbation",
+              "Acute COPD exacerbation / infection"
+            ],
+            "support_gap": 0.136,
+            "best_discriminator_gap": 0.974,
+            "unresolved_score": 0.857,
+            "suggested_roots": [
+              "E_124",
+              "E_214"
+            ]
+          },
+          {
+            "pair": [
+              "Bronchospasm / acute asthma exacerbation",
+              "Possible NSTEMI / STEMI"
+            ],
+            "support_gap": 0.254,
+            "best_discriminator_gap": 0.974,
+            "unresolved_score": 0.777,
+            "suggested_roots": [
+              "E_124",
+              "E_214"
+            ]
+          },
+          {
+            "pair": [
+              "Possible NSTEMI / STEMI",
+              "Acute COPD exacerbation / infection"
+            ],
+            "support_gap": 0.118,
+            "best_discriminator_gap": 0.86,
+            "unresolved_score": 0.769,
+            "suggested_roots": [
+              "E_214"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_124",
+          "question": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+          "separates": [
+            "Bronchospasm / acute asthma exacerbation",
+            "Anemia"
+          ],
+          "rate_gap": 0.974,
+          "global_present_rate": 0.118,
+          "graph_mi": 0.135,
+          "score": 0.78
+        }
+      },
+      {
+        "turn_index": 2,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_214",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis Acute COPD exacerbation / infection.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "Acute COPD exacerbation / infection"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute COPD exacerbation / infection vs Possible NSTEMI / STEMI.",
+            "diagnoses": [
+              "Acute COPD exacerbation / infection",
+              "Possible NSTEMI / STEMI"
+            ],
+            "suggested_roots": [
+              "E_214",
+              "E_79"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute COPD exacerbation / infection vs Anemia.",
+            "diagnoses": [
+              "Acute COPD exacerbation / infection",
+              "Anemia"
+            ],
+            "suggested_roots": [
+              "E_79",
+              "E_214"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute COPD exacerbation / infection",
+              "Possible NSTEMI / STEMI"
+            ],
+            "support_gap": 0.118,
+            "best_discriminator_gap": 0.86,
+            "unresolved_score": 0.769,
+            "suggested_roots": [
+              "E_214",
+              "E_79"
+            ]
+          },
+          {
+            "pair": [
+              "Acute COPD exacerbation / infection",
+              "Anemia"
+            ],
+            "support_gap": 0.197,
+            "best_discriminator_gap": 0.86,
+            "unresolved_score": 0.718,
+            "suggested_roots": [
+              "E_79",
+              "E_214"
+            ]
+          },
+          {
+            "pair": [
+              "Acute COPD exacerbation / infection",
+              "Stable angina"
+            ],
+            "support_gap": 0.21,
+            "best_discriminator_gap": 0.86,
+            "unresolved_score": 0.711,
+            "suggested_roots": [
+              "E_214",
+              "E_79"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_79",
+          "question": "Do you smoke cigarettes?",
+          "separates": [
+            "Acute COPD exacerbation / infection",
+            "Anemia"
+          ],
+          "rate_gap": 0.814,
+          "global_present_rate": 0.285,
+          "graph_mi": 0.152,
+          "score": 0.711
+        }
+      },
+      {
+        "turn_index": 3,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_151",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Bronchiolitis differs from MLP top diagnosis Anemia.",
+            "diagnoses": [
+              "Bronchiolitis",
+              "Anemia"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Anemia vs Stable angina.",
+            "diagnoses": [
+              "Anemia",
+              "Stable angina"
+            ],
+            "suggested_roots": [
+              "E_218",
+              "E_79"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pulmonary embolism vs Sarcoidosis.",
+            "diagnoses": [
+              "Pulmonary embolism",
+              "Sarcoidosis"
+            ],
+            "suggested_roots": [
+              "E_151",
+              "E_45"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Anemia",
+              "Stable angina"
+            ],
+            "support_gap": 0.017,
+            "best_discriminator_gap": 0.854,
+            "unresolved_score": 0.84,
+            "suggested_roots": [
+              "E_218",
+              "E_79"
+            ]
+          },
+          {
+            "pair": [
+              "Pulmonary embolism",
+              "Sarcoidosis"
+            ],
+            "support_gap": 0.116,
+            "best_discriminator_gap": 0.896,
+            "unresolved_score": 0.803,
+            "suggested_roots": [
+              "E_151",
+              "E_45"
+            ]
+          },
+          {
+            "pair": [
+              "Stable angina",
+              "Sarcoidosis"
+            ],
+            "support_gap": 0.065,
+            "best_discriminator_gap": 0.854,
+            "unresolved_score": 0.802,
+            "suggested_roots": [
+              "E_218",
+              "E_79"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_151",
+          "question": "Do you have swelling in one or more areas of your body?",
+          "separates": [
+            "Anemia",
+            "Pulmonary embolism"
+          ],
+          "rate_gap": 0.896,
+          "global_present_rate": 0.102,
+          "graph_mi": 0.14,
+          "score": 0.716
+        }
+      },
+      {
+        "turn_index": 4,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_89",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Pulmonary embolism differs from MLP top diagnosis Anemia.",
+            "diagnoses": [
+              "Pulmonary embolism",
+              "Anemia"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Anemia vs Epiglottitis.",
+            "diagnoses": [
+              "Anemia",
+              "Epiglottitis"
+            ],
+            "suggested_roots": [
+              "E_89"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Anemia vs PSVT.",
+            "diagnoses": [
+              "Anemia",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_89"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Anemia",
+              "Epiglottitis"
+            ],
+            "support_gap": 0.092,
+            "best_discriminator_gap": 0.603,
+            "unresolved_score": 0.552,
+            "suggested_roots": [
+              "E_89"
+            ]
+          },
+          {
+            "pair": [
+              "Anemia",
+              "PSVT"
+            ],
+            "support_gap": 0.107,
+            "best_discriminator_gap": 0.603,
+            "unresolved_score": 0.545,
+            "suggested_roots": [
+              "E_89"
+            ]
+          },
+          {
+            "pair": [
+              "Atrial fibrillation",
+              "Epiglottitis"
+            ],
+            "support_gap": 0.066,
+            "best_discriminator_gap": 0.569,
+            "unresolved_score": 0.534,
+            "suggested_roots": [
+              "E_218"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_89",
+          "question": "Do you constantly feel fatigued or do you have non-restful sleep?",
+          "separates": [
+            "Anemia",
+            "Atrial fibrillation"
+          ],
+          "rate_gap": 0.603,
+          "global_present_rate": 0.092,
+          "graph_mi": 0.089,
+          "score": 0.489
+        }
+      },
+      {
+        "turn_index": 5,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_65",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Anemia differs from MLP top diagnosis Epiglottitis.",
+            "diagnoses": [
+              "Anemia",
+              "Epiglottitis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Epiglottitis vs Atrial fibrillation.",
+            "diagnoses": [
+              "Epiglottitis",
+              "Atrial fibrillation"
+            ],
+            "suggested_roots": [
+              "E_155",
+              "E_65"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Epiglottitis vs Pericarditis.",
+            "diagnoses": [
+              "Epiglottitis",
+              "Pericarditis"
+            ],
+            "suggested_roots": [
+              "E_217",
+              "E_65"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Epiglottitis",
+              "Atrial fibrillation"
+            ],
+            "support_gap": 0.066,
+            "best_discriminator_gap": 0.744,
+            "unresolved_score": 0.698,
+            "suggested_roots": [
+              "E_155",
+              "E_65"
+            ]
+          },
+          {
+            "pair": [
+              "Epiglottitis",
+              "Pericarditis"
+            ],
+            "support_gap": 0.075,
+            "best_discriminator_gap": 0.744,
+            "unresolved_score": 0.692,
+            "suggested_roots": [
+              "E_217",
+              "E_65"
+            ]
+          },
+          {
+            "pair": [
+              "Myocarditis",
+              "Atrial fibrillation"
+            ],
+            "support_gap": 0.045,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.68,
+            "suggested_roots": [
+              "E_0",
+              "E_217"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_155",
+          "question": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpita",
+          "separates": [
+            "Epiglottitis",
+            "Atrial fibrillation"
+          ],
+          "rate_gap": 0.725,
+          "global_present_rate": 0.075,
+          "graph_mi": 0.098,
+          "score": 0.576
+        }
+      },
+      {
+        "turn_index": 6,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_104",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Myocarditis vs Atrial fibrillation.",
+            "diagnoses": [
+              "Myocarditis",
+              "Atrial fibrillation"
+            ],
+            "suggested_roots": [
+              "E_104",
+              "E_31"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Atrial fibrillation.",
+            "diagnoses": [
+              "Pericarditis",
+              "Atrial fibrillation"
+            ],
+            "suggested_roots": [
+              "E_104",
+              "E_31"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Myocarditis",
+              "Atrial fibrillation"
+            ],
+            "support_gap": 0.045,
+            "best_discriminator_gap": 0.764,
+            "unresolved_score": 0.731,
+            "suggested_roots": [
+              "E_104",
+              "E_31"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Atrial fibrillation"
+            ],
+            "support_gap": 0.141,
+            "best_discriminator_gap": 0.764,
+            "unresolved_score": 0.67,
+            "suggested_roots": [
+              "E_104",
+              "E_31"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "PSVT"
+            ],
+            "support_gap": 0.124,
+            "best_discriminator_gap": 0.734,
+            "unresolved_score": 0.653,
+            "suggested_roots": [
+              "E_217",
+              "E_0"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_104",
+          "question": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+          "separates": [
+            "Myocarditis",
+            "Atrial fibrillation"
+          ],
+          "rate_gap": 0.757,
+          "global_present_rate": 0.08,
+          "graph_mi": 0.095,
+          "score": 0.601
+        }
+      },
+      {
+        "turn_index": 7,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_217",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs PSVT.",
+            "diagnoses": [
+              "Pericarditis",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_217",
+              "E_0"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Myocarditis vs PSVT.",
+            "diagnoses": [
+              "Myocarditis",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_0",
+              "E_217"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pericarditis",
+              "PSVT"
+            ],
+            "support_gap": 0.124,
+            "best_discriminator_gap": 0.734,
+            "unresolved_score": 0.653,
+            "suggested_roots": [
+              "E_217",
+              "E_0"
+            ]
+          },
+          {
+            "pair": [
+              "Myocarditis",
+              "PSVT"
+            ],
+            "support_gap": 0.309,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.543,
+            "suggested_roots": [
+              "E_0",
+              "E_217"
+            ]
+          },
+          {
+            "pair": [
+              "Myocarditis",
+              "Pericarditis"
+            ],
+            "support_gap": 0.185,
+            "best_discriminator_gap": 0.625,
+            "unresolved_score": 0.527,
+            "suggested_roots": [
+              "E_218",
+              "E_64"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_217",
+          "question": "Are your symptoms worse when lying down and alleviated while sitting up?",
+          "separates": [
+            "Pericarditis",
+            "Atrial fibrillation"
+          ],
+          "rate_gap": 0.734,
+          "global_present_rate": 0.056,
+          "graph_mi": 0.073,
+          "score": 0.574
+        }
+      },
+      {
+        "turn_index": 8,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_91",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Myocarditis differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Myocarditis",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Chagas vs Acute dystonic reactions.",
+            "diagnoses": [
+              "Chagas",
+              "Acute dystonic reactions"
+            ],
+            "suggested_roots": [
+              "E_91",
+              "E_9"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Atrial fibrillation vs Panic attack.",
+            "diagnoses": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_70"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chagas",
+              "Acute dystonic reactions"
+            ],
+            "support_gap": 0.062,
+            "best_discriminator_gap": 0.61,
+            "unresolved_score": 0.574,
+            "suggested_roots": [
+              "E_91",
+              "E_9"
+            ]
+          },
+          {
+            "pair": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "support_gap": 0.319,
+            "best_discriminator_gap": 0.639,
+            "unresolved_score": 0.484,
+            "suggested_roots": [
+              "E_70"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 0.781,
+            "best_discriminator_gap": 0.61,
+            "unresolved_score": 0.343,
+            "suggested_roots": [
+              "E_91",
+              "E_9"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_91",
+          "question": "Do you have a fever (either felt or measured with a thermometer)?",
+          "separates": [
+            "Chagas",
+            "Atrial fibrillation"
+          ],
+          "rate_gap": 0.61,
+          "global_present_rate": 0.219,
+          "graph_mi": 0.14,
+          "score": 0.537
+        }
+      },
+      {
+        "turn_index": 9,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_70",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chagas differs from MLP top diagnosis Atrial fibrillation.",
+            "diagnoses": [
+              "Chagas",
+              "Atrial fibrillation"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Atrial fibrillation vs Panic attack.",
+            "diagnoses": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_70",
+              "E_78"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Panic attack vs PSVT.",
+            "diagnoses": [
+              "Panic attack",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_78",
+              "E_148"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "support_gap": 0.319,
+            "best_discriminator_gap": 0.639,
+            "unresolved_score": 0.484,
+            "suggested_roots": [
+              "E_70",
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Panic attack",
+              "PSVT"
+            ],
+            "support_gap": 0.773,
+            "best_discriminator_gap": 0.576,
+            "unresolved_score": 0.325,
+            "suggested_roots": [
+              "E_78",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Panic attack"
+            ],
+            "support_gap": 0.843,
+            "best_discriminator_gap": 0.576,
+            "unresolved_score": 0.313,
+            "suggested_roots": [
+              "E_78",
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_70",
+          "question": "Are you significantly overweight compared to people of the same height as you?",
+          "separates": [
+            "Atrial fibrillation",
+            "Acute dystonic reactions"
+          ],
+          "rate_gap": 0.639,
+          "global_present_rate": 0.109,
+          "graph_mi": 0.106,
+          "score": 0.523
+        }
+      },
+      {
+        "turn_index": 10,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_84",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Atrial fibrillation differs from MLP top diagnosis Panic attack.",
+            "diagnoses": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Guillain-Barr\u00e9 syndrome vs Acute dystonic reactions.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Acute dystonic reactions"
+            ],
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Guillain-Barr\u00e9 syndrome vs PSVT.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Acute dystonic reactions"
+            ],
+            "support_gap": 0.102,
+            "best_discriminator_gap": 0.747,
+            "unresolved_score": 0.678,
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          },
+          {
+            "pair": [
+              "Guillain-Barr\u00e9 syndrome",
+              "PSVT"
+            ],
+            "support_gap": 0.174,
+            "best_discriminator_gap": 0.747,
+            "unresolved_score": 0.636,
+            "suggested_roots": [
+              "E_84",
+              "E_157"
+            ]
+          },
+          {
+            "pair": [
+              "Panic attack",
+              "PSVT"
+            ],
+            "support_gap": 0.771,
+            "best_discriminator_gap": 0.78,
+            "unresolved_score": 0.44,
+            "suggested_roots": [
+              "E_157",
+              "E_78"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_157",
+          "question": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your",
+          "separates": [
+            "Panic attack",
+            "Acute dystonic reactions"
+          ],
+          "rate_gap": 0.78,
+          "global_present_rate": 0.032,
+          "graph_mi": 0.058,
+          "score": 0.601
+        }
+      },
+      {
+        "turn_index": 11,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_78",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Guillain-Barr\u00e9 syndrome differs from MLP top diagnosis Acute dystonic reactions.",
+            "diagnoses": [
+              "Guillain-Barr\u00e9 syndrome",
+              "Acute dystonic reactions"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Panic attack vs Pericarditis.",
+            "diagnoses": [
+              "Panic attack",
+              "Pericarditis"
+            ],
+            "suggested_roots": [
+              "E_220",
+              "E_78"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: PSVT vs Panic attack.",
+            "diagnoses": [
+              "PSVT",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_62",
+              "E_78"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Panic attack",
+              "Pericarditis"
+            ],
+            "support_gap": 0.359,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.533,
+            "suggested_roots": [
+              "E_220",
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "PSVT",
+              "Panic attack"
+            ],
+            "support_gap": 0.772,
+            "best_discriminator_gap": 0.749,
+            "unresolved_score": 0.423,
+            "suggested_roots": [
+              "E_62",
+              "E_78"
+            ]
+          },
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "Panic attack"
+            ],
+            "support_gap": 0.843,
+            "best_discriminator_gap": 0.695,
+            "unresolved_score": 0.377,
+            "suggested_roots": [
+              "E_62",
+              "E_78"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_62",
+          "question": "Do you regularly take stimulant drugs?",
+          "separates": [
+            "PSVT",
+            "Panic attack"
+          ],
+          "rate_gap": 0.749,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.061,
+          "score": 0.58
+        }
+      },
+      {
+        "turn_index": 12,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_147",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Acute dystonic reactions vs PSVT.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_147",
+              "E_15"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Bronchiectasis vs Pericarditis.",
+            "diagnoses": [
+              "Bronchiectasis",
+              "Pericarditis"
+            ],
+            "suggested_roots": [
+              "E_220"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Acute dystonic reactions",
+              "PSVT"
+            ],
+            "support_gap": 0.072,
+            "best_discriminator_gap": 0.693,
+            "unresolved_score": 0.646,
+            "suggested_roots": [
+              "E_147",
+              "E_15"
+            ]
+          },
+          {
+            "pair": [
+              "Bronchiectasis",
+              "Pericarditis"
+            ],
+            "support_gap": 0.492,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.485,
+            "suggested_roots": [
+              "E_220"
+            ]
+          },
+          {
+            "pair": [
+              "PSVT",
+              "Bronchiectasis"
+            ],
+            "support_gap": 0.638,
+            "best_discriminator_gap": 0.749,
+            "unresolved_score": 0.457,
+            "suggested_roots": [
+              "E_62"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_62",
+          "question": "Do you regularly take stimulant drugs?",
+          "separates": [
+            "PSVT",
+            "Bronchiectasis"
+          ],
+          "rate_gap": 0.749,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.061,
+          "score": 0.58
+        }
+      },
+      {
+        "turn_index": 13,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_155",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Acute dystonic reactions differs from MLP top diagnosis PSVT.",
+            "diagnoses": [
+              "Acute dystonic reactions",
+              "PSVT"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: PSVT vs Bronchiectasis.",
+            "diagnoses": [
+              "PSVT",
+              "Bronchiectasis"
+            ],
+            "suggested_roots": [
+              "E_155",
+              "E_62"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Bronchitis.",
+            "diagnoses": [
+              "Pericarditis",
+              "Bronchitis"
+            ],
+            "suggested_roots": [
+              "E_220",
+              "E_79"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "PSVT",
+              "Bronchiectasis"
+            ],
+            "support_gap": 0.638,
+            "best_discriminator_gap": 0.994,
+            "unresolved_score": 0.607,
+            "suggested_roots": [
+              "E_155",
+              "E_62"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Bronchitis"
+            ],
+            "support_gap": 0.42,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.51,
+            "suggested_roots": [
+              "E_220",
+              "E_79"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Bronchiectasis"
+            ],
+            "support_gap": 0.492,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.485,
+            "suggested_roots": [
+              "E_220",
+              "E_155"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_155",
+          "question": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpita",
+          "separates": [
+            "PSVT",
+            "Bronchiectasis"
+          ],
+          "rate_gap": 0.994,
+          "global_present_rate": 0.075,
+          "graph_mi": 0.098,
+          "score": 0.778
+        }
+      },
+      {
+        "turn_index": 14,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_76",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Spontaneous pneumothorax differs from MLP top diagnosis PSVT.",
+            "diagnoses": [
+              "Spontaneous pneumothorax",
+              "PSVT"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Panic attack.",
+            "diagnoses": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Atrial fibrillation vs Panic attack.",
+            "diagnoses": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "support_gap": 0.165,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.608,
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "pair": [
+              "Atrial fibrillation",
+              "Panic attack"
+            ],
+            "support_gap": 0.484,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.477,
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Atrial fibrillation"
+            ],
+            "support_gap": 0.649,
+            "best_discriminator_gap": 0.69,
+            "unresolved_score": 0.418,
+            "suggested_roots": [
+              "E_76",
+              "E_218"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_62",
+          "question": "Do you regularly take stimulant drugs?",
+          "separates": [
+            "PSVT",
+            "Pericarditis"
+          ],
+          "rate_gap": 0.749,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.061,
+          "score": 0.58
+        }
+      },
+      {
+        "turn_index": 15,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_62",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis PSVT differs from MLP top diagnosis Pericarditis.",
+            "diagnoses": [
+              "PSVT",
+              "Pericarditis"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Panic attack.",
+            "diagnoses": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Scombroid food poisoning vs PSVT.",
+            "diagnoses": [
+              "Scombroid food poisoning",
+              "PSVT"
+            ],
+            "suggested_roots": [
+              "E_62",
+              "E_16"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "support_gap": 0.165,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.608,
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "pair": [
+              "Scombroid food poisoning",
+              "PSVT"
+            ],
+            "support_gap": 0.262,
+            "best_discriminator_gap": 0.749,
+            "unresolved_score": 0.594,
+            "suggested_roots": [
+              "E_62",
+              "E_16"
+            ]
+          },
+          {
+            "pair": [
+              "Panic attack",
+              "Scombroid food poisoning"
+            ],
+            "support_gap": 0.429,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.495,
+            "suggested_roots": [
+              "E_16",
+              "E_82"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_62",
+          "question": "Do you regularly take stimulant drugs?",
+          "separates": [
+            "Pericarditis",
+            "PSVT"
+          ],
+          "rate_gap": 0.749,
+          "global_present_rate": 0.041,
+          "graph_mi": 0.061,
+          "score": 0.58
+        }
+      },
+      {
+        "turn_index": 16,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_157",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis PSVT differs from MLP top diagnosis Scombroid food poisoning.",
+            "diagnoses": [
+              "PSVT",
+              "Scombroid food poisoning"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Panic attack.",
+            "diagnoses": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_157",
+              "E_81"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Scombroid food poisoning vs Myocarditis.",
+            "diagnoses": [
+              "Scombroid food poisoning",
+              "Myocarditis"
+            ],
+            "suggested_roots": [
+              "E_218",
+              "E_82"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "support_gap": 0.165,
+            "best_discriminator_gap": 0.78,
+            "unresolved_score": 0.67,
+            "suggested_roots": [
+              "E_157",
+              "E_81"
+            ]
+          },
+          {
+            "pair": [
+              "Scombroid food poisoning",
+              "Myocarditis"
+            ],
+            "support_gap": 0.046,
+            "best_discriminator_gap": 0.625,
+            "unresolved_score": 0.598,
+            "suggested_roots": [
+              "E_218",
+              "E_82"
+            ]
+          },
+          {
+            "pair": [
+              "Scombroid food poisoning",
+              "Panic attack"
+            ],
+            "support_gap": 0.429,
+            "best_discriminator_gap": 0.78,
+            "unresolved_score": 0.546,
+            "suggested_roots": [
+              "E_157",
+              "E_81"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_157",
+          "question": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your",
+          "separates": [
+            "Scombroid food poisoning",
+            "Panic attack"
+          ],
+          "rate_gap": 0.78,
+          "global_present_rate": 0.032,
+          "graph_mi": 0.058,
+          "score": 0.601
+        }
+      },
+      {
+        "turn_index": 17,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_129",
+        "warnings": [
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Scombroid food poisoning vs Myocarditis.",
+            "diagnoses": [
+              "Scombroid food poisoning",
+              "Myocarditis"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_187"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Scombroid food poisoning vs Pericarditis.",
+            "diagnoses": [
+              "Scombroid food poisoning",
+              "Pericarditis"
+            ],
+            "suggested_roots": [
+              "E_129",
+              "E_187"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Scombroid food poisoning",
+              "Myocarditis"
+            ],
+            "support_gap": 0.046,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.956,
+            "suggested_roots": [
+              "E_129",
+              "E_187"
+            ]
+          },
+          {
+            "pair": [
+              "Scombroid food poisoning",
+              "Pericarditis"
+            ],
+            "support_gap": 0.264,
+            "best_discriminator_gap": 1.0,
+            "unresolved_score": 0.791,
+            "suggested_roots": [
+              "E_129",
+              "E_187"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Myocarditis"
+            ],
+            "support_gap": 0.31,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.553,
+            "suggested_roots": [
+              "E_220",
+              "E_218"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_129",
+          "question": "Do you have any lesions, redness or problems on your skin that you believe are related to the condit",
+          "separates": [
+            "Scombroid food poisoning",
+            "Pericarditis"
+          ],
+          "rate_gap": 1.0,
+          "global_present_rate": 0.166,
+          "graph_mi": 0.19,
+          "score": 0.819
+        }
+      },
+      {
+        "turn_index": 18,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_220",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Scombroid food poisoning differs from MLP top diagnosis Pericarditis.",
+            "diagnoses": [
+              "Scombroid food poisoning",
+              "Pericarditis"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 1.568,
+            "contradiction": 4.7
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Myocarditis.",
+            "diagnoses": [
+              "Pericarditis",
+              "Myocarditis"
+            ],
+            "suggested_roots": [
+              "E_220",
+              "E_218"
+            ]
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Pericarditis vs Panic attack.",
+            "diagnoses": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "suggested_roots": [
+              "E_220",
+              "E_0"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Pericarditis",
+              "Myocarditis"
+            ],
+            "support_gap": 0.308,
+            "best_discriminator_gap": 0.724,
+            "unresolved_score": 0.554,
+            "suggested_roots": [
+              "E_220",
+              "E_218"
+            ]
+          },
+          {
+            "pair": [
+              "Pericarditis",
+              "Panic attack"
+            ],
+            "support_gap": 1.817,
+            "best_discriminator_gap": 0.725,
+            "unresolved_score": 0.257,
+            "suggested_roots": [
+              "E_220",
+              "E_0"
+            ]
+          },
+          {
+            "pair": [
+              "Myocarditis",
+              "Panic attack"
+            ],
+            "support_gap": 2.125,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.228,
+            "suggested_roots": [
+              "E_0",
+              "E_16"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_220",
+          "question": "Do you have pain that is increased when you breathe in deeply?",
+          "separates": [
+            "Pericarditis",
+            "Myocarditis"
+          ],
+          "rate_gap": 0.724,
+          "global_present_rate": 0.067,
+          "graph_mi": 0.084,
+          "score": 0.571
+        }
+      },
+      {
+        "turn_index": 19,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_82",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Spontaneous pneumothorax differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Spontaneous pneumothorax",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 1.633,
+            "contradiction": 4.7
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.325,
+            "contradiction": 9.007
+          },
+          {
+            "type": "unresolved_pair",
+            "message": "Active diagnoses remain separable but unresolved: Panic attack vs Myocarditis.",
+            "diagnoses": [
+              "Panic attack",
+              "Myocarditis"
+            ],
+            "suggested_roots": [
+              "E_82",
+              "E_0"
+            ]
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Panic attack",
+              "Myocarditis"
+            ],
+            "support_gap": 2.124,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.228,
+            "suggested_roots": [
+              "E_82",
+              "E_0"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 4.109,
+            "best_discriminator_gap": 0.708,
+            "unresolved_score": 0.139,
+            "suggested_roots": [
+              "E_82",
+              "E_16"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "URTI"
+            ],
+            "support_gap": 4.615,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.112,
+            "suggested_roots": [
+              "E_175"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_82",
+          "question": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+          "separates": [
+            "Chagas",
+            "Panic attack"
+          ],
+          "rate_gap": 0.699,
+          "global_present_rate": 0.09,
+          "graph_mi": 0.097,
+          "score": 0.561
+        }
+      },
+      {
+        "turn_index": 20,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_201",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Myocarditis differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Myocarditis",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 1.727,
+            "contradiction": 4.7
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.425,
+            "contradiction": 9.007
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Ebola more than it supports it.",
+            "diagnoses": [
+              "Ebola"
+            ],
+            "support": 1.75,
+            "contradiction": 5.058
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chagas",
+              "Ebola"
+            ],
+            "support_gap": 0.334,
+            "best_discriminator_gap": 0.667,
+            "unresolved_score": 0.5,
+            "suggested_roots": [
+              "E_201",
+              "E_175"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 2.883,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.162,
+            "suggested_roots": [
+              "E_175"
+            ]
+          },
+          {
+            "pair": [
+              "Ebola",
+              "Panic attack"
+            ],
+            "support_gap": 3.217,
+            "best_discriminator_gap": 0.667,
+            "unresolved_score": 0.158,
+            "suggested_roots": [
+              "E_201"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_201",
+          "question": "Do you have a cough?",
+          "separates": [
+            "Chagas",
+            "URTI"
+          ],
+          "rate_gap": 0.685,
+          "global_present_rate": 0.31,
+          "graph_mi": 0.169,
+          "score": 0.624
+        }
+      },
+      {
+        "turn_index": 21,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_0",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Myocarditis differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Myocarditis",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 2.104,
+            "contradiction": 4.7
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.425,
+            "contradiction": 9.816
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Myocarditis",
+              "Panic attack"
+            ],
+            "support_gap": 3.343,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.164,
+            "suggested_roots": [
+              "E_0",
+              "E_218"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 2.891,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.162,
+            "suggested_roots": [
+              "E_175",
+              "E_174"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Myocarditis"
+            ],
+            "support_gap": 6.234,
+            "best_discriminator_gap": 0.711,
+            "unresolved_score": 0.098,
+            "suggested_roots": [
+              "E_0",
+              "E_218"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_0",
+          "question": "Have you recently had a viral infection?",
+          "separates": [
+            "Chagas",
+            "Myocarditis"
+          ],
+          "rate_gap": 0.711,
+          "global_present_rate": 0.038,
+          "graph_mi": 0.062,
+          "score": 0.551
+        }
+      },
+      {
+        "turn_index": 22,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_194",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Myocarditis differs from MLP top diagnosis Chagas.",
+            "diagnoses": [
+              "Myocarditis",
+              "Chagas"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 2.145,
+            "contradiction": 4.7
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.468,
+            "contradiction": 9.816
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Unstable angina more than it supports it.",
+            "diagnoses": [
+              "Unstable angina"
+            ],
+            "support": 2.104,
+            "contradiction": 7.842
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "URTI",
+              "Unstable angina"
+            ],
+            "support_gap": 2.611,
+            "best_discriminator_gap": 0.81,
+            "unresolved_score": 0.224,
+            "suggested_roots": [
+              "E_181",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 2.891,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.162,
+            "suggested_roots": [
+              "E_175",
+              "E_174"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Unstable angina"
+            ],
+            "support_gap": 3.182,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.151,
+            "suggested_roots": [
+              "E_175",
+              "E_174"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_181",
+          "question": "Do you have nasal congestion or a clear runny nose?",
+          "separates": [
+            "Chagas",
+            "URTI"
+          ],
+          "rate_gap": 0.81,
+          "global_present_rate": 0.198,
+          "graph_mi": 0.143,
+          "score": 0.681
+        }
+      },
+      {
+        "turn_index": 23,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_175",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chagas differs from MLP top diagnosis URTI.",
+            "diagnoses": [
+              "Chagas",
+              "URTI"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.514,
+            "contradiction": 9.816
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 2.188,
+            "contradiction": 4.7
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Unstable angina more than it supports it.",
+            "diagnoses": [
+              "Unstable angina"
+            ],
+            "support": 2.148,
+            "contradiction": 7.842
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Chagas",
+              "Panic attack"
+            ],
+            "support_gap": 2.892,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.162,
+            "suggested_roots": [
+              "E_175",
+              "E_174"
+            ]
+          },
+          {
+            "pair": [
+              "Chagas",
+              "Unstable angina"
+            ],
+            "support_gap": 3.181,
+            "best_discriminator_gap": 0.63,
+            "unresolved_score": 0.151,
+            "suggested_roots": [
+              "E_175",
+              "E_174"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Unstable angina"
+            ],
+            "support_gap": 2.609,
+            "best_discriminator_gap": 0.531,
+            "unresolved_score": 0.147,
+            "suggested_roots": [
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_175",
+          "question": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle ache",
+          "separates": [
+            "URTI",
+            "Chagas"
+          ],
+          "rate_gap": 0.63,
+          "global_present_rate": 0.042,
+          "graph_mi": 0.059,
+          "score": 0.491
+        }
+      },
+      {
+        "turn_index": 24,
+        "agent_decision": "request",
+        "requested_evidence_id": "E_148",
+        "warnings": [
+          {
+            "type": "llm_mlp_disagreement",
+            "message": "LLM top diagnosis Chagas differs from MLP top diagnosis URTI.",
+            "diagnoses": [
+              "Chagas",
+              "URTI"
+            ]
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts URTI more than it supports it.",
+            "diagnoses": [
+              "URTI"
+            ],
+            "support": 1.558,
+            "contradiction": 9.816
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Ebola more than it supports it.",
+            "diagnoses": [
+              "Ebola"
+            ],
+            "support": 1.871,
+            "contradiction": 5.848
+          },
+          {
+            "type": "graph_contradiction",
+            "message": "Revealed evidence contradicts Chagas more than it supports it.",
+            "diagnoses": [
+              "Chagas"
+            ],
+            "support": 2.188,
+            "contradiction": 5.688
+          }
+        ],
+        "unresolved_pairs": [
+          {
+            "pair": [
+              "Ebola",
+              "Chagas"
+            ],
+            "support_gap": 0.477,
+            "best_discriminator_gap": 0.467,
+            "unresolved_score": 0.316,
+            "suggested_roots": [
+              "E_9",
+              "E_148"
+            ]
+          },
+          {
+            "pair": [
+              "URTI",
+              "Chagas"
+            ],
+            "support_gap": 4.758,
+            "best_discriminator_gap": 0.577,
+            "unresolved_score": 0.1,
+            "suggested_roots": [
+              "E_148",
+              "E_9"
+            ]
+          },
+          {
+            "pair": [
+              "Panic attack",
+              "Chagas"
+            ],
+            "support_gap": 3.923,
+            "best_discriminator_gap": 0.467,
+            "unresolved_score": 0.095,
+            "suggested_roots": [
+              "E_9",
+              "E_148"
+            ]
+          }
+        ],
+        "top_advisory": {
+          "root_id": "E_148",
+          "question": "Are you feeling nauseous or do you feel like vomiting?",
+          "separates": [
+            "URTI",
+            "Chagas"
+          ],
+          "rate_gap": 0.577,
+          "global_present_rate": 0.106,
+          "graph_mi": 0.098,
+          "score": 0.475
+        }
+      }
+    ]
+  }
+}

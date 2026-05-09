@@ -1,6 +1,6 @@
 # Project Direction And Claims Assessment
 
-Last updated: 2026-05-06
+Last updated: 2026-05-08
 
 ## Executive Assessment
 
@@ -17,7 +17,7 @@ The current evidence is not enough to make the broad claim that an “agentic di
 
 The stronger, cleaner, and currently defensible claim is narrower:
 
-> On a balanced DDXPlus live confirmation, a structured sequential workup policy with online partial-evidence MLP stopping reached `43/49 = 0.878` accuracy and `0.939` top-5 while using only `6.59` requested evidence fields per case. Earlier 24-case controls showed that this MLP stop rule could preserve the best LLM-only sequential accuracy while reducing requested evidence by about half.
+> On a balanced DDXPlus live confirmation, a structured sequential workup policy with online partial-evidence MLP stopping reached `43/49 = 0.878` accuracy and `0.939` top-5 while using only `6.59` requested evidence fields per case. A fresh live run of the same backbone inside Notebook `24` reached `45/49 = 0.918` with `6.20` requests. Earlier 24-case controls showed that this MLP stop rule could preserve the best LLM-only sequential accuracy while reducing requested evidence by about half.
 
 That is a real result. It is not just a demo. It should still be presented as a course-project live confirmation rather than a definitive benchmark against official DDXPlus RL methods.
 
@@ -158,6 +158,10 @@ Key results:
 | Notebook 12 offline selected MLP stop | 0.917 | 0.917 | 0.867 | 6.875 |
 | Notebook 13 live selected MLP stop, 24 cases | 0.917 | 0.917 | 0.867 | 6.58 |
 | Notebook 13 live selected MLP stop, 49 cases | 0.878 | 0.939 | 0.845 | 6.59 |
+| Notebook 17 MedKGI graph shortlist, 24 cases | 0.833 | 0.875 | 0.744 | 6.21 |
+| Notebook 20 LLM-led graph context, 24 cases | 0.833 | 0.958 | 0.744 | 6.13 |
+| Notebook 22 graph posterior final critic, 49 cases | 0.898 | 0.939 | 0.867 | 6.59 |
+| Notebook 23 calibrated graph-Bayes rescue, 49 cases | 0.959 | n/a | n/a | 6.96 |
 
 Notebook 13 reduced requested evidence by:
 
@@ -172,6 +176,10 @@ Interpretation:
 - Final heads tied at top-1 in notebook 13: LLM final, MLP final, agreement hybrid, and conservative hybrid all reached `22/24`.
 - MLP final had better top-5 in notebook 13: `0.958` versus `0.917` for the agreement hybrid.
 - On the 49-case confirmation, agreement-hybrid/LLM/conservative final heads reached `43/49`, while MLP-final reached `41/49`.
+- Notebook 17 reduced requests slightly versus Notebook 13 on the 24-case slice, but lost two additional cases; it is evidence that graph scores should be advisory, not a hard replacement shortlist.
+- Notebook 22 is the first graph-ledger enhancement to improve the 49-case artifact: it keeps Notebook 13 acquisition unchanged and uses a conservative graph-posterior final critic to reach `44/49` with no extra requests.
+- Notebook 23 is the first graph-ledger enhancement to materially change the saved-trace result: it keeps Notebook 13 as the first-pass workup and reaches `47/49` with `6.96` mean requests and zero regressions.
+- Notebook 24 tested that rescue layer live. It did not promote the rescue layer, but the fresh live base reached `45/49` with `6.20` mean requests.
 
 ## Are We Done With The Simple Sequential Agent?
 
@@ -344,6 +352,10 @@ The next phase should be **confirmation and consolidation**, not invention.
 - Notebook 05: refined policy
 - Notebook 06: budget scaling history
 - Notebook 11: hybrid v1 lambda sweep
+- Notebook 14: rejected MLP-discriminative shortlist
+- Notebook 15: offline stop-threshold/evidence-trajectory sensitivity
+- Notebook 16: offline MedKGI-style graph evidence analysis
+- Notebook 17: rejected live MedKGI graph shortlist pilot
 
 ### Current Main Method
 
@@ -362,13 +374,60 @@ Notebook 14 tested a stronger-looking v2 idea where the MLP also guided the evid
 
 This means the project should not claim that direct MLP-driven question selection is currently better. The evidence supports MLP-guided stopping more strongly than MLP-guided shortlisting.
 
+Notebook 17 tested a MedKGI-style graph top-10 evidence shortlist while keeping Notebook 13's stop rule fixed. It was also not promoted:
+
+| System | Accuracy | Top-5 | Mean requests |
+|---|---:|---:|---:|
+| Notebook 13 hybrid v1 selected stop | 0.917 | 0.917 | 6.58 |
+| Notebook 17 MedKGI graph shortlist | 0.833 | 0.875 | 6.21 |
+
+The graph request metrics were strong locally, with mean requested graph rank `1.76`, mean information gain `0.373`, and no requests outside the graph top-10. The failure is therefore not that the graph cannot rank evidence. The failure is that a hard graph replacement shortlist can over-constrain the action space around an already-biased active differential.
+
+Notebook 18 then tested the natural follow-up: use graph evidence as an advisory/blended signal instead of a hard replacement shortlist. It also was not promoted:
+
+| System | Accuracy | Top-5 | Mean requests |
+|---|---:|---:|---:|
+| Notebook 13 hybrid v1 selected stop | 0.917 | 0.917 | 6.58 |
+| Notebook 17 MedKGI hard graph shortlist | 0.833 | 0.875 | 6.21 |
+| Notebook 18 graph-advisory shortlist | 0.875 | 0.917 | 7.67 |
+
+Notebook 18 recovered the Chagas and Ebola failures introduced by Notebook 17, which means the rare-support/advisory idea has some value. But it introduced a new Stable angina failure, did not fix Croup or Pericarditis, and used more requests than Notebook 13. The graph-advisory method is therefore useful as a diagnostic ablation, not as the new main method.
+
+Notebook 20 corrected the graph-ledger framing by keeping the LLM as the question chooser and adding graph support/contradiction context only as prompt state:
+
+| System | Accuracy | Top-3 | Top-5 | Mean requests |
+|---|---:|---:|---:|---:|
+| Notebook 13 hybrid v1 selected stop | 0.917 | 0.917 | 0.917 | 6.58 |
+| Notebook 20 LLM-led graph context | 0.833 | 0.958 | 0.958 | 6.13 |
+
+Notebook 20 is not a promoted method because top-1 accuracy dropped. However, its `23/24` top-3/top-5 result is the strongest ranking signal seen in the graph-ledger line.
+
+Notebook 21 then tested whether graph context could convert that ranking signal into top-1 through non-oracle critic/adjudication rules:
+
+| Result | Value |
+|---|---:|
+| Best non-oracle variant accuracy | 0.917 |
+| Best non-oracle variant mean requests | 6.58 |
+| Notebook 20 oracle top-3/top-5 upper bound | 0.958 |
+| Selected live candidate | none |
+
+The best non-oracle variant only matched Notebook 13 and did not fix any Notebook 13 miss. The graph context does strongly flag suspect answers: in Notebook 20, wrong top-1 predictions had much higher contradiction than correct predictions. But the hand-written rules still cannot reliably choose the correct alternative from the top-5.
+
+Therefore the graph-ledger direction is not dead, but graph information should not be used as a blunt replacement controller. Notebook 22 shows the stronger path: use the train-derived evidence graph as a final-state mathematical critic over the evidence Notebook 13 already acquired.
+
+The Notebook 22 post-run analysis sharpens that claim. The conservative critic fires exactly once on the 49-case trace and fixes Croup with no regressions. It also improves the overlapping 24-case sanity slice from `22/24` to `23/24` through the same Croup correction. The remaining errors show why this should stay framed as a critic rather than a controller: in COPD, the graph correctly weakens the Notebook 13 diagnosis but prefers another wrong alternative; in Pericarditis, the final evidence state does not support the true pathology strongly enough. The next credible graph step is therefore validation or calibration, not another hand-threshold controller.
+
+Notebook 23 realizes the larger opportunity offline. It uses train/validate-derived synthetic partial evidence states, graph/Bayes candidate scoring, prior recovery, the Notebook 22 graph critic, and a tiny rescue continuation for suspicious early stops. It fixes COPD, Croup, Influenza, and Unstable angina without regressing any Notebook 13 correct case. The remaining misses are acute-vs-chronic rhinosinusitis and Pericarditis.
+
+Notebook 24 completed the live-confirmation wrapper for Notebook 23. The live rescue did not reproduce the offline `47/49` gain: the fresh live base reached `45/49 = 0.918`, and the live rescue also reached `45/49 = 0.918` with nine extra rescue requests. This means the graph/Bayes rescue layer is not promoted, but the base LLM-led + MLP-stopped method is stronger than the original frozen artifact suggested.
+
 ### Next Experiment If More Work Is Needed
 
-Only do a new notebook if it answers a specific control question:
+Only do a new notebook if it answers a specific control question that is not already answered by Notebooks 14, 17, 18, 20, 21, 22, 23, and 24:
 
-> Can an LLM-only stop policy match notebook 13 at the same evidence budget?
+> Can the Notebook 23 calibrated graph-Bayes rescue layer hold up on held-out or live traces while keeping Notebook 13 as the first-pass workup?
 
-If yes, create one control notebook. If not, do not add more notebooks. Move to report writing and instructor presentation.
+Notebook 24 was the implementation of that question, and its live result is now complete. It did not promote the rescue layer. Notebook 13 is already a defensible live acquisition endpoint, and Notebook 23 remains the current offline graph-ledger rescue enhancement rather than a live replacement.
 
 ## How To Present This To The Instructor
 
@@ -384,6 +443,13 @@ The project should be presented as an evidence-acquisition study:
 8. On a 24-case live pilot, this hybrid retained `22/24` accuracy while cutting evidence requests from `13.04` to `6.58`.
 9. On the 49-case confirmation, it reached `43/49` accuracy with `6.59` requests and `0.939` top-5.
 10. Notebook 14 tested direct MLP-guided question selection and was rejected, so notebook 13 is the frozen proposed method.
+11. Notebook 17 tested a MedKGI-style graph shortlist and was also rejected, showing that graph information is useful for analysis but should not hard-prune the action space yet.
+12. Notebook 18 tested graph-advisory blending and was also rejected: it recovered Chagas and Ebola relative to Notebook 17 but dropped to `21/24` and used `7.67` requests.
+13. Notebook 20 kept the LLM as question chooser and added graph context; it improved top-3/top-5 to `23/24` but dropped top-1.
+14. Notebook 21 showed graph contradiction is a useful critic signal, but no non-oracle rule-based adjudicator beat Notebook 13.
+15. Notebook 22 used train-derived graph log-odds as a final-state posterior critic over Notebook 13 evidence and improved the saved 49-case result to `44/49` with the same `6.59` requests.
+16. Notebook 23 used calibrated graph/Bayes rescue to improve the saved 49-case trace to `47/49` with `6.96` mean requests.
+17. Notebook 24 tested that rescue live; it was not promoted, but the fresh live base reached `45/49` with `6.20` mean requests.
 
 ## Bottom Line
 
@@ -393,19 +459,15 @@ The work is not rootless. The frame of reference is now clear:
 - full-evidence one-shot: ceiling for complete information
 - LLM-only sequential: baseline evidence-acquisition controller
 - partial-evidence MLP: matched-information diagnostic head
-- hybrid MLP-guided stopping: current proposed improvement
+- hybrid MLP-guided stopping: current live proposed improvement
+- calibrated graph/Bayes rescue reranker: current offline mathematical enhancement
 
 The current work is enough to claim:
 
-> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the final 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, after the 24-case pilot showed that this stop signal could match the best LLM-only result with about half the requests.
+> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer.
 
 The current work is not enough to claim:
 
 > Our agentic architecture is generally superior to all direct neural baselines or official DDXPlus sequential methods.
 
-Notebook 14 reinforces this direction: it was useful to test, but the result makes notebook 13 the cleaner current method. The right next move is to stop broad experimentation, freeze notebook 13 as the current method, and either:
-
-- run one matched-budget LLM-only live control, or
-- move into final writeup and presentation,
-
-then write the final project around evidence-efficient diagnostic workup rather than around unconstrained agentic superiority.
+Notebooks 14, 17, 18, 19, and 24 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current method, move into final writeup and presentation, and frame the project around evidence-efficient diagnostic workup rather than unconstrained agentic superiority.

@@ -1,0 +1,98 @@
+{
+  "live_confirmation_metrics": {
+    "agreement_hybrid_accuracy": 1.0,
+    "agreement_hybrid_top3_accuracy": 1.0,
+    "agreement_hybrid_top5_accuracy": 1.0,
+    "agreement_hybrid_macro_f1": 1.0,
+    "llm_final_accuracy": 1.0,
+    "llm_final_top3_accuracy": 1.0,
+    "llm_final_top5_accuracy": 1.0,
+    "llm_final_macro_f1": 1.0,
+    "mlp_final_accuracy": 1.0,
+    "mlp_final_top3_accuracy": 1.0,
+    "mlp_final_top5_accuracy": 1.0,
+    "mlp_final_macro_f1": 1.0,
+    "conservative_hybrid_accuracy": 1.0,
+    "conservative_hybrid_top3_accuracy": 1.0,
+    "conservative_hybrid_top5_accuracy": 1.0,
+    "conservative_hybrid_macro_f1": 1.0,
+    "accuracy": 1.0,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "mean_requests": 6.0,
+    "median_requests": 6.0,
+    "mean_visible_roots_including_initial": 7.0,
+    "stop_before_cap_rate": 1.0,
+    "selected_stop_rule_rate": 1.0,
+    "cap_hit_count": 0,
+    "mean_api_calls": 7.0,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "total_estimated_cost": null,
+    "mean_mlp_confidence": 0.9859345853328705,
+    "mean_mlp_margin": 0.9758664453402162,
+    "mean_mlp_entropy": 0.023301429532286498,
+    "llm_mlp_agreement_rate": 1.0,
+    "stop_reason_distribution": {
+      "selected_mlp_stop": 2
+    },
+    "request_distribution": {
+      "3": 1,
+      "9": 1
+    },
+    "agreement_hybrid_source_distribution": {
+      "agreement": 2
+    },
+    "conservative_hybrid_source_distribution": {
+      "llm_mlp_agreement": 2
+    },
+    "run_name": "notebook13_style_live_base_replicates_dryrun_smoke_v1_r01",
+    "replicate_id": "r01",
+    "replicate_parent": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_dryrun_smoke_v1",
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_dryrun_smoke_v1/replicate_r01",
+    "rescue_enabled": false,
+    "max_request_cap": 24,
+    "num_cases": 2,
+    "runtime_seconds": 0.1257169246673584,
+    "selected_stop_policy": {
+      "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+      "min_requests": 1,
+      "mlp_confidence_min": 0.7,
+      "mlp_margin_min": 0.2,
+      "mlp_entropy_max": 0.1,
+      "mlp_stability_min": 0,
+      "official_final_head": "agreement_hybrid_final",
+      "source_notebook": "12_stopping_policy_ablation.ipynb"
+    }
+  },
+  "reference_systems": [
+    {
+      "system": "notebook08_lambda_0p100_llm_only",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8461538461538461,
+      "mean_requests": 13.041666666666666,
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/metrics.json"
+    },
+    {
+      "system": "notebook11_lambda_0p220_hybrid_v1",
+      "accuracy": 0.875,
+      "top3_accuracy": 0.9583333333333334,
+      "top5_accuracy": 0.9583333333333334,
+      "macro_f1": 0.8133333333333332,
+      "mean_requests": 7.458333333333333,
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/lambda_0p220/metrics.json"
+    },
+    {
+      "system": "notebook12_offline_selected_stop",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.875,
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/stopping_policy_ablation/stopping_policy_ablation_24case_v1/selected_stopping_policy.json"
+    }
+  ]
+}

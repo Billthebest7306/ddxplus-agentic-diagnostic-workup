@@ -1,0 +1,56 @@
+{
+  "policy_name": "calibrated_graph_bayes_rescue_v1",
+  "status": "offline_candidate_promoted",
+  "method": "Train/validate-calibrated L2 candidate reranker with graph/Bayes rescue continuation and conservative graph certificates over Notebook 13 traces.",
+  "inputs_used": {
+    "notebook13_49case": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+    "notebook22_graph_features": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/graph_posterior_final_adjudicator_49case_v1",
+    "notebook16_graph_edges": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1",
+    "notebook19_bayes_likelihoods": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1",
+    "partial_mlp_checkpoint": "/Users/alfred/Documents/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2/best_model.pt",
+    "train_validate_synthetic_states": "Generated from DDXPlus train/validate splits only."
+  },
+  "no_live_api": true,
+  "no_49case_label_training_or_threshold_selection": true,
+  "training_calibration": {
+    "synthetic_train_states": 8000,
+    "synthetic_validate_states": 4000,
+    "selected_logistic_C": 1.0,
+    "selected_logistic_min_score": 0.4,
+    "selected_logistic_min_score_margin": -0.2
+  },
+  "selected_policy_certificates": {
+    "prior_recovery": "prior_top1 graph_rank <= 5 and Notebook13 graph_score < 0 and prior graph_score > Notebook13 graph_score",
+    "graph_critic": "Notebook22 conservative graph critic: graph top differs, margin >= 1, reference graph score < 0, graph top score > 0",
+    "rescue_trigger": "agent_stop and num_requests <= 3 and graph_top1_posterior < 0.80",
+    "rescue_cap": 3,
+    "rescue_accept": "post-rescue L2 reranker candidate passes validation-selected score/margin thresholds, is graph-rank <= 3, and graph support improves over reference by >0.75 or reference graph score <0; graph-rank tie-break applies within 0.02 reranker score"
+  },
+  "notebook13_reference": {
+    "correct_count": 43,
+    "accuracy": 0.8775510204081632,
+    "top3_accuracy": 0.9183673469387755,
+    "top5_accuracy": 0.9387755102040817,
+    "mean_requests": 6.591836734693878
+  },
+  "notebook22_reference": {
+    "correct_count": 44,
+    "accuracy": 0.8979591836734694,
+    "regressions_vs_notebook13": 0
+  },
+  "selected_policy_49case": {
+    "correct_count": 47,
+    "accuracy": 0.9591836734693877,
+    "mean_requests": 6.959183673469388,
+    "extra_requests_total": 18,
+    "improvements_vs_notebook13": 4,
+    "regressions_vs_notebook13": 0,
+    "changed_predictions": 4
+  },
+  "paired_counts": {
+    "both_correct": 43,
+    "rescue_only_correct": 4,
+    "both_wrong": 2
+  },
+  "promotion_rule": "Promote if selected policy reaches at least 47/49 with zero regressions against Notebook 13."
+}

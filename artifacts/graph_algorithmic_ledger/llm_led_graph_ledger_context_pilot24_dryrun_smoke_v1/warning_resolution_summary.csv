@@ -1,0 +1,3 @@
+case_id,true_pathology,predicted_pathology,correct,initial_warning_count,final_warning_count,warnings_resolved_count,final_unresolved_pairs,final_top_diagnosis_support,final_top_diagnosis_contradiction
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,True,4,4,4,3,7.927,1.756
+test:95923,Pneumonia,Pneumonia,True,2,4,2,3,7.21,1.406

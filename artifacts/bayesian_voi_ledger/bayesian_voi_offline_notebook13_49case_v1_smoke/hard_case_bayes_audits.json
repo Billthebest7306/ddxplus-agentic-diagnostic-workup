@@ -1,0 +1,1616 @@
+{
+  "test:38475": {
+    "notebook13": {
+      "case_id": "test:38475",
+      "max_request_cap": 24,
+      "source_row_index": 38475,
+      "split": "test",
+      "AGE": 56,
+      "SEX": "M",
+      "true_pathology": "Acute COPD exacerbation / infection",
+      "predicted_pathology": "Myocarditis",
+      "agreement_hybrid_predicted_pathology": "Myocarditis",
+      "conservative_hybrid_predicted_pathology": "Myocarditis",
+      "llm_predicted_pathology": "Myocarditis",
+      "mlp_predicted_pathology": "Guillain-Barré syndrome",
+      "correct": false,
+      "agreement_hybrid_correct": false,
+      "conservative_hybrid_correct": false,
+      "llm_correct": false,
+      "mlp_correct": false,
+      "ranked_differential": "[\"Myocarditis\", \"Sarcoidosis\", \"Guillain-Barr\\u00e9 syndrome\", \"Myasthenia gravis\", \"Bronchiectasis\"]",
+      "agreement_hybrid_ranked_differential": "[\"Myocarditis\", \"Sarcoidosis\", \"Guillain-Barr\\u00e9 syndrome\", \"Myasthenia gravis\", \"Bronchiectasis\"]",
+      "conservative_hybrid_ranked_differential": "[\"Myocarditis\", \"Sarcoidosis\", \"Guillain-Barr\\u00e9 syndrome\", \"Myasthenia gravis\", \"Bronchiectasis\"]",
+      "llm_ranked_differential": "[\"Myocarditis\", \"Sarcoidosis\", \"Guillain-Barr\\u00e9 syndrome\", \"Myasthenia gravis\", \"Bronchiectasis\"]",
+      "mlp_ranked_differential": "[\"Guillain-Barr\\u00e9 syndrome\", \"Bronchitis\", \"Myasthenia gravis\", \"Bronchiectasis\", \"Acute dystonic reactions\"]",
+      "agreement_hybrid_final_source": "fallback_llm_disagreement",
+      "conservative_hybrid_final_source": "prefer_llm_disagreement",
+      "final_confidence": 0.4984580874443054,
+      "llm_confidence": 0.41,
+      "final_mlp_confidence": 0.4984580874443054,
+      "final_mlp_margin": 0.3976770639419555,
+      "final_mlp_entropy": 0.4721483535972753,
+      "final_mlp_stability_turns": 1,
+      "llm_mlp_agreement": false,
+      "llm_mlp_top1_agree": false,
+      "mlp_in_llm_top3": true,
+      "num_requests": 24,
+      "visible_root_count": 25,
+      "stop_reason": "max_requests_reached",
+      "stop_rule_fired": false,
+      "api_calls": 24,
+      "input_tokens": 60752,
+      "output_tokens": 2853,
+      "estimated_cost": NaN,
+      "initial_evidence": "E_66",
+      "prior_top1": "Acute COPD exacerbation / infection",
+      "prior_top1_score": 0.1211513131856918,
+      "deterministic_top1": "Myocarditis",
+      "deterministic_margin": 0.1503449879627764,
+      "deterministic_unresolved_mass": 0.6866211252137884,
+      "final_top_shortlist_score": 0.5237,
+      "selected_policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+      "policy_flags": "[]",
+      "error_flags": "[]"
+    },
+    "notebook19_rows": [
+      {
+        "lambda_cost": 0.05,
+        "case_id": "test:38475",
+        "source_row_index": 38475,
+        "AGE": 56,
+        "SEX": "M",
+        "true_pathology": "Acute COPD exacerbation / infection",
+        "fused_predicted_pathology": "Acute dystonic reactions",
+        "bayes_predicted_pathology": "Anemia",
+        "mlp_predicted_pathology": "Acute dystonic reactions",
+        "fused_correct": false,
+        "bayes_correct": false,
+        "mlp_correct": false,
+        "fused_top3_correct": false,
+        "fused_top5_correct": false,
+        "bayes_top5_correct": false,
+        "mlp_top5_correct": false,
+        "fused_ranked_differential": "[\"Acute dystonic reactions\", \"Myasthenia gravis\", \"Guillain-Barré syndrome\", \"Anemia\", \"Sarcoidosis\"]",
+        "bayes_ranked_differential": "[\"Anemia\", \"Acute dystonic reactions\", \"Guillain-Barré syndrome\", \"Unstable angina\", \"Myasthenia gravis\"]",
+        "mlp_ranked_differential": "[\"Acute dystonic reactions\", \"Myasthenia gravis\", \"Ebola\", \"Guillain-Barré syndrome\", \"Sarcoidosis\"]",
+        "num_requests": 5,
+        "visible_root_count": 6,
+        "stop_reason": "max_requests_reached",
+        "final_fused_confidence": 0.845108188415347,
+        "final_fused_margin": 0.7598288343196941,
+        "final_fused_entropy": 0.17918251658727918,
+        "final_bayes_confidence": 0.0860303615850457,
+        "final_bayes_entropy": 0.9256105004820947,
+        "final_mlp_confidence": 0.9643686413764954,
+        "final_mlp_entropy": 0.04877617037249288,
+        "final_contradiction_score": 0.0,
+        "final_max_remaining_utility": -0.016213542219815795,
+        "requested_roots": "[\"E_201\", \"E_155\", \"E_220\", \"E_125\", \"E_226\"]"
+      }
+    ],
+    "traces": {
+      "0.05": {
+        "lambda_cost": 0.05,
+        "case_id": "test:38475",
+        "true_pathology": "Acute COPD exacerbation / infection",
+        "fused_predicted_pathology": "Acute dystonic reactions",
+        "fused_correct": false,
+        "num_requests": 5,
+        "stop_reason": "max_requests_reached",
+        "trace": [
+          {
+            "turn_index": 1,
+            "requests_before": 0,
+            "bayes_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.06374657437637049,
+              "margin": 0.02647863089377566,
+              "entropy": 0.9470053658365605,
+              "top5": [
+                "Anemia",
+                "Pulmonary embolism",
+                "Acute dystonic reactions",
+                "Guillain-Barré syndrome",
+                "Panic attack"
+              ],
+              "top5_probs": [
+                0.06374657437637049,
+                0.03726794348259483,
+                0.03722870418032897,
+                0.0367208137239116,
+                0.03501943793416384
+              ]
+            },
+            "mlp_summary": {
+              "top1": "Bronchospasm / acute asthma exacerbation",
+              "top1_idx": 33,
+              "confidence": 0.08891795575618744,
+              "margin": 0.003593623638153076,
+              "entropy": 0.8291561820723325,
+              "top5": [
+                "Bronchospasm / acute asthma exacerbation",
+                "Acute COPD exacerbation / infection",
+                "Anemia",
+                "Bronchiectasis",
+                "Possible NSTEMI / STEMI"
+              ],
+              "top5_probs": [
+                0.08891795575618744,
+                0.08532433211803436,
+                0.06499337404966354,
+                0.0571092814207077,
+                0.05400519818067551
+              ]
+            },
+            "fused_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.07152835627523864,
+              "margin": 0.0038044360832462792,
+              "entropy": 0.8614469048937837,
+              "top5": [
+                "Anemia",
+                "Bronchospasm / acute asthma exacerbation",
+                "Acute COPD exacerbation / infection",
+                "Bronchiectasis",
+                "Possible NSTEMI / STEMI"
+              ],
+              "top5_probs": [
+                0.07152835627523864,
+                0.06772392019199236,
+                0.06324037000574174,
+                0.04707140480629731,
+                0.04588737496410347
+              ]
+            },
+            "contradiction_score": 0.0,
+            "max_remaining_utility": 0.008153519451556138,
+            "stop_detail": "continue_failed_min_requests+confidence+margin+entropy+remaining_utility",
+            "top_candidates": [
+              {
+                "voi_rank": 1,
+                "root_evidence_id": "E_201",
+                "question_en": "Do you have a cough?",
+                "utility": 0.008153519451556138,
+                "expected_fused_entropy_reduction": 0.08720913614666637,
+                "expected_margin_gain": 0.050942472854448174,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 2,
+                "root_evidence_id": "E_50",
+                "question_en": "Have you had significantly increased sweating?",
+                "utility": 0.0015327512558420894,
+                "expected_fused_entropy_reduction": 0.08711009352609111,
+                "expected_margin_gain": 0.018110999082459896,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 3,
+                "root_evidence_id": "E_155",
+                "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+                "utility": 0.0005463747441665778,
+                "expected_fused_entropy_reduction": 0.08919969618426693,
+                "expected_margin_gain": 0.007432709214098849,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 4,
+                "root_evidence_id": "E_89",
+                "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+                "utility": -0.0003484563532457907,
+                "expected_fused_entropy_reduction": 0.06828732137341043,
+                "expected_margin_gain": 0.06046758445689236,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 5,
+                "root_evidence_id": "E_220",
+                "question_en": "Do you have pain that is increased when you breathe in deeply?",
+                "utility": -0.0030394068548500255,
+                "expected_fused_entropy_reduction": 0.0677790551110754,
+                "expected_margin_gain": 0.04841056417029251,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 6,
+                "root_evidence_id": "E_77",
+                "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+                "utility": -0.009568084922366264,
+                "expected_fused_entropy_reduction": 0.060187549964189846,
+                "expected_margin_gain": 0.03664381298664659,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 7,
+                "root_evidence_id": "E_214",
+                "question_en": "Have you noticed a wheezing sound when you exhale?",
+                "utility": -0.010417847380629952,
+                "expected_fused_entropy_reduction": 0.06472422374745801,
+                "expected_margin_gain": 0.019919147791340724,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 8,
+                "root_evidence_id": "E_218",
+                "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+                "utility": -0.012887740575167367,
+                "expected_fused_entropy_reduction": 0.053976025911705916,
+                "expected_margin_gain": 0.03712722586697189,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 9,
+                "root_evidence_id": "E_148",
+                "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+                "utility": -0.01417003743412603,
+                "expected_fused_entropy_reduction": 0.05815786950637203,
+                "expected_margin_gain": 0.019215671686846778,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 10,
+                "root_evidence_id": "E_79",
+                "question_en": "Do you smoke cigarettes?",
+                "utility": -0.014240117167514887,
+                "expected_fused_entropy_reduction": 0.06032941662890401,
+                "expected_margin_gain": 0.012893518432939531,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 11,
+                "root_evidence_id": "E_162",
+                "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+                "utility": -0.015663900763475652,
+                "expected_fused_entropy_reduction": 0.05554410003120214,
+                "expected_margin_gain": 0.01893422109681586,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 12,
+                "root_evidence_id": "E_53",
+                "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+                "utility": -0.016431314307753405,
+                "expected_fused_entropy_reduction": 0.09258616785861606,
+                "expected_margin_gain": 0.013231466850038797,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 13,
+                "root_evidence_id": "E_124",
+                "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+                "utility": -0.016554846874372343,
+                "expected_fused_entropy_reduction": 0.04678121131738344,
+                "expected_margin_gain": 0.038577434505333824,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 14,
+                "root_evidence_id": "E_194",
+                "question_en": "Have you noticed a high pitched sound when breathing in?",
+                "utility": -0.017799818181346988,
+                "expected_fused_entropy_reduction": 0.055028884327533834,
+                "expected_margin_gain": 0.009671477192547035,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 15,
+                "root_evidence_id": "E_129",
+                "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+                "utility": -0.018537529645277113,
+                "expected_fused_entropy_reduction": 0.057204491554041614,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 16,
+                "root_evidence_id": "E_45",
+                "question_en": "Have you been coughing up blood?",
+                "utility": -0.019027344501886874,
+                "expected_fused_entropy_reduction": 0.05093287910743294,
+                "expected_margin_gain": 0.014797859945125058,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 17,
+                "root_evidence_id": "E_151",
+                "question_en": "Do you have swelling in one or more areas of your body?",
+                "utility": -0.02008216201463048,
+                "expected_fused_entropy_reduction": 0.05015182179562727,
+                "expected_margin_gain": 0.011671679988872592,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 18,
+                "root_evidence_id": "E_82",
+                "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+                "utility": -0.02058658389072704,
+                "expected_fused_entropy_reduction": 0.04572307241524187,
+                "expected_margin_gain": 0.02132863140444964,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 19,
+                "root_evidence_id": "E_70",
+                "question_en": "Are you significantly overweight compared to people of the same height as you?",
+                "utility": -0.025170524971969307,
+                "expected_fused_entropy_reduction": 0.04278489691983378,
+                "expected_margin_gain": 0.006488908610610567,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 20,
+                "root_evidence_id": "E_91",
+                "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+                "utility": -0.03399958709208568,
+                "expected_fused_entropy_reduction": 0.027896635869443243,
+                "expected_margin_gain": 0.0032863158986026937,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              }
+            ],
+            "decision": "request",
+            "requested_root": "E_201",
+            "requested_question": "Do you have a cough?",
+            "requested_utility": 0.008153519451556138,
+            "reveal_payload": {
+              "root_evidence_id": "E_201",
+              "question_en": "Do you have a cough?",
+              "outcome_state": "__ABSENT__",
+              "status": "absent"
+            }
+          },
+          {
+            "turn_index": 2,
+            "requests_before": 1,
+            "bayes_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.0741325042796008,
+              "margin": 0.030806472062094074,
+              "entropy": 0.9349764253752988,
+              "top5": [
+                "Anemia",
+                "Pulmonary embolism",
+                "Acute dystonic reactions",
+                "Guillain-Barré syndrome",
+                "Panic attack"
+              ],
+              "top5_probs": [
+                0.0741325042796008,
+                0.04332603221750673,
+                0.043282476644153745,
+                0.04269007839988573,
+                0.0407091808283161
+              ]
+            },
+            "mlp_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.14496441185474396,
+              "margin": 0.07401475310325623,
+              "entropy": 0.7969553714717391,
+              "top5": [
+                "Anemia",
+                "Sarcoidosis",
+                "Acute dystonic reactions",
+                "Atrial fibrillation",
+                "PSVT"
+              ],
+              "top5_probs": [
+                0.14496441185474396,
+                0.07094965875148773,
+                0.06948455423116684,
+                0.0624508410692215,
+                0.052783697843551636
+              ]
+            },
+            "fused_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.12163956181457636,
+              "margin": 0.05854784482896237,
+              "entropy": 0.8280255595567066,
+              "top5": [
+                "Anemia",
+                "Acute dystonic reactions",
+                "Sarcoidosis",
+                "Atrial fibrillation",
+                "Guillain-Barré syndrome"
+              ],
+              "top5_probs": [
+                0.12163956181457636,
+                0.06309171698561399,
+                0.05663026624919994,
+                0.05377915338789221,
+                0.05317881716703762
+              ]
+            },
+            "contradiction_score": 0.0,
+            "max_remaining_utility": 0.1303430379237377,
+            "stop_detail": "continue_failed_confidence+margin+entropy+remaining_utility",
+            "top_candidates": [
+              {
+                "voi_rank": 1,
+                "root_evidence_id": "E_155",
+                "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+                "utility": 0.1303430379237377,
+                "expected_fused_entropy_reduction": 0.251263115582542,
+                "expected_margin_gain": 0.21074162176669797,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 2,
+                "root_evidence_id": "E_220",
+                "question_en": "Do you have pain that is increased when you breathe in deeply?",
+                "utility": 0.0349816385067883,
+                "expected_fused_entropy_reduction": 0.15451207001234235,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 3,
+                "root_evidence_id": "E_194",
+                "question_en": "Have you noticed a high pitched sound when breathing in?",
+                "utility": 0.021567851687192288,
+                "expected_fused_entropy_reduction": 0.09575972393285292,
+                "expected_margin_gain": 0.09450001762061593,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 4,
+                "root_evidence_id": "E_53",
+                "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+                "utility": 0.02017821157909776,
+                "expected_fused_entropy_reduction": 0.16396038468926866,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 5,
+                "root_evidence_id": "E_148",
+                "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+                "utility": 0.0174557373235857,
+                "expected_fused_entropy_reduction": 0.12264679513379217,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 6,
+                "root_evidence_id": "E_50",
+                "question_en": "Have you had significantly increased sweating?",
+                "utility": 0.012314394046541034,
+                "expected_fused_entropy_reduction": 0.11329889826643824,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 7,
+                "root_evidence_id": "E_82",
+                "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+                "utility": 0.010575363648825421,
+                "expected_fused_entropy_reduction": 0.09685734074293528,
+                "expected_margin_gain": 0.036519131201055086,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 8,
+                "root_evidence_id": "E_70",
+                "question_en": "Are you significantly overweight compared to people of the same height as you?",
+                "utility": 0.005359363974068998,
+                "expected_fused_entropy_reduction": 0.09317347314878521,
+                "expected_margin_gain": 0.020569768711185654,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 9,
+                "root_evidence_id": "E_89",
+                "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+                "utility": -0.00045614786006136637,
+                "expected_fused_entropy_reduction": 0.08810042697953879,
+                "expected_margin_gain": 0.005443086505961453,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 10,
+                "root_evidence_id": "E_151",
+                "question_en": "Do you have swelling in one or more areas of your body?",
+                "utility": -0.006230741398026651,
+                "expected_fused_entropy_reduction": 0.07732853454060884,
+                "expected_margin_gain": 0.006192823023192448,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 11,
+                "root_evidence_id": "E_218",
+                "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+                "utility": -0.006281585582955149,
+                "expected_fused_entropy_reduction": 0.07948802621280882,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 12,
+                "root_evidence_id": "E_79",
+                "question_en": "Do you smoke cigarettes?",
+                "utility": -0.00805455067614514,
+                "expected_fused_entropy_reduction": 0.07323649488318262,
+                "expected_margin_gain": 0.008326885690522104,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 13,
+                "root_evidence_id": "E_129",
+                "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+                "utility": -0.008989840645165621,
+                "expected_fused_entropy_reduction": 0.07044136450439042,
+                "expected_margin_gain": 0.011337044387098205,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 14,
+                "root_evidence_id": "E_105",
+                "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+                "utility": -0.013712913351316337,
+                "expected_fused_entropy_reduction": 0.04436557964427279,
+                "expected_margin_gain": 0.059430089221668134,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 15,
+                "root_evidence_id": "E_125",
+                "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+                "utility": -0.018943657732169016,
+                "expected_fused_entropy_reduction": 0.05646607685060179,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 16,
+                "root_evidence_id": "E_214",
+                "question_en": "Have you noticed a wheezing sound when you exhale?",
+                "utility": -0.028814185954030576,
+                "expected_fused_entropy_reduction": 0.03851966190176259,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 17,
+                "root_evidence_id": "E_78",
+                "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+                "utility": -0.0292443221997368,
+                "expected_fused_entropy_reduction": 0.037737596000478546,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 18,
+                "root_evidence_id": "E_77",
+                "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+                "utility": -0.029399237237142557,
+                "expected_fused_entropy_reduction": 0.037455932296104444,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 19,
+                "root_evidence_id": "E_45",
+                "question_en": "Have you been coughing up blood?",
+                "utility": -0.029876900116290878,
+                "expected_fused_entropy_reduction": 0.034513921514365165,
+                "expected_margin_gain": 0.0057022152540414095,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 20,
+                "root_evidence_id": "E_91",
+                "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+                "utility": -0.030553139285335557,
+                "expected_fused_entropy_reduction": 0.03535792857211717,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              }
+            ],
+            "decision": "request",
+            "requested_root": "E_155",
+            "requested_question": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+            "requested_utility": 0.1303430379237377,
+            "reveal_payload": {
+              "root_evidence_id": "E_155",
+              "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+              "outcome_state": "__ABSENT__",
+              "status": "absent"
+            }
+          },
+          {
+            "turn_index": 3,
+            "requests_before": 2,
+            "bayes_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.07890920212891446,
+              "margin": 0.03280430099232448,
+              "entropy": 0.933708530449678,
+              "top5": [
+                "Anemia",
+                "Pulmonary embolism",
+                "Acute dystonic reactions",
+                "Guillain-Barré syndrome",
+                "Anaphylaxis"
+              ],
+              "top5_probs": [
+                0.07890920212891446,
+                0.04610490113658998,
+                0.046060468563617785,
+                0.045428264655667,
+                0.042225893913307604
+              ]
+            },
+            "mlp_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.746436357498169,
+              "margin": 0.6584615334868431,
+              "entropy": 0.295041499651821,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Guillain-Barré syndrome",
+                "Anemia",
+                "Sarcoidosis"
+              ],
+              "top5_probs": [
+                0.746436357498169,
+                0.08797482401132584,
+                0.0378846675157547,
+                0.023917773738503456,
+                0.023770280182361603
+              ]
+            },
+            "fused_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.42497427746786265,
+              "margin": 0.31446386497854767,
+              "entropy": 0.5942639660222858,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Guillain-Barré syndrome",
+                "Anemia",
+                "Sarcoidosis"
+              ],
+              "top5_probs": [
+                0.42497427746786265,
+                0.11051041248931497,
+                0.0706714788879089,
+                0.0668835236807388,
+                0.047620068501972444
+              ]
+            },
+            "contradiction_score": 0.0,
+            "max_remaining_utility": 0.13376134490940306,
+            "stop_detail": "continue_failed_confidence+entropy+remaining_utility",
+            "top_candidates": [
+              {
+                "voi_rank": 1,
+                "root_evidence_id": "E_220",
+                "question_en": "Do you have pain that is increased when you breathe in deeply?",
+                "utility": 0.13376134490940306,
+                "expected_fused_entropy_reduction": 0.24191356364218897,
+                "expected_margin_gain": 0.2535444245309955,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 2,
+                "root_evidence_id": "E_82",
+                "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+                "utility": 0.09483718369600126,
+                "expected_fused_entropy_reduction": 0.19760517077921824,
+                "expected_margin_gain": 0.1807716988371561,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 3,
+                "root_evidence_id": "E_226",
+                "question_en": "Are you more likely to develop common allergies than the general population?",
+                "utility": 0.06227214192491211,
+                "expected_fused_entropy_reduction": 0.1407148079151858,
+                "expected_margin_gain": 0.1743949878577995,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 4,
+                "root_evidence_id": "E_50",
+                "question_en": "Have you had significantly increased sweating?",
+                "utility": 0.054684262917206794,
+                "expected_fused_entropy_reduction": 0.19033502348583053,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 5,
+                "root_evidence_id": "E_89",
+                "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+                "utility": 0.05392236581955423,
+                "expected_fused_entropy_reduction": 0.12520982282986653,
+                "expected_margin_gain": 0.17528481631563814,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 6,
+                "root_evidence_id": "E_53",
+                "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+                "utility": 0.047910229047905484,
+                "expected_fused_entropy_reduction": 0.2100219567754733,
+                "expected_margin_gain": 0.011990764106975804,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 7,
+                "root_evidence_id": "E_218",
+                "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+                "utility": 0.031162961230720446,
+                "expected_fused_entropy_reduction": 0.09404085656776995,
+                "expected_margin_gain": 0.14720245059223486,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 8,
+                "root_evidence_id": "E_125",
+                "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+                "utility": 0.01786247984557454,
+                "expected_fused_entropy_reduction": 0.10404893516255925,
+                "expected_margin_gain": 0.05317782753083472,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 9,
+                "root_evidence_id": "E_79",
+                "question_en": "Do you smoke cigarettes?",
+                "utility": 0.011891625033767825,
+                "expected_fused_entropy_reduction": 0.08744901769088675,
+                "expected_margin_gain": 0.06897332651890054,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 10,
+                "root_evidence_id": "E_91",
+                "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+                "utility": 0.009857527960089929,
+                "expected_fused_entropy_reduction": 0.08248646921516867,
+                "expected_margin_gain": 0.07244984945873578,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 11,
+                "root_evidence_id": "E_148",
+                "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+                "utility": 0.00463545477769331,
+                "expected_fused_entropy_reduction": 0.09933719050489692,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 12,
+                "root_evidence_id": "E_162",
+                "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+                "utility": -0.009263381400652228,
+                "expected_fused_entropy_reduction": 0.05999929797109271,
+                "expected_margin_gain": 0.03868502357623388,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 13,
+                "root_evidence_id": "E_222",
+                "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+                "utility": -0.01952710376680423,
+                "expected_fused_entropy_reduction": 0.03394692569131863,
+                "expected_margin_gain": 0.05901043551485263,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 14,
+                "root_evidence_id": "E_116",
+                "question_en": "Have you had a cold in the last 2 weeks?",
+                "utility": -0.029471853399305706,
+                "expected_fused_entropy_reduction": 0.01515099712052037,
+                "expected_margin_gain": 0.060975490922040465,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 15,
+                "root_evidence_id": "E_194",
+                "question_en": "Have you noticed a high pitched sound when breathing in?",
+                "utility": -0.03594495758450823,
+                "expected_fused_entropy_reduction": 0.0255546225736214,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 16,
+                "root_evidence_id": "E_144",
+                "question_en": "Do you have diffuse (widespread) muscle pain?",
+                "utility": -0.03664896501727069,
+                "expected_fused_entropy_reduction": 0.024274609059507846,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 17,
+                "root_evidence_id": "E_105",
+                "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+                "utility": -0.04077268021876523,
+                "expected_fused_entropy_reduction": 0.016776945056790504,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 18,
+                "root_evidence_id": "E_70",
+                "question_en": "Are you significantly overweight compared to people of the same height as you?",
+                "utility": -0.04093819845474556,
+                "expected_fused_entropy_reduction": 0.016476002809553525,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 19,
+                "root_evidence_id": "E_151",
+                "question_en": "Do you have swelling in one or more areas of your body?",
+                "utility": -0.042621313465336756,
+                "expected_fused_entropy_reduction": 0.013415793699387724,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 20,
+                "root_evidence_id": "E_104",
+                "question_en": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+                "utility": -0.04714565677432248,
+                "expected_fused_entropy_reduction": 0.004111852612484923,
+                "expected_margin_gain": 0.0029641214440540575,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              }
+            ],
+            "decision": "request",
+            "requested_root": "E_220",
+            "requested_question": "Do you have pain that is increased when you breathe in deeply?",
+            "requested_utility": 0.13376134490940306,
+            "reveal_payload": {
+              "root_evidence_id": "E_220",
+              "question_en": "Do you have pain that is increased when you breathe in deeply?",
+              "outcome_state": "__ABSENT__",
+              "status": "absent"
+            }
+          },
+          {
+            "turn_index": 4,
+            "requests_before": 3,
+            "bayes_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.08219175123614852,
+              "margin": 0.034226288604429646,
+              "entropy": 0.930864123815731,
+              "top5": [
+                "Anemia",
+                "Acute dystonic reactions",
+                "Guillain-Barré syndrome",
+                "Anaphylaxis",
+                "Unstable angina"
+              ],
+              "top5_probs": [
+                0.08219175123614852,
+                0.04796546263171888,
+                0.04730529817583593,
+                0.043970356804179773,
+                0.04287414426955336
+              ]
+            },
+            "mlp_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.9109411239624023,
+              "margin": 0.8679551556706429,
+              "entropy": 0.11342097733185479,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Guillain-Barré syndrome",
+                "Ebola",
+                "Anemia"
+              ],
+              "top5_probs": [
+                0.9109411239624023,
+                0.04298596829175949,
+                0.02334943227469921,
+                0.007279435638338327,
+                0.004616156220436096
+              ]
+            },
+            "fused_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.676632821586686,
+              "margin": 0.575042764777148,
+              "entropy": 0.3507855847333969,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Guillain-Barré syndrome",
+                "Anemia",
+                "Sarcoidosis"
+              ],
+              "top5_probs": [
+                0.676632821586686,
+                0.10159005680953806,
+                0.0746822045105913,
+                0.03521981030357557,
+                0.01817948802251873
+              ]
+            },
+            "contradiction_score": 0.0,
+            "max_remaining_utility": 0.029560208066807106,
+            "stop_detail": "continue_failed_confidence+entropy+remaining_utility",
+            "top_candidates": [
+              {
+                "voi_rank": 1,
+                "root_evidence_id": "E_125",
+                "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+                "utility": 0.029560208066807106,
+                "expected_fused_entropy_reduction": 0.10557012013820549,
+                "expected_margin_gain": 0.10748320995397043,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 2,
+                "root_evidence_id": "E_226",
+                "question_en": "Are you more likely to develop common allergies than the general population?",
+                "utility": 0.026380852842924823,
+                "expected_fused_entropy_reduction": 0.09500438612601886,
+                "expected_margin_gain": 0.12064220236807222,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 3,
+                "root_evidence_id": "E_50",
+                "question_en": "Have you had significantly increased sweating?",
+                "utility": 0.017796958733115986,
+                "expected_fused_entropy_reduction": 0.12326719769657452,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 4,
+                "root_evidence_id": "E_82",
+                "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+                "utility": 0.016036903838114167,
+                "expected_fused_entropy_reduction": 0.09253462337134571,
+                "expected_margin_gain": 0.07571430491937015,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 5,
+                "root_evidence_id": "E_89",
+                "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+                "utility": 0.013923986289683235,
+                "expected_fused_entropy_reduction": 0.07382782555425277,
+                "expected_margin_gain": 0.11659341117422106,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 6,
+                "root_evidence_id": "E_53",
+                "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+                "utility": 0.009662166913154652,
+                "expected_fused_entropy_reduction": 0.1325697209435741,
+                "expected_margin_gain": 0.03374410197094446,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 7,
+                "root_evidence_id": "E_91",
+                "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+                "utility": -0.004254370335679061,
+                "expected_fused_entropy_reduction": 0.05964924217577394,
+                "expected_margin_gain": 0.06469273233822637,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 8,
+                "root_evidence_id": "E_162",
+                "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+                "utility": -0.009180322006886413,
+                "expected_fused_entropy_reduction": 0.05733502308920396,
+                "expected_margin_gain": 0.04642707647025701,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 9,
+                "root_evidence_id": "E_79",
+                "question_en": "Do you smoke cigarettes?",
+                "utility": -0.014615267749826417,
+                "expected_fused_entropy_reduction": 0.0490416326962288,
+                "expected_margin_gain": 0.04205917133623871,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 10,
+                "root_evidence_id": "E_218",
+                "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+                "utility": -0.02219791209927395,
+                "expected_fused_entropy_reduction": 0.024949534777342464,
+                "expected_margin_gain": 0.07039921886593847,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 11,
+                "root_evidence_id": "E_148",
+                "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+                "utility": -0.035883845352969686,
+                "expected_fused_entropy_reduction": 0.025665735721873306,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 12,
+                "root_evidence_id": "E_222",
+                "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+                "utility": -0.045529125121392025,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.02235437439303989,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 13,
+                "root_evidence_id": "E_69",
+                "question_en": "Do you have diabetes?",
+                "utility": -0.04706880377887299,
+                "expected_fused_entropy_reduction": 0.004259607031322055,
+                "expected_margin_gain": 0.0029420617694994045,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 14,
+                "root_evidence_id": "E_104",
+                "question_en": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+                "utility": -0.04727506233103156,
+                "expected_fused_entropy_reduction": 0.003969836219622991,
+                "expected_margin_gain": 0.0027076387408789815,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 15,
+                "root_evidence_id": "E_116",
+                "question_en": "Have you had a cold in the last 2 weeks?",
+                "utility": -0.047560719549942634,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.012196402250286842,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 16,
+                "root_evidence_id": "E_123",
+                "question_en": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+                "utility": -0.04950312042052434,
+                "expected_fused_entropy_reduction": 0.0007867077835206904,
+                "expected_margin_gain": 0.00032095149269639744,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 17,
+                "root_evidence_id": "E_118",
+                "question_en": "Have you ever had pneumonia?",
+                "utility": -0.04979932081662491,
+                "expected_fused_entropy_reduction": 0.00031625624994591206,
+                "expected_margin_gain": 0.0001336912295242243,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 18,
+                "root_evidence_id": "E_105",
+                "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 19,
+                "root_evidence_id": "E_106",
+                "question_en": "Do you have heart failure?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 20,
+                "root_evidence_id": "E_124",
+                "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              }
+            ],
+            "decision": "request",
+            "requested_root": "E_125",
+            "requested_question": "Have you ever been diagnosed with gastroesophageal reflux?",
+            "requested_utility": 0.029560208066807106,
+            "reveal_payload": {
+              "root_evidence_id": "E_125",
+              "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+              "outcome_state": "__ABSENT__",
+              "status": "absent"
+            }
+          },
+          {
+            "turn_index": 5,
+            "requests_before": 4,
+            "bayes_summary": {
+              "top1": "Anemia",
+              "top1_idx": 6,
+              "confidence": 0.08354440076020242,
+              "margin": 0.03480054011496682,
+              "entropy": 0.9277031182247137,
+              "top5": [
+                "Anemia",
+                "Acute dystonic reactions",
+                "Guillain-Barré syndrome",
+                "Anaphylaxis",
+                "Unstable angina"
+              ],
+              "top5_probs": [
+                0.08354440076020242,
+                0.0487438606452356,
+                0.04807118530298186,
+                0.04468199938211818,
+                0.043564619254392596
+              ]
+            },
+            "mlp_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.9487940669059753,
+              "margin": 0.9159347005188465,
+              "entropy": 0.06827380853543281,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Ebola",
+                "Sarcoidosis",
+                "Guillain-Barré syndrome"
+              ],
+              "top5_probs": [
+                0.9487940669059753,
+                0.03285936638712883,
+                0.006191373337060213,
+                0.004672292619943619,
+                0.003618432441726327
+              ]
+            },
+            "fused_summary": {
+              "top1": "Acute dystonic reactions",
+              "top1_idx": 24,
+              "confidence": 0.7808340312115386,
+              "margin": 0.6834644961575485,
+              "entropy": 0.24446089694737533,
+              "top5": [
+                "Acute dystonic reactions",
+                "Myasthenia gravis",
+                "Sarcoidosis",
+                "Anemia",
+                "Guillain-Barré syndrome"
+              ],
+              "top5_probs": [
+                0.7808340312115386,
+                0.09736953505399012,
+                0.028543386968449644,
+                0.02842348682051394,
+                0.027476018546005995
+              ]
+            },
+            "contradiction_score": 0.0,
+            "max_remaining_utility": 0.0007286614719712245,
+            "stop_detail": "continue_failed_remaining_utility",
+            "top_candidates": [
+              {
+                "voi_rank": 1,
+                "root_evidence_id": "E_226",
+                "question_en": "Are you more likely to develop common allergies than the general population?",
+                "utility": 0.0007286614719712245,
+                "expected_fused_entropy_reduction": 0.06469854767799349,
+                "expected_margin_gain": 0.07572230124537405,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 2,
+                "root_evidence_id": "E_89",
+                "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+                "utility": -0.006438559610217824,
+                "expected_fused_entropy_reduction": 0.048338061618243805,
+                "expected_margin_gain": 0.08487753249874042,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 3,
+                "root_evidence_id": "E_91",
+                "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+                "utility": -0.008359342707195558,
+                "expected_fused_entropy_reduction": 0.054877378200836796,
+                "expected_margin_gain": 0.057290496411721015,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 4,
+                "root_evidence_id": "E_162",
+                "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+                "utility": -0.010535208501519552,
+                "expected_fused_entropy_reduction": 0.05595428832465124,
+                "expected_margin_gain": 0.043449664599611304,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 5,
+                "root_evidence_id": "E_82",
+                "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+                "utility": -0.01739870944241794,
+                "expected_fused_entropy_reduction": 0.05073183179522453,
+                "expected_margin_gain": 0.023493915351042838,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 6,
+                "root_evidence_id": "E_53",
+                "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+                "utility": -0.019481834398241128,
+                "expected_fused_entropy_reduction": 0.0909273014863698,
+                "expected_margin_gain": 0.002540748921277425,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 7,
+                "root_evidence_id": "E_50",
+                "question_en": "Have you had significantly increased sweating?",
+                "utility": -0.0316092716527809,
+                "expected_fused_entropy_reduction": 0.03343768790403473,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 8,
+                "root_evidence_id": "E_218",
+                "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+                "utility": -0.04085599574367598,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.045720021281620116,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 9,
+                "root_evidence_id": "E_79",
+                "question_en": "Do you smoke cigarettes?",
+                "utility": -0.04176046280177214,
+                "expected_fused_entropy_reduction": 0.011672596496510368,
+                "expected_margin_gain": 0.009098045625735796,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 10,
+                "root_evidence_id": "E_116",
+                "question_en": "Have you had a cold in the last 2 weeks?",
+                "utility": -0.04497620372720512,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.02511898136397439,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 11,
+                "root_evidence_id": "E_69",
+                "question_en": "Do you have diabetes?",
+                "utility": -0.04890087176988978,
+                "expected_fused_entropy_reduction": 0.0016978777033511416,
+                "expected_margin_gain": 0.0008264774663354624,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 12,
+                "root_evidence_id": "E_104",
+                "question_en": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+                "utility": -0.04899039489351128,
+                "expected_fused_entropy_reduction": 0.001559578623389013,
+                "expected_margin_gain": 0.0007591843181238289,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 13,
+                "root_evidence_id": "E_222",
+                "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+                "utility": -0.04936953496597547,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0031523251701226496,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 14,
+                "root_evidence_id": "E_123",
+                "question_en": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+                "utility": -0.04970020312316342,
+                "expected_fused_entropy_reduction": 0.0004665049635512175,
+                "expected_margin_gain": 0.00021609573441705443,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 15,
+                "root_evidence_id": "E_118",
+                "question_en": "Have you ever had pneumonia?",
+                "utility": -0.04989077923167573,
+                "expected_fused_entropy_reduction": 0.00016785973185137748,
+                "expected_margin_gain": 8.448957903006704e-05,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 16,
+                "root_evidence_id": "E_105",
+                "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 17,
+                "root_evidence_id": "E_106",
+                "question_en": "Do you have heart failure?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 18,
+                "root_evidence_id": "E_124",
+                "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 19,
+                "root_evidence_id": "E_129",
+                "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              },
+              {
+                "voi_rank": 20,
+                "root_evidence_id": "E_144",
+                "question_en": "Do you have diffuse (widespread) muscle pain?",
+                "utility": -0.05,
+                "expected_fused_entropy_reduction": 0.0,
+                "expected_margin_gain": 0.0,
+                "contradiction_resolution_gain": 0.0,
+                "rare_recovery_bonus": 0.0,
+                "lambda_cost": 0.05
+              }
+            ],
+            "decision": "request",
+            "requested_root": "E_226",
+            "requested_question": "Are you more likely to develop common allergies than the general population?",
+            "requested_utility": 0.0007286614719712245,
+            "reveal_payload": {
+              "root_evidence_id": "E_226",
+              "question_en": "Are you more likely to develop common allergies than the general population?",
+              "outcome_state": "__ABSENT__",
+              "status": "absent"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

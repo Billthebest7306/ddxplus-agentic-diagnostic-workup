@@ -1,0 +1,4 @@
+system,correct_count,num_cases,accuracy,top3_accuracy,top5_accuracy,mean_requests,extra_requests_total,improvements_vs_notebook13,regressions_vs_notebook13
+Notebook 13 selected-stop hybrid,43,49,0.8775510204081632,0.9183673469387755,0.9387755102040817,6.591836734693878,0,0,0
+Notebook 22 conservative graph critic,44,49,0.8979591836734694,,,6.591836734693878,0,1,0
+Notebook 23 calibrated graph-bayes rescue,47,49,0.9591836734693877,,,6.959183673469388,18,4,0

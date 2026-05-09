@@ -1,0 +1,82 @@
+requested_evidence_id,requested_question,count,present_count,absent_count,value_count,unique_cases
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",21,3,18,0,21
+E_151,Do you have swelling in one or more areas of your body?,20,1,19,0,20
+E_201,Do you have a cough?,14,3,11,0,14
+E_79,Do you smoke cigarettes?,13,4,9,0,13
+E_91,Do you have a fever (either felt or measured with a thermometer)?,11,1,10,0,11
+E_181,Do you have nasal congestion or a clear runny nose?,10,2,8,0,10
+E_214,Have you noticed a wheezing sound when you exhale?,10,2,8,0,10
+E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,10,2,8,0,10
+E_45,Have you been coughing up blood?,9,3,6,0,9
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,9,5,4,0,9
+E_0,Have you recently had a viral infection?,8,1,7,0,8
+E_70,Are you significantly overweight compared to people of the same height as you?,8,1,7,0,8
+E_120,Do you have polyps in your nose?,7,2,5,0,7
+E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,7,2,5,0,7
+E_148,Are you feeling nauseous or do you feel like vomiting?,7,2,5,0,7
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,7,2,5,0,7
+E_194,Have you noticed a high pitched sound when breathing in?,6,0,6,0,6
+E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",6,1,5,0,6
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",5,1,4,0,5
+E_25,Have any of your family members been diagnosed with cluster headaches?,5,1,4,0,5
+E_3,Have you ever had a pericarditis?,5,1,4,0,5
+E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",5,1,4,0,5
+E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,5,2,3,0,5
+E_146,Are you taking any new oral anticoagulants ((NOACs)?,4,1,3,0,4
+E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",4,0,4,0,4
+E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,4,1,3,0,4
+E_209,Are your vaccinations up to date?,4,1,3,0,4
+E_21,Have you ever had a spontaneous pneumothorax?,4,1,3,0,4
+E_211,Have you vomited several times or have you made several efforts to vomit?,4,1,3,0,4
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,4,2,2,0,4
+E_220,Do you have pain that is increased when you breathe in deeply?,4,0,4,0,4
+E_63,Do you have difficulty articulating words/speaking?,4,1,3,0,4
+E_76,Do you feel slightly dizzy or lightheaded?,4,0,4,0,4
+E_97,Do you have a sore throat?,4,0,4,0,4
+E_105,Have you ever had a heart attack or do you have angina (chest pain)?,3,1,2,0,3
+E_169,Is your nose or the back of your throat itchy?,3,1,2,0,3
+E_216,Do you have pain that is increased with movement?,3,0,3,0,3
+E_62,Do you regularly take stimulant drugs?,3,1,2,0,3
+E_103,Have you lost your sense of smell?,2,2,0,0,2
+E_125,Have you ever been diagnosed with gastroesophageal reflux?,2,0,2,0,2
+E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",2,0,2,0,2
+E_15,Have you started or taken any antipsychotic medication within the last 7 days?,2,0,2,0,2
+E_157,"Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",2,1,1,0,2
+E_191,Are you a former smoker?,2,0,2,0,2
+E_196,Have you had surgery within the last month?,2,1,1,0,2
+E_203,Do you have intense coughing fits?,2,1,1,0,2
+E_208,"Is your BMI less than 18.5, or are you underweight?",2,1,1,0,2
+E_215,Do you have symptoms that get worse after eating?,2,0,2,0,2
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,2,0,2,0,2
+E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,2,1,1,0,2
+E_31,Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?,2,1,1,0,2
+E_52,Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?,2,0,2,0,2
+E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,2,1,1,0,2
+E_81,Do you suffer from chronic anxiety?,2,0,2,0,2
+E_104,Do you have high blood pressure or do you take medications to treat high blood pressure?,1,1,0,0,1
+E_106,Do you have heart failure?,1,1,0,0,1
+E_108,Do you have a problem with poor circulation?,1,1,0,0,1
+E_116,Have you had a cold in the last 2 weeks?,1,0,1,0,1
+E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,1,0,1,0,1
+E_131,Do your lesions peel off?,1,1,0,0,1
+E_134,How intense is the pain caused by the rash?,1,0,1,0,1
+E_14,Do you have chest pain even at rest?,1,0,1,0,1
+E_142,Does your mother suffer from asthma?,1,0,1,0,1
+E_143,"Do you exercise regularly, 4 times per week or more?",1,1,0,0,1
+E_161,Have you recently had a loss of appetite or do you get full more quickly then usually?,1,0,1,0,1
+E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,1,1,0,0,1
+E_173,"Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",1,1,0,0,1
+E_174,Have you been unintentionally losing weight or have you lost your appetite?,1,1,0,0,1
+E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,1,1,0,0,1
+E_182,Do you have greenish or yellowish nasal discharge?,1,0,1,0,1
+E_2,Are you infected with the human immunodeficiency virus (HIV)?,1,0,1,0,1
+E_219,Are your symptoms more prominent at night?,1,1,0,0,1
+E_22,Do you have a known issue with one of your heart valves?,1,0,1,0,1
+E_222,Are you exposed to secondhand cigarette smoke on a daily basis?,1,0,1,0,1
+E_24,Have you ever had a diagnosis of anemia?,1,0,1,0,1
+E_5,Have you ever had fluid in your lungs?,1,1,0,0,1
+E_64,Do you feel out of breath with minimal physical effort?,1,1,0,0,1
+E_72,Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?,1,0,1,0,1
+E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",1,1,0,0,1
+E_84,Do you feel weakness in both arms and/or both legs?,1,0,1,0,1
+E_92,Did your cheeks suddenly turn red?,1,1,0,0,1

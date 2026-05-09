@@ -1,0 +1,64 @@
+{
+  "policy_name": "conservative_graph_critic_v1_clip3_margin1",
+  "status": "offline_candidate_promoted",
+  "method": "Conservative final-state graph critic over Notebook 13 revealed evidence",
+  "formula": "sum clipped train-derived log_odds_support(outcome -> disease) over visible final evidence",
+  "clip_value": 3.0,
+  "override_rule": {
+    "graph_top1_differs_from_notebook13": true,
+    "graph_margin_min": 1.0,
+    "require_notebook13_graph_score_lt_0": true,
+    "require_graph_top1_score_gt_0": true
+  },
+  "inputs": {
+    "notebook13_49_run": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+    "notebook13_24_run": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1",
+    "graph_stats_root": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1"
+  },
+  "notebook13_reference": {
+    "num_cases": 49,
+    "correct_count": 43,
+    "accuracy": 0.8775510204081632,
+    "top3_accuracy": 0.9183673469387755,
+    "top5_accuracy": 0.9387755102040817,
+    "macro_f1": 0.8448979591836734,
+    "mean_requests": 6.591836734693878,
+    "median_requests": 5.0
+  },
+  "selected_policy_49case": {
+    "run_scope": "notebook13_49case",
+    "policy_name": "conservative_graph_critic_v1_clip3_margin1",
+    "diagnostic_only": false,
+    "num_cases": 49,
+    "accuracy": 0.8979591836734694,
+    "correct_count": 44,
+    "top3_accuracy": 0.9387755102040817,
+    "top5_accuracy": 0.9387755102040817,
+    "macro_f1": 0.8673469387755102,
+    "mean_requests": 6.591836734693878,
+    "median_requests": 5.0,
+    "notebook13_accuracy": 0.8775510204081632,
+    "notebook13_correct_count": 43,
+    "notebook13_top3_accuracy": 0.9183673469387755,
+    "notebook13_top5_accuracy": 0.9387755102040817,
+    "graph_only_accuracy": 0.8979591836734694,
+    "graph_only_correct_count": 44,
+    "graph_only_top3_accuracy": 0.9591836734693877,
+    "graph_only_top5_accuracy": 0.9795918367346939,
+    "changed_predictions": 1,
+    "overrides_fired": 1,
+    "improvements_vs_notebook13": 1,
+    "regressions_vs_notebook13": 0,
+    "clip_value": 3.0,
+    "margin_min": 1.0,
+    "require_reference_negative": true,
+    "require_graph_positive": true
+  },
+  "paired_counts": {
+    "both_correct": 43,
+    "both_wrong": 5,
+    "graph_adjudicator_only_correct": 1
+  },
+  "promotion_rule": "Promote as offline candidate only if accuracy improves over Notebook 13 with zero regressions.",
+  "external_validation_note": "This is an offline final-head adjudicator on saved Notebook 13 traces. A future live or held-out confirmation should keep Notebook 13 acquisition unchanged and validate the final critic separately."
+}

@@ -1,0 +1,61 @@
+requested_root,requested_question,count,mean_graph_rank,mean_information_gain
+E_53,"Do you have pain somewhere, related to your reason for consulting?",10,2.8,0.36606
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",8,1.0,0.3372625
+E_54,Characterize your pain:,7,1.1428571428571428,0.7744428571428571
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,6,1.0,0.27363333333333334
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,6,1.3333333333333333,0.27281666666666665
+E_214,Have you noticed a wheezing sound when you exhale?,6,1.0,0.25495
+E_91,Do you have a fever (either felt or measured with a thermometer)?,6,1.0,0.24465
+E_181,Do you have nasal congestion or a clear runny nose?,6,1.0,0.23416666666666666
+E_55,Do you feel pain somewhere?,4,1.0,0.5885750000000001
+E_57,Does the pain radiate to another location?,4,2.0,0.54725
+E_220,Do you have pain that is increased when you breathe in deeply?,4,5.75,0.3107
+E_45,Have you been coughing up blood?,4,1.0,0.2463
+E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,4,1.0,0.227475
+E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,4,1.0,0.223775
+E_201,Do you have a cough?,4,1.25,0.19995000000000002
+E_151,Do you have swelling in one or more areas of your body?,3,1.0,0.2741
+E_194,Have you noticed a high pitched sound when breathing in?,3,1.3333333333333333,0.26303333333333334
+E_25,Have any of your family members been diagnosed with cluster headaches?,3,1.0,0.24676666666666666
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,3,3.0,0.24083333333333334
+E_97,Do you have a sore throat?,3,1.0,0.22453333333333333
+E_79,Do you smoke cigarettes?,3,1.0,0.18730000000000002
+E_133,Where is the affected region located?,2,1.0,0.8233
+E_130,What color is the rash?,2,1.5,0.588
+E_59,How fast did the pain appear?,2,5.0,0.35150000000000003
+E_196,Have you had surgery within the last month?,2,1.0,0.26985000000000003
+E_169,Is your nose or the back of your throat itchy?,2,1.0,0.26185
+E_9,Do you have swollen or painful lymph nodes?,2,2.0,0.2051
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,2,1.0,0.182
+E_148,Are you feeling nauseous or do you feel like vomiting?,2,2.0,0.1794
+E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,2,4.5,0.16795
+E_152,Where is the swelling located?,1,1.0,0.9237
+E_131,Do your lesions peel off?,1,1.0,0.7115
+E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",1,1.0,0.5996
+E_135,Is the lesion (or are the lesions) larger than 1cm?,1,1.0,0.5707
+E_136,How severe is the itching?,1,1.0,0.469
+E_56,How intense is the pain?,1,2.0,0.4227
+E_58,How precisely is the pain located?,1,1.0,0.4163
+E_134,How intense is the pain caused by the rash?,1,1.0,0.4107
+E_83,Have you noticed weakness in your facial muscles and/or eyes?,1,7.0,0.406
+E_5,Have you ever had fluid in your lungs?,1,1.0,0.363
+E_14,Do you have chest pain even at rest?,1,2.0,0.3112
+E_106,Do you have heart failure?,1,1.0,0.2902
+E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,1,2.0,0.2681
+E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,1,1.0,0.2677
+E_146,Are you taking any new oral anticoagulants ((NOACs)?,1,1.0,0.2667
+E_92,Did your cheeks suddenly turn red?,1,1.0,0.2659
+E_3,Have you ever had a pericarditis?,1,1.0,0.2589
+E_24,Have you ever had a diagnosis of anemia?,1,3.0,0.2314
+E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",1,1.0,0.2303
+E_15,Have you started or taken any antipsychotic medication within the last 7 days?,1,2.0,0.2265
+E_208,"Is your BMI less than 18.5, or are you underweight?",1,1.0,0.2163
+E_84,Do you feel weakness in both arms and/or both legs?,1,1.0,0.2014
+E_162,Have you had an involuntary weight loss over the last 3 months?,1,6.0,0.1908
+E_0,Have you recently had a viral infection?,1,1.0,0.1674
+E_166,Did you vomit after coughing?,1,10.0,0.167
+E_209,Are your vaccinations up to date?,1,1.0,0.1571
+E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",1,1.0,0.1568
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",1,1.0,0.1559
+E_172,Do you have a hard time opening/raising one or both eyelids?,1,1.0,0.1433
+E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,1,1.0,0.1335

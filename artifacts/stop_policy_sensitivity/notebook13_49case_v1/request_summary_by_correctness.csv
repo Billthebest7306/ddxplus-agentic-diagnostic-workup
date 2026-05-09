@@ -1,0 +1,3 @@
+correct,cases,mean_requests,median_requests,min_requests,max_requests,mean_mlp_confidence,mean_mlp_entropy
+False,6,11.833333333333334,11.5,2,24,0.8256759345531464,0.18681533686848775
+True,43,5.8604651162790695,5.0,0,23,0.939704418182373,0.06230129011512112

@@ -1,0 +1,125 @@
+{
+  "live_graph_shortlist_metrics": {
+    "agreement_hybrid_accuracy": 0.8333333333333334,
+    "agreement_hybrid_top3_accuracy": 0.8333333333333334,
+    "agreement_hybrid_top5_accuracy": 0.875,
+    "agreement_hybrid_macro_f1": 0.7435897435897435,
+    "llm_final_accuracy": 0.8333333333333334,
+    "llm_final_top3_accuracy": 0.8333333333333334,
+    "llm_final_top5_accuracy": 0.875,
+    "llm_final_macro_f1": 0.7435897435897435,
+    "mlp_final_accuracy": 0.8333333333333334,
+    "mlp_final_top3_accuracy": 0.875,
+    "mlp_final_top5_accuracy": 0.9166666666666666,
+    "mlp_final_macro_f1": 0.7435897435897435,
+    "conservative_hybrid_accuracy": 0.8333333333333334,
+    "conservative_hybrid_top3_accuracy": 0.8333333333333334,
+    "conservative_hybrid_top5_accuracy": 0.875,
+    "conservative_hybrid_macro_f1": 0.7435897435897435,
+    "accuracy": 0.8333333333333334,
+    "top3_accuracy": 0.8333333333333334,
+    "top5_accuracy": 0.875,
+    "macro_f1": 0.7435897435897435,
+    "mean_requests": 6.208333333333333,
+    "median_requests": 5.0,
+    "mean_visible_roots_including_initial": 7.208333333333333,
+    "stop_before_cap_rate": 0.9583333333333334,
+    "selected_stop_rule_rate": 0.4166666666666667,
+    "cap_hit_count": 1,
+    "mean_api_calls": 7.166666666666667,
+    "total_input_tokens": 439433,
+    "total_output_tokens": 19456,
+    "total_estimated_cost": null,
+    "mean_mlp_confidence": 0.833091693619887,
+    "mean_mlp_margin": 0.7416322701174067,
+    "mean_mlp_entropy": 0.1494069211828655,
+    "llm_mlp_agreement_rate": 1.0,
+    "stop_reason_distribution": {
+      "agent_stop": 13,
+      "max_requests_reached": 1,
+      "selected_mlp_stop": 10
+    },
+    "request_distribution": {
+      "0": 2,
+      "1": 5,
+      "2": 3,
+      "3": 1,
+      "5": 4,
+      "6": 1,
+      "7": 2,
+      "8": 1,
+      "10": 1,
+      "13": 1,
+      "17": 1,
+      "23": 1,
+      "24": 1
+    },
+    "agreement_hybrid_source_distribution": {
+      "agreement": 24
+    },
+    "conservative_hybrid_source_distribution": {
+      "llm_mlp_agreement": 24
+    },
+    "mean_top_graph_score_at_stop": 0.37580416666666666,
+    "mean_requested_graph_rank": 1.7596499514977777,
+    "mean_requested_information_gain": 0.373059397684583,
+    "total_requests_outside_graph_top10": 0.0,
+    "mean_graph_shortlist_size": 10.0,
+    "run_name": "live_medkgi_graph_shortlist_pilot24_v1",
+    "max_request_cap": 24,
+    "num_cases": 24,
+    "runtime_seconds": 724.383927822113,
+    "selected_stop_policy": {
+      "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+      "min_requests": 1,
+      "mlp_confidence_min": 0.7,
+      "mlp_margin_min": 0.2,
+      "mlp_entropy_max": 0.1,
+      "mlp_stability_min": 0,
+      "official_final_head": "agreement_hybrid_final",
+      "source_notebook": "12_stopping_policy_ablation.ipynb"
+    }
+  },
+  "reference_systems": [
+    {
+      "system": "notebook13_selected_stop_pilot24",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.583333333333333,
+      "median_requests": 4.5,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1/metrics.json"
+    },
+    {
+      "system": "notebook08_lambda_0p100_llm_only",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8461538461538461,
+      "mean_requests": 13.041666666666666,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/metrics.json"
+    },
+    {
+      "system": "notebook11_lambda_0p220_hybrid_v1",
+      "accuracy": 0.875,
+      "top3_accuracy": 0.9583333333333334,
+      "top5_accuracy": 0.9583333333333334,
+      "macro_f1": 0.8133333333333332,
+      "mean_requests": 7.458333333333333,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/lambda_0p220/metrics.json"
+    },
+    {
+      "system": "notebook12_offline_selected_stop",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.875,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/stopping_policy_ablation/stopping_policy_ablation_24case_v1/selected_stopping_policy.json"
+    }
+  ]
+}

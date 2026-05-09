@@ -1,0 +1,150 @@
+case_id,turn_index,requested_root,requested_question,graph_rank,graph_score,information_gain,split_balance,weighted_present_rate,outside_graph_top10
+test:104857,1,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",1,0.5417,0.5996,0.398,0.199,False
+test:33118,1,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.2848,0.1805,0.8891,0.4445,False
+test:33118,2,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,1,0.31,0.2914,0.4662,0.2331,False
+test:33118,3,E_97,Do you have a sore throat?,1,0.3148,0.2475,0.7456,0.3728,False
+test:33118,4,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.3229,0.2187,0.9513,0.4756,False
+test:33118,5,E_53,"Do you have pain somewhere, related to your reason for consulting?",4,0.2036,0.307,0.5284,0.7358,False
+test:33118,6,E_54,Characterize your pain:,1,0.3991,0.7539,0.3768,0.8116,False
+test:33118,7,E_55,Do you feel pain somewhere?,1,0.3347,0.6893,0.0835,0.9582,False
+test:33118,8,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.2779,0.265,0.3759,0.1879,False
+test:93930,1,E_152,Where is the swelling located?,1,0.698,0.9237,0.001,0.9995,False
+test:93930,2,E_106,Do you have heart failure?,1,0.3813,0.2902,0.9669,0.4834,False
+test:93930,3,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,2,0.3881,0.3484,0.6832,0.3416,False
+test:93930,4,E_5,Have you ever had fluid in your lungs?,1,0.4128,0.363,0.8055,0.5973,False
+test:93930,5,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,1,0.3677,0.3074,0.787,0.6065,False
+test:88250,1,E_53,"Do you have pain somewhere, related to your reason for consulting?",1,0.2695,0.378,0.8769,0.5616,False
+test:88250,2,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.286,0.2124,0.7287,0.3644,False
+test:88250,3,E_45,Have you been coughing up blood?,1,0.2824,0.1736,0.9238,0.4619,False
+test:88250,4,E_214,Have you noticed a wheezing sound when you exhale?,1,0.3361,0.2513,0.8703,0.4351,False
+test:88250,5,E_181,Do you have nasal congestion or a clear runny nose?,1,0.2888,0.209,0.7622,0.3811,False
+test:88250,6,E_97,Do you have a sore throat?,1,0.2803,0.2024,0.7557,0.3778,False
+test:88250,7,E_169,Is your nose or the back of your throat itchy?,1,0.2845,0.2509,0.5449,0.2725,False
+test:90978,1,E_194,Have you noticed a high pitched sound when breathing in?,1,0.3414,0.3909,0.1689,0.0845,False
+test:90978,2,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,1,0.3459,0.2957,0.683,0.6585,False
+test:29123,1,E_53,"Do you have pain somewhere, related to your reason for consulting?",1,0.2671,0.3764,0.8586,0.5707,False
+test:29123,2,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.2855,0.229,0.6464,0.3232,False
+test:29123,3,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.3729,0.2763,0.9678,0.5161,False
+test:29123,4,E_181,Do you have nasal congestion or a clear runny nose?,1,0.4427,0.3911,0.8175,0.4087,False
+test:29123,5,E_214,Have you noticed a wheezing sound when you exhale?,1,0.4002,0.3609,0.7133,0.6434,False
+test:51421,1,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,2,0.2649,0.2415,0.432,0.216,False
+test:51421,2,E_201,Do you have a cough?,1,0.3277,0.2131,0.9917,0.5041,False
+test:51421,3,E_194,Have you noticed a high pitched sound when breathing in?,2,0.3193,0.2107,0.9826,0.5087,False
+test:51421,4,E_181,Do you have nasal congestion or a clear runny nose?,1,0.2913,0.201,0.8218,0.4109,False
+test:51421,5,E_53,"Do you have pain somewhere, related to your reason for consulting?",1,0.2491,0.3364,0.8734,0.5633,False
+test:51421,6,E_54,Characterize your pain:,1,0.3876,0.7619,0.1966,0.9017,False
+test:51421,7,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.3178,0.2872,0.524,0.262,False
+test:51421,8,E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",1,0.205,0.1568,0.5108,0.2554,False
+test:51421,9,E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,7,0.2766,0.1786,0.8587,0.4293,False
+test:51421,10,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",1,0.2775,0.2303,0.6026,0.3013,False
+test:51421,11,E_57,Does the pain radiate to another location?,1,0.2998,0.6285,0.0001,1.0,False
+test:51421,12,E_220,Do you have pain that is increased when you breathe in deeply?,7,0.152,0.1567,0.3428,0.1714,False
+test:51421,13,E_148,Are you feeling nauseous or do you feel like vomiting?,1,0.2117,0.1609,0.5205,0.2602,False
+test:51421,14,E_55,Do you feel pain somewhere?,1,0.2581,0.5348,0.0001,1.0,False
+test:51421,15,E_146,Are you taking any new oral anticoagulants ((NOACs)?,1,0.3271,0.2667,0.7365,0.3682,False
+test:51421,16,E_59,How fast did the pain appear?,3,0.153,0.2822,0.1757,0.9121,False
+test:51421,17,E_9,Do you have swollen or painful lymph nodes?,2,0.2036,0.1736,0.6696,0.3348,False
+test:46152,1,E_54,Characterize your pain:,1,0.3847,0.7925,0.0001,1.0,False
+test:46152,2,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.3206,0.2536,0.7492,0.3746,False
+test:46152,3,E_151,Do you have swelling in one or more areas of your body?,1,0.2878,0.2679,0.4431,0.2215,False
+test:46152,4,E_57,Does the pain radiate to another location?,3,0.2136,0.4368,0.0001,1.0,False
+test:46152,5,E_25,Have any of your family members been diagnosed with cluster headaches?,1,0.2655,0.2301,0.5312,0.2656,False
+test:81691,1,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.293,0.215,0.771,0.3855,False
+test:81691,2,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.3342,0.2389,0.9075,0.4537,False
+test:81691,3,E_169,Is your nose or the back of your throat itchy?,1,0.3391,0.2728,0.7918,0.3959,False
+test:81691,4,E_53,"Do you have pain somewhere, related to your reason for consulting?",7,0.2298,0.3527,0.5736,0.7132,False
+test:81691,5,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,1,0.2823,0.1787,0.883,0.4415,False
+test:81691,6,E_201,Do you have a cough?,1,0.2855,0.2121,0.7159,0.3579,False
+test:81691,7,E_194,Have you noticed a high pitched sound when breathing in?,1,0.2202,0.1875,0.4458,0.2229,False
+test:81691,8,E_84,Do you feel weakness in both arms and/or both legs?,1,0.2416,0.2014,0.5207,0.2603,False
+test:81691,9,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.2445,0.2158,0.444,0.222,False
+test:81691,10,E_208,"Is your BMI less than 18.5, or are you underweight?",1,0.2523,0.2163,0.5005,0.2503,False
+test:81691,11,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.4023,0.3515,0.7437,0.3719,False
+test:81691,12,E_214,Have you noticed a wheezing sound when you exhale?,1,0.2292,0.1637,0.6246,0.3123,False
+test:81691,13,E_25,Have any of your family members been diagnosed with cluster headaches?,1,0.2095,0.1863,0.3915,0.1957,False
+test:81691,14,E_3,Have you ever had a pericarditis?,1,0.3137,0.2589,0.6951,0.3476,False
+test:81691,15,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,2,0.2609,0.1912,0.6951,0.3476,False
+test:81691,16,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",1,0.1799,0.1559,0.3348,0.1674,False
+test:81691,17,E_15,Have you started or taken any antipsychotic medication within the last 7 days?,2,0.3175,0.2265,0.897,0.4485,False
+test:81691,18,E_209,Are your vaccinations up to date?,1,0.207,0.1571,0.521,0.2605,False
+test:81691,19,E_166,Did you vomit after coughing?,10,0.1498,0.167,0.2395,0.1197,False
+test:81691,20,E_196,Have you had surgery within the last month?,1,0.1978,0.192,0.2736,0.1368,False
+test:81691,21,E_172,Do you have a hard time opening/raising one or both eyelids?,1,0.1778,0.1433,0.4058,0.2029,False
+test:81691,22,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.2363,0.1866,0.5352,0.2676,False
+test:81691,23,E_79,Do you smoke cigarettes?,1,0.1875,0.1555,0.3698,0.1849,False
+test:77908,1,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.316,0.276,0.5883,0.2942,False
+test:77908,2,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,2,0.3585,0.2681,0.9474,0.4737,False
+test:34242,1,E_83,Have you noticed weakness in your facial muscles and/or eyes?,7,0.4528,0.406,0.8443,0.4222,False
+test:106010,1,E_45,Have you been coughing up blood?,1,0.4496,0.369,0.9958,0.5021,False
+test:106010,2,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.3936,0.3373,0.7782,0.3891,False
+test:106010,3,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.4579,0.5032,0.3052,0.8474,False
+test:8666,1,E_181,Do you have nasal congestion or a clear runny nose?,1,0.3359,0.2402,0.9102,0.4551,False
+test:8666,2,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,1,0.304,0.2812,0.4809,0.2404,False
+test:8666,3,E_97,Do you have a sore throat?,1,0.2982,0.2237,0.7618,0.3809,False
+test:8666,4,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.3036,0.2078,0.8808,0.4404,False
+test:8666,5,E_53,"Do you have pain somewhere, related to your reason for consulting?",4,0.2068,0.3131,0.5315,0.7342,False
+test:8666,6,E_54,Characterize your pain:,1,0.399,0.754,0.3747,0.8127,False
+test:8666,7,E_55,Do you feel pain somewhere?,1,0.3177,0.6673,0.0001,1.0,False
+test:8666,8,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.2769,0.2624,0.3832,0.1916,False
+test:8666,9,E_133,Where is the affected region located?,1,0.6729,0.8223,0.314,0.843,False
+test:8666,10,E_131,Do your lesions peel off?,1,0.5575,0.7115,0.115,0.9425,False
+test:8666,11,E_135,Is the lesion (or are the lesions) larger than 1cm?,1,0.4531,0.5707,0.115,0.9425,False
+test:8666,12,E_130,What color is the rash?,2,0.3947,0.4882,0.115,0.9425,False
+test:8666,13,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.4035,0.3974,0.5351,0.2676,False
+test:38202,1,E_220,Do you have pain that is increased when you breathe in deeply?,2,0.4712,0.5922,0.5536,0.2768,False
+test:2801,1,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,1,0.3177,0.2677,0.6809,0.3404,False
+test:62878,1,E_214,Have you noticed a wheezing sound when you exhale?,1,0.3142,0.2227,0.8764,0.4382,False
+test:62878,2,E_53,"Do you have pain somewhere, related to your reason for consulting?",2,0.2268,0.2677,0.9935,0.5032,False
+test:62878,3,E_54,Characterize your pain:,1,0.3688,0.7411,0.0852,0.9574,False
+test:62878,4,E_57,Does the pain radiate to another location?,2,0.2683,0.5583,0.0001,0.9999,False
+test:62878,5,E_151,Do you have swelling in one or more areas of your body?,1,0.3365,0.2783,0.7125,0.3563,False
+test:62878,6,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1,0.2216,0.1629,0.5798,0.2899,False
+test:62878,7,E_79,Do you smoke cigarettes?,1,0.2869,0.2011,0.789,0.3945,False
+test:62878,8,E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,2,0.2082,0.1573,0.5162,0.2581,False
+test:62878,9,E_201,Do you have a cough?,2,0.2633,0.2238,0.5056,0.2528,False
+test:62878,10,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.2604,0.2006,0.6197,0.3099,False
+test:62878,11,E_148,Are you feeling nauseous or do you feel like vomiting?,3,0.222,0.1979,0.3917,0.1959,False
+test:62878,12,E_220,Do you have pain that is increased when you breathe in deeply?,5,0.2298,0.2404,0.514,0.257,False
+test:62878,13,E_25,Have any of your family members been diagnosed with cluster headaches?,1,0.3969,0.3239,0.9074,0.4537,False
+test:62878,14,E_59,How fast did the pain appear?,7,0.2046,0.4208,0.0482,0.9759,False
+test:62878,15,E_9,Do you have swollen or painful lymph nodes?,2,0.2514,0.2366,0.7124,0.3562,False
+test:62878,16,E_56,How intense is the pain?,2,0.2371,0.4227,0.4306,0.7847,False
+test:62878,17,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.2803,0.2394,0.5287,0.2643,False
+test:62878,18,E_55,Do you feel pain somewhere?,1,0.275,0.4629,0.5841,0.7079,False
+test:62878,19,E_58,How precisely is the pain located?,1,0.2471,0.4163,0.5862,0.7069,False
+test:62878,20,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.2128,0.1886,0.3776,0.1888,False
+test:62878,21,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,1,0.1993,0.1335,0.5805,0.2902,False
+test:62878,22,E_0,Have you recently had a viral infection?,1,0.2147,0.1674,0.5181,0.2591,False
+test:62878,23,E_181,Do you have nasal congestion or a clear runny nose?,1,0.2058,0.1787,0.3712,0.1856,False
+test:62878,24,E_24,Have you ever had a diagnosis of anemia?,3,0.287,0.2314,0.6584,0.3292,False
+test:95923,1,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.2775,0.2346,0.5537,0.2769,False
+test:95923,2,E_214,Have you noticed a wheezing sound when you exhale?,1,0.386,0.305,0.9161,0.5419,False
+test:95923,3,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.3751,0.2802,0.9707,0.5147,False
+test:95923,4,E_53,"Do you have pain somewhere, related to your reason for consulting?",5,0.3076,0.4898,0.7003,0.3501,False
+test:95923,5,E_54,Characterize your pain:,2,0.456,0.8764,0.3975,0.8012,False
+test:23687,1,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,6,0.2481,0.2239,0.4354,0.2177,False
+test:23687,2,E_196,Have you had surgery within the last month?,1,0.3842,0.3477,0.6851,0.3426,False
+test:133024,1,E_133,Where is the affected region located?,1,0.6306,0.8243,0.0001,0.9999,False
+test:133024,2,E_130,What color is the rash?,1,0.5272,0.6878,0.0001,0.9999,False
+test:133024,3,E_136,How severe is the itching?,1,0.3631,0.469,0.0001,1.0,False
+test:133024,4,E_134,How intense is the pain caused by the rash?,1,0.3011,0.4107,0.2939,0.853,False
+test:133024,5,E_91,Do you have a fever (either felt or measured with a thermometer)?,1,0.2751,0.2346,0.5365,0.2682,False
+test:133024,6,E_92,Did your cheeks suddenly turn red?,1,0.2728,0.2659,0.387,0.1935,False
+test:16097,1,E_214,Have you noticed a wheezing sound when you exhale?,1,0.3167,0.2261,0.8754,0.4377,False
+test:16097,2,E_53,"Do you have pain somewhere, related to your reason for consulting?",1,0.2257,0.2677,0.9826,0.5087,False
+test:16097,3,E_54,Characterize your pain:,1,0.3688,0.7413,0.084,0.958,False
+test:16097,4,E_57,Does the pain radiate to another location?,2,0.2714,0.5654,0.0001,0.9999,False
+test:16097,5,E_151,Do you have swelling in one or more areas of your body?,1,0.3322,0.2761,0.695,0.3475,False
+test:16097,6,E_79,Do you smoke cigarettes?,1,0.2753,0.2053,0.69,0.345,False
+test:16097,7,E_45,Have you been coughing up blood?,1,0.3066,0.2415,0.7229,0.3615,False
+test:16097,8,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1,0.2826,0.2011,0.7829,0.3914,False
+test:16097,9,E_220,Do you have pain that is increased when you breathe in deeply?,9,0.2101,0.2535,0.2873,0.1436,False
+test:16097,10,E_14,Do you have chest pain even at rest?,2,0.2662,0.3112,0.4416,0.2208,False
+test:107472,1,E_181,Do you have nasal congestion or a clear runny nose?,1,0.2895,0.185,0.8956,0.5522,False
+test:107472,2,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.3427,0.3031,0.6045,0.3023,False
+test:107472,3,E_201,Do you have a cough?,1,0.2748,0.1508,0.9716,0.5142,False
+test:107472,4,E_45,Have you been coughing up blood?,1,0.2713,0.2011,0.7027,0.3513,False
+test:107472,5,E_162,Have you had an involuntary weight loss over the last 3 months?,6,0.2761,0.1908,0.7997,0.3998,False
+test:107472,6,E_53,"Do you have pain somewhere, related to your reason for consulting?",2,0.3673,0.5718,0.9209,0.4604,False
+test:107472,7,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.3189,0.3308,0.3265,0.1632,False
+test:13402,1,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.5416,0.4863,0.9531,0.5234,False

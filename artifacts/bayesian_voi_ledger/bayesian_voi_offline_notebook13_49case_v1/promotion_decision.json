@@ -1,0 +1,58 @@
+{
+  "decision": "do_not_promote_yet",
+  "smoke_mode": false,
+  "reference_notebook13": {
+    "correct_count": 43,
+    "num_cases": 49,
+    "accuracy": 0.8775510204081632,
+    "mean_requests": 6.591836734693878
+  },
+  "best_notebook19_policy": {
+    "lambda_cost": 0.0,
+    "num_cases": 49.0,
+    "fused_correct_count": 33.0,
+    "fused_accuracy": 0.673469387755102,
+    "fused_top3_accuracy": 0.8367346938775511,
+    "fused_top5_accuracy": 0.8775510204081632,
+    "fused_macro_f1": 0.6204081632653061,
+    "bayes_accuracy": 0.7142857142857143,
+    "bayes_top5_accuracy": 0.8163265306122449,
+    "bayes_macro_f1": 0.6489795918367347,
+    "mlp_accuracy": 0.673469387755102,
+    "mlp_top5_accuracy": 0.8571428571428571,
+    "mlp_macro_f1": 0.6204081632653061,
+    "mean_requests": 22.367346938775512,
+    "median_requests": 24.0,
+    "cap_hit_count": 28.0,
+    "stop_before_cap_rate": 0.42857142857142855,
+    "mean_final_fused_confidence": 0.9849822718707753,
+    "mean_final_fused_entropy": 0.019550426507231017,
+    "mean_final_contradiction_score": 0.8723646118275113,
+    "mean_final_max_remaining_utility": 0.0015496708670354777,
+    "request_gap_vs_notebook13": 15.775510204081634
+  },
+  "fix_regression_counts_by_lambda": {
+    "0.0": {
+      "fixes_vs_notebook13": 1,
+      "regressions_vs_notebook13": 11
+    },
+    "0.02": {
+      "fixes_vs_notebook13": 0,
+      "regressions_vs_notebook13": 17
+    },
+    "0.05": {
+      "fixes_vs_notebook13": 0,
+      "regressions_vs_notebook13": 17
+    },
+    "0.1": {
+      "fixes_vs_notebook13": 0,
+      "regressions_vs_notebook13": 18
+    },
+    "0.15": {
+      "fixes_vs_notebook13": 0,
+      "regressions_vs_notebook13": 19
+    }
+  },
+  "promotion_reasons": [],
+  "promotion_rule": "promote only if >=43/49 at <=6.59 requests, or >=44/49 at <=9 requests, or same accuracy with >=2 fixes and <=1 regression"
+}

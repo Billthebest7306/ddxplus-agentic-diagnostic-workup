@@ -1,0 +1,31 @@
+{
+  "random_seed": 2919,
+  "active_k": 5,
+  "shortlist_size": 10,
+  "alpha": 1.0,
+  "max_outcome_states_per_root": 80,
+  "score_weights": {
+    "information_gain": 0.8,
+    "split_balance": 0.15,
+    "global_mi": 0.05
+  },
+  "base_stop_policy": {
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0
+  },
+  "graph_info_thresholds": [
+    0.03,
+    0.05,
+    0.08,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    1.0
+  ],
+  "dataset_dir": "/Users/bilalawan/claw/assignments/baseline_model/dataset",
+  "source_run": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1"
+}

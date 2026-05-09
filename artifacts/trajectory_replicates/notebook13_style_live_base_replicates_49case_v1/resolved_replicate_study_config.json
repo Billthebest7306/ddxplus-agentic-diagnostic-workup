@@ -1,0 +1,31 @@
+{
+  "notebook": "25_live_base_trajectory_replicates.ipynb",
+  "run_version": "notebook13_style_live_base_replicates_49case_v1",
+  "run_live_api": true,
+  "allow_dry_run_benchmark": false,
+  "replicate_ids": [
+    "r01",
+    "r02",
+    "r03"
+  ],
+  "replicate_parent": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1",
+  "base_method": "Notebook 13 selected-stop live loop",
+  "rescue_enabled": false,
+  "purpose": "Collect repeated live base trajectories for a later offline branching/divergence lab.",
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "max_request_cap": 24,
+  "sequential_max_cases": 49,
+  "dry_run_max_cases": 2,
+  "selected_stop_policy": {
+    "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0,
+    "official_final_head": "agreement_hybrid_final",
+    "source_notebook": "12_stopping_policy_ablation.ipynb"
+  }
+}

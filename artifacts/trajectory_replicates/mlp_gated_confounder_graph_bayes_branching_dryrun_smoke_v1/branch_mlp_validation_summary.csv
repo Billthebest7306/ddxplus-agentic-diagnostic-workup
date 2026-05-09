@@ -1,0 +1,2 @@
+train_states,validate_states,branch_label_rate_train,branch_label_rate_validate,selected_threshold,selected_threshold_precision,selected_threshold_recall,selected_threshold_branch_rate,auc,average_precision,brier_score
+4000,2000,0.43625,0.4355,0.39999999999999997,0.7885714285714286,0.9506314580941446,0.525,0.9393873448048984,0.8956319199673947,0.10988212334628958

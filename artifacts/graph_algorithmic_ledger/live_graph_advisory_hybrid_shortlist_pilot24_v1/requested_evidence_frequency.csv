@@ -1,0 +1,86 @@
+requested_root,requested_question,count,mean_graph_rank,mean_information_gain
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",7,1.0,0.2964142857142857
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,7,3.7142857142857144,0.20602857142857142
+E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,7,10.571428571428571,0.19701428571428573
+E_142,Does your mother suffer from asthma?,6,2.5,0.11993333333333334
+E_79,Do you smoke cigarettes?,5,2.6,0.2323
+E_201,Do you have a cough?,5,1.8,0.19754
+E_46,Have you had 2 or more asthma attacks in the past year?,5,10.2,0.17126
+E_183,Do you live in a rural area?,5,2.0,0.12586
+E_63,Do you have difficulty articulating words/speaking?,4,6.25,0.23525000000000001
+E_97,Do you have a sore throat?,4,2.5,0.20725
+E_214,Have you noticed a wheezing sound when you exhale?,4,4.0,0.204775
+E_45,Have you been coughing up blood?,4,3.25,0.1902
+E_202,Does the person have a whooping cough?,4,1.25,0.11822500000000001
+E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",4,4.25,0.111525
+E_216,Do you have pain that is increased with movement?,3,9.333333333333334,0.36033333333333334
+E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,3,1.3333333333333333,0.27043333333333336
+E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,3,4.0,0.26266666666666666
+E_12,Do you have a known severe food allergy?,3,6.666666666666667,0.22029999999999997
+E_190,Have you noticed that you produce more saliva than usual?,3,2.0,0.21246666666666666
+E_91,Do you have a fever (either felt or measured with a thermometer)?,3,3.0,0.20876666666666668
+E_169,Is your nose or the back of your throat itchy?,3,9.333333333333334,0.19716666666666668
+E_5,Have you ever had fluid in your lungs?,3,5.0,0.1709333333333333
+E_0,Have you recently had a viral infection?,3,8.0,0.15663333333333332
+E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,3,10.666666666666666,0.12
+E_114,Are you more irritable or has your mood been very unstable recently?,3,11.0,0.09419999999999999
+E_211,Have you vomited several times or have you made several efforts to vomit?,3,6.666666666666667,0.0788
+E_92,Did your cheeks suddenly turn red?,2,4.0,0.2882
+E_181,Do you have nasal congestion or a clear runny nose?,2,1.0,0.2857
+E_83,Have you noticed weakness in your facial muscles and/or eyes?,2,8.0,0.2763
+E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,2,1.0,0.22325
+E_184,Do you take medication that dilates your blood vessels?,2,6.5,0.2217
+E_21,Have you ever had a spontaneous pneumothorax?,2,3.0,0.22
+E_34,Do you have an active cancer?,2,4.0,0.2143
+E_224,Do you have family members who have had lung cancer?,2,6.0,0.20115
+E_25,Have any of your family members been diagnosed with cluster headaches?,2,11.5,0.19615
+E_151,Do you have swelling in one or more areas of your body?,2,8.0,0.1743
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,2,9.0,0.1718
+E_8,Do you currently undergo dialysis?,2,9.5,0.1606
+E_146,Are you taking any new oral anticoagulants ((NOACs)?,2,1.0,0.11125
+E_174,Have you been unintentionally losing weight or have you lost your appetite?,2,9.5,0.0944
+E_23,Do you ever temporarily stop breathing while you’re asleep?,2,1.0,0.09225
+E_81,Do you suffer from chronic anxiety?,2,1.0,0.08615
+E_64,Do you feel out of breath with minimal physical effort?,2,1.0,0.07475
+E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",2,1.0,0.06685
+E_152,Where is the swelling located?,1,1.0,0.8983
+E_196,Have you had surgery within the last month?,1,1.0,0.4631
+E_137,Have you ever had surgery to remove lymph nodes?,1,2.0,0.3021
+E_120,Do you have polyps in your nose?,1,1.0,0.2983
+E_67,Do you have bouts of choking or shortness of breath that wake you up at night?,1,7.0,0.2867
+E_106,Do you have heart failure?,1,2.0,0.2825
+E_39,Have you felt confused or disorientated lately?,1,7.0,0.2708
+E_4,Have you or any member of your family ever had croup?,1,10.0,0.265
+E_126,Do you have liver cirrhosis?,1,7.0,0.26
+E_162,Have you had an involuntary weight loss over the last 3 months?,1,2.0,0.2562
+E_101,Have you been hospitalized for an asthma attack in the past year?,1,4.0,0.2559
+E_197,Do you have a known kidney problem resulting in an inability to retain proteins?,1,4.0,0.2509
+E_182,Do you have greenish or yellowish nasal discharge?,1,5.0,0.2447
+E_88,Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?,1,1.0,0.2434
+E_30,Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?,1,4.0,0.2319
+E_208,"Is your BMI less than 18.5, or are you underweight?",1,2.0,0.2316
+E_18,Do you have cystic fibrosis?,1,4.0,0.2267
+E_72,Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?,1,4.0,0.226
+E_110,Have you been unable to move or get up for more than 3 consecutive days within the last 4 weeks?,1,5.0,0.2212
+E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,1,12.0,0.2077
+E_225,Do you have close family members who had a cardiovascular disease problem before the age of 50?,1,2.0,0.2061
+E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,1,6.0,0.1991
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1,3.0,0.1989
+E_194,Have you noticed a high pitched sound when breathing in?,1,1.0,0.1984
+E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",1,9.0,0.1884
+E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,1,11.0,0.1878
+E_195,Do you live in the suburbs?,1,7.0,0.177
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,1,3.0,0.1692
+E_127,Do you feel that your eyes produce excessive tears?,1,5.0,0.1674
+E_94,Have you had chills or shivers?,1,11.0,0.1613
+E_108,Do you have a problem with poor circulation?,1,1.0,0.1573
+E_3,Have you ever had a pericarditis?,1,5.0,0.1545
+E_40,Have you been in contact with someone who has had pertussis (whoooping cough)?,1,10.0,0.1284
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",1,9.0,0.1216
+E_166,Did you vomit after coughing?,1,1.0,0.1095
+E_33,Do you have pain that improves when you lean forward?,1,1.0,0.0952
+E_60,Do you consume energy drinks regularly?,1,1.0,0.0943
+E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,1,1.0,0.0921
+E_215,Do you have symptoms that get worse after eating?,1,1.0,0.0648
+E_93,"Do you have numbness, loss of sensation or tingling in the feet?",1,1.0,0.0622
+E_43,Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?,1,1.0,0.06

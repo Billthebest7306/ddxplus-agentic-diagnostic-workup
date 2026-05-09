@@ -1,0 +1,956 @@
+{
+  "test:38475": {
+    "true_pathology": "Acute COPD exacerbation / infection",
+    "notebook13_prediction": "Myocarditis",
+    "notebook22_prediction": "Myocarditis",
+    "notebook23_prediction": "Acute COPD exacerbation / infection",
+    "decision_source": "prior_recovery_certificate",
+    "extra_requests": 0,
+    "extra_requested_roots": [],
+    "notebook13_correct": false,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Scombroid food poisoning",
+        "graph_rank": 1,
+        "graph_net_support": 0.8802150183159733,
+        "graph_posterior": 0.2996189773694661,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 2,
+        "graph_net_support": 0.589858734375995,
+        "graph_posterior": 0.2241141024392813,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchospasm / acute asthma exacerbation",
+        "graph_rank": 3,
+        "graph_net_support": -0.3014097173374125,
+        "graph_posterior": 0.0919170790859859,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute COPD exacerbation / infection",
+        "graph_rank": 4,
+        "graph_net_support": -0.7866128647925372,
+        "graph_posterior": 0.0565815923539002,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Guillain-Barr\u00e9 syndrome",
+        "graph_rank": 5,
+        "graph_net_support": -1.2863764959912227,
+        "graph_posterior": 0.034326583312512,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Sarcoidosis",
+        "graph_rank": 6,
+        "graph_net_support": -1.333089462309526,
+        "graph_posterior": 0.0327599624040345,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myasthenia gravis",
+        "graph_rank": 7,
+        "graph_net_support": -1.3418035697084012,
+        "graph_posterior": 0.0324757287929893,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 8,
+        "graph_net_support": -1.4326113880207496,
+        "graph_posterior": 0.0296566144729492,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "PSVT",
+        "graph_rank": 9,
+        "graph_net_support": -1.5405570816461465,
+        "graph_posterior": 0.0266220412749077,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Boerhaave",
+        "graph_rank": 10,
+        "graph_net_support": -1.6063968038172205,
+        "graph_posterior": 0.0249257092263048,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:58986": {
+    "true_pathology": "Acute laryngitis",
+    "notebook13_prediction": "Acute laryngitis",
+    "notebook22_prediction": "Acute laryngitis",
+    "notebook23_prediction": "Acute laryngitis",
+    "decision_source": "rescue_abstained",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_194",
+      "E_66",
+      "E_190"
+    ],
+    "notebook13_correct": true,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Acute laryngitis",
+        "graph_rank": 1,
+        "graph_net_support": 3.0269851792650644,
+        "graph_posterior": 0.7216274285525897,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Epiglottitis",
+        "graph_rank": 2,
+        "graph_net_support": 1.7099711386337375,
+        "graph_posterior": 0.193348631103281,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 3,
+        "graph_net_support": -2.1380806023456267,
+        "graph_posterior": 0.0041224316565549,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "URTI",
+        "graph_rank": 4,
+        "graph_net_support": -2.971841448211939,
+        "graph_posterior": 0.0017908356442731,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Viral pharyngitis",
+        "graph_rank": 5,
+        "graph_net_support": -2.9719229387816526,
+        "graph_posterior": 0.0017906897140022,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anemia",
+        "graph_rank": 6,
+        "graph_net_support": -2.972247193827762,
+        "graph_posterior": 0.001790109167954,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "HIV (initial infection)",
+        "graph_rank": 7,
+        "graph_net_support": -2.972873580317244,
+        "graph_posterior": 0.0017889882188668,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Localized edema",
+        "graph_rank": 8,
+        "graph_net_support": -2.9729078333577097,
+        "graph_posterior": 0.0017889269416304,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anaphylaxis",
+        "graph_rank": 9,
+        "graph_net_support": -2.972910920745101,
+        "graph_posterior": 0.0017889214185285,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary embolism",
+        "graph_rank": 10,
+        "graph_net_support": -2.9729181359813057,
+        "graph_posterior": 0.0017889085110845,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:111176": {
+    "true_pathology": "Acute rhinosinusitis",
+    "notebook13_prediction": "Chronic rhinosinusitis",
+    "notebook22_prediction": "Chronic rhinosinusitis",
+    "notebook23_prediction": "Chronic rhinosinusitis",
+    "decision_source": "notebook13_reference",
+    "extra_requests": 0,
+    "extra_requested_roots": [],
+    "notebook13_correct": false,
+    "notebook23_correct": false,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Chronic rhinosinusitis",
+        "graph_rank": 1,
+        "graph_net_support": 7.427146294925754,
+        "graph_posterior": 0.9083394801595748,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Acute rhinosinusitis",
+        "graph_rank": 2,
+        "graph_net_support": 5.133128035212225,
+        "graph_posterior": 0.0916154500239554,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Allergic sinusitis",
+        "graph_rank": 3,
+        "graph_net_support": -3.1430916133197857,
+        "graph_posterior": 2.3315900583301123e-05,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "URTI",
+        "graph_rank": 4,
+        "graph_net_support": -4.756397106381042,
+        "graph_posterior": 4.645179723004738e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Influenza",
+        "graph_rank": 5,
+        "graph_net_support": -4.828424260886543,
+        "graph_posterior": 4.322365875550105e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Viral pharyngitis",
+        "graph_rank": 6,
+        "graph_net_support": -4.870147928789147,
+        "graph_posterior": 4.145731459043781e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 7,
+        "graph_net_support": -5.20038670317815,
+        "graph_posterior": 2.9797531646512635e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute otitis media",
+        "graph_rank": 8,
+        "graph_net_support": -5.300093769316229,
+        "graph_posterior": 2.6969820815611613e-06,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 9,
+        "graph_net_support": -6.406011330160627,
+        "graph_posterior": 8.924505611342449e-07,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Cluster headache",
+        "graph_rank": 10,
+        "graph_net_support": -7.323435109715034,
+        "graph_posterior": 3.565759778970444e-07,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:90978": {
+    "true_pathology": "Bronchiolitis",
+    "notebook13_prediction": "Bronchiolitis",
+    "notebook22_prediction": "Bronchiolitis",
+    "notebook23_prediction": "Bronchiolitis",
+    "decision_source": "rescue_abstained",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_181",
+      "E_66",
+      "E_4"
+    ],
+    "notebook13_correct": true,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 1,
+        "graph_net_support": 3.0,
+        "graph_posterior": 0.3986121735436896,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Ebola",
+        "graph_rank": 2,
+        "graph_net_support": 2.284100642271836,
+        "graph_posterior": 0.1948226369052237,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Croup",
+        "graph_rank": 3,
+        "graph_net_support": 0.9047928514032104,
+        "graph_posterior": 0.049047136223622,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Spontaneous rib fracture",
+        "graph_rank": 4,
+        "graph_net_support": 0.2077976523607685,
+        "graph_posterior": 0.0244293822990534,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Whooping cough",
+        "graph_rank": 5,
+        "graph_net_support": 0.1466781973630539,
+        "graph_posterior": 0.0229809852428124,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 6,
+        "graph_net_support": -0.2778123634186939,
+        "graph_posterior": 0.0150319296885005,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Spontaneous pneumothorax",
+        "graph_rank": 7,
+        "graph_net_support": -0.3725033822863801,
+        "graph_posterior": 0.0136738543218936,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Larygospasm",
+        "graph_rank": 8,
+        "graph_net_support": -0.4523693737620622,
+        "graph_posterior": 0.0126242500864243,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myocarditis",
+        "graph_rank": 9,
+        "graph_net_support": -0.4592382644305316,
+        "graph_posterior": 0.0125378326286203,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "SLE",
+        "graph_rank": 10,
+        "graph_net_support": -0.5292600421576721,
+        "graph_posterior": 0.0116899430747781,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:81691": {
+    "true_pathology": "Croup",
+    "notebook13_prediction": "Anemia",
+    "notebook22_prediction": "Croup",
+    "notebook23_prediction": "Croup",
+    "decision_source": "conservative_graph_critic",
+    "extra_requests": 0,
+    "extra_requested_roots": [],
+    "notebook13_correct": false,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Croup",
+        "graph_rank": 1,
+        "graph_net_support": 1.1772464468711072,
+        "graph_posterior": 0.4948106439290686,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 2,
+        "graph_net_support": -0.8954123692737402,
+        "graph_posterior": 0.062272277058529,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 3,
+        "graph_net_support": -1.2005459824250833,
+        "graph_posterior": 0.0458962182483796,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchitis",
+        "graph_rank": 4,
+        "graph_net_support": -1.412165978825333,
+        "graph_posterior": 0.0371425319291814,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute otitis media",
+        "graph_rank": 5,
+        "graph_net_support": -1.7696657638902076,
+        "graph_posterior": 0.0259783355111308,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary neoplasm",
+        "graph_rank": 6,
+        "graph_net_support": -1.8477095244454675,
+        "graph_posterior": 0.0240279847076492,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 7,
+        "graph_net_support": -1.916835860898172,
+        "graph_posterior": 0.0224231261589884,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiectasis",
+        "graph_rank": 8,
+        "graph_net_support": -1.9622783492272924,
+        "graph_posterior": 0.0214269688612033,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Guillain-Barr\u00e9 syndrome",
+        "graph_rank": 9,
+        "graph_net_support": -1.987507426396466,
+        "graph_posterior": 0.0208931484235181,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Cluster headache",
+        "graph_rank": 10,
+        "graph_net_support": -1.9883236710346044,
+        "graph_posterior": 0.0208761014613358,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:8666": {
+    "true_pathology": "Influenza",
+    "notebook13_prediction": "HIV (initial infection)",
+    "notebook22_prediction": "HIV (initial infection)",
+    "notebook23_prediction": "Influenza",
+    "decision_source": "graph_bayes_rescue_rerank",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_79",
+      "E_77",
+      "E_66"
+    ],
+    "notebook13_correct": false,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "HIV (initial infection)",
+        "graph_rank": 1,
+        "graph_net_support": 3.912115759879853,
+        "graph_posterior": 0.7550700166174346,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Influenza",
+        "graph_rank": 2,
+        "graph_net_support": 1.9109111744715508,
+        "graph_posterior": 0.1020645949616667,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pneumonia",
+        "graph_rank": 3,
+        "graph_net_support": 1.8737504566893224,
+        "graph_posterior": 0.0983414079454817,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "SLE",
+        "graph_rank": 4,
+        "graph_net_support": -0.7019651879488291,
+        "graph_posterior": 0.0074837165559796,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Inguinal hernia",
+        "graph_rank": 5,
+        "graph_net_support": -0.7323667153484663,
+        "graph_posterior": 0.0072596237829415,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Epiglottitis",
+        "graph_rank": 6,
+        "graph_net_support": -1.328861606771621,
+        "graph_posterior": 0.0039981554431074,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Scombroid food poisoning",
+        "graph_rank": 7,
+        "graph_net_support": -1.4050895211712553,
+        "graph_posterior": 0.0037047108078481,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 8,
+        "graph_net_support": -1.4737425551039864,
+        "graph_posterior": 0.0034589053535494,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anaphylaxis",
+        "graph_rank": 9,
+        "graph_net_support": -1.4957043241028836,
+        "graph_posterior": 0.0033837697485082,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Croup",
+        "graph_rank": 10,
+        "graph_net_support": -1.5150262707582138,
+        "graph_posterior": 0.0033190163255868,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:38202": {
+    "true_pathology": "Inguinal hernia",
+    "notebook13_prediction": "Inguinal hernia",
+    "notebook22_prediction": "Inguinal hernia",
+    "notebook23_prediction": "Inguinal hernia",
+    "decision_source": "rescue_abstained",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_53",
+      "E_220",
+      "E_166"
+    ],
+    "notebook13_correct": true,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Inguinal hernia",
+        "graph_rank": 1,
+        "graph_net_support": 3.0056272744895263,
+        "graph_posterior": 0.4607184590113005,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Whooping cough",
+        "graph_rank": 2,
+        "graph_net_support": 3.0054328953729343,
+        "graph_posterior": 0.4606289136673946,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Spontaneous rib fracture",
+        "graph_rank": 3,
+        "graph_net_support": 0.0,
+        "graph_posterior": 0.0228091064965804,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Bronchiolitis",
+        "graph_rank": 4,
+        "graph_net_support": -1.71718285631796,
+        "graph_posterior": 0.0040958612294937,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Ebola",
+        "graph_rank": 5,
+        "graph_net_support": -2.7223032201406507,
+        "graph_posterior": 0.0014990875811867,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "URTI",
+        "graph_rank": 6,
+        "graph_net_support": -2.9940774373020687,
+        "graph_posterior": 0.0011423441540647,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Viral pharyngitis",
+        "graph_rank": 7,
+        "graph_net_support": -2.9940949665396723,
+        "graph_posterior": 0.0011423241298181,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anemia",
+        "graph_rank": 8,
+        "graph_net_support": -2.994165345072602,
+        "graph_posterior": 0.0011422437375507,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "HIV (initial infection)",
+        "graph_rank": 9,
+        "graph_net_support": -2.9943076314942916,
+        "graph_posterior": 0.0011420812233386,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Localized edema",
+        "graph_rank": 10,
+        "graph_net_support": -2.99431594109649,
+        "graph_posterior": 0.0011420717331374,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:62878": {
+    "true_pathology": "Pericarditis",
+    "notebook13_prediction": "Anemia",
+    "notebook22_prediction": "Anemia",
+    "notebook23_prediction": "Anemia",
+    "decision_source": "notebook13_reference",
+    "extra_requests": 0,
+    "extra_requested_roots": [],
+    "notebook13_correct": false,
+    "notebook23_correct": false,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Anemia",
+        "graph_rank": 1,
+        "graph_net_support": 1.4846891179082615,
+        "graph_posterior": 0.1111820344361153,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Guillain-Barr\u00e9 syndrome",
+        "graph_rank": 2,
+        "graph_net_support": 1.2595375861627736,
+        "graph_posterior": 0.0887672056631034,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Sarcoidosis",
+        "graph_rank": 3,
+        "graph_net_support": 1.213624638528042,
+        "graph_posterior": 0.0847837865825941,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myasthenia gravis",
+        "graph_rank": 4,
+        "graph_net_support": 1.1369067425494142,
+        "graph_posterior": 0.0785225961630831,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute dystonic reactions",
+        "graph_rank": 5,
+        "graph_net_support": 1.1048579978889712,
+        "graph_posterior": 0.076045944301814,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "PSVT",
+        "graph_rank": 6,
+        "graph_net_support": 1.0074268419166503,
+        "graph_posterior": 0.0689862032666085,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Boerhaave",
+        "graph_rank": 7,
+        "graph_net_support": 0.9434824027434784,
+        "graph_posterior": 0.0647129989705684,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Panic attack",
+        "graph_rank": 8,
+        "graph_net_support": 0.7280143256112958,
+        "graph_posterior": 0.0521692904201297,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Myocarditis",
+        "graph_rank": 9,
+        "graph_net_support": 0.4272553575646038,
+        "graph_posterior": 0.038618639464298,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Chagas",
+        "graph_rank": 10,
+        "graph_net_support": 0.3975685115396116,
+        "graph_posterior": 0.0374890241787925,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:125508": {
+    "true_pathology": "Unstable angina",
+    "notebook13_prediction": "Anemia",
+    "notebook22_prediction": "Anemia",
+    "notebook23_prediction": "Unstable angina",
+    "decision_source": "graph_bayes_rescue_rerank",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_53",
+      "E_105",
+      "E_108"
+    ],
+    "notebook13_correct": false,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Anemia",
+        "graph_rank": 1,
+        "graph_net_support": 2.8166238262614667,
+        "graph_posterior": 0.4169930842107963,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "Ebola",
+        "graph_rank": 2,
+        "graph_net_support": 2.246265822697402,
+        "graph_posterior": 0.2357357875223485,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Unstable angina",
+        "graph_rank": 3,
+        "graph_net_support": 1.1898028125018056,
+        "graph_posterior": 0.0819614179124398,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Stable angina",
+        "graph_rank": 4,
+        "graph_net_support": 1.1448886519224837,
+        "graph_posterior": 0.0783616353604536,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Possible NSTEMI / STEMI",
+        "graph_rank": 5,
+        "graph_net_support": 1.0953372464039828,
+        "graph_posterior": 0.0745733389928623,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pancreatic neoplasm",
+        "graph_rank": 6,
+        "graph_net_support": 0.1505846216487518,
+        "graph_posterior": 0.0289923044918649,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary neoplasm",
+        "graph_rank": 7,
+        "graph_net_support": -0.240227232023277,
+        "graph_posterior": 0.0196135092987714,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "SLE",
+        "graph_rank": 8,
+        "graph_net_support": -1.7877648262211605,
+        "graph_posterior": 0.004173191056594,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Localized edema",
+        "graph_rank": 9,
+        "graph_net_support": -2.476662709916128,
+        "graph_posterior": 0.0020954809571764,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary embolism",
+        "graph_rank": 10,
+        "graph_net_support": -2.476880444519558,
+        "graph_posterior": 0.0020950247481292,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  },
+  "test:39033": {
+    "true_pathology": "Viral pharyngitis",
+    "notebook13_prediction": "Viral pharyngitis",
+    "notebook22_prediction": "Viral pharyngitis",
+    "notebook23_prediction": "Viral pharyngitis",
+    "decision_source": "rescue_abstained",
+    "extra_requests": 3,
+    "extra_requested_roots": [
+      "E_50",
+      "E_222",
+      "E_144"
+    ],
+    "notebook13_correct": true,
+    "notebook23_correct": true,
+    "top_graph_diagnoses_before_rescue": [
+      {
+        "disease": "Viral pharyngitis",
+        "graph_rank": 1,
+        "graph_net_support": 3.2768959338772943,
+        "graph_posterior": 0.8100095695524937,
+        "is_true_pathology": true,
+        "is_notebook13_prediction": true
+      },
+      {
+        "disease": "URTI",
+        "graph_rank": 2,
+        "graph_net_support": 1.349320928886338,
+        "graph_posterior": 0.1178568858803782,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Ebola",
+        "graph_rank": 3,
+        "graph_net_support": -1.7352221389560007,
+        "graph_posterior": 0.0053920626306853,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Localized edema",
+        "graph_rank": 4,
+        "graph_net_support": -2.6286858860843045,
+        "graph_posterior": 0.0022066250948189,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pulmonary embolism",
+        "graph_rank": 5,
+        "graph_net_support": -2.6288359796091907,
+        "graph_posterior": 0.0022062939195346,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anemia",
+        "graph_rank": 6,
+        "graph_net_support": -2.629235699959591,
+        "graph_posterior": 0.0022054121951893,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Anaphylaxis",
+        "graph_rank": 7,
+        "graph_net_support": -2.629254490659561,
+        "graph_posterior": 0.0022053707543398,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Panic attack",
+        "graph_rank": 8,
+        "graph_net_support": -2.629863089713203,
+        "graph_posterior": 0.0022040289761296,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Pericarditis",
+        "graph_rank": 9,
+        "graph_net_support": -2.630796457899865,
+        "graph_posterior": 0.002201972765351,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      },
+      {
+        "disease": "Acute laryngitis",
+        "graph_rank": 10,
+        "graph_net_support": -2.6308767786175573,
+        "graph_posterior": 0.0022017959084209,
+        "is_true_pathology": false,
+        "is_notebook13_prediction": false
+      }
+    ]
+  }
+}

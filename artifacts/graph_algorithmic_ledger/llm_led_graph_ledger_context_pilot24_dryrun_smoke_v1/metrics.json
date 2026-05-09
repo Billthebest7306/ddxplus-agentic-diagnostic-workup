@@ -1,0 +1,71 @@
+{
+  "agreement_hybrid_accuracy": 1.0,
+  "agreement_hybrid_top3_accuracy": 1.0,
+  "agreement_hybrid_top5_accuracy": 1.0,
+  "agreement_hybrid_macro_f1": 1.0,
+  "llm_final_accuracy": 1.0,
+  "llm_final_top3_accuracy": 1.0,
+  "llm_final_top5_accuracy": 1.0,
+  "llm_final_macro_f1": 1.0,
+  "mlp_final_accuracy": 1.0,
+  "mlp_final_top3_accuracy": 1.0,
+  "mlp_final_top5_accuracy": 1.0,
+  "mlp_final_macro_f1": 1.0,
+  "conservative_hybrid_accuracy": 1.0,
+  "conservative_hybrid_top3_accuracy": 1.0,
+  "conservative_hybrid_top5_accuracy": 1.0,
+  "conservative_hybrid_macro_f1": 1.0,
+  "accuracy": 1.0,
+  "top3_accuracy": 1.0,
+  "top5_accuracy": 1.0,
+  "macro_f1": 1.0,
+  "mean_requests": 6.5,
+  "median_requests": 6.5,
+  "mean_visible_roots_including_initial": 7.5,
+  "stop_before_cap_rate": 1.0,
+  "selected_stop_rule_rate": 1.0,
+  "cap_hit_count": 0,
+  "mean_api_calls": 7.5,
+  "total_input_tokens": 0,
+  "total_output_tokens": 0,
+  "total_estimated_cost": null,
+  "mean_mlp_confidence": 0.9965834021568298,
+  "mean_mlp_margin": 0.9956866730935872,
+  "mean_mlp_entropy": 0.0077806076957078,
+  "llm_mlp_agreement_rate": 1.0,
+  "stop_reason_distribution": {
+    "selected_mlp_stop": 2
+  },
+  "request_distribution": {
+    "6": 1,
+    "7": 1
+  },
+  "agreement_hybrid_source_distribution": {
+    "agreement": 2
+  },
+  "conservative_hybrid_source_distribution": {
+    "llm_mlp_agreement": 2
+  },
+  "mean_num_graph_warnings_final": 4.0,
+  "mean_num_unresolved_pairs_final": 3.0,
+  "mean_final_top_diagnosis_support": 7.5685,
+  "mean_final_top_diagnosis_contradiction": 1.581,
+  "mean_warnings_resolved_count": 3.0,
+  "mean_graph_context_tokens_estimate": 2493.5,
+  "run_name": "llm_led_graph_ledger_context_pilot24_dryrun_smoke_v1",
+  "run_scope": "pilot24",
+  "max_request_cap": 24,
+  "num_cases": 2,
+  "runtime_seconds": 0.061708927154541016,
+  "selected_stop_policy": {
+    "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0,
+    "official_final_head": "agreement_hybrid_final",
+    "source_notebook": "12_stopping_policy_ablation.ipynb"
+  },
+  "graph_context_influence": "advisory_prompt_context_only"
+}

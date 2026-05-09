@@ -1,0 +1,92 @@
+{
+  "policy_name": "trigger=branch_trigger_mlp_v1|threshold=0.40|budget=3|judge=calibrated_graph_bayes_mlp_resolver_v1",
+  "selected_before_live_results": true,
+  "source_analysis": "Notebook 27 failure analysis plus train/validate branch-trigger calibration",
+  "inputs_used_for_decisions": [
+    "visible evidence ledger",
+    "branch_trigger_mlp_v1",
+    "partial-evidence diagnostic MLP",
+    "Notebook 16 graph edges",
+    "Notebook 19 Bayes likelihoods/priors",
+    "confounder pair coverage graph"
+  ],
+  "branch_trigger_threshold": 0.39999999999999997,
+  "branch_mlp_validation_summary": [
+    {
+      "train_states": 4000,
+      "validate_states": 2000,
+      "branch_label_rate_train": 0.43625,
+      "branch_label_rate_validate": 0.4355,
+      "selected_threshold": 0.39999999999999997,
+      "selected_threshold_precision": 0.7885714285714286,
+      "selected_threshold_recall": 0.9506314580941446,
+      "selected_threshold_branch_rate": 0.525,
+      "auc": 0.9393873448048984,
+      "average_precision": 0.8956319199673947,
+      "brier_score": 0.10988212334628958
+    }
+  ],
+  "resolver_validation_summary": [
+    {
+      "validate_candidate_rows": 16681,
+      "validate_positive_rate": 0.11006534380432828,
+      "candidate_auc": 0.9553898270509131,
+      "candidate_average_precision": 0.811400497099945
+    }
+  ],
+  "branch_profiles": [
+    {
+      "branch_id": "graph_bayes_scout",
+      "role_name": "Graph-Bayes scout",
+      "directive": "Prioritize evidence that discriminates the raw graph and raw Bayesian top candidates from the base branch anchor. Early on, prefer a different high-value legal root than the base branch used when one is available."
+    },
+    {
+      "branch_id": "confounder_pair_scout",
+      "role_name": "Confounder-pair scout",
+      "directive": "Focus on the nearest unresolved confounder pair. Request evidence that separates the base diagnosis from graph/Bayes/MLP challenger diseases before stopping."
+    },
+    {
+      "branch_id": "counteranchor_scout",
+      "role_name": "Counter-anchor scout",
+      "directive": "Actively test plausible counterdiagnoses and common confounders before agreeing with the base branch. Keep the final diagnosis only if the revealed ledger supports it against alternatives."
+    }
+  ],
+  "metrics": {
+    "num_cases": 2,
+    "accuracy": 1.0,
+    "num_correct": 2,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "base_accuracy": 1.0,
+    "base_num_correct": 2,
+    "wins_vs_base": 0,
+    "regressions_vs_base": 0,
+    "changed_predictions": 0,
+    "branch_trigger_rate": 0.0,
+    "branches_spawned_total": 0,
+    "mean_branches_spawned": 0.0,
+    "mean_selected_requests": 6.0,
+    "mean_base_requests": 6.0,
+    "mean_total_branch_requests": 6.0,
+    "total_api_calls": 14,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "selection_source_distribution": {
+      "base": 2
+    },
+    "stop_reason_distribution": {
+      "selected_mlp_stop": 2
+    },
+    "run_name": "mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1",
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1",
+    "runtime_seconds": 0.13776111602783203,
+    "run_live_api": false,
+    "allow_dry_run_benchmark": true,
+    "branch_trigger_name": "branch_trigger_mlp_v1",
+    "branch_trigger_threshold": 0.39999999999999997,
+    "branch_budget": 3,
+    "branch_judge_name": "calibrated_graph_bayes_mlp_resolver_v1",
+    "promotion_decision": "pending_full_49case_run"
+  }
+}

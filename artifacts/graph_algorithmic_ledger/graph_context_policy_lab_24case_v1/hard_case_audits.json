@@ -1,0 +1,3032 @@
+{
+  "test:51421": {
+    "reference_predictions": {
+      "notebook13": {
+        "true_pathology": "Chagas",
+        "predicted_pathology": "Chagas",
+        "correct": true,
+        "num_requests": 23,
+        "ranked_differential": [
+          "Chagas",
+          "Spontaneous rib fracture",
+          "Ebola",
+          "Panic attack",
+          "Acute otitis media"
+        ],
+        "true_rank": 1
+      },
+      "notebook17": {
+        "true_pathology": "Chagas",
+        "predicted_pathology": "Sarcoidosis",
+        "correct": false,
+        "num_requests": 17,
+        "ranked_differential": [
+          "Sarcoidosis",
+          "Stable angina",
+          "Myocarditis",
+          "Possible NSTEMI / STEMI",
+          "Pulmonary neoplasm"
+        ],
+        "true_rank": null
+      },
+      "notebook18": {
+        "true_pathology": "Chagas",
+        "predicted_pathology": "Chagas",
+        "correct": true,
+        "num_requests": 9,
+        "ranked_differential": [
+          "Chagas",
+          "Bronchiolitis",
+          "Acute pulmonary edema",
+          "Myocarditis",
+          "Pulmonary embolism"
+        ],
+        "true_rank": 1
+      },
+      "notebook20": {
+        "true_pathology": "Chagas",
+        "predicted_pathology": "Sarcoidosis",
+        "correct": false,
+        "num_requests": 20,
+        "ranked_differential": [
+          "Sarcoidosis",
+          "Chagas",
+          "Acute dystonic reactions",
+          "Anemia",
+          "HIV (initial infection)"
+        ],
+        "true_rank": 2
+      }
+    },
+    "turn_rank_trajectories": {
+      "notebook13": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18904228508472443
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.20368196070194244
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3219415545463562
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3233996629714966
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Croup",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6739603877067566
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.40232396125793457
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "URTI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.809492,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29011979699134827
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.377846,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4767354428768158
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18726176023483276
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4737175405025482
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2701353132724762
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4027116000652313
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Possible NSTEMI / STEMI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6648614406585693
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7029694318771362
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4415823221206665
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.43224722146987915
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Anemia",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6191177368164062
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Anemia",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8114209771156311
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2590545415878296
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.988389,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.25581005215644836
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.988389,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5377876162528992
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.988389,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4878765642642975
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.988389,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24124661087989807
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.988389,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9473004341125488
+        }
+      ],
+      "notebook17": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18904228508472443
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24858537316322327
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6432543992996216
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23837335407733917
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3711799681186676
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.21394534409046173
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.417669,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.21394534409046173
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 2.604007,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2727883756160736
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.397465,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8192232251167297
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Pulmonary embolism",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.392906,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.28492507338523865
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Pulmonary embolism",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.392906,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.12541082501411438
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Pulmonary embolism",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.392906,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.12541082501411438
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Possible NSTEMI / STEMI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 12.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2061239778995514
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 5.43734,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.42346620559692383
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 5.43734,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.42346620559692383
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 7.919814,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.1159871444106102
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 7.919814,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.1159871444106102
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 7.919814,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9315639138221741
+        }
+      ],
+      "notebook18": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18904228508472443
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2373211532831192
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Influenza",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2314634621143341
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "URTI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3563074767589569
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.801468,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.28716710209846497
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.28716710209846497
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Bronchitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3995021879673004
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Croup",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.000413,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18794362246990204
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3950668275356293
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9903821349143982
+        }
+      ],
+      "notebook20": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.18904228508472443
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23976397514343262
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "URTI",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.25731176137924194
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Tuberculosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.20702877640724182
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Tuberculosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3677513897418976
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Croup",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.835043,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3258553743362427
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Chagas",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.22283969819545746
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5424891710281372
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2828914225101471
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2828914225101471
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.41589364409446716
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.30980467796325684
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Viral pharyngitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 1.544814,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.16853122413158417
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3771151602268219
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4495023787021637
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Whooping cough",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.25486117601394653
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.101307,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.27162110805511475
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 1.101307,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3882042467594147
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2872641086578369
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8398548364639282
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.945185661315918
+        }
+      ]
+    }
+  },
+  "test:8666": {
+    "reference_predictions": {
+      "notebook13": {
+        "true_pathology": "Influenza",
+        "predicted_pathology": "Influenza",
+        "correct": true,
+        "num_requests": 6,
+        "ranked_differential": [
+          "Influenza",
+          "HIV (initial infection)",
+          "Pneumonia",
+          "SLE",
+          "Anemia"
+        ],
+        "true_rank": 1
+      },
+      "notebook17": {
+        "true_pathology": "Influenza",
+        "predicted_pathology": "Influenza",
+        "correct": true,
+        "num_requests": 13,
+        "ranked_differential": [
+          "Influenza",
+          "Pneumonia",
+          "HIV (initial infection)",
+          "Acute otitis media",
+          "Viral pharyngitis"
+        ],
+        "true_rank": 1
+      },
+      "notebook18": {
+        "true_pathology": "Influenza",
+        "predicted_pathology": "Influenza",
+        "correct": true,
+        "num_requests": 5,
+        "ranked_differential": [
+          "Influenza",
+          "Pneumonia",
+          "HIV (initial infection)",
+          "SLE",
+          "Pancreatic neoplasm"
+        ],
+        "true_rank": 1
+      },
+      "notebook20": {
+        "true_pathology": "Influenza",
+        "predicted_pathology": "HIV (initial infection)",
+        "correct": false,
+        "num_requests": 2,
+        "ranked_differential": [
+          "HIV (initial infection)",
+          "Influenza",
+          "Pneumonia",
+          "Inguinal hernia",
+          "SLE"
+        ],
+        "true_rank": 2
+      }
+    },
+    "turn_rank_trajectories": {
+      "notebook13": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17645320296287537
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.19426071643829346
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.30067765712738037
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9087669849395752
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 1.269794,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.47882336378097534
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.367659,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7135056853294373
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.367659,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9328616261482239
+        }
+      ],
+      "notebook17": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17645320296287537
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.386423259973526
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4743390381336212
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4898645579814911
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3708117604255676
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4526607096195221
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4526607096195221
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4526607096195221
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5674317479133606
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5674317479133606
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5674317479133606
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5674317479133606
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5674317479133606
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 3.914907,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.857223629951477
+        }
+      ],
+      "notebook18": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17645320296287537
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.21377065777778625
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2270549088716507
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5290870666503906
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8359085321426392
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Influenza",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9028338193893433
+        }
+      ],
+      "notebook20": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17645320296287537
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.516333281993866
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "HIV (initial infection)",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9331310391426086
+        }
+      ]
+    }
+  },
+  "test:81691": {
+    "reference_predictions": {
+      "notebook13": {
+        "true_pathology": "Croup",
+        "predicted_pathology": "Chagas",
+        "correct": false,
+        "num_requests": 23,
+        "ranked_differential": [
+          "Chagas",
+          "Acute otitis media",
+          "Panic attack",
+          "Sarcoidosis",
+          "Myasthenia gravis"
+        ],
+        "true_rank": null
+      },
+      "notebook17": {
+        "true_pathology": "Croup",
+        "predicted_pathology": "Acute otitis media",
+        "correct": false,
+        "num_requests": 23,
+        "ranked_differential": [
+          "Acute otitis media",
+          "Cluster headache",
+          "Viral pharyngitis",
+          "Allergic sinusitis",
+          "Bronchitis"
+        ],
+        "true_rank": null
+      },
+      "notebook18": {
+        "true_pathology": "Croup",
+        "predicted_pathology": "Spontaneous pneumothorax",
+        "correct": false,
+        "num_requests": 24,
+        "ranked_differential": [
+          "Spontaneous pneumothorax",
+          "Possible NSTEMI / STEMI",
+          "Sarcoidosis",
+          "Stable angina",
+          "Unstable angina"
+        ],
+        "true_rank": null
+      },
+      "notebook20": {
+        "true_pathology": "Croup",
+        "predicted_pathology": "Bronchitis",
+        "correct": false,
+        "num_requests": 10,
+        "ranked_differential": [
+          "Bronchitis",
+          "Acute otitis media",
+          "Croup",
+          "URTI",
+          "Acute dystonic reactions"
+        ],
+        "true_rank": 3
+      }
+    },
+    "turn_rank_trajectories": {
+      "notebook13": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24371308088302612
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Allergic sinusitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.26239264011383057
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "URTI",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29276877641677856
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Viral pharyngitis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.33819320797920227
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Croup",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24829991161823273
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6607855558395386
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Cluster headache",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5096908807754517
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.377846,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.920768678188324
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6413558125495911
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7854141592979431
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4781796932220459
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6377553343772888
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2670288681983948
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Possible NSTEMI / STEMI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.34058454632759094
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29256072640419006
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5223203301429749
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.49333277344703674
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.38332104682922363
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5670189261436462
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5670189261436462
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Pulmonary neoplasm",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.877552,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6516730785369873
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Bronchiectasis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.863357,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8075049519538879
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.699766,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9135488271713257
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.699766,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9641020894050598
+        }
+      ],
+      "notebook17": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24371308088302612
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2541173994541168
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Allergic sinusitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.43491125106811523
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Cluster headache",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.19136327505111694
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Croup",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.65887,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5249035954475403
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.34625720977783203
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.43222716450691223
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.34304314851760864
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4511873126029968
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.36847200989723206
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3567844331264496
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.445496,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2621636986732483
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2961322069168091
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.49584823846817017
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.49584823846817017
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17254966497421265
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7135581374168396
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Whooping cough",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24515540897846222
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 5.00433,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2652737498283386
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 5.00433,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.41045063734054565
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 5.00433,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.26814836263656616
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Allergic sinusitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 6.38606,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.28196027874946594
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 9.62574,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.43748217821121216
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 9.62574,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6648991107940674
+        }
+      ],
+      "notebook18": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24371308088302612
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.27168580889701843
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Viral pharyngitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29276877641677856
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Viral pharyngitis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.33819320797920227
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Croup",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24829991161823273
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Cluster headache",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5157007575035095
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Acute rhinosinusitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3960735499858856
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.19496150314807892
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Pneumonia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24867375195026398
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Influenza",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.694527,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24170087277889252
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Anaphylaxis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.847248,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17662324011325836
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4166075587272644
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2487286925315857
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Boerhaave",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.20761163532733917
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "GERD",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3751682937145233
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.31753677129745483
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Anaphylaxis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.847248,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.31706878542900085
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.921311,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4828703999519348
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.20290786027908325
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3884395360946655
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29181984066963196
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "PSVT",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.10254451632499695
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Bronchitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 3.299668,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2548922896385193
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Spontaneous pneumothorax",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.13734474778175354
+        }
+      ],
+      "notebook20": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.24371308088302612
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Allergic sinusitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.316482812166214
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Viral pharyngitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.465909,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2771381735801697
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Chronic rhinosinusitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.19136327505111694
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Croup",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.65887,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6182141304016113
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Croup",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.65887,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.9346151947975159
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.984234,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6633249521255493
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Acute otitis media",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.984234,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4141277074813843
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7015604376792908
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8815932869911194
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Bronchitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 2.243273,
+          "num_unresolved_pairs": 0,
+          "mlp_confidence": 0.9473621845245361
+        }
+      ]
+    }
+  },
+  "test:62878": {
+    "reference_predictions": {
+      "notebook13": {
+        "true_pathology": "Pericarditis",
+        "predicted_pathology": "Anemia",
+        "correct": false,
+        "num_requests": 16,
+        "ranked_differential": [
+          "Anemia",
+          "Panic attack",
+          "Guillain-Barr\u00e9 syndrome",
+          "PSVT",
+          "Acute dystonic reactions"
+        ],
+        "true_rank": null
+      },
+      "notebook17": {
+        "true_pathology": "Pericarditis",
+        "predicted_pathology": "Anemia",
+        "correct": false,
+        "num_requests": 24,
+        "ranked_differential": [
+          "Anemia",
+          "Sarcoidosis",
+          "Epiglottitis",
+          "PSVT",
+          "Possible NSTEMI / STEMI"
+        ],
+        "true_rank": null
+      },
+      "notebook18": {
+        "true_pathology": "Pericarditis",
+        "predicted_pathology": "Whooping cough",
+        "correct": false,
+        "num_requests": 24,
+        "ranked_differential": [
+          "Whooping cough",
+          "Cluster headache",
+          "Croup",
+          "Pericarditis",
+          "Stable angina"
+        ],
+        "true_rank": 4
+      },
+      "notebook20": {
+        "true_pathology": "Pericarditis",
+        "predicted_pathology": "URTI",
+        "correct": false,
+        "num_requests": 24,
+        "ranked_differential": [
+          "URTI",
+          "Ebola",
+          "Panic attack",
+          "Chagas",
+          "Pancreatic neoplasm"
+        ],
+        "true_rank": null
+      }
+    },
+    "turn_rank_trajectories": {
+      "notebook13": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.07442177087068558
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchospasm / acute asthma exacerbation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.06465867161750793
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Pulmonary neoplasm",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.07894138991832733
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.08756435662508011
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.11301390081644058
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.10913367569446564
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.1382681280374527
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2994377911090851
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.14757181704044342
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2219841480255127
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4463728070259094
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2909986972808838
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Croup",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.835043,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17125560343265533
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.725212,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3142980933189392
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.725212,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.34294283390045166
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.892523,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8709664344787598
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 2.393614,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8709664344787598
+        }
+      ],
+      "notebook17": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.07442177087068558
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Pulmonary neoplasm",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.06023067235946655
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.08101345598697662
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.08101345598697662
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.08101345598697662
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.10408978909254074
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Pulmonary neoplasm",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.10837242007255554
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Anemia",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.17161521315574646
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.1786423623561859
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2617665231227875
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3143230974674225
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3026782274246216
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Cluster headache",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 10.290248,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7364447712898254
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.38338860869407654
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.38338860869407654
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "SLE",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 8.752087,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.14520978927612305
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "SLE",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 12.752087,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.14520978927612305
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 12.921311,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23148900270462036
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 12.921311,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23148900270462036
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 16.921311,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23148900270462036
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 16.921311,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.13471315801143646
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 8.974481,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.16261744499206543
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 13.039874,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.16363151371479034
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 13.039874,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2963294982910156
+        }
+      ],
+      "notebook18": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.07442177087068558
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchospasm / acute asthma exacerbation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.09108636528253555
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Pulmonary neoplasm",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.11314323544502258
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Acute pulmonary edema",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.27534279227256775
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Myasthenia gravis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3830738961696625
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.266228586435318
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Bronchiectasis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4196382164955139
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4196382164955139
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Panic attack",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.30597183108329773
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Epiglottitis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3078659772872925
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Sarcoidosis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.40340131521224976
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.49014922976493835
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5722788572311401
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.764281690120697
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6622608304023743
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6622608304023743
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.201239,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.669625997543335
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 1.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.201239,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5672930479049683
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.5292248129844666
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Bronchitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.538372,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6698870062828064
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8228099942207336
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.8073990345001221
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "PSVT",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 4.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6394636631011963
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "Whooping cough",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 8.00002,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6394636631011963
+        }
+      ],
+      "notebook20": [
+        {
+          "turn_index": 1,
+          "predicted_pathology": "Bronchospasm / acute asthma exacerbation",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.07442177087068558
+        },
+        {
+          "turn_index": 2,
+          "predicted_pathology": "Bronchiolitis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.0742127001285553
+        },
+        {
+          "turn_index": 3,
+          "predicted_pathology": "Pulmonary embolism",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.06878440827131271
+        },
+        {
+          "turn_index": 4,
+          "predicted_pathology": "Anemia",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.09404318779706955
+        },
+        {
+          "turn_index": 5,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.20029513537883759
+        },
+        {
+          "turn_index": 6,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2518293261528015
+        },
+        {
+          "turn_index": 7,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2518293261528015
+        },
+        {
+          "turn_index": 8,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.10241147875785828
+        },
+        {
+          "turn_index": 9,
+          "predicted_pathology": "Atrial fibrillation",
+          "true_rank": 5.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 1.274,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.15497952699661255
+        },
+        {
+          "turn_index": 10,
+          "predicted_pathology": "Guillain-Barr\u00e9 syndrome",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.14498303830623627
+        },
+        {
+          "turn_index": 11,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": 4.0,
+          "true_in_top3": false,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.1479106843471527
+        },
+        {
+          "turn_index": 12,
+          "predicted_pathology": "Acute dystonic reactions",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.16536130011081696
+        },
+        {
+          "turn_index": 13,
+          "predicted_pathology": "Spontaneous pneumothorax",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.2343057543039322
+        },
+        {
+          "turn_index": 14,
+          "predicted_pathology": "PSVT",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.0,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6094387173652649
+        },
+        {
+          "turn_index": 15,
+          "predicted_pathology": "PSVT",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.206152,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.28899678587913513
+        },
+        {
+          "turn_index": 16,
+          "predicted_pathology": "Scombroid food poisoning",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.697831,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.33249133825302124
+        },
+        {
+          "turn_index": 17,
+          "predicted_pathology": "Scombroid food poisoning",
+          "true_rank": 3.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 0.697831,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.29333066940307617
+        },
+        {
+          "turn_index": 18,
+          "predicted_pathology": "Pericarditis",
+          "true_rank": 2.0,
+          "true_in_top3": true,
+          "true_in_top5": true,
+          "top_contradiction": 1.201239,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.3567505180835724
+        },
+        {
+          "turn_index": 19,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.939291,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.23080264031887054
+        },
+        {
+          "turn_index": 20,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.939291,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.480347603559494
+        },
+        {
+          "turn_index": 21,
+          "predicted_pathology": "Myocarditis",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 0.939291,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.7566286325454712
+        },
+        {
+          "turn_index": 22,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.699766,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.6327676177024841
+        },
+        {
+          "turn_index": 23,
+          "predicted_pathology": "Chagas",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 4.699766,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4481455087661743
+        },
+        {
+          "turn_index": 24,
+          "predicted_pathology": "URTI",
+          "true_rank": NaN,
+          "true_in_top3": false,
+          "true_in_top5": false,
+          "top_contradiction": 9.81621,
+          "num_unresolved_pairs": 3,
+          "mlp_confidence": 0.4780575633049011
+        }
+      ]
+    }
+  }
+}

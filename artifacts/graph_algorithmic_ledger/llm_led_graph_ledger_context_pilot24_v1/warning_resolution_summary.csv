@@ -1,0 +1,25 @@
+case_id,true_pathology,predicted_pathology,correct,initial_warning_count,final_warning_count,warnings_resolved_count,final_unresolved_pairs,final_top_diagnosis_support,final_top_diagnosis_contradiction
+test:104857,Acute dystonic reactions,Acute dystonic reactions,True,4,3,2,3,3.775,0.0
+test:33118,Acute otitis media,Acute otitis media,True,2,4,2,3,6.818,0.0
+test:93930,Acute pulmonary edema,Acute pulmonary edema,True,2,4,2,3,13.037,0.0
+test:88250,Allergic sinusitis,Allergic sinusitis,True,2,4,2,3,7.26,1.304
+test:90978,Bronchiolitis,Bronchiolitis,True,4,3,2,3,7.846,0.827
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,2,4,2,3,6.68,0.0
+test:51421,Chagas,Sarcoidosis,False,2,3,2,3,5.64,4.0
+test:46152,Cluster headache,Cluster headache,True,2,4,2,3,8.583,1.387
+test:81691,Croup,Bronchitis,False,2,3,2,0,1.4,2.243
+test:77908,Ebola,Ebola,True,2,4,2,3,13.664,0.0
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,True,4,4,3,3,4.043,0.0
+test:106010,HIV (initial infection),HIV (initial infection),True,2,4,2,3,6.474,0.0
+test:8666,Influenza,HIV (initial infection),False,2,3,2,3,3.835,0.0
+test:38202,Inguinal hernia,Inguinal hernia,True,3,3,1,3,4.072,0.0
+test:133888,Larygospasm,Larygospasm,True,2,2,1,3,3.955,0.0
+test:2801,Pancreatic neoplasm,Pancreatic neoplasm,True,2,4,2,3,6.433,0.0
+test:62878,Pericarditis,URTI,False,2,4,2,3,1.558,9.816
+test:95923,Pneumonia,Pneumonia,True,2,4,2,3,5.246,1.406
+test:23687,Pulmonary embolism,Pulmonary embolism,True,2,3,2,3,9.614,0.0
+test:133024,Scombroid food poisoning,Scombroid food poisoning,True,2,4,2,3,10.153,0.0
+test:16097,Stable angina,Stable angina,True,2,2,2,3,13.34,2.619
+test:107472,Tuberculosis,Tuberculosis,True,2,2,2,3,7.824,0.0
+test:13402,URTI,URTI,True,2,4,2,3,2.519,0.0
+test:19424,Whooping cough,Whooping cough,True,4,4,3,3,5.483,0.0

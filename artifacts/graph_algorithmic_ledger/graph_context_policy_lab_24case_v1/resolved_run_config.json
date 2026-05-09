@@ -1,0 +1,29 @@
+{
+  "run_name": "graph_context_policy_lab_24case_v1",
+  "offline_only": true,
+  "api_calls_allowed": false,
+  "reference_run": "notebook13",
+  "graph_context_run": "notebook20",
+  "runs": {
+    "notebook13": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1",
+    "notebook17": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_v1",
+    "notebook18": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_advisory_hybrid_shortlist_pilot24_v1",
+    "notebook20": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/llm_led_graph_ledger_context_pilot24_v1"
+  },
+  "graph_stats_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1",
+  "presence_stats_path": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/llm_led_graph_ledger_context_pilot24_v1/cache/presence_rates_validate_30000.json",
+  "hard_case_ids": [
+    "test:51421",
+    "test:8666",
+    "test:81691",
+    "test:62878"
+  ],
+  "selection_rule": [
+    "highest_accuracy",
+    "highest_top5",
+    "lowest_mean_requests",
+    "fewest_regressions_vs_notebook13",
+    "simplest_rule"
+  ],
+  "created_at": "2026-05-08 04:54:30"
+}

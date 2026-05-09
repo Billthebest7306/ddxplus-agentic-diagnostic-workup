@@ -1,0 +1,324 @@
+case_id,turn_index,true_pathology,notebook13_final_correct,actual_requested_root,actual_requested_question,actual_request_graph_rank,actual_request_graph_score,actual_request_information_gain,top_graph_root,top_graph_score
+test:38475,1,Acute COPD exacerbation / infection,False,E_91,Do you have a fever (either felt or measured with a thermometer)?,4,0.2669482679316152,0.24577308346952098,E_214,0.3149328507447009
+test:38475,2,Acute COPD exacerbation / infection,False,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.34336724356280035,0.29738368593417164,E_124,0.34336724356280035
+test:38475,3,Acute COPD exacerbation / infection,False,E_79,Do you smoke cigarettes?,1,0.31628336581082467,0.2310385861347575,E_79,0.31628336581082467
+test:38475,4,Acute COPD exacerbation / infection,False,E_151,Do you have swelling in one or more areas of your body?,1,0.26569963648174266,0.24012473342881457,E_151,0.26569963648174266
+test:38475,5,Acute COPD exacerbation / infection,False,E_0,Have you recently had a viral infection?,2,0.22509433541847076,0.1874755852866415,E_53,0.2697613988373094
+test:38475,6,Acute COPD exacerbation / infection,False,E_63,Do you have difficulty articulating words/speaking?,5,0.24997360702405969,0.22366892460874296,E_53,0.31099217181306765
+test:38475,7,Acute COPD exacerbation / infection,False,E_76,Do you feel slightly dizzy or lightheaded?,6,0.26231236435758204,0.14698820795738435,E_155,0.3289263184722156
+test:38475,8,Acute COPD exacerbation / infection,False,E_148,Are you feeling nauseous or do you feel like vomiting?,2,0.27849786260088527,0.18142933503412542,E_211,0.2884144497419324
+test:38475,9,Acute COPD exacerbation / infection,False,E_70,Are you significantly overweight compared to people of the same height as you?,2,0.26944649614194727,0.18447176780029662,E_53,0.31538261879809376
+test:38475,10,Acute COPD exacerbation / infection,False,E_220,Do you have pain that is increased when you breathe in deeply?,13,0.18940273106373937,0.18303995992526523,E_53,0.3034196645056364
+test:38475,11,Acute COPD exacerbation / infection,False,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",20,0.17488546802613691,0.17392969856174062,E_53,0.3002545594784129
+test:38475,12,Acute COPD exacerbation / infection,False,E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",4,0.23930723404102885,0.1967415789144915,E_53,0.27609987755229837
+test:38475,13,Acute COPD exacerbation / infection,False,E_201,Do you have a cough?,13,0.1552138223318563,0.13770810728453195,E_53,0.2568922129616634
+test:38475,14,Acute COPD exacerbation / infection,False,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",29,0.12858421867008618,0.12260162356078402,E_53,0.2954884299186403
+test:38475,15,Acute COPD exacerbation / infection,False,E_25,Have any of your family members been diagnosed with cluster headaches?,34,0.08946144848028652,0.09139734546736827,E_84,0.26869529881514825
+test:38475,16,Acute COPD exacerbation / infection,False,E_194,Have you noticed a high pitched sound when breathing in?,26,0.13218031166005026,0.1254151728548021,E_84,0.2555042180051649
+test:38475,17,Acute COPD exacerbation / infection,False,E_146,Are you taking any new oral anticoagulants ((NOACs)?,2,0.32335470046803605,0.2733876708081847,E_53,0.3495352804212959
+test:38475,18,Acute COPD exacerbation / infection,False,E_214,Have you noticed a wheezing sound when you exhale?,22,0.09382038338135679,0.0952448548794233,E_84,0.3120808080311216
+test:38475,19,Acute COPD exacerbation / infection,False,E_181,Do you have nasal congestion or a clear runny nose?,4,0.24170411938414588,0.20196248138524445,E_77,0.30309797993972665
+test:38475,20,Acute COPD exacerbation / infection,False,E_72,Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?,3,0.2896182518534013,0.23344125897044632,E_125,0.3758582951767197
+test:38475,21,Acute COPD exacerbation / infection,False,E_142,Does your mother suffer from asthma?,26,0.0832451828623808,0.09679437234280405,E_125,0.32608551818187104
+test:38475,22,Acute COPD exacerbation / infection,False,E_116,Have you had a cold in the last 2 weeks?,8,0.19924992074796102,0.19226274282348457,E_125,0.3420552085894636
+test:38475,23,Acute COPD exacerbation / infection,False,E_125,Have you ever been diagnosed with gastroesophageal reflux?,1,0.3099967006960014,0.2803085960281759,E_125,0.3099967006960014
+test:38475,24,Acute COPD exacerbation / infection,False,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,15,0.12124426252675742,0.1176456097287872,E_84,0.2967221014452298
+test:104857,1,Acute dystonic reactions,True,E_63,Do you have difficulty articulating words/speaking?,10,0.32731878927416136,0.3518582250794647,E_15,0.39022237124058645
+test:58986,1,Acute laryngitis,True,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",4,0.33723489784548794,0.3591973163633989,E_194,0.3737821819061854
+test:33118,1,Acute otitis media,True,E_214,Have you noticed a wheezing sound when you exhale?,21,0.1371910690186536,0.131624100203314,E_53,0.29663515742973234
+test:33118,2,Acute otitis media,True,E_169,Is your nose or the back of your throat itchy?,4,0.2738206217545978,0.25231528629435424,E_41,0.29396618233614275
+test:33118,3,Acute otitis media,True,E_97,Do you have a sore throat?,4,0.2732960758220985,0.23916448584865252,E_41,0.3102398021037562
+test:33118,4,Acute otitis media,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.31386508357560133,0.22879870721513662,E_41,0.31386508357560133
+test:33118,5,Acute otitis media,True,E_194,Have you noticed a high pitched sound when breathing in?,19,0.13742479140034614,0.13211749299485387,E_124,0.2635885610295881
+test:33118,6,Acute otitis media,True,E_201,Do you have a cough?,8,0.24495139292572668,0.11137785170723333,E_124,0.3392674855583894
+test:33118,7,Acute otitis media,True,E_25,Have any of your family members been diagnosed with cluster headaches?,1,0.44636087900181437,0.382430455018066,E_25,0.44636087900181437
+test:93930,1,Acute pulmonary edema,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,10,0.2757182298467557,0.2672089472361449,E_152,0.7187249357480214
+test:93930,2,Acute pulmonary edema,True,E_106,Do you have heart failure?,4,0.4069274810654127,0.38945012482724195,E_152,0.7204269188693675
+test:93930,3,Acute pulmonary edema,True,E_5,Have you ever had fluid in your lungs?,2,0.4033678887919785,0.35970585133175365,E_152,0.7075439615670372
+test:93930,4,Acute pulmonary edema,True,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,3,0.36827611505658153,0.301153126236764,E_152,0.7034717275418207
+test:111176,1,Acute rhinosinusitis,False,E_45,Have you been coughing up blood?,5,0.23343573349747737,0.17768150303955127,E_53,0.30157291475935954
+test:111176,2,Acute rhinosinusitis,False,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,8,0.22855095760458288,0.1742805784599711,E_124,0.33752427260127826
+test:111176,3,Acute rhinosinusitis,False,E_120,Do you have polyps in your nose?,7,0.24968127802539733,0.2346417749621452,E_53,0.30813094529312346
+test:111176,4,Acute rhinosinusitis,False,E_209,Are your vaccinations up to date?,7,0.1913455409453958,0.19091273343137638,E_103,0.23687270080345396
+test:111176,5,Acute rhinosinusitis,False,E_91,Do you have a fever (either felt or measured with a thermometer)?,9,0.1697351116877739,0.16663599585390387,E_103,0.291818674840745
+test:111176,6,Acute rhinosinusitis,False,E_181,Do you have nasal congestion or a clear runny nose?,6,0.2270058755192533,0.08798565889652744,E_103,0.3062387165716402
+test:111176,7,Acute rhinosinusitis,False,E_182,Do you have greenish or yellowish nasal discharge?,3,0.28931001827515956,0.19406664819763023,E_103,0.3231177838228888
+test:111176,8,Acute rhinosinusitis,False,E_103,Have you lost your sense of smell?,14,0.19832568574257936,0.19786921028992877,E_53,0.35799456262271684
+test:88250,1,Allergic sinusitis,True,E_45,Have you been coughing up blood?,2,0.245868045777034,0.15211091553652042,E_53,0.28427883402227927
+test:88250,2,Allergic sinusitis,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,8,0.22438544255734708,0.17227596916421625,E_124,0.34154459855401625
+test:88250,3,Allergic sinusitis,True,E_120,Do you have polyps in your nose?,1,0.40657866991450625,0.3303935130496263,E_120,0.40657866991450625
+test:88250,4,Allergic sinusitis,True,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.3782831300450935,0.31034101045943163,E_124,0.3782831300450935
+test:88250,5,Allergic sinusitis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",9,0.1777510069689844,0.16302991958137794,E_212,0.24994631253050015
+test:88250,6,Allergic sinusitis,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,4,0.23823164456444917,0.20620932195509908,E_212,0.3051426719300976
+test:88250,7,Allergic sinusitis,True,E_216,Do you have pain that is increased with movement?,10,0.18756391315610357,0.22591443264859432,E_212,0.3186625915017341
+test:88250,8,Allergic sinusitis,True,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",1,0.4045592296496735,0.32859566403783463,E_212,0.4045592296496735
+test:88250,9,Allergic sinusitis,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,6,0.23231124214279364,0.17725956780504143,E_53,0.31414062017387484
+test:88250,10,Allergic sinusitis,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,2,0.21684730237493385,0.1334956786563824,E_181,0.2577573664987374
+test:88250,11,Allergic sinusitis,True,E_151,Do you have swelling in one or more areas of your body?,15,0.13633026109921453,0.1352856319899228,E_181,0.25703683107673564
+test:88250,12,Allergic sinusitis,True,E_25,Have any of your family members been diagnosed with cluster headaches?,10,0.17175643683584668,0.16853811744764838,E_173,0.25700777882360215
+test:88250,13,Allergic sinusitis,True,E_209,Are your vaccinations up to date?,9,0.18641206317400935,0.15940415443013248,E_173,0.28949640689211753
+test:88250,14,Allergic sinusitis,True,E_194,Have you noticed a high pitched sound when breathing in?,11,0.15332230364600852,0.16012278024415785,E_173,0.30021176705697017
+test:88250,15,Allergic sinusitis,True,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",15,0.13995385574843516,0.14613235139849923,E_181,0.3170519908442238
+test:88250,16,Allergic sinusitis,True,E_79,Do you smoke cigarettes?,7,0.2598264498163876,0.20979850960110716,E_181,0.3607273250893147
+test:88250,17,Allergic sinusitis,True,E_181,Do you have nasal congestion or a clear runny nose?,7,0.28834463105428587,0.24300966593605708,E_169,0.3714907146932431
+test:88250,18,Allergic sinusitis,True,E_169,Is your nose or the back of your throat itchy?,2,0.4046181677962234,0.3647355740537368,E_53,0.42040284001365513
+test:121319,1,Anaphylaxis,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,5,0.31089792021326007,0.25145023766969327,E_133,0.627080592170406
+test:121319,2,Anaphylaxis,True,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,6,0.3670486900370429,0.3526932688450676,E_133,0.5902291087316407
+test:121319,3,Anaphylaxis,True,E_151,Do you have swelling in one or more areas of your body?,4,0.42071665585548734,0.3913865789780645,E_133,0.5293500646667817
+test:18744,1,Anemia,True,E_146,Are you taking any new oral anticoagulants ((NOACs)?,2,0.3540556295083578,0.3209212593219126,E_129,0.37446755384475583
+test:11342,1,Atrial fibrillation,True,E_62,Do you regularly take stimulant drugs?,5,0.2522226740055361,0.22274840887533814,E_76,0.2944270433303979
+test:11342,2,Atrial fibrillation,True,E_31,Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?,7,0.24559288447627023,0.21991125171056214,E_53,0.33862055072829333
+test:11342,3,Atrial fibrillation,True,E_22,Do you have a known issue with one of your heart valves?,3,0.24580027292025142,0.21751122846275056,E_53,0.3275896146937801
+test:11342,4,Atrial fibrillation,True,E_104,Do you have high blood pressure or do you take medications to treat high blood pressure?,6,0.2363884782205747,0.20622228400089515,E_53,0.3275896146937801
+test:11342,5,Atrial fibrillation,True,E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,4,0.23399135262453555,0.204444289216645,E_53,0.3151189088754638
+test:11198,1,Boerhaave,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,3,0.31437398676114153,0.2410217705666752,E_54,0.4817370732434197
+test:11198,2,Boerhaave,True,E_151,Do you have swelling in one or more areas of your body?,2,0.3607597208645736,0.34121764427835516,E_54,0.44417277159104573
+test:11198,3,Boerhaave,True,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,6,0.2305301121020513,0.18004176769340444,E_54,0.4263363454201146
+test:11198,4,Boerhaave,True,E_148,Are you feeling nauseous or do you feel like vomiting?,4,0.23744687732323347,0.19308366153379458,E_57,0.40524430418678775
+test:11198,5,Boerhaave,True,E_211,Have you vomited several times or have you made several efforts to vomit?,3,0.40988736555534205,0.33754591208671997,E_54,0.47356135129071003
+test:112233,1,Bronchiectasis,True,E_45,Have you been coughing up blood?,3,0.24823995118265899,0.17524336567913915,E_53,0.2759732906089825
+test:112233,2,Bronchiectasis,True,E_79,Do you smoke cigarettes?,4,0.284990486007383,0.23289833094041984,E_53,0.3656248027867463
+test:112233,3,Bronchiectasis,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,5,0.27293844890183183,0.15246650732117573,E_77,0.3168798767507672
+test:112233,4,Bronchiectasis,True,E_208,"Is your BMI less than 18.5, or are you underweight?",4,0.270158556334698,0.2227975241578947,E_77,0.3617738813784758
+test:112233,5,Bronchiectasis,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.4313140861326611,0.3524624556016665,E_77,0.4313140861326611
+test:11655,1,Bronchitis,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.31915250733984274,0.24169178921999193,E_54,0.4727022780036683
+test:11655,2,Bronchitis,True,E_151,Do you have swelling in one or more areas of your body?,2,0.366015123004277,0.34518210241812414,E_54,0.44126444860756814
+test:11655,3,Bronchitis,True,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,5,0.23214808821980581,0.18044980343347294,E_54,0.45223313908017104
+test:11655,4,Bronchitis,True,E_120,Do you have polyps in your nose?,8,0.195895533026071,0.18628837312077978,E_54,0.45282597591720053
+test:11655,5,Bronchitis,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,10,0.18945321066371731,0.12513202527337833,E_54,0.4640432995645301
+test:11655,6,Bronchitis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",2,0.3983143235478733,0.350558448559229,E_54,0.4920280387810692
+test:11655,7,Bronchitis,True,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",2,0.2786801688805911,0.2527361220477323,E_54,0.3804606881021226
+test:11655,8,Bronchitis,True,E_201,Do you have a cough?,3,0.2568513677727484,0.14641661957389993,E_54,0.4443741401153125
+test:11655,9,Bronchitis,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,3,0.25516361014505695,0.2035318775375713,E_54,0.42607737708015936
+test:11655,10,Bronchitis,True,E_219,Are your symptoms more prominent at night?,10,0.2564340378520534,0.2034382535395042,E_54,0.5181306047175174
+test:29123,1,Bronchospasm / acute asthma exacerbation,True,E_45,Have you been coughing up blood?,2,0.24532067862296916,0.1522401505796185,E_53,0.282367087760281
+test:29123,2,Bronchospasm / acute asthma exacerbation,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,12,0.1902924367777626,0.1559374292384232,E_124,0.33609636833364676
+test:29123,3,Bronchospasm / acute asthma exacerbation,True,E_120,Do you have polyps in your nose?,1,0.40824351812592774,0.3316627341065568,E_120,0.40824351812592774
+test:29123,4,Bronchospasm / acute asthma exacerbation,True,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.37916213005925453,0.30434385229040783,E_124,0.37916213005925453
+test:29123,5,Bronchospasm / acute asthma exacerbation,True,E_214,Have you noticed a wheezing sound when you exhale?,1,0.41671647441245174,0.3779310535615068,E_214,0.41671647441245174
+test:51421,1,Chagas,True,E_214,Have you noticed a wheezing sound when you exhale?,22,0.1425056222762361,0.1314407066644798,E_129,0.2880504448839533
+test:51421,2,Chagas,True,E_201,Do you have a cough?,2,0.28726530329418254,0.16155031628588645,E_129,0.3794502777359162
+test:51421,3,Chagas,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.4201414394669456,0.39648999656591016,E_129,0.4201414394669456
+test:51421,4,Chagas,True,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",11,0.21045349653394702,0.19853197758815813,E_194,0.30389876141330857
+test:51421,5,Chagas,True,E_194,Have you noticed a high pitched sound when breathing in?,2,0.3546267174898422,0.26452860218096813,E_53,0.37944209215263686
+test:51421,6,Chagas,True,E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",14,0.14301604345528746,0.1411678922885866,E_97,0.3043058806278722
+test:51421,7,Chagas,True,E_97,Do you have a sore throat?,5,0.2214210599759929,0.19881798759282848,E_53,0.2642949932648291
+test:51421,8,Chagas,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,18,0.11669390413163025,0.12681492104958997,E_53,0.32603302208623797
+test:51421,9,Chagas,True,E_181,Do you have nasal congestion or a clear runny nose?,1,0.2678112122343335,0.2175445555868445,E_181,0.2678112122343335
+test:51421,10,Chagas,True,E_196,Have you had surgery within the last month?,28,0.11648968645145868,0.11869295539186038,E_53,0.2988274152392303
+test:51421,11,Chagas,True,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",15,0.1666851742196933,0.1492845647175735,E_53,0.30346012974745745
+test:51421,12,Chagas,True,E_52,Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?,12,0.1964920931866021,0.1788478516112367,E_172,0.24413473137149205
+test:51421,13,Chagas,True,E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,19,0.1706811450444776,0.16987639531723855,E_173,0.317941792611546
+test:51421,14,Chagas,True,E_211,Have you vomited several times or have you made several efforts to vomit?,26,0.12099716432358087,0.127828304606205,E_173,0.32760651460241963
+test:51421,15,Chagas,True,E_70,Are you significantly overweight compared to people of the same height as you?,14,0.2130703222779864,0.1836514230276056,E_146,0.31194115187816684
+test:51421,16,Chagas,True,E_146,Are you taking any new oral anticoagulants ((NOACs)?,2,0.3443962383739123,0.31824419690946654,E_53,0.3770298473408659
+test:51421,17,Chagas,True,E_21,Have you ever had a spontaneous pneumothorax?,14,0.12483281745136564,0.16341693142121722,E_84,0.3301590567056286
+test:51421,18,Chagas,True,E_84,Do you feel weakness in both arms and/or both legs?,1,0.3432085072485378,0.2639332901975821,E_84,0.3432085072485378
+test:51421,19,Chagas,True,E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",10,0.17186924090861475,0.15556971913098636,E_151,0.25099881064508167
+test:51421,20,Chagas,True,E_45,Have you been coughing up blood?,2,0.2546269446515689,0.1636874559325593,E_151,0.26071507229349833
+test:51421,21,Chagas,True,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,2,0.2806933180464603,0.194767504083328,E_0,0.3206803661568951
+test:51421,22,Chagas,True,E_151,Do you have swelling in one or more areas of your body?,12,0.1355056239074363,0.13749139151946294,E_53,0.34459239506749273
+test:51421,23,Chagas,True,E_174,Have you been unintentionally losing weight or have you lost your appetite?,13,0.1340285164265263,0.1320202179806157,E_53,0.3017850017077399
+test:130566,1,Chronic rhinosinusitis,True,E_45,Have you been coughing up blood?,6,0.2163570203714271,0.14568703656634635,E_53,0.2758440320124721
+test:130566,2,Chronic rhinosinusitis,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.2560992713600509,0.16839473787755604,E_77,0.2560992713600509
+test:130566,3,Chronic rhinosinusitis,True,E_120,Do you have polyps in your nose?,1,0.4154921762554984,0.3293378698915178,E_120,0.4154921762554984
+test:130566,4,Chronic rhinosinusitis,True,E_209,Are your vaccinations up to date?,7,0.19765221383524606,0.20265339987349743,E_103,0.2183864625544458
+test:130566,5,Chronic rhinosinusitis,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,8,0.17355837969620588,0.17434278449799606,E_103,0.2363830152893986
+test:130566,6,Chronic rhinosinusitis,True,E_181,Do you have nasal congestion or a clear runny nose?,6,0.21095684588155522,0.07316681661788678,E_103,0.25271359141428673
+test:130566,7,Chronic rhinosinusitis,True,E_103,Have you lost your sense of smell?,1,0.32457157327791375,0.2651515832797914,E_103,0.32457157327791375
+test:46152,1,Cluster headache,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.3289902982084116,0.25804746433423054,E_54,0.45998225648391955
+test:46152,2,Cluster headache,True,E_151,Do you have swelling in one or more areas of your body?,2,0.371729199602037,0.3498875367391322,E_54,0.4417205214133488
+test:46152,3,Cluster headache,True,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,6,0.24099387218916055,0.1747768679871516,E_54,0.4320777810976399
+test:46152,4,Cluster headache,True,E_148,Are you feeling nauseous or do you feel like vomiting?,4,0.23735557743989807,0.18887269967722062,E_57,0.40638008410857485
+test:46152,5,Cluster headache,True,E_220,Do you have pain that is increased when you breathe in deeply?,7,0.259388134644071,0.24840917997730136,E_57,0.374346524148761
+test:46152,6,Cluster headache,True,E_25,Have any of your family members been diagnosed with cluster headaches?,2,0.38254136255881643,0.34654887314790483,E_54,0.4008595790679792
+test:81691,1,Croup,False,E_214,Have you noticed a wheezing sound when you exhale?,20,0.13932904998821583,0.13367433855765384,E_91,0.2903723353686481
+test:81691,2,Croup,False,E_169,Is your nose or the back of your throat itchy?,5,0.2713931238300816,0.2529992754895812,E_41,0.30218154357865223
+test:81691,3,Croup,False,E_97,Do you have a sore throat?,2,0.2958009375638656,0.24493725122233734,E_41,0.29949203201018937
+test:81691,4,Croup,False,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.31963833266157304,0.23209494495125163,E_41,0.31963833266157304
+test:81691,5,Croup,False,E_194,Have you noticed a high pitched sound when breathing in?,8,0.2051287318396769,0.1902214489137083,E_53,0.2945824101207096
+test:81691,6,Croup,False,E_201,Do you have a cough?,8,0.24142280191953797,0.10932260499626763,E_124,0.3452522703462338
+test:81691,7,Croup,False,E_25,Have any of your family members been diagnosed with cluster headaches?,1,0.4320903739337766,0.3831025873303141,E_25,0.4320903739337766
+test:81691,8,Croup,False,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,4,0.24594213674233145,0.30986805353491415,E_91,0.2607709841513786
+test:81691,9,Croup,False,E_151,Do you have swelling in one or more areas of your body?,14,0.22773466000928622,0.2255463439121089,E_129,0.473841463665647
+test:81691,10,Croup,False,E_91,Do you have a fever (either felt or measured with a thermometer)?,9,0.2679024042506895,0.15654022146790542,E_129,0.4647123803719591
+test:81691,11,Croup,False,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",19,0.19194669384639995,0.15179206640545667,E_129,0.44335811989210117
+test:81691,12,Croup,False,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.4503472821210851,0.3914239745939467,E_129,0.4503472821210851
+test:81691,13,Croup,False,E_52,Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?,11,0.12532487549369772,0.11901750134513296,E_78,0.17627267138283614
+test:81691,14,Croup,False,E_105,Have you ever had a heart attack or do you have angina (chest pain)?,7,0.14664955169488736,0.13323836701117292,E_79,0.2097060224959788
+test:81691,15,Croup,False,E_211,Have you vomited several times or have you made several efforts to vomit?,34,0.0838349884191121,0.08486582316562168,E_146,0.1886433901943615
+test:81691,16,Croup,False,E_70,Are you significantly overweight compared to people of the same height as you?,30,0.11994704842311861,0.11234591385975184,E_77,0.3035008441179472
+test:81691,17,Croup,False,E_0,Have you recently had a viral infection?,29,0.13897847990479048,0.1333357888842459,E_77,0.3192171434013584
+test:81691,18,Croup,False,E_21,Have you ever had a spontaneous pneumothorax?,30,0.08708653588572064,0.1088994235302364,E_77,0.3343550015337229
+test:81691,19,Croup,False,E_24,Have you ever had a diagnosis of anemia?,2,0.3502530772578971,0.27576482750155945,E_146,0.35747354121777514
+test:77908,1,Ebola,True,E_151,Do you have swelling in one or more areas of your body?,14,0.2146009606025164,0.22032793549068802,E_91,0.3060047106360293
+test:77908,2,Ebola,True,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,2,0.3428340788001138,0.29486739655238386,E_91,0.35014320065040144
+test:77908,3,Ebola,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.3777477632581217,0.36210703696824437,E_129,0.3777477632581217
+test:77908,4,Ebola,True,E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",5,0.2575246167257866,0.31664084146789884,E_175,0.2954429777468036
+test:77908,5,Ebola,True,E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,2,0.296737722843842,0.3530397677562814,E_41,0.30906101603910935
+test:77908,6,Ebola,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.4066142597411289,0.36674746436998457,E_41,0.4066142597411289
+test:91516,1,Epiglottitis,True,E_214,Have you noticed a wheezing sound when you exhale?,24,0.14171530697904555,0.13130835406104105,E_181,0.3322632358101527
+test:91516,2,Epiglottitis,True,E_201,Do you have a cough?,5,0.25132736417627055,0.12679069591414896,E_129,0.37038679262328117
+test:91516,3,Epiglottitis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.3931792429527316,0.36315360808104935,E_129,0.3931792429527316
+test:91516,4,Epiglottitis,True,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",3,0.27284657136728285,0.2352266811387239,E_181,0.29945246771813283
+test:91516,5,Epiglottitis,True,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",1,0.4105599469662426,0.3244014372879867,E_65,0.4105599469662426
+test:96956,1,GERD,True,E_215,Do you have symptoms that get worse after eating?,2,0.3992069513250944,0.3261183399453698,E_173,0.40220926265879897
+test:96956,2,GERD,True,E_151,Do you have swelling in one or more areas of your body?,1,0.42184077759746147,0.34629743899885596,E_151,0.42184077759746147
+test:96956,3,GERD,True,E_3,Have you ever had a pericarditis?,17,0.14387995968065895,0.1305290465476403,E_129,0.30434364011970083
+test:96956,4,GERD,True,E_0,Have you recently had a viral infection?,28,0.12548668984156436,0.11768105424968935,E_129,0.28469487372408214
+test:96956,5,GERD,True,E_173,"Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",22,0.1307366920155519,0.12532529048194493,E_129,0.28382941327949623
+test:34242,1,Guillain-Barré syndrome,True,E_157,"Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",4,0.3811023777147879,0.31635753246241105,E_65,0.4027120854765643
+test:34242,2,Guillain-Barré syndrome,True,E_63,Do you have difficulty articulating words/speaking?,3,0.40562900983757777,0.3660058007114684,E_65,0.4197572688016892
+test:34242,3,Guillain-Barré syndrome,True,E_0,Have you recently had a viral infection?,1,0.3672508533997405,0.2708533671732948,E_0,0.3672508533997405
+test:106010,1,HIV (initial infection),True,E_191,Are you a former smoker?,4,0.37258113160744527,0.32372296319956123,E_129,0.42515672731336573
+test:106010,2,HIV (initial infection),True,E_91,Do you have a fever (either felt or measured with a thermometer)?,2,0.37872686846285514,0.2825327100752614,E_129,0.4018625991377668
+test:106010,3,HIV (initial infection),True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.5718020906846757,0.5964144505122064,E_129,0.5718020906846757
+test:8666,1,Influenza,False,E_214,Have you noticed a wheezing sound when you exhale?,25,0.1394917566740207,0.12906884336571178,E_181,0.3299594433642991
+test:8666,2,Influenza,False,E_201,Do you have a cough?,2,0.2867705836428643,0.1614102003615727,E_129,0.3741018863807353
+test:8666,3,Influenza,False,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.47970389530196433,0.43255266895558847,E_129,0.47970389530196433
+test:38202,1,Inguinal hernia,True,E_216,Do you have pain that is increased with movement?,3,0.35947004429338436,0.448820311815894,E_129,0.5046018262049868
+test:133888,1,Larygospasm,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,7,0.2808788403065055,0.32862511112951975,E_53,0.4161716206138598
+test:89477,1,Localized edema,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",2,0.4946336390656685,0.5137344402744928,E_152,0.741856490987477
+test:89477,2,Localized edema,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,10,0.3098838609222563,0.37079734653466706,E_152,0.7192269547797016
+test:100664,1,Myasthenia gravis,True,E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",3,0.4237622715485264,0.3767986389693253,E_53,0.4898102786240693
+test:100664,2,Myasthenia gravis,True,E_63,Do you have difficulty articulating words/speaking?,2,0.35614515786483647,0.2927070430493426,E_52,0.3567400796883945
+test:35039,1,Myocarditis,True,E_151,Do you have swelling in one or more areas of your body?,7,0.27247419509470383,0.2853168321240279,E_3,0.39662034623058795
+test:35039,2,Myocarditis,True,E_3,Have you ever had a pericarditis?,1,0.44825344599991573,0.39875361584857116,E_3,0.44825344599991573
+test:35039,3,Myocarditis,True,E_215,Do you have symptoms that get worse after eating?,4,0.34080146947196394,0.32792046587610424,E_0,0.3802718162915766
+test:35039,4,Myocarditis,True,E_0,Have you recently had a viral infection?,2,0.2393687420245722,0.18467721816927682,E_129,0.3749583012557678
+test:35039,5,Myocarditis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",2,0.23600393493585747,0.1836410515966006,E_79,0.24504420438146696
+test:35039,6,Myocarditis,True,E_79,Do you smoke cigarettes?,14,0.17941823339733567,0.09197520598088155,E_105,0.26318716566029926
+test:35039,7,Myocarditis,True,E_181,Do you have nasal congestion or a clear runny nose?,11,0.17170421818961154,0.1575130619861347,E_53,0.24262999321997838
+test:35039,8,Myocarditis,True,E_76,Do you feel slightly dizzy or lightheaded?,8,0.2029098566717191,0.1760339957820085,E_53,0.25112584486415934
+test:35039,9,Myocarditis,True,E_148,Are you feeling nauseous or do you feel like vomiting?,1,0.22796691908048997,0.09272203177980985,E_148,0.22796691908048997
+test:35039,10,Myocarditis,True,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,14,0.17769357544118225,0.1687478691464805,E_172,0.239242593997932
+test:35039,11,Myocarditis,True,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",2,0.25687255992618613,0.21671763318080353,E_53,0.32451198080735616
+test:35039,12,Myocarditis,True,E_201,Do you have a cough?,11,0.15031737592186858,0.1411870535419655,E_105,0.259932416645254
+test:35039,13,Myocarditis,True,E_70,Are you significantly overweight compared to people of the same height as you?,3,0.26123137335762303,0.16017434270158043,E_105,0.2947879367216379
+test:35039,14,Myocarditis,True,E_15,Have you started or taken any antipsychotic medication within the last 7 days?,7,0.19371256741796516,0.17813982919251872,E_53,0.2896071030720891
+test:35039,15,Myocarditis,True,E_64,Do you feel out of breath with minimal physical effort?,5,0.15169347249803034,0.15291352105007075,E_220,0.24570901790817964
+test:51611,1,PSVT,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.30621124425204244,0.2303261395490235,E_54,0.45249603809487365
+test:51611,2,PSVT,True,E_151,Do you have swelling in one or more areas of your body?,2,0.33900011551456216,0.31628535142985775,E_54,0.4270525128740993
+test:51611,3,PSVT,True,E_120,Do you have polyps in your nose?,5,0.2602004772143568,0.23981255626599568,E_54,0.42980438411830124
+test:51611,4,PSVT,True,E_148,Are you feeling nauseous or do you feel like vomiting?,15,0.1392001504444241,0.12089846526902702,E_54,0.43406412140744116
+test:51611,5,PSVT,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,18,0.15325044313955946,0.13617237032942245,E_54,0.44788778542400737
+test:51611,6,PSVT,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",3,0.2594875518256235,0.23403573089573212,E_54,0.49282901041300964
+test:51611,7,PSVT,True,E_220,Do you have pain that is increased when you breathe in deeply?,4,0.22265163414420838,0.1891929007654265,E_54,0.45293149824578227
+test:51611,8,PSVT,True,E_70,Are you significantly overweight compared to people of the same height as you?,18,0.21990420884913758,0.2132982143292636,E_54,0.4716846798979602
+test:51611,9,PSVT,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,24,0.24077966036947643,0.20073812177520087,E_54,0.4636509830282127
+test:51611,10,PSVT,True,E_79,Do you smoke cigarettes?,20,0.15835022506025406,0.16321306853820275,E_54,0.4341214139581564
+test:51611,11,PSVT,True,E_0,Have you recently had a viral infection?,20,0.18444935022786985,0.19308966887245013,E_54,0.47255788245264324
+test:51611,12,PSVT,True,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",2,0.44043987054105027,0.47683028657747334,E_54,0.4792328703638869
+test:51611,13,PSVT,True,E_62,Do you regularly take stimulant drugs?,3,0.35886784681584416,0.2737207148046747,E_54,0.49603097009487257
+test:2801,1,Pancreatic neoplasm,True,E_151,Do you have swelling in one or more areas of your body?,11,0.2190491536129182,0.22567408086408003,E_223,0.31399338603796834
+test:2801,2,Pancreatic neoplasm,True,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,1,0.3562856748961075,0.2997519160310195,E_223,0.3562856748961075
+test:76022,1,Panic attack,True,E_62,Do you regularly take stimulant drugs?,4,0.26211707049640776,0.22924386662241855,E_76,0.2981862743954844
+test:76022,2,Panic attack,True,E_31,Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?,10,0.2489810551386326,0.22801659889904832,E_53,0.3275699414191491
+test:76022,3,Panic attack,True,E_81,Do you suffer from chronic anxiety?,12,0.22275716017686886,0.206396031422731,E_53,0.2778593242148714
+test:76022,4,Panic attack,True,E_76,Do you feel slightly dizzy or lightheaded?,8,0.213447575924161,0.18977229941826168,E_129,0.3315411351956853
+test:76022,5,Panic attack,True,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,3,0.452459473539072,0.4053172176058828,E_129,0.5099555914867322
+test:76022,6,Panic attack,True,E_3,Have you ever had a pericarditis?,10,0.16734988772825768,0.17000466656702648,E_92,0.47121863651293155
+test:76022,7,Panic attack,True,E_0,Have you recently had a viral infection?,11,0.15728643434510117,0.1552896684475174,E_92,0.47435134164424
+test:76022,8,Panic attack,True,E_201,Do you have a cough?,12,0.17082720358400247,0.16081288536756255,E_92,0.4732868818457348
+test:76022,9,Panic attack,True,E_151,Do you have swelling in one or more areas of your body?,2,0.4401633445795912,0.42713812590621497,E_92,0.5171458795254252
+test:76022,10,Panic attack,True,E_148,Are you feeling nauseous or do you feel like vomiting?,7,0.22002858108694232,0.09634001507404666,E_129,0.5153043509793687
+test:76022,11,Panic attack,True,E_211,Have you vomited several times or have you made several efforts to vomit?,11,0.16791427000272968,0.17417093467250325,E_92,0.49839369223196356
+test:76022,12,Panic attack,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",3,0.38223035381890763,0.40239670383969084,E_92,0.5202216625118548
+test:76022,13,Panic attack,True,E_105,Have you ever had a heart attack or do you have angina (chest pain)?,9,0.2641041590506915,0.24774076766029937,E_157,0.350043360382536
+test:76022,14,Panic attack,True,E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",21,0.1442644005122137,0.1408661596091176,E_92,0.35799945649518156
+test:76022,15,Panic attack,True,E_157,"Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",2,0.3369858680713423,0.2743318446382372,E_92,0.38868601945195075
+test:62878,1,Pericarditis,False,E_181,Do you have nasal congestion or a clear runny nose?,2,0.2884293813292276,0.26398404532500247,E_214,0.3080708092946535
+test:62878,2,Pericarditis,False,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.34219145805411477,0.29622075422098915,E_124,0.34219145805411477
+test:62878,3,Pericarditis,False,E_79,Do you smoke cigarettes?,1,0.3172007790147434,0.2178596843406109,E_79,0.3172007790147434
+test:62878,4,Pericarditis,False,E_151,Do you have swelling in one or more areas of your body?,1,0.34782393185063903,0.29307997575038947,E_151,0.34782393185063903
+test:62878,5,Pericarditis,False,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",5,0.19021939226809342,0.16976247579237583,E_155,0.2749490930462833
+test:62878,6,Pericarditis,False,E_0,Have you recently had a viral infection?,4,0.23125349633555345,0.18749298575638926,E_155,0.27738099616057155
+test:62878,7,Pericarditis,False,E_76,Do you feel slightly dizzy or lightheaded?,5,0.25111546783339145,0.1508699730743028,E_53,0.30045787800339274
+test:62878,8,Pericarditis,False,E_148,Are you feeling nauseous or do you feel like vomiting?,7,0.21130782315297883,0.0775970218409749,E_105,0.2709318814414155
+test:62878,9,Pericarditis,False,E_201,Do you have a cough?,9,0.19074197270002993,0.17886785813085204,E_53,0.3014695813574987
+test:62878,10,Pericarditis,False,E_70,Are you significantly overweight compared to people of the same height as you?,3,0.264873294053207,0.15749469381928718,E_53,0.31251384897096335
+test:62878,11,Pericarditis,False,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.3506099409487339,0.34930109138348,E_129,0.3506099409487339
+test:62878,12,Pericarditis,False,E_15,Have you started or taken any antipsychotic medication within the last 7 days?,2,0.2633650779512641,0.20185638193122274,E_62,0.2713650561761418
+test:62878,13,Pericarditis,False,E_194,Have you noticed a high pitched sound when breathing in?,14,0.14084843230603877,0.12755293946812732,E_53,0.26998029142864416
+test:62878,14,Pericarditis,False,E_220,Do you have pain that is increased when you breathe in deeply?,15,0.17834040152953248,0.17458903713054771,E_146,0.2580864479907736
+test:62878,15,Pericarditis,False,E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",31,0.12914075698365401,0.12060121848358121,E_146,0.2665556676124707
+test:95923,1,Pneumonia,True,E_181,Do you have nasal congestion or a clear runny nose?,4,0.2744594604288084,0.2524914425241698,E_124,0.2835028205812895
+test:95923,2,Pneumonia,True,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.3426146235024456,0.2789176243643613,E_124,0.3426146235024456
+test:95923,3,Pneumonia,True,E_214,Have you noticed a wheezing sound when you exhale?,1,0.4287411779984139,0.36768256693741147,E_214,0.4287411779984139
+test:95923,4,Pneumonia,True,E_201,Do you have a cough?,5,0.2830406760915279,0.18277015099124896,E_77,0.39392930140546334
+test:95923,5,Pneumonia,True,E_81,Do you suffer from chronic anxiety?,3,0.32314314642738357,0.24044003872320346,E_157,0.3540188893655271
+test:95923,6,Pneumonia,True,E_151,Do you have swelling in one or more areas of your body?,5,0.23350342083986694,0.2221470333844649,E_129,0.3648825405974204
+test:95923,7,Pneumonia,True,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,31,0.1236288200118553,0.11269920304044799,E_129,0.3456299582013831
+test:95923,8,Pneumonia,True,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",24,0.15617580678783904,0.1541935706957784,E_129,0.48053657661961124
+test:95923,9,Pneumonia,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.5101452682421159,0.4484354647192429,E_129,0.5101452682421159
+test:19160,1,Possible NSTEMI / STEMI,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",26,0.15913803041081173,0.15565371880402523,E_181,0.3061934138198892
+test:19160,2,Possible NSTEMI / STEMI,True,E_181,Do you have nasal congestion or a clear runny nose?,1,0.3456151863637136,0.29889568280166556,E_181,0.3456151863637136
+test:19160,3,Possible NSTEMI / STEMI,True,E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,1,0.3136884179089055,0.23643865218820978,E_71,0.3136884179089055
+test:19160,4,Possible NSTEMI / STEMI,True,E_108,Do you have a problem with poor circulation?,1,0.3419296840328977,0.28388941796503636,E_108,0.3419296840328977
+test:19160,5,Possible NSTEMI / STEMI,True,E_2,Are you infected with the human immunodeficiency virus (HIV)?,2,0.30406619479824165,0.24805926158132086,E_218,0.3076755590440508
+test:19160,6,Possible NSTEMI / STEMI,True,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1,0.3071487479731808,0.24812634073686382,E_218,0.3071487479731808
+test:19160,7,Possible NSTEMI / STEMI,True,E_161,Have you recently had a loss of appetite or do you get full more quickly then usually?,17,0.2658276961113187,0.2378330102018846,E_157,0.370539140051988
+test:19160,8,Possible NSTEMI / STEMI,True,E_191,Are you a former smoker?,24,0.17068382142430497,0.18084276950380396,E_157,0.402126630648477
+test:19160,9,Possible NSTEMI / STEMI,True,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,18,0.2646219833009272,0.1554844171902823,E_157,0.3985131441336796
+test:19160,10,Possible NSTEMI / STEMI,True,E_70,Are you significantly overweight compared to people of the same height as you?,29,0.1809097918387961,0.17519313855359422,E_157,0.3254636206229657
+test:19160,11,Possible NSTEMI / STEMI,True,E_79,Do you smoke cigarettes?,12,0.2932231307447821,0.28067427601673106,E_157,0.4142473490178669
+test:19160,12,Possible NSTEMI / STEMI,True,E_125,Have you ever been diagnosed with gastroesophageal reflux?,10,0.23573962482984137,0.24426824726301744,E_97,0.3726897725071845
+test:23687,1,Pulmonary embolism,True,E_216,Do you have pain that is increased with movement?,4,0.27440892671024353,0.3259884179199012,E_196,0.31329617778343405
+test:23687,2,Pulmonary embolism,True,E_21,Have you ever had a spontaneous pneumothorax?,5,0.28232070184883445,0.3141897225378329,E_196,0.36275365935678605
+test:23687,3,Pulmonary embolism,True,E_196,Have you had surgery within the last month?,1,0.48261001569454764,0.42717384532952446,E_196,0.48261001569454764
+test:105129,1,Pulmonary neoplasm,True,E_201,Do you have a cough?,2,0.3734855480598871,0.30795404709031377,E_129,0.42633650443254556
+test:105129,2,Pulmonary neoplasm,True,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,2,0.42683603873820647,0.3792334929885832,E_129,0.4630334395318362
+test:105129,3,Pulmonary neoplasm,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",2,0.3633694356202173,0.32030279493973574,E_88,0.3874812324494198
+test:105129,4,Pulmonary neoplasm,True,E_222,Are you exposed to secondhand cigarette smoke on a daily basis?,1,0.36559959334745457,0.28520468717431924,E_222,0.36559959334745457
+test:105129,5,Pulmonary neoplasm,True,E_45,Have you been coughing up blood?,1,0.2991906025585975,0.24415383244780103,E_45,0.2991906025585975
+test:105129,6,Pulmonary neoplasm,True,E_79,Do you smoke cigarettes?,2,0.2920118180957218,0.27486867614957494,E_191,0.34595159439836404
+test:52755,1,SLE,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,5,0.29565962396079876,0.24729394736080462,E_133,0.6261148937759065
+test:52755,2,SLE,True,E_151,Do you have swelling in one or more areas of your body?,7,0.32654189386663984,0.32332612510687003,E_133,0.5663784393645027
+test:52755,3,SLE,True,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,6,0.40574564685343417,0.3985150724598579,E_133,0.666329202226412
+test:52755,4,SLE,True,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,8,0.22378237019949682,0.1508926567730379,E_133,0.6570367611674596
+test:52755,5,SLE,True,E_3,Have you ever had a pericarditis?,10,0.24918662112233034,0.21257885344990549,E_133,0.6330943368250554
+test:52755,6,SLE,True,E_131,Do your lesions peel off?,7,0.3176427486448138,0.3799475243501225,E_133,0.6539151252590527
+test:52755,7,SLE,True,E_134,How intense is the pain caused by the rash?,2,0.596424368193359,0.6094289227132045,E_133,0.6161435181623303
+test:36032,1,Sarcoidosis,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.3289902982084116,0.25804746433423054,E_54,0.45998225648391955
+test:36032,2,Sarcoidosis,True,E_151,Do you have swelling in one or more areas of your body?,2,0.371729199602037,0.3498875367391322,E_54,0.4417205214133488
+test:36032,3,Sarcoidosis,True,E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,6,0.24099387218916055,0.1747768679871516,E_54,0.4320777810976399
+test:36032,4,Sarcoidosis,True,E_120,Do you have polyps in your nose?,3,0.2671620644980284,0.24457427594175363,E_54,0.4119600287099096
+test:36032,5,Sarcoidosis,True,E_201,Do you have a cough?,3,0.2396261093493103,0.1704641838302593,E_54,0.46778734380110953
+test:36032,6,Sarcoidosis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",3,0.25986068866637413,0.23834964811301287,E_54,0.44016126323609317
+test:36032,7,Sarcoidosis,True,E_3,Have you ever had a pericarditis?,5,0.2176279060145469,0.2020782988562352,E_54,0.4387919052948106
+test:36032,8,Sarcoidosis,True,E_79,Do you smoke cigarettes?,10,0.1966598909825848,0.1739209670344895,E_54,0.4362706388621914
+test:36032,9,Sarcoidosis,True,E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",24,0.15250904850556898,0.1415804323964362,E_54,0.42973126545887774
+test:36032,10,Sarcoidosis,True,E_146,Are you taking any new oral anticoagulants ((NOACs)?,3,0.4113443361797304,0.3325106685638636,E_54,0.4583448813229416
+test:36032,11,Sarcoidosis,True,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",2,0.3538319487718896,0.2818372140574446,E_54,0.38654403718122865
+test:36032,12,Sarcoidosis,True,E_70,Are you significantly overweight compared to people of the same height as you?,15,0.20437467466317197,0.18168114517782633,E_54,0.5093570865833229
+test:133024,1,Scombroid food poisoning,True,E_91,Do you have a fever (either felt or measured with a thermometer)?,5,0.27553574188460744,0.23911326629242627,E_133,0.6209016407045745
+test:133024,2,Scombroid food poisoning,True,E_151,Do you have swelling in one or more areas of your body?,7,0.288101477188622,0.2831671028879441,E_133,0.5957535593759219
+test:133024,3,Scombroid food poisoning,True,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,6,0.37488285888795536,0.36564512409223676,E_133,0.6855355788657027
+test:133024,4,Scombroid food poisoning,True,E_92,Did your cheeks suddenly turn red?,3,0.5488722437442819,0.49725506790386936,E_133,0.6827332180144032
+test:749,1,Spontaneous pneumothorax,True,E_203,Do you have intense coughing fits?,7,0.254430554770587,0.24913235398665495,E_3,0.3303124826615638
+test:749,2,Spontaneous pneumothorax,True,E_21,Have you ever had a spontaneous pneumothorax?,7,0.25993995362645494,0.299359482371446,E_3,0.37643693073102946
+test:749,3,Spontaneous pneumothorax,True,E_79,Do you smoke cigarettes?,1,0.3951026191305443,0.3087854179673661,E_79,0.3951026191305443
+test:71107,1,Spontaneous rib fracture,True,E_203,Do you have intense coughing fits?,6,0.2571529622882535,0.25048670802640916,E_3,0.30875562141491114
+test:16097,1,Stable angina,True,E_181,Do you have nasal congestion or a clear runny nose?,3,0.27692942583238567,0.25468308071910045,E_214,0.30889487498036233
+test:16097,2,Stable angina,True,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.3527584587027641,0.31290054019014624,E_124,0.3527584587027641
+test:16097,3,Stable angina,True,E_79,Do you smoke cigarettes?,1,0.3051507107048608,0.2131024995554934,E_79,0.3051507107048608
+test:16097,4,Stable angina,True,E_45,Have you been coughing up blood?,1,0.31910569414663204,0.2825834446781552,E_45,0.31910569414663204
+test:16097,5,Stable angina,True,E_214,Have you noticed a wheezing sound when you exhale?,1,0.3494817843968055,0.3129924626762285,E_214,0.3494817843968055
+test:16097,6,Stable angina,True,E_105,Have you ever had a heart attack or do you have angina (chest pain)?,1,0.3094167010197273,0.20965226781074522,E_105,0.3094167010197273
+test:16097,7,Stable angina,True,E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,1,0.32461861769952755,0.2608353077443201,E_13,0.32461861769952755
+test:16097,8,Stable angina,True,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1,0.29247290715908064,0.19842180216652708,E_218,0.29247290715908064
+test:16097,9,Stable angina,True,E_151,Do you have swelling in one or more areas of your body?,7,0.21731938100817635,0.2349565148550874,E_78,0.26036837560876597
+test:16097,10,Stable angina,True,E_14,Do you have chest pain even at rest?,1,0.26876303781165256,0.2680907134206519,E_14,0.26876303781165256
+test:16097,11,Stable angina,True,E_143,"Do you exercise regularly, 4 times per week or more?",2,0.2721812027038312,0.1665678771234602,E_78,0.27336446939947723
+test:107472,1,Tuberculosis,True,E_214,Have you noticed a wheezing sound when you exhale?,23,0.13521770683239615,0.12594073052567076,E_181,0.2954710106745332
+test:107472,2,Tuberculosis,True,E_201,Do you have a cough?,6,0.25099744684073405,0.12591561781131203,E_129,0.3684012389018341
+test:107472,3,Tuberculosis,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",11,0.2013711555855677,0.19279452977123243,E_181,0.282514683962163
+test:107472,4,Tuberculosis,True,E_45,Have you been coughing up blood?,4,0.26943482149553155,0.20434042873413086,E_41,0.30088864013228944
+test:107472,5,Tuberculosis,True,E_79,Do you smoke cigarettes?,5,0.33374481517365623,0.2906839683535836,E_53,0.450644290163016
+test:107472,6,Tuberculosis,True,E_208,"Is your BMI less than 18.5, or are you underweight?",2,0.32876225318392377,0.22872263823386466,E_53,0.3511363389393233
+test:13402,1,URTI,True,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.5342818183188763,0.47181508218394624,E_129,0.5342818183188763
+test:125508,1,Unstable angina,False,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",23,0.18437066390841106,0.17341245693478846,E_146,0.3051512088181929
+test:125508,2,Unstable angina,False,E_79,Do you smoke cigarettes?,1,0.3497227409965392,0.2682016517216952,E_79,0.3497227409965392
+test:39033,1,Viral pharyngitis,True,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.3029689866538291,0.22975783836379876,E_54,0.43810520931295477
+test:39033,2,Viral pharyngitis,True,E_97,Do you have a sore throat?,2,0.362675306820181,0.3606785643254195,E_54,0.4886616722550795
+test:19424,1,Whooping cough,True,E_209,Are your vaccinations up to date?,1,0.442407777352039,0.4720069233285138,E_209,0.442407777352039

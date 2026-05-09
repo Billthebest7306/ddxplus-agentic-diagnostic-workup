@@ -1,0 +1,8 @@
+root_evidence_id,question_en,count
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",2
+E_201,Do you have a cough?,1
+E_220,Do you have pain that is increased when you breathe in deeply?,1
+E_125,Have you ever been diagnosed with gastroesophageal reflux?,1
+E_226,Are you more likely to develop common allergies than the general population?,1
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,1
+E_194,Have you noticed a high pitched sound when breathing in?,1

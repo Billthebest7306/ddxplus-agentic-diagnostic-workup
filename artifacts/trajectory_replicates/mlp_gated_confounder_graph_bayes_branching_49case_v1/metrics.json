@@ -1,0 +1,42 @@
+{
+  "num_cases": 49,
+  "accuracy": 0.8979591836734694,
+  "num_correct": 44,
+  "top3_accuracy": 0.9591836734693877,
+  "top5_accuracy": 0.9591836734693877,
+  "macro_f1": 0.8639455782312924,
+  "base_accuracy": 0.8571428571428571,
+  "base_num_correct": 42,
+  "wins_vs_base": 2,
+  "regressions_vs_base": 0,
+  "changed_predictions": 2,
+  "branch_trigger_rate": 0.08163265306122448,
+  "branches_spawned_total": 12,
+  "mean_branches_spawned": 0.24489795918367346,
+  "mean_selected_requests": 6.63265306122449,
+  "mean_base_requests": 6.918367346938775,
+  "mean_total_branch_requests": 9.959183673469388,
+  "total_api_calls": 545,
+  "total_input_tokens": 1284608,
+  "total_output_tokens": 61905,
+  "selection_source_distribution": {
+    "base": 47,
+    "counteranchor_scout": 1,
+    "pseudo_graph_top1": 1
+  },
+  "stop_reason_distribution": {
+    "agent_stop": 13,
+    "max_requests_reached": 1,
+    "selected_mlp_stop": 35
+  },
+  "run_name": "mlp_gated_confounder_graph_bayes_branching_49case_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1",
+  "runtime_seconds": 1313.1005489826202,
+  "run_live_api": true,
+  "allow_dry_run_benchmark": false,
+  "branch_trigger_name": "branch_trigger_mlp_v1",
+  "branch_trigger_threshold": 0.37499999999999994,
+  "branch_budget": 3,
+  "branch_judge_name": "calibrated_graph_bayes_mlp_resolver_v1",
+  "promotion_decision": "not_promoted_keep_notebook13_or_prior_confirmed_method"
+}

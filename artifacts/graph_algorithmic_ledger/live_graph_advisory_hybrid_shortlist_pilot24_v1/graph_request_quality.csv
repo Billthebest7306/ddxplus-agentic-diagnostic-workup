@@ -1,0 +1,185 @@
+case_id,turn_index,requested_root,requested_question,graph_rank,graph_score,information_gain,split_balance,weighted_present_rate,outside_graph_top10
+test:104857,1,E_63,Do you have difficulty articulating words/speaking?,3,0.9308,0.5803,0.3881,0.1941,False
+test:33118,1,E_169,Is your nose or the back of your throat itchy?,6,0.7519,0.2288,0.4021,0.201,False
+test:33118,2,E_183,Do you live in a rural area?,1,0.7588,0.1237,0.2305,0.1152,False
+test:33118,3,E_97,Do you have a sore throat?,2,0.7201,0.2129,0.5181,0.2591,False
+test:33118,4,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.7129,0.2246,0.8936,0.4468,False
+test:33118,5,E_214,Have you noticed a wheezing sound when you exhale?,3,0.5875,0.1087,0.1506,0.0753,False
+test:33118,6,E_184,Do you take medication that dilates your blood vessels?,11,0.8365,0.159,0.2835,0.1417,False
+test:33118,7,E_202,Does the person have a whooping cough?,2,0.7168,0.1019,0.118,0.059,False
+test:33118,8,E_120,Do you have polyps in your nose?,1,0.8497,0.2983,0.8461,0.5769,False
+test:33118,9,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,5,0.6004,0.1877,0.3911,0.1955,False
+test:33118,10,E_114,Are you more irritable or has your mood been very unstable recently?,16,0.8928,0.1026,0.2734,0.1367,True
+test:93930,1,E_126,Do you have liver cirrhosis?,7,0.8384,0.26,0.6931,0.3466,False
+test:93930,2,E_5,Have you ever had fluid in your lungs?,1,0.6758,0.2157,0.2263,0.1132,False
+test:93930,3,E_8,Do you currently undergo dialysis?,18,0.7216,0.2371,0.3146,0.1573,True
+test:93930,4,E_67,Do you have bouts of choking or shortness of breath that wake you up at night?,7,0.8482,0.2867,0.639,0.3195,False
+test:93930,5,E_106,Do you have heart failure?,2,0.6581,0.2825,0.8156,0.4078,False
+test:93930,6,E_197,Do you have a known kidney problem resulting in an inability to retain proteins?,4,0.7341,0.2509,0.7234,0.3617,False
+test:93930,7,E_12,Do you have a known severe food allergy?,1,0.6067,0.1735,0.1358,0.0679,False
+test:93930,8,E_137,Have you ever had surgery to remove lymph nodes?,2,0.5767,0.3021,0.8159,0.4079,False
+test:93930,9,E_34,Do you have an active cancer?,4,0.5797,0.1757,0.1736,0.0868,False
+test:93930,10,E_152,Where is the swelling located?,1,0.6393,0.8983,0.0679,0.966,False
+test:88250,1,E_45,Have you been coughing up blood?,3,0.6678,0.1492,0.8563,0.4282,False
+test:88250,2,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.6997,0.2242,0.7378,0.3689,False
+test:88250,3,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,3,0.702,0.1622,0.6598,0.3299,False
+test:88250,4,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.7746,0.2153,0.4703,0.2351,False
+test:88250,5,E_216,Do you have pain that is increased with movement?,17,0.8907,0.1611,0.2068,0.1034,True
+test:88250,6,E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",14,0.8341,0.1453,0.1931,0.0965,True
+test:88250,7,E_181,Do you have nasal congestion or a clear runny nose?,1,0.7444,0.178,0.9285,0.4642,False
+test:88250,8,E_183,Do you live in a rural area?,1,0.7577,0.091,0.1169,0.0585,False
+test:88250,9,E_97,Do you have a sore throat?,1,0.8163,0.2626,0.8638,0.4319,False
+test:88250,10,E_142,Does your mother suffer from asthma?,1,0.6598,0.0851,0.1028,0.0514,False
+test:88250,11,E_114,Are you more irritable or has your mood been very unstable recently?,16,0.8011,0.1074,0.1917,0.0958,True
+test:88250,12,E_169,Is your nose or the back of your throat itchy?,12,0.8891,0.1495,0.1921,0.0961,False
+test:90978,1,E_142,Does your mother suffer from asthma?,10,0.9439,0.2067,0.9617,0.4809,False
+test:90978,2,E_183,Do you live in a rural area?,6,0.9786,0.1952,0.8434,0.4217,False
+test:90978,3,E_4,Have you or any member of your family ever had croup?,10,0.7674,0.265,0.2488,0.1244,False
+test:90978,4,E_195,Do you live in the suburbs?,7,0.806,0.177,0.7529,0.3764,False
+test:90978,5,E_214,Have you noticed a wheezing sound when you exhale?,1,0.6619,0.1806,0.8642,0.5679,False
+test:90978,6,E_46,Have you had 2 or more asthma attacks in the past year?,14,0.7803,0.1738,0.1484,0.0742,True
+test:90978,7,E_181,Do you have nasal congestion or a clear runny nose?,1,0.7776,0.3934,0.7684,0.6158,False
+test:90978,8,E_91,Do you have a fever (either felt or measured with a thermometer)?,3,0.6512,0.2933,0.5233,0.7383,False
+test:29123,1,E_45,Have you been coughing up blood?,4,0.668,0.1501,0.848,0.424,False
+test:29123,2,E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,1,0.7175,0.2223,0.7101,0.3551,False
+test:29123,3,E_46,Have you had 2 or more asthma attacks in the past year?,10,0.8821,0.1896,0.3905,0.1953,False
+test:29123,4,E_101,Have you been hospitalized for an asthma attack in the past year?,4,0.9324,0.2559,0.9566,0.5217,False
+test:29123,5,E_214,Have you noticed a wheezing sound when you exhale?,1,0.7822,0.3575,0.9274,0.4637,False
+test:51421,1,E_23,Do you ever temporarily stop breathing while you’re asleep?,1,0.719,0.0936,0.1448,0.0724,False
+test:51421,2,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,13,0.8908,0.1683,0.3639,0.1819,True
+test:51421,3,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.8129,0.3172,0.8249,0.5876,False
+test:51421,4,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,10,0.7121,0.1737,0.2779,0.1389,False
+test:51421,5,E_183,Do you live in a rural area?,1,0.7352,0.0964,0.1565,0.0783,False
+test:51421,6,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",9,0.6723,0.1884,0.3949,0.1974,False
+test:51421,7,E_201,Do you have a cough?,2,0.71,0.2244,0.7301,0.6349,False
+test:51421,8,E_202,Does the person have a whooping cough?,1,0.7161,0.0952,0.1348,0.0674,False
+test:51421,9,E_174,Have you been unintentionally losing weight or have you lost your appetite?,2,0.6763,0.0717,0.1154,0.0577,False
+test:46152,1,E_25,Have any of your family members been diagnosed with cluster headaches?,10,0.7777,0.221,0.3206,0.1603,False
+test:46152,2,E_184,Do you take medication that dilates your blood vessels?,2,0.9009,0.2844,0.8666,0.4333,False
+test:46152,3,E_127,Do you feel that your eyes produce excessive tears?,5,0.8083,0.1674,0.5557,0.2778,False
+test:81691,1,E_169,Is your nose or the back of your throat itchy?,10,0.7384,0.2132,0.3392,0.1696,False
+test:81691,2,E_214,Have you noticed a wheezing sound when you exhale?,11,0.6347,0.1723,0.3022,0.1511,False
+test:81691,3,E_97,Do you have a sore throat?,2,0.747,0.2231,0.5733,0.2866,False
+test:81691,4,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,1,0.8237,0.2157,0.9149,0.4574,False
+test:81691,5,E_202,Does the person have a whooping cough?,1,0.8452,0.1584,0.2586,0.1293,False
+test:81691,6,E_25,Have any of your family members been diagnosed with cluster headaches?,13,0.8863,0.1713,0.2088,0.1044,True
+test:81691,7,E_182,Do you have greenish or yellowish nasal discharge?,5,0.6859,0.2447,0.7699,0.385,False
+test:81691,8,E_114,Are you more irritable or has your mood been very unstable recently?,1,0.6559,0.0726,0.1417,0.0708,False
+test:81691,9,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,4,0.6069,0.1199,0.1895,0.0947,False
+test:81691,10,E_91,Do you have a fever (either felt or measured with a thermometer)?,2,0.6698,0.1443,0.734,0.367,False
+test:81691,11,E_151,Do you have swelling in one or more areas of your body?,6,0.6898,0.1899,0.2959,0.1479,False
+test:81691,12,E_146,Are you taking any new oral anticoagulants ((NOACs)?,1,0.7553,0.1295,0.1501,0.075,False
+test:81691,13,E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,14,0.8495,0.1454,0.2927,0.1464,True
+test:81691,14,E_211,Have you vomited several times or have you made several efforts to vomit?,1,0.6777,0.0772,0.1052,0.0526,False
+test:81691,15,E_215,Do you have symptoms that get worse after eating?,1,0.6922,0.0648,0.0837,0.0419,False
+test:81691,16,E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",1,0.6254,0.0719,0.0963,0.0481,False
+test:81691,17,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.7116,0.2655,0.58,0.71,False
+test:81691,18,E_194,Have you noticed a high pitched sound when breathing in?,1,0.7299,0.1984,0.838,0.419,False
+test:81691,19,E_63,Do you have difficulty articulating words/speaking?,7,0.8105,0.1634,0.3712,0.1856,False
+test:81691,20,E_83,Have you noticed weakness in your facial muscles and/or eyes?,9,0.7428,0.1466,0.2942,0.1471,False
+test:81691,21,E_0,Have you recently had a viral infection?,2,0.7728,0.1766,0.7866,0.3933,False
+test:81691,22,E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",9,0.6809,0.1216,0.2706,0.1353,False
+test:81691,23,E_201,Do you have a cough?,1,0.7834,0.2058,0.8015,0.4007,False
+test:81691,24,E_79,Do you smoke cigarettes?,1,0.7055,0.1527,0.8099,0.4049,False
+test:77908,1,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,2,0.965,0.2618,0.6199,0.31,False
+test:77908,2,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,5,0.7956,0.2133,0.461,0.2305,False
+test:77908,3,E_12,Do you have a known severe food allergy?,14,0.7637,0.1939,0.2668,0.1334,True
+test:77908,4,E_92,Did your cheeks suddenly turn red?,4,0.8526,0.2746,0.3917,0.1958,False
+test:77908,5,E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",1,0.7716,0.1382,0.1663,0.0831,False
+test:77908,6,E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,12,0.8318,0.2077,0.273,0.1365,False
+test:77908,7,E_39,Have you felt confused or disorientated lately?,7,0.884,0.2708,0.7279,0.3639,False
+test:77908,8,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,2,0.6929,0.371,0.694,0.653,False
+test:34242,1,E_83,Have you noticed weakness in your facial muscles and/or eyes?,7,0.9722,0.406,0.8443,0.4222,False
+test:106010,1,E_224,Do you have family members who have had lung cancer?,11,0.9332,0.2604,0.6724,0.3362,False
+test:106010,2,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,9,0.8641,0.2585,0.3938,0.1969,False
+test:106010,3,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,8,0.8875,0.2733,0.6297,0.3149,False
+test:8666,1,E_23,Do you ever temporarily stop breathing while you’re asleep?,1,0.7179,0.0909,0.1386,0.0693,False
+test:8666,2,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,12,0.889,0.1704,0.3722,0.1861,False
+test:8666,3,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.8161,0.3211,0.8859,0.5571,False
+test:8666,4,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,6,0.6424,0.3226,0.5518,0.2759,False
+test:8666,5,E_94,Have you had chills or shivers?,11,0.6089,0.1613,0.8887,0.5556,False
+test:38202,1,E_216,Do you have pain that is increased with movement?,3,0.9023,0.5995,0.5559,0.278,False
+test:38202,2,E_30,Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?,4,0.862,0.2319,0.7471,0.3735,False
+test:133888,1,E_190,Have you noticed that you produce more saliva than usual?,4,0.6472,0.4408,0.2298,0.1149,False
+test:133888,2,E_12,Do you have a known severe food allergy?,5,0.7809,0.2935,0.1772,0.0886,False
+test:133888,3,E_202,Does the person have a whooping cough?,1,0.6957,0.1174,0.0498,0.0249,False
+test:2801,1,E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,1,0.9742,0.2677,0.6809,0.3404,False
+test:62878,1,E_142,Does your mother suffer from asthma?,1,0.7195,0.1072,0.2241,0.112,False
+test:62878,2,E_46,Have you had 2 or more asthma attacks in the past year?,8,0.8437,0.1669,0.3918,0.1959,False
+test:62878,3,E_79,Do you smoke cigarettes?,3,0.7017,0.2111,0.5457,0.2728,False
+test:62878,4,E_151,Do you have swelling in one or more areas of your body?,10,0.6604,0.1587,0.2323,0.1161,False
+test:62878,5,E_63,Do you have difficulty articulating words/speaking?,1,0.6899,0.0792,0.1035,0.0517,False
+test:62878,6,E_64,Do you feel out of breath with minimal physical effort?,1,0.6697,0.0823,0.1261,0.063,False
+test:62878,7,E_18,Do you have cystic fibrosis?,4,0.9019,0.2267,0.6038,0.3019,False
+test:62878,8,E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,1,0.6783,0.1037,0.1205,0.0603,False
+test:62878,9,E_81,Do you suffer from chronic anxiety?,1,0.6829,0.0849,0.1247,0.0623,False
+test:62878,10,E_190,Have you noticed that you produce more saliva than usual?,1,0.6137,0.0954,0.1579,0.079,False
+test:62878,11,E_43,Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?,1,0.5884,0.06,0.0907,0.0454,False
+test:62878,12,E_211,Have you vomited several times or have you made several efforts to vomit?,1,0.6616,0.0749,0.0901,0.0451,False
+test:62878,13,E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",1,0.7165,0.0901,0.0946,0.0473,False
+test:62878,14,E_93,"Do you have numbness, loss of sensation or tingling in the feet?",1,0.6504,0.0622,0.0634,0.0317,False
+test:62878,15,E_3,Have you ever had a pericarditis?,5,0.6264,0.1545,0.2078,0.1039,False
+test:62878,16,E_217,Are your symptoms worse when lying down and alleviated while sitting up?,3,0.6282,0.1692,0.2733,0.1366,False
+test:62878,17,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.8242,0.3936,0.9427,0.5287,False
+test:62878,18,E_0,Have you recently had a viral infection?,10,0.6521,0.1537,0.2525,0.1262,False
+test:62878,19,E_146,Are you taking any new oral anticoagulants ((NOACs)?,1,0.6741,0.093,0.1138,0.0569,False
+test:62878,20,E_201,Do you have a cough?,2,0.6919,0.1969,0.7407,0.6297,False
+test:62878,21,E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",1,0.6137,0.0618,0.0387,0.0194,False
+test:62878,22,E_174,Have you been unintentionally losing weight or have you lost your appetite?,17,0.7074,0.1171,0.1592,0.0796,True
+test:62878,23,E_60,Do you consume energy drinks regularly?,1,0.7047,0.0943,0.1265,0.0632,False
+test:62878,24,E_166,Did you vomit after coughing?,1,0.7233,0.1095,0.1018,0.0509,False
+test:95923,1,E_142,Does your mother suffer from asthma?,1,0.713,0.1023,0.2019,0.1009,False
+test:95923,2,E_46,Have you had 2 or more asthma attacks in the past year?,9,0.8216,0.1619,0.3731,0.1866,False
+test:95923,3,E_5,Have you ever had fluid in your lungs?,1,0.6629,0.1035,0.1408,0.0704,False
+test:95923,4,E_79,Do you smoke cigarettes?,5,0.6916,0.1873,0.5547,0.2773,False
+test:95923,5,E_224,Do you have family members who have had lung cancer?,1,0.8266,0.1419,0.2468,0.1234,False
+test:95923,6,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,2,0.6886,0.2422,0.996,0.498,False
+test:95923,7,E_91,Do you have a fever (either felt or measured with a thermometer)?,4,0.5216,0.1887,0.8671,0.4336,False
+test:23687,1,E_216,Do you have pain that is increased with movement?,8,0.8628,0.3204,0.3863,0.1931,False
+test:23687,2,E_21,Have you ever had a spontaneous pneumothorax?,5,1.0147,0.2944,0.5169,0.2585,False
+test:23687,3,E_34,Do you have an active cancer?,4,0.8091,0.2529,0.6683,0.3341,False
+test:23687,4,E_110,Have you been unable to move or get up for more than 3 consecutive days within the last 4 weeks?,5,0.8703,0.2212,0.8844,0.4422,False
+test:23687,5,E_196,Have you had surgery within the last month?,1,0.8416,0.4631,0.7531,0.6234,False
+test:133024,1,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,13,0.6288,0.1725,0.3098,0.1549,True
+test:133024,2,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,11,0.7291,0.1878,0.2692,0.1346,False
+test:133024,3,E_92,Did your cheeks suddenly turn red?,4,0.8794,0.3018,0.5159,0.2579,False
+test:16097,1,E_142,Does your mother suffer from asthma?,1,0.72,0.103,0.2049,0.1025,False
+test:16097,2,E_46,Have you had 2 or more asthma attacks in the past year?,10,0.8312,0.1641,0.3824,0.1912,False
+test:16097,3,E_79,Do you smoke cigarettes?,3,0.735,0.2417,0.6042,0.3021,False
+test:16097,4,E_162,Have you had an involuntary weight loss over the last 3 months?,2,0.7954,0.2562,0.7194,0.3597,False
+test:16097,5,E_72,Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?,4,0.881,0.226,0.7172,0.3586,False
+test:16097,6,E_108,Do you have a problem with poor circulation?,1,0.7729,0.1573,0.2079,0.104,False
+test:16097,7,E_21,Have you ever had a spontaneous pneumothorax?,1,0.7435,0.1456,0.1871,0.0935,False
+test:16097,8,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.751,0.2758,0.4869,0.2434,False
+test:16097,9,E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,1,0.7376,0.0921,0.1256,0.0628,False
+test:16097,10,E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,3,0.7473,0.1989,0.5389,0.2694,False
+test:16097,11,E_5,Have you ever had fluid in your lungs?,13,0.8659,0.1936,0.1872,0.0936,True
+test:16097,12,E_225,Do you have close family members who had a cardiovascular disease problem before the age of 50?,2,0.7845,0.2061,0.8109,0.5946,False
+test:16097,13,E_0,Have you recently had a viral infection?,12,0.6999,0.1396,0.1313,0.0657,False
+test:16097,14,E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,17,0.8477,0.1109,0.0996,0.0498,True
+test:16097,15,E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,6,0.7568,0.1991,0.5373,0.2687,False
+test:16097,16,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,1,0.7121,0.2058,0.889,0.4445,False
+test:16097,17,E_45,Have you been coughing up blood?,1,0.606,0.2403,0.7191,0.3596,False
+test:16097,18,E_8,Do you currently undergo dialysis?,1,0.7734,0.0841,0.1328,0.0664,False
+test:16097,19,E_201,Do you have a cough?,1,0.7431,0.1956,0.586,0.293,False
+test:16097,20,E_63,Do you have difficulty articulating words/speaking?,14,0.8618,0.1181,0.2234,0.1117,True
+test:16097,21,E_81,Do you suffer from chronic anxiety?,1,0.734,0.0874,0.1323,0.0661,False
+test:16097,22,E_190,Have you noticed that you produce more saliva than usual?,1,0.6643,0.1012,0.1805,0.0903,False
+test:16097,23,E_64,Do you feel out of breath with minimal physical effort?,1,0.7785,0.0672,0.1067,0.0534,False
+test:16097,24,E_211,Have you vomited several times or have you made several efforts to vomit?,18,0.7974,0.0843,0.0962,0.0481,True
+test:107472,1,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,14,0.7165,0.1459,0.2339,0.117,True
+test:107472,2,E_183,Do you live in a rural area?,1,0.7777,0.123,0.242,0.121,False
+test:107472,3,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.7958,0.2864,0.683,0.3415,False
+test:107472,4,E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,8,0.7363,0.1699,0.3244,0.1622,False
+test:107472,5,E_142,Does your mother suffer from asthma?,1,0.7803,0.1153,0.1495,0.0748,False
+test:107472,6,E_33,Do you have pain that improves when you lean forward?,1,0.6531,0.0952,0.1097,0.0548,False
+test:107472,7,E_201,Do you have a cough?,3,0.6766,0.165,0.7767,0.6116,False
+test:107472,8,E_45,Have you been coughing up blood?,5,0.6828,0.2212,0.4975,0.2487,False
+test:107472,9,E_79,Do you smoke cigarettes?,1,0.812,0.3687,0.9293,0.4647,False
+test:107472,10,E_208,"Is your BMI less than 18.5, or are you underweight?",2,0.7225,0.2316,0.8563,0.4281,False
+test:13402,1,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,5,0.5629,0.2018,0.791,0.3955,False
+test:13402,2,E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,9,0.8523,0.2354,0.3843,0.1921,False
+test:13402,3,E_88,Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?,1,0.7816,0.2434,0.8235,0.5883,False
+test:13402,4,E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",1,0.6988,0.0725,0.0513,0.0257,False
+test:13402,5,E_97,Do you have a sore throat?,5,0.68,0.1304,0.9244,0.5378,False
+test:19424,1,E_40,Have you been in contact with someone who has had pertussis (whoooping cough)?,10,0.7961,0.1284,0.6802,0.6599,False

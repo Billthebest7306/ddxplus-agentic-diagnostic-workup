@@ -1,0 +1,23 @@
+{
+  "policy_name": "graph_cert_info_le_0.30",
+  "info_threshold": 0.3,
+  "is_mlp_only_reference": false,
+  "accuracy": 0.8775510204081632,
+  "correct_count": 43,
+  "top3_accuracy": 0.9183673469387755,
+  "top5_accuracy": 0.9387755102040817,
+  "mean_requests": 6.591836734693878,
+  "median_requests": 5.0,
+  "blocked_by_trace_end_count": 42,
+  "graph_certificate_stop_count": 6,
+  "notebook13_terminal_fallback_count": 43,
+  "selection_reason": "primary_preserve_43_of_49_and_reduce_or_match_requests",
+  "base_stop_policy": {
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0
+  },
+  "offline_replay_limitation": "Replay can stop earlier on recorded trajectories, but cannot continue beyond a Notebook 13 trace that ended before the graph certificate fired."
+}

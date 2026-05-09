@@ -1,0 +1,3156 @@
+{
+  "test:111176": {
+    "case_id": "test:111176",
+    "true_pathology": "Acute rhinosinusitis",
+    "notebook13_prediction": "Chronic rhinosinusitis",
+    "notebook13_correct": false,
+    "num_requests": 8,
+    "terminal_graph_score": 0.2850556531575453,
+    "terminal_graph_information_gain": 0.19787617461750823,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_45",
+        "actual_request_graph_rank": 5,
+        "actual_request_graph_score": 0.23343573349747737,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.30157291475935954
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_77",
+        "actual_request_graph_rank": 8,
+        "actual_request_graph_score": 0.22855095760458288,
+        "top_graph_root": "E_124",
+        "top_graph_score": 0.33752427260127826
+      },
+      {
+        "turn_index": 3,
+        "actual_requested_root": "E_120",
+        "actual_request_graph_rank": 7,
+        "actual_request_graph_score": 0.24968127802539733,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.30813094529312346
+      },
+      {
+        "turn_index": 4,
+        "actual_requested_root": "E_209",
+        "actual_request_graph_rank": 7,
+        "actual_request_graph_score": 0.1913455409453958,
+        "top_graph_root": "E_103",
+        "top_graph_score": 0.23687270080345396
+      },
+      {
+        "turn_index": 5,
+        "actual_requested_root": "E_91",
+        "actual_request_graph_rank": 9,
+        "actual_request_graph_score": 0.1697351116877739,
+        "top_graph_root": "E_103",
+        "top_graph_score": 0.291818674840745
+      },
+      {
+        "turn_index": 6,
+        "actual_requested_root": "E_181",
+        "actual_request_graph_rank": 6,
+        "actual_request_graph_score": 0.2270058755192533,
+        "top_graph_root": "E_103",
+        "top_graph_score": 0.3062387165716402
+      },
+      {
+        "turn_index": 7,
+        "actual_requested_root": "E_182",
+        "actual_request_graph_rank": 3,
+        "actual_request_graph_score": 0.28931001827515956,
+        "top_graph_root": "E_103",
+        "top_graph_score": 0.3231177838228888
+      },
+      {
+        "turn_index": 8,
+        "actual_requested_root": "E_103",
+        "actual_request_graph_rank": 14,
+        "actual_request_graph_score": 0.19832568574257936,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.35799456262271684
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.30157291475935954,
+        "information_gain": 0.3402872384756047,
+        "split_balance": 0.9791123150815686,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.27009535521181716,
+        "information_gain": 0.17232038642761197,
+        "split_balance": 0.833764920984351,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.2662408664506128,
+        "information_gain": 0.22743224321822694,
+        "split_balance": 0.517120287883096,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.33752427260127826,
+        "information_gain": 0.2617654593132567,
+        "split_balance": 0.8092325097140405,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.2556706245568309,
+        "information_gain": 0.14387573205533483,
+        "split_balance": 0.8893048732699207,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_226",
+        "question_en": "Are you more likely to develop common allergies than the general population?",
+        "score": 0.2501508853741068,
+        "information_gain": 0.20105951356169796,
+        "split_balance": 0.5627332782707328,
+        "global_mi_norm": 0.09786565568276967,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.30813094529312346,
+        "information_gain": 0.3706586077422423,
+        "split_balance": 0.8795891126477287,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_226",
+        "question_en": "Are you more likely to develop common allergies than the general population?",
+        "score": 0.29850930430462347,
+        "information_gain": 0.18120908294600382,
+        "split_balance": 0.9909917010912128,
+        "global_mi_norm": 0.09786565568276967,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.2857988548374794,
+        "information_gain": 0.17894890435184646,
+        "split_balance": 0.9031028228928486,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 1,
+        "root_evidence_id": "E_103",
+        "question_en": "Have you lost your sense of smell?",
+        "score": 0.23687270080345396,
+        "information_gain": 0.1839123526757973,
+        "split_balance": 0.5819726124414268,
+        "global_mi_norm": 0.04893853593204167,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 2,
+        "root_evidence_id": "E_182",
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "score": 0.23270681506610502,
+        "information_gain": 0.14371654017568392,
+        "split_balance": 0.7704496937268361,
+        "global_mi_norm": 0.043322577330649266,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 3,
+        "root_evidence_id": "E_116",
+        "question_en": "Have you had a cold in the last 2 weeks?",
+        "score": 0.2281699874442525,
+        "information_gain": 0.10753005123854625,
+        "split_balance": 0.9225532417277158,
+        "global_mi_norm": 0.07525920388516205,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 1,
+        "root_evidence_id": "E_103",
+        "question_en": "Have you lost your sense of smell?",
+        "score": 0.291818674840745,
+        "information_gain": 0.23759407696883464,
+        "split_balance": 0.6619765764605012,
+        "global_mi_norm": 0.04893853593204167,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 2,
+        "root_evidence_id": "E_182",
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "score": 0.27330518734102366,
+        "information_gain": 0.1759036820656609,
+        "split_balance": 0.8694407521464167,
+        "global_mi_norm": 0.043322577330649266,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 3,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.2685807396840017,
+        "information_gain": 0.16641376744522518,
+        "split_balance": 0.8810667702924868,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 1,
+        "root_evidence_id": "E_103",
+        "question_en": "Have you lost your sense of smell?",
+        "score": 0.3062387165716402,
+        "information_gain": 0.2622474908489203,
+        "split_balance": 0.6266253139726794,
+        "global_mi_norm": 0.04893853593204167,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 2,
+        "root_evidence_id": "E_182",
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "score": 0.2792399665640436,
+        "information_gain": 0.18346275229865486,
+        "split_balance": 0.8686909057239149,
+        "global_mi_norm": 0.043322577330649266,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 3,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.2767289857835356,
+        "information_gain": 0.18013875740969593,
+        "split_balance": 0.8621884644788689,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 1,
+        "root_evidence_id": "E_103",
+        "question_en": "Have you lost your sense of smell?",
+        "score": 0.3231177838228888,
+        "information_gain": 0.28345158827856076,
+        "split_balance": 0.6260639093562541,
+        "global_mi_norm": 0.04893853593204167,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.28974952366342505,
+        "information_gain": 0.4511759963176961,
+        "split_balance": 0.27510188186722817,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 3,
+        "root_evidence_id": "E_182",
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "score": 0.28931001827515956,
+        "information_gain": 0.19406664819763023,
+        "split_balance": 0.8792704723368194,
+        "global_mi_norm": 0.043322577330649266,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.35799456262271684,
+        "information_gain": 0.4447960587012952,
+        "split_balance": 0.9590809678146215,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 2,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.35670545208031307,
+        "information_gain": 0.25249128035734897,
+        "split_balance": 0.9865693273391138,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 3,
+        "root_evidence_id": "E_169",
+        "question_en": "Is your nose or the back of your throat itchy?",
+        "score": 0.3448896912254257,
+        "information_gain": 0.2935309604014995,
+        "split_balance": 0.7199325137358941,
+        "global_mi_norm": 0.04150091687683878,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 1,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.2850556531575453,
+        "information_gain": 0.19787617461750823,
+        "split_balance": 0.8231000218639344,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 2,
+        "root_evidence_id": "E_121",
+        "question_en": "Do you have a deviated nasal septum?",
+        "score": 0.283291851623777,
+        "information_gain": 0.19612162655147553,
+        "split_balance": 0.8291538531696232,
+        "global_mi_norm": 0.04042944814306177,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 3,
+        "root_evidence_id": "E_116",
+        "question_en": "Have you had a cold in the last 2 weeks?",
+        "score": 0.2778681809701821,
+        "information_gain": 0.1663000092207738,
+        "split_balance": 0.940434755995367,
+        "global_mi_norm": 0.07525920388516205,
+        "was_actual_request": false
+      }
+    ]
+  },
+  "test:125508": {
+    "case_id": "test:125508",
+    "true_pathology": "Unstable angina",
+    "notebook13_prediction": "Anemia",
+    "notebook13_correct": false,
+    "num_requests": 2,
+    "terminal_graph_score": 0.35623694546281715,
+    "terminal_graph_information_gain": 0.30793201337756004,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_129",
+        "actual_request_graph_rank": 23,
+        "actual_request_graph_score": 0.18437066390841106,
+        "top_graph_root": "E_146",
+        "top_graph_score": 0.3051512088181929
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_79",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.3497227409965392,
+        "top_graph_root": "E_79",
+        "top_graph_score": 0.3497227409965392
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.3051512088181929,
+        "information_gain": 0.25608344894274376,
+        "split_balance": 0.6469629203807785,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.30022756811799883,
+        "information_gain": 0.20436752312289755,
+        "split_balance": 0.8608394787036133,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.2983318709981239,
+        "information_gain": 0.24971646291832184,
+        "split_balance": 0.6240097030005776,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.3497227409965392,
+        "information_gain": 0.2682016517216952,
+        "split_balance": 0.8503586120336286,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.344667563150503,
+        "information_gain": 0.2943033804396343,
+        "split_balance": 0.7065656479460967,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.34238966438758656,
+        "information_gain": 0.28769133554093723,
+        "split_balance": 0.7151956716097132,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.35623694546281715,
+        "information_gain": 0.30793201337756004,
+        "split_balance": 0.71100882102592,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.3489352067951414,
+        "information_gain": 0.2908157083973035,
+        "split_balance": 0.7470952149202328,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_24",
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "score": 0.3481359932645772,
+        "information_gain": 0.29142814559612884,
+        "split_balance": 0.7457575021721645,
+        "global_mi_norm": 0.062597029236989,
+        "was_actual_request": false
+      }
+    ]
+  },
+  "test:38475": {
+    "case_id": "test:38475",
+    "true_pathology": "Acute COPD exacerbation / infection",
+    "notebook13_prediction": "Myocarditis",
+    "notebook13_correct": false,
+    "num_requests": 24,
+    "terminal_graph_score": 0.2967221014452298,
+    "terminal_graph_information_gain": 0.21127259648449304,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_91",
+        "actual_request_graph_rank": 4,
+        "actual_request_graph_score": 0.2669482679316152,
+        "top_graph_root": "E_214",
+        "top_graph_score": 0.3149328507447009
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_124",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.34336724356280035,
+        "top_graph_root": "E_124",
+        "top_graph_score": 0.34336724356280035
+      },
+      {
+        "turn_index": 3,
+        "actual_requested_root": "E_79",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.31628336581082467,
+        "top_graph_root": "E_79",
+        "top_graph_score": 0.31628336581082467
+      },
+      {
+        "turn_index": 4,
+        "actual_requested_root": "E_151",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.26569963648174266,
+        "top_graph_root": "E_151",
+        "top_graph_score": 0.26569963648174266
+      },
+      {
+        "turn_index": 5,
+        "actual_requested_root": "E_0",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.22509433541847076,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.2697613988373094
+      },
+      {
+        "turn_index": 6,
+        "actual_requested_root": "E_63",
+        "actual_request_graph_rank": 5,
+        "actual_request_graph_score": 0.24997360702405969,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.31099217181306765
+      },
+      {
+        "turn_index": 7,
+        "actual_requested_root": "E_76",
+        "actual_request_graph_rank": 6,
+        "actual_request_graph_score": 0.26231236435758204,
+        "top_graph_root": "E_155",
+        "top_graph_score": 0.3289263184722156
+      },
+      {
+        "turn_index": 8,
+        "actual_requested_root": "E_148",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.27849786260088527,
+        "top_graph_root": "E_211",
+        "top_graph_score": 0.2884144497419324
+      },
+      {
+        "turn_index": 9,
+        "actual_requested_root": "E_70",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.26944649614194727,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.31538261879809376
+      },
+      {
+        "turn_index": 10,
+        "actual_requested_root": "E_220",
+        "actual_request_graph_rank": 13,
+        "actual_request_graph_score": 0.18940273106373937,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.3034196645056364
+      },
+      {
+        "turn_index": 11,
+        "actual_requested_root": "E_129",
+        "actual_request_graph_rank": 20,
+        "actual_request_graph_score": 0.17488546802613691,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.3002545594784129
+      },
+      {
+        "turn_index": 12,
+        "actual_requested_root": "E_147",
+        "actual_request_graph_rank": 4,
+        "actual_request_graph_score": 0.23930723404102885,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.27609987755229837
+      },
+      {
+        "turn_index": 13,
+        "actual_requested_root": "E_201",
+        "actual_request_graph_rank": 13,
+        "actual_request_graph_score": 0.1552138223318563,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.2568922129616634
+      },
+      {
+        "turn_index": 14,
+        "actual_requested_root": "E_212",
+        "actual_request_graph_rank": 29,
+        "actual_request_graph_score": 0.12858421867008618,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.2954884299186403
+      },
+      {
+        "turn_index": 15,
+        "actual_requested_root": "E_25",
+        "actual_request_graph_rank": 34,
+        "actual_request_graph_score": 0.08946144848028652,
+        "top_graph_root": "E_84",
+        "top_graph_score": 0.26869529881514825
+      },
+      {
+        "turn_index": 16,
+        "actual_requested_root": "E_194",
+        "actual_request_graph_rank": 26,
+        "actual_request_graph_score": 0.13218031166005026,
+        "top_graph_root": "E_84",
+        "top_graph_score": 0.2555042180051649
+      },
+      {
+        "turn_index": 17,
+        "actual_requested_root": "E_146",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.32335470046803605,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.3495352804212959
+      },
+      {
+        "turn_index": 18,
+        "actual_requested_root": "E_214",
+        "actual_request_graph_rank": 22,
+        "actual_request_graph_score": 0.09382038338135679,
+        "top_graph_root": "E_84",
+        "top_graph_score": 0.3120808080311216
+      },
+      {
+        "turn_index": 19,
+        "actual_requested_root": "E_181",
+        "actual_request_graph_rank": 4,
+        "actual_request_graph_score": 0.24170411938414588,
+        "top_graph_root": "E_77",
+        "top_graph_score": 0.30309797993972665
+      },
+      {
+        "turn_index": 20,
+        "actual_requested_root": "E_72",
+        "actual_request_graph_rank": 3,
+        "actual_request_graph_score": 0.2896182518534013,
+        "top_graph_root": "E_125",
+        "top_graph_score": 0.3758582951767197
+      },
+      {
+        "turn_index": 21,
+        "actual_requested_root": "E_142",
+        "actual_request_graph_rank": 26,
+        "actual_request_graph_score": 0.0832451828623808,
+        "top_graph_root": "E_125",
+        "top_graph_score": 0.32608551818187104
+      },
+      {
+        "turn_index": 22,
+        "actual_requested_root": "E_116",
+        "actual_request_graph_rank": 8,
+        "actual_request_graph_score": 0.19924992074796102,
+        "top_graph_root": "E_125",
+        "top_graph_score": 0.3420552085894636
+      },
+      {
+        "turn_index": 23,
+        "actual_requested_root": "E_125",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.3099967006960014,
+        "top_graph_root": "E_125",
+        "top_graph_score": 0.3099967006960014
+      },
+      {
+        "turn_index": 24,
+        "actual_requested_root": "E_217",
+        "actual_request_graph_rank": 15,
+        "actual_request_graph_score": 0.12124426252675742,
+        "top_graph_root": "E_84",
+        "top_graph_score": 0.2967221014452298
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_214",
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "score": 0.3149328507447009,
+        "information_gain": 0.2113038060262483,
+        "split_balance": 0.9423897764058708,
+        "global_mi_norm": 0.09062678925643265,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.28735473320115706,
+        "information_gain": 0.24571298263699815,
+        "split_balance": 0.5603821226532779,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.27158422428297274,
+        "information_gain": 0.2507287183946172,
+        "split_balance": 0.4255129443013601,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.34336724356280035,
+        "information_gain": 0.29738368593417164,
+        "split_balance": 0.6582217741459746,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_214",
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "score": 0.321988427206327,
+        "information_gain": 0.25157720499091824,
+        "split_balance": 0.774635491671805,
+        "global_mi_norm": 0.09062678925643265,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.2861564821560936,
+        "information_gain": 0.19043554909166724,
+        "split_balance": 0.8357489827510931,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.31628336581082467,
+        "information_gain": 0.2310385861347575,
+        "split_balance": 0.8256324605925329,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.24149086047563045,
+        "information_gain": 0.18099413209522733,
+        "split_balance": 0.588332395529019,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_214",
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "score": 0.21071918235142162,
+        "information_gain": 0.19182259958534112,
+        "split_balance": 0.3515317548021806,
+        "global_mi_norm": 0.09062678925643265,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 1,
+        "root_evidence_id": "E_151",
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "score": 0.26569963648174266,
+        "information_gain": 0.24012473342881457,
+        "split_balance": 0.44386738617943955,
+        "global_mi_norm": 0.14039483623550142,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2325591762412056,
+        "information_gain": 0.2848363089628111,
+        "split_balance": 0.6175769056435727,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 3,
+        "root_evidence_id": "E_217",
+        "question_en": "Are your symptoms worse when lying down and alleviated while sitting up?",
+        "score": 0.22514647627318554,
+        "information_gain": 0.16934219633805198,
+        "split_balance": 0.5733698710467687,
+        "global_mi_norm": 0.07334477091457213,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2697613988373094,
+        "information_gain": 0.33196966157290153,
+        "split_balance": 0.7205059069240791,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 2,
+        "root_evidence_id": "E_0",
+        "question_en": "Have you recently had a viral infection?",
+        "score": 0.22509433541847076,
+        "information_gain": 0.1874755852866415,
+        "split_balance": 0.4802049366350345,
+        "global_mi_norm": 0.06166253387804813,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 3,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.21454931828416007,
+        "information_gain": 0.15041616810907907,
+        "split_balance": 0.5955757479014339,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.31099217181306765,
+        "information_gain": 0.3984298636913855,
+        "split_balance": 0.7587255239660526,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 2,
+        "root_evidence_id": "E_172",
+        "question_en": "Do you have a hard time opening/raising one or both eyelids?",
+        "score": 0.26632790383485694,
+        "information_gain": 0.21733457574999437,
+        "split_balance": 0.6008210841812893,
+        "global_mi_norm": 0.04674161215336033,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 3,
+        "root_evidence_id": "E_65",
+        "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+        "score": 0.25840100850254055,
+        "information_gain": 0.23109382702828574,
+        "split_balance": 0.47475008872050983,
+        "global_mi_norm": 0.04626867143671025,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 1,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.3289263184722156,
+        "information_gain": 0.27862753656022415,
+        "split_balance": 0.674295117415697,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.3136729826671156,
+        "information_gain": 0.37512549253357685,
+        "split_balance": 0.9085470354176786,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 3,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.26942644542336064,
+        "information_gain": 0.24570750877523703,
+        "split_balance": 0.4641361786419329,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 1,
+        "root_evidence_id": "E_211",
+        "question_en": "Have you vomited several times or have you made several efforts to vomit?",
+        "score": 0.2884144497419324,
+        "information_gain": 0.2516029211961528,
+        "split_balance": 0.5721862384707062,
+        "global_mi_norm": 0.026083540288085176,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 2,
+        "root_evidence_id": "E_148",
+        "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+        "score": 0.27849786260088527,
+        "information_gain": 0.18142933503412542,
+        "split_balance": 0.8562694383341976,
+        "global_mi_norm": 0.09827957646910608,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 3,
+        "root_evidence_id": "E_78",
+        "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+        "score": 0.267093846825328,
+        "information_gain": 0.20561212868523338,
+        "split_balance": 0.6480834390864205,
+        "global_mi_norm": 0.1078325602835638,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.31538261879809376,
+        "information_gain": 0.3940672782276612,
+        "split_balance": 0.8238064272490213,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 2,
+        "root_evidence_id": "E_70",
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "score": 0.26944649614194727,
+        "information_gain": 0.18447176780029662,
+        "split_balance": 0.7770845519184078,
+        "global_mi_norm": 0.10612798227897592,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 3,
+        "root_evidence_id": "E_9",
+        "question_en": "Do you have swollen or painful lymph nodes?",
+        "score": 0.24214005251552057,
+        "information_gain": 0.2008853779934226,
+        "split_balance": 0.5223023667980649,
+        "global_mi_norm": 0.06172790202145449,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.3034196645056364,
+        "information_gain": 0.34524839519578215,
+        "split_balance": 0.9702409053956396,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 2,
+        "root_evidence_id": "E_62",
+        "question_en": "Do you regularly take stimulant drugs?",
+        "score": 0.25165188169696,
+        "information_gain": 0.18698689447404507,
+        "split_balance": 0.6600784507030288,
+        "global_mi_norm": 0.06101197024539242,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 3,
+        "root_evidence_id": "E_15",
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "score": 0.2329529256739442,
+        "information_gain": 0.189492994620037,
+        "split_balance": 0.5310043534560724,
+        "global_mi_norm": 0.034157539190074936,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.3002545594784129,
+        "information_gain": 0.37977631809641116,
+        "split_balance": 0.7559481258568232,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 2,
+        "root_evidence_id": "E_62",
+        "question_en": "Do you regularly take stimulant drugs?",
+        "score": 0.2763377373125381,
+        "information_gain": 0.20566086498638278,
+        "split_balance": 0.7250563120744149,
+        "global_mi_norm": 0.06101197024539242,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 3,
+        "root_evidence_id": "E_15",
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "score": 0.2682452899342701,
+        "information_gain": 0.21331660051597073,
+        "split_balance": 0.639227550413265,
+        "global_mi_norm": 0.034157539190074936,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.27609987755229837,
+        "information_gain": 0.35173430097096825,
+        "split_balance": 0.675460960753332,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 2,
+        "root_evidence_id": "E_62",
+        "question_en": "Do you regularly take stimulant drugs?",
+        "score": 0.24799793444067142,
+        "information_gain": 0.19530993540542424,
+        "split_balance": 0.5913292506937493,
+        "global_mi_norm": 0.06101197024539242,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 3,
+        "root_evidence_id": "E_15",
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "score": 0.24018201425381597,
+        "information_gain": 0.19754357582628668,
+        "split_balance": 0.5362618442218858,
+        "global_mi_norm": 0.034157539190074936,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2568922129616634,
+        "information_gain": 0.3069652619040603,
+        "split_balance": 0.7312990301517468,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 2,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.19325710234306373,
+        "information_gain": 0.15625667785121525,
+        "split_balance": 0.4391144822075914,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 3,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.19310333237497138,
+        "information_gain": 0.1657323126816525,
+        "split_balance": 0.375327495935905,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2954884299186403,
+        "information_gain": 0.34457403734077896,
+        "split_balance": 0.8983019131271226,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 2,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.2258916725297543,
+        "information_gain": 0.1775441862458411,
+        "split_balance": 0.5431449053475239,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 3,
+        "root_evidence_id": "E_65",
+        "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+        "score": 0.22136283444912247,
+        "information_gain": 0.1874302006119819,
+        "split_balance": 0.4607016025846764,
+        "global_mi_norm": 0.04626867143671025,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 1,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.26869529881514825,
+        "information_gain": 0.18671723392208317,
+        "split_balance": 0.7795794929768591,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 2,
+        "root_evidence_id": "E_157",
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "score": 0.23503990985746434,
+        "information_gain": 0.19011115354439076,
+        "split_balance": 0.5337252143444773,
+        "global_mi_norm": 0.057844097405602556,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 3,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2258089762414739,
+        "information_gain": 0.29800213612358073,
+        "split_balance": 0.4830715417410709,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 1,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.2555042180051649,
+        "information_gain": 0.18973358989421868,
+        "split_balance": 0.6755517223922469,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.23608146665307728,
+        "information_gain": 0.29999370634342876,
+        "split_balance": 0.5702830759171518,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 3,
+        "root_evidence_id": "E_157",
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "score": 0.20980772866908015,
+        "information_gain": 0.1761946003400264,
+        "split_balance": 0.4397322901785259,
+        "global_mi_norm": 0.057844097405602556,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.3495352804212959,
+        "information_gain": 0.4275355051306768,
+        "split_balance": 0.9705726611301011,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 2,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.32335470046803605,
+        "information_gain": 0.2733876708081847,
+        "split_balance": 0.6760303480973813,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 3,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.3117631439099479,
+        "information_gain": 0.26122239979631906,
+        "split_balance": 0.6571124415575265,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 1,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.3120808080311216,
+        "information_gain": 0.20771038815590986,
+        "split_balance": 0.9568527318362725,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 2,
+        "root_evidence_id": "E_157",
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "score": 0.2908292101233771,
+        "information_gain": 0.21484311859455096,
+        "split_balance": 0.7737500691830412,
+        "global_mi_norm": 0.057844097405602556,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 3,
+        "root_evidence_id": "E_83",
+        "question_en": "Have you noticed weakness in your facial muscles and/or eyes?",
+        "score": 0.27245238619736917,
+        "information_gain": 0.20028421528620788,
+        "split_balance": 0.7386007560433807,
+        "global_mi_norm": 0.028698011237914035,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 1,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.30309797993972665,
+        "information_gain": 0.19819024949874714,
+        "split_balance": 0.9283678702174494,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 2,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.27279776959696145,
+        "information_gain": 0.24540417009595605,
+        "split_balance": 0.48789815557498706,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 3,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.26734168017555554,
+        "information_gain": 0.3414638687241553,
+        "split_balance": 0.6468251958149749,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 1,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.3758582951767197,
+        "information_gain": 0.3140630417328455,
+        "split_balance": 0.808787677376632,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.31340928594222706,
+        "information_gain": 0.23014090358223127,
+        "split_balance": 0.8267064217888698,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 3,
+        "root_evidence_id": "E_72",
+        "question_en": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?",
+        "score": 0.2896182518534013,
+        "information_gain": 0.23344125897044632,
+        "split_balance": 0.6770463049786222,
+        "global_mi_norm": 0.026165978605018386,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 21,
+        "graph_rank": 1,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.32608551818187104,
+        "information_gain": 0.28132108420707197,
+        "split_balance": 0.6515929375484331,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 21,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.28696347279448053,
+        "information_gain": 0.22175107288731352,
+        "split_balance": 0.6951467645101213,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 21,
+        "graph_rank": 3,
+        "root_evidence_id": "E_31",
+        "question_en": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?",
+        "score": 0.227385405901644,
+        "information_gain": 0.18746304557199941,
+        "split_balance": 0.5007013626309043,
+        "global_mi_norm": 0.04619530098817672,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 22,
+        "graph_rank": 1,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.3420552085894636,
+        "information_gain": 0.3009452100930771,
+        "split_balance": 0.6533955355403556,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 22,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.3033423798787219,
+        "information_gain": 0.23733321212765027,
+        "split_balance": 0.7212347357899345,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 22,
+        "graph_rank": 3,
+        "root_evidence_id": "E_31",
+        "question_en": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?",
+        "score": 0.2383243067239787,
+        "information_gain": 0.2009165661044301,
+        "split_balance": 0.5018752586068385,
+        "global_mi_norm": 0.04619530098817672,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 23,
+        "graph_rank": 1,
+        "root_evidence_id": "E_125",
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "score": 0.3099967006960014,
+        "information_gain": 0.2803085960281759,
+        "split_balance": 0.5497340912634143,
+        "global_mi_norm": 0.06579420367897011,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 23,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.2983197962804993,
+        "information_gain": 0.23856810289559224,
+        "split_balance": 0.6811647610394265,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 23,
+        "graph_rank": 3,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.26379647985441507,
+        "information_gain": 0.22595530926869692,
+        "split_balance": 0.5376509647233645,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 24,
+        "graph_rank": 1,
+        "root_evidence_id": "E_84",
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "score": 0.2967221014452298,
+        "information_gain": 0.21127259648449304,
+        "split_balance": 0.8354629101778837,
+        "global_mi_norm": 0.047691754619056496,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 24,
+        "graph_rank": 2,
+        "root_evidence_id": "E_157",
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "score": 0.2678583251912648,
+        "information_gain": 0.20975437912027828,
+        "split_balance": 0.6477507801650804,
+        "global_mi_norm": 0.057844097405602556,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 24,
+        "graph_rank": 3,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2636464168676889,
+        "information_gain": 0.35425318863666394,
+        "split_balance": 0.5434225057304845,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      }
+    ]
+  },
+  "test:62878": {
+    "case_id": "test:62878",
+    "true_pathology": "Pericarditis",
+    "notebook13_prediction": "Anemia",
+    "notebook13_correct": false,
+    "num_requests": 15,
+    "terminal_graph_score": 0.34319139704510343,
+    "terminal_graph_information_gain": 0.28148206463630565,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_181",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.2884293813292276,
+        "top_graph_root": "E_214",
+        "top_graph_score": 0.3080708092946535
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_124",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.34219145805411477,
+        "top_graph_root": "E_124",
+        "top_graph_score": 0.34219145805411477
+      },
+      {
+        "turn_index": 3,
+        "actual_requested_root": "E_79",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.3172007790147434,
+        "top_graph_root": "E_79",
+        "top_graph_score": 0.3172007790147434
+      },
+      {
+        "turn_index": 4,
+        "actual_requested_root": "E_151",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.34782393185063903,
+        "top_graph_root": "E_151",
+        "top_graph_score": 0.34782393185063903
+      },
+      {
+        "turn_index": 5,
+        "actual_requested_root": "E_65",
+        "actual_request_graph_rank": 5,
+        "actual_request_graph_score": 0.19021939226809342,
+        "top_graph_root": "E_155",
+        "top_graph_score": 0.2749490930462833
+      },
+      {
+        "turn_index": 6,
+        "actual_requested_root": "E_0",
+        "actual_request_graph_rank": 4,
+        "actual_request_graph_score": 0.23125349633555345,
+        "top_graph_root": "E_155",
+        "top_graph_score": 0.27738099616057155
+      },
+      {
+        "turn_index": 7,
+        "actual_requested_root": "E_76",
+        "actual_request_graph_rank": 5,
+        "actual_request_graph_score": 0.25111546783339145,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.30045787800339274
+      },
+      {
+        "turn_index": 8,
+        "actual_requested_root": "E_148",
+        "actual_request_graph_rank": 7,
+        "actual_request_graph_score": 0.21130782315297883,
+        "top_graph_root": "E_105",
+        "top_graph_score": 0.2709318814414155
+      },
+      {
+        "turn_index": 9,
+        "actual_requested_root": "E_201",
+        "actual_request_graph_rank": 9,
+        "actual_request_graph_score": 0.19074197270002993,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.3014695813574987
+      },
+      {
+        "turn_index": 10,
+        "actual_requested_root": "E_70",
+        "actual_request_graph_rank": 3,
+        "actual_request_graph_score": 0.264873294053207,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.31251384897096335
+      },
+      {
+        "turn_index": 11,
+        "actual_requested_root": "E_129",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.3506099409487339,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.3506099409487339
+      },
+      {
+        "turn_index": 12,
+        "actual_requested_root": "E_15",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.2633650779512641,
+        "top_graph_root": "E_62",
+        "top_graph_score": 0.2713650561761418
+      },
+      {
+        "turn_index": 13,
+        "actual_requested_root": "E_194",
+        "actual_request_graph_rank": 14,
+        "actual_request_graph_score": 0.14084843230603877,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.26998029142864416
+      },
+      {
+        "turn_index": 14,
+        "actual_requested_root": "E_220",
+        "actual_request_graph_rank": 15,
+        "actual_request_graph_score": 0.17834040152953248,
+        "top_graph_root": "E_146",
+        "top_graph_score": 0.2580864479907736
+      },
+      {
+        "turn_index": 15,
+        "actual_requested_root": "E_175",
+        "actual_request_graph_rank": 31,
+        "actual_request_graph_score": 0.12914075698365401,
+        "top_graph_root": "E_146",
+        "top_graph_score": 0.2665556676124707
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_214",
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "score": 0.3080708092946535,
+        "information_gain": 0.2102815017459345,
+        "split_balance": 0.9020951229005618,
+        "global_mi_norm": 0.09062678925643265,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.2884293813292276,
+        "information_gain": 0.26398404532500247,
+        "split_balance": 0.4671189143143375,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_91",
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "score": 0.2834290443249698,
+        "information_gain": 0.25863248918050863,
+        "split_balance": 0.4635537192394106,
+        "global_mi_norm": 0.13979990189302677,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.34219145805411477,
+        "information_gain": 0.29622075422098915,
+        "split_balance": 0.6565855065583774,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_214",
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "score": 0.3149574947692801,
+        "information_gain": 0.24948838404374243,
+        "split_balance": 0.7389029871430968,
+        "global_mi_norm": 0.09062678925643265,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.28930362122302355,
+        "information_gain": 0.31867052034199495,
+        "split_balance": 0.9775510638290492,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.3172007790147434,
+        "information_gain": 0.2178596843406109,
+        "split_balance": 0.9020360248541062,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_45",
+        "question_en": "Have you been coughing up blood?",
+        "score": 0.2617081397942615,
+        "information_gain": 0.2275263173159776,
+        "split_balance": 0.4978996469915584,
+        "global_mi_norm": 0.10004277785491328,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.26119009434494583,
+        "information_gain": 0.19215600722933424,
+        "split_balance": 0.6601306206092179,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 1,
+        "root_evidence_id": "E_151",
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "score": 0.34782393185063903,
+        "information_gain": 0.29307997575038947,
+        "split_balance": 0.7089347295903492,
+        "global_mi_norm": 0.14039483623550142,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 2,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.2456622050426432,
+        "information_gain": 0.18882791888224892,
+        "split_balance": 0.598132322167749,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 3,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.24376546923992795,
+        "information_gain": 0.19836800292198095,
+        "split_balance": 0.5340921445930893,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 1,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.2749490930462833,
+        "information_gain": 0.1860735525475442,
+        "split_balance": 0.8080681959771079,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.25877798467803353,
+        "information_gain": 0.2962684113320994,
+        "split_balance": 0.8063086305009679,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 3,
+        "root_evidence_id": "E_76",
+        "question_en": "Do you feel slightly dizzy or lightheaded?",
+        "score": 0.2260219310236792,
+        "information_gain": 0.16666502397682015,
+        "split_balance": 0.5932112960612554,
+        "global_mi_norm": 0.07416434866069545,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 1,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.27738099616057155,
+        "information_gain": 0.15858718678731226,
+        "split_balance": 0.9708748341269333,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.24367188697096856,
+        "information_gain": 0.28525541223913853,
+        "split_balance": 0.7211770284532835,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 3,
+        "root_evidence_id": "E_76",
+        "question_en": "Do you feel slightly dizzy or lightheaded?",
+        "score": 0.2328020410157242,
+        "information_gain": 0.17007256341718544,
+        "split_balance": 0.620238485659607,
+        "global_mi_norm": 0.07416434866069545,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.30045787800339274,
+        "information_gain": 0.3346952559599319,
+        "split_balance": 0.998316824155949,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 2,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.2952882833209901,
+        "information_gain": 0.21850499658056505,
+        "split_balance": 0.7706950962990422,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 3,
+        "root_evidence_id": "E_104",
+        "question_en": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+        "score": 0.2617590204030555,
+        "information_gain": 0.20203307771694215,
+        "split_balance": 0.6357899939815446,
+        "global_mi_norm": 0.09528118264540107,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 1,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.2709318814414155,
+        "information_gain": 0.20888210651366176,
+        "split_balance": 0.6591263401140417,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 2,
+        "root_evidence_id": "E_70",
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "score": 0.2626574280876533,
+        "information_gain": 0.1722865563491746,
+        "split_balance": 0.7968118926290988,
+        "global_mi_norm": 0.10612798227897592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 3,
+        "root_evidence_id": "E_71",
+        "question_en": "Do you have high cholesterol or do you take medications to treat high cholesterol?",
+        "score": 0.2578771555299455,
+        "information_gain": 0.1984168372553444,
+        "split_balance": 0.6396549826624158,
+        "global_mi_norm": 0.06390876652615121,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.3014695813574987,
+        "information_gain": 0.3602970800259604,
+        "split_balance": 0.8714090325095678,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 2,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.2733876151749828,
+        "information_gain": 0.21798953784473346,
+        "split_balance": 0.6269249312387746,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 3,
+        "root_evidence_id": "E_70",
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "score": 0.26240111557035434,
+        "information_gain": 0.14679224146100195,
+        "split_balance": 0.9310728219173598,
+        "global_mi_norm": 0.10612798227897592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.31251384897096335,
+        "information_gain": 0.3799081945099641,
+        "split_balance": 0.8719999230088302,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 2,
+        "root_evidence_id": "E_105",
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "score": 0.2671677046506318,
+        "information_gain": 0.22470106398565637,
+        "split_balance": 0.5496640549915122,
+        "global_mi_norm": 0.09914490426759592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 3,
+        "root_evidence_id": "E_70",
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "score": 0.264873294053207,
+        "information_gain": 0.15749469381928718,
+        "split_balance": 0.8904742658921894,
+        "global_mi_norm": 0.10612798227897592,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.3506099409487339,
+        "information_gain": 0.34930109138348,
+        "split_balance": 0.4110362279318833,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 2,
+        "root_evidence_id": "E_62",
+        "question_en": "Do you regularly take stimulant drugs?",
+        "score": 0.3112532019915254,
+        "information_gain": 0.2351882221617903,
+        "split_balance": 0.8003468383321568,
+        "global_mi_norm": 0.06101197024539242,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 3,
+        "root_evidence_id": "E_15",
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "score": 0.30917041701044673,
+        "information_gain": 0.23453202429715017,
+        "split_balance": 0.7989128040881521,
+        "global_mi_norm": 0.034157539190074936,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 1,
+        "root_evidence_id": "E_62",
+        "question_en": "Do you regularly take stimulant drugs?",
+        "score": 0.2713650561761418,
+        "information_gain": 0.19764653480611008,
+        "split_balance": 0.7346481987932276,
+        "global_mi_norm": 0.06101197024539242,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 2,
+        "root_evidence_id": "E_15",
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "score": 0.2633650779512641,
+        "information_gain": 0.20185638193122274,
+        "split_balance": 0.6678139696452148,
+        "global_mi_norm": 0.034157539190074936,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 3,
+        "root_evidence_id": "E_147",
+        "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+        "score": 0.2623938464441581,
+        "information_gain": 0.20100357212455888,
+        "split_balance": 0.6659252365775841,
+        "global_mi_norm": 0.03404406515746665,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.26998029142864416,
+        "information_gain": 0.2843296754884262,
+        "split_balance": 0.9766705240539926,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 2,
+        "root_evidence_id": "E_155",
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "score": 0.2309134936814179,
+        "information_gain": 0.20908175569501417,
+        "split_balance": 0.39178711675816547,
+        "global_mi_norm": 0.09760043223363409,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 3,
+        "root_evidence_id": "E_82",
+        "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+        "score": 0.2030647977071144,
+        "information_gain": 0.15668054634770748,
+        "split_balance": 0.48567401178033043,
+        "global_mi_norm": 0.09738517723797671,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.2580864479907736,
+        "information_gain": 0.2148211093037087,
+        "split_balance": 0.5532636596061704,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 2,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.2493996645771618,
+        "information_gain": 0.205643730924984,
+        "split_balance": 0.537775479986073,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 3,
+        "root_evidence_id": "E_24",
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "score": 0.24866412410685898,
+        "information_gain": 0.2059772865749736,
+        "split_balance": 0.5383496225668709,
+        "global_mi_norm": 0.062597029236989,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.2665556676124707,
+        "information_gain": 0.2280154927546876,
+        "split_balance": 0.5393550786789298,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 2,
+        "root_evidence_id": "E_157",
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "score": 0.25905766631875626,
+        "information_gain": 0.21374017038817478,
+        "split_balance": 0.567822167586242,
+        "global_mi_norm": 0.057844097405602556,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 3,
+        "root_evidence_id": "E_82",
+        "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+        "score": 0.2584100616909315,
+        "information_gain": 0.1715678016237816,
+        "split_balance": 0.7752437435333825,
+        "global_mi_norm": 0.09738517723797671,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.34319139704510343,
+        "information_gain": 0.28148206463630565,
+        "split_balance": 0.765104891527852,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 2,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.33712274869872566,
+        "information_gain": 0.2661916158425753,
+        "split_balance": 0.7996739879026786,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 3,
+        "root_evidence_id": "E_24",
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "score": 0.33628045056588046,
+        "information_gain": 0.26673965120031806,
+        "split_balance": 0.7983925209585103,
+        "global_mi_norm": 0.062597029236989,
+        "was_actual_request": false
+      }
+    ]
+  },
+  "test:81691": {
+    "case_id": "test:81691",
+    "true_pathology": "Croup",
+    "notebook13_prediction": "Anemia",
+    "notebook13_correct": false,
+    "num_requests": 19,
+    "terminal_graph_score": 0.40440800218975176,
+    "terminal_graph_information_gain": 0.3327603810935364,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_214",
+        "actual_request_graph_rank": 20,
+        "actual_request_graph_score": 0.13932904998821583,
+        "top_graph_root": "E_91",
+        "top_graph_score": 0.2903723353686481
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_169",
+        "actual_request_graph_rank": 5,
+        "actual_request_graph_score": 0.2713931238300816,
+        "top_graph_root": "E_41",
+        "top_graph_score": 0.30218154357865223
+      },
+      {
+        "turn_index": 3,
+        "actual_requested_root": "E_97",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.2958009375638656,
+        "top_graph_root": "E_41",
+        "top_graph_score": 0.29949203201018937
+      },
+      {
+        "turn_index": 4,
+        "actual_requested_root": "E_41",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.31963833266157304,
+        "top_graph_root": "E_41",
+        "top_graph_score": 0.31963833266157304
+      },
+      {
+        "turn_index": 5,
+        "actual_requested_root": "E_194",
+        "actual_request_graph_rank": 8,
+        "actual_request_graph_score": 0.2051287318396769,
+        "top_graph_root": "E_53",
+        "top_graph_score": 0.2945824101207096
+      },
+      {
+        "turn_index": 6,
+        "actual_requested_root": "E_201",
+        "actual_request_graph_rank": 8,
+        "actual_request_graph_score": 0.24142280191953797,
+        "top_graph_root": "E_124",
+        "top_graph_score": 0.3452522703462338
+      },
+      {
+        "turn_index": 7,
+        "actual_requested_root": "E_25",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.4320903739337766,
+        "top_graph_root": "E_25",
+        "top_graph_score": 0.4320903739337766
+      },
+      {
+        "turn_index": 8,
+        "actual_requested_root": "E_66",
+        "actual_request_graph_rank": 4,
+        "actual_request_graph_score": 0.24594213674233145,
+        "top_graph_root": "E_91",
+        "top_graph_score": 0.2607709841513786
+      },
+      {
+        "turn_index": 9,
+        "actual_requested_root": "E_151",
+        "actual_request_graph_rank": 14,
+        "actual_request_graph_score": 0.22773466000928622,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.473841463665647
+      },
+      {
+        "turn_index": 10,
+        "actual_requested_root": "E_91",
+        "actual_request_graph_rank": 9,
+        "actual_request_graph_score": 0.2679024042506895,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.4647123803719591
+      },
+      {
+        "turn_index": 11,
+        "actual_requested_root": "E_155",
+        "actual_request_graph_rank": 19,
+        "actual_request_graph_score": 0.19194669384639995,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.44335811989210117
+      },
+      {
+        "turn_index": 12,
+        "actual_requested_root": "E_129",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.4503472821210851,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.4503472821210851
+      },
+      {
+        "turn_index": 13,
+        "actual_requested_root": "E_52",
+        "actual_request_graph_rank": 11,
+        "actual_request_graph_score": 0.12532487549369772,
+        "top_graph_root": "E_78",
+        "top_graph_score": 0.17627267138283614
+      },
+      {
+        "turn_index": 14,
+        "actual_requested_root": "E_105",
+        "actual_request_graph_rank": 7,
+        "actual_request_graph_score": 0.14664955169488736,
+        "top_graph_root": "E_79",
+        "top_graph_score": 0.2097060224959788
+      },
+      {
+        "turn_index": 15,
+        "actual_requested_root": "E_211",
+        "actual_request_graph_rank": 34,
+        "actual_request_graph_score": 0.0838349884191121,
+        "top_graph_root": "E_146",
+        "top_graph_score": 0.1886433901943615
+      },
+      {
+        "turn_index": 16,
+        "actual_requested_root": "E_70",
+        "actual_request_graph_rank": 30,
+        "actual_request_graph_score": 0.11994704842311861,
+        "top_graph_root": "E_77",
+        "top_graph_score": 0.3035008441179472
+      },
+      {
+        "turn_index": 17,
+        "actual_requested_root": "E_0",
+        "actual_request_graph_rank": 29,
+        "actual_request_graph_score": 0.13897847990479048,
+        "top_graph_root": "E_77",
+        "top_graph_score": 0.3192171434013584
+      },
+      {
+        "turn_index": 18,
+        "actual_requested_root": "E_21",
+        "actual_request_graph_rank": 30,
+        "actual_request_graph_score": 0.08708653588572064,
+        "top_graph_root": "E_77",
+        "top_graph_score": 0.3343550015337229
+      },
+      {
+        "turn_index": 19,
+        "actual_requested_root": "E_24",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.3502530772578971,
+        "top_graph_root": "E_146",
+        "top_graph_score": 0.35747354121777514
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_91",
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "score": 0.2903723353686481,
+        "information_gain": 0.17242889679535964,
+        "split_balance": 0.9695948189180605,
+        "global_mi_norm": 0.13979990189302677,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.28644548562645683,
+        "information_gain": 0.3661900280608375,
+        "split_balance": 0.6968933503136343,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_41",
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "score": 0.28276931145004053,
+        "information_gain": 0.2109708595402727,
+        "split_balance": 0.7246466472555728,
+        "global_mi_norm": 0.10591253458972837,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_41",
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "score": 0.30218154357865223,
+        "information_gain": 0.22116242918450238,
+        "split_balance": 0.799706490010426,
+        "global_mi_norm": 0.10591253458972837,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.2797448074051843,
+        "information_gain": 0.246488537528889,
+        "split_balance": 0.5055129912567082,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.27949041476585534,
+        "information_gain": 0.37336901299212033,
+        "split_balance": 0.5923666605791591,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_41",
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "score": 0.29949203201018937,
+        "information_gain": 0.18058191338202775,
+        "split_balance": 0.9982058305005383,
+        "global_mi_norm": 0.10591253458972837,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_97",
+        "question_en": "Do you have a sore throat?",
+        "score": 0.2958009375638656,
+        "information_gain": 0.24493725122233734,
+        "split_balance": 0.6322638614397107,
+        "global_mi_norm": 0.10023114740078225,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_48",
+        "question_en": "Do you live with 4 or more people?",
+        "score": 0.27468057952270136,
+        "information_gain": 0.16035305249381826,
+        "split_balance": 0.9413671992905461,
+        "global_mi_norm": 0.10386115268129603,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 1,
+        "root_evidence_id": "E_41",
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "score": 0.31963833266157304,
+        "information_gain": 0.23209494495125163,
+        "split_balance": 0.8577783331405688,
+        "global_mi_norm": 0.10591253458972837,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 2,
+        "root_evidence_id": "E_49",
+        "question_en": "Do you attend or work in a daycare?",
+        "score": 0.2788274039648758,
+        "information_gain": 0.1965951191022311,
+        "split_balance": 0.7763823566902015,
+        "global_mi_norm": 0.10187910359121469,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 3,
+        "root_evidence_id": "E_48",
+        "question_en": "Do you live with 4 or more people?",
+        "score": 0.26096203220976105,
+        "information_gain": 0.18142433951567874,
+        "split_balance": 0.7375300197543551,
+        "global_mi_norm": 0.10386115268129603,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 1,
+        "root_evidence_id": "E_53",
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "score": 0.2945824101207096,
+        "information_gain": 0.3848265911633997,
+        "split_balance": 0.674992866092853,
+        "global_mi_norm": 0.23443623227017876,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 2,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.27553363290994604,
+        "information_gain": 0.24750466425888137,
+        "split_balance": 0.4720191520618273,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 5,
+        "graph_rank": 3,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.2688621223403886,
+        "information_gain": 0.18512351794914492,
+        "split_balance": 0.7487840834065125,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 1,
+        "root_evidence_id": "E_124",
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "score": 0.3452522703462338,
+        "information_gain": 0.3472381899657789,
+        "split_balance": 0.4048979312002925,
+        "global_mi_norm": 0.13454057387133683,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 2,
+        "root_evidence_id": "E_120",
+        "question_en": "Do you have polyps in your nose?",
+        "score": 0.31404283834157026,
+        "information_gain": 0.3306725165586887,
+        "split_balance": 0.3108166920189048,
+        "global_mi_norm": 0.05764642583567149,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 6,
+        "graph_rank": 3,
+        "root_evidence_id": "E_226",
+        "question_en": "Are you more likely to develop common allergies than the general population?",
+        "score": 0.31319431657155156,
+        "information_gain": 0.31428494545541497,
+        "split_balance": 0.37915384948720754,
+        "global_mi_norm": 0.09786565568276967,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 1,
+        "root_evidence_id": "E_25",
+        "question_en": "Have any of your family members been diagnosed with cluster headaches?",
+        "score": 0.4320903739337766,
+        "information_gain": 0.3831025873303141,
+        "split_balance": 0.8257450832969602,
+        "global_mi_norm": 0.034930831499625725,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 2,
+        "root_evidence_id": "E_184",
+        "question_en": "Do you take medication that dilates your blood vessels?",
+        "score": 0.37221004113390666,
+        "information_gain": 0.3234226222788787,
+        "split_balance": 0.7461865658418905,
+        "global_mi_norm": 0.030879168690402473,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 7,
+        "graph_rank": 3,
+        "root_evidence_id": "E_78",
+        "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+        "score": 0.3206614870116054,
+        "information_gain": 0.2699372442837176,
+        "split_balance": 0.6621337571363539,
+        "global_mi_norm": 0.1078325602835638,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 1,
+        "root_evidence_id": "E_91",
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "score": 0.2607709841513786,
+        "information_gain": 0.13783351824901502,
+        "split_balance": 0.9567611630501021,
+        "global_mi_norm": 0.13979990189302677,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 2,
+        "root_evidence_id": "E_114",
+        "question_en": "Are you more irritable or has your mood been very unstable recently?",
+        "score": 0.2565831892430913,
+        "information_gain": 0.15245110883090446,
+        "split_balance": 0.8890159193565019,
+        "global_mi_norm": 0.025398285497848457,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 8,
+        "graph_rank": 3,
+        "root_evidence_id": "E_1",
+        "question_en": "Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection?",
+        "score": 0.2558829062918585,
+        "information_gain": 0.1519564813179624,
+        "split_balance": 0.8870066053332801,
+        "global_mi_norm": 0.025334608749930213,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.473841463665647,
+        "information_gain": 0.39409550314201985,
+        "split_balance": 0.9936761833324248,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.3590444725329589,
+        "information_gain": 0.259113930951109,
+        "split_balance": 0.9764181864264012,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 9,
+        "graph_rank": 3,
+        "root_evidence_id": "E_106",
+        "question_en": "Do you have heart failure?",
+        "score": 0.31557023613594065,
+        "information_gain": 0.21349471025041952,
+        "split_balance": 0.93778374673237,
+        "global_mi_norm": 0.0821381185149901,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.4647123803719591,
+        "information_gain": 0.4305640373368588,
+        "split_balance": 0.7383167790020311,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.35729315595899236,
+        "information_gain": 0.27528907022633303,
+        "split_balance": 0.878475333132096,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 10,
+        "graph_rank": 3,
+        "root_evidence_id": "E_106",
+        "question_en": "Do you have heart failure?",
+        "score": 0.31869645007973685,
+        "information_gain": 0.22680792939840527,
+        "split_balance": 0.8876213375684203,
+        "global_mi_norm": 0.0821381185149901,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.44335811989210117,
+        "information_gain": 0.37501222688376645,
+        "split_balance": 0.8922313648861371,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.33370730280691846,
+        "information_gain": 0.2653048544854909,
+        "split_balance": 0.7744854627360946,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 11,
+        "graph_rank": 3,
+        "root_evidence_id": "E_106",
+        "question_en": "Do you have heart failure?",
+        "score": 0.2609717211525498,
+        "information_gain": 0.20919377207438516,
+        "split_balance": 0.5967319837819474,
+        "global_mi_norm": 0.0821381185149901,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.4503472821210851,
+        "information_gain": 0.3914239745939467,
+        "split_balance": 0.8512964586250691,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 2,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.34961022203010594,
+        "information_gain": 0.25200064676782263,
+        "split_balance": 0.9514606987182419,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 12,
+        "graph_rank": 3,
+        "root_evidence_id": "E_106",
+        "question_en": "Do you have heart failure?",
+        "score": 0.2909284237386189,
+        "information_gain": 0.21608687963466683,
+        "split_balance": 0.7596800940342394,
+        "global_mi_norm": 0.0821381185149901,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 1,
+        "root_evidence_id": "E_78",
+        "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+        "score": 0.17627267138283614,
+        "information_gain": 0.14662255565657345,
+        "split_balance": 0.35721999228932777,
+        "global_mi_norm": 0.1078325602835638,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 2,
+        "root_evidence_id": "E_184",
+        "question_en": "Do you take medication that dilates your blood vessels?",
+        "score": 0.1731168716889281,
+        "information_gain": 0.15541289628636196,
+        "split_balance": 0.3149506415021226,
+        "global_mi_norm": 0.030879168690402473,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 13,
+        "graph_rank": 3,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.1599370908785788,
+        "information_gain": 0.13342041772784163,
+        "split_balance": 0.3039541925477782,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 1,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.2097060224959788,
+        "information_gain": 0.16848380271581495,
+        "split_balance": 0.44874235006125396,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 2,
+        "root_evidence_id": "E_78",
+        "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+        "score": 0.16698232626533063,
+        "information_gain": 0.1418735120095325,
+        "split_balance": 0.3206125909568429,
+        "global_mi_norm": 0.1078325602835638,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 14,
+        "graph_rank": 3,
+        "root_evidence_id": "E_70",
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "score": 0.1669129321673198,
+        "information_gain": 0.14429448172087314,
+        "split_balance": 0.3078063178444834,
+        "global_mi_norm": 0.10612798227897592,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.1886433901943615,
+        "information_gain": 0.1729785041347624,
+        "split_balance": 0.3134705018644701,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 2,
+        "root_evidence_id": "E_120",
+        "question_en": "Do you have polyps in your nose?",
+        "score": 0.18481437945613793,
+        "information_gain": 0.1780753372421455,
+        "split_balance": 0.2631452558042531,
+        "global_mi_norm": 0.05764642583567149,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 15,
+        "graph_rank": 3,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.18285501852159655,
+        "information_gain": 0.166165390753973,
+        "split_balance": 0.30469565386103015,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 1,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.3035008441179472,
+        "information_gain": 0.2399942583367611,
+        "split_balance": 0.7080989176028454,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 2,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.2535454751170781,
+        "information_gain": 0.18176413538645067,
+        "split_balance": 0.6927720597910261,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 16,
+        "graph_rank": 3,
+        "root_evidence_id": "E_79",
+        "question_en": "Do you smoke cigarettes?",
+        "score": 0.221648499894114,
+        "information_gain": 0.15948056006920086,
+        "split_balance": 0.5763761601640969,
+        "global_mi_norm": 0.15215255628277516,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 1,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.3192171434013584,
+        "information_gain": 0.25298007272017164,
+        "split_balance": 0.7436165694473971,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 2,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.2718328429561893,
+        "information_gain": 0.20552956450183213,
+        "split_balance": 0.6879388901030661,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 17,
+        "graph_rank": 3,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.25016332147763076,
+        "information_gain": 0.22413469159304764,
+        "split_balance": 0.4507703773087437,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 1,
+        "root_evidence_id": "E_77",
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "score": 0.3343550015337229,
+        "information_gain": 0.27935768687227647,
+        "split_balance": 0.7038550148519345,
+        "global_mi_norm": 0.10581199616223073,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 2,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.32262215625424684,
+        "information_gain": 0.2774341289469714,
+        "split_balance": 0.649565609931924,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 18,
+        "graph_rank": 3,
+        "root_evidence_id": "E_208",
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "score": 0.315306076983302,
+        "information_gain": 0.2517935075809493,
+        "split_balance": 0.7310194205285259,
+        "global_mi_norm": 0.08436715678527298,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.35747354121777514,
+        "information_gain": 0.2906614847787509,
+        "split_balance": 0.8113622785859553,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 2,
+        "root_evidence_id": "E_24",
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "score": 0.3502530772578971,
+        "information_gain": 0.27576482750155945,
+        "split_balance": 0.8434090919653339,
+        "global_mi_norm": 0.062597029236989,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 19,
+        "graph_rank": 3,
+        "root_evidence_id": "E_113",
+        "question_en": "Do you have chronic kidney failure?",
+        "score": 0.3426265154135959,
+        "information_gain": 0.2592643721488717,
+        "split_balance": 0.8814187862943126,
+        "global_mi_norm": 0.060043995007033606,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 1,
+        "root_evidence_id": "E_146",
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "score": 0.40440800218975176,
+        "information_gain": 0.3327603810935364,
+        "split_balance": 0.8997312380536102,
+        "global_mi_norm": 0.06480023213762122,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 2,
+        "root_evidence_id": "E_113",
+        "question_en": "Do you have chronic kidney failure?",
+        "score": 0.3860560923421078,
+        "information_gain": 0.29795872567784987,
+        "split_balance": 0.9645794136631749,
+        "global_mi_norm": 0.060043995007033606,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 20,
+        "graph_rank": 3,
+        "root_evidence_id": "E_7",
+        "question_en": "Do you have a poor diet?",
+        "score": 0.38520810393162314,
+        "information_gain": 0.2962916171252183,
+        "split_balance": 0.9678965949731821,
+        "global_mi_norm": 0.05980641970942364,
+        "was_actual_request": false
+      }
+    ]
+  },
+  "test:8666": {
+    "case_id": "test:8666",
+    "true_pathology": "Influenza",
+    "notebook13_prediction": "HIV (initial infection)",
+    "notebook13_correct": false,
+    "num_requests": 3,
+    "terminal_graph_score": 0.617827281526152,
+    "terminal_graph_information_gain": 0.7896962849104173,
+    "actual_request_rank_timeline": [
+      {
+        "turn_index": 1,
+        "actual_requested_root": "E_214",
+        "actual_request_graph_rank": 25,
+        "actual_request_graph_score": 0.1394917566740207,
+        "top_graph_root": "E_181",
+        "top_graph_score": 0.3299594433642991
+      },
+      {
+        "turn_index": 2,
+        "actual_requested_root": "E_201",
+        "actual_request_graph_rank": 2,
+        "actual_request_graph_score": 0.2867705836428643,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.3741018863807353
+      },
+      {
+        "turn_index": 3,
+        "actual_requested_root": "E_129",
+        "actual_request_graph_rank": 1,
+        "actual_request_graph_score": 0.47970389530196433,
+        "top_graph_root": "E_129",
+        "top_graph_score": 0.47970389530196433
+      }
+    ],
+    "top_graph_candidate_timeline": [
+      {
+        "turn_index": 1,
+        "graph_rank": 1,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.3299594433642991,
+        "information_gain": 0.23031256596568545,
+        "split_balance": 0.9235672177978387,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 2,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.30749631062955524,
+        "information_gain": 0.2786679531825038,
+        "split_balance": 0.5003220962092318,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 1,
+        "graph_rank": 3,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.2615115976206125,
+        "information_gain": 0.13490296825496528,
+        "split_balance": 0.9676235169769634,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.3741018863807353,
+        "information_gain": 0.3286742198701255,
+        "split_balance": 0.6776591788831166,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 2,
+        "root_evidence_id": "E_201",
+        "question_en": "Do you have a cough?",
+        "score": 0.2867705836428643,
+        "information_gain": 0.1614102003615727,
+        "split_balance": 0.9946448525567357,
+        "global_mi_norm": 0.168913909401915,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 2,
+        "graph_rank": 3,
+        "root_evidence_id": "E_181",
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "score": 0.277223966826845,
+        "information_gain": 0.19586220342106136,
+        "split_balance": 0.7557326411194731,
+        "global_mi_norm": 0.1434861584414988,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 1,
+        "root_evidence_id": "E_129",
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "score": 0.47970389530196433,
+        "information_gain": 0.43255266895558847,
+        "split_balance": 0.827654176568841,
+        "global_mi_norm": 0.19027267304334808,
+        "was_actual_request": true
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 2,
+        "root_evidence_id": "E_9",
+        "question_en": "Do you have swollen or painful lymph nodes?",
+        "score": 0.29363416600988024,
+        "information_gain": 0.22739829319219335,
+        "split_balance": 0.7241942423670189,
+        "global_mi_norm": 0.06172790202145449,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 3,
+        "graph_rank": 3,
+        "root_evidence_id": "E_189",
+        "question_en": "Have you had sexual intercourse with an HIV-positive partner in the past 12 months?",
+        "score": 0.27639017924266085,
+        "information_gain": 0.23151904181822305,
+        "split_balance": 0.5952183874552641,
+        "global_mi_norm": 0.037843753395855224,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 1,
+        "root_evidence_id": "E_133",
+        "question_en": "Where is the affected region located?",
+        "score": 0.617827281526152,
+        "information_gain": 0.7896962849104173,
+        "split_balance": 7.290791698522092e-05,
+        "global_mi_norm": 0.3715308550750399,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 2,
+        "root_evidence_id": "E_130",
+        "question_en": "What color is the rash?",
+        "score": 0.5516074793495713,
+        "information_gain": 0.7050345792874497,
+        "split_balance": 7.311397098619388e-05,
+        "global_mi_norm": 0.33201642842618984,
+        "was_actual_request": false
+      },
+      {
+        "turn_index": 4,
+        "graph_rank": 3,
+        "root_evidence_id": "E_9",
+        "question_en": "Do you have swollen or painful lymph nodes?",
+        "score": 0.3644717078400625,
+        "information_gain": 0.3002565600799894,
+        "split_balance": 0.8078670978333216,
+        "global_mi_norm": 0.06172790202145449,
+        "was_actual_request": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "policy_name": "calibrated_graph_bayes_rescue_v1",
+  "run_name": "live_graph_bayes_rescue_confirmation_49case_dryrun_smoke_v1",
+  "run_live_api": false,
+  "status": "pending_live_or_dryrun",
+  "notebook13_reference_accuracy": 1.0,
+  "rescue_accuracy": 1.0,
+  "extra_rescue_requests_total": 0,
+  "improvements_vs_notebook13": 0,
+  "regressions_vs_notebook13": 0,
+  "frozen_policy_source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_49case_v1/selected_rescue_policy.json"
+}

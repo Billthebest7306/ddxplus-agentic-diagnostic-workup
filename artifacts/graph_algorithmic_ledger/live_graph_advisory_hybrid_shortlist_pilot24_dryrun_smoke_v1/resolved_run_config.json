@@ -1,0 +1,154 @@
+{
+  "run_name": "live_graph_advisory_hybrid_shortlist_pilot24_dryrun_smoke_v1",
+  "run_live_api": false,
+  "allow_dry_run_benchmark": true,
+  "resume_if_available": false,
+  "max_request_cap": 24,
+  "split_name": "test",
+  "random_seed": 2919,
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "selected_stop_policy": {
+    "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0,
+    "official_final_head": "agreement_hybrid_final",
+    "source_notebook": "12_stopping_policy_ablation.ipynb"
+  },
+  "accuracy_biased_policy_disabled": {
+    "enabled": false,
+    "description": "Later optional check targeting ~9-10 requests with MLP final diagnosis.",
+    "candidate_policy_name": "llm_conf_ge_0.85_stab_2__mlp_final"
+  },
+  "partial_mlp_dir": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2",
+  "partial_mlp_config": {
+    "run_name": "partial_evidence_one_shot_final_policy_masked_v2",
+    "run_mode": "final",
+    "run_version": "policy_masked_v2",
+    "seed": 2919,
+    "sequential_trace_source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1",
+    "masking_policy": "initial evidence plus empirical requested root sets from sequential traces",
+    "feature_size": 922,
+    "num_classes": 49,
+    "hidden_sizes": [
+      2048,
+      2048,
+      2048
+    ],
+    "dropout": 0.1,
+    "learning_rate": 0.0003469,
+    "batch_size": 512,
+    "weight_decay": 1e-05,
+    "device": "mps",
+    "train_rows": 300000,
+    "validate_rows": 40000,
+    "test_rows": 39998,
+    "train_examples_after_augmentation": 300000,
+    "validate_examples_after_augmentation": 40000,
+    "test_examples_after_augmentation": 39998,
+    "augmentations_per_train_row": 1,
+    "augmentations_per_eval_row": 1,
+    "best_epoch": 5,
+    "best_validate_accuracy": 0.513325,
+    "best_validate_macro_f1": 0.5074883638497275,
+    "validate_metrics": {
+      "accuracy": 0.513325,
+      "top3_accuracy": 0.7394,
+      "top5_accuracy": 0.827375,
+      "macro_f1": 0.5074883638497275
+    },
+    "test_metrics": {
+      "accuracy": 0.515250762538127,
+      "top3_accuracy": 0.7413870693534677,
+      "top5_accuracy": 0.8273663683184159,
+      "macro_f1": 0.5187722515897814
+    },
+    "runtime_seconds": 198.39587879180908
+  },
+  "final_heads": [
+    "llm_final",
+    "mlp_final",
+    "agreement_hybrid_final",
+    "conservative_hybrid_final"
+  ],
+  "run_scope": "pilot24",
+  "graph_advisory_shortlist": {
+    "strategy": "graph_advisory_hybrid_v1",
+    "source_artifact": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1",
+    "train_rows": 1025602,
+    "active_k": 5,
+    "shortlist_size": 12,
+    "score_weights": {
+      "notebook13_base": 0.45,
+      "graph_information_gain": 0.25,
+      "rare_support": 0.2,
+      "split_balance": 0.1
+    },
+    "rare_support_log_odds_threshold": 5.0,
+    "rare_support_global_present_max": 0.05,
+    "agent_stop_safety": {
+      "min_requests": 3,
+      "top_score_min": 0.3,
+      "mlp_confidence_max": 0.9,
+      "mlp_margin_max": 0.55,
+      "mlp_entropy_min": 0.1
+    }
+  },
+  "fairness_rule": "Full evidence, labels, hidden differentials, release_conditions metadata, and full-evidence predictions are never used inside the live policy. Graph scoring uses train-derived evidence outcome statistics and current ledger-visible evidence only.",
+  "reference_systems": [
+    {
+      "system": "notebook13_selected_stop_pilot24",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.583333333333333,
+      "median_requests": 4.5,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1/metrics.json"
+    },
+    {
+      "system": "notebook17_graph_replacement_pilot24",
+      "accuracy": 0.8333333333333334,
+      "top3_accuracy": 0.8333333333333334,
+      "top5_accuracy": 0.875,
+      "macro_f1": 0.7435897435897435,
+      "mean_requests": 6.208333333333333,
+      "median_requests": 5.0,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/graph_algorithmic_ledger/live_medkgi_graph_shortlist_pilot24_v1/metrics.json"
+    },
+    {
+      "system": "notebook08_lambda_0p100_llm_only",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8461538461538461,
+      "mean_requests": 13.041666666666666,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_single_agent_cost_sensitive/single_agent_cost_sensitive_live_test_1perclass_cap24_5lambdas_lambda_cost_24case_wide_sweep_v1/lambda_0p100/metrics.json"
+    },
+    {
+      "system": "notebook11_lambda_0p220_hybrid_v1",
+      "accuracy": 0.875,
+      "top3_accuracy": 0.9583333333333334,
+      "top5_accuracy": 0.9583333333333334,
+      "macro_f1": 0.8133333333333332,
+      "mean_requests": 7.458333333333333,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/sequential_hybrid_mlp_feedback/hybrid_mlp_feedback_live_test_1perclass_cap24_3lambdas_hybrid_mlp_feedback_v1/lambda_0p220/metrics.json"
+    },
+    {
+      "system": "notebook12_offline_selected_stop",
+      "accuracy": 0.9166666666666666,
+      "top3_accuracy": 0.9166666666666666,
+      "top5_accuracy": 0.9166666666666666,
+      "macro_f1": 0.8666666666666666,
+      "mean_requests": 6.875,
+      "median_requests": NaN,
+      "source": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/stopping_policy_ablation/stopping_policy_ablation_24case_v1/selected_stopping_policy.json"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+root_evidence_id,question_en,data_type,num_outcome_states,global_present_rate,root_mi,root_mi_norm
+E_55,Do you feel pain somewhere?,M,3053,0.74305,2.820685695839275,1.0
+E_54,Characterize your pain:,M,368,0.74305,2.2945800371284797,0.8134830621196679
+E_57,Does the pain radiate to another location?,M,572,0.74305,1.394073342247515,0.4942320742448826
+E_59,How fast did the pain appear?,C,12,0.74305,0.8975264855189402,0.31819443295042044
+E_56,How intense is the pain?,C,12,0.74305,0.855069021360366,0.3031422546020131
+E_58,How precisely is the pain located?,C,12,0.74305,0.8375519003439948,0.2969320196076604
+E_133,Where is the affected region located?,M,747,0.18230000000000002,0.8164132094822883,0.28943785218131873
+E_130,What color is the rash?,C,6,0.18230000000000002,0.691850237286598,0.24527732327892096
+E_136,How severe is the itching?,C,12,0.18230000000000002,0.6324272868982547,0.22421047755555779
+E_135,Is the lesion (or are the lesions) larger than 1cm?,C,3,0.18230000000000002,0.5585079042252667,0.19800430265913999
+E_53,"Do you have pain somewhere, related to your reason for consulting?",B,2,0.73285,0.5543556208589006,0.19653221969275664
+E_131,Do your lesions peel off?,C,3,0.18230000000000002,0.5449403682590501,0.193194289269052
+E_134,How intense is the pain caused by the rash?,C,10,0.17064999999999997,0.5367499515463799,0.19029059222660885
+E_132,Is the rash swollen?,C,9,0.18230000000000002,0.5296959743074781,0.18778978993966597
+E_152,Where is the swelling located?,M,176,0.1058,0.4940541949145193,0.17515393354292774
+E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",B,2,0.1521,0.3985186246967102,0.14128430731738573
+E_201,Do you have a cough?,B,2,0.3155,0.3752443176943271,0.13303301330163828
+E_79,Do you smoke cigarettes?,B,2,0.27725,0.33612393598632506,0.11916390985430717
+E_181,Do you have nasal congestion or a clear runny nose?,B,2,0.20235000000000003,0.32379510686299207,0.11479304742836621
+E_124,Do you have asthma or have you ever had to use a bronchodilator in the past?,B,2,0.15359999999999996,0.3178602128078242,0.11268898668032815
+E_66,Are you experiencing shortness of breath or difficulty breathing in a significant way?,B,2,0.3871,0.3085769534239487,0.10939785098322831
+E_151,Do you have swelling in one or more areas of your body?,B,2,0.09360000000000002,0.29985259437856016,0.1063048587160439
+E_91,Do you have a fever (either felt or measured with a thermometer)?,B,2,0.19689999999999996,0.29189325374769565,0.10348308362688557
+E_78,Do you drink alcohol excessively or do you have an addiction to alcohol?,B,2,0.11380000000000001,0.23631368802707112,0.0837788089526074
+E_70,Are you significantly overweight compared to people of the same height as you?,B,2,0.10594999999999999,0.23456286878997465,0.08315810199483502
+E_50,Have you had significantly increased sweating?,B,2,0.11709999999999998,0.2334287309305749,0.08275602321623424
+E_226,Are you more likely to develop common allergies than the general population?,B,2,0.08725000000000005,0.2283746048706317,0.08096421561874174
+E_77,Do you have a cough that produces colored or more abundant sputum than usual?,B,2,0.09140000000000004,0.22593996919882112,0.08010107951130453
+E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,B,2,0.08440000000000003,0.22331851779477968,0.07917171279458445
+E_45,Have you been coughing up blood?,B,2,0.09704999999999997,0.22037056673411698,0.0781265942033812
+E_69,Do you have diabetes?,B,2,0.08699999999999997,0.217679488990172,0.077172543297279
+E_105,Have you ever had a heart attack or do you have angina (chest pain)?,B,2,0.07445000000000002,0.2152456235645479,0.07630968026038898
+E_48,Do you live with 4 or more people?,B,2,0.09019999999999995,0.2151106004115379,0.07626181134921992
+E_97,Do you have a sore throat?,B,2,0.08684999999999998,0.2126186609335106,0.0753783596829449
+E_148,Are you feeling nauseous or do you feel like vomiting?,B,2,0.09940000000000004,0.21056475306559966,0.07465020061476492
+E_49,Do you attend or work in a daycare?,B,2,0.08830000000000005,0.20941972124540525,0.07424425966860299
+E_155,"Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",B,2,0.07565,0.20858102745888893,0.07394692282325596
+E_104,Do you have high blood pressure or do you take medications to treat high blood pressure?,B,2,0.0776,0.20581601211656553,0.0729666592843576
+E_144,Do you have diffuse (widespread) muscle pain?,B,2,0.08545000000000003,0.2035798521572457,0.07217388752583861
+E_82,Do you feel lightheaded and dizzy or do you feel like you are about to faint?,B,2,0.08279999999999998,0.20111296538420034,0.07129931763785564
+E_123,Do you have a chronic obstructive pulmonary disease (COPD)?,B,2,0.06899999999999995,0.19908272765205515,0.07057955019437906
+E_214,Have you noticed a wheezing sound when you exhale?,B,2,0.07050000000000001,0.1962349700878534,0.06956995257476394
+E_89,Do you constantly feel fatigued or do you have non-restful sleep?,B,2,0.08645000000000003,0.19395296495556213,0.06876092761474893
+E_222,Are you exposed to secondhand cigarette smoke on a daily basis?,B,2,0.0746,0.1922692482279416,0.06816401008859417
+E_218,Do you have symptoms that are increased with physical exertion but alleviated with rest?,B,2,0.06674999999999998,0.18770858533914828,0.06654714689269799
+E_220,Do you have pain that is increased when you breathe in deeply?,B,2,0.060899999999999954,0.1813321710512028,0.06428655674706384
+E_208,"Is your BMI less than 18.5, or are you underweight?",B,2,0.06205000000000005,0.17977254004451224,0.06373363055291496
+E_88,Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?,B,2,0.06484999999999996,0.17874239839320477,0.06336842089739503
+E_116,Have you had a cold in the last 2 weeks?,B,2,0.06364999999999998,0.17708113172543194,0.0627794624500844
+E_106,Do you have heart failure?,B,2,0.05435000000000001,0.1759901806801745,0.06239269442170509
+E_118,Have you ever had pneumonia?,B,2,0.05554999999999999,0.17212463297280256,0.06102226604924448
+E_194,Have you noticed a high pitched sound when breathing in?,B,2,0.04949999999999999,0.1695798996366703,0.06012009770773592
+E_227,Are you immunosuppressed?,B,2,0.060899999999999954,0.16479476115165584,0.058423652587291305
+E_76,Do you feel slightly dizzy or lightheaded?,B,2,0.05545,0.15804528922313418,0.05603080465727286
+E_162,Have you had an involuntary weight loss over the last 3 months?,B,2,0.050350000000000006,0.15413682043794102,0.05464515974442119
+E_125,Have you ever been diagnosed with gastroesophageal reflux?,B,2,0.04830000000000001,0.15374161671863346,0.05450505064971045
+E_217,Are your symptoms worse when lying down and alleviated while sitting up?,B,2,0.04954999999999998,0.1528568625708584,0.0541913843135142
+E_161,Have you recently had a loss of appetite or do you get full more quickly then usually?,B,2,0.05135000000000001,0.14952378596381857,0.053009729579008916
+E_209,Are your vaccinations up to date?,B,2,0.05784999999999996,0.14773441483883018,0.05237535506233453
+E_51,Have you had diarrhea or an increase in stool frequency?,B,2,0.05305000000000004,0.1429024793923302,0.05066231930878445
+E_62,Do you regularly take stimulant drugs?,B,2,0.042300000000000004,0.13773858578170717,0.0488315965103386
+E_225,Do you have close family members who had a cardiovascular disease problem before the age of 50?,B,2,0.04095000000000004,0.13773829327305556,0.04883149280908183
+E_0,Have you recently had a viral infection?,B,2,0.04035,0.13625888538377198,0.04830700761334882
+E_71,Do you have high cholesterol or do you take medications to treat high cholesterol?,B,2,0.04069999999999996,0.1359827768464763,0.04820912058619689
+E_196,Have you had surgery within the last month?,B,2,0.03639999999999999,0.13520053844132707,0.04793179851294956
+E_24,Have you ever had a diagnosis of anemia?,B,2,0.03705000000000003,0.13350047406311052,0.047329085356810165
+E_146,Are you taking any new oral anticoagulants ((NOACs)?,B,2,0.036900000000000044,0.13282230959570776,0.04708865996365023
+E_175,"Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",B,2,0.040100000000000025,0.1300791493789794,0.04611614458528861
+E_169,Is your nose or the back of your throat itchy?,B,2,0.03310000000000002,0.12850437456499517,0.04555784955216699
+E_9,Do you have swollen or painful lymph nodes?,B,2,0.03815000000000002,0.12848909762813218,0.04555243351560343
+E_157,"Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",B,2,0.03620000000000001,0.12832396454168424,0.04549388991867183
+E_120,Do you have polyps in your nose?,B,2,0.030399999999999983,0.126705860883771,0.0449202337823997
+E_7,Do you have a poor diet?,B,2,0.03534999999999999,0.12593297740889514,0.044646228253880184
+E_113,Do you have chronic kidney failure?,B,2,0.03500000000000003,0.12440543183134989,0.04410467710559078
+E_212,"Have you noticed that the tone of your voice has become deeper, softer or hoarse?",B,2,0.031749999999999945,0.1235443209809929,0.04379939287926695
+E_204,Have you traveled out of the country in the last 4 weeks?,C,12,1.0,0.1207634731654849,0.042813516352998904
+E_207,Do you live in in a big city?,B,2,0.03744999999999998,0.11977168041121564,0.04246190229130737
+E_26,Do you have any family members who have been diagnosed with anemia?,B,2,0.033399999999999985,0.11754212408228151,0.041671471676431385
+E_94,Have you had chills or shivers?,B,2,0.033299999999999996,0.11558674542121489,0.04097824354968513
+E_170,Do you have severe itching in one or both eyes?,B,2,0.030399999999999983,0.11532941891249666,0.040887015197267916
+E_84,Do you feel weakness in both arms and/or both legs?,B,2,0.03264999999999996,0.1151774170493694,0.04083312693054203
+E_172,Do you have a hard time opening/raising one or both eyelids?,B,2,0.03315000000000001,0.11512447473406087,0.040814357623707664
+E_87,Do you have any family members who have asthma?,B,2,0.03600000000000003,0.11485923391062092,0.040720323458954315
+E_159,Did you lose consciousness?,B,2,0.03344999999999998,0.11413152410795695,0.04046233306898021
+E_22,Do you have a known issue with one of your heart valves?,B,2,0.03249999999999997,0.11361778275359383,0.0402801995703345
+E_109,Have you ever had deep vein thrombosis (DVT)?,B,2,0.033050000000000024,0.11024410263515963,0.039084149927720774
+E_86,"Do you have any close family members who suffer from allergies (any type), hay fever or eczema?",B,2,0.02915000000000001,0.10952914004645305,0.038830678727522466
+E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",B,2,0.028349999999999986,0.10885735712398231,0.03859251574344322
+E_31,Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?,B,2,0.027549999999999963,0.1037360159577852,0.036776878796103966
+E_16,Do you feel anxious?,B,2,0.028449999999999975,0.10367407309304269,0.03675491858095703
+E_140,Have you recently had stools that were black (like coal)?,B,2,0.03374999999999995,0.10124699924269173,0.03589446331863161
+E_103,Have you lost your sense of smell?,B,2,0.025499999999999967,0.10122202888252292,0.035885610733529465
+E_3,Have you ever had a pericarditis?,B,2,0.025050000000000017,0.10090151787395742,0.035771981976862856
+E_176,"Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",B,2,0.02949999999999997,0.10068283482056346,0.03569445364617485
+E_219,Are your symptoms more prominent at night?,B,2,0.03005000000000002,0.1002648573627203,0.03554627072084584
+E_44,Do you take corticosteroids?,B,2,0.028249999999999997,0.09898135398724235,0.03509123832309546
+E_179,Have you noticed light red blood or blood clots in your stool?,B,2,0.028850000000000042,0.09894767200309162,0.03507929726060827
+E_177,"Do you currently, or did you ever, have numbness, loss of sensitivity or tingling anywhere on your body?",B,2,0.028000000000000025,0.09465131207619812,0.03355613573529868
+E_154,Is your skin much paler than usual?,B,2,0.02749999999999997,0.09365490086122863,0.03320288431971584
+E_143,"Do you exercise regularly, 4 times per week or more?",B,2,0.024950000000000028,0.09152702732863136,0.032448502668567664
+E_61,Are you currently using intravenous drugs?,B,2,0.02585000000000004,0.09114307490495724,0.0323123824250962
+E_182,Do you have greenish or yellowish nasal discharge?,B,2,0.023050000000000015,0.08967679460158026,0.031792551270019315
+E_137,Have you ever had surgery to remove lymph nodes?,B,2,0.021299999999999986,0.08815675115117955,0.031253659803790766
+E_12,Do you have a known severe food allergy?,B,2,0.020549999999999957,0.08803744165861267,0.031211361758055695
+E_121,Do you have a deviated nasal septum?,B,2,0.022599999999999953,0.08725557057689533,0.030934169909679725
+E_203,Do you have intense coughing fits?,B,2,0.022150000000000003,0.08645605076615341,0.030650721168148095
+E_191,Are you a former smoker?,B,2,0.02190000000000003,0.08620143363860332,0.030560453355635106
+E_15,Have you started or taken any antipsychotic medication within the last 7 days?,B,2,0.020199999999999996,0.08316991485251665,0.02948570802312309
+E_42,Have you been in contact with or ate something that you have an allergy to?,B,2,0.019499999999999962,0.08253989366883456,0.02926235056624251
+E_2,Are you infected with the human immunodeficiency virus (HIV)?,B,2,0.02200000000000002,0.08197004376434286,0.029060325255399734
+E_198,Do you work in agriculture?,B,2,0.022299999999999986,0.0818634635630395,0.029022540045420268
+E_189,Have you had sexual intercourse with an HIV-positive partner in the past 12 months?,B,2,0.01924999999999999,0.0808349866554551,0.028657920581046242
+E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,B,2,0.01585000000000003,0.08033962634763389,0.028482303599490336
+E_92,Did your cheeks suddenly turn red?,B,2,0.015800000000000036,0.07992035015350772,0.028333660241336454
+E_215,Do you have symptoms that get worse after eating?,B,2,0.018549999999999955,0.07926276051444958,0.028100529112962905
+E_173,"Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",B,2,0.01849999999999996,0.07900466857014085,0.02800902939546888
+E_81,Do you suffer from chronic anxiety?,B,2,0.01815,0.07882409793692753,0.027945012821952848
+E_14,Do you have chest pain even at rest?,B,2,0.02034999999999998,0.07881550939300519,0.027941967979368997
+E_193,"Do you have annoying muscle spasms in your face, neck or any other part of your body?",B,2,0.01870000000000005,0.07592622652198125,0.026917648653296673
+E_111,Do you feel like you are dying or were you afraid that you were about do die?,B,2,0.017549999999999955,0.07567911352078956,0.026830041231613283
+E_115,Have you had unprotected sex with more than one partner in the last 6 months?,B,2,0.018199999999999994,0.07561727593354256,0.02680811833983622
+E_147,"Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",B,2,0.01859999999999995,0.07545308897976664,0.02674991016938387
+E_197,Do you have a known kidney problem resulting in an inability to retain proteins?,B,2,0.018650000000000055,0.07529200317650371,0.02669280143036323
+E_126,Do you have liver cirrhosis?,B,2,0.01859999999999995,0.07505755530529931,0.026609684097740803
+E_164,Do you feel your heart is beating very irregularly or in a disorganized pattern?,B,2,0.016750000000000043,0.07485161105471119,0.02653667197487582
+E_192,Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?,B,2,0.018449999999999966,0.07474551468766534,0.026499058295619618
+E_46,Have you had 2 or more asthma attacks in the past year?,B,2,0.016900000000000026,0.07470923043325822,0.026486194666587626
+E_25,Have any of your family members been diagnosed with cluster headaches?,B,2,0.016449999999999965,0.07470359346002611,0.026484196225839543
+E_27,Have you ever had a sexually transmitted infection?,B,2,0.017750000000000044,0.07342806621327765,0.026031991554957577
+E_168,Do you have trouble keeping your tongue in your mouth?,B,2,0.01805000000000001,0.07287085335232342,0.02583444637586295
+E_119,Have you been diagnosed with chronic sinusitis?,B,2,0.016549999999999954,0.07283711777571202,0.02582248631357697
+E_83,Have you noticed weakness in your facial muscles and/or eyes?,B,2,0.017549999999999955,0.07252161130183646,0.025710631783190635
+E_52,Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?,B,2,0.016349999999999976,0.07149292489823353,0.02534593804750774
+E_98,Do you have a hiatal hernia?,B,2,0.017000000000000015,0.07145089944853893,0.025331039028536364
+E_80,Have you ever been diagnosed with depression?,B,2,0.016700000000000048,0.07133377744414547,0.025289516499256967
+E_34,Do you have an active cancer?,B,2,0.01695000000000002,0.06976305955921572,0.024732659743735896
+E_171,Do you feel like you are detached from your own body or your surroundings?,B,2,0.016349999999999976,0.06957832753457768,0.024667167858230706
+E_93,"Do you have numbness, loss of sensation or tingling in the feet?",B,2,0.016800000000000037,0.06894298150199765,0.024441922616083658
+E_18,Do you have cystic fibrosis?,B,2,0.015000000000000013,0.06890917427380415,0.024429937151611892
+E_205,Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?,B,2,0.01715,0.0687144449412439,0.024360900983261945
+E_128,Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?,B,2,0.017100000000000004,0.06848591747999291,0.024279882576429847
+E_13,Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?,B,2,0.01585000000000003,0.06812728021466333,0.02415273715719416
+E_167,Do you think you are pregnant or are you currently pregnant?,B,2,0.024050000000000016,0.06771223282117708,0.02400559300919551
+E_63,Do you have difficulty articulating words/speaking?,B,2,0.015599999999999947,0.06761904585216161,0.02397255601781681
+E_185,Have you ever had a head trauma?,B,2,0.01595000000000002,0.06759429069864564,0.023963779728578882
+E_180,Are you unable to control the direction of your eyes?,B,2,0.01685000000000003,0.067346894770056,0.02387607200242046
+E_101,Have you been hospitalized for an asthma attack in the past year?,B,2,0.015349999999999975,0.06659941162639574,0.023611071493940254
+E_95,Do you have Parkinson’s disease?,B,2,0.015800000000000036,0.06585145553021958,0.02334590331257235
+E_96,Have you gained weight recently?,B,2,0.01649999999999996,0.06544098120053223,0.02320038042418644
+E_186,Have you ever been diagnosed with obstructive sleep apnea (OSA)?,B,2,0.016449999999999965,0.06521710796300975,0.02312101205008765
+E_5,Have you ever had fluid in your lungs?,B,2,0.014100000000000001,0.06514874163133469,0.023096774563516245
+E_110,Have you been unable to move or get up for more than 3 consecutive days within the last 4 weeks?,B,2,0.015650000000000053,0.06367399198881832,0.0225739408267792
+E_19,Have you been diagnosed with hyperthyroidism?,B,2,0.014599999999999946,0.06353130805108353,0.022523355985672924
+E_149,Do you take a calcium channel blockers (medication)?,B,2,0.01595000000000002,0.06299035178834199,0.02233157415633281
+E_67,Do you have bouts of choking or shortness of breath that wake you up at night?,B,2,0.013700000000000045,0.06292505412715782,0.022308424586254694
+E_190,Have you noticed that you produce more saliva than usual?,B,2,0.014000000000000012,0.06265979119619508,0.02221438258386002
+E_184,Do you take medication that dilates your blood vessels?,B,2,0.01419999999999999,0.06259415886466678,0.02219111436520485
+E_10,Are you currently taking or have you recently taken anti-inflammatory drugs (NSAIDs)?,B,2,0.015750000000000042,0.062105613636089005,0.022017913490928635
+E_28,Are there any members of your family who have been diagnosed myasthenia gravis?,B,2,0.014499999999999957,0.06210331209438638,0.022017097539790934
+E_38,Do you have pain or weakness in your jaw?,B,2,0.014449999999999963,0.06185683375339823,0.021929715120207027
+E_108,Do you have a problem with poor circulation?,B,2,0.013650000000000051,0.061661206214307325,0.021860360516331993
+E_138,Do you suffer from fibromyalgia?,B,2,0.014700000000000046,0.06153311211848686,0.021814948120328633
+E_156,"Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",B,2,0.015000000000000013,0.06060640209765434,0.021486407431729585
+E_210,Have you recently thrown up blood or something resembling coffee beans?,B,2,0.01595000000000002,0.060033486849267126,0.021283295383750504
+E_139,Do you have a known heart defect?,B,2,0.013850000000000029,0.059773285892137075,0.02119104797117495
+E_188,Do you have pale stools and dark urine?,B,2,0.012800000000000034,0.05899972394860755,0.020916801909421034
+E_8,Do you currently undergo dialysis?,B,2,0.012950000000000017,0.05886030810803526,0.020867375686294532
+E_47,Do you suffer from Crohn’s disease or ulcerative colitis (UC)?,B,2,0.012800000000000034,0.0570788944443797,0.020235822278453563
+E_158,Were you diagnosed with endocrine disease or a hormone dysfunction?,B,2,0.014549999999999952,0.056865039750262254,0.020160005715682
+E_223,Are there members of your family who have been diagnosed with pancreatic cancer?,B,2,0.012399999999999967,0.056834197850874804,0.020149071530624466
+E_20,Do you have Rheumatoid Arthritis?,B,2,0.01254999999999995,0.055795665188353806,0.019780887062552426
+E_75,Do you feel like you are (or were) choking or suffocating?,B,2,0.013449999999999962,0.05565817873955052,0.019732144854582894
+E_72,Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?,B,2,0.012249999999999983,0.05559395941616598,0.019709377580838332
+E_127,Do you feel that your eyes produce excessive tears?,B,2,0.012700000000000045,0.055045564187296656,0.0195149584615163
+E_1,Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection?,B,2,0.013599999999999945,0.05504185518166377,0.01951364353102321
+E_107,Have you ever had a stroke?,B,2,0.013349999999999973,0.05443963356649594,0.019300141680726256
+E_6,Do you have chronic pancreatitis?,B,2,0.011850000000000027,0.053912616048141904,0.019113301466968508
+E_99,Have you ever had a migraine or is a member of your family known to have migraines?,B,2,0.013000000000000012,0.053583859052413446,0.01899674931221642
+E_114,Are you more irritable or has your mood been very unstable recently?,B,2,0.01319999999999999,0.053250493559666566,0.018878563335934618
+E_29,Do any members of your immediate family have a psychiatric illness?,B,2,0.01265000000000005,0.051984337896364356,0.018429681113725355
+E_60,Do you consume energy drinks regularly?,B,2,0.011499999999999955,0.050711590129119195,0.017978461834270522
+E_30,Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?,B,2,0.011349999999999971,0.05001485111433407,0.017731451323382028
+E_200,Do you work in the mining sector?,B,2,0.010950000000000015,0.048900226179235735,0.01733629033939062
+E_74,Have you noticed a diffuse (widespread) redness in one or both eyes?,B,2,0.011349999999999971,0.04860557014789123,0.01723182778555871
+E_221,"Are the symptoms or pain increased with coughing, with an effort like lifting a weight or from forcing a bowel movement?",B,2,0.010850000000000026,0.04755000877401483,0.01685760623530466
+E_213,Have you recently taken decongestants or other substances that may have stimulant effects?,B,2,0.010750000000000037,0.047016774536870976,0.01666856204724414
+E_35,Do you regularly drink coffee or tea?,B,2,0.010650000000000048,0.04652988887802472,0.016495949529811076
+E_160,Were you born prematurely or did you suffer any complication at birth?,B,2,0.010600000000000054,0.04633031189118501,0.016425194753008365
+E_43,Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?,B,2,0.010850000000000026,0.04623886623047689,0.016392775096737193
+E_211,Have you vomited several times or have you made several efforts to vomit?,B,2,0.008950000000000014,0.045341843693621514,0.016074759325544197
+E_90,Do your symptoms of muscle weakness increase with fatigue and/or stress?,B,2,0.010800000000000032,0.04467414857116554,0.01583804556355332
+E_33,Do you have pain that improves when you lean forward?,B,2,0.009549999999999947,0.0436977398763595,0.015491885515928616
+E_150,Have you been able to pass stools or gas since your symptoms increased?,B,2,0.010000000000000009,0.04343563147712706,0.015398961869873664
+E_224,Do you have family members who have had lung cancer?,B,2,0.009199999999999986,0.04334514598038368,0.015366882614507901
+E_166,Did you vomit after coughing?,B,2,0.007600000000000051,0.04322083210183414,0.015322810395212815
+E_21,Have you ever had a spontaneous pneumothorax?,B,2,0.00814999999999999,0.04287383552576414,0.01519979187649524
+E_199,Do you work in construction?,B,2,0.009549999999999947,0.04198565094005391,0.014884909368663768
+E_216,Do you have pain that is increased with movement?,B,2,0.006199999999999983,0.037696617274043324,0.013364345176652857
+E_163,Have you had any vaginal discharge?,B,2,0.008750000000000036,0.03658481915891347,0.012970186367406636
+E_206,Do you have painful mouth ulcers or sores?,B,2,0.007449999999999957,0.036307994414027565,0.012872045427671933
+E_102,Are you consulting because you have high blood pressure?,B,2,0.007199999999999984,0.0349489618066068,0.012390236125265273
+E_64,Do you feel out of breath with minimal physical effort?,B,2,0.006249999999999978,0.03195554507314303,0.01132899887438004
+E_165,Have any of your family members ever had a pneumothorax?,B,2,0.006249999999999978,0.031534215038648825,0.011179627381088285
+E_40,Have you been in contact with someone who has had pertussis (whoooping cough)?,B,2,0.005800000000000027,0.031012167032499618,0.010994548977308925
+E_145,Do you have very abundant or very long menstruation periods?,B,2,0.009800000000000031,0.030912908708956067,0.01095935954670701
+E_100,Do you currently take hormones?,B,2,0.007650000000000046,0.029358205618685462,0.010408180415843933
+E_153,Are you being treated for osteoporosis?,B,2,0.0048000000000000265,0.027104542383302913,0.009609203330695143
+E_174,Have you been unintentionally losing weight or have you lost your appetite?,B,2,0.005099999999999993,0.025222721169094457,0.008942053064012016
+E_112,Do you wheeze while inhaling or is your breathing noisy after coughing spells?,B,2,0.004750000000000032,0.024790904179124072,0.008788963696200726
+E_37,Do you have metastatic cancer?,B,2,0.0040999999999999925,0.02265924294660256,0.008033239215566151
+E_4,Have you or any member of your family ever had croup?,B,2,0.0030999999999999917,0.019103388216674923,0.006772604351081677
+E_202,Does the person have a whooping cough?,B,2,0.003049999999999997,0.018745401152894782,0.006645689443721315
+E_141,Did you have your first menstrual period before the age of 12?,B,2,0.00385000000000002,0.01785528517031465,0.006330122209877033
+E_17,Are you of Asian descent?,B,2,0.0018500000000000183,0.007475506519810225,0.0026502444178155555
+E_11,Have you breastfed one of your children for more than 9 months?,B,2,0.0012499999999999734,0.00563437590979902,0.001997519935705758
+E_73,"In the last month, have you been in contact with anyone infected with the Ebola virus?",B,2,0.0006000000000000449,0.004874695413160939,0.0017281951762124661
+E_178,Have you noticed any unusual bleeding or bruising related to your consultation today?,B,2,0.0006000000000000449,0.004874695413160939,0.0017281951762124661
+E_39,Have you felt confused or disorientated lately?,B,2,0.0004999999999999449,0.003949193516379679,0.0014000827962523574
+E_195,Do you live in the suburbs?,B,2,9.999999999998899e-05,0.0010210290370308982,0.000361979017561933
+E_23,Do you ever temporarily stop breathing while you’re asleep?,B,2,4.999999999999449e-05,0.0004758584095500094,0.00016870309593583453
+E_32,Do you have a decrease in appetite?,B,2,4.999999999999449e-05,0.0004758584095500094,0.00016870309593583453
+E_142,Does your mother suffer from asthma?,B,2,4.999999999999449e-05,0.0004758584095500094,0.00016870309593583453
+E_183,Do you live in a rural area?,B,2,4.999999999999449e-05,0.0004758584095500094,0.00016870309593583453

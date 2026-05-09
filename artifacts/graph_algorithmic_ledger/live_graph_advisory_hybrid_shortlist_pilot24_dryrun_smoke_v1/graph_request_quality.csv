@@ -1,0 +1,37 @@
+case_id,turn_index,requested_root,requested_question,graph_rank,graph_score,information_gain,split_balance,weighted_present_rate,outside_graph_top10
+test:34242,1,E_83,Have you noticed weakness in your facial muscles and/or eyes?,7,0.9722,0.406,0.8443,0.4222,False
+test:95923,1,E_142,Does your mother suffer from asthma?,1,0.713,0.1023,0.2019,0.1009,False
+test:95923,2,E_46,Have you had 2 or more asthma attacks in the past year?,8,0.8181,0.1693,0.3731,0.1866,False
+test:95923,3,E_201,Do you have a cough?,2,0.6226,0.156,0.9918,0.4959,False
+test:95923,4,E_5,Have you ever had fluid in your lungs?,1,0.5802,0.0461,0.0517,0.0258,False
+test:95923,5,E_63,Do you have difficulty articulating words/speaking?,1,0.7031,0.0737,0.0809,0.0404,False
+test:95923,6,E_64,Do you feel out of breath with minimal physical effort?,1,0.6393,0.111,0.1459,0.073,False
+test:95923,7,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.7074,0.2122,0.341,0.1705,False
+test:95923,8,E_12,Do you have a known severe food allergy?,15,0.7521,0.1992,0.2955,0.1477,True
+test:95923,9,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,6,0.9132,0.3851,0.4329,0.2164,False
+test:95923,10,E_102,Are you consulting because you have high blood pressure?,1,0.8524,0.204,0.4632,0.2316,False
+test:95923,11,E_27,Have you ever had a sexually transmitted infection?,1,0.703,0.119,0.127,0.0635,False
+test:95923,12,E_206,Do you have painful mouth ulcers or sores?,1,0.7464,0.1959,0.4274,0.2137,False
+test:95923,13,E_95,Do you have Parkinson’s disease?,1,0.6936,0.1396,0.128,0.064,False
+test:95923,14,E_107,Have you ever had a stroke?,1,0.6645,0.1522,0.181,0.0905,False
+test:95923,15,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,11,0.6128,0.2815,0.3622,0.1811,False
+test:95923,16,E_18,Do you have cystic fibrosis?,8,0.749,0.3328,0.5477,0.2738,False
+test:95923,17,E_106,Do you have heart failure?,8,0.7029,0.3504,0.7819,0.3909,False
+test:34242,1,E_83,Have you noticed weakness in your facial muscles and/or eyes?,7,0.9722,0.406,0.8443,0.4222,False
+test:95923,1,E_142,Does your mother suffer from asthma?,1,0.713,0.1023,0.2019,0.1009,False
+test:95923,2,E_46,Have you had 2 or more asthma attacks in the past year?,8,0.8181,0.1693,0.3731,0.1866,False
+test:95923,3,E_201,Do you have a cough?,2,0.6226,0.156,0.9918,0.4959,False
+test:95923,4,E_5,Have you ever had fluid in your lungs?,1,0.5802,0.0461,0.0517,0.0258,False
+test:95923,5,E_63,Do you have difficulty articulating words/speaking?,1,0.7031,0.0737,0.0809,0.0404,False
+test:95923,6,E_64,Do you feel out of breath with minimal physical effort?,1,0.6393,0.111,0.1459,0.073,False
+test:95923,7,E_129,"Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",1,0.7074,0.2122,0.341,0.1705,False
+test:95923,8,E_12,Do you have a known severe food allergy?,15,0.7521,0.1992,0.2955,0.1477,True
+test:95923,9,E_187,Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?,6,0.9132,0.3851,0.4329,0.2164,False
+test:95923,10,E_102,Are you consulting because you have high blood pressure?,1,0.8524,0.204,0.4632,0.2316,False
+test:95923,11,E_27,Have you ever had a sexually transmitted infection?,1,0.703,0.119,0.127,0.0635,False
+test:95923,12,E_206,Do you have painful mouth ulcers or sores?,1,0.7464,0.1959,0.4274,0.2137,False
+test:95923,13,E_95,Do you have Parkinson’s disease?,1,0.6936,0.1396,0.128,0.064,False
+test:95923,14,E_107,Have you ever had a stroke?,1,0.6645,0.1522,0.181,0.0905,False
+test:95923,15,E_77,Do you have a cough that produces colored or more abundant sputum than usual?,11,0.6128,0.2815,0.3622,0.1811,False
+test:95923,16,E_18,Do you have cystic fibrosis?,8,0.749,0.3328,0.5477,0.2738,False
+test:95923,17,E_106,Do you have heart failure?,8,0.7029,0.3504,0.7819,0.3909,False

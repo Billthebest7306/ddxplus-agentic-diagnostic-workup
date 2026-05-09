@@ -1,0 +1,47 @@
+{
+  "notebook": "26_offline_branching_trajectory_lab.ipynb",
+  "created_for": "offline multi-agent branching trajectory analysis",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1",
+  "run_order": [
+    "n13_frozen",
+    "n24_base",
+    "n25_r01",
+    "n25_r02",
+    "n25_r03"
+  ],
+  "run_specs": {
+    "n13_frozen": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+    "n24_base": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1",
+    "n25_r01": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r01",
+    "n25_r02": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r02",
+    "n25_r03": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r03"
+  },
+  "graph_clip": 3.0,
+  "triggers": [
+    "never",
+    "disagreement_or_cap",
+    "premature_stop_guard",
+    "graph_bayes_conflict",
+    "strict_final_conflict",
+    "hybrid_suspicion_v1",
+    "broad_suspicion"
+  ],
+  "judges": [
+    "base_reference",
+    "majority_vote",
+    "highest_mlp_confidence",
+    "highest_mlp_margin",
+    "highest_graph_support",
+    "highest_bayes_posterior",
+    "fused_consensus_judge",
+    "cautious_fused_judge"
+  ],
+  "branch_budgets": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "pre_registered_next_live_candidate": "trigger=hybrid_suspicion_v1|budget=1|judge=cautious_fused_judge",
+  "no_live_api_calls": true
+}

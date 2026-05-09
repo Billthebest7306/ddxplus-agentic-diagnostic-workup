@@ -1,0 +1,50 @@
+{
+  "notebook": "26_offline_branching_trajectory_lab.ipynb",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1",
+  "inputs_used": {
+    "n13_frozen": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+    "n24_base": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1",
+    "n25_r01": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r01",
+    "n25_r02": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r02",
+    "n25_r03": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r03"
+  },
+  "graph_edge_path": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1/global_evidence_graph_edges.csv",
+  "bayes_likelihood_path": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/root_outcome_likelihoods.csv",
+  "run_order": [
+    "n13_frozen",
+    "n24_base",
+    "n25_r01",
+    "n25_r02",
+    "n25_r03"
+  ],
+  "pre_registered_next_live_candidate": {
+    "policy_name": "trigger=hybrid_suspicion_v1|budget=1|judge=cautious_fused_judge",
+    "scope": "all_base_runs",
+    "num_decisions": 245,
+    "num_correct": 224,
+    "accuracy": 0.9142857142857143,
+    "base_accuracy": 0.8816326530612245,
+    "wins_vs_base": 8,
+    "regressions_vs_base": 0,
+    "branch_rate": 0.19183673469387755,
+    "mean_branches_spawned": 0.19183673469387755,
+    "mean_selected_requests": 6.616326530612245,
+    "mean_total_branch_requests": 8.342857142857143
+  },
+  "best_observed_diagnostic_policy": {
+    "policy_name": "trigger=broad_suspicion|budget=4|judge=highest_bayes_posterior",
+    "scope": "all_base_runs",
+    "num_decisions": 245,
+    "num_correct": 229,
+    "accuracy": 0.9346938775510204,
+    "base_accuracy": 0.8816326530612245,
+    "wins_vs_base": 13,
+    "regressions_vs_base": 0,
+    "branch_rate": 0.2816326530612245,
+    "mean_branches_spawned": 1.126530612244898,
+    "mean_selected_requests": 6.90204081632653,
+    "mean_total_branch_requests": 17.722448979591835
+  },
+  "selection_status": "diagnostic_only_not_promoted",
+  "reason": "Observed branch trajectories are reused as offline alternatives; labels are used only for analysis of ceilings and policy curves. A live confirmation notebook is required before promotion."
+}

@@ -1,0 +1,3 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE,prior_available
+test:34242,Guillain-Barré syndrome,16,M,E_84,False
+test:95923,Pneumonia,24,F,E_66,False

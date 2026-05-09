@@ -1,0 +1,39 @@
+{
+  "notebook": "19_bayesian_voi_algorithmic_ledger_offline.ipynb",
+  "run_name": "bayesian_voi_offline_notebook13_49case_v1_smoke",
+  "smoke_mode": true,
+  "dataset_dir": "/Users/bilalawan/claw/assignments/baseline_model/dataset",
+  "artifact_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1_smoke",
+  "random_seed": 2919,
+  "train_likelihood_rows": 20000,
+  "calibration_rows": 1000,
+  "num_primary_cases": 3,
+  "max_request_cap": 5,
+  "lambda_costs": [
+    0.05
+  ],
+  "alpha": 1.0,
+  "log_likelihood_clip": 4.0,
+  "age_sex_weight": 0.25,
+  "fusion_weights": {
+    "mlp": 0.6,
+    "bayes": 0.4
+  },
+  "top_bayes_voi_roots": 32,
+  "max_counterfactual_outcomes": 8,
+  "stop_config": {
+    "fused_confidence_min": 0.7,
+    "fused_margin_min": 0.2,
+    "fused_entropy_max": 0.35,
+    "contradiction_max": 1.5,
+    "min_requests": 1
+  },
+  "utility_weights": {
+    "expected_fused_entropy_reduction": 0.55,
+    "expected_margin_gain": 0.2,
+    "contradiction_resolution_gain": 0.15,
+    "rare_recovery_bonus": 0.1
+  },
+  "fairness": "Train split statistics only inside policy; test labels/differentials are used only for evaluation after predictions are generated.",
+  "no_api_calls": true
+}
