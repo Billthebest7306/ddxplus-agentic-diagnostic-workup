@@ -38,12 +38,13 @@ Final artifact roots used:
 - `artifacts/trajectory_replicates/live_targeted_branching_confirmation_49case_v1/`
 - `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1/`
 - `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1/`
+- `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
 
 The strongest frozen live first-pass workup artifact remains notebook `13`: it uses the LLM as the evidence-acquisition controller and the partial-evidence MLP as an online stopping signal. The original 49-case confirmation reaches `43/49 = 0.878` accuracy with `6.59` mean evidence requests.
 
 Current graph-ledger update on 2026-05-08: Notebook `23` is the strongest offline algorithmic-ledger enhancement. It keeps Notebook `13` as the first-pass workup, uses train/validate-calibrated graph/Bayes/MLP rescue logic, and improves the saved 49-case trace from `43/49` to `47/49` with `6.96` mean requests and zero regressions. Notebook `24` completed the live confirmation run, but the rescue layer did not reproduce the offline gain: the fresh live base reached `45/49 = 0.918`, and the live rescue also ended at `45/49 = 0.918` with `6.39` mean total requests.
 
-Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Post-hoc candidate-pool analysis shows the current scored candidate oracle is only `44/49`, while adding ranked-differential pseudo-candidates reaches `47/49` at top-2 and `48/49` at top-3.
+Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Notebook `29` expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with one win and zero regressions. Its oracle analysis shows source top-1 plus ranked top-2 reaches `47/49`, ranked top-3 reaches `48/49`, and the full exploded graph/Bayes/MLP/ranked pool contains all `49/49` true labels.
 
 ## Headline Results
 
@@ -90,6 +91,7 @@ Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-
 | Live targeted branching confirmation, notebook 27 | 49 | Prospective fixed live multi-agent branching; not promoted | 0.878 | 0.918 | 0.939 | 0.837 | 6.8 selected / 11.4 total branch requests |
 | MLP-gated confounder branching, notebook 28 dry-run | 2 | Learned branch gate and graph/Bayes/MLP resolver; smoke only | 1.000 | 1.000 | 1.000 | 1.000 | 6.0 selected / 6.0 total branch requests |
 | MLP-gated confounder branching, notebook 28 live | 49 | Learned branch gate, three fresh LLM branches, pseudo-candidates, calibrated resolver; not promoted | 0.898 | 0.959 | 0.959 | 0.864 | 6.6 selected / 10.0 total branch requests |
+| Listwise differential adjudicator, notebook 29 offline | 49 | Frozen Notebook 28 live traces plus ranked-differential graph/Bayes/MLP candidate scoring; not promoted | 0.918 | n/a | n/a | n/a | 6.6 selected / 10.0 total branch requests |
 | Full-evidence one-shot, live 10-case slice | 10 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 | Full-evidence one-shot, live 24-case slice | 24 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 
@@ -1578,4 +1580,46 @@ The remaining misses show why:
 - `test:81691` Croup appeared in the `graph_bayes_scout` branch differential at rank 3, but was never scored as a standalone candidate.
 - `test:76022` Panic attack did not appear in the scored pool or top-5 differential.
 
-The next iteration should therefore be a listwise differential adjudicator: score base ranked top-5, branch ranked top-5, graph top-5, Bayes top-5, MLP top-5, and confounder challengers rather than only final top-1 predictions.
+This motivated Notebook `29`: a listwise differential adjudicator that scores base ranked top-5, branch ranked top-5, graph top-5, Bayes top-5, MLP top-5, and confounder challengers rather than only final top-1 predictions.
+
+## Notebook 29 Listwise Differential Graph-Bayes-MLP Adjudicator
+
+Notebook `29` implements that offline final-head continuation over frozen Notebook `28` traces.
+
+- `notebooks/29_listwise_differential_graph_bayes_adjudicator.ipynb`
+- `reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md`
+- artifact root: `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
+
+Selected policy:
+
+```text
+candidate scorer = L2 logistic model trained on Notebook 28 train/validate synthetic candidate features
+candidate pool = source top-1 + ranked differential top-3 + graph/Bayes/MLP top candidates
+override margin = 0.02 over Notebook 28 selected answer
+```
+
+Result:
+
+| Metric | Value |
+|---|---:|
+| Notebook `28` selected accuracy | 44/49 = 0.898 |
+| Notebook `29` selected accuracy | 45/49 = 0.918 |
+| Wins vs Notebook `28` | 1 |
+| Regressions vs Notebook `28` | 0 |
+| Changed predictions | 1 |
+| Mean selected requests | 6.63 |
+| Mean total branch requests | 9.96 |
+
+The single win is `test:81691` Croup, promoted from the `graph_bayes_scout` branch differential at rank 3. The candidate is graph rank 1, Bayes rank 1, and MLP rank 3 in that branch evidence state.
+
+Candidate-pool oracle:
+
+| Candidate pool | Oracle correct |
+|---|---:|
+| Source top-1 plus ranked top-1 | 44/49 |
+| Source top-1 plus ranked top-2 | 47/49 |
+| Source top-1 plus ranked top-3 | 48/49 |
+| Source top-1 plus ranked top-5 | 48/49 |
+| All exploded graph/Bayes/MLP/ranked candidates | 49/49 |
+
+Notebook `29` is not promoted because it does not reach `47/49`. It does, however, sharpen the next research target: candidate availability is strong enough; calibrated selection among top-1 and rank-2/rank-3 confounders is the bottleneck.

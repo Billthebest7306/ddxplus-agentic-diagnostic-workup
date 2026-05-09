@@ -1,0 +1,7 @@
+policy_name,score_col,margin,eligible_top_rank,num_cases,correct_count,accuracy,notebook28_correct_count,notebook28_accuracy,wins_vs_notebook28,regressions_vs_notebook28,changed_predictions,mean_selected_requests,mean_total_branch_requests,selected_candidate
+selected_listwise_v1,listwise_score_v1,0.02,3,49,45,0.9183673469387755,44,0.8979591836734694,1,0,1,6.63265306122449,9.959183673469388,True
+diagnostic_raw_logistic_no_margin,listwise_score_v1,0.0,3,49,44,0.8979591836734694,44,0.8979591836734694,1,1,2,6.63265306122449,9.959183673469388,False
+diagnostic_rank_bonus_margin02,diagnostic_rank_bonus_score,0.02,3,49,44,0.8979591836734694,44,0.8979591836734694,0,0,0,6.63265306122449,9.959183673469388,False
+diagnostic_mixture_margin30,diagnostic_mixture_score,0.3,3,49,44,0.8979591836734694,44,0.8979591836734694,0,0,0,6.63265306122449,9.959183673469388,False
+diagnostic_top2_only_margin02,listwise_score_v1,0.02,2,49,44,0.8979591836734694,44,0.8979591836734694,0,0,0,6.63265306122449,9.959183673469388,False
+diagnostic_top5_margin02,listwise_score_v1,0.02,5,49,45,0.9183673469387755,44,0.8979591836734694,1,0,1,6.63265306122449,9.959183673469388,False

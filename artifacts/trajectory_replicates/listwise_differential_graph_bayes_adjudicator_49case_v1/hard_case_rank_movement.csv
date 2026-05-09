@@ -1,0 +1,6 @@
+case_id,true_pathology,notebook28_prediction,candidate_pathology,branch_id,candidate_role,differential_rank,candidate_graph_rank,candidate_bayes_rank,candidate_mlp_rank,listwise_score_v1,policy_correct
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,base,base,1.0,1.0,1.0,1.0,0.9992749311750926,False
+test:11655,Bronchitis,URTI,URTI,base,base,1.0,1.0,1.0,1.0,0.9975971023968081,False
+test:76022,Panic attack,Myocarditis,Myocarditis,pseudo_mlp_top1,pseudo,2.0,1.0,1.0,21.0,0.9718943141057437,False
+test:81691,Croup,Acute otitis media,Croup,graph_bayes_scout,branch,3.0,1.0,1.0,3.0,0.9752919288225222,True
+test:8666,Influenza,HIV (initial infection),HIV (initial infection),base,base,1.0,1.0,1.0,1.0,0.9973416314314718,False

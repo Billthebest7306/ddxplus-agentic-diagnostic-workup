@@ -1,0 +1,52 @@
+{
+  "policy_name": "listwise_differential_graph_bayes_mlp_v1",
+  "selected_before_49case_labels_in_this_notebook": true,
+  "policy_type": "offline final adjudicator over frozen Notebook 28 live traces",
+  "inputs_used_for_training_or_calibration": [
+    "Notebook 28 train/validate synthetic candidate resolver features",
+    "Notebook 16 train-derived graph evidence weights",
+    "Notebook 19 train-derived Bayesian likelihood tables",
+    "Notebook 10 partial-evidence MLP checkpoint"
+  ],
+  "inputs_used_for_49case_scoring": [
+    "Notebook 28 live branch traces and ranked differentials",
+    "visible evidence only for each branch state",
+    "graph/Bayes/MLP scores recomputed from visible evidence"
+  ],
+  "feature_columns": [
+    "candidate_order",
+    "candidate_graph_score",
+    "candidate_graph_posterior",
+    "candidate_graph_rank",
+    "candidate_graph_positive_support",
+    "candidate_graph_contradiction",
+    "candidate_bayes_log_score",
+    "candidate_bayes_posterior",
+    "candidate_bayes_rank",
+    "candidate_mlp_posterior",
+    "candidate_mlp_rank",
+    "is_base_candidate",
+    "is_branch_candidate",
+    "is_pseudo_candidate",
+    "request_count",
+    "visible_root_count",
+    "branch_trigger_probability",
+    "pair_coverage",
+    "pair_missing_utility"
+  ],
+  "selected_margin": 0.02,
+  "eligible_ranked_differential_depth": 3,
+  "candidate_auc_validate": 0.9547713502822057,
+  "candidate_average_precision_validate": 0.8093325139812215,
+  "notebook28_correct_count": 44,
+  "selected_correct_count": 45,
+  "wins_vs_notebook28": 1,
+  "regressions_vs_notebook28": 0,
+  "changed_predictions": 1,
+  "mean_selected_requests": 6.63265306122449,
+  "mean_total_branch_requests": 9.959183673469388,
+  "promotion_min_correct": 47,
+  "promotion_max_regressions": 0,
+  "promotion_decision": "not_promoted_diagnostic_offline_listwise_candidate",
+  "leakage_guard": "49-case labels are used only for final metrics, paired error analysis, and oracle diagnostics; the selected model and margin are fixed from train/validate artifacts."
+}

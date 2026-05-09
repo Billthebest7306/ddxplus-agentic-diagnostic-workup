@@ -1,0 +1,2 @@
+train_candidate_rows,validate_candidate_rows,train_positive_rate,validate_positive_rate,candidate_auc,candidate_average_precision
+33232,16670,0.10965334617236398,0.1092381523695261,0.9547713502822057,0.8093325139812215

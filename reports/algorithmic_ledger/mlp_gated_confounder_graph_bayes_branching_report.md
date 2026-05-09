@@ -162,3 +162,14 @@ The next credible iteration should be a listwise differential adjudicator, not s
 - confounder challenger candidates
 
 Then a calibrated resolver can choose among those candidates using graph/Bayes/MLP support, rank position, contradiction, coverage, and request-state features. Notebook `28` shows that the mathematical resolver can avoid regressions; the missing piece is giving it the full differential menu.
+
+## Follow-Up Notebook 29
+
+Notebook `29` implemented this listwise follow-up offline over the frozen Notebook `28` live traces:
+
+- report: `reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md`
+- artifact root: `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
+
+It improves Notebook `28` from `44/49` to `45/49` with one win and zero regressions by promoting Croup from the `graph_bayes_scout` ranked differential at rank 3. It is still not promoted because it does not reach `47/49`.
+
+The follow-up changes the bottleneck diagnosis: the expanded candidate pool now has a `47/49` oracle at ranked top-2, `48/49` at ranked top-3, and `49/49` over all exploded graph/Bayes/MLP/ranked candidates. The remaining problem is calibrated selection among close confounders, not candidate availability alone.

@@ -4680,3 +4680,87 @@ Notebook 29: listwise differential graph-Bayes-MLP adjudicator
 ```
 
 The candidate pool should include base ranked top-5, branch ranked top-5, graph top-5, Bayes top-5, MLP top-5, and confounder challengers. A calibrated resolver should then choose among candidates using graph/Bayes/MLP support, rank position, contradiction, confounder coverage, and request-state features. The post-hoc Notebook `28` oracle shows this is the first direction with a direct path back to `47/49+`.
+
+## 72. Notebook 29 Implemented And Executed: Listwise Differential Graph-Bayes-MLP Adjudicator
+
+Implemented and executed `notebooks/29_listwise_differential_graph_bayes_adjudicator.ipynb`.
+
+Artifact root:
+
+- `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
+
+Report:
+
+- `reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md`
+
+Notebook `29` is offline-only. It does not call the LLM API. It keeps Notebook `28`'s live base branch, spawned branches, and revealed evidence fixed, then adds a mathematical final adjudicator over ranked differential candidates.
+
+Method summary:
+
+- explode each base/branch state into source top-1, ranked differential entries, graph top-5, Bayes top-5, and MLP top-5 candidates
+- recompute graph score/rank/posterior, Bayesian posterior/rank, and partial-evidence MLP posterior/rank for each candidate
+- train an L2 logistic candidate scorer on Notebook `28` train/validate synthetic candidate features
+- use the fixed selected policy `listwise_differential_graph_bayes_mlp_v1`
+- admit source top-1 plus ranked differential top-3 candidates
+- override Notebook `28` only when the candidate score exceeds the Notebook `28` selected answer by margin `0.02`
+
+Validation summary:
+
+| Metric | Value |
+|---|---:|
+| Train candidate rows | 33,232 |
+| Validate candidate rows | 16,670 |
+| Candidate AUC | 0.955 |
+| Candidate average precision | 0.809 |
+
+49-case result:
+
+| Metric | Notebook `28` | Notebook `29` |
+|---|---:|---:|
+| Correct | 44/49 | 45/49 |
+| Accuracy | 0.898 | 0.918 |
+| Wins vs Notebook `28` | n/a | 1 |
+| Regressions vs Notebook `28` | n/a | 0 |
+| Changed predictions | n/a | 1 |
+| Mean selected requests | 6.63 | 6.63 |
+| Mean total branch requests | 9.96 | 9.96 |
+
+The single win is `test:81691` Croup:
+
+- Notebook `28`: Acute otitis media
+- Notebook `29`: Croup
+- source: `graph_bayes_scout`
+- ranked-differential position: rank `3`
+- graph rank: `1`
+- Bayes rank: `1`
+- MLP rank: `3`
+
+Candidate-pool oracle:
+
+| Candidate pool | Oracle correct |
+|---|---:|
+| Source top-1 plus ranked top-1 | 44/49 |
+| Source top-1 plus ranked top-2 | 47/49 |
+| Source top-1 plus ranked top-3 | 48/49 |
+| Source top-1 plus ranked top-5 | 48/49 |
+| All exploded graph/Bayes/MLP/ranked candidates | 49/49 |
+
+Promotion decision:
+
+```text
+not_promoted_diagnostic_offline_listwise_candidate
+```
+
+Interpretation:
+
+- Notebook `29` is a real offline improvement over Notebook `28`, but not a promoted result.
+- The candidate pool is no longer the obvious bottleneck: a non-oracle top-2/top-3 ranked-differential resolver could reach the target.
+- The current learned scorer remains too loyal to graph/Bayes/MLP rank-1 consensus in silent near-neighbor confusions.
+- Remaining misses are Acute rhinosinusitis vs Chronic rhinosinusitis, Bronchitis vs URTI, Influenza vs HIV initial infection, and Panic attack vs Myocarditis.
+- The next iteration should be a pairwise or abstaining adjudicator for top-1-vs-rank-2 confounders, trained/calibrated without using the 49-case labels.
+
+Execution checks:
+
+- static parse of all Notebook `29` code cells passed
+- Notebook `29` executed top-to-bottom through a local cell runner because `nbconvert`/`nbclient` are not installed
+- required artifacts and figures were written

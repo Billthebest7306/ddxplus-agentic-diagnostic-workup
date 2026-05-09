@@ -1,0 +1,50 @@
+case_id,true_pathology,notebook28_prediction,listwise_prediction,notebook28_correct,listwise_correct,paired_outcome,selected_branch_id,selected_candidate_role,differential_rank,listwise_score,candidate_bayes_posterior,candidate_graph_rank,candidate_mlp_rank
+test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,True,unchanged,base,base,1.0,0.9995154734974833,0.9999528241214379,1.0,1.0
+test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,True,unchanged,base,base,1.0,0.9949242763984165,0.7509052238143016,1.0,1.0
+test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,True,unchanged,base,base,1.0,0.9992638515755625,0.995222086510366,1.0,1.0
+test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,True,unchanged,base,base,1.0,0.9995451082418152,0.9997978058652949,1.0,1.0
+test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,True,unchanged,base,base,1.0,0.9986094974139816,0.8809787331101329,1.0,1.0
+test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,False,unchanged,base,base,1.0,0.9992749311750926,0.91391861023744,1.0,1.0
+test:11198,Boerhaave,Boerhaave,Boerhaave,True,True,unchanged,base,base,1.0,0.9996192783074233,0.999934806971324,1.0,1.0
+test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,True,unchanged,base,base,1.0,0.9992043738687818,0.9588780560114647,1.0,1.0
+test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,True,unchanged,base,base,1.0,0.99973904647984,0.9999999970480684,1.0,1.0
+test:11655,Bronchitis,URTI,URTI,False,False,unchanged,base,base,1.0,0.9975971023968081,0.6965383975780326,1.0,1.0
+test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,True,unchanged,base,base,1.0,0.9994218584329728,0.9915126056206646,1.0,1.0
+test:125508,Unstable angina,Unstable angina,Unstable angina,True,True,unchanged,base,base,1.0,0.9992967059085475,0.999808683374125,1.0,1.0
+test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,unchanged,base,base,1.0,0.9995124490263443,0.8255803109626414,1.0,1.0
+test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,True,unchanged,base,base,1.0,0.9998087060447127,0.9999999840856146,1.0,1.0
+test:133888,Larygospasm,Larygospasm,Larygospasm,True,True,unchanged,base,base,1.0,0.9992118508222139,0.9991586071894795,1.0,1.0
+test:13402,URTI,URTI,URTI,True,True,unchanged,base,base,1.0,0.9837233932807637,0.5225678568295629,1.0,1.0
+test:16097,Stable angina,Stable angina,Stable angina,True,True,unchanged,base,base,1.0,0.9996515552498587,0.946295939938707,1.0,1.0
+test:18744,Anemia,Anemia,Anemia,True,True,unchanged,base,base,1.0,0.9944244672872213,0.9429300313928164,1.0,1.0
+test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,unchanged,pseudo_mlp_top1,pseudo,2.0,0.9996889761813214,0.9999600537696842,1.0,2.0
+test:19424,Whooping cough,Whooping cough,Whooping cough,True,True,unchanged,base,base,1.0,0.9987265741430505,0.9918971059158869,1.0,1.0
+test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,True,unchanged,base,base,1.0,0.9975618784104946,0.7234338060865172,1.0,1.0
+test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,True,unchanged,base,base,1.0,0.9994038711517855,0.9988885918537066,1.0,1.0
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,unchanged,base,base,1.0,0.9995518089097917,0.9975868250944107,1.0,1.0
+test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,True,unchanged,graph_bayes_scout,branch,1.0,0.9806236564366372,0.44688146670526113,1.0,1.0
+test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,unchanged,base,base,1.0,0.9991324783030331,0.9998327127953751,1.0,1.0
+test:35039,Myocarditis,Myocarditis,Myocarditis,True,True,unchanged,pseudo_mlp_top1,pseudo,4.0,0.9836281888271657,0.7308590318131689,1.0,2.0
+test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,True,unchanged,base,base,1.0,0.9997985082371833,0.9999999956538854,1.0,1.0
+test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,True,unchanged,base,base,1.0,0.9981557568122338,0.9604811089292115,1.0,1.0
+test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,True,unchanged,pseudo_mlp_top1,pseudo,2.0,0.9822089793656011,0.6295012584332629,1.0,1.0
+test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,True,unchanged,base,base,1.0,0.9985992555050943,0.8252253033241734,1.0,1.0
+test:46152,Cluster headache,Cluster headache,Cluster headache,True,True,unchanged,base,base,1.0,0.999314299469137,0.999535962921083,1.0,1.0
+test:51421,Chagas,Chagas,Chagas,True,True,unchanged,base,base,1.0,0.9989043869736725,0.9990565647021753,1.0,1.0
+test:51611,PSVT,PSVT,PSVT,True,True,unchanged,base,base,1.0,0.9995242447803936,0.999999954876911,1.0,1.0
+test:52755,SLE,SLE,SLE,True,True,unchanged,pseudo_mlp_top1,pseudo,2.0,0.9991475671071691,0.9999369604066485,1.0,2.0
+test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,True,unchanged,base,base,1.0,0.9963942269222966,0.8009458087625088,1.0,1.0
+test:62878,Pericarditis,Pericarditis,Pericarditis,True,True,unchanged,counteranchor_scout,branch,1.0,0.998845965672965,0.9991015251623405,1.0,6.0
+test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,True,unchanged,base,base,1.0,0.9995445452951084,0.9996180428585957,1.0,1.0
+test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,unchanged,base,base,1.0,0.9993757991036829,0.9999351519972759,1.0,1.0
+test:76022,Panic attack,Myocarditis,Myocarditis,False,False,unchanged,pseudo_mlp_top1,pseudo,2.0,0.9718943141057437,0.5559442693390295,1.0,21.0
+test:77908,Ebola,Ebola,Ebola,True,True,unchanged,base,base,1.0,0.9998777683537254,0.999999999706243,1.0,1.0
+test:81691,Croup,Acute otitis media,Croup,False,True,win,graph_bayes_scout,branch,3.0,0.9752919288225222,0.7428623895734934,1.0,3.0
+test:8666,Influenza,HIV (initial infection),HIV (initial infection),False,False,unchanged,base,base,1.0,0.9973416314314718,0.775053833215888,1.0,1.0
+test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,True,unchanged,base,base,1.0,0.9990652334226197,0.9998647711708629,1.0,1.0
+test:89477,Localized edema,Localized edema,Localized edema,True,True,unchanged,base,base,1.0,0.9995446864282505,0.9999999879562563,1.0,1.0
+test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,True,unchanged,base,base,1.0,0.9964840951324491,0.9922056259230305,1.0,1.0
+test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,True,unchanged,base,base,1.0,0.9996866148117729,0.9999722664197755,1.0,1.0
+test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,True,unchanged,base,base,1.0,0.9999076697681437,0.9999999978964305,1.0,1.0
+test:95923,Pneumonia,Pneumonia,Pneumonia,True,True,unchanged,base,base,1.0,0.9955703480915609,0.997993403869367,1.0,1.0
+test:96956,GERD,GERD,GERD,True,True,unchanged,base,base,1.0,0.991795709934343,0.6101517867379761,1.0,1.0

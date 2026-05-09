@@ -162,6 +162,8 @@ Key results:
 | Notebook 20 LLM-led graph context, 24 cases | 0.833 | 0.958 | 0.744 | 6.13 |
 | Notebook 22 graph posterior final critic, 49 cases | 0.898 | 0.939 | 0.867 | 6.59 |
 | Notebook 23 calibrated graph-Bayes rescue, 49 cases | 0.959 | n/a | n/a | 6.96 |
+| Notebook 28 MLP-gated branching, 49 cases | 0.898 | 0.959 | 0.864 | 6.63 selected / 9.96 total branch |
+| Notebook 29 listwise differential adjudicator, 49 cases | 0.918 | n/a | n/a | 6.63 selected / 9.96 total branch |
 
 Notebook 13 reduced requested evidence by:
 
@@ -180,6 +182,8 @@ Interpretation:
 - Notebook 22 is the first graph-ledger enhancement to improve the 49-case artifact: it keeps Notebook 13 acquisition unchanged and uses a conservative graph-posterior final critic to reach `44/49` with no extra requests.
 - Notebook 23 is the first graph-ledger enhancement to materially change the saved-trace result: it keeps Notebook 13 as the first-pass workup and reaches `47/49` with `6.96` mean requests and zero regressions.
 - Notebook 24 tested that rescue layer live. It did not promote the rescue layer, but the fresh live base reached `45/49` with `6.20` mean requests.
+- Notebook 28 tested learned-gate live branching and reached `44/49` with zero regressions versus its own base.
+- Notebook 29 tested ranked-differential listwise adjudication over frozen Notebook 28 traces and reached `45/49` with zero regressions, but did not reach the `47/49` promotion target.
 
 ## Are We Done With The Simple Sequential Agent?
 
@@ -421,13 +425,21 @@ Notebook 23 realizes the larger opportunity offline. It uses train/validate-deri
 
 Notebook 24 completed the live-confirmation wrapper for Notebook 23. The live rescue did not reproduce the offline `47/49` gain: the fresh live base reached `45/49 = 0.918`, and the live rescue also reached `45/49 = 0.918` with nine extra rescue requests. This means the graph/Bayes rescue layer is not promoted, but the base LLM-led + MLP-stopped method is stronger than the original frozen artifact suggested.
 
+Notebook 28 and Notebook 29 extend this line into prospective branching and ranked-differential adjudication. Notebook 28 improves its own live base from `42/49` to `44/49` with zero regressions. Notebook 29 then keeps those live traces fixed, explodes ranked differentials plus graph/Bayes/MLP candidates, and improves the selected result to `45/49` with one additional no-regression win. Its oracle analysis is the important signal: ranked top-2 contains `47/49`, ranked top-3 contains `48/49`, and the full exploded candidate pool contains all `49/49` true labels.
+
 ### Next Experiment If More Work Is Needed
 
-Only do a new notebook if it answers a specific control question that is not already answered by Notebooks 14, 17, 18, 20, 21, 22, 23, and 24:
+Only do a new notebook if it answers a specific control question that is not already answered by Notebooks 14, 17, 18, 20, 21, 22, 23, 24, 28, and 29:
 
 > Can the Notebook 23 calibrated graph-Bayes rescue layer hold up on held-out or live traces while keeping Notebook 13 as the first-pass workup?
 
 Notebook 24 was the implementation of that question, and its live result is now complete. It did not promote the rescue layer. Notebook 13 is already a defensible live acquisition endpoint, and Notebook 23 remains the current offline graph-ledger rescue enhancement rather than a live replacement.
+
+The post-Notebook-29 control question is narrower:
+
+> Can a pairwise or abstaining confounder adjudicator decide when to promote rank-2/rank-3 differentials over a graph/Bayes/MLP consensus anchor without using the 49-case labels?
+
+That is the next credible research direction if more work is needed.
 
 ## How To Present This To The Instructor
 
@@ -450,6 +462,8 @@ The project should be presented as an evidence-acquisition study:
 15. Notebook 22 used train-derived graph log-odds as a final-state posterior critic over Notebook 13 evidence and improved the saved 49-case result to `44/49` with the same `6.59` requests.
 16. Notebook 23 used calibrated graph/Bayes rescue to improve the saved 49-case trace to `47/49` with `6.96` mean requests.
 17. Notebook 24 tested that rescue live; it was not promoted, but the fresh live base reached `45/49` with `6.20` mean requests.
+18. Notebook 28 tested learned-gate live branching and graph/Bayes/MLP branch adjudication; it improved its own base to `44/49` with zero regressions.
+19. Notebook 29 tested ranked-differential listwise adjudication over Notebook 28 traces; it reached `45/49` with zero regressions and showed a `47/49` to `48/49` oracle in the ranked differential pool.
 
 ## Bottom Line
 
@@ -461,13 +475,14 @@ The work is not rootless. The frame of reference is now clear:
 - partial-evidence MLP: matched-information diagnostic head
 - hybrid MLP-guided stopping: current live proposed improvement
 - calibrated graph/Bayes rescue reranker: current offline mathematical enhancement
+- ranked-differential listwise adjudication: diagnostic path showing the `47/49+` candidate ceiling
 
 The current work is enough to claim:
 
-> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer.
+> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer. Prospective branching and ranked-differential adjudication now show that `47/49+` is available in the candidate pool, while safe selection among close confounders remains unresolved.
 
 The current work is not enough to claim:
 
 > Our agentic architecture is generally superior to all direct neural baselines or official DDXPlus sequential methods.
 
-Notebooks 14, 17, 18, 19, and 24 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current method, move into final writeup and presentation, and frame the project around evidence-efficient diagnostic workup rather than unconstrained agentic superiority.
+Notebooks 14, 17, 18, 19, 24, 28, and 29 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current method, and treat any further work as targeted confounder adjudication rather than a new controller family.

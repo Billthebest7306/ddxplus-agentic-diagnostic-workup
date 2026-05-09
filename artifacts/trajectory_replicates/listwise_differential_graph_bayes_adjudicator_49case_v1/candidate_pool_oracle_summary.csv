@@ -1,0 +1,8 @@
+candidate_pool,correct_count,num_cases,accuracy,miss_recoveries_vs_notebook28
+source_top1_plus_ranked_top1,44,49,0.8979591836734694,0
+source_top1_plus_ranked_top2,47,49,0.9591836734693877,3
+source_top1_plus_ranked_top3,48,49,0.9795918367346939,4
+source_top1_plus_ranked_top5,48,49,0.9795918367346939,4
+source_top1_plus_ranked_top10,48,49,0.9795918367346939,4
+source_top1_plus_ranked_top20,48,49,0.9795918367346939,4
+all_exploded_graph_bayes_mlp_ranked_candidates,49,49,1.0,5

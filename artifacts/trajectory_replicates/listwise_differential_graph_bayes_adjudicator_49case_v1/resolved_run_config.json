@@ -1,0 +1,19 @@
+{
+  "notebook": "29_listwise_differential_graph_bayes_adjudicator.ipynb",
+  "run_name": "listwise_differential_graph_bayes_adjudicator_49case_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1",
+  "created_unix_time": 1778313263.403015,
+  "selected_policy_name": "listwise_differential_graph_bayes_mlp_v1",
+  "selected_margin": 0.02,
+  "promotion_decision": "not_promoted_diagnostic_offline_listwise_candidate",
+  "input_roots": {
+    "notebook28_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1",
+    "notebook13_root": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+    "notebook24_root": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1",
+    "graph_root": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1",
+    "bayes_root": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1",
+    "partial_mlp_root": "/Users/alfred/Documents/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2",
+    "dataset_root": "/Users/alfred/Documents/baseline_model/dataset"
+  },
+  "no_api_calls": true
+}

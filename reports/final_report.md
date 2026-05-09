@@ -34,7 +34,7 @@ Notebook `28` completed the successor branching design: a learned branch-trigger
 
 The strongest conclusion is not that “agentic diagnosis beats every classifier.” The strongest conclusion is:
 
-> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, but its post-hoc analysis shows the next real opportunity is listwise adjudication over ranked differentials, not simply more branch top-1 votes.
+> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, and Notebook `29` shows that ranked-differential listwise adjudication can add another no-regression win. The remaining opportunity is not candidate availability; it is calibrated selection among close rank-2/rank-3 confounders.
 
 ## Research Question
 
@@ -430,7 +430,9 @@ The actual live branch pool had an oracle ceiling of only `44/49`, so completed 
 
 Notebook `28` tested this next direction. It trains `branch_trigger_mlp_v1` on train/validate synthetic partial evidence states, uses a threshold of `0.375`, and spawns up to three fresh LLM branches only when the learned gate fires. The resolver scores base and branch predictions together with graph, Bayes, and MLP pseudo-candidates, while protecting base answers that are graph rank `1` and Bayes rank `1`.
 
-The live Notebook `28` result was `44/49`, with base at `42/49`, two wins, zero regressions, `0.959` top-3/top-5, `6.63` selected requests, and `9.96` total branch requests. It was not promoted, but it revealed a stronger next step: the scored candidate pool itself had only a `44/49` oracle, while adding ranked-differential candidates gives a `47/49` top-2 and `48/49` top-3 oracle. The next iteration should score ranked differential entries from base and branch workups, not only final top-1 branch answers.
+The live Notebook `28` result was `44/49`, with base at `42/49`, two wins, zero regressions, `0.959` top-3/top-5, `6.63` selected requests, and `9.96` total branch requests. It was not promoted, but it revealed a stronger next step: the scored candidate pool itself had only a `44/49` oracle, while adding ranked-differential candidates gives a `47/49` top-2 and `48/49` top-3 oracle.
+
+Notebook `29` implemented that next offline final-head step. It keeps Notebook `28`'s live traces frozen, explodes base/branch ranked differentials plus graph/Bayes/MLP top candidates, and scores them with a train/validate-calibrated L2 logistic resolver. The selected fixed policy reaches `45/49`, with one win and zero regressions versus Notebook `28`. It fixes Croup by promoting the `graph_bayes_scout` rank-3 differential candidate. The full exploded candidate pool contains the true label in all `49/49`, so the next problem is calibrated top-1-vs-rank-2 selection, not wider candidate generation.
 
 ## Error Analysis
 
@@ -489,7 +491,7 @@ The project should be presented as an **evidence-efficient diagnostic workup sys
 
 The strongest final statement is:
 
-> We built a reproducible DDXPlus baseline ladder and proposed a structured sequential workup system where an LLM acquires evidence under a deterministic ledger and a partial-evidence MLP decides when enough information has been gathered. The frozen live 49-case confirmation reached `43/49` accuracy and `0.939` top-5 while requesting about `6.6` evidence fields per case; a fresh live run of the same backbone inside Notebook `24` reached `45/49` with `6.20` requests. Offline train-derived graph-ledger enhancements improve the saved trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but that rescue was not promoted by the fresh live confirmation. Prospective live branching recovered some wrong trajectories; Notebook `28` improved its own live base to `44/49` with zero regressions, and its candidate-pool analysis points to listwise ranked-differential adjudication as the next credible path to `47/49+`.
+> We built a reproducible DDXPlus baseline ladder and proposed a structured sequential workup system where an LLM acquires evidence under a deterministic ledger and a partial-evidence MLP decides when enough information has been gathered. The frozen live 49-case confirmation reached `43/49` accuracy and `0.939` top-5 while requesting about `6.6` evidence fields per case; a fresh live run of the same backbone inside Notebook `24` reached `45/49` with `6.20` requests. Offline train-derived graph-ledger enhancements improve the saved trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but that rescue was not promoted by the fresh live confirmation. Prospective live branching recovered some wrong trajectories; Notebook `28` improved its own live base to `44/49` with zero regressions, and Notebook `29` improved the frozen Notebook `28` trace to `45/49` by scoring ranked differentials. The current evidence says `47/49+` is available in the candidate pool, but selecting it safely needs a more specialized confounder adjudicator.
 
 Updated graph-ledger statement:
 
@@ -587,7 +589,7 @@ Notebook `27` is that prospective live test. It improved its own live base from 
 
 ### Slide 19. Error Analysis
 
-Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `27` shows that confidence/contradiction triggers miss consensus wrong-answer cases. Notebook `28` shows that some of those misses are already present as rank-2/rank-3 differential entries, but were not scored as final candidates.
+Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `27` shows that confidence/contradiction triggers miss consensus wrong-answer cases. Notebook `28` shows that some of those misses are already present as rank-2/rank-3 differential entries, but were not scored as final candidates. Notebook `29` scores those candidates and recovers Croup, but the learned resolver still trusts wrong graph/Bayes/MLP rank-1 consensus in acute-vs-chronic rhinosinusitis, Bronchitis-vs-URTI, Influenza-vs-HIV-initial-infection, and Panic-attack-vs-Myocarditis confusions.
 
 ### Slide 20. Claims And Limitations
 
@@ -595,7 +597,7 @@ Strong claim: evidence-efficient sequential workup with MLP-guided stopping. Lim
 
 ### Slide 21. Future Work
 
-Build the next listwise differential adjudicator. The candidate pool should include base and branch ranked top-5 diagnoses, graph top-5, Bayes top-5, MLP top-5, and confounder challengers. Notebook `28`'s post-hoc oracle suggests this expansion can recover the `47/49+` target if the resolver can choose safely without test-label tuning.
+Build the next pairwise or abstaining confounder adjudicator. Notebook `29` already shows the expanded candidate pool contains the `47/49+` target; the next model should decide when to trust a rank-2/rank-3 differential over a consensus rank-1 anchor, using train/validate-derived confounder pairs and strict calibration rather than 49-case label tuning.
 
 ## Key Files
 
@@ -619,6 +621,7 @@ Build the next listwise differential adjudicator. The candidate pool should incl
 - `notebooks/26_offline_branching_trajectory_lab.ipynb`
 - `notebooks/27_live_targeted_branching_confirmation.ipynb`
 - `notebooks/28_mlp_gated_confounder_graph_bayes_branching.ipynb`
+- `notebooks/29_listwise_differential_graph_bayes_adjudicator.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -634,3 +637,4 @@ Build the next listwise differential adjudicator. The candidate pool should incl
 - `reports/algorithmic_ledger/offline_branching_trajectory_lab_report.md`
 - `reports/algorithmic_ledger/live_targeted_branching_confirmation_report.md`
 - `reports/algorithmic_ledger/mlp_gated_confounder_graph_bayes_branching_report.md`
+- `reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md`
