@@ -1,0 +1,66 @@
+{
+  "candidate_pool_oracle_accuracy": 1.0,
+  "candidate_pool_oracle_correct": 49,
+  "max_unique_candidate_diagnoses": 8,
+  "mean_candidate_rows": 4.081632653061225,
+  "mean_unique_candidate_diagnoses": 3.979591836734694,
+  "min_unique_candidate_diagnoses": 3,
+  "num_cases": 49,
+  "ranked_differential_top3_accuracy": 0.9387755102040817,
+  "ranked_differential_top3_correct": 46,
+  "ranked_differential_top3_misses": [
+    {
+      "case_id": "test:81691",
+      "top3": [
+        "Acute otitis media",
+        "Influenza",
+        "Acute dystonic reactions"
+      ],
+      "true_pathology": "Croup"
+    },
+    {
+      "case_id": "test:35039",
+      "top3": [
+        "Pericarditis",
+        "Sarcoidosis",
+        "Chagas"
+      ],
+      "true_pathology": "Myocarditis"
+    },
+    {
+      "case_id": "test:62878",
+      "top3": [
+        "PSVT",
+        "Panic attack",
+        "Atrial fibrillation"
+      ],
+      "true_pathology": "Pericarditis"
+    }
+  ],
+  "ranked_differential_top5_accuracy": 0.9591836734693877,
+  "ranked_differential_top5_correct": 47,
+  "ranked_differential_top5_misses": [
+    {
+      "case_id": "test:81691",
+      "top5": [
+        "Acute otitis media",
+        "Influenza",
+        "Acute dystonic reactions",
+        "Acute laryngitis",
+        "Acute pulmonary edema"
+      ],
+      "true_pathology": "Croup"
+    },
+    {
+      "case_id": "test:62878",
+      "top5": [
+        "PSVT",
+        "Panic attack",
+        "Atrial fibrillation",
+        "Myocarditis",
+        "Sarcoidosis"
+      ],
+      "true_pathology": "Pericarditis"
+    }
+  ]
+}

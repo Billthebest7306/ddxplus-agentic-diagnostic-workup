@@ -1,0 +1,27 @@
+case_id,candidate,score,correct,selected
+test:111176,Chronic rhinosinusitis,0.999072790145874,False,True
+test:111176,Acute rhinosinusitis,0.0015543285990133882,True,False
+test:111176,Allergic sinusitis,7.547774849570033e-09,False,False
+test:11655,URTI,0.9851679801940918,False,True
+test:11655,Bronchitis,0.005910561420023441,True,False
+test:11655,Influenza,0.00016596629575360566,False,False
+test:35039,Myocarditis,0.9993471503257751,True,True
+test:35039,Acute pulmonary edema,0.00016675259394105524,False,False
+test:35039,GERD,5.4987871408229694e-05,False,False
+test:35039,Sarcoidosis,4.873865327681415e-05,False,False
+test:35039,Pericarditis,4.5625965867657214e-06,False,False
+test:62878,Anemia,0.19699594378471375,False,True
+test:62878,Panic attack,0.06796563416719437,False,False
+test:62878,Atrial fibrillation,0.025295551866292953,False,False
+test:62878,Sarcoidosis,0.019725797697901726,False,False
+test:62878,PSVT,0.006941427942365408,False,False
+test:62878,Myocarditis,0.0011951756896451116,False,False
+test:62878,Pericarditis,0.0005647584330290556,True,False
+test:81691,Croup,0.6614435315132141,True,True
+test:81691,Acute otitis media,0.2571408152580261,False,False
+test:81691,Influenza,0.026371270418167114,False,False
+test:81691,Viral pharyngitis,0.004102819599211216,False,False
+test:81691,Cluster headache,0.0023510039318352938,False,False
+test:81691,Pneumonia,0.0007012963178567588,False,False
+test:81691,Bronchiolitis,0.0004789409867953509,False,False
+test:81691,Anemia,4.467042163014412e-05,False,False

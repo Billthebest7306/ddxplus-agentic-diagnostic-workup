@@ -1,0 +1,108 @@
+{
+  "candidate_pool_oracle_diagnostic_only": {
+    "candidate_pool_oracle_accuracy": 1.0,
+    "candidate_pool_oracle_correct": 49,
+    "max_unique_candidate_diagnoses": 8,
+    "mean_candidate_rows": 4.081632653061225,
+    "mean_unique_candidate_diagnoses": 3.979591836734694,
+    "min_unique_candidate_diagnoses": 3,
+    "num_cases": 49,
+    "ranked_differential_top3_accuracy": 0.9387755102040817,
+    "ranked_differential_top3_correct": 46,
+    "ranked_differential_top3_misses": [
+      {
+        "case_id": "test:81691",
+        "top3": [
+          "Acute otitis media",
+          "Influenza",
+          "Acute dystonic reactions"
+        ],
+        "true_pathology": "Croup"
+      },
+      {
+        "case_id": "test:35039",
+        "top3": [
+          "Pericarditis",
+          "Sarcoidosis",
+          "Chagas"
+        ],
+        "true_pathology": "Myocarditis"
+      },
+      {
+        "case_id": "test:62878",
+        "top3": [
+          "PSVT",
+          "Panic attack",
+          "Atrial fibrillation"
+        ],
+        "true_pathology": "Pericarditis"
+      }
+    ],
+    "ranked_differential_top5_accuracy": 0.9591836734693877,
+    "ranked_differential_top5_correct": 47,
+    "ranked_differential_top5_misses": [
+      {
+        "case_id": "test:81691",
+        "top5": [
+          "Acute otitis media",
+          "Influenza",
+          "Acute dystonic reactions",
+          "Acute laryngitis",
+          "Acute pulmonary edema"
+        ],
+        "true_pathology": "Croup"
+      },
+      {
+        "case_id": "test:62878",
+        "top5": [
+          "PSVT",
+          "Panic attack",
+          "Atrial fibrillation",
+          "Myocarditis",
+          "Sarcoidosis"
+        ],
+        "true_pathology": "Pericarditis"
+      }
+    ]
+  },
+  "important_caveat": "The 49/49 candidate-pool oracle is a label-using diagnostic ceiling, not an achieved deployable policy.",
+  "method": "Compact neural candidate scorer over Notebook 30 graph/Bayes/MLP/branch candidate pool.",
+  "no_live_api_calls": true,
+  "notebook30_reference": {
+    "base_accuracy": 0.8571428571428571,
+    "base_correct": 42,
+    "mean_selected_requests": 6.775510204081633,
+    "mean_total_branch_requests": 12.10204081632653,
+    "num_cases": 49,
+    "selected_accuracy": 0.8979591836734694,
+    "selected_correct": 44
+  },
+  "offline_only": true,
+  "policy_name": "compact_neural_candidate_resolver_v1",
+  "promotion_decision": "offline_candidate_promoted_for_followup_confirmation",
+  "selected_before_live_label_evaluation": true,
+  "selected_policy_metrics": {
+    "accuracy": 0.9387755102040817,
+    "candidate_pool_oracle_accuracy": 1.0,
+    "candidate_pool_oracle_correct": 49,
+    "changed_predictions_vs_notebook30": 3,
+    "mean_candidate_rows": 4.081632653061225,
+    "mean_selected_requests": 6.775510204081633,
+    "mean_total_branch_requests": 12.10204081632653,
+    "mean_unique_candidate_diagnoses": 3.979591836734694,
+    "num_cases": 49,
+    "num_correct": 46,
+    "regressions_vs_base": 0,
+    "regressions_vs_notebook30": 0,
+    "wins_vs_base": 4,
+    "wins_vs_notebook30": 2
+  },
+  "status": "offline_candidate_promoted_for_followup_confirmation",
+  "training_data": {
+    "source": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/candidate_resolver_train_validate_features.csv",
+    "train_groups": 4000,
+    "train_rows": 33189,
+    "validate_groups": 2000,
+    "validate_rows": 16686
+  }
+}

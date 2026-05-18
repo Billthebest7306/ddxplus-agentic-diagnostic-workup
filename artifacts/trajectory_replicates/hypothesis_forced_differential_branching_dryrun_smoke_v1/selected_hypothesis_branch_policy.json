@@ -1,0 +1,94 @@
+{
+  "policy_name": "trigger=hypothesis_branch_trigger_mlp_v1|threshold=0.40|budget=3|judge=hypothesis_forced_graph_bayes_mlp_resolver_v1",
+  "selected_before_live_results": true,
+  "source_analysis": "Notebook 27/28 branching failures plus Notebook 29 candidate-neighborhood analysis; branch targets are computed from visible graph/Bayes/MLP differentials.",
+  "inputs_used_for_decisions": [
+    "visible evidence ledger",
+    "learned branch-trigger MLP",
+    "target-hypothesis assignment table",
+    "partial-evidence diagnostic MLP",
+    "Notebook 16 graph edges",
+    "Notebook 19 Bayes likelihoods/priors",
+    "confounder pair coverage graph"
+  ],
+  "branch_trigger_threshold": 0.39999999999999997,
+  "branch_mlp_validation_summary": [
+    {
+      "train_states": 4000,
+      "validate_states": 2000,
+      "branch_label_rate_train": 0.437,
+      "branch_label_rate_validate": 0.4365,
+      "selected_threshold": 0.39999999999999997,
+      "selected_threshold_precision": 0.8186274509803921,
+      "selected_threshold_recall": 0.9564719358533792,
+      "selected_threshold_branch_rate": 0.51,
+      "auc": 0.9445323624743487,
+      "average_precision": 0.9041442622621618,
+      "brier_score": 0.10450850960599514
+    }
+  ],
+  "resolver_validation_summary": [
+    {
+      "validate_candidate_rows": 16676,
+      "validate_positive_rate": 0.10937874790117534,
+      "candidate_auc": 0.9552845753540193,
+      "candidate_average_precision": 0.8150456233833083
+    }
+  ],
+  "branch_profile_templates": [
+    {
+      "role_kind": "graph_bayes_challenger",
+      "role_name_prefix": "Graph/Bayes hypothesis scout",
+      "directive_template": "Treat {target_hypothesis} as the assigned challenger to {base_prediction}. Actively seek evidence that would support or refute {target_hypothesis}, especially roots that separate it from {base_prediction}."
+    },
+    {
+      "role_kind": "pairwise_discriminator",
+      "role_name_prefix": "Pairwise discriminator scout",
+      "directive_template": "Your assigned job is to resolve {base_prediction} versus {target_hypothesis}. Prefer evidence roots with high pairwise discriminator utility before broad exploration."
+    },
+    {
+      "role_kind": "counteranchor_stress_test",
+      "role_name_prefix": "Counter-anchor stress-test scout",
+      "directive_template": "Assume the base answer {base_prediction} may be an anchoring error. Build the best evidence-grounded case for {target_hypothesis}, then abandon it only if the revealed ledger contradicts it."
+    }
+  ],
+  "metrics": {
+    "num_cases": 2,
+    "accuracy": 1.0,
+    "num_correct": 2,
+    "top3_accuracy": 1.0,
+    "top5_accuracy": 1.0,
+    "macro_f1": 1.0,
+    "base_accuracy": 1.0,
+    "base_num_correct": 2,
+    "wins_vs_base": 0,
+    "regressions_vs_base": 0,
+    "changed_predictions": 0,
+    "branch_trigger_rate": 0.5,
+    "branches_spawned_total": 3,
+    "mean_branches_spawned": 1.5,
+    "mean_selected_requests": 6.0,
+    "mean_base_requests": 6.0,
+    "mean_total_branch_requests": 15.0,
+    "total_api_calls": 35,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "selection_source_distribution": {
+      "base": 2
+    },
+    "stop_reason_distribution": {
+      "selected_mlp_stop": 2
+    },
+    "run_name": "hypothesis_forced_differential_branching_dryrun_smoke_v1",
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1",
+    "runtime_seconds": 0.28774285316467285,
+    "run_live_api": false,
+    "allow_dry_run_benchmark": true,
+    "branch_trigger_name": "hypothesis_branch_trigger_mlp_v1",
+    "branch_trigger_threshold": 0.39999999999999997,
+    "branch_budget": 3,
+    "branch_judge_name": "hypothesis_forced_graph_bayes_mlp_resolver_v1",
+    "dry_run_force_branch_path_smoke": true,
+    "promotion_decision": "pending_full_49case_run"
+  }
+}

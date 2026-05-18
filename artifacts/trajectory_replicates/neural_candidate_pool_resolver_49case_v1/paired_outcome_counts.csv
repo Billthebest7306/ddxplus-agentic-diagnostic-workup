@@ -1,0 +1,6 @@
+paired_outcome,case_count
+wins,2
+regressions,0
+unchanged_correct,44
+unchanged_wrong,2
+changed_wrong_to_wrong,1

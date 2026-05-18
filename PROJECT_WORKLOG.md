@@ -4823,3 +4823,183 @@ Interpretation:
 - Top-2 graph/Bayes contains the target answer in all cases, so the mathematical ledger is surfacing the right neighborhood.
 - The next credible model should be pairwise or abstaining, focused on top-1-vs-rank-2 confounder resolution.
 - A global multicandidate logistic scorer is too blunt for near-neighbor disease pairs where all heads prefer the same wrong anchor.
+
+## 74. Notebook 30 Implemented: Hypothesis-Forced Differential Branching
+
+Implemented the next prospective live branching candidate:
+
+- `notebooks/30_hypothesis_forced_differential_branching.ipynb`
+- `reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md`
+- dry-run artifact root: `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1/`
+
+This notebook tests the user's refined multi-agent hypothesis: branches should not merely restart with broad alternate roles. Instead, the coordinator should compute distinct challenger hypotheses from the base terminal visible evidence, then force each fresh-context branch to test one assigned hypothesis.
+
+Policy design:
+
+- run the Notebook `13` selected-stop workup once as the base branch
+- score challenger diagnoses from graph top-5, Bayes top-5, MLP top-5, LLM ranked differential, and hybrid ranked differential
+- rank challengers by source-rank support, graph/Bayes support gaps, and missing pairwise discriminator utility
+- use the learned branch-trigger MLP to decide whether to spawn branches
+- when branching fires, assign up to three branch targets:
+  - graph/Bayes hypothesis scout
+  - pairwise discriminator scout
+  - counter-anchor stress-test scout
+- pass target hypothesis, preferred discriminator roots, and support summary into the branch prompt
+- keep branches as fresh message lists and avoid passing base free-text reasoning
+- resolve base, branch, graph/Bayes/MLP pseudo-candidates, and assigned-hypothesis pseudo-candidates with the calibrated graph/Bayes/MLP resolver
+
+Dry-run verification:
+
+| Metric | Value |
+|---|---:|
+| Dry-run cases | 2 |
+| Base correct | 2/2 |
+| Selected correct | 2/2 |
+| Branch trigger rate | 1/2 |
+| Branches spawned | 3 |
+| Mean selected requests | 6.0 |
+| Mean total branch requests | 15.0 |
+| Live API calls | 0 |
+
+The dry-run includes a no-spend forced branch-path smoke on the first case so the target-hypothesis machinery is exercised even when the selected learned gate would otherwise abstain on stable smoke cases.
+
+Forced smoke branch targets:
+
+| Target hypothesis | Role kind |
+|---|---|
+| Pericarditis | graph-bayes challenger |
+| Myasthenia gravis | pairwise discriminator |
+| Myocarditis | counter-anchor stress test |
+
+Execution checks:
+
+- static parse of all Notebook `30` code cells passed
+- notebook executed top-to-bottom in no-spend dry-run mode
+- artifact contract passed
+- `selected_hypothesis_branch_policy.json` records the fixed policy, learned threshold, branch templates, validation summaries, and dry-run metrics
+
+Interpretation:
+
+- This section records the original no-spend dry-run status before the full live result.
+- The later live result is recorded in sections 76 and 77.
+- Notebook `13` remains the defended proposed method until this or a later live process beats it.
+
+## 75. Notebook 30 Live API Retry Patch
+
+The user hit an error while running Notebook `30` live. The saved traceback was from execution count `17`, inside the live execution cell, but the actual failure was a transient TLS/API transport error in `call_openai_compatible()`:
+
+```text
+SSLError: HTTPSConnectionPool(host='api.openai.com', port=443): EOF occurred in violation of protocol
+```
+
+This was not a graph/Bayes/hypothesis-branching logic failure. It happened before the model response was returned.
+
+Patch applied:
+
+- added `LLM_REQUEST_TIMEOUT_SECONDS = 180`
+- added `LLM_MAX_RETRIES = 5`
+- added `LLM_RETRY_BACKOFF_SECONDS = 8`
+- wrapped `requests.post(...)` in bounded retry/backoff logic
+- retry only transient connection errors and retryable HTTP statuses: `408`, `409`, `425`, `429`, `500`, `502`, `503`, `504`
+- fail immediately for non-retryable HTTP errors such as bad auth or malformed requests
+- cleared stale notebook outputs so the old error is not preserved in the notebook file
+
+Verification:
+
+- static parse of all Notebook `30` code cells passed
+- Notebook `30` code outputs are cleared
+
+The live run can be restarted top-to-bottom. Because `RESUME_IF_AVAILABLE=True`, any already completed prediction rows would be skipped; in the observed failed run no completed `predictions.csv` was present yet, so the run should simply start from the beginning.
+
+## 76. Notebook 30 Live Result And Candidate-Pool Analysis
+
+The full Notebook `30` live run completed after the retry patch.
+
+Live artifact root:
+
+- `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/`
+
+Headline result:
+
+| Metric | Value |
+|---|---:|
+| Cases | 49 |
+| Base branch correct | 42/49 |
+| Selected policy correct | 44/49 |
+| Accuracy | 0.898 |
+| Wins vs base | 2 |
+| Regressions vs base | 0 |
+| Changed predictions | 4 |
+| Branch trigger rate | 6/49 |
+| Branches spawned | 18 |
+| Mean selected requests | 6.78 |
+| Mean total branch requests | 12.10 |
+
+Interpretation:
+
+- Hypothesis-forced branching safely improved its own same-run base trajectory, but did not reach the desired `47/49+` accuracy.
+- Only one selected final answer came from a real LLM branch. Three selected answers came from pseudo graph candidates and forty-five stayed with the base answer.
+- The branch cost is high: fired cases averaged roughly `59` total branch evidence requests.
+- The important discovery is candidate-pool recall. The selected ranked differential top-3 contains the true diagnosis in `46/49`; ranked top-5 contains it in `47/49`; the broader resolver candidate pool contains the true diagnosis in all `49/49` cases.
+- The broader candidate pool is small: mean `4.08` candidate rows and `3.98` unique diagnoses per case, range `3` to `8` unique diagnoses.
+
+This changes the bottleneck. Candidate generation is now strong enough; final candidate selection is the weak point.
+
+## 77. Notebook 31 Neural Candidate Pool Resolver
+
+Implemented Notebook `31`:
+
+- `notebooks/31_neural_candidate_pool_resolver.ipynb`
+- report: `reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md`
+- artifact root: `artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1/`
+
+Notebook `31` is an offline final-head lab over the completed Notebook `30` live candidate pool. It trains a neural candidate scorer on Notebook `30` train/validate-derived synthetic resolver features and evaluates once on the 49-case live candidate pool.
+
+Selected policy:
+
+```text
+compact_neural_candidate_resolver_v1
+model = MLPClassifier(hidden_layer_sizes=(64, 32), alpha=1e-4)
+selection = argmax neural score within the Notebook 30 candidate pool
+```
+
+The selected model uses graph, Bayes, MLP, candidate-role, request-state, and candidate-set context features. It excludes disease-name one-hot features and does not use 49-case labels for training or threshold selection.
+
+Result:
+
+| System | Correct | Accuracy | Mean selected requests | Mean total branch requests |
+|---|---:|---:|---:|---:|
+| Notebook `30` base branch | 42/49 | 0.857 | 6.80 | 6.80 |
+| Notebook `30` hand resolver | 44/49 | 0.898 | 6.78 | 12.10 |
+| Notebook `31` compact neural resolver | 46/49 | 0.939 | 6.78 | 12.10 |
+| Candidate-pool oracle, diagnostic only | 49/49 | 1.000 | 6.78 | 12.10 |
+
+Paired result:
+
+- wins vs Notebook `30`: 2
+- regressions vs Notebook `30`: 0
+- changed predictions vs Notebook `30`: 3
+- wins vs Notebook `30` base branch: 4
+- regressions vs Notebook `30` base branch: 0
+
+Wins over Notebook `30`:
+
+| Case | True diagnosis | Notebook `30` | Notebook `31` |
+|---|---|---|---|
+| `test:81691` | Croup | Acute otitis media | Croup |
+| `test:35039` | Myocarditis | Pericarditis | Myocarditis |
+
+Remaining Notebook `31` misses:
+
+| Case | True diagnosis | Notebook `31` prediction |
+|---|---|---|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis |
+| `test:11655` | Bronchitis | URTI |
+| `test:62878` | Pericarditis | Anemia |
+
+Interpretation:
+
+- Notebook `31` is the strongest learned final-head result over the Notebook `30` candidate pool so far.
+- It still does not achieve the `47/49+` target as an actual selected policy.
+- The `49/49` number is only an oracle candidate-pool ceiling that uses labels and must not be presented as achieved accuracy.
+- The next credible step is a better close-confounder resolver or a very cheap discriminator-question mechanism for high-confidence near-neighbor anchors, not more broad branch-to-completion agents.

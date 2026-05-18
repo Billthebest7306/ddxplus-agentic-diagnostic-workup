@@ -39,12 +39,15 @@ Final artifact roots used:
 - `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1/`
 - `artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1/`
 - `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
+- `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1/`
+- `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/`
+- `artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1/`
 
 The strongest frozen live first-pass workup artifact remains notebook `13`: it uses the LLM as the evidence-acquisition controller and the partial-evidence MLP as an online stopping signal. The original 49-case confirmation reaches `43/49 = 0.878` accuracy with `6.59` mean evidence requests.
 
 Current graph-ledger update on 2026-05-08: Notebook `23` is the strongest offline algorithmic-ledger enhancement. It keeps Notebook `13` as the first-pass workup, uses train/validate-calibrated graph/Bayes/MLP rescue logic, and improves the saved 49-case trace from `43/49` to `47/49` with `6.96` mean requests and zero regressions. Notebook `24` completed the live confirmation run, but the rescue layer did not reproduce the offline gain: the fresh live base reached `45/49 = 0.918`, and the live rescue also ended at `45/49 = 0.918` with `6.39` mean total requests.
 
-Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Notebook `29` expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with one win and zero regressions. Its oracle analysis shows source top-1 plus ranked top-2 reaches `47/49`, ranked top-3 reaches `48/49`, and the full exploded graph/Bayes/MLP/ranked pool contains all `49/49` true labels.
+Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Notebook `29` expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with one win and zero regressions. Notebook `30` tested hypothesis-forced branching and improved its same-run base from `42/49` to `44/49` with zero regressions. Its most important finding is that the broader resolver candidate pool contains all `49/49` true labels with only about four unique diagnoses per case. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`; the `49/49` candidate-pool oracle remains diagnostic only.
 
 ## Headline Results
 
@@ -92,6 +95,8 @@ Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-
 | MLP-gated confounder branching, notebook 28 dry-run | 2 | Learned branch gate and graph/Bayes/MLP resolver; smoke only | 1.000 | 1.000 | 1.000 | 1.000 | 6.0 selected / 6.0 total branch requests |
 | MLP-gated confounder branching, notebook 28 live | 49 | Learned branch gate, three fresh LLM branches, pseudo-candidates, calibrated resolver; not promoted | 0.898 | 0.959 | 0.959 | 0.864 | 6.6 selected / 10.0 total branch requests |
 | Listwise differential adjudicator, notebook 29 offline | 49 | Frozen Notebook 28 live traces plus ranked-differential graph/Bayes/MLP candidate scoring; not promoted | 0.918 | n/a | n/a | n/a | 6.6 selected / 10.0 total branch requests |
+| Hypothesis-forced differential branching, notebook 30 live | 49 | Explicit challenger-hypothesis LLM branches plus graph/Bayes/MLP pseudo-candidates; not promoted | 0.898 | 0.939 | 0.959 | 0.871 | 6.8 selected / 12.1 total branch requests |
+| Neural candidate-pool resolver, notebook 31 offline | 49 | Frozen Notebook 30 candidate pool plus compact neural resolver; offline follow-up candidate | 0.939 | n/a | n/a | n/a | 6.8 selected / 12.1 total branch requests |
 | Full-evidence one-shot, live 10-case slice | 10 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 | Full-evidence one-shot, live 24-case slice | 24 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 
@@ -1638,3 +1643,88 @@ Post-run deep analysis after the rerun sharpened this further:
 | MLP top-3 | 48/49 |
 
 The remaining misses are not missing from the mathematical ledger: Acute rhinosinusitis, Bronchitis, and Influenza are all rank 2 under the LLM differential, graph, Bayes, and usually MLP. Panic attack is not in the LLM ranked differential, but graph and Bayes still place it rank 2. The next useful controller is therefore a pairwise or abstaining confounder adjudicator, not another broad candidate-pool expansion.
+
+## Notebook 30 Hypothesis-Forced Differential Branching
+
+Notebook `30` implements hypothesis-forced live branching. It keeps the Notebook `13` selected-stop base branch, but replaces generic branch roles with explicit target hypotheses computed from the base terminal visible evidence.
+
+- `notebooks/30_hypothesis_forced_differential_branching.ipynb`
+- `reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md`
+- dry-run artifact root: `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1/`
+- live artifact root: `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/`
+
+Policy:
+
+```text
+trigger = hypothesis_branch_trigger_mlp_v1
+branch budget = 3
+judge = hypothesis_forced_graph_bayes_mlp_resolver_v1
+```
+
+The target hypothesis table ranks challengers using graph top-5, Bayes top-5, MLP top-5, LLM ranked differential, hybrid ranked differential, graph/Bayes support gaps, and missing pairwise discriminator utility. If the learned gate fires, each branch receives:
+
+- assigned target hypothesis
+- base prediction to challenge
+- preferred discriminator roots
+- graph/Bayes/MLP support summary
+- branch role template
+
+Live result:
+
+| Metric | Value |
+|---|---:|
+| Base branch accuracy | 42/49 = 0.857 |
+| Selected policy accuracy | 44/49 = 0.898 |
+| Wins vs base | 2 |
+| Regressions vs base | 0 |
+| Changed predictions | 4 |
+| Branch trigger rate | 6/49 |
+| Branches spawned | 18 |
+| Mean selected requests | 6.78 |
+| Mean total branch requests | 12.10 |
+
+The live run supports the hypothesis-forced branching idea only partially. It safely improves the same-run base, but the cost increase is substantial and only one selected final answer comes from a real LLM branch. The more important result is candidate-pool recall:
+
+| Candidate object | Correct label coverage |
+|---|---:|
+| Final ranked differential top-3 | 46/49 |
+| Final ranked differential top-5 | 47/49 |
+| Broader resolver candidate pool | 49/49 |
+
+The broader resolver pool averages only `4.08` candidate rows and `3.98` unique diagnoses per case. This means Notebook `30` shifts the bottleneck from candidate generation to candidate selection.
+
+## Notebook 31 Neural Candidate Pool Resolver
+
+Notebook `31` is an offline final-head experiment over the completed Notebook `30` live candidate pool.
+
+- `notebooks/31_neural_candidate_pool_resolver.ipynb`
+- `reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md`
+- artifact root: `artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1/`
+
+Selected policy:
+
+```text
+compact_neural_candidate_resolver_v1
+model = MLPClassifier(hidden_layer_sizes=(64, 32), alpha=1e-4)
+selection = argmax neural score within the Notebook 30 candidate pool
+```
+
+Result:
+
+| System | Correct | Accuracy | Mean selected requests | Mean total branch requests |
+|---|---:|---:|---:|---:|
+| Notebook `30` base branch | 42/49 | 0.857 | 6.80 | 6.80 |
+| Notebook `30` hand resolver | 44/49 | 0.898 | 6.78 | 12.10 |
+| Notebook `31` compact neural resolver | 46/49 | 0.939 | 6.78 | 12.10 |
+| Candidate-pool oracle, diagnostic only | 49/49 | 1.000 | 6.78 | 12.10 |
+
+Paired against Notebook `30`, Notebook `31` has two wins and zero regressions. It fixes:
+
+| Case | True diagnosis | Notebook `30` | Notebook `31` |
+|---|---|---|---|
+| `test:81691` | Croup | Acute otitis media | Croup |
+| `test:35039` | Myocarditis | Pericarditis | Myocarditis |
+
+The remaining Notebook `31` misses are Acute rhinosinusitis vs Chronic rhinosinusitis, Bronchitis vs URTI, and Pericarditis vs Anemia.
+
+Notebook `31` is the strongest learned final-head result over the Notebook `30` candidate pool, but it still does not achieve the `47/49+` target as a selected policy. The `49/49` result is only a label-using oracle ceiling.

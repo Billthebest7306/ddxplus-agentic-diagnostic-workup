@@ -208,11 +208,27 @@ Notebook progression:
   - key finding: source top-1 plus ranked top-2 has a `47/49` oracle, ranked top-3 has `48/49`, and the full exploded graph/Bayes/MLP/ranked pool contains the true label in all `49/49`
   - writes artifacts under `artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1/`
 
-If you are continuing the main sequential-policy line, start from notebook `08` for the LLM-only cost-sensitive baseline, notebook `10` for the partial-evidence matched classifier, notebook `11` for hybrid v1, notebook `12` for stopping-policy ablation, notebook `13` for live selected-stop confirmation, notebook `14` for the candidate v2 shortlist experiment, notebook `15` for offline stop-threshold/evidence-trajectory analysis, notebook `16` for algorithmic graph-ledger analysis, notebook `17` for rejected hard graph-shortlist testing, notebook `18` for graph-advisory shortlist testing, notebook `19` for Bayesian VOI ledger analysis, notebook `20` for the corrected LLM-led graph-ledger context experiment, notebook `21` for offline graph-context adjudication analysis, notebook `22` for graph-posterior final adjudication over Notebook `13` traces, notebook `23` for calibrated graph/Bayes rescue reranking, notebook `24` for live rescue confirmation, notebook `25` for base trajectory replicate collection, notebook `26` for offline branching trajectory analysis, notebook `27` for prospective live targeted branching confirmation, notebook `28` for MLP-gated confounder branching, notebook `29` for ranked-differential listwise adjudication, or notebook `09` for integrated evaluation. Use notebooks `05` and `06` as the refined-policy history.
+- [30_hypothesis_forced_differential_branching.ipynb](notebooks/30_hypothesis_forced_differential_branching.ipynb)
+  - prospective live branching candidate, live run completed
+  - computes explicit challenger hypotheses from the base terminal graph/Bayes/MLP/ranked-differential state
+  - if the learned branch gate fires, spawns up to three fresh-context LLM branches, each with an assigned target hypothesis and discriminator roots
+  - live result: base branch `42/49`, selected policy `44/49`, wins `2`, regressions `0`, mean selected requests `6.78`, mean total branch requests `12.10`
+  - key finding: the broader resolver candidate pool contains the true diagnosis in `49/49` with only `3.98` unique diagnoses per case on average
+  - writes dry-run artifacts under `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1/`
+  - writes live artifacts under `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/`
+
+- [31_neural_candidate_pool_resolver.ipynb](notebooks/31_neural_candidate_pool_resolver.ipynb)
+  - offline neural final-head lab over the completed Notebook `30` candidate pool
+  - trains a compact MLP candidate scorer on Notebook `30` train/validate synthetic resolver features
+  - selected result: `46/49 = 0.939`, improving Notebook `30` by two cases with zero regressions
+  - diagnostic candidate-pool oracle is `49/49`, but this is an upper bound, not a deployable policy
+  - writes artifacts under `artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1/`
+
+If you are continuing the main sequential-policy line, start from notebook `08` for the LLM-only cost-sensitive baseline, notebook `10` for the partial-evidence matched classifier, notebook `11` for hybrid v1, notebook `12` for stopping-policy ablation, notebook `13` for live selected-stop confirmation, notebook `14` for the candidate v2 shortlist experiment, notebook `15` for offline stop-threshold/evidence-trajectory analysis, notebook `16` for algorithmic graph-ledger analysis, notebook `17` for rejected hard graph-shortlist testing, notebook `18` for graph-advisory shortlist testing, notebook `19` for Bayesian VOI ledger analysis, notebook `20` for the corrected LLM-led graph-ledger context experiment, notebook `21` for offline graph-context adjudication analysis, notebook `22` for graph-posterior final adjudication over Notebook `13` traces, notebook `23` for calibrated graph/Bayes rescue reranking, notebook `24` for live rescue confirmation, notebook `25` for base trajectory replicate collection, notebook `26` for offline branching trajectory analysis, notebook `27` for prospective live targeted branching confirmation, notebook `28` for MLP-gated confounder branching, notebook `29` for ranked-differential listwise adjudication, notebook `30` for hypothesis-forced branching, notebook `31` for neural candidate-pool resolution, or notebook `09` for integrated evaluation. Use notebooks `05` and `06` as the refined-policy history.
 
 ## Current State Of The Project
 
-The current live proposed workup method is notebook `13`: a single-agent LLM workup controller with deterministic ledger state and MLP-guided stopping. Its frozen 49-case artifact reaches `43/49 = 0.878` accuracy with `6.59` mean requests. A fresh Notebook `13`-style live base run inside notebook `24` reached `45/49 = 0.918` with `6.20` mean requests. Notebook `23` remains the strongest offline deterministic graph/Bayes rescue candidate, reaching `47/49 = 0.959` with `6.96` mean requests on the saved 49-case trace, but notebook `24` did not confirm the rescue layer as a live improvement. Notebook `26` showed that trajectory branching was a credible next direction, and Notebook `27` partially confirmed it live. Notebook `28` improved its same-run base from `42/49` to `44/49` with zero regressions. Notebook `29` then expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with zero regressions, but it still did not hit the `47/49` promotion target. Its most important contribution is showing that candidate availability is now strong enough for `47/49+`; calibrated top-1-vs-rank-2 selection is the bottleneck.
+The current live proposed workup method is notebook `13`: a single-agent LLM workup controller with deterministic ledger state and MLP-guided stopping. Its frozen 49-case artifact reaches `43/49 = 0.878` accuracy with `6.59` mean requests. A fresh Notebook `13`-style live base run inside notebook `24` reached `45/49 = 0.918` with `6.20` mean requests. Notebook `23` remains the strongest offline deterministic graph/Bayes rescue candidate, reaching `47/49 = 0.959` with `6.96` mean requests on the saved 49-case trace, but notebook `24` did not confirm the rescue layer as a live improvement. Notebook `26` showed that trajectory branching was a credible next direction, and Notebook `27` partially confirmed it live. Notebook `28` improved its same-run base from `42/49` to `44/49` with zero regressions. Notebook `29` then expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with zero regressions. Notebook `30` completed hypothesis-forced branching and improved its same-run base from `42/49` to `44/49`, but the larger discovery is that its small candidate pool contains the true diagnosis in `49/49`. Notebook `31` trained a compact neural resolver over that candidate pool and reached `46/49` with zero regressions versus Notebook `30`; the `49/49` candidate-pool oracle remains diagnostic only.
 
 Relevant artifact roots:
 
@@ -249,6 +265,9 @@ Relevant artifact roots:
 - [mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1](artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_dryrun_smoke_v1)
 - [mlp_gated_confounder_graph_bayes_branching_49case_v1](artifacts/trajectory_replicates/mlp_gated_confounder_graph_bayes_branching_49case_v1)
 - [listwise_differential_graph_bayes_adjudicator_49case_v1](artifacts/trajectory_replicates/listwise_differential_graph_bayes_adjudicator_49case_v1)
+- [hypothesis_forced_differential_branching_dryrun_smoke_v1](artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1)
+- [hypothesis_forced_differential_branching_49case_v1](artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1)
+- [neural_candidate_pool_resolver_49case_v1](artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1)
 
 Current headline results:
 
@@ -287,6 +306,9 @@ Current headline results:
 - notebook `26` analyzed five observed base trajectories: majority vote stayed at `43/49`, oracle best-of-five reached `47/49`, and a diagnostic sparse two-branch Bayes-judged policy over the Notebook `13` base reached `47/49` with zero regressions
 - notebook `27` live targeted branching reached `43/49`, improving its own live base by one case but introducing one regression
 - notebook `28` live MLP-gated branching reached `44/49`, improving its own live base by two cases with zero regressions; post-hoc ranked-differential analysis shows a `47/49` top-2 and `48/49` top-3 candidate-pool oracle
+- notebook `30` live hypothesis-forced branching reached `44/49`, improving its same-run base by two cases with zero regressions, but mean total branch requests rose to `12.10`
+- notebook `30`'s more important finding is candidate-pool recall: the selected ranked differential top-5 contains `47/49`, and the broader resolver candidate pool contains all `49/49` true diagnoses with about `4` unique diagnoses per case
+- notebook `31` trains a compact neural resolver over that Notebook `30` candidate pool and reaches `46/49` with zero regressions versus Notebook `30`; it still does not achieve the `47/49+` target as an actual selected policy
 - current interpretation: evidence acquisition is clearly useful; final diagnosis should be treated as a separate design choice between LLM, partial-evidence classifier, and conservative hybrid adjudication
 
 ## Best Current Research Direction
@@ -317,7 +339,7 @@ Important caution:
 - notebook `23` realizes the larger graph/Bayes rescue direction: use Notebook `13` as the first-pass workup, then apply calibrated graph/Bayes/MLP rescue only when the saved trace is suspicious. It is the strongest current algorithmic-ledger enhancement but still needs live or held-out confirmation.
 - notebook `24` shows that Notebook `23`'s offline rescue gain did not transfer cleanly to a fresh live trajectory; treat it as a strong offline candidate, not the final live method
 - notebook `26` shows the next credible multi-agent direction: targeted suspicious-state branching, not broad majority voting
-- the current unresolved issue is now narrower: the live Notebook `13`-style backbone is strong, but graph/Bayes rescue and branch triggers need prospective live-trajectory confirmation before they can be claimed as improvements
+- notebooks `30` and `31` narrow the current unresolved issue further: candidate generation can reach a diagnostic `49/49` oracle on the completed live pool, but selected accuracy is `46/49`, so close-confounder resolution is the remaining bottleneck
 - older notebook `05` artifacts used `gpt-5.4-mini`; current rigorous comparison phase fixes the sequential backbone to `gpt-4.1-mini`
 
 Latest report:
@@ -337,6 +359,8 @@ Latest report:
 - [graph_posterior_final_adjudicator_report.md](reports/algorithmic_ledger/graph_posterior_final_adjudicator_report.md)
 - [calibrated_graph_bayes_rescue_reranker_report.md](reports/algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_report.md)
 - [live_graph_bayes_rescue_confirmation_report.md](reports/algorithmic_ledger/live_graph_bayes_rescue_confirmation_report.md)
+- [hypothesis_forced_differential_branching_report.md](reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md)
+- [neural_candidate_pool_resolver_report.md](reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md)
 
 ## Setup
 
@@ -520,7 +544,9 @@ If Hassan is continuing immediately, the best starting point is:
 - inspect [live_targeted_branching_confirmation_report.md](reports/algorithmic_ledger/live_targeted_branching_confirmation_report.md)
 - inspect [mlp_gated_confounder_graph_bayes_branching_report.md](reports/algorithmic_ledger/mlp_gated_confounder_graph_bayes_branching_report.md)
 - inspect [listwise_differential_graph_bayes_adjudicator_report.md](reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md)
-- continue from notebook `29` for ranked-differential adjudication, notebook `28` for the latest live branching system, notebook `27` for earlier live targeted-branching analysis, notebook `26` for branching trajectory analysis, notebook `25` for base trajectory replicate collection, notebook `13` for the frozen live acquisition method, notebook `24` for live rescue-confirmation analysis, notebook `23` for the strongest offline graph/Bayes rescue candidate, notebook `22` for graph-posterior final adjudication, notebook `15` for offline evidence-trajectory/threshold analysis, notebook `21` for graph-context critic/adjudication analysis, notebook `12` if working on stop-policy evidence, notebook `19` if studying the rejected Bayesian VOI ablation, notebook `11` if revisiting hybrid v1, or notebook `09` if updating integrated comparisons
+- inspect [hypothesis_forced_differential_branching_report.md](reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md)
+- inspect [neural_candidate_pool_resolver_report.md](reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md)
+- continue from notebook `31` for neural candidate-pool resolution, notebook `30` for hypothesis-forced live branching, notebook `29` for ranked-differential adjudication, notebook `28` for the latest completed live branching result, notebook `27` for earlier live targeted-branching analysis, notebook `26` for branching trajectory analysis, notebook `25` for base trajectory replicate collection, notebook `13` for the frozen live acquisition method, notebook `24` for live rescue-confirmation analysis, notebook `23` for the strongest offline graph/Bayes rescue candidate, notebook `22` for graph-posterior final adjudication, notebook `15` for offline evidence-trajectory/threshold analysis, notebook `21` for graph-context critic/adjudication analysis, notebook `12` if working on stop-policy evidence, notebook `19` if studying the rejected Bayesian VOI ablation, notebook `11` if revisiting hybrid v1, or notebook `09` if updating integrated comparisons
 
 ## Current Practical Recommendation
 
@@ -535,7 +561,9 @@ For the next clean experiment:
 - treat notebook `28` as a completed learned-gate branching live test, not a promoted result: it improved its own base from `42/49` to `44/49` with zero regressions, but the scored candidate pool itself had only a `44/49` oracle
 - treat notebook `29` as a completed offline ranked-differential adjudicator, not a promoted result: it improves Notebook `28` to `45/49` with zero regressions, while showing that ranked top-2/top-3 candidate availability has a `47/49` to `48/49` oracle
 - the Notebook `29` rerun/post-hoc analysis sharpens this: graph top-2 and Bayes top-2 each have `49/49` oracle coverage, while graph top-1 and Bayes top-1 reach only `45/49`
-- the next clean experiment should focus on top-1-vs-rank-2 confounder adjudication rather than candidate-pool expansion alone
+- treat notebook `30` as a completed hypothesis-forced branching live test: it improves its own base from `42/49` to `44/49` with zero regressions, but most selected answers still come from the base or graph/Bayes pseudo-candidates rather than real LLM branches
+- treat notebook `31` as the current strongest final-head result over the Notebook `30` pool: it reaches `46/49` with zero regressions against Notebook `30`, while confirming a diagnostic `49/49` candidate-pool oracle
+- the next clean experiment should focus on close-confounder adjudication or cheap targeted discriminator questions rather than candidate-pool expansion alone
 - use notebook `25` if collecting more live base trajectories; it runs rescue-disabled base replicates for the branching/divergence lab
 - still present notebook `13` as the live evidence-acquisition backbone; present Notebook `23` as an offline enhancement candidate rather than a live-confirmed replacement
 - if improving the method after Notebook `29`, focus on pairwise/abstaining adjudication for silent consensus-wrong anchors rather than broad new controller replacements or more indiscriminate branching

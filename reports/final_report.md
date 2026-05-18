@@ -1,6 +1,6 @@
 # Final Report: Evidence-Efficient Diagnostic Workup On DDXPlus
 
-Last updated: 2026-05-09
+Last updated: 2026-05-18
 
 ## Executive Summary
 
@@ -32,9 +32,11 @@ Notebook `27` completed the prospective live targeted-branching confirmation. It
 
 Notebook `28` completed the successor branching design: a learned branch-trigger MLP, up to three fresh-context LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but it did not reach the `47/49` promotion target.
 
+Notebook `29` added an offline ranked-differential adjudicator and improved Notebook `28` to `45/49` with zero regressions. Notebook `30` then completed hypothesis-forced live branching: it improved its own base from `42/49` to `44/49` with zero regressions, but at high branch cost. Its stronger result is that the broader resolver candidate pool contains the true diagnosis in all `49/49` cases. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`; the `49/49` number remains an oracle ceiling, not achieved deployable accuracy.
+
 The strongest conclusion is not that “agentic diagnosis beats every classifier.” The strongest conclusion is:
 
-> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, and Notebook `29` shows that ranked-differential listwise adjudication can add another no-regression win. The remaining opportunity is not candidate availability; it is calibrated selection among close rank-2/rank-3 confounders.
+> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, Notebook `29` shows that ranked-differential listwise adjudication can add another no-regression win, and Notebooks `30`/`31` show that small candidate pools can contain all true labels while a learned resolver reaches `46/49`. The remaining opportunity is calibrated selection among close confounders.
 
 ## Research Question
 
@@ -91,6 +93,8 @@ The project built a full baseline ladder rather than comparing against a weak st
 | Live graph shortlist | `17` | Negative test of hard graph top-10 question shortlisting |
 | Graph advisory / context lab | `18-21` | Negative graph-controller tests plus graph-context critic analysis |
 | Graph posterior final critic | `22` | Offline graph-ledger final adjudicator over Notebook `13` traces |
+| Graph/Bayes rescue | `23-24` | Offline rescue candidate plus live confirmation that did not promote it |
+| Branching and adjudication | `25-30` | Trajectory replicates, live branching, ranked-differential adjudication, and hypothesis-forced branch implementation |
 
 ## Model And System Design
 
@@ -436,6 +440,12 @@ Notebook `29` implemented that next offline final-head step. It keeps Notebook `
 
 The rerun/post-hoc analysis makes that even clearer: graph top-2 and Bayes top-2 each contain the true label in all `49/49` cases, while graph top-1 and Bayes top-1 reach only `45/49`. The ledger is mathematically surfacing the right neighborhood, but it is overconfident in the wrong nearest neighbor.
 
+Notebook `30` implements that hypothesis-forced live branching test. It keeps the Notebook `13`-style base branch and the learned branch gate, but changes the branch design: before spawning branches, the coordinator computes explicit graph/Bayes/MLP challenger hypotheses from the base terminal visible evidence. Each fresh-context LLM branch is then assigned one target diagnosis plus preferred discriminator roots.
+
+The live Notebook `30` result was `44/49`, with base at `42/49`, two wins, zero regressions, `6.78` selected requests, and `12.10` total branch requests. It was not promoted as a cost-effective branch policy. Its stronger discovery is candidate-pool recall: the final ranked differential top-5 contains the true diagnosis in `47/49`, and the broader resolver candidate pool contains it in all `49/49` cases with only about four unique diagnoses per case.
+
+Notebook `31` then tests a compact neural resolver over that frozen Notebook `30` candidate pool. The selected `MLPClassifier(64, 32)` resolver reaches `46/49`, with two wins and zero regressions against Notebook `30`. It fixes Croup and Myocarditis. The remaining misses are Acute rhinosinusitis vs Chronic rhinosinusitis, Bronchitis vs URTI, and Pericarditis vs Anemia. This is the strongest learned final-head result over the live branch candidate pool, but the `49/49` candidate-pool oracle remains diagnostic only.
+
 ## Error Analysis
 
 Notebook `13` originally had six misses on the 49-case confirmation. Notebook `23` fixes four of them, so the remaining final-head errors after graph/Bayes rescue are:
@@ -473,11 +483,14 @@ Supported:
 - A fresh Notebook `13`-style live run inside Notebook `24` reached `45/49` with `6.20` mean requests, supporting the robustness of the base architecture.
 - Notebook `27` live targeted branching recovered Myocarditis and Panic attack from wrong base trajectories, but it reached only `43/49` overall and introduced one regression, so it is a partial confirmation rather than a promoted method.
 - Notebook `28` live learned-gate branching improved its own base from `42/49` to `44/49` with zero regressions and identified ranked-differential candidate expansion as the next route to `47/49+`.
+- Notebook `30` live hypothesis-forced branching improved its own base from `42/49` to `44/49` with zero regressions and revealed a `49/49` diagnostic candidate-pool oracle.
+- Notebook `31` neural candidate-pool resolution reached `46/49` with zero regressions against Notebook `30`, but did not achieve the `47/49+` target as an actual selected policy.
 
 Not supported:
 
 - The LLM final answer is generally better than a neural classifier.
-- Multi-agent systems are better as a final claim; Notebooks `27` and `28` showed useful branch diversity and mathematical adjudication value but did not promote a branching policy.
+- Multi-agent systems are better as a final claim; Notebooks `27`, `28`, and `30` showed useful branch diversity and candidate-generation value but did not promote a cost-effective live branching policy.
+- The `49/49` candidate-pool oracle is achieved accuracy; it is a label-using diagnostic ceiling only.
 - Direct MLP-guided question selection is better; notebook `14` rejected that.
 - Hard MedKGI-style graph top-10 question shortlisting is better; notebook `17` rejected that.
 - Offline Bayesian VOI replacement control is better; notebook `19` rejected that.
@@ -589,17 +602,19 @@ Notebook `26` shows why multi-agent branching is interesting: majority vote over
 
 Notebook `27` is that prospective live test. It improved its own live base from `42/49` to `43/49`, with two wins and one regression. The result is not promoted, but it proves branches can recover real lock-in failures.
 
-### Slide 19. Error Analysis
+### Slide 19. Candidate Pool And Neural Resolution
 
-Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `27` shows that confidence/contradiction triggers miss consensus wrong-answer cases. Notebook `28` shows that some of those misses are already present as rank-2/rank-3 differential entries, but were not scored as final candidates. Notebook `29` scores those candidates and recovers Croup, but the learned resolver still trusts wrong graph/Bayes/MLP rank-1 consensus in acute-vs-chronic rhinosinusitis, Bronchitis-vs-URTI, Influenza-vs-HIV-initial-infection, and Panic-attack-vs-Myocarditis confusions. In the first three, the true diagnosis is rank 2 in the LLM differential, graph, Bayes, and MLP; Panic attack is graph/Bayes rank 2 but absent from the LLM differential.
+Errors are mainly wrong-belief convergence and under-adjudicated confounders, not just insufficient evidence budget. Notebook `30` tested hypothesis-forced live branching and improved its own base from `42/49` to `44/49` with zero regressions, but at high branch cost. The key result is candidate-pool recall: the final ranked differential top-5 contains `47/49`, and the broader resolver candidate pool contains all `49/49` true labels with only about four unique diagnoses per case.
+
+Notebook `31` then trains a compact neural resolver over that candidate pool. It reaches `46/49`, with two wins over Notebook `30` and zero regressions. This is not the `49/49` oracle, but it shows that the agentic/graph/Bayes system is producing useful candidate sets and the remaining frontier is calibrated final adjudication.
 
 ### Slide 20. Claims And Limitations
 
-Strong claim: evidence-efficient sequential workup with MLP-guided stopping. Limitation: not a proof of multi-agent superiority or RL baseline dominance.
+Strong claim: evidence-efficient sequential workup with MLP-guided stopping, plus a clear candidate-generation result from hypothesis-forced branching. Limitation: not a proof of multi-agent superiority or RL baseline dominance. The `49/49` candidate-pool result is an oracle ceiling, not achieved deployable accuracy.
 
 ### Slide 21. Future Work
 
-Build the next pairwise or abstaining confounder adjudicator. Notebook `29` already shows the expanded candidate pool contains the `47/49+` target; the next model should decide when to trust a rank-2/rank-3 differential over a consensus rank-1 anchor, using train/validate-derived confounder pairs and strict calibration rather than 49-case label tuning.
+Use Notebook `31` as the final-head starting point and focus on the remaining three misses: acute-vs-chronic rhinosinusitis, Bronchitis-vs-URTI, and Pericarditis-vs-Anemia. The next credible step is a close-confounder resolver or one cheap targeted discriminator question, not more broad branch-to-completion agents.
 
 ## Key Files
 
@@ -624,6 +639,8 @@ Build the next pairwise or abstaining confounder adjudicator. Notebook `29` alre
 - `notebooks/27_live_targeted_branching_confirmation.ipynb`
 - `notebooks/28_mlp_gated_confounder_graph_bayes_branching.ipynb`
 - `notebooks/29_listwise_differential_graph_bayes_adjudicator.ipynb`
+- `notebooks/30_hypothesis_forced_differential_branching.ipynb`
+- `notebooks/31_neural_candidate_pool_resolver.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -640,3 +657,5 @@ Build the next pairwise or abstaining confounder adjudicator. Notebook `29` alre
 - `reports/algorithmic_ledger/live_targeted_branching_confirmation_report.md`
 - `reports/algorithmic_ledger/mlp_gated_confounder_graph_bayes_branching_report.md`
 - `reports/algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md`
+- `reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md`
+- `reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md`

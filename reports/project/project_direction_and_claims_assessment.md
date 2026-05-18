@@ -427,6 +427,10 @@ Notebook 24 completed the live-confirmation wrapper for Notebook 23. The live re
 
 Notebook 28 and Notebook 29 extend this line into prospective branching and ranked-differential adjudication. Notebook 28 improves its own live base from `42/49` to `44/49` with zero regressions. Notebook 29 then keeps those live traces fixed, explodes ranked differentials plus graph/Bayes/MLP candidates, and improves the selected result to `45/49` with one additional no-regression win. Its oracle analysis is the important signal: ranked top-2 contains `47/49`, ranked top-3 contains `48/49`, and the full exploded candidate pool contains all `49/49` true labels. The post-run analysis further shows graph top-2 and Bayes top-2 each contain all `49/49` true labels, so the remaining gap is pairwise confounder adjudication rather than candidate generation.
 
+Notebook 30 implements the user's refined branching hypothesis as a prospective live candidate. Instead of broad branch roles, it computes explicit graph/Bayes/MLP challenger hypotheses from the base terminal visible evidence and assigns each fresh-context branch one target diagnosis plus discriminator roots. The completed live run improved its same-run base from `42/49` to `44/49` with zero regressions, but mean total branch requests rose to `12.10`, and only one selected answer came from a real LLM branch. Its strongest finding is candidate-pool recall: the broader resolver pool contains the true diagnosis in all `49/49` cases with about four unique diagnoses per case on average.
+
+Notebook 31 then tests the natural final-head response. It trains a compact neural resolver on Notebook 30 train/validate synthetic resolver features and evaluates once on the completed live candidate pool. The selected neural resolver reaches `46/49`, with two wins and zero regressions versus Notebook 30. This is the strongest learned final-head result over the live branch candidate pool, but it still falls short of the `47/49+` goal. The `49/49` number remains an oracle candidate-pool ceiling, not a deployable result.
+
 ### Next Experiment If More Work Is Needed
 
 Only do a new notebook if it answers a specific control question that is not already answered by Notebooks 14, 17, 18, 20, 21, 22, 23, 24, 28, and 29:
@@ -440,6 +444,12 @@ The post-Notebook-29 control question is narrower:
 > Can a pairwise or abstaining confounder adjudicator decide when to promote rank-2/rank-3 differentials over a graph/Bayes/MLP consensus anchor without using the 49-case labels?
 
 That is the next credible research direction if more work is needed.
+
+The post-Notebook-31 control question is:
+
+> Can a close-confounder resolver or a very cheap discriminator-question mechanism turn the `49/49` candidate-pool oracle into `47/49+` selected accuracy without tuning on the 49-case labels?
+
+That is the next credible research direction if more work is needed. More broad branch-to-completion agents are unlikely to be cost-effective unless they are constrained to answer a specific unresolved discriminator.
 
 ## How To Present This To The Instructor
 
@@ -464,6 +474,8 @@ The project should be presented as an evidence-acquisition study:
 17. Notebook 24 tested that rescue live; it was not promoted, but the fresh live base reached `45/49` with `6.20` mean requests.
 18. Notebook 28 tested learned-gate live branching and graph/Bayes/MLP branch adjudication; it improved its own base to `44/49` with zero regressions.
 19. Notebook 29 tested ranked-differential listwise adjudication over Notebook 28 traces; it reached `45/49` with zero regressions and showed a `47/49` to `48/49` oracle in the ranked differential pool.
+20. Notebook 30 tested hypothesis-forced live branching; it improved its own base from `42/49` to `44/49` with zero regressions but increased branch cost substantially.
+21. Notebook 31 trained a compact neural resolver over Notebook 30's small candidate pool; it reached `46/49` with zero regressions and confirmed a diagnostic `49/49` candidate-pool oracle.
 
 ## Bottom Line
 
@@ -476,13 +488,15 @@ The work is not rootless. The frame of reference is now clear:
 - hybrid MLP-guided stopping: current live proposed improvement
 - calibrated graph/Bayes rescue reranker: current offline mathematical enhancement
 - ranked-differential listwise adjudication: diagnostic path showing the `47/49+` candidate ceiling
+- hypothesis-forced differential branching: completed live candidate-generation test
+- neural candidate-pool resolver: current strongest learned final-head result over the Notebook 30 pool
 
 The current work is enough to claim:
 
-> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer. Prospective branching and ranked-differential adjudication now show that `47/49+` is available in the candidate pool, while safe selection among close confounders remains unresolved.
+> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer. Prospective branching and ranked-differential adjudication now show that `47/49+` is available in small candidate pools; Notebook 31's neural resolver reaches `46/49`, while safe selection among close confounders remains unresolved.
 
 The current work is not enough to claim:
 
 > Our agentic architecture is generally superior to all direct neural baselines or official DDXPlus sequential methods.
 
-Notebooks 14, 17, 18, 19, 24, 28, and 29 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current method, and treat any further work as targeted confounder adjudication rather than a new controller family.
+Notebooks 14, 17, 18, 19, 24, 28, 29, 30, and 31 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live evidence-acquisition method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current acquisition backbone, and treat any further work as targeted confounder adjudication rather than a new controller family.
