@@ -1,0 +1,50 @@
+case_id,true_pathology,candidate_rows,unique_candidate_diagnoses,true_in_candidate_pool
+test:100664,Myasthenia gravis,3,3,True
+test:104857,Acute dystonic reactions,4,4,True
+test:105129,Pulmonary neoplasm,4,4,True
+test:106010,HIV (initial infection),5,5,True
+test:107472,Tuberculosis,3,3,True
+test:111176,Acute rhinosinusitis,3,3,True
+test:11198,Boerhaave,3,3,True
+test:112233,Bronchiectasis,3,3,True
+test:11342,Atrial fibrillation,5,5,True
+test:11655,Bronchitis,3,3,True
+test:121319,Anaphylaxis,4,4,True
+test:125508,Unstable angina,3,3,True
+test:130566,Chronic rhinosinusitis,4,4,True
+test:133024,Scombroid food poisoning,4,4,True
+test:133888,Larygospasm,4,4,True
+test:13402,URTI,4,4,True
+test:16097,Stable angina,3,3,True
+test:18744,Anemia,4,4,True
+test:19160,Possible NSTEMI / STEMI,4,4,True
+test:19424,Whooping cough,5,5,True
+test:23687,Pulmonary embolism,3,3,True
+test:2801,Pancreatic neoplasm,3,3,True
+test:29123,Bronchospasm / acute asthma exacerbation,4,4,True
+test:33118,Acute otitis media,8,6,True
+test:34242,Guillain-Barré syndrome,3,3,True
+test:35039,Myocarditis,5,5,True
+test:36032,Sarcoidosis,4,4,True
+test:38202,Inguinal hernia,3,3,True
+test:38475,Acute COPD exacerbation / infection,8,7,True
+test:39033,Viral pharyngitis,3,3,True
+test:46152,Cluster headache,3,3,True
+test:51421,Chagas,4,4,True
+test:51611,PSVT,3,3,True
+test:52755,SLE,5,5,True
+test:58986,Acute laryngitis,4,4,True
+test:62878,Pericarditis,7,7,True
+test:71107,Spontaneous rib fracture,5,5,True
+test:749,Spontaneous pneumothorax,4,4,True
+test:76022,Panic attack,6,4,True
+test:77908,Ebola,3,3,True
+test:81691,Croup,8,8,True
+test:8666,Influenza,3,3,True
+test:88250,Allergic sinusitis,3,3,True
+test:89477,Localized edema,4,4,True
+test:90978,Bronchiolitis,5,5,True
+test:91516,Epiglottitis,4,4,True
+test:93930,Acute pulmonary edema,4,4,True
+test:95923,Pneumonia,3,3,True
+test:96956,GERD,3,3,True

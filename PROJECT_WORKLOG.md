@@ -5003,3 +5003,56 @@ Interpretation:
 - It still does not achieve the `47/49+` target as an actual selected policy.
 - The `49/49` number is only an oracle candidate-pool ceiling that uses labels and must not be presented as achieved accuracy.
 - The next credible step is a better close-confounder resolver or a very cheap discriminator-question mechanism for high-confidence near-neighbor anchors, not more broad branch-to-completion agents.
+
+## 78. Notebook 32 Resolver Ablation Lab And Workflow Update
+
+Implemented and executed Notebook `32`:
+
+- `notebooks/32_resolver_ablation_lab.ipynb`
+- source script: `scripts/resolver_ablation_lab_nb32.py`
+- report: `reports/algorithmic_ledger/resolver_ablation_lab_report.md`
+- artifact root: `artifacts/trajectory_replicates/resolver_ablation_lab_49case_v1/`
+
+Notebook `32` is the resolver-only experimental lab over the completed Notebook `30` candidate pool and Notebook `31` neural resolver artifact. It makes no new API calls. It evaluates:
+
+- graph/Bayes/MLP posterior and rank heuristics
+- reciprocal-rank fusion
+- supervised row scorers
+- tree ensembles
+- disease-name and disease-family conflict features
+- pairwise ranking
+- branch ranked-differential and prediction-vote aggregation
+- prior one-shot signals
+- explicitly marked non-deployable diagnostic ceilings
+
+Result:
+
+| System | Correct | Status |
+|---|---:|---|
+| Notebook `30` hand resolver | 44/49 | reference |
+| Notebook `31` compact neural resolver | 46/49 | reference |
+| Notebook `32` strict validation-selected resolver | 45/49 | not promoted |
+| Notebook `32` `gradient_boosting_name_family` live-diagnostic row | 47/49 | confirmation candidate |
+| Full-evidence diagnostic row | 48/49 | non-deployable because it uses unobserved evidence |
+| Candidate-pool label oracle | 49/49 | non-deployable label oracle |
+
+The strict validation-selected policy did not improve on Notebook `31`. The strongest deployable-looking row is `gradient_boosting_name_family`, which reaches `47/49` and fixes the Pericarditis/Anemia miss. However, it was identified by inspecting many 49-case ablation outcomes, so it should be treated as a candidate for independent confirmation, not a promoted final policy.
+
+Remaining misses for the `47/49` row:
+
+| Case | True diagnosis | Predicted diagnosis |
+|---|---|---|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis |
+| `test:11655` | Bronchitis | URTI |
+
+Workflow updates:
+
+- added Notebook `32` to the main `README.md` workflow
+- added `resolver_ablation_lab_report.md` to `reports/README.md`
+- updated `reports/final_results_summary.md`
+- updated `reports/final_report.md`
+
+Next action:
+
+- independently confirm the `gradient_boosting_name_family` resolver on a fresh trace, held-out replicate, or pre-registered validation procedure before reporting it as the selected resolver
+- if confirmation fails, implement a close-confounder adjudicator or cheap discriminator-question mechanism for acute-vs-chronic rhinosinusitis and Bronchitis-vs-URTI

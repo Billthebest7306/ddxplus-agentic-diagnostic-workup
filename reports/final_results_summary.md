@@ -42,12 +42,13 @@ Final artifact roots used:
 - `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_dryrun_smoke_v1/`
 - `artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1/`
 - `artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1/`
+- `artifacts/trajectory_replicates/resolver_ablation_lab_49case_v1/`
 
 The strongest frozen live first-pass workup artifact remains notebook `13`: it uses the LLM as the evidence-acquisition controller and the partial-evidence MLP as an online stopping signal. The original 49-case confirmation reaches `43/49 = 0.878` accuracy with `6.59` mean evidence requests.
 
 Current graph-ledger update on 2026-05-08: Notebook `23` is the strongest offline algorithmic-ledger enhancement. It keeps Notebook `13` as the first-pass workup, uses train/validate-calibrated graph/Bayes/MLP rescue logic, and improves the saved 49-case trace from `43/49` to `47/49` with `6.96` mean requests and zero regressions. Notebook `24` completed the live confirmation run, but the rescue layer did not reproduce the offline gain: the fresh live base reached `45/49 = 0.918`, and the live rescue also ended at `45/49 = 0.918` with `6.39` mean total requests.
 
-Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Notebook `29` expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with one win and zero regressions. Notebook `30` tested hypothesis-forced branching and improved its same-run base from `42/49` to `44/49` with zero regressions. Its most important finding is that the broader resolver candidate pool contains all `49/49` true labels with only about four unique diagnoses per case. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`; the `49/49` candidate-pool oracle remains diagnostic only.
+Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-disabled Notebook `13`-style base replicates, and Notebook `26` used those trajectories plus the original Notebook `13` and Notebook `24` base runs for an offline branching lab. Across five observed trajectories, majority vote remains `43/49`, but oracle best-of-five reaches `47/49`. Notebook `27` completed the prospective live confirmation: targeted branching improved its own live base from `42/49` to `43/49`, but introduced one regression, had an actual branch-candidate oracle ceiling of `44/49`, and was not promoted. Notebook `28` then tested a learned branch-trigger MLP, up to three fresh LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but did not reach the `47/49` promotion target. Notebook `29` expanded the final candidate pool to ranked differentials and improved Notebook `28` to `45/49` with one win and zero regressions. Notebook `30` tested hypothesis-forced branching and improved its same-run base from `42/49` to `44/49` with zero regressions. Its most important finding is that the broader resolver candidate pool contains all `49/49` true labels with only about four unique diagnoses per case. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`. Notebook `32` ablated resolver alternatives: strict validation selection chose a `45/49` policy, while the best deployable live-diagnostic ablation reached `47/49` and requires independent confirmation; the `49/49` candidate-pool oracle remains diagnostic only.
 
 ## Headline Results
 
@@ -97,6 +98,8 @@ Trajectory-branching update on 2026-05-09: Notebook `25` collected three rescue-
 | Listwise differential adjudicator, notebook 29 offline | 49 | Frozen Notebook 28 live traces plus ranked-differential graph/Bayes/MLP candidate scoring; not promoted | 0.918 | n/a | n/a | n/a | 6.6 selected / 10.0 total branch requests |
 | Hypothesis-forced differential branching, notebook 30 live | 49 | Explicit challenger-hypothesis LLM branches plus graph/Bayes/MLP pseudo-candidates; not promoted | 0.898 | 0.939 | 0.959 | 0.871 | 6.8 selected / 12.1 total branch requests |
 | Neural candidate-pool resolver, notebook 31 offline | 49 | Frozen Notebook 30 candidate pool plus compact neural resolver; offline follow-up candidate | 0.939 | n/a | n/a | n/a | 6.8 selected / 12.1 total branch requests |
+| Resolver ablation lab, notebook 32 live-diagnostic best | 49 | Frozen Notebook 30 candidate pool plus deployable gradient-boosting resolver candidate; needs independent confirmation | 0.959 | n/a | n/a | n/a | 6.8 selected / 12.1 total branch requests |
+| Resolver ablation lab, notebook 32 validation-selected | 49 | Strict validation-selected resolver over the same pool; not promoted | 0.918 | n/a | n/a | n/a | 6.8 selected / 12.1 total branch requests |
 | Full-evidence one-shot, live 10-case slice | 10 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 | Full-evidence one-shot, live 24-case slice | 24 | All evidence | 1.000 | 1.000 | 1.000 | 1.000 | all fields |
 
@@ -1727,4 +1730,27 @@ Paired against Notebook `30`, Notebook `31` has two wins and zero regressions. I
 
 The remaining Notebook `31` misses are Acute rhinosinusitis vs Chronic rhinosinusitis, Bronchitis vs URTI, and Pericarditis vs Anemia.
 
-Notebook `31` is the strongest learned final-head result over the Notebook `30` candidate pool, but it still does not achieve the `47/49+` target as a selected policy. The `49/49` result is only a label-using oracle ceiling.
+Notebook `31` is the strongest pre-ablation learned final-head result over the Notebook `30` candidate pool, but it still does not achieve the `47/49+` target as a selected policy. The `49/49` result is only a label-using oracle ceiling.
+
+## Notebook 32 Resolver Ablation Lab
+
+Notebook `32` is an offline resolver-ablation workflow over the Notebook `30` candidate pool and Notebook `31` neural resolver artifact.
+
+- `notebooks/32_resolver_ablation_lab.ipynb`
+- `reports/algorithmic_ledger/resolver_ablation_lab_report.md`
+- artifact root: `artifacts/trajectory_replicates/resolver_ablation_lab_49case_v1/`
+
+It evaluates heuristic rank fusion, graph/Bayes/MLP posterior heads, supervised row scorers, tree ensembles, disease-name/family features, pairwise ranking, branch-differential voting, prior one-shot signals, and explicitly marked non-deployable diagnostic ceilings.
+
+Result:
+
+| System | Correct | Status |
+|---|---:|---|
+| Notebook `30` hand resolver | 44/49 | reference |
+| Notebook `31` compact neural resolver | 46/49 | reference |
+| Notebook `32` strict validation-selected resolver | 45/49 | not promoted |
+| Notebook `32` best deployable live-diagnostic resolver, `gradient_boosting_name_family` | 47/49 | confirmation candidate |
+| Notebook `32` full-evidence diagnostic blend | 48/49 | non-deployable because it uses unobserved evidence |
+| Candidate-pool label oracle | 49/49 | non-deployable label oracle |
+
+The `47/49` row fixes the Pericarditis/Anemia miss but still misses acute-vs-chronic rhinosinusitis and Bronchitis-vs-URTI. Because it was selected by inspecting the 49-case ablation table rather than by strict validation selection, it should be independently confirmed before being treated as a promoted resolver.

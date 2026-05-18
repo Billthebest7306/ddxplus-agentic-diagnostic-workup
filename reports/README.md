@@ -55,6 +55,7 @@ This folder now keeps the final reports at the top level and older/supporting re
 - [listwise_differential_graph_bayes_adjudicator_report.md](algorithmic_ledger/listwise_differential_graph_bayes_adjudicator_report.md): Notebook 29 offline listwise adjudicator over Notebook 28 ranked differentials; improves Notebook 28 to 45/49 with zero regressions, but remains diagnostic because it does not reach the 47/49 promotion target.
 - [hypothesis_forced_differential_branching_report.md](algorithmic_ledger/hypothesis_forced_differential_branching_report.md): Notebook 30 prospective branching candidate; assigns explicit graph/Bayes/MLP challenger hypotheses and discriminator roots to fresh LLM branches, with no-spend dry-run verification.
 - [neural_candidate_pool_resolver_report.md](algorithmic_ledger/neural_candidate_pool_resolver_report.md): Notebook 31 offline neural resolver over the completed Notebook 30 candidate pool; improves Notebook 30 from 44/49 to 46/49 with zero regressions and confirms a 49/49 diagnostic candidate-pool oracle.
+- [resolver_ablation_lab_report.md](algorithmic_ledger/resolver_ablation_lab_report.md): Notebook 32 offline resolver ablation lab over the Notebook 30/31 candidate pool; strict validation selection does not improve on Notebook 31, while the best deployable live-diagnostic row reaches 47/49 and requires independent confirmation.
 
 ## Project Direction
 

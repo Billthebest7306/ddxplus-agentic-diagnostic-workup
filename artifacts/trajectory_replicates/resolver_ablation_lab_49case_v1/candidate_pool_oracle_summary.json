@@ -1,0 +1,7 @@
+{
+  "candidate_pool_oracle_accuracy": 1.0,
+  "candidate_pool_oracle_correct": 49,
+  "mean_candidate_rows": 4.081632653061225,
+  "mean_unique_candidate_diagnoses": 3.979591836734694,
+  "num_cases": 49
+}

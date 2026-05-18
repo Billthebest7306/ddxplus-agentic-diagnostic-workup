@@ -1,0 +1,24 @@
+{
+  "additional_api_calls": 0,
+  "artifact_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/trajectory_replicates/resolver_ablation_lab_49case_v1",
+  "base_feature_count": 60,
+  "created_at": "2026-05-18T20:34:04",
+  "name_family_feature_count": 101,
+  "notebook30_artifact_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1",
+  "notebook31_artifact_root": "/Users/bilalawan/claw/assignments/baseline_model/artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1",
+  "offline_only": true,
+  "resolver_families_tested": [
+    "external_full_evidence_blend_non_deployable",
+    "external_static_mlp_signal",
+    "heuristic_rank_fusion",
+    "heuristic_rank_or_posterior",
+    "label_oracle",
+    "live_artifact_aggregation",
+    "live_artifact_aggregation_blend",
+    "pairwise_ranker",
+    "reference",
+    "supervised_row_model_base_features",
+    "supervised_row_model_name_family_features"
+  ],
+  "run_name": "resolver_ablation_lab_49case_v1"
+}

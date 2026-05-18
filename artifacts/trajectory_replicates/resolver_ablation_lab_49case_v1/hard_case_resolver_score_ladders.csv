@@ -1,0 +1,756 @@
+case_id,resolver_score_col,rank,candidate_pathology,true_pathology,candidate_label,candidate_role,score
+test:100664,score__notebook31_compact_neural_reference,1,Myasthenia gravis,Myasthenia gravis,True,base,0.9999517
+test:100664,score__notebook31_compact_neural_reference,2,Epiglottitis,Myasthenia gravis,False,pseudo,4.495236e-07
+test:100664,score__notebook31_compact_neural_reference,3,Bronchiolitis,Myasthenia gravis,False,pseudo,1.6267302e-08
+test:100664,score__logistic_sparse_l1_balanced_name_family,1,Myasthenia gravis,Myasthenia gravis,True,base,0.9999944162660194
+test:100664,score__logistic_sparse_l1_balanced_name_family,2,Epiglottitis,Myasthenia gravis,False,pseudo,0.002162102397537198
+test:100664,score__logistic_sparse_l1_balanced_name_family,3,Bronchiolitis,Myasthenia gravis,False,pseudo,0.0002600106796639946
+test:100664,score__gradient_boosting_name_family,1,Myasthenia gravis,Myasthenia gravis,True,base,0.9918050742909729
+test:100664,score__gradient_boosting_name_family,2,Epiglottitis,Myasthenia gravis,False,pseudo,0.014195646697273138
+test:100664,score__gradient_boosting_name_family,3,Bronchiolitis,Myasthenia gravis,False,pseudo,0.014195646697273138
+test:100664,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Myasthenia gravis,Myasthenia gravis,True,base,1.9999517
+test:100664,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Epiglottitis,Myasthenia gravis,False,pseudo,4.495236e-07
+test:100664,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Bronchiolitis,Myasthenia gravis,False,pseudo,1.6267302e-08
+test:100664,score__candidate_pool_label_oracle_non_deployable,1,Myasthenia gravis,Myasthenia gravis,True,base,1.0
+test:100664,score__candidate_pool_label_oracle_non_deployable,2,Epiglottitis,Myasthenia gravis,False,pseudo,0.0
+test:100664,score__candidate_pool_label_oracle_non_deployable,3,Bronchiolitis,Myasthenia gravis,False,pseudo,0.0
+test:104857,score__notebook31_compact_neural_reference,1,Acute dystonic reactions,Acute dystonic reactions,True,base,0.9796045
+test:104857,score__notebook31_compact_neural_reference,2,Myasthenia gravis,Acute dystonic reactions,False,pseudo,0.016441837
+test:104857,score__notebook31_compact_neural_reference,3,URTI,Acute dystonic reactions,False,pseudo,2.3755772e-06
+test:104857,score__notebook31_compact_neural_reference,4,Bronchiolitis,Acute dystonic reactions,False,pseudo,1.3889907e-06
+test:104857,score__logistic_sparse_l1_balanced_name_family,1,Acute dystonic reactions,Acute dystonic reactions,True,base,0.992349905438491
+test:104857,score__logistic_sparse_l1_balanced_name_family,2,Myasthenia gravis,Acute dystonic reactions,False,pseudo,0.8690915206996241
+test:104857,score__logistic_sparse_l1_balanced_name_family,3,URTI,Acute dystonic reactions,False,pseudo,0.004706441754265934
+test:104857,score__logistic_sparse_l1_balanced_name_family,4,Bronchiolitis,Acute dystonic reactions,False,pseudo,0.004620845491769149
+test:104857,score__gradient_boosting_name_family,1,Acute dystonic reactions,Acute dystonic reactions,True,base,0.9560650694611654
+test:104857,score__gradient_boosting_name_family,2,Myasthenia gravis,Acute dystonic reactions,False,pseudo,0.6939922264740787
+test:104857,score__gradient_boosting_name_family,3,Bronchiolitis,Acute dystonic reactions,False,pseudo,0.013859898103893738
+test:104857,score__gradient_boosting_name_family,4,URTI,Acute dystonic reactions,False,pseudo,0.013859898103893738
+test:104857,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Acute dystonic reactions,Acute dystonic reactions,True,base,1.9796045
+test:104857,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Myasthenia gravis,Acute dystonic reactions,False,pseudo,0.016441837000000008
+test:104857,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,URTI,Acute dystonic reactions,False,pseudo,2.3755772e-06
+test:104857,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Bronchiolitis,Acute dystonic reactions,False,pseudo,1.3889907e-06
+test:104857,score__candidate_pool_label_oracle_non_deployable,1,Acute dystonic reactions,Acute dystonic reactions,True,base,1.0
+test:104857,score__candidate_pool_label_oracle_non_deployable,2,Myasthenia gravis,Acute dystonic reactions,False,pseudo,0.0
+test:104857,score__candidate_pool_label_oracle_non_deployable,3,Bronchiolitis,Acute dystonic reactions,False,pseudo,0.0
+test:104857,score__candidate_pool_label_oracle_non_deployable,4,URTI,Acute dystonic reactions,False,pseudo,0.0
+test:105129,score__notebook31_compact_neural_reference,1,Pulmonary neoplasm,Pulmonary neoplasm,True,base,0.99954295
+test:105129,score__notebook31_compact_neural_reference,2,Pneumonia,Pulmonary neoplasm,False,pseudo,0.00015116643
+test:105129,score__notebook31_compact_neural_reference,3,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,pseudo,2.7928465e-06
+test:105129,score__notebook31_compact_neural_reference,4,Tuberculosis,Pulmonary neoplasm,False,pseudo,1.6153958e-06
+test:105129,score__logistic_sparse_l1_balanced_name_family,1,Pulmonary neoplasm,Pulmonary neoplasm,True,base,0.9993903633606539
+test:105129,score__logistic_sparse_l1_balanced_name_family,2,Pneumonia,Pulmonary neoplasm,False,pseudo,0.16675305426078585
+test:105129,score__logistic_sparse_l1_balanced_name_family,3,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,pseudo,0.015498711854029098
+test:105129,score__logistic_sparse_l1_balanced_name_family,4,Tuberculosis,Pulmonary neoplasm,False,pseudo,0.006811929496662686
+test:105129,score__gradient_boosting_name_family,1,Pulmonary neoplasm,Pulmonary neoplasm,True,base,0.9918269218816047
+test:105129,score__gradient_boosting_name_family,2,Pneumonia,Pulmonary neoplasm,False,pseudo,0.003048389404223521
+test:105129,score__gradient_boosting_name_family,3,Tuberculosis,Pulmonary neoplasm,False,pseudo,0.0020570358776279647
+test:105129,score__gradient_boosting_name_family,4,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,pseudo,0.0017852575653407251
+test:105129,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Pulmonary neoplasm,Pulmonary neoplasm,True,base,1.99954295
+test:105129,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pneumonia,Pulmonary neoplasm,False,pseudo,0.00015116643069448262
+test:105129,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,pseudo,2.7928465e-06
+test:105129,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Tuberculosis,Pulmonary neoplasm,False,pseudo,1.6153958e-06
+test:105129,score__candidate_pool_label_oracle_non_deployable,1,Pulmonary neoplasm,Pulmonary neoplasm,True,base,1.0
+test:105129,score__candidate_pool_label_oracle_non_deployable,2,Pneumonia,Pulmonary neoplasm,False,pseudo,0.0
+test:105129,score__candidate_pool_label_oracle_non_deployable,3,Possible NSTEMI / STEMI,Pulmonary neoplasm,False,pseudo,0.0
+test:105129,score__candidate_pool_label_oracle_non_deployable,4,Tuberculosis,Pulmonary neoplasm,False,pseudo,0.0
+test:106010,score__notebook31_compact_neural_reference,1,HIV (initial infection),HIV (initial infection),True,base,0.9998247
+test:106010,score__notebook31_compact_neural_reference,2,Pancreatic neoplasm,HIV (initial infection),False,pseudo,2.3109205e-06
+test:106010,score__notebook31_compact_neural_reference,3,Tuberculosis,HIV (initial infection),False,pseudo,7.4775e-07
+test:106010,score__notebook31_compact_neural_reference,4,Pneumonia,HIV (initial infection),False,pseudo,7.0543155e-07
+test:106010,score__notebook31_compact_neural_reference,5,Influenza,HIV (initial infection),False,pseudo,4.1775405e-07
+test:106010,score__logistic_sparse_l1_balanced_name_family,1,HIV (initial infection),HIV (initial infection),True,base,0.9999611437131671
+test:106010,score__logistic_sparse_l1_balanced_name_family,2,Pancreatic neoplasm,HIV (initial infection),False,pseudo,0.005102788472257116
+test:106010,score__logistic_sparse_l1_balanced_name_family,3,Influenza,HIV (initial infection),False,pseudo,0.003600837728755926
+test:106010,score__logistic_sparse_l1_balanced_name_family,4,Pneumonia,HIV (initial infection),False,pseudo,0.0035734037955539723
+test:106010,score__logistic_sparse_l1_balanced_name_family,5,Tuberculosis,HIV (initial infection),False,pseudo,0.0022594844396741417
+test:106010,score__gradient_boosting_name_family,1,HIV (initial infection),HIV (initial infection),True,base,0.9897525467898883
+test:106010,score__gradient_boosting_name_family,2,Tuberculosis,HIV (initial infection),False,pseudo,0.002464598221814373
+test:106010,score__gradient_boosting_name_family,3,Pancreatic neoplasm,HIV (initial infection),False,pseudo,0.002141637114152123
+test:106010,score__gradient_boosting_name_family,4,Pneumonia,HIV (initial infection),False,pseudo,0.0020570358776279647
+test:106010,score__gradient_boosting_name_family,5,Influenza,HIV (initial infection),False,pseudo,0.0020570358776279647
+test:106010,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,HIV (initial infection),HIV (initial infection),True,base,1.9998247
+test:106010,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pancreatic neoplasm,HIV (initial infection),False,pseudo,2.3109205080915194e-06
+test:106010,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Tuberculosis,HIV (initial infection),False,pseudo,7.4775e-07
+test:106010,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Pneumonia,HIV (initial infection),False,pseudo,7.0543155e-07
+test:106010,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Influenza,HIV (initial infection),False,pseudo,4.1775405e-07
+test:106010,score__candidate_pool_label_oracle_non_deployable,1,HIV (initial infection),HIV (initial infection),True,base,1.0
+test:106010,score__candidate_pool_label_oracle_non_deployable,2,Pancreatic neoplasm,HIV (initial infection),False,pseudo,0.0
+test:106010,score__candidate_pool_label_oracle_non_deployable,3,Tuberculosis,HIV (initial infection),False,pseudo,0.0
+test:106010,score__candidate_pool_label_oracle_non_deployable,4,Pneumonia,HIV (initial infection),False,pseudo,0.0
+test:106010,score__candidate_pool_label_oracle_non_deployable,5,Influenza,HIV (initial infection),False,pseudo,0.0
+test:107472,score__notebook31_compact_neural_reference,1,Tuberculosis,Tuberculosis,True,base,0.9998479
+test:107472,score__notebook31_compact_neural_reference,2,Pneumonia,Tuberculosis,False,pseudo,3.4277968e-05
+test:107472,score__notebook31_compact_neural_reference,3,Viral pharyngitis,Tuberculosis,False,pseudo,3.0970386e-07
+test:107472,score__logistic_sparse_l1_balanced_name_family,1,Tuberculosis,Tuberculosis,True,base,0.9994873084441018
+test:107472,score__logistic_sparse_l1_balanced_name_family,2,Pneumonia,Tuberculosis,False,pseudo,0.07070505770707645
+test:107472,score__logistic_sparse_l1_balanced_name_family,3,Viral pharyngitis,Tuberculosis,False,pseudo,0.004250541556057712
+test:107472,score__gradient_boosting_name_family,1,Tuberculosis,Tuberculosis,True,base,0.989714820910006
+test:107472,score__gradient_boosting_name_family,2,Pneumonia,Tuberculosis,False,pseudo,0.0028572426112449243
+test:107472,score__gradient_boosting_name_family,3,Viral pharyngitis,Tuberculosis,False,pseudo,0.0022528380951757133
+test:107472,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Tuberculosis,Tuberculosis,True,base,1.9998479
+test:107472,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pneumonia,Tuberculosis,False,pseudo,3.4277968e-05
+test:107472,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Viral pharyngitis,Tuberculosis,False,pseudo,3.0973755144546683e-07
+test:107472,score__candidate_pool_label_oracle_non_deployable,1,Tuberculosis,Tuberculosis,True,base,1.0
+test:107472,score__candidate_pool_label_oracle_non_deployable,2,Pneumonia,Tuberculosis,False,pseudo,0.0
+test:107472,score__candidate_pool_label_oracle_non_deployable,3,Viral pharyngitis,Tuberculosis,False,pseudo,0.0
+test:111176,score__notebook31_compact_neural_reference,1,Chronic rhinosinusitis,Acute rhinosinusitis,False,base,0.9990728
+test:111176,score__notebook31_compact_neural_reference,2,Acute rhinosinusitis,Acute rhinosinusitis,True,pseudo,0.0015543286
+test:111176,score__notebook31_compact_neural_reference,3,Allergic sinusitis,Acute rhinosinusitis,False,pseudo,7.547775e-09
+test:111176,score__logistic_sparse_l1_balanced_name_family,1,Chronic rhinosinusitis,Acute rhinosinusitis,False,base,0.9954458218261464
+test:111176,score__logistic_sparse_l1_balanced_name_family,2,Acute rhinosinusitis,Acute rhinosinusitis,True,pseudo,0.6638950795055711
+test:111176,score__logistic_sparse_l1_balanced_name_family,3,Allergic sinusitis,Acute rhinosinusitis,False,pseudo,0.000267313708563738
+test:111176,score__gradient_boosting_name_family,1,Chronic rhinosinusitis,Acute rhinosinusitis,False,base,0.9630078481278075
+test:111176,score__gradient_boosting_name_family,2,Acute rhinosinusitis,Acute rhinosinusitis,True,pseudo,0.33509894762245535
+test:111176,score__gradient_boosting_name_family,3,Allergic sinusitis,Acute rhinosinusitis,False,pseudo,0.013905728755395053
+test:111176,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Chronic rhinosinusitis,Acute rhinosinusitis,False,base,1.7243346074417114
+test:111176,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute rhinosinusitis,Acute rhinosinusitis,True,pseudo,0.2759889547024475
+test:111176,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Allergic sinusitis,Acute rhinosinusitis,False,pseudo,7.547775e-09
+test:111176,score__candidate_pool_label_oracle_non_deployable,1,Acute rhinosinusitis,Acute rhinosinusitis,True,pseudo,1.0
+test:111176,score__candidate_pool_label_oracle_non_deployable,2,Chronic rhinosinusitis,Acute rhinosinusitis,False,base,0.0
+test:111176,score__candidate_pool_label_oracle_non_deployable,3,Allergic sinusitis,Acute rhinosinusitis,False,pseudo,0.0
+test:11198,score__notebook31_compact_neural_reference,1,Boerhaave,Boerhaave,True,base,0.9998872
+test:11198,score__notebook31_compact_neural_reference,2,Unstable angina,Boerhaave,False,pseudo,2.8615536e-06
+test:11198,score__notebook31_compact_neural_reference,3,Panic attack,Boerhaave,False,pseudo,9.59468e-07
+test:11198,score__logistic_sparse_l1_balanced_name_family,1,Boerhaave,Boerhaave,True,base,0.99997658830643
+test:11198,score__logistic_sparse_l1_balanced_name_family,2,Panic attack,Boerhaave,False,pseudo,0.007422059915103652
+test:11198,score__logistic_sparse_l1_balanced_name_family,3,Unstable angina,Boerhaave,False,pseudo,0.007191409702931227
+test:11198,score__gradient_boosting_name_family,1,Boerhaave,Boerhaave,True,base,0.9911327821128015
+test:11198,score__gradient_boosting_name_family,2,Panic attack,Boerhaave,False,pseudo,0.0169673516093343
+test:11198,score__gradient_boosting_name_family,3,Unstable angina,Boerhaave,False,pseudo,0.01685670695828897
+test:11198,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Boerhaave,Boerhaave,True,base,1.9998871999999999
+test:11198,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Unstable angina,Boerhaave,False,pseudo,2.8615536e-06
+test:11198,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Panic attack,Boerhaave,False,pseudo,9.594684129840188e-07
+test:11198,score__candidate_pool_label_oracle_non_deployable,1,Boerhaave,Boerhaave,True,base,1.0
+test:11198,score__candidate_pool_label_oracle_non_deployable,2,Unstable angina,Boerhaave,False,pseudo,0.0
+test:11198,score__candidate_pool_label_oracle_non_deployable,3,Panic attack,Boerhaave,False,pseudo,0.0
+test:112233,score__notebook31_compact_neural_reference,1,Bronchiectasis,Bronchiectasis,True,base,0.9993759
+test:112233,score__notebook31_compact_neural_reference,2,Pneumonia,Bronchiectasis,False,pseudo,0.00049767364
+test:112233,score__notebook31_compact_neural_reference,3,Bronchitis,Bronchiectasis,False,pseudo,5.276455e-07
+test:112233,score__logistic_sparse_l1_balanced_name_family,1,Bronchiectasis,Bronchiectasis,True,base,0.9960577470710001
+test:112233,score__logistic_sparse_l1_balanced_name_family,2,Pneumonia,Bronchiectasis,False,pseudo,0.4733692443990184
+test:112233,score__logistic_sparse_l1_balanced_name_family,3,Bronchitis,Bronchiectasis,False,pseudo,0.0033372689717562688
+test:112233,score__gradient_boosting_name_family,1,Bronchiectasis,Bronchiectasis,True,base,0.9779952136758825
+test:112233,score__gradient_boosting_name_family,2,Pneumonia,Bronchiectasis,False,pseudo,0.19762084013818038
+test:112233,score__gradient_boosting_name_family,3,Bronchitis,Bronchiectasis,False,pseudo,0.014195646697273138
+test:112233,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Bronchiectasis,Bronchiectasis,True,base,1.9993759
+test:112233,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pneumonia,Bronchiectasis,False,pseudo,0.0004976761573085838
+test:112233,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Bronchitis,Bronchiectasis,False,pseudo,5.276503119286334e-07
+test:112233,score__candidate_pool_label_oracle_non_deployable,1,Bronchiectasis,Bronchiectasis,True,base,1.0
+test:112233,score__candidate_pool_label_oracle_non_deployable,2,Pneumonia,Bronchiectasis,False,pseudo,0.0
+test:112233,score__candidate_pool_label_oracle_non_deployable,3,Bronchitis,Bronchiectasis,False,pseudo,0.0
+test:11655,score__notebook31_compact_neural_reference,1,URTI,Bronchitis,False,base,0.985168
+test:11655,score__notebook31_compact_neural_reference,2,Bronchitis,Bronchitis,True,pseudo,0.0059105614
+test:11655,score__notebook31_compact_neural_reference,3,Influenza,Bronchitis,False,pseudo,0.0001659663
+test:11655,score__logistic_sparse_l1_balanced_name_family,1,URTI,Bronchitis,False,base,0.9860867049492168
+test:11655,score__logistic_sparse_l1_balanced_name_family,2,Bronchitis,Bronchitis,True,pseudo,0.7841010117281033
+test:11655,score__logistic_sparse_l1_balanced_name_family,3,Influenza,Bronchitis,False,pseudo,0.3069772546290812
+test:11655,score__gradient_boosting_name_family,1,URTI,Bronchitis,False,base,0.9176225145970988
+test:11655,score__gradient_boosting_name_family,2,Bronchitis,Bronchitis,True,pseudo,0.43771529905855455
+test:11655,score__gradient_boosting_name_family,3,Influenza,Bronchitis,False,pseudo,0.04273060766446274
+test:11655,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Bronchitis,Bronchitis,True,pseudo,1.0059105614
+test:11655,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,URTI,Bronchitis,False,base,0.9851680111989103
+test:11655,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Influenza,Bronchitis,False,pseudo,0.0001659663
+test:11655,score__candidate_pool_label_oracle_non_deployable,1,Bronchitis,Bronchitis,True,pseudo,1.0
+test:11655,score__candidate_pool_label_oracle_non_deployable,2,URTI,Bronchitis,False,base,0.0
+test:11655,score__candidate_pool_label_oracle_non_deployable,3,Influenza,Bronchitis,False,pseudo,0.0
+test:125508,score__notebook31_compact_neural_reference,1,Unstable angina,Unstable angina,True,base,0.99988437
+test:125508,score__notebook31_compact_neural_reference,2,Spontaneous pneumothorax,Unstable angina,False,pseudo,3.0913454e-06
+test:125508,score__notebook31_compact_neural_reference,3,Stable angina,Unstable angina,False,pseudo,2.6902894e-06
+test:125508,score__logistic_sparse_l1_balanced_name_family,1,Unstable angina,Unstable angina,True,base,0.9999724502099666
+test:125508,score__logistic_sparse_l1_balanced_name_family,2,Stable angina,Unstable angina,False,pseudo,0.012295422329185533
+test:125508,score__logistic_sparse_l1_balanced_name_family,3,Spontaneous pneumothorax,Unstable angina,False,pseudo,0.003263166061634358
+test:125508,score__gradient_boosting_name_family,1,Unstable angina,Unstable angina,True,base,0.9918050742909729
+test:125508,score__gradient_boosting_name_family,2,Stable angina,Unstable angina,False,pseudo,0.0169673516093343
+test:125508,score__gradient_boosting_name_family,3,Spontaneous pneumothorax,Unstable angina,False,pseudo,0.01533128131384214
+test:125508,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Unstable angina,Unstable angina,True,base,1.99988437
+test:125508,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Spontaneous pneumothorax,Unstable angina,False,pseudo,3.0913454e-06
+test:125508,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Stable angina,Unstable angina,False,pseudo,2.6902894e-06
+test:125508,score__candidate_pool_label_oracle_non_deployable,1,Unstable angina,Unstable angina,True,base,1.0
+test:125508,score__candidate_pool_label_oracle_non_deployable,2,Spontaneous pneumothorax,Unstable angina,False,pseudo,0.0
+test:125508,score__candidate_pool_label_oracle_non_deployable,3,Stable angina,Unstable angina,False,pseudo,0.0
+test:130566,score__notebook31_compact_neural_reference,1,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,0.71488905
+test:130566,score__notebook31_compact_neural_reference,2,Acute rhinosinusitis,Chronic rhinosinusitis,False,pseudo,0.00642308
+test:130566,score__notebook31_compact_neural_reference,3,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,False,pseudo,6.997057e-08
+test:130566,score__notebook31_compact_neural_reference,4,Ebola,Chronic rhinosinusitis,False,pseudo,3.170358e-08
+test:130566,score__logistic_sparse_l1_balanced_name_family,1,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,0.9815226104601928
+test:130566,score__logistic_sparse_l1_balanced_name_family,2,Acute rhinosinusitis,Chronic rhinosinusitis,False,pseudo,0.8680851959246849
+test:130566,score__logistic_sparse_l1_balanced_name_family,3,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,False,pseudo,0.00036680589683555774
+test:130566,score__logistic_sparse_l1_balanced_name_family,4,Ebola,Chronic rhinosinusitis,False,pseudo,0.00031382219377308054
+test:130566,score__gradient_boosting_name_family,1,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,0.7540863587762149
+test:130566,score__gradient_boosting_name_family,2,Acute rhinosinusitis,Chronic rhinosinusitis,False,pseudo,0.7288953126112047
+test:130566,score__gradient_boosting_name_family,3,Ebola,Chronic rhinosinusitis,False,pseudo,0.013859898103893738
+test:130566,score__gradient_boosting_name_family,4,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,False,pseudo,0.013410329702072796
+test:130566,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,1.3804018502166748
+test:130566,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute rhinosinusitis,Chronic rhinosinusitis,False,pseudo,0.3400860965576935
+test:130566,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,False,pseudo,6.997057e-08
+test:130566,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Ebola,Chronic rhinosinusitis,False,pseudo,3.170358e-08
+test:130566,score__candidate_pool_label_oracle_non_deployable,1,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,1.0
+test:130566,score__candidate_pool_label_oracle_non_deployable,2,Acute rhinosinusitis,Chronic rhinosinusitis,False,pseudo,0.0
+test:130566,score__candidate_pool_label_oracle_non_deployable,3,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,False,pseudo,0.0
+test:130566,score__candidate_pool_label_oracle_non_deployable,4,Ebola,Chronic rhinosinusitis,False,pseudo,0.0
+test:133024,score__notebook31_compact_neural_reference,1,Scombroid food poisoning,Scombroid food poisoning,True,base,0.99998164
+test:133024,score__notebook31_compact_neural_reference,2,Anaphylaxis,Scombroid food poisoning,False,pseudo,1.5422436e-09
+test:133024,score__notebook31_compact_neural_reference,3,SLE,Scombroid food poisoning,False,pseudo,1.4302814e-09
+test:133024,score__notebook31_compact_neural_reference,4,Inguinal hernia,Scombroid food poisoning,False,pseudo,5.2078253e-10
+test:133024,score__logistic_sparse_l1_balanced_name_family,1,Scombroid food poisoning,Scombroid food poisoning,True,base,0.9999989970904446
+test:133024,score__logistic_sparse_l1_balanced_name_family,2,Inguinal hernia,Scombroid food poisoning,False,pseudo,0.0004339899505174243
+test:133024,score__logistic_sparse_l1_balanced_name_family,3,SLE,Scombroid food poisoning,False,pseudo,0.0004056262896175607
+test:133024,score__logistic_sparse_l1_balanced_name_family,4,Anaphylaxis,Scombroid food poisoning,False,pseudo,0.0002368850136195396
+test:133024,score__gradient_boosting_name_family,1,Scombroid food poisoning,Scombroid food poisoning,True,base,0.9919676360156454
+test:133024,score__gradient_boosting_name_family,2,Anaphylaxis,Scombroid food poisoning,False,pseudo,0.015690525893711126
+test:133024,score__gradient_boosting_name_family,3,SLE,Scombroid food poisoning,False,pseudo,0.014343668172255988
+test:133024,score__gradient_boosting_name_family,4,Inguinal hernia,Scombroid food poisoning,False,pseudo,0.013905728755395053
+test:133024,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Scombroid food poisoning,Scombroid food poisoning,True,base,1.9999816400000001
+test:133024,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Anaphylaxis,Scombroid food poisoning,False,pseudo,1.857912424413251e-09
+test:133024,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,SLE,Scombroid food poisoning,False,pseudo,1.4302814e-09
+test:133024,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Inguinal hernia,Scombroid food poisoning,False,pseudo,5.2078253e-10
+test:133024,score__candidate_pool_label_oracle_non_deployable,1,Scombroid food poisoning,Scombroid food poisoning,True,base,1.0
+test:133024,score__candidate_pool_label_oracle_non_deployable,2,Anaphylaxis,Scombroid food poisoning,False,pseudo,0.0
+test:133024,score__candidate_pool_label_oracle_non_deployable,3,SLE,Scombroid food poisoning,False,pseudo,0.0
+test:133024,score__candidate_pool_label_oracle_non_deployable,4,Inguinal hernia,Scombroid food poisoning,False,pseudo,0.0
+test:13402,score__notebook31_compact_neural_reference,1,URTI,URTI,True,pseudo,0.06586546
+test:13402,score__notebook31_compact_neural_reference,2,Ebola,URTI,False,base,0.001723955
+test:13402,score__notebook31_compact_neural_reference,3,Influenza,URTI,False,pseudo,6.758786e-05
+test:13402,score__notebook31_compact_neural_reference,4,Pneumonia,URTI,False,pseudo,4.493828e-05
+test:13402,score__logistic_sparse_l1_balanced_name_family,1,URTI,URTI,True,pseudo,0.998847990103721
+test:13402,score__logistic_sparse_l1_balanced_name_family,2,Influenza,URTI,False,pseudo,0.2404414212435193
+test:13402,score__logistic_sparse_l1_balanced_name_family,3,Ebola,URTI,False,base,0.15992339913450412
+test:13402,score__logistic_sparse_l1_balanced_name_family,4,Pneumonia,URTI,False,pseudo,0.08981548184305303
+test:13402,score__gradient_boosting_name_family,1,URTI,URTI,True,pseudo,0.961479734525191
+test:13402,score__gradient_boosting_name_family,2,Ebola,URTI,False,base,0.004539603357559641
+test:13402,score__gradient_boosting_name_family,3,Pneumonia,URTI,False,pseudo,0.00209782943801189
+test:13402,score__gradient_boosting_name_family,4,Influenza,URTI,False,pseudo,0.00209782943801189
+test:13402,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,URTI,URTI,True,pseudo,1.06586546
+test:13402,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Ebola,URTI,False,base,0.001723955000000042
+test:13402,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Influenza,URTI,False,pseudo,6.758786000409275e-05
+test:13402,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Pneumonia,URTI,False,pseudo,4.493828e-05
+test:13402,score__candidate_pool_label_oracle_non_deployable,1,URTI,URTI,True,pseudo,1.0
+test:13402,score__candidate_pool_label_oracle_non_deployable,2,Ebola,URTI,False,base,0.0
+test:13402,score__candidate_pool_label_oracle_non_deployable,3,Pneumonia,URTI,False,pseudo,0.0
+test:13402,score__candidate_pool_label_oracle_non_deployable,4,Influenza,URTI,False,pseudo,0.0
+test:16097,score__notebook31_compact_neural_reference,1,Stable angina,Stable angina,True,base,0.97107834
+test:16097,score__notebook31_compact_neural_reference,2,Unstable angina,Stable angina,False,pseudo,0.0024706775
+test:16097,score__notebook31_compact_neural_reference,3,Atrial fibrillation,Stable angina,False,pseudo,3.3001097e-06
+test:16097,score__logistic_sparse_l1_balanced_name_family,1,Stable angina,Stable angina,True,base,0.9892204782467456
+test:16097,score__logistic_sparse_l1_balanced_name_family,2,Unstable angina,Stable angina,False,pseudo,0.8235010019776443
+test:16097,score__logistic_sparse_l1_balanced_name_family,3,Atrial fibrillation,Stable angina,False,pseudo,0.007681369428355481
+test:16097,score__gradient_boosting_name_family,1,Stable angina,Stable angina,True,base,0.9581409348029492
+test:16097,score__gradient_boosting_name_family,2,Unstable angina,Stable angina,False,pseudo,0.4596602726225469
+test:16097,score__gradient_boosting_name_family,3,Atrial fibrillation,Stable angina,False,pseudo,0.016091541091856124
+test:16097,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Stable angina,Stable angina,True,base,1.9428553022802735
+test:16097,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Unstable angina,Stable angina,False,pseudo,0.030460960944523812
+test:16097,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Atrial fibrillation,Stable angina,False,pseudo,1.4625012216207658e-05
+test:16097,score__candidate_pool_label_oracle_non_deployable,1,Stable angina,Stable angina,True,base,1.0
+test:16097,score__candidate_pool_label_oracle_non_deployable,2,Unstable angina,Stable angina,False,pseudo,0.0
+test:16097,score__candidate_pool_label_oracle_non_deployable,3,Atrial fibrillation,Stable angina,False,pseudo,0.0
+test:19160,score__notebook31_compact_neural_reference,1,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,0.9981268
+test:19160,score__notebook31_compact_neural_reference,2,Unstable angina,Possible NSTEMI / STEMI,False,pseudo,2.2645963e-06
+test:19160,score__notebook31_compact_neural_reference,3,Stable angina,Possible NSTEMI / STEMI,False,pseudo,2.4886548e-09
+test:19160,score__notebook31_compact_neural_reference,4,Panic attack,Possible NSTEMI / STEMI,False,pseudo,2.953009e-15
+test:19160,score__logistic_sparse_l1_balanced_name_family,1,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,0.99997836489912
+test:19160,score__logistic_sparse_l1_balanced_name_family,2,Unstable angina,Possible NSTEMI / STEMI,False,pseudo,0.005940283345026451
+test:19160,score__logistic_sparse_l1_balanced_name_family,3,Panic attack,Possible NSTEMI / STEMI,False,pseudo,0.0005441415880657717
+test:19160,score__logistic_sparse_l1_balanced_name_family,4,Stable angina,Possible NSTEMI / STEMI,False,pseudo,0.00031572724441584056
+test:19160,score__gradient_boosting_name_family,1,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,0.9903068033534289
+test:19160,score__gradient_boosting_name_family,2,Unstable angina,Possible NSTEMI / STEMI,False,pseudo,0.01685670695828897
+test:19160,score__gradient_boosting_name_family,3,Stable angina,Possible NSTEMI / STEMI,False,pseudo,0.014195646697273138
+test:19160,score__gradient_boosting_name_family,4,Panic attack,Possible NSTEMI / STEMI,False,pseudo,0.014195646697273138
+test:19160,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,1.9981268
+test:19160,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Unstable angina,Possible NSTEMI / STEMI,False,pseudo,2.2646221756713972e-06
+test:19160,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Stable angina,Possible NSTEMI / STEMI,False,pseudo,2.4886548e-09
+test:19160,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Panic attack,Possible NSTEMI / STEMI,False,pseudo,2.953009e-15
+test:19160,score__candidate_pool_label_oracle_non_deployable,1,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,1.0
+test:19160,score__candidate_pool_label_oracle_non_deployable,2,Unstable angina,Possible NSTEMI / STEMI,False,pseudo,0.0
+test:19160,score__candidate_pool_label_oracle_non_deployable,3,Stable angina,Possible NSTEMI / STEMI,False,pseudo,0.0
+test:19160,score__candidate_pool_label_oracle_non_deployable,4,Panic attack,Possible NSTEMI / STEMI,False,pseudo,0.0
+test:23687,score__notebook31_compact_neural_reference,1,Pulmonary embolism,Pulmonary embolism,True,base,0.96513337
+test:23687,score__notebook31_compact_neural_reference,2,Pneumonia,Pulmonary embolism,False,pseudo,0.12055821
+test:23687,score__notebook31_compact_neural_reference,3,Pericarditis,Pulmonary embolism,False,pseudo,2.0065897e-06
+test:23687,score__logistic_sparse_l1_balanced_name_family,1,Pulmonary embolism,Pulmonary embolism,True,base,0.9802543759659554
+test:23687,score__logistic_sparse_l1_balanced_name_family,2,Pneumonia,Pulmonary embolism,False,pseudo,0.8285008255005617
+test:23687,score__logistic_sparse_l1_balanced_name_family,3,Pericarditis,Pulmonary embolism,False,pseudo,0.005560905738047423
+test:23687,score__gradient_boosting_name_family,1,Pulmonary embolism,Pulmonary embolism,True,base,0.9060990320995714
+test:23687,score__gradient_boosting_name_family,2,Pneumonia,Pulmonary embolism,False,pseudo,0.6267577361055413
+test:23687,score__gradient_boosting_name_family,3,Pericarditis,Pulmonary embolism,False,pseudo,0.014195646697273138
+test:23687,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Pulmonary embolism,Pulmonary embolism,True,base,1.96513337
+test:23687,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pneumonia,Pulmonary embolism,False,pseudo,0.12055821
+test:23687,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pericarditis,Pulmonary embolism,False,pseudo,2.0065897e-06
+test:23687,score__candidate_pool_label_oracle_non_deployable,1,Pulmonary embolism,Pulmonary embolism,True,base,1.0
+test:23687,score__candidate_pool_label_oracle_non_deployable,2,Pneumonia,Pulmonary embolism,False,pseudo,0.0
+test:23687,score__candidate_pool_label_oracle_non_deployable,3,Pericarditis,Pulmonary embolism,False,pseudo,0.0
+test:33118,score__notebook31_compact_neural_reference,1,Acute otitis media,Acute otitis media,True,branch,0.78035456
+test:33118,score__notebook31_compact_neural_reference,2,Acute otitis media,Acute otitis media,True,branch,0.7669616
+test:33118,score__notebook31_compact_neural_reference,3,Acute otitis media,Acute otitis media,True,base,0.2612172
+test:33118,score__notebook31_compact_neural_reference,4,URTI,Acute otitis media,False,branch,0.17679825
+test:33118,score__notebook31_compact_neural_reference,5,Influenza,Acute otitis media,False,pseudo,0.0151238665
+test:33118,score__notebook31_compact_neural_reference,6,Viral pharyngitis,Acute otitis media,False,pseudo,0.002273782
+test:33118,score__notebook31_compact_neural_reference,7,Pneumonia,Acute otitis media,False,pseudo,0.00038836885
+test:33118,score__notebook31_compact_neural_reference,8,Bronchiolitis,Acute otitis media,False,pseudo,0.0002910566
+test:33118,score__logistic_sparse_l1_balanced_name_family,1,Acute otitis media,Acute otitis media,True,branch,0.9639106638849383
+test:33118,score__logistic_sparse_l1_balanced_name_family,2,Acute otitis media,Acute otitis media,True,branch,0.9492974066134139
+test:33118,score__logistic_sparse_l1_balanced_name_family,3,Acute otitis media,Acute otitis media,True,base,0.8839654752503127
+test:33118,score__logistic_sparse_l1_balanced_name_family,4,Viral pharyngitis,Acute otitis media,False,pseudo,0.8680764574566422
+test:33118,score__logistic_sparse_l1_balanced_name_family,5,URTI,Acute otitis media,False,branch,0.732047700762656
+test:33118,score__logistic_sparse_l1_balanced_name_family,6,Influenza,Acute otitis media,False,pseudo,0.6936417572038659
+test:33118,score__logistic_sparse_l1_balanced_name_family,7,Pneumonia,Acute otitis media,False,pseudo,0.5687085843740257
+test:33118,score__logistic_sparse_l1_balanced_name_family,8,Bronchiolitis,Acute otitis media,False,pseudo,0.0719033516813923
+test:33118,score__gradient_boosting_name_family,1,Acute otitis media,Acute otitis media,True,branch,0.8249578482802913
+test:33118,score__gradient_boosting_name_family,2,Acute otitis media,Acute otitis media,True,branch,0.7685224330114474
+test:33118,score__gradient_boosting_name_family,3,Acute otitis media,Acute otitis media,True,base,0.4218475437059635
+test:33118,score__gradient_boosting_name_family,4,URTI,Acute otitis media,False,branch,0.31816036617696936
+test:33118,score__gradient_boosting_name_family,5,Viral pharyngitis,Acute otitis media,False,pseudo,0.09905807475897485
+test:33118,score__gradient_boosting_name_family,6,Influenza,Acute otitis media,False,pseudo,0.07213023581596203
+test:33118,score__gradient_boosting_name_family,7,Pneumonia,Acute otitis media,False,pseudo,0.030922234920470124
+test:33118,score__gradient_boosting_name_family,8,Bronchiolitis,Acute otitis media,False,pseudo,0.002512985162501363
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Acute otitis media,Acute otitis media,True,branch,1.7803545600000001
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute otitis media,Acute otitis media,True,branch,1.7669616000000001
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Acute otitis media,Acute otitis media,True,base,1.2612172
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,URTI,Acute otitis media,False,branch,0.17679825000000132
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Influenza,Acute otitis media,False,pseudo,0.015123866500000024
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,6,Viral pharyngitis,Acute otitis media,False,pseudo,0.002273782
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,7,Pneumonia,Acute otitis media,False,pseudo,0.00038836885
+test:33118,score__notebook31_neural_plus_full_evidence_1_non_deployable,8,Bronchiolitis,Acute otitis media,False,pseudo,0.0002910566
+test:33118,score__candidate_pool_label_oracle_non_deployable,1,Acute otitis media,Acute otitis media,True,base,1.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,2,Acute otitis media,Acute otitis media,True,branch,1.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,3,Acute otitis media,Acute otitis media,True,branch,1.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,4,URTI,Acute otitis media,False,branch,0.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,5,Influenza,Acute otitis media,False,pseudo,0.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,6,Bronchiolitis,Acute otitis media,False,pseudo,0.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,7,Viral pharyngitis,Acute otitis media,False,pseudo,0.0
+test:33118,score__candidate_pool_label_oracle_non_deployable,8,Pneumonia,Acute otitis media,False,pseudo,0.0
+test:35039,score__notebook31_compact_neural_reference,1,Myocarditis,Myocarditis,True,branch,0.99934715
+test:35039,score__notebook31_compact_neural_reference,2,Acute pulmonary edema,Myocarditis,False,branch,0.0001667526
+test:35039,score__notebook31_compact_neural_reference,3,GERD,Myocarditis,False,branch,5.498787e-05
+test:35039,score__notebook31_compact_neural_reference,4,Sarcoidosis,Myocarditis,False,base,4.8738653e-05
+test:35039,score__notebook31_compact_neural_reference,5,Pericarditis,Myocarditis,False,pseudo,4.5625966e-06
+test:35039,score__logistic_sparse_l1_balanced_name_family,1,Myocarditis,Myocarditis,True,branch,0.9999606734301723
+test:35039,score__logistic_sparse_l1_balanced_name_family,2,Pericarditis,Myocarditis,False,pseudo,0.9641814184133928
+test:35039,score__logistic_sparse_l1_balanced_name_family,3,Acute pulmonary edema,Myocarditis,False,branch,0.02452867328349091
+test:35039,score__logistic_sparse_l1_balanced_name_family,4,GERD,Myocarditis,False,branch,0.008716762614552538
+test:35039,score__logistic_sparse_l1_balanced_name_family,5,Sarcoidosis,Myocarditis,False,base,0.008169591008048482
+test:35039,score__gradient_boosting_name_family,1,Myocarditis,Myocarditis,True,branch,0.9930246745237397
+test:35039,score__gradient_boosting_name_family,2,Pericarditis,Myocarditis,False,pseudo,0.9033291655047632
+test:35039,score__gradient_boosting_name_family,3,Acute pulmonary edema,Myocarditis,False,branch,0.0026799166725584704
+test:35039,score__gradient_boosting_name_family,4,GERD,Myocarditis,False,branch,0.002100910926561866
+test:35039,score__gradient_boosting_name_family,5,Sarcoidosis,Myocarditis,False,base,0.0020278385154667883
+test:35039,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Myocarditis,Myocarditis,True,branch,1.999346315534973
+test:35039,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute pulmonary edema,Myocarditis,False,branch,0.000166910861613592
+test:35039,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,GERD,Myocarditis,False,branch,5.498787e-05
+test:35039,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Sarcoidosis,Myocarditis,False,base,4.8738653e-05
+test:35039,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Pericarditis,Myocarditis,False,pseudo,5.0822632279516645e-06
+test:35039,score__candidate_pool_label_oracle_non_deployable,1,Myocarditis,Myocarditis,True,branch,1.0
+test:35039,score__candidate_pool_label_oracle_non_deployable,2,Sarcoidosis,Myocarditis,False,base,0.0
+test:35039,score__candidate_pool_label_oracle_non_deployable,3,GERD,Myocarditis,False,branch,0.0
+test:35039,score__candidate_pool_label_oracle_non_deployable,4,Acute pulmonary edema,Myocarditis,False,branch,0.0
+test:35039,score__candidate_pool_label_oracle_non_deployable,5,Pericarditis,Myocarditis,False,pseudo,0.0
+test:36032,score__notebook31_compact_neural_reference,1,Sarcoidosis,Sarcoidosis,True,base,0.98322153
+test:36032,score__notebook31_compact_neural_reference,2,GERD,Sarcoidosis,False,pseudo,6.701165e-07
+test:36032,score__notebook31_compact_neural_reference,3,Pancreatic neoplasm,Sarcoidosis,False,pseudo,1.6146195e-07
+test:36032,score__notebook31_compact_neural_reference,4,URTI,Sarcoidosis,False,pseudo,3.4952544e-14
+test:36032,score__logistic_sparse_l1_balanced_name_family,1,Sarcoidosis,Sarcoidosis,True,base,0.9999319883789137
+test:36032,score__logistic_sparse_l1_balanced_name_family,2,GERD,Sarcoidosis,False,pseudo,0.0036858523703841802
+test:36032,score__logistic_sparse_l1_balanced_name_family,3,Pancreatic neoplasm,Sarcoidosis,False,pseudo,0.0032333278863840753
+test:36032,score__logistic_sparse_l1_balanced_name_family,4,URTI,Sarcoidosis,False,pseudo,0.0003125357565800676
+test:36032,score__gradient_boosting_name_family,1,Sarcoidosis,Sarcoidosis,True,base,0.9896883358577394
+test:36032,score__gradient_boosting_name_family,2,GERD,Sarcoidosis,False,pseudo,0.014195646697273138
+test:36032,score__gradient_boosting_name_family,3,URTI,Sarcoidosis,False,pseudo,0.014195646697273138
+test:36032,score__gradient_boosting_name_family,4,Pancreatic neoplasm,Sarcoidosis,False,pseudo,0.013770943310421719
+test:36032,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Sarcoidosis,Sarcoidosis,True,base,1.98322153
+test:36032,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,GERD,Sarcoidosis,False,pseudo,6.701165e-07
+test:36032,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pancreatic neoplasm,Sarcoidosis,False,pseudo,1.6146195e-07
+test:36032,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,URTI,Sarcoidosis,False,pseudo,3.4952544e-14
+test:36032,score__candidate_pool_label_oracle_non_deployable,1,Sarcoidosis,Sarcoidosis,True,base,1.0
+test:36032,score__candidate_pool_label_oracle_non_deployable,2,GERD,Sarcoidosis,False,pseudo,0.0
+test:36032,score__candidate_pool_label_oracle_non_deployable,3,Pancreatic neoplasm,Sarcoidosis,False,pseudo,0.0
+test:36032,score__candidate_pool_label_oracle_non_deployable,4,URTI,Sarcoidosis,False,pseudo,0.0
+test:38202,score__notebook31_compact_neural_reference,1,Inguinal hernia,Inguinal hernia,True,base,0.9987864
+test:38202,score__notebook31_compact_neural_reference,2,Whooping cough,Inguinal hernia,False,pseudo,6.565764e-05
+test:38202,score__notebook31_compact_neural_reference,3,Spontaneous rib fracture,Inguinal hernia,False,pseudo,4.5141867e-05
+test:38202,score__logistic_sparse_l1_balanced_name_family,1,Inguinal hernia,Inguinal hernia,True,base,0.9988600907474389
+test:38202,score__logistic_sparse_l1_balanced_name_family,2,Whooping cough,Inguinal hernia,False,pseudo,0.22613353177362452
+test:38202,score__logistic_sparse_l1_balanced_name_family,3,Spontaneous rib fracture,Inguinal hernia,False,pseudo,0.08417200146748144
+test:38202,score__gradient_boosting_name_family,1,Inguinal hernia,Inguinal hernia,True,base,0.9914114447724759
+test:38202,score__gradient_boosting_name_family,2,Whooping cough,Inguinal hernia,False,pseudo,0.021679647809406864
+test:38202,score__gradient_boosting_name_family,3,Spontaneous rib fracture,Inguinal hernia,False,pseudo,0.017613315112234393
+test:38202,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Inguinal hernia,Inguinal hernia,True,base,1.9987864
+test:38202,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Whooping cough,Inguinal hernia,False,pseudo,6.565764e-05
+test:38202,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Spontaneous rib fracture,Inguinal hernia,False,pseudo,4.5141867e-05
+test:38202,score__candidate_pool_label_oracle_non_deployable,1,Inguinal hernia,Inguinal hernia,True,base,1.0
+test:38202,score__candidate_pool_label_oracle_non_deployable,2,Spontaneous rib fracture,Inguinal hernia,False,pseudo,0.0
+test:38202,score__candidate_pool_label_oracle_non_deployable,3,Whooping cough,Inguinal hernia,False,pseudo,0.0
+test:38475,score__notebook31_compact_neural_reference,1,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,branch,0.60411185
+test:38475,score__notebook31_compact_neural_reference,2,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,0.5334526
+test:38475,score__notebook31_compact_neural_reference,3,Bronchitis,Acute COPD exacerbation / infection,False,pseudo,0.15201138
+test:38475,score__notebook31_compact_neural_reference,4,Bronchiectasis,Acute COPD exacerbation / infection,False,pseudo,2.4729437e-05
+test:38475,score__notebook31_compact_neural_reference,5,Myasthenia gravis,Acute COPD exacerbation / infection,False,branch,2.1892984e-05
+test:38475,score__notebook31_compact_neural_reference,6,Myocarditis,Acute COPD exacerbation / infection,False,branch,6.5391587e-06
+test:38475,score__notebook31_compact_neural_reference,7,Sarcoidosis,Acute COPD exacerbation / infection,False,pseudo,3.0190783e-08
+test:38475,score__notebook31_compact_neural_reference,8,Scombroid food poisoning,Acute COPD exacerbation / infection,False,pseudo,2.75564e-10
+test:38475,score__logistic_sparse_l1_balanced_name_family,1,Bronchitis,Acute COPD exacerbation / infection,False,pseudo,0.9545557657884148
+test:38475,score__logistic_sparse_l1_balanced_name_family,2,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,branch,0.8997960679410038
+test:38475,score__logistic_sparse_l1_balanced_name_family,3,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,0.8900183548177918
+test:38475,score__logistic_sparse_l1_balanced_name_family,4,Myasthenia gravis,Acute COPD exacerbation / infection,False,branch,0.03304295414106842
+test:38475,score__logistic_sparse_l1_balanced_name_family,5,Bronchiectasis,Acute COPD exacerbation / infection,False,pseudo,0.031327015186351476
+test:38475,score__logistic_sparse_l1_balanced_name_family,6,Myocarditis,Acute COPD exacerbation / infection,False,branch,0.009910760664603595
+test:38475,score__logistic_sparse_l1_balanced_name_family,7,Scombroid food poisoning,Acute COPD exacerbation / infection,False,pseudo,0.00034243673663141195
+test:38475,score__logistic_sparse_l1_balanced_name_family,8,Sarcoidosis,Acute COPD exacerbation / infection,False,pseudo,0.00030044818943949624
+test:38475,score__gradient_boosting_name_family,1,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,0.641443942017399
+test:38475,score__gradient_boosting_name_family,2,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,branch,0.6207844127156412
+test:38475,score__gradient_boosting_name_family,3,Bronchitis,Acute COPD exacerbation / infection,False,pseudo,0.31455560640159413
+test:38475,score__gradient_boosting_name_family,4,Myasthenia gravis,Acute COPD exacerbation / infection,False,branch,0.0020818629499184792
+test:38475,score__gradient_boosting_name_family,5,Scombroid food poisoning,Acute COPD exacerbation / infection,False,pseudo,0.0019758743645383625
+test:38475,score__gradient_boosting_name_family,6,Myocarditis,Acute COPD exacerbation / infection,False,branch,0.001841005901322783
+test:38475,score__gradient_boosting_name_family,7,Bronchiectasis,Acute COPD exacerbation / infection,False,pseudo,0.001841005901322783
+test:38475,score__gradient_boosting_name_family,8,Sarcoidosis,Acute COPD exacerbation / infection,False,pseudo,0.001841005901322783
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,branch,1.603747784829712
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,1.5330885348297119
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Bronchitis,Acute COPD exacerbation / infection,False,pseudo,0.15236627007132128
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Bronchiectasis,Acute COPD exacerbation / infection,False,pseudo,3.392336250713383e-05
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Myasthenia gravis,Acute COPD exacerbation / infection,False,branch,2.1892984e-05
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,6,Myocarditis,Acute COPD exacerbation / infection,False,branch,6.5391587e-06
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,7,Sarcoidosis,Acute COPD exacerbation / infection,False,pseudo,3.0190783e-08
+test:38475,score__notebook31_neural_plus_full_evidence_1_non_deployable,8,Scombroid food poisoning,Acute COPD exacerbation / infection,False,pseudo,1.5307425977377046e-08
+test:38475,score__candidate_pool_label_oracle_non_deployable,1,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,1.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,2,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,branch,1.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,3,Myasthenia gravis,Acute COPD exacerbation / infection,False,branch,0.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,4,Myocarditis,Acute COPD exacerbation / infection,False,branch,0.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,5,Bronchitis,Acute COPD exacerbation / infection,False,pseudo,0.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,6,Bronchiectasis,Acute COPD exacerbation / infection,False,pseudo,0.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,7,Scombroid food poisoning,Acute COPD exacerbation / infection,False,pseudo,0.0
+test:38475,score__candidate_pool_label_oracle_non_deployable,8,Sarcoidosis,Acute COPD exacerbation / infection,False,pseudo,0.0
+test:39033,score__notebook31_compact_neural_reference,1,Viral pharyngitis,Viral pharyngitis,True,base,0.97793293
+test:39033,score__notebook31_compact_neural_reference,2,URTI,Viral pharyngitis,False,pseudo,0.0074193003
+test:39033,score__notebook31_compact_neural_reference,3,Acute otitis media,Viral pharyngitis,False,pseudo,1.8971089e-06
+test:39033,score__logistic_sparse_l1_balanced_name_family,1,Viral pharyngitis,Viral pharyngitis,True,base,0.9888795820088241
+test:39033,score__logistic_sparse_l1_balanced_name_family,2,URTI,Viral pharyngitis,False,pseudo,0.8032999147795812
+test:39033,score__logistic_sparse_l1_balanced_name_family,3,Acute otitis media,Viral pharyngitis,False,pseudo,0.0034878461824140077
+test:39033,score__gradient_boosting_name_family,1,Viral pharyngitis,Viral pharyngitis,True,base,0.9662107623165616
+test:39033,score__gradient_boosting_name_family,2,URTI,Viral pharyngitis,False,pseudo,0.6004394209680837
+test:39033,score__gradient_boosting_name_family,3,Acute otitis media,Viral pharyngitis,False,pseudo,0.014259307260525678
+test:39033,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Viral pharyngitis,Viral pharyngitis,True,base,1.9779329300000001
+test:39033,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,URTI,Viral pharyngitis,False,pseudo,0.0074193003
+test:39033,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Acute otitis media,Viral pharyngitis,False,pseudo,1.8971089e-06
+test:39033,score__candidate_pool_label_oracle_non_deployable,1,Viral pharyngitis,Viral pharyngitis,True,base,1.0
+test:39033,score__candidate_pool_label_oracle_non_deployable,2,URTI,Viral pharyngitis,False,pseudo,0.0
+test:39033,score__candidate_pool_label_oracle_non_deployable,3,Acute otitis media,Viral pharyngitis,False,pseudo,0.0
+test:52755,score__notebook31_compact_neural_reference,1,SLE,SLE,True,base,0.99802977
+test:52755,score__notebook31_compact_neural_reference,2,Pericarditis,SLE,False,pseudo,6.116895e-06
+test:52755,score__notebook31_compact_neural_reference,3,Pneumonia,SLE,False,pseudo,2.4703481e-09
+test:52755,score__notebook31_compact_neural_reference,4,Ebola,SLE,False,pseudo,1.0551868e-09
+test:52755,score__notebook31_compact_neural_reference,5,Scombroid food poisoning,SLE,False,pseudo,1.36174615e-14
+test:52755,score__logistic_sparse_l1_balanced_name_family,1,SLE,SLE,True,base,0.9999616229823045
+test:52755,score__logistic_sparse_l1_balanced_name_family,2,Pericarditis,SLE,False,pseudo,0.014371280349858847
+test:52755,score__logistic_sparse_l1_balanced_name_family,3,Ebola,SLE,False,pseudo,0.00033811504207879433
+test:52755,score__logistic_sparse_l1_balanced_name_family,4,Scombroid food poisoning,SLE,False,pseudo,0.000302236477308226
+test:52755,score__logistic_sparse_l1_balanced_name_family,5,Pneumonia,SLE,False,pseudo,0.0001684663350759326
+test:52755,score__gradient_boosting_name_family,1,SLE,SLE,True,base,0.9930853043274374
+test:52755,score__gradient_boosting_name_family,2,Pericarditis,SLE,False,pseudo,0.0169673516093343
+test:52755,score__gradient_boosting_name_family,3,Scombroid food poisoning,SLE,False,pseudo,0.015221789494843384
+test:52755,score__gradient_boosting_name_family,4,Ebola,SLE,False,pseudo,0.014195646697273138
+test:52755,score__gradient_boosting_name_family,5,Pneumonia,SLE,False,pseudo,0.013203659458223504
+test:52755,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,SLE,SLE,True,base,1.99802977
+test:52755,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pericarditis,SLE,False,pseudo,6.116895e-06
+test:52755,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pneumonia,SLE,False,pseudo,2.4703481e-09
+test:52755,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Ebola,SLE,False,pseudo,1.0551868e-09
+test:52755,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Scombroid food poisoning,SLE,False,pseudo,1.498692467560473e-14
+test:52755,score__candidate_pool_label_oracle_non_deployable,1,SLE,SLE,True,base,1.0
+test:52755,score__candidate_pool_label_oracle_non_deployable,2,Pericarditis,SLE,False,pseudo,0.0
+test:52755,score__candidate_pool_label_oracle_non_deployable,3,Pneumonia,SLE,False,pseudo,0.0
+test:52755,score__candidate_pool_label_oracle_non_deployable,4,Ebola,SLE,False,pseudo,0.0
+test:52755,score__candidate_pool_label_oracle_non_deployable,5,Scombroid food poisoning,SLE,False,pseudo,0.0
+test:58986,score__notebook31_compact_neural_reference,1,Acute laryngitis,Acute laryngitis,True,base,0.98581415
+test:58986,score__notebook31_compact_neural_reference,2,Epiglottitis,Acute laryngitis,False,pseudo,0.011104636
+test:58986,score__notebook31_compact_neural_reference,3,URTI,Acute laryngitis,False,pseudo,1.3884967e-06
+test:58986,score__notebook31_compact_neural_reference,4,Bronchiolitis,Acute laryngitis,False,pseudo,8.7215466e-07
+test:58986,score__logistic_sparse_l1_balanced_name_family,1,Acute laryngitis,Acute laryngitis,True,base,0.9897917786639943
+test:58986,score__logistic_sparse_l1_balanced_name_family,2,Epiglottitis,Acute laryngitis,False,pseudo,0.7586472467712992
+test:58986,score__logistic_sparse_l1_balanced_name_family,3,URTI,Acute laryngitis,False,pseudo,0.004177989216712276
+test:58986,score__logistic_sparse_l1_balanced_name_family,4,Bronchiolitis,Acute laryngitis,False,pseudo,0.003994299005799178
+test:58986,score__gradient_boosting_name_family,1,Acute laryngitis,Acute laryngitis,True,base,0.9595636453208869
+test:58986,score__gradient_boosting_name_family,2,Epiglottitis,Acute laryngitis,False,pseudo,0.527163998375748
+test:58986,score__gradient_boosting_name_family,3,Bronchiolitis,Acute laryngitis,False,pseudo,0.014195646697273138
+test:58986,score__gradient_boosting_name_family,4,URTI,Acute laryngitis,False,pseudo,0.014195646697273138
+test:58986,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Acute laryngitis,Acute laryngitis,True,base,1.9856556016448974
+test:58986,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Epiglottitis,Acute laryngitis,False,pseudo,0.011104636
+test:58986,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,URTI,Acute laryngitis,False,pseudo,1.3884967e-06
+test:58986,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Bronchiolitis,Acute laryngitis,False,pseudo,8.7215466e-07
+test:58986,score__candidate_pool_label_oracle_non_deployable,1,Acute laryngitis,Acute laryngitis,True,base,1.0
+test:58986,score__candidate_pool_label_oracle_non_deployable,2,Epiglottitis,Acute laryngitis,False,pseudo,0.0
+test:58986,score__candidate_pool_label_oracle_non_deployable,3,Bronchiolitis,Acute laryngitis,False,pseudo,0.0
+test:58986,score__candidate_pool_label_oracle_non_deployable,4,URTI,Acute laryngitis,False,pseudo,0.0
+test:62878,score__notebook31_compact_neural_reference,1,Anemia,Pericarditis,False,branch,0.19699594
+test:62878,score__notebook31_compact_neural_reference,2,Panic attack,Pericarditis,False,base,0.067965634
+test:62878,score__notebook31_compact_neural_reference,3,Atrial fibrillation,Pericarditis,False,branch,0.025295552
+test:62878,score__notebook31_compact_neural_reference,4,Sarcoidosis,Pericarditis,False,branch,0.019725798
+test:62878,score__notebook31_compact_neural_reference,5,PSVT,Pericarditis,False,pseudo,0.006941428
+test:62878,score__notebook31_compact_neural_reference,6,Myocarditis,Pericarditis,False,pseudo,0.0011951757
+test:62878,score__notebook31_compact_neural_reference,7,Pericarditis,Pericarditis,True,pseudo,0.00056475843
+test:62878,score__logistic_sparse_l1_balanced_name_family,1,PSVT,Pericarditis,False,pseudo,0.8831506876448245
+test:62878,score__logistic_sparse_l1_balanced_name_family,2,Pericarditis,Pericarditis,True,pseudo,0.832132012102091
+test:62878,score__logistic_sparse_l1_balanced_name_family,3,Myocarditis,Pericarditis,False,pseudo,0.809648342055395
+test:62878,score__logistic_sparse_l1_balanced_name_family,4,Atrial fibrillation,Pericarditis,False,branch,0.6486172988432068
+test:62878,score__logistic_sparse_l1_balanced_name_family,5,Panic attack,Pericarditis,False,base,0.607163565479685
+test:62878,score__logistic_sparse_l1_balanced_name_family,6,Anemia,Pericarditis,False,branch,0.5935159952306587
+test:62878,score__logistic_sparse_l1_balanced_name_family,7,Sarcoidosis,Pericarditis,False,branch,0.44430008233856194
+test:62878,score__gradient_boosting_name_family,1,Pericarditis,Pericarditis,True,pseudo,0.757431411224642
+test:62878,score__gradient_boosting_name_family,2,PSVT,Pericarditis,False,pseudo,0.7208131024166071
+test:62878,score__gradient_boosting_name_family,3,Myocarditis,Pericarditis,False,pseudo,0.683937729498934
+test:62878,score__gradient_boosting_name_family,4,Anemia,Pericarditis,False,branch,0.19659861392609412
+test:62878,score__gradient_boosting_name_family,5,Panic attack,Pericarditis,False,base,0.16836922201692942
+test:62878,score__gradient_boosting_name_family,6,Atrial fibrillation,Pericarditis,False,branch,0.1533305983553002
+test:62878,score__gradient_boosting_name_family,7,Sarcoidosis,Pericarditis,False,branch,0.11237734067452988
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Pericarditis,Pericarditis,True,pseudo,1.00056475843
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Anemia,Pericarditis,False,branch,0.19699594
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Panic attack,Pericarditis,False,base,0.067965634
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Atrial fibrillation,Pericarditis,False,branch,0.025295552
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Sarcoidosis,Pericarditis,False,branch,0.019725798
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,6,PSVT,Pericarditis,False,pseudo,0.0069414290974196
+test:62878,score__notebook31_neural_plus_full_evidence_1_non_deployable,7,Myocarditis,Pericarditis,False,pseudo,0.0011951886435013818
+test:62878,score__candidate_pool_label_oracle_non_deployable,1,Pericarditis,Pericarditis,True,pseudo,1.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,2,Panic attack,Pericarditis,False,base,0.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,3,Atrial fibrillation,Pericarditis,False,branch,0.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,4,Anemia,Pericarditis,False,branch,0.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,5,Sarcoidosis,Pericarditis,False,branch,0.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,6,PSVT,Pericarditis,False,pseudo,0.0
+test:62878,score__candidate_pool_label_oracle_non_deployable,7,Myocarditis,Pericarditis,False,pseudo,0.0
+test:71107,score__notebook31_compact_neural_reference,1,Spontaneous rib fracture,Spontaneous rib fracture,True,base,0.9997844
+test:71107,score__notebook31_compact_neural_reference,2,Inguinal hernia,Spontaneous rib fracture,False,pseudo,4.7983144e-06
+test:71107,score__notebook31_compact_neural_reference,3,Spontaneous pneumothorax,Spontaneous rib fracture,False,pseudo,2.8191298e-06
+test:71107,score__notebook31_compact_neural_reference,4,Whooping cough,Spontaneous rib fracture,False,pseudo,2.7118629e-06
+test:71107,score__notebook31_compact_neural_reference,5,Pulmonary embolism,Spontaneous rib fracture,False,pseudo,1.4174454e-06
+test:71107,score__logistic_sparse_l1_balanced_name_family,1,Spontaneous rib fracture,Spontaneous rib fracture,True,base,0.9998455454914195
+test:71107,score__logistic_sparse_l1_balanced_name_family,2,Inguinal hernia,Spontaneous rib fracture,False,pseudo,0.018393623416052253
+test:71107,score__logistic_sparse_l1_balanced_name_family,3,Pulmonary embolism,Spontaneous rib fracture,False,pseudo,0.01837992254364004
+test:71107,score__logistic_sparse_l1_balanced_name_family,4,Whooping cough,Spontaneous rib fracture,False,pseudo,0.012312700677250873
+test:71107,score__logistic_sparse_l1_balanced_name_family,5,Spontaneous pneumothorax,Spontaneous rib fracture,False,pseudo,0.00889470878008513
+test:71107,score__gradient_boosting_name_family,1,Spontaneous rib fracture,Spontaneous rib fracture,True,base,0.991616365818245
+test:71107,score__gradient_boosting_name_family,2,Whooping cough,Spontaneous rib fracture,False,pseudo,0.014195646697273138
+test:71107,score__gradient_boosting_name_family,3,Inguinal hernia,Spontaneous rib fracture,False,pseudo,0.013905728755395053
+test:71107,score__gradient_boosting_name_family,4,Pulmonary embolism,Spontaneous rib fracture,False,pseudo,0.013905728755395053
+test:71107,score__gradient_boosting_name_family,5,Spontaneous pneumothorax,Spontaneous rib fracture,False,pseudo,0.012808248609080208
+test:71107,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Spontaneous rib fracture,Spontaneous rib fracture,True,base,1.9997844
+test:71107,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Inguinal hernia,Spontaneous rib fracture,False,pseudo,4.7983144e-06
+test:71107,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Spontaneous pneumothorax,Spontaneous rib fracture,False,pseudo,2.8191298e-06
+test:71107,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Whooping cough,Spontaneous rib fracture,False,pseudo,2.7118629e-06
+test:71107,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Pulmonary embolism,Spontaneous rib fracture,False,pseudo,1.4174658326746494e-06
+test:71107,score__candidate_pool_label_oracle_non_deployable,1,Spontaneous rib fracture,Spontaneous rib fracture,True,base,1.0
+test:71107,score__candidate_pool_label_oracle_non_deployable,2,Inguinal hernia,Spontaneous rib fracture,False,pseudo,0.0
+test:71107,score__candidate_pool_label_oracle_non_deployable,3,Whooping cough,Spontaneous rib fracture,False,pseudo,0.0
+test:71107,score__candidate_pool_label_oracle_non_deployable,4,Spontaneous pneumothorax,Spontaneous rib fracture,False,pseudo,0.0
+test:71107,score__candidate_pool_label_oracle_non_deployable,5,Pulmonary embolism,Spontaneous rib fracture,False,pseudo,0.0
+test:749,score__notebook31_compact_neural_reference,1,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,0.9999039
+test:749,score__notebook31_compact_neural_reference,2,Pneumonia,Spontaneous pneumothorax,False,pseudo,7.5668427e-06
+test:749,score__notebook31_compact_neural_reference,3,Pulmonary embolism,Spontaneous pneumothorax,False,pseudo,1.0261459e-08
+test:749,score__notebook31_compact_neural_reference,4,Pulmonary neoplasm,Spontaneous pneumothorax,False,pseudo,3.1697882e-09
+test:749,score__logistic_sparse_l1_balanced_name_family,1,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,0.9999310788547825
+test:749,score__logistic_sparse_l1_balanced_name_family,2,Pneumonia,Spontaneous pneumothorax,False,pseudo,0.009909215248430983
+test:749,score__logistic_sparse_l1_balanced_name_family,3,Pulmonary neoplasm,Spontaneous pneumothorax,False,pseudo,0.00046678248893660746
+test:749,score__logistic_sparse_l1_balanced_name_family,4,Pulmonary embolism,Spontaneous pneumothorax,False,pseudo,0.0004408174772905522
+test:749,score__gradient_boosting_name_family,1,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,0.9908491675559533
+test:749,score__gradient_boosting_name_family,2,Pneumonia,Spontaneous pneumothorax,False,pseudo,0.0020570358776279647
+test:749,score__gradient_boosting_name_family,3,Pulmonary embolism,Spontaneous pneumothorax,False,pseudo,0.001802945537119051
+test:749,score__gradient_boosting_name_family,4,Pulmonary neoplasm,Spontaneous pneumothorax,False,pseudo,0.001802945537119051
+test:749,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,1.9999039
+test:749,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Pneumonia,Spontaneous pneumothorax,False,pseudo,7.600413346706948e-06
+test:749,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pulmonary embolism,Spontaneous pneumothorax,False,pseudo,1.0261459e-08
+test:749,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Pulmonary neoplasm,Spontaneous pneumothorax,False,pseudo,3.1697882e-09
+test:749,score__candidate_pool_label_oracle_non_deployable,1,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,1.0
+test:749,score__candidate_pool_label_oracle_non_deployable,2,Pneumonia,Spontaneous pneumothorax,False,pseudo,0.0
+test:749,score__candidate_pool_label_oracle_non_deployable,3,Pulmonary embolism,Spontaneous pneumothorax,False,pseudo,0.0
+test:749,score__candidate_pool_label_oracle_non_deployable,4,Pulmonary neoplasm,Spontaneous pneumothorax,False,pseudo,0.0
+test:76022,score__notebook31_compact_neural_reference,1,Panic attack,Panic attack,True,branch,0.9999471
+test:76022,score__notebook31_compact_neural_reference,2,Panic attack,Panic attack,True,branch,0.9999349
+test:76022,score__notebook31_compact_neural_reference,3,Panic attack,Panic attack,True,branch,0.99992466
+test:76022,score__notebook31_compact_neural_reference,4,Myocarditis,Panic attack,False,pseudo,0.0034203383
+test:76022,score__notebook31_compact_neural_reference,5,PSVT,Panic attack,False,pseudo,0.0004837197
+test:76022,score__notebook31_compact_neural_reference,6,Anaphylaxis,Panic attack,False,base,2.699364e-05
+test:76022,score__logistic_sparse_l1_balanced_name_family,1,Panic attack,Panic attack,True,branch,0.9999944317588522
+test:76022,score__logistic_sparse_l1_balanced_name_family,2,Panic attack,Panic attack,True,branch,0.9999912688399647
+test:76022,score__logistic_sparse_l1_balanced_name_family,3,Panic attack,Panic attack,True,branch,0.9999886554332651
+test:76022,score__logistic_sparse_l1_balanced_name_family,4,Myocarditis,Panic attack,False,pseudo,0.8274631586892516
+test:76022,score__logistic_sparse_l1_balanced_name_family,5,PSVT,Panic attack,False,pseudo,0.8048793953646937
+test:76022,score__logistic_sparse_l1_balanced_name_family,6,Anaphylaxis,Panic attack,False,base,0.0032637494919799184
+test:76022,score__gradient_boosting_name_family,1,Panic attack,Panic attack,True,branch,0.9942804806257249
+test:76022,score__gradient_boosting_name_family,2,Panic attack,Panic attack,True,branch,0.9917039382037037
+test:76022,score__gradient_boosting_name_family,3,Panic attack,Panic attack,True,branch,0.9917039382037037
+test:76022,score__gradient_boosting_name_family,4,Myocarditis,Panic attack,False,pseudo,0.632630763871498
+test:76022,score__gradient_boosting_name_family,5,PSVT,Panic attack,False,pseudo,0.4765880988846105
+test:76022,score__gradient_boosting_name_family,6,Anaphylaxis,Panic attack,False,base,0.0022908478745205536
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Panic attack,Panic attack,True,branch,1.9999471
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Panic attack,Panic attack,True,branch,1.9999349
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Panic attack,Panic attack,True,branch,1.99992466
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Myocarditis,Panic attack,False,pseudo,0.0034203383
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,PSVT,Panic attack,False,pseudo,0.0004837197
+test:76022,score__notebook31_neural_plus_full_evidence_1_non_deployable,6,Anaphylaxis,Panic attack,False,base,2.6993640001448634e-05
+test:76022,score__candidate_pool_label_oracle_non_deployable,1,Panic attack,Panic attack,True,branch,1.0
+test:76022,score__candidate_pool_label_oracle_non_deployable,2,Panic attack,Panic attack,True,branch,1.0
+test:76022,score__candidate_pool_label_oracle_non_deployable,3,Panic attack,Panic attack,True,branch,1.0
+test:76022,score__candidate_pool_label_oracle_non_deployable,4,Anaphylaxis,Panic attack,False,base,0.0
+test:76022,score__candidate_pool_label_oracle_non_deployable,5,Myocarditis,Panic attack,False,pseudo,0.0
+test:76022,score__candidate_pool_label_oracle_non_deployable,6,PSVT,Panic attack,False,pseudo,0.0
+test:77908,score__notebook31_compact_neural_reference,1,Ebola,Ebola,True,base,0.9999869
+test:77908,score__notebook31_compact_neural_reference,2,Bronchiolitis,Ebola,False,pseudo,5.3940896e-09
+test:77908,score__notebook31_compact_neural_reference,3,Chagas,Ebola,False,pseudo,7.764345e-10
+test:77908,score__logistic_sparse_l1_balanced_name_family,1,Ebola,Ebola,True,base,0.9999992929084024
+test:77908,score__logistic_sparse_l1_balanced_name_family,2,Chagas,Ebola,False,pseudo,0.0004112258340174978
+test:77908,score__logistic_sparse_l1_balanced_name_family,3,Bronchiolitis,Ebola,False,pseudo,0.00025935129519664524
+test:77908,score__gradient_boosting_name_family,1,Ebola,Ebola,True,base,0.992102687861103
+test:77908,score__gradient_boosting_name_family,2,Bronchiolitis,Ebola,False,pseudo,0.014195646697273138
+test:77908,score__gradient_boosting_name_family,3,Chagas,Ebola,False,pseudo,0.014195646697273138
+test:77908,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Ebola,Ebola,True,base,1.9999803434890748
+test:77908,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Bronchiolitis,Ebola,False,pseudo,5.3940896e-09
+test:77908,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Chagas,Ebola,False,pseudo,7.764345e-10
+test:77908,score__candidate_pool_label_oracle_non_deployable,1,Ebola,Ebola,True,base,1.0
+test:77908,score__candidate_pool_label_oracle_non_deployable,2,Bronchiolitis,Ebola,False,pseudo,0.0
+test:77908,score__candidate_pool_label_oracle_non_deployable,3,Chagas,Ebola,False,pseudo,0.0
+test:81691,score__notebook31_compact_neural_reference,1,Croup,Croup,True,branch,0.66144353
+test:81691,score__notebook31_compact_neural_reference,2,Acute otitis media,Croup,False,base,0.25714082
+test:81691,score__notebook31_compact_neural_reference,3,Influenza,Croup,False,pseudo,0.02637127
+test:81691,score__notebook31_compact_neural_reference,4,Viral pharyngitis,Croup,False,pseudo,0.0041028196
+test:81691,score__notebook31_compact_neural_reference,5,Cluster headache,Croup,False,branch,0.002351004
+test:81691,score__notebook31_compact_neural_reference,6,Pneumonia,Croup,False,pseudo,0.0007012963
+test:81691,score__notebook31_compact_neural_reference,7,Bronchiolitis,Croup,False,pseudo,0.000478941
+test:81691,score__notebook31_compact_neural_reference,8,Anemia,Croup,False,branch,4.467042e-05
+test:81691,score__logistic_sparse_l1_balanced_name_family,1,Croup,Croup,True,branch,0.9113590868610422
+test:81691,score__logistic_sparse_l1_balanced_name_family,2,Acute otitis media,Croup,False,base,0.8818773178043368
+test:81691,score__logistic_sparse_l1_balanced_name_family,3,Viral pharyngitis,Croup,False,pseudo,0.8653222953730941
+test:81691,score__logistic_sparse_l1_balanced_name_family,4,Influenza,Croup,False,pseudo,0.6891540748071046
+test:81691,score__logistic_sparse_l1_balanced_name_family,5,Pneumonia,Croup,False,pseudo,0.5651496819286493
+test:81691,score__logistic_sparse_l1_balanced_name_family,6,Cluster headache,Croup,False,branch,0.08711140795175101
+test:81691,score__logistic_sparse_l1_balanced_name_family,7,Bronchiolitis,Croup,False,pseudo,0.07160940222692833
+test:81691,score__logistic_sparse_l1_balanced_name_family,8,Anemia,Croup,False,branch,0.006527189581304101
+test:81691,score__gradient_boosting_name_family,1,Croup,Croup,True,branch,0.44113816996739424
+test:81691,score__gradient_boosting_name_family,2,Acute otitis media,Croup,False,base,0.41395681356710584
+test:81691,score__gradient_boosting_name_family,3,Viral pharyngitis,Croup,False,pseudo,0.11179533190489438
+test:81691,score__gradient_boosting_name_family,4,Influenza,Croup,False,pseudo,0.08121131969768401
+test:81691,score__gradient_boosting_name_family,5,Pneumonia,Croup,False,pseudo,0.038131424460491864
+test:81691,score__gradient_boosting_name_family,6,Bronchiolitis,Croup,False,pseudo,0.0028563472596161805
+test:81691,score__gradient_boosting_name_family,7,Cluster headache,Croup,False,branch,0.0025763124532114583
+test:81691,score__gradient_boosting_name_family,8,Anemia,Croup,False,branch,0.0019683457956643554
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Croup,Croup,True,branch,1.6595427974827577
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute otitis media,Croup,False,base,0.25714082
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Influenza,Croup,False,pseudo,0.02637127
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Viral pharyngitis,Croup,False,pseudo,0.0041028196
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Cluster headache,Croup,False,branch,0.002351004
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,6,Pneumonia,Croup,False,pseudo,0.0007012963
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,7,Bronchiolitis,Croup,False,pseudo,0.0005641519005791135
+test:81691,score__notebook31_neural_plus_full_evidence_1_non_deployable,8,Anemia,Croup,False,branch,4.467042e-05
+test:81691,score__candidate_pool_label_oracle_non_deployable,1,Croup,Croup,True,branch,1.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,2,Acute otitis media,Croup,False,base,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,3,Anemia,Croup,False,branch,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,4,Cluster headache,Croup,False,branch,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,5,Influenza,Croup,False,pseudo,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,6,Bronchiolitis,Croup,False,pseudo,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,7,Viral pharyngitis,Croup,False,pseudo,0.0
+test:81691,score__candidate_pool_label_oracle_non_deployable,8,Pneumonia,Croup,False,pseudo,0.0
+test:8666,score__notebook31_compact_neural_reference,1,Influenza,Influenza,True,base,0.99963725
+test:8666,score__notebook31_compact_neural_reference,2,HIV (initial infection),Influenza,False,pseudo,1.452539e-05
+test:8666,score__notebook31_compact_neural_reference,3,Pneumonia,Influenza,False,pseudo,2.1021979e-06
+test:8666,score__logistic_sparse_l1_balanced_name_family,1,Influenza,Influenza,True,base,0.9999437047214343
+test:8666,score__logistic_sparse_l1_balanced_name_family,2,HIV (initial infection),Influenza,False,pseudo,0.009516153788240306
+test:8666,score__logistic_sparse_l1_balanced_name_family,3,Pneumonia,Influenza,False,pseudo,0.0035504964564356794
+test:8666,score__gradient_boosting_name_family,1,Influenza,Influenza,True,base,0.9903217623355601
+test:8666,score__gradient_boosting_name_family,2,HIV (initial infection),Influenza,False,pseudo,0.0023928596240571738
+test:8666,score__gradient_boosting_name_family,3,Pneumonia,Influenza,False,pseudo,0.0020570358776279647
+test:8666,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Influenza,Influenza,True,base,1.9996372500000001
+test:8666,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,HIV (initial infection),Influenza,False,pseudo,1.452539000000188e-05
+test:8666,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pneumonia,Influenza,False,pseudo,2.1021979000756553e-06
+test:8666,score__candidate_pool_label_oracle_non_deployable,1,Influenza,Influenza,True,base,1.0
+test:8666,score__candidate_pool_label_oracle_non_deployable,2,HIV (initial infection),Influenza,False,pseudo,0.0
+test:8666,score__candidate_pool_label_oracle_non_deployable,3,Pneumonia,Influenza,False,pseudo,0.0
+test:88250,score__notebook31_compact_neural_reference,1,Allergic sinusitis,Allergic sinusitis,True,base,0.99996746
+test:88250,score__notebook31_compact_neural_reference,2,Acute otitis media,Allergic sinusitis,False,pseudo,1.9133195e-08
+test:88250,score__notebook31_compact_neural_reference,3,Viral pharyngitis,Allergic sinusitis,False,pseudo,4.105314e-09
+test:88250,score__logistic_sparse_l1_balanced_name_family,1,Allergic sinusitis,Allergic sinusitis,True,base,0.999999064610727
+test:88250,score__logistic_sparse_l1_balanced_name_family,2,Viral pharyngitis,Allergic sinusitis,False,pseudo,0.00042916105617693025
+test:88250,score__logistic_sparse_l1_balanced_name_family,3,Acute otitis media,Allergic sinusitis,False,pseudo,0.0004260259111089482
+test:88250,score__gradient_boosting_name_family,1,Allergic sinusitis,Allergic sinusitis,True,base,0.9918050742909729
+test:88250,score__gradient_boosting_name_family,2,Acute otitis media,Allergic sinusitis,False,pseudo,0.014604588034067492
+test:88250,score__gradient_boosting_name_family,3,Viral pharyngitis,Allergic sinusitis,False,pseudo,0.01399199154312282
+test:88250,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Allergic sinusitis,Allergic sinusitis,True,base,1.9999674600000001
+test:88250,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute otitis media,Allergic sinusitis,False,pseudo,2.6408077474206378e-08
+test:88250,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Viral pharyngitis,Allergic sinusitis,False,pseudo,4.105314e-09
+test:88250,score__candidate_pool_label_oracle_non_deployable,1,Allergic sinusitis,Allergic sinusitis,True,base,1.0
+test:88250,score__candidate_pool_label_oracle_non_deployable,2,Acute otitis media,Allergic sinusitis,False,pseudo,0.0
+test:88250,score__candidate_pool_label_oracle_non_deployable,3,Viral pharyngitis,Allergic sinusitis,False,pseudo,0.0
+test:90978,score__notebook31_compact_neural_reference,1,Bronchiolitis,Bronchiolitis,True,base,0.91312855
+test:90978,score__notebook31_compact_neural_reference,2,Ebola,Bronchiolitis,False,pseudo,0.0012178301
+test:90978,score__notebook31_compact_neural_reference,3,Croup,Bronchiolitis,False,pseudo,0.00022094336
+test:90978,score__notebook31_compact_neural_reference,4,URTI,Bronchiolitis,False,pseudo,7.332918e-06
+test:90978,score__notebook31_compact_neural_reference,5,Viral pharyngitis,Bronchiolitis,False,pseudo,6.2418294e-06
+test:90978,score__logistic_sparse_l1_balanced_name_family,1,Bronchiolitis,Bronchiolitis,True,base,0.9591446604127084
+test:90978,score__logistic_sparse_l1_balanced_name_family,2,Ebola,Bronchiolitis,False,pseudo,0.2027342232015462
+test:90978,score__logistic_sparse_l1_balanced_name_family,3,Viral pharyngitis,Bronchiolitis,False,pseudo,0.14086461822474125
+test:90978,score__logistic_sparse_l1_balanced_name_family,4,Croup,Bronchiolitis,False,pseudo,0.13981586373810362
+test:90978,score__logistic_sparse_l1_balanced_name_family,5,URTI,Bronchiolitis,False,pseudo,0.0819845557412656
+test:90978,score__gradient_boosting_name_family,1,Bronchiolitis,Bronchiolitis,True,base,0.7415458893720546
+test:90978,score__gradient_boosting_name_family,2,Ebola,Bronchiolitis,False,pseudo,0.027138303119367112
+test:90978,score__gradient_boosting_name_family,3,Croup,Bronchiolitis,False,pseudo,0.024843759740674688
+test:90978,score__gradient_boosting_name_family,4,URTI,Bronchiolitis,False,pseudo,0.015347294971036773
+test:90978,score__gradient_boosting_name_family,5,Viral pharyngitis,Bronchiolitis,False,pseudo,0.01399199154312282
+test:90978,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Bronchiolitis,Bronchiolitis,True,base,1.9131234240005495
+test:90978,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Ebola,Bronchiolitis,False,pseudo,0.0012178301
+test:90978,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Croup,Bronchiolitis,False,pseudo,0.00022256081276727743
+test:90978,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,URTI,Bronchiolitis,False,pseudo,7.609067108913159e-06
+test:90978,score__notebook31_neural_plus_full_evidence_1_non_deployable,5,Viral pharyngitis,Bronchiolitis,False,pseudo,6.2418294e-06
+test:90978,score__candidate_pool_label_oracle_non_deployable,1,Bronchiolitis,Bronchiolitis,True,base,1.0
+test:90978,score__candidate_pool_label_oracle_non_deployable,2,Ebola,Bronchiolitis,False,pseudo,0.0
+test:90978,score__candidate_pool_label_oracle_non_deployable,3,Croup,Bronchiolitis,False,pseudo,0.0
+test:90978,score__candidate_pool_label_oracle_non_deployable,4,URTI,Bronchiolitis,False,pseudo,0.0
+test:90978,score__candidate_pool_label_oracle_non_deployable,5,Viral pharyngitis,Bronchiolitis,False,pseudo,0.0
+test:91516,score__notebook31_compact_neural_reference,1,Epiglottitis,Epiglottitis,True,base,0.9999219
+test:91516,score__notebook31_compact_neural_reference,2,Acute laryngitis,Epiglottitis,False,pseudo,1.941505e-06
+test:91516,score__notebook31_compact_neural_reference,3,Myasthenia gravis,Epiglottitis,False,pseudo,1.00175415e-08
+test:91516,score__notebook31_compact_neural_reference,4,Bronchiolitis,Epiglottitis,False,pseudo,4.2685255e-09
+test:91516,score__logistic_sparse_l1_balanced_name_family,1,Epiglottitis,Epiglottitis,True,base,0.9999844337700226
+test:91516,score__logistic_sparse_l1_balanced_name_family,2,Acute laryngitis,Epiglottitis,False,pseudo,0.0058644160017398686
+test:91516,score__logistic_sparse_l1_balanced_name_family,3,Myasthenia gravis,Epiglottitis,False,pseudo,0.0003551854269775088
+test:91516,score__logistic_sparse_l1_balanced_name_family,4,Bronchiolitis,Epiglottitis,False,pseudo,0.00024741676810639753
+test:91516,score__gradient_boosting_name_family,1,Epiglottitis,Epiglottitis,True,base,0.9911327821128015
+test:91516,score__gradient_boosting_name_family,2,Acute laryngitis,Epiglottitis,False,pseudo,0.017701211114988992
+test:91516,score__gradient_boosting_name_family,3,Bronchiolitis,Epiglottitis,False,pseudo,0.014195646697273138
+test:91516,score__gradient_boosting_name_family,4,Myasthenia gravis,Epiglottitis,False,pseudo,0.013905728755395053
+test:91516,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Epiglottitis,Epiglottitis,True,base,1.9999219
+test:91516,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Acute laryngitis,Epiglottitis,False,pseudo,1.941505e-06
+test:91516,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Myasthenia gravis,Epiglottitis,False,pseudo,1.00175415e-08
+test:91516,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Bronchiolitis,Epiglottitis,False,pseudo,4.2685255e-09
+test:91516,score__candidate_pool_label_oracle_non_deployable,1,Epiglottitis,Epiglottitis,True,base,1.0
+test:91516,score__candidate_pool_label_oracle_non_deployable,2,Acute laryngitis,Epiglottitis,False,pseudo,0.0
+test:91516,score__candidate_pool_label_oracle_non_deployable,3,Myasthenia gravis,Epiglottitis,False,pseudo,0.0
+test:91516,score__candidate_pool_label_oracle_non_deployable,4,Bronchiolitis,Epiglottitis,False,pseudo,0.0
+test:93930,score__notebook31_compact_neural_reference,1,Acute pulmonary edema,Acute pulmonary edema,True,base,0.9999739
+test:93930,score__notebook31_compact_neural_reference,2,Localized edema,Acute pulmonary edema,False,pseudo,9.644089e-09
+test:93930,score__notebook31_compact_neural_reference,3,Pneumonia,Acute pulmonary edema,False,pseudo,2.9174316e-11
+test:93930,score__notebook31_compact_neural_reference,4,Spontaneous pneumothorax,Acute pulmonary edema,False,pseudo,1.9160116e-11
+test:93930,score__logistic_sparse_l1_balanced_name_family,1,Acute pulmonary edema,Acute pulmonary edema,True,base,0.9999994478686121
+test:93930,score__logistic_sparse_l1_balanced_name_family,2,Localized edema,Acute pulmonary edema,False,pseudo,0.0004173010252072701
+test:93930,score__logistic_sparse_l1_balanced_name_family,3,Spontaneous pneumothorax,Acute pulmonary edema,False,pseudo,0.00017531957516558487
+test:93930,score__logistic_sparse_l1_balanced_name_family,4,Pneumonia,Acute pulmonary edema,False,pseudo,0.00017178018862958012
+test:93930,score__gradient_boosting_name_family,1,Acute pulmonary edema,Acute pulmonary edema,True,base,0.991457616547158
+test:93930,score__gradient_boosting_name_family,2,Pneumonia,Acute pulmonary edema,False,pseudo,0.0020570358776279647
+test:93930,score__gradient_boosting_name_family,3,Spontaneous pneumothorax,Acute pulmonary edema,False,pseudo,0.0019947589129868247
+test:93930,score__gradient_boosting_name_family,4,Localized edema,Acute pulmonary edema,False,pseudo,0.001802945537119051
+test:93930,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,Acute pulmonary edema,Acute pulmonary edema,True,base,1.9999739
+test:93930,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Localized edema,Acute pulmonary edema,False,pseudo,9.663438915766909e-09
+test:93930,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pneumonia,Acute pulmonary edema,False,pseudo,2.9174316e-11
+test:93930,score__notebook31_neural_plus_full_evidence_1_non_deployable,4,Spontaneous pneumothorax,Acute pulmonary edema,False,pseudo,1.9160116e-11
+test:93930,score__candidate_pool_label_oracle_non_deployable,1,Acute pulmonary edema,Acute pulmonary edema,True,base,1.0
+test:93930,score__candidate_pool_label_oracle_non_deployable,2,Localized edema,Acute pulmonary edema,False,pseudo,0.0
+test:93930,score__candidate_pool_label_oracle_non_deployable,3,Pneumonia,Acute pulmonary edema,False,pseudo,0.0
+test:93930,score__candidate_pool_label_oracle_non_deployable,4,Spontaneous pneumothorax,Acute pulmonary edema,False,pseudo,0.0
+test:96956,score__notebook31_compact_neural_reference,1,GERD,GERD,True,base,0.9880877
+test:96956,score__notebook31_compact_neural_reference,2,Myocarditis,GERD,False,pseudo,0.0041304203
+test:96956,score__notebook31_compact_neural_reference,3,Pericarditis,GERD,False,pseudo,0.00044266594
+test:96956,score__logistic_sparse_l1_balanced_name_family,1,GERD,GERD,True,base,0.9870073524451374
+test:96956,score__logistic_sparse_l1_balanced_name_family,2,Myocarditis,GERD,False,pseudo,0.7335610730201931
+test:96956,score__logistic_sparse_l1_balanced_name_family,3,Pericarditis,GERD,False,pseudo,0.6224828944964107
+test:96956,score__gradient_boosting_name_family,1,GERD,GERD,True,base,0.9691589206123237
+test:96956,score__gradient_boosting_name_family,2,Myocarditis,GERD,False,pseudo,0.4225651179889269
+test:96956,score__gradient_boosting_name_family,3,Pericarditis,GERD,False,pseudo,0.09426694647847329
+test:96956,score__notebook31_neural_plus_full_evidence_1_non_deployable,1,GERD,GERD,True,base,1.9880877
+test:96956,score__notebook31_neural_plus_full_evidence_1_non_deployable,2,Myocarditis,GERD,False,pseudo,0.0041304203
+test:96956,score__notebook31_neural_plus_full_evidence_1_non_deployable,3,Pericarditis,GERD,False,pseudo,0.0004426659405806827
+test:96956,score__candidate_pool_label_oracle_non_deployable,1,GERD,GERD,True,base,1.0
+test:96956,score__candidate_pool_label_oracle_non_deployable,2,Myocarditis,GERD,False,pseudo,0.0
+test:96956,score__candidate_pool_label_oracle_non_deployable,3,Pericarditis,GERD,False,pseudo,0.0
