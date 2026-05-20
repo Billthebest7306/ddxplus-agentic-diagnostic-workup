@@ -1,0 +1,3 @@
+split,candidate_rows,states,positive_rate,candidate_pool_recall
+train,33046,4000,0.11027053198571687,0.911
+validate,16630,2000,0.10883944678292243,0.905

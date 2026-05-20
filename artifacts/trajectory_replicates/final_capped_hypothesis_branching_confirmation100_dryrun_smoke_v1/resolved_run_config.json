@@ -1,0 +1,197 @@
+{
+  "notebook": "41_final_capped_hypothesis_branching_confirmation.ipynb",
+  "run_name": "final_capped_hypothesis_branching_confirmation100_dryrun_smoke_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_dryrun_smoke_v1",
+  "run_live_api": false,
+  "allow_dry_run_benchmark": true,
+  "resume_if_available": true,
+  "max_request_cap_per_branch": 24,
+  "base_request_cap": 24,
+  "branch_request_cap": 8,
+  "hard_total_request_cap_per_case": 24,
+  "min_remaining_requests_to_launch_branch": 2,
+  "split_name": "test",
+  "random_seed": 4141,
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "selected_stop_policy": {
+    "policy_name": "mlp_conf_ge_0.70_margin_ge_0.20_entropy_le_0.10_stab_0",
+    "min_requests": 1,
+    "mlp_confidence_min": 0.7,
+    "mlp_margin_min": 0.2,
+    "mlp_entropy_max": 0.1,
+    "mlp_stability_min": 0,
+    "official_final_head": "agreement_hybrid_final",
+    "source_notebook": "12_stopping_policy_ablation.ipynb"
+  },
+  "branch_trigger_name": "hypothesis_branch_trigger_mlp_v1",
+  "branch_trigger_threshold": 0.2,
+  "max_branches": 2,
+  "adaptive_continuation_value_threshold": 0.2,
+  "branch_judge_name": "capped_graph_bayes_mlp_confirmation_resolver_v1",
+  "branch_profile_templates": [
+    {
+      "role_kind": "graph_bayes_challenger",
+      "role_name_prefix": "Graph/Bayes hypothesis scout",
+      "directive_template": "Treat {target_hypothesis} as the assigned challenger to {base_prediction}. Actively seek evidence that would support or refute {target_hypothesis}, especially roots that separate it from {base_prediction}."
+    },
+    {
+      "role_kind": "counteranchor_stress_test",
+      "role_name_prefix": "Counter-anchor stress-test scout",
+      "directive_template": "Assume the base answer {base_prediction} may be an anchoring error. Build the best evidence-grounded case for {target_hypothesis}, then abandon it only if the revealed ledger contradicts it."
+    }
+  ],
+  "branch_min_requests": 2,
+  "branch_divergence_turns": 2,
+  "branch_avoid_base_first_n_roots": 2,
+  "dry_run_force_branch_path_smoke": true,
+  "graph_edge_path": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1/global_evidence_graph_edges.csv",
+  "bayes_likelihood_path": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/root_outcome_likelihoods.csv",
+  "bayes_prior_path": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/diagnosis_priors.csv",
+  "notebook26_recommended_policy": {
+    "notebook": "26_offline_branching_trajectory_lab.ipynb",
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1",
+    "inputs_used": {
+      "n13_frozen": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1",
+      "n24_base": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1",
+      "n25_r01": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r01",
+      "n25_r02": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r02",
+      "n25_r03": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/notebook13_style_live_base_replicates_49case_v1/replicate_r03"
+    },
+    "graph_edge_path": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1/global_evidence_graph_edges.csv",
+    "bayes_likelihood_path": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/root_outcome_likelihoods.csv",
+    "run_order": [
+      "n13_frozen",
+      "n24_base",
+      "n25_r01",
+      "n25_r02",
+      "n25_r03"
+    ],
+    "pre_registered_next_live_candidate": {
+      "policy_name": "trigger=hybrid_suspicion_v1|budget=1|judge=cautious_fused_judge",
+      "scope": "all_base_runs",
+      "num_decisions": 245,
+      "num_correct": 224,
+      "accuracy": 0.9142857142857143,
+      "base_accuracy": 0.8816326530612245,
+      "wins_vs_base": 8,
+      "regressions_vs_base": 0,
+      "branch_rate": 0.19183673469387755,
+      "mean_branches_spawned": 0.19183673469387755,
+      "mean_selected_requests": 6.616326530612245,
+      "mean_total_branch_requests": 8.342857142857143
+    },
+    "best_observed_diagnostic_policy": {
+      "policy_name": "trigger=broad_suspicion|budget=4|judge=highest_bayes_posterior",
+      "scope": "all_base_runs",
+      "num_decisions": 245,
+      "num_correct": 229,
+      "accuracy": 0.9346938775510204,
+      "base_accuracy": 0.8816326530612245,
+      "wins_vs_base": 13,
+      "regressions_vs_base": 0,
+      "branch_rate": 0.2816326530612245,
+      "mean_branches_spawned": 1.126530612244898,
+      "mean_selected_requests": 6.90204081632653,
+      "mean_total_branch_requests": 17.722448979591835
+    },
+    "selection_status": "diagnostic_only_not_promoted",
+    "reason": "Observed branch trajectories are reused as offline alternatives; labels are used only for analysis of ceilings and policy curves. A live confirmation notebook is required before promotion."
+  },
+  "decision_rule": "Final capped confirmation: run Notebook 13-style base, launch at most two short hypothesis branches only when the learned branch gate fires, resolve with graph/Bayes/MLP candidate scoring, and do not use the close-confounder extra-root layer.",
+  "branch_trigger_validation_summary": [
+    {
+      "train_states": 4000,
+      "validate_states": 2000,
+      "branch_label_rate_train": 0.44775,
+      "branch_label_rate_validate": 0.446,
+      "selected_threshold": 0.2,
+      "selected_threshold_precision": 0.7630208333333334,
+      "selected_threshold_recall": 0.9854260089686099,
+      "selected_threshold_branch_rate": 0.576,
+      "auc": 0.9512898447491542,
+      "average_precision": 0.9357437251961493,
+      "brier_score": 0.08667241944272779
+    }
+  ],
+  "resolver_validation_summary": [
+    {
+      "validate_candidate_rows": 16554,
+      "validate_positive_rate": 0.10945994925697716,
+      "candidate_auc": 0.9500373682676846,
+      "candidate_average_precision": 0.7943398132574105
+    }
+  ],
+  "leakage_rule": "Labels and hidden full evidence are used only for metric computation. Branch trigger, branch prompts, and judge use current revealed evidence plus train/validate-derived graph/Bayes/MLP artifacts.",
+  "reference_systems": [
+    {
+      "system": "notebook13_frozen_selected_stop",
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1/metrics.json",
+      "summary": "{\"agreement_hybrid_accuracy\": 0.8775510204081632, \"agreement_hybrid_top3_accuracy\": 0.9183673469387755, \"agreement_hybrid_top5_accuracy\": 0.9387755102040817, \"agreement_hybrid_macro_f1\": 0.8448979591836734, \"llm_final_accuracy\": 0.8775510204081632, \"llm_final_top3_accuracy\": 0.9183673469387755, \"llm_final_top5_accuracy\": 0.9387755102040817, \"llm_final_macro_f1\": 0.8448979591836734, \"mlp_final_accuracy\": 0.8367346938775511, \"mlp_final_top3_accuracy\": 0.9183673469387755, \"mlp_final_top5_accuracy\": 0.9387755102040817, \"mlp_final_macro_f1\": 0.7904761904761904, \"conservative_hybrid_accuracy\": 0.8775510204081632, \"conservative_hybrid_top3_accuracy\": 0.9183673469387755, \"conservative_hybrid_top5_accuracy\": 0.9387755102040817, \"conservative_hybrid_macro_f1\": 0.8448979591836734, \"accuracy\": 0.8775510204081632, \"top3_accuracy\": 0.9183673469387755, \"top5_accuracy\": 0.9387755102040817, \"macro_f1\": 0.8448979591836734, \"mean_requests\": 6.591836734693878, \"median_requests\": 5.0, \"mean_visible_roots_including_initial\": 7.591836734693878, \"stop_before_cap_rate\": 0.9795918367346939, \"selected_stop_rule_rate\": 0.7346938775510204, \"cap_hit_count\": 1, \"mean_api_calls\": 7.571428571428571, \"total_input_tokens\": 823478, \"total_output_tokens\": 42721, \"total_estimated_cost\": null, \"mean_mlp_confidence\": 0.9257417467175698, \"mean_mlp_margin\": 0.8856422294351785, \"mean_mlp_entropy\": 0.07754790808492112, \"llm_mlp_agreement_rate\": 0.9387755102040817, \"stop_reason_distribution\": {\"agent_stop\": 12, \"max_requests_reached\": 1, \"selected_mlp_stop\": 36}, \"request_distribution\": {\"0\": 1, \"1\": 8, \"2\": 5, \"3\": 6, \"4\": 2, \"5\": 6, \"6\": 4, \"7\": 3, \"8\": 1, \"9\": 1, \"10\": 1, \"11\": 1, \"12\": 2, \"13\": 1, \"15\": 3, \"18\": 1, \"19\": 1, \"23\": 1, \"24\": 1}, \"agreement_hybrid_source_distribution\": {\"agreement\": 46, \"fallback_llm_disagreement\": 3}, \"conservative_hybrid_source_distribution\": {\"llm_mlp_agreement\": 46, \"prefer_llm_disagreement\": 3}, \"run_name\": \"selected_stop_live_confirmation_49case_v1\", \"max_request_cap\": 2"
+    },
+    {
+      "system": "notebook22_offline_graph_adjudicator",
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/graph_posterior_final_adjudicator_49case_v1/selected_graph_adjudicator.json",
+      "summary": "{\"policy_name\": \"conservative_graph_critic_v1_clip3_margin1\", \"status\": \"offline_candidate_promoted\", \"method\": \"Conservative final-state graph critic over Notebook 13 revealed evidence\", \"formula\": \"sum clipped train-derived log_odds_support(outcome -> disease) over visible final evidence\", \"clip_value\": 3.0, \"override_rule\": {\"graph_top1_differs_from_notebook13\": true, \"graph_margin_min\": 1.0, \"require_notebook13_graph_score_lt_0\": true, \"require_graph_top1_score_gt_0\": true}, \"inputs\": {\"notebook13_49_run\": \"/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1\", \"notebook13_24_run\": \"/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_24case_v1\", \"graph_stats_root\": \"/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1\"}, \"notebook13_reference\": {\"num_cases\": 49, \"correct_count\": 43, \"accuracy\": 0.8775510204081632, \"top3_accuracy\": 0.9183673469387755, \"top5_accuracy\": 0.9387755102040817, \"macro_f1\": 0.8448979591836734, \"mean_requests\": 6.591836734693878, \"median_requests\": 5.0}, \"selected_policy_49case\": {\"run_scope\": \"notebook13_49case\", \"policy_name\": \"conservative_graph_critic_v1_clip3_margin1\", \"diagnostic_only\": false, \"num_cases\": 49, \"accuracy\": 0.8979591836734694, \"correct_count\": 44, \"top3_accuracy\": 0.9387755102040817, \"top5_accuracy\": 0.9387755102040817, \"macro_f1\": 0.8673469387755102, \"mean_requests\": 6.591836734693878, \"median_requests\": 5.0, \"notebook13_accuracy\": 0.8775510204081632, \"notebook13_correct_count\": 43, \"notebook13_top3_accuracy\": 0.9183673469387755, \"notebook13_top5_accuracy\": 0.9387755102040817, \"graph_only_accuracy\": 0.8979591836734694, \"graph_only_correct_count\": 44, \"graph_only_top3_accuracy\": 0.9591836734693877, \"graph_only_top5_accuracy\": 0.9795918367346939, \"changed_predictions\": 1, \"overrides_fired\": 1, \"improvements_vs_notebook13\": 1, \"reg"
+    },
+    {
+      "system": "notebook23_offline_graph_bayes_rescue",
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/calibrated_graph_bayes_rescue_reranker_49case_v1/selected_rescue_policy.json",
+      "summary": "{\"policy_name\": \"calibrated_graph_bayes_rescue_v1\", \"status\": \"offline_candidate_promoted\", \"method\": \"Train/validate-calibrated L2 candidate reranker with graph/Bayes rescue continuation and conservative graph certificates over Notebook 13 traces.\", \"inputs_used\": {\"notebook13_49case\": \"/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1\", \"notebook22_graph_features\": \"/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/graph_posterior_final_adjudicator_49case_v1\", \"notebook16_graph_edges\": \"/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1\", \"notebook19_bayes_likelihoods\": \"/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1\", \"partial_mlp_checkpoint\": \"/Users/alfred/Documents/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2/best_model.pt\", \"train_validate_synthetic_states\": \"Generated from DDXPlus train/validate splits only.\"}, \"no_live_api\": true, \"no_49case_label_training_or_threshold_selection\": true, \"training_calibration\": {\"synthetic_train_states\": 8000, \"synthetic_validate_states\": 4000, \"selected_logistic_C\": 1.0, \"selected_logistic_min_score\": 0.4, \"selected_logistic_min_score_margin\": -0.2}, \"selected_policy_certificates\": {\"prior_recovery\": \"prior_top1 graph_rank <= 5 and Notebook13 graph_score < 0 and prior graph_score > Notebook13 graph_score\", \"graph_critic\": \"Notebook22 conservative graph critic: graph top differs, margin >= 1, reference graph score < 0, graph top score > 0\", \"rescue_trigger\": \"agent_stop and num_requests <= 3 and graph_top1_posterior < 0.80\", \"rescue_cap\": 3, \"rescue_accept\": \"post-rescue L2 reranker candidate passes validation-selected score/margin thresholds, is graph-rank <= 3, and graph support improves over reference by >0.75 or reference graph score <0; graph-ra"
+    },
+    {
+      "system": "notebook24_live_rescue_confirmation",
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/live_graph_bayes_rescue_confirmation_49case_v1/metrics.json",
+      "summary": "{\"run_name\": \"live_graph_bayes_rescue_confirmation_49case_v1\", \"num_cases\": 49, \"notebook13_accuracy\": 0.9183673469387755, \"notebook13_top3_accuracy\": 0.9387755102040817, \"notebook13_top5_accuracy\": 0.9387755102040817, \"notebook13_macro_f1\": 0.8945578231292516, \"rescue_accuracy\": 0.9183673469387755, \"rescue_top3_accuracy\": 0.9387755102040817, \"rescue_top5_accuracy\": 0.9387755102040817, \"rescue_macro_f1\": 0.8945578231292516, \"accuracy\": 0.9183673469387755, \"mean_requests_notebook13\": 6.204081632653061, \"mean_requests_total\": 6.387755102040816, \"mean_requests\": 6.387755102040816, \"extra_rescue_requests_total\": 9, \"improvements_vs_notebook13\": 0, \"regressions_vs_notebook13\": 0, \"changed_predictions\": 1, \"decision_source_distribution\": {\"notebook13_live_reference\": 45, \"prior_recovery_certificate\": 1, \"rescue_abstained\": 3}, \"promotion_status\": \"not_promoted\", \"rescue_policy_name\": \"calibrated_graph_bayes_rescue_v1\", \"selected_rescue_policy\": {\"policy_name\": \"calibrated_graph_bayes_rescue_v1\", \"status\": \"offline_candidate_promoted\", \"method\": \"Train/validate-calibrated L2 candidate reranker with graph/Bayes rescue continuation and conservative graph certificates over Notebook 13 traces.\", \"inputs_used\": {\"notebook13_49case\": \"/Users/alfred/Documents/baseline_model/artifacts/sequential_hybrid_mlp_feedback/selected_stop_live_confirmation_49case_v1\", \"notebook22_graph_features\": \"/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/graph_posterior_final_adjudicator_49case_v1\", \"notebook16_graph_edges\": \"/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1\", \"notebook19_bayes_likelihoods\": \"/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1\", \"partial_mlp_checkpoint\": \"/Users/alfred/Documents/baseline_model/artifacts/one_shot_partial_evidence/partial_evidence_one_shot_final_policy_masked_v2/best_model.pt\", \"train_validate_synthetic_"
+    },
+    {
+      "system": "notebook26_offline_branching_lab",
+      "source": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/offline_branching_trajectory_lab_49case_v1/analysis_summary.json",
+      "summary": "{\"runs\": 5, \"cases\": 49, \"run_accuracy\": {\"n13_frozen\": 0.8775510204081632, \"n24_base\": 0.9183673469387755, \"n25_r01\": 0.8979591836734694, \"n25_r02\": 0.8571428571428571, \"n25_r03\": 0.8571428571428571}, \"case_prediction_instability\": 8, \"case_correctness_instability\": 7, \"oracle_best_of_5_accuracy\": 0.9591836734693877, \"majority_vote_accuracy\": 0.8775510204081632, \"n13_miss_any_other_correct\": 4, \"state_divergence_points\": 64, \"impactful_state_divergence_points\": 10, \"pre_registered_policy\": {\"policy_name\": \"trigger=hybrid_suspicion_v1|budget=1|judge=cautious_fused_judge\", \"scope\": \"all_base_runs\", \"num_decisions\": 245, \"num_correct\": 224, \"accuracy\": 0.9142857142857143, \"base_accuracy\": 0.8816326530612245, \"wins_vs_base\": 8, \"regressions_vs_base\": 0, \"branch_rate\": 0.19183673469387755, \"mean_branches_spawned\": 0.19183673469387755, \"mean_selected_requests\": 6.616326530612245, \"mean_total_branch_requests\": 8.342857142857143}, \"best_observed_diagnostic_policy\": {\"policy_name\": \"trigger=broad_suspicion|budget=4|judge=highest_bayes_posterior\", \"scope\": \"all_base_runs\", \"num_decisions\": 245, \"num_correct\": 229, \"accuracy\": 0.9346938775510204, \"base_accuracy\": 0.8816326530612245, \"wins_vs_base\": 13, \"regressions_vs_base\": 0, \"branch_rate\": 0.2816326530612245, \"mean_branches_spawned\": 1.126530612244898, \"mean_selected_requests\": 6.90204081632653, \"mean_total_branch_requests\": 17.722448979591835}}"
+    }
+  ],
+  "artifact_contract": [
+    "benchmark_cases.csv",
+    "balanced_pathology_case_counts.csv",
+    "reference_case_exclusion_summary.csv",
+    "reference_summary.csv",
+    "resolved_run_config.json",
+    "branch_mlp_train_validate_features.csv",
+    "candidate_resolver_train_validate_features.csv",
+    "branch_mlp_validation_summary.csv",
+    "branch_mlp_threshold_sweep.csv",
+    "candidate_resolver_validation_summary.csv",
+    "pairwise_evidence_separation_graph.csv",
+    "predictions.csv",
+    "paired_notebook13_vs_notebook41.csv",
+    "branch_case_results.csv",
+    "candidate_level_live_scores.csv",
+    "candidate_level_live_resolver_scores.csv",
+    "candidate_pool_topk_rankings.csv",
+    "adaptive_live_final_predictions.csv",
+    "final_resolver_trace.csv",
+    "adaptive_branch_decision_trace.csv",
+    "topk_summary.csv",
+    "metrics.json",
+    "metrics_final.json",
+    "final_confirmation_paired_outcomes.csv",
+    "final_confirmation_truth_rank_analysis.csv",
+    "final_confirmation_failure_modes.csv",
+    "final_confirmation_branch_trigger_threshold_diagnostics.csv",
+    "final_confirmation_resolver_margin_diagnostics.csv",
+    "final_confirmation_candidate_source_recall.csv",
+    "final_confirmation_summary.json",
+    "summary_metrics.csv",
+    "selected_hypothesis_branch_policy.json",
+    "selected_final_capped_policy.json",
+    "hypothesis_branch_assignments.csv",
+    "traces.jsonl",
+    "branch_traces.jsonl",
+    "raw_api_responses.jsonl",
+    "hard_case_branch_audits.json"
+  ],
+  "completed_prediction_rows": 2,
+  "figures_dir": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_dryrun_smoke_v1/figures",
+  "final_topk_artifacts": true
+}

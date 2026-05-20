@@ -1,0 +1,43 @@
+{
+  "policy_name": "final_capped_hypothesis_branching_confirmation_v1",
+  "selected_before_live_results": true,
+  "cohort_rule": "two held-out test cases per pathology plus two additional held-out cases, excluding prior live benchmark cohorts when possible",
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "branch_trigger_threshold": 0.2,
+  "max_branches": 2,
+  "continuation_value_threshold": 0.2,
+  "base_request_cap": 24,
+  "branch_request_cap": 8,
+  "hard_total_request_cap_per_case": 24,
+  "resolver_name": "gradient_boosting_name_family",
+  "close_confounder_rule": "excluded_from_notebook41_final_confirmation",
+  "metrics_final": {
+    "system": "notebook41_final_capped_gbm_resolver",
+    "num_cases": 100,
+    "num_correct": 90,
+    "accuracy": 0.9,
+    "top3_accuracy": 0.96,
+    "top5_accuracy": 0.97,
+    "mean_selected_requests": 7.06,
+    "mean_total_requests": 7.51,
+    "p90_total_requests": 18.300000000000026,
+    "max_total_requests": 24.0,
+    "candidate_pool_recall": 0.97,
+    "run_name": "final_capped_hypothesis_branching_confirmation100_v1",
+    "final_confirmation_run": true,
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_v1",
+    "resolver_name": "gradient_boosting_name_family",
+    "close_confounder_extra_root_layer_enabled": false,
+    "candidate_pool_recall_count": 97,
+    "branch_trigger_rate": 0.09,
+    "mean_branches_spawned": 0.08,
+    "branches_spawned_distribution": {
+      "0": 93,
+      "1": 6,
+      "2": 1
+    }
+  },
+  "target_candidate_pool_recall": 0.95
+}

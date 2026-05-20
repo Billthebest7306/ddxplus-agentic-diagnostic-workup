@@ -1,0 +1,29 @@
+{
+  "feature_count": 101,
+  "interpretation": "Synthetic DDXPlus resolver training does not by itself solve live artifact candidate selection. The selected leave-one-cohort-out calibrated resolver is reported as a transfer diagnostic, not a replacement for the current final pipeline unless it beats the current saved final result.",
+  "pooled_candidate_pool_oracle": {
+    "accuracy": 0.9766763848396501,
+    "correct": 335,
+    "n_cases": 343
+  },
+  "pooled_current_final": {
+    "accuracy": 0.9329446064139941,
+    "correct": 320,
+    "n_cases": 343
+  },
+  "pooled_selected_loco": {
+    "accuracy": 0.924198250728863,
+    "correct": 317,
+    "n_cases": 343,
+    "paired_regressions_vs_current": 4,
+    "paired_wins_vs_current": 1
+  },
+  "selected_policy_name": "artifact_loco_logistic",
+  "status": "not_promoted",
+  "training_data": {
+    "artifact_calibration": "leave-one-cohort-out only for selected policy summary",
+    "synthetic_source": "artifacts/trajectory_replicates/adaptive_value_branching_live_calibration196_v1/candidate_resolver_train_validate_features.csv",
+    "synthetic_train_states": 4000,
+    "synthetic_validate_states": 2000
+  }
+}

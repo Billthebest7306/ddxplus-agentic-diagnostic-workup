@@ -1,0 +1,3 @@
+case_id,resolver_top1,resolver_top2,score_margin_top2,final_prediction,candidate_pool_has_true,candidate_pool_rows
+test:35165,Bronchospasm / acute asthma exacerbation,GERD,0.9893129816756783,Bronchospasm / acute asthma exacerbation,True,4
+test:91822,Epiglottitis,Chagas,0.22119266295737522,Epiglottitis,True,4

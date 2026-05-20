@@ -1,0 +1,3 @@
+pathology,root_id,n,present_count,present_rate,question
+Acute rhinosinusitis,E_103,15444,11459,0.7419396607535932,Have you lost your sense of smell?
+Chronic rhinosinusitis,E_103,23296,19644,0.8432054253583998,Have you lost your sense of smell?

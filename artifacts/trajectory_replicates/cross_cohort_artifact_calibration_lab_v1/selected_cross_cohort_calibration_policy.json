@@ -1,0 +1,52 @@
+{
+  "inputs_used": [
+    "Notebook 33 49-case close-confounder artifacts",
+    "Notebook 37 98-case live balanced artifacts",
+    "Notebook 38 196-case live calibration artifacts",
+    "DDXPlus train/validate evidence presence rates for rule plausibility audit"
+  ],
+  "pooled_calibration196_rule_layer": {
+    "accuracy": 0.9416909620991254,
+    "correct": 323,
+    "n_cases": 343,
+    "paired_regressions": 0,
+    "paired_wins": 3
+  },
+  "pooled_candidate_pool_oracle": {
+    "accuracy": 0.9766763848396501,
+    "correct": 335,
+    "n_cases": 343
+  },
+  "pooled_current_final": {
+    "accuracy": 0.9329446064139941,
+    "correct": 320,
+    "n_cases": 343
+  },
+  "promotion_decision": "Do not promote as a final claim until a fresh frozen confirmation run tests this rule layer. It improves the calibration cohort and causes no historical-artifact regressions, but the selected acute/chronic signal is weakly supported by train/validate disease statistics.",
+  "selected_policy_name": "calibration196_rule_layer_v1",
+  "selected_rules": [
+    {
+      "anchor_prediction": "Chronic rhinosinusitis",
+      "challenger_prediction": "Acute rhinosinusitis",
+      "incremental_net_gain": 3,
+      "incremental_regressions": 0,
+      "incremental_triggers": 3,
+      "incremental_wins": 3,
+      "net_gain": 3,
+      "regressions": 0,
+      "root_id": "E_103",
+      "status": "present",
+      "trigger_count": 3,
+      "wins": 3
+    }
+  ],
+  "status": "calibration_only_needs_fresh_confirmation",
+  "training_or_selection_split": {
+    "heldout_artifact_check": [
+      "nb33_49",
+      "nb37_98"
+    ],
+    "pooled_diagnostic": "nb33_49 + nb37_98 + nb38_196",
+    "rule_selection": "nb38_196 only"
+  }
+}

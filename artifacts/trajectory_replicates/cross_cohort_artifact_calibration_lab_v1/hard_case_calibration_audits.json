@@ -1,0 +1,810 @@
+[
+  {
+    "calibration196_rule_prediction": "Chronic rhinosinusitis",
+    "candidate_list": [
+      "Chronic rhinosinusitis",
+      "Acute rhinosinusitis",
+      "Allergic sinusitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:111176",
+    "cohort": "nb33_49",
+    "current_final_prediction": "Chronic rhinosinusitis",
+    "failure_pair": "Acute rhinosinusitis -> Chronic rhinosinusitis",
+    "ranked_differential": [
+      "Chronic rhinosinusitis",
+      "Acute rhinosinusitis",
+      "Allergic sinusitis"
+    ],
+    "true_pathology": "Acute rhinosinusitis",
+    "visible_evidence": {}
+  },
+  {
+    "calibration196_rule_prediction": "Viral pharyngitis",
+    "candidate_list": [
+      "Bronchitis",
+      "Acute otitis media",
+      "Spontaneous rib fracture",
+      "Viral pharyngitis",
+      "URTI"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:54031",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Viral pharyngitis",
+    "failure_pair": "Acute laryngitis -> Viral pharyngitis",
+    "ranked_differential": [
+      "Viral pharyngitis",
+      "Acute otitis media",
+      "URTI",
+      "Bronchitis",
+      "Spontaneous rib fracture"
+    ],
+    "true_pathology": "Acute laryngitis",
+    "visible_evidence": {
+      "E_1": "absent",
+      "E_114": "absent",
+      "E_120": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_151": "absent",
+      "E_175": "absent",
+      "E_178": "absent",
+      "E_181": "absent",
+      "E_201": "present",
+      "E_203": "absent",
+      "E_21": "absent",
+      "E_212": "absent",
+      "E_25": "absent",
+      "E_3": "absent",
+      "E_45": "absent",
+      "E_48": "absent",
+      "E_51": "absent",
+      "E_53": "present",
+      "E_66": "absent",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_82": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Pneumonia",
+    "candidate_list": [
+      "Bronchospasm / acute asthma exacerbation",
+      "Pneumonia",
+      "Allergic sinusitis",
+      "Chronic rhinosinusitis"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:127556",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Pneumonia",
+    "failure_pair": "Acute rhinosinusitis -> Pneumonia",
+    "ranked_differential": [
+      "Pneumonia",
+      "Allergic sinusitis",
+      "Chronic rhinosinusitis",
+      "Bronchospasm / acute asthma exacerbation"
+    ],
+    "true_pathology": "Acute rhinosinusitis",
+    "visible_evidence": {
+      "E_120": "absent",
+      "E_124": "present",
+      "E_142": "absent",
+      "E_169": "absent",
+      "E_181": "present",
+      "E_194": "absent",
+      "E_25": "absent",
+      "E_41": "absent",
+      "E_97": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Myocarditis",
+    "candidate_list": [
+      "PSVT",
+      "Myocarditis",
+      "Atrial fibrillation",
+      "Possible NSTEMI / STEMI"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:92249",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Myocarditis",
+    "failure_pair": "Atrial fibrillation -> Myocarditis",
+    "ranked_differential": [
+      "Myocarditis",
+      "PSVT",
+      "Atrial fibrillation",
+      "Possible NSTEMI / STEMI"
+    ],
+    "true_pathology": "Atrial fibrillation",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_148": "absent",
+      "E_151": "absent",
+      "E_155": "present",
+      "E_157": "absent",
+      "E_164": "absent",
+      "E_166": "absent",
+      "E_181": "absent",
+      "E_187": "absent",
+      "E_194": "absent",
+      "E_201": "absent",
+      "E_217": "absent",
+      "E_220": "absent",
+      "E_3": "absent",
+      "E_51": "absent",
+      "E_62": "absent",
+      "E_65": "absent",
+      "E_70": "absent",
+      "E_76": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_82": "absent",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Bronchitis",
+    "candidate_list": [
+      "Tuberculosis",
+      "Bronchiolitis",
+      "Bronchitis",
+      "Acute otitis media",
+      "Pneumonia",
+      "URTI"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:37106",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Bronchitis",
+    "failure_pair": "Bronchiolitis -> Bronchitis",
+    "ranked_differential": [
+      "Bronchitis",
+      "Bronchiolitis",
+      "Acute otitis media",
+      "Pneumonia",
+      "Tuberculosis"
+    ],
+    "true_pathology": "Bronchiolitis",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_114": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_142": "absent",
+      "E_148": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_169": "absent",
+      "E_181": "present",
+      "E_194": "absent",
+      "E_201": "present",
+      "E_212": "absent",
+      "E_214": "absent",
+      "E_218": "absent",
+      "E_220": "absent",
+      "E_25": "absent",
+      "E_41": "absent",
+      "E_45": "absent",
+      "E_65": "absent",
+      "E_66": "present",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_82": "absent",
+      "E_97": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Bronchitis",
+    "candidate_list": [
+      "Acute otitis media",
+      "Bronchitis",
+      "Cluster headache",
+      "Bronchiolitis",
+      "Viral pharyngitis"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:85739",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Bronchitis",
+    "failure_pair": "Croup -> Bronchitis",
+    "ranked_differential": [
+      "Bronchitis",
+      "Cluster headache",
+      "Acute otitis media",
+      "Viral pharyngitis",
+      "Bronchiolitis"
+    ],
+    "true_pathology": "Croup",
+    "visible_evidence": {
+      "E_120": "absent",
+      "E_124": "absent",
+      "E_142": "absent",
+      "E_169": "absent",
+      "E_170": "absent",
+      "E_181": "present",
+      "E_194": "absent",
+      "E_201": "absent",
+      "E_25": "absent",
+      "E_41": "absent",
+      "E_66": "present",
+      "E_91": "absent",
+      "E_97": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Viral pharyngitis",
+    "candidate_list": [
+      "Acute dystonic reactions",
+      "Sarcoidosis",
+      "Boerhaave",
+      "Acute otitis media",
+      "Viral pharyngitis",
+      "Ebola"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:39464",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Viral pharyngitis",
+    "failure_pair": "Inguinal hernia -> Viral pharyngitis",
+    "ranked_differential": [
+      "Viral pharyngitis",
+      "Sarcoidosis",
+      "Acute otitis media",
+      "Boerhaave",
+      "Ebola"
+    ],
+    "true_pathology": "Inguinal hernia",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_114": "absent",
+      "E_120": "absent",
+      "E_129": "absent",
+      "E_146": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_175": "absent",
+      "E_181": "absent",
+      "E_194": "absent",
+      "E_209": "absent",
+      "E_212": "absent",
+      "E_220": "absent",
+      "E_25": "absent",
+      "E_3": "absent",
+      "E_48": "absent",
+      "E_51": "absent",
+      "E_53": "present",
+      "E_66": "absent",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_82": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Acute dystonic reactions",
+    "candidate_list": [
+      "Acute dystonic reactions",
+      "Myasthenia gravis",
+      "Bronchiolitis",
+      "URTI"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:108410",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Acute dystonic reactions",
+    "failure_pair": "Myasthenia gravis -> Acute dystonic reactions",
+    "ranked_differential": [
+      "Acute dystonic reactions",
+      "Myasthenia gravis",
+      "Bronchiolitis",
+      "URTI"
+    ],
+    "true_pathology": "Myasthenia gravis",
+    "visible_evidence": {
+      "E_172": "present",
+      "E_65": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Bronchitis",
+    "candidate_list": [
+      "Guillain-Barr\u00e9 syndrome",
+      "Acute dystonic reactions",
+      "PSVT",
+      "Bronchitis"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:20922",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Bronchitis",
+    "failure_pair": "Pericarditis -> Bronchitis",
+    "ranked_differential": [
+      "Bronchitis",
+      "Guillain-Barr\u00e9 syndrome",
+      "Acute dystonic reactions",
+      "PSVT"
+    ],
+    "true_pathology": "Pericarditis",
+    "visible_evidence": {
+      "E_124": "absent",
+      "E_142": "absent",
+      "E_148": "absent",
+      "E_164": "absent",
+      "E_194": "absent",
+      "E_196": "absent",
+      "E_208": "absent",
+      "E_217": "absent",
+      "E_65": "absent",
+      "E_66": "present",
+      "E_70": "absent",
+      "E_79": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Acute dystonic reactions",
+    "candidate_list": [
+      "Chagas",
+      "Acute dystonic reactions",
+      "Bronchiectasis",
+      "Pulmonary embolism",
+      "Anemia",
+      "Bronchitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:130885",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Acute dystonic reactions",
+    "failure_pair": "Pulmonary embolism -> Acute dystonic reactions",
+    "ranked_differential": [
+      "Acute dystonic reactions",
+      "Pulmonary embolism",
+      "Bronchiectasis",
+      "Anemia",
+      "Bronchitis"
+    ],
+    "true_pathology": "Pulmonary embolism",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_104": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_142": "absent",
+      "E_146": "absent",
+      "E_148": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_175": "absent",
+      "E_194": "absent",
+      "E_198": "absent",
+      "E_201": "absent",
+      "E_203": "absent",
+      "E_21": "absent",
+      "E_211": "absent",
+      "E_25": "absent",
+      "E_65": "absent",
+      "E_66": "present",
+      "E_70": "absent",
+      "E_79": "absent",
+      "E_82": "absent",
+      "E_84": "absent",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Possible NSTEMI / STEMI",
+    "candidate_list": [
+      "Possible NSTEMI / STEMI",
+      "Bronchitis",
+      "Unstable angina"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:63258",
+    "cohort": "nb37_98",
+    "current_final_prediction": "Possible NSTEMI / STEMI",
+    "failure_pair": "Stable angina -> Possible NSTEMI / STEMI",
+    "ranked_differential": [
+      "Possible NSTEMI / STEMI",
+      "Unstable angina",
+      "Bronchitis"
+    ],
+    "true_pathology": "Stable angina",
+    "visible_evidence": {
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_142": "absent",
+      "E_21": "absent",
+      "E_214": "absent",
+      "E_217": "absent",
+      "E_218": "absent",
+      "E_45": "absent",
+      "E_66": "present",
+      "E_79": "present"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Acute otitis media",
+    "candidate_list": [
+      "Tuberculosis",
+      "Larygospasm",
+      "Acute dystonic reactions",
+      "Acute otitis media",
+      "Chagas",
+      "Acute laryngitis",
+      "URTI",
+      "Bronchitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:105339",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Acute otitis media",
+    "failure_pair": "Acute laryngitis -> Acute otitis media",
+    "ranked_differential": [
+      "Acute otitis media",
+      "Acute laryngitis",
+      "URTI",
+      "Bronchitis",
+      "Chagas"
+    ],
+    "true_pathology": "Acute laryngitis",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_1": "absent",
+      "E_114": "absent",
+      "E_120": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_142": "absent",
+      "E_146": "absent",
+      "E_148": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_157": "absent",
+      "E_166": "absent",
+      "E_175": "absent",
+      "E_181": "absent",
+      "E_194": "absent",
+      "E_201": "absent",
+      "E_203": "absent",
+      "E_209": "absent",
+      "E_211": "absent",
+      "E_212": "absent",
+      "E_216": "absent",
+      "E_218": "absent",
+      "E_225": "absent",
+      "E_25": "absent",
+      "E_3": "absent",
+      "E_4": "absent",
+      "E_41": "absent",
+      "E_45": "absent",
+      "E_62": "absent",
+      "E_63": "absent",
+      "E_65": "absent",
+      "E_66": "absent",
+      "E_70": "absent",
+      "E_76": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_84": "absent",
+      "E_9": "absent",
+      "E_91": "present"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Chronic rhinosinusitis",
+    "candidate_list": [
+      "Chronic rhinosinusitis",
+      "Acute rhinosinusitis",
+      "Cluster headache"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:61503",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Chronic rhinosinusitis",
+    "failure_pair": "Acute rhinosinusitis -> Chronic rhinosinusitis",
+    "ranked_differential": [
+      "Chronic rhinosinusitis",
+      "Acute rhinosinusitis",
+      "Cluster headache"
+    ],
+    "true_pathology": "Acute rhinosinusitis",
+    "visible_evidence": {
+      "E_120": "present",
+      "E_169": "absent",
+      "E_181": "present",
+      "E_182": "present",
+      "E_209": "absent",
+      "E_41": "absent",
+      "E_66": "absent",
+      "E_91": "absent",
+      "E_97": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Acute otitis media",
+    "candidate_list": [
+      "Acute otitis media",
+      "Spontaneous rib fracture",
+      "GERD",
+      "Viral pharyngitis"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:127067",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Acute otitis media",
+    "failure_pair": "Allergic sinusitis -> Acute otitis media",
+    "ranked_differential": [
+      "Acute otitis media",
+      "Viral pharyngitis",
+      "GERD",
+      "Spontaneous rib fracture"
+    ],
+    "true_pathology": "Allergic sinusitis",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_124": "absent",
+      "E_125": "absent",
+      "E_129": "absent",
+      "E_148": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_164": "absent",
+      "E_178": "absent",
+      "E_181": "absent",
+      "E_194": "absent",
+      "E_201": "present",
+      "E_203": "absent",
+      "E_208": "absent",
+      "E_209": "absent",
+      "E_212": "absent",
+      "E_214": "absent",
+      "E_220": "absent",
+      "E_25": "absent",
+      "E_41": "absent",
+      "E_45": "absent",
+      "E_66": "absent",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_84": "absent",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Spontaneous pneumothorax",
+    "candidate_list": [
+      "Panic attack",
+      "Acute otitis media",
+      "Acute dystonic reactions",
+      "Inguinal hernia",
+      "Spontaneous pneumothorax",
+      "Myocarditis",
+      "Atrial fibrillation",
+      "Anemia"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:23690",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Spontaneous pneumothorax",
+    "failure_pair": "Atrial fibrillation -> Spontaneous pneumothorax",
+    "ranked_differential": [
+      "Spontaneous pneumothorax",
+      "Atrial fibrillation",
+      "Myocarditis",
+      "Acute otitis media",
+      "Acute dystonic reactions"
+    ],
+    "true_pathology": "Atrial fibrillation",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_106": "absent",
+      "E_120": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_13": "absent",
+      "E_143": "absent",
+      "E_146": "absent",
+      "E_148": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_157": "absent",
+      "E_164": "absent",
+      "E_166": "absent",
+      "E_169": "absent",
+      "E_175": "absent",
+      "E_181": "absent",
+      "E_194": "absent",
+      "E_198": "absent",
+      "E_201": "absent",
+      "E_203": "absent",
+      "E_208": "absent",
+      "E_21": "absent",
+      "E_212": "absent",
+      "E_217": "absent",
+      "E_218": "present",
+      "E_220": "absent",
+      "E_225": "absent",
+      "E_24": "absent",
+      "E_25": "absent",
+      "E_49": "absent",
+      "E_62": "absent",
+      "E_63": "absent",
+      "E_65": "absent",
+      "E_66": "absent",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_78": "absent",
+      "E_79": "absent",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Larygospasm",
+    "candidate_list": [
+      "Larygospasm",
+      "Croup",
+      "Epiglottitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:609",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Larygospasm",
+    "failure_pair": "Croup -> Larygospasm",
+    "ranked_differential": [
+      "Larygospasm",
+      "Epiglottitis",
+      "Croup"
+    ],
+    "true_pathology": "Croup",
+    "visible_evidence": {
+      "E_151": "absent",
+      "E_194": "present",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Acute dystonic reactions",
+    "candidate_list": [
+      "Acute dystonic reactions",
+      "Epiglottitis",
+      "Sarcoidosis",
+      "Anemia"
+    ],
+    "candidate_pool_has_true": false,
+    "case_id": "test:30358",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Acute dystonic reactions",
+    "failure_pair": "Ebola -> Acute dystonic reactions",
+    "ranked_differential": [
+      "Acute dystonic reactions",
+      "Anemia",
+      "Sarcoidosis",
+      "Epiglottitis"
+    ],
+    "true_pathology": "Ebola",
+    "visible_evidence": {
+      "E_0": "absent",
+      "E_124": "absent",
+      "E_129": "absent",
+      "E_146": "absent",
+      "E_148": "absent",
+      "E_15": "absent",
+      "E_151": "absent",
+      "E_155": "absent",
+      "E_181": "absent",
+      "E_194": "absent",
+      "E_196": "absent",
+      "E_201": "absent",
+      "E_203": "absent",
+      "E_21": "absent",
+      "E_211": "absent",
+      "E_24": "absent",
+      "E_25": "absent",
+      "E_4": "absent",
+      "E_62": "absent",
+      "E_63": "absent",
+      "E_65": "absent",
+      "E_66": "present",
+      "E_70": "absent",
+      "E_77": "absent",
+      "E_79": "absent",
+      "E_84": "absent",
+      "E_9": "absent",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "URTI",
+    "candidate_list": [
+      "Ebola",
+      "URTI",
+      "Viral pharyngitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:113762",
+    "cohort": "nb38_196",
+    "current_final_prediction": "URTI",
+    "failure_pair": "Ebola -> URTI",
+    "ranked_differential": [
+      "URTI",
+      "Ebola",
+      "Viral pharyngitis"
+    ],
+    "true_pathology": "Ebola",
+    "visible_evidence": {
+      "E_129": "absent",
+      "E_144": "present",
+      "E_201": "present",
+      "E_41": "present",
+      "E_45": "absent",
+      "E_77": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Larygospasm",
+    "candidate_list": [
+      "Larygospasm",
+      "Croup",
+      "Epiglottitis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:132876",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Larygospasm",
+    "failure_pair": "Epiglottitis -> Larygospasm",
+    "ranked_differential": [
+      "Larygospasm",
+      "Epiglottitis",
+      "Croup"
+    ],
+    "true_pathology": "Epiglottitis",
+    "visible_evidence": {
+      "E_116": "absent",
+      "E_129": "absent",
+      "E_151": "absent",
+      "E_190": "absent",
+      "E_194": "present",
+      "E_91": "absent"
+    }
+  },
+  {
+    "calibration196_rule_prediction": "Bronchiectasis",
+    "candidate_list": [
+      "Bronchiectasis",
+      "Pneumonia",
+      "Bronchitis",
+      "Tuberculosis"
+    ],
+    "candidate_pool_has_true": true,
+    "case_id": "test:93816",
+    "cohort": "nb38_196",
+    "current_final_prediction": "Bronchiectasis",
+    "failure_pair": "Pneumonia -> Bronchiectasis",
+    "ranked_differential": [
+      "Bronchiectasis",
+      "Pneumonia",
+      "Tuberculosis",
+      "Bronchitis"
+    ],
+    "true_pathology": "Pneumonia",
+    "visible_evidence": {
+      "E_201": "present",
+      "E_45": "present",
+      "E_61": "absent",
+      "E_77": "present",
+      "E_79": "absent"
+    }
+  }
+]

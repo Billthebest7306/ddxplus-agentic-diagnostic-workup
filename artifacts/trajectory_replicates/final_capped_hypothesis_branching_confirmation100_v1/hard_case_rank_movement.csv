@@ -1,0 +1,17 @@
+case_id,true_pathology,base_predicted_pathology,predicted_pathology,base_pred_graph_rank,selected_pred_graph_rank,base_pred_bayes_posterior,selected_pred_bayes_posterior
+test:29655,Acute laryngitis,Pancreatic neoplasm,Viral pharyngitis,7,1,3.176002691752646e-05,0.5371215573705669
+test:102650,Acute rhinosinusitis,Pancreatic neoplasm,Chronic rhinosinusitis,4,1,0.0017322850918452,0.6274257700575211
+test:129496,Boerhaave,Acute otitis media,Acute otitis media,1,1,0.1546054571108315,0.1546054571108315
+test:9372,Bronchitis,Acute otitis media,Pancreatic neoplasm,15,3,3.09274784099958e-05,0.0910153186645537
+test:121933,Chagas,Sarcoidosis,Sarcoidosis,1,1,0.7493919579053726,0.7493919579053726
+test:129021,Chronic rhinosinusitis,Acute otitis media,Chronic rhinosinusitis,1,1,0.2097722236421707,0.8800272629451679
+test:17122,Croup,Whooping cough,Croup,5,1,0.0004704522614466,0.977418233948899
+test:42856,Croup,Croup,Epiglottitis,1,1,0.3504740596738518,0.8943074243452137
+test:71562,GERD,Myasthenia gravis,GERD,23,1,4.5666893937730446e-08,0.9989637107224114
+test:24999,Influenza,URTI,URTI,1,1,0.7713632168877804,0.7713632168877804
+test:64848,Influenza,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,1,1,0.7949997410084096,0.7949997410084096
+test:35540,Myocarditis,Bronchitis,Pericarditis,7,2,0.000189071879365,0.3759914712857832
+test:85638,Pneumonia,Pulmonary neoplasm,Pulmonary neoplasm,1,1,0.5822379326004853,0.5822379326004853
+test:46410,Spontaneous pneumothorax,Sarcoidosis,Anemia,1,4,0.1369519474744956,0.2256849738578632
+test:3986,Spontaneous rib fracture,Acute otitis media,Acute otitis media,1,1,0.2762361962616291,0.2762361962616291
+test:102151,Unstable angina,Stable angina,Unstable angina,2,1,6.760378879504692e-08,0.9999999323952894

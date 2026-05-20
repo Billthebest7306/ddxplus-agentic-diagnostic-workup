@@ -1,0 +1,3 @@
+case_id,true_pathology,truth_rank,candidate_pool_size,candidate_pool_has_true
+test:35165,Bronchospasm / acute asthma exacerbation,1,4,True
+test:91822,Croup,4,4,True

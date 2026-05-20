@@ -1,0 +1,5 @@
+policy_name,claim_type,cohort,n_cases,correct,accuracy,candidate_pool_recall_correct,candidate_pool_recall,top3_accuracy,top5_accuracy,row_average_precision,row_auc
+synthetic_logistic_group_softmax,synthetic_validate,synthetic_validate,2000,1225,0.6125,1810,0.905,0.7955,0.8675,0.8064580571149861,0.9539401734254891
+synthetic_hist_gradient_boosting_group_softmax,synthetic_validate,synthetic_validate,2000,1223,0.6115,1810,0.905,0.7945,0.867,0.8078617663130102,0.9542203495351211
+synthetic_listwise_mlp,synthetic_validate,synthetic_validate,2000,1222,0.611,1810,0.905,0.794,0.868,0.7972744906964839,0.9507082410659032
+synthetic_pairwise_bradley_terry,synthetic_validate,synthetic_validate,2000,1211,0.6055,1810,0.905,0.798,0.8635,0.7373377148829903,0.9246707823532482

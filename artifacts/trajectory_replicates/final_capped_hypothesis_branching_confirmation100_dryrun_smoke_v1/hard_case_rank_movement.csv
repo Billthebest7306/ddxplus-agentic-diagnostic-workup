@@ -1,0 +1,2 @@
+case_id,true_pathology,base_predicted_pathology,predicted_pathology,base_pred_graph_rank,selected_pred_graph_rank,base_pred_bayes_posterior,selected_pred_bayes_posterior
+test:91822,Croup,Bronchitis,Chagas,3,1,0.2456210371766129,0.5174292080323055

@@ -1,0 +1,9 @@
+policy_name,claim_type,cohort,n_cases,correct,accuracy,candidate_pool_recall_correct,candidate_pool_recall,top3_accuracy,top5_accuracy
+artifact_loco_logistic,synthetic_plus_loco_artifact_calibration,nb33_49,49,45,0.9183673469387755,49,1.0,0.9795918367346939,1.0
+artifact_loco_logistic,synthetic_plus_loco_artifact_calibration,nb37_98,98,88,0.8979591836734694,92,0.9387755102040817,0.9387755102040817,0.9387755102040817
+artifact_loco_logistic,synthetic_plus_loco_artifact_calibration,nb38_196,196,184,0.9387755102040817,194,0.9897959183673469,0.9897959183673469,0.9897959183673469
+artifact_loco_logistic,synthetic_plus_loco_artifact_calibration,pooled_343,343,317,0.924198250728863,335,0.9766763848396501,0.9737609329446064,0.9766763848396501
+artifact_loco_gbm,synthetic_plus_loco_artifact_calibration,nb33_49,49,44,0.8979591836734694,49,1.0,1.0,1.0
+artifact_loco_gbm,synthetic_plus_loco_artifact_calibration,nb37_98,98,87,0.8877551020408163,92,0.9387755102040817,0.9387755102040817,0.9387755102040817
+artifact_loco_gbm,synthetic_plus_loco_artifact_calibration,nb38_196,196,184,0.9387755102040817,194,0.9897959183673469,0.9897959183673469,0.9897959183673469
+artifact_loco_gbm,synthetic_plus_loco_artifact_calibration,pooled_343,343,315,0.9183673469387755,335,0.9766763848396501,0.9766763848396501,0.9766763848396501

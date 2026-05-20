@@ -1,0 +1,9 @@
+anchor_prediction,challenger_prediction,root_id,status,trigger_count,wins,regressions,triggered_cases,net_gain,incremental_wins,incremental_regressions,incremental_triggers,incremental_net_gain
+Chronic rhinosinusitis,Acute rhinosinusitis,E_103,present,3,3,0,"['nb38_196::test:21703', 'nb38_196::test:52366', 'nb38_196::test:93342']",3,3,0,3,3
+Bronchitis,Bronchiolitis,E_169,absent,2,1,0,"['nb37_98::test:37106', 'nb37_98::test:85739']",1,1,0,2,1
+Acute dystonic reactions,Pulmonary embolism,E_0,absent,1,1,0,['nb37_98::test:130885'],1,1,0,1,1
+Acute otitis media,Acute laryngitis,E_0,absent,1,1,0,['nb38_196::test:105339'],1,1,0,1,1
+Bronchiectasis,Pneumonia,E_45,present,1,1,0,['nb38_196::test:93816'],1,1,0,1,1
+Larygospasm,Epiglottitis,E_116,absent,1,1,0,['nb38_196::test:132876'],1,1,0,1,1
+Myocarditis,Atrial fibrillation,E_124,absent,1,1,0,['nb37_98::test:92249'],1,1,0,1,1
+Spontaneous pneumothorax,Atrial fibrillation,E_0,absent,1,1,0,['nb38_196::test:23690'],1,1,0,1,1

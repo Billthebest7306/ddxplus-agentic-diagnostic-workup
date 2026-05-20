@@ -1,0 +1,101 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE,prior_available
+test:104708,Acute COPD exacerbation / infection,43,M,E_214,False
+test:131118,Acute COPD exacerbation / infection,55,F,E_214,False
+test:2681,Acute dystonic reactions,11,M,E_172,False
+test:19839,Acute dystonic reactions,59,F,E_172,False
+test:29655,Acute laryngitis,28,F,E_91,False
+test:132349,Acute laryngitis,53,M,E_212,False
+test:67245,Acute otitis media,59,F,E_53,False
+test:101183,Acute otitis media,22,M,E_53,False
+test:10203,Acute pulmonary edema,44,F,E_217,False
+test:99597,Acute pulmonary edema,66,F,E_217,False
+test:84226,Acute rhinosinusitis,73,M,E_103,False
+test:93063,Acute rhinosinusitis,3,F,E_53,False
+test:102650,Acute rhinosinusitis,28,M,E_182,False
+test:13533,Allergic sinusitis,89,F,E_169,False
+test:68930,Allergic sinusitis,16,M,E_169,False
+test:120711,Anaphylaxis,49,F,E_214,False
+test:133339,Anaphylaxis,29,F,E_66,False
+test:82873,Anemia,81,M,E_88,False
+test:115325,Anemia,13,F,E_140,False
+test:14003,Atrial fibrillation,63,M,E_66,False
+test:93397,Atrial fibrillation,63,M,E_164,False
+test:44518,Boerhaave,21,M,E_53,False
+test:129496,Boerhaave,10,M,E_53,False
+test:19242,Bronchiectasis,24,F,E_77,False
+test:57160,Bronchiectasis,29,M,E_201,False
+test:102939,Bronchiolitis,0,M,E_181,False
+test:124762,Bronchiolitis,0,M,E_181,False
+test:9372,Bronchitis,25,M,E_53,False
+test:59947,Bronchitis,49,M,E_201,False
+test:70946,Bronchospasm / acute asthma exacerbation,33,M,E_214,False
+test:87121,Bronchospasm / acute asthma exacerbation,63,F,E_214,False
+test:97901,Chagas,43,M,E_53,False
+test:121933,Chagas,45,F,E_9,False
+test:58677,Chronic rhinosinusitis,2,F,E_53,False
+test:129021,Chronic rhinosinusitis,57,F,E_181,False
+test:28039,Cluster headache,20,M,E_127,False
+test:39088,Cluster headache,39,F,E_181,False
+test:17122,Croup,2,F,E_202,False
+test:42856,Croup,6,F,E_190,False
+test:10694,Ebola,17,F,E_178,False
+test:126681,Ebola,9,F,E_39,False
+test:9604,Epiglottitis,23,F,E_66,False
+test:29559,Epiglottitis,32,M,E_190,False
+test:71562,GERD,62,M,E_210,False
+test:115560,GERD,57,M,E_173,False
+test:36512,Guillain-Barré syndrome,35,F,E_156,False
+test:115680,Guillain-Barré syndrome,24,M,E_93,False
+test:23483,HIV (initial infection),20,F,E_9,False
+test:66231,HIV (initial infection),78,F,E_129,False
+test:24999,Influenza,46,F,E_97,False
+test:64848,Influenza,31,M,E_161,False
+test:10728,Inguinal hernia,73,M,E_129,False
+test:62811,Inguinal hernia,54,F,E_203,False
+test:37371,Larygospasm,64,F,E_194,False
+test:94250,Larygospasm,55,F,E_194,False
+test:8687,Localized edema,67,M,E_151,False
+test:26631,Localized edema,26,F,E_53,False
+test:6230,Myasthenia gravis,14,M,E_38,False
+test:78662,Myasthenia gravis,13,F,E_176,False
+test:4673,Myocarditis,48,F,E_218,False
+test:35540,Myocarditis,33,M,E_53,False
+test:40111,PSVT,38,F,E_76,False
+test:84096,PSVT,50,F,E_155,False
+test:1896,Pancreatic neoplasm,45,M,E_188,False
+test:6960,Pancreatic neoplasm,34,F,E_188,False
+test:18065,Panic attack,25,M,E_53,False
+test:66397,Panic attack,14,M,E_82,False
+test:39594,Pericarditis,58,F,E_53,False
+test:108251,Pericarditis,44,F,E_220,False
+test:70971,Pneumonia,2,F,E_66,False
+test:85638,Pneumonia,74,M,E_53,False
+test:33502,Possible NSTEMI / STEMI,52,M,E_53,False
+test:67476,Possible NSTEMI / STEMI,26,F,E_89,False
+test:102550,Pulmonary embolism,30,F,E_45,False
+test:129603,Pulmonary embolism,76,F,E_53,False
+test:5146,Pulmonary neoplasm,77,M,E_45,False
+test:50883,Pulmonary neoplasm,61,F,E_201,False
+test:5763,SLE,87,M,E_66,False
+test:111301,SLE,62,M,E_129,False
+test:48384,Sarcoidosis,49,M,E_53,False
+test:78310,Sarcoidosis,33,M,E_74,False
+test:7772,Scombroid food poisoning,25,F,E_155,False
+test:93365,Scombroid food poisoning,50,F,E_92,False
+test:46410,Spontaneous pneumothorax,2,M,E_66,False
+test:116825,Spontaneous pneumothorax,34,M,E_220,False
+test:3986,Spontaneous rib fracture,38,F,E_53,False
+test:27404,Spontaneous rib fracture,85,F,E_66,False
+test:66251,Stable angina,66,F,E_218,False
+test:72464,Stable angina,94,F,E_53,False
+test:5174,Tuberculosis,59,F,E_66,False
+test:121765,Tuberculosis,36,F,E_45,False
+test:88336,URTI,3,F,E_201,False
+test:119638,URTI,74,F,E_144,False
+test:60030,Unstable angina,22,F,E_53,False
+test:102151,Unstable angina,63,M,E_14,False
+test:102927,Unstable angina,57,M,E_50,False
+test:29606,Viral pharyngitis,60,F,E_53,False
+test:74862,Viral pharyngitis,8,F,E_91,False
+test:13141,Whooping cough,0,F,E_166,False
+test:110534,Whooping cough,41,F,E_112,False

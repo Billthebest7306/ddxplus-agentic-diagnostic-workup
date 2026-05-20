@@ -1,0 +1,2 @@
+case_id,true_pathology,failure_mode,base_prediction,branchjudge_prediction,final_prediction,branch_trigger_probability,branch_trigger_fired,branches_spawned,score_margin_top2,suspicion_signal_count,signal_llm_mlp_disagree,signal_cap_hit,signal_uncertain_mlp,signal_graph_conflict,signal_bayes_conflict,signal_ledger_disagrees
+test:91822,Croup,resolver_miss_truth_in_pool,Bronchitis,Chagas,Epiglottitis,0.982862939365776,True,0,0.22119266295737522,3,False,False,True,True,False,True

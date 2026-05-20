@@ -1,0 +1,11 @@
+case_id,true_pathology,failure_mode,base_prediction,branchjudge_prediction,final_prediction,branch_trigger_probability,branch_trigger_fired,branches_spawned,score_margin_top2,suspicion_signal_count,signal_llm_mlp_disagree,signal_cap_hit,signal_uncertain_mlp,signal_graph_conflict,signal_bayes_conflict,signal_ledger_disagrees
+test:29655,Acute laryngitis,resolver_miss_truth_in_pool,Pancreatic neoplasm,Viral pharyngitis,Viral pharyngitis,0.9012220087405696,True,1,0.202822085954171,3,False,False,False,True,True,True
+test:102650,Acute rhinosinusitis,resolver_miss_truth_in_pool,Pancreatic neoplasm,Chronic rhinosinusitis,Chronic rhinosinusitis,0.8682685067146124,True,1,0.20020756640605575,3,False,False,False,True,True,True
+test:129496,Boerhaave,candidate_pool_miss,Acute otitis media,Acute otitis media,Acute otitis media,0.0283027142226553,False,0,0.04182682256920291,2,True,False,True,False,False,False
+test:9372,Bronchitis,candidate_pool_miss,Acute otitis media,Pancreatic neoplasm,URTI,0.2360264013328162,True,1,0.010578266830633315,5,True,False,True,True,True,True
+test:121933,Chagas,resolver_miss_truth_in_pool,Sarcoidosis,Sarcoidosis,Sarcoidosis,0.1944714148225922,False,0,0.44391501817369244,2,False,False,True,False,False,False
+test:42856,Croup,resolver_miss_truth_in_pool,Croup,Epiglottitis,Epiglottitis,0.4269662518291029,True,1,0.4801940573373126,0,False,False,False,False,False,False
+test:24999,Influenza,resolver_miss_truth_in_pool,URTI,URTI,URTI,0.154419993165289,False,0,0.5951764300416296,0,False,False,False,False,False,False
+test:64848,Influenza,resolver_miss_truth_in_pool,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,0.1260560634003488,False,0,0.7493623990697795,2,False,False,True,False,False,False
+test:46410,Spontaneous pneumothorax,candidate_pool_miss,Sarcoidosis,Anemia,Anemia,0.8440194477382057,True,0,0.15848363758760028,3,True,True,True,False,False,False
+test:3986,Spontaneous rib fracture,resolver_miss_truth_in_pool,Acute otitis media,Acute otitis media,Acute otitis media,0.0098716611401327,False,0,0.11085720631145807,2,True,False,True,False,False,False

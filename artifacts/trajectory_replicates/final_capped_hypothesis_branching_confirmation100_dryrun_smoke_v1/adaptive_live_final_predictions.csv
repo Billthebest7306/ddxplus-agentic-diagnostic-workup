@@ -1,0 +1,3 @@
+case_id,true_pathology,selected_pathology_by_resolver,predicted_pathology,correct,ranked_differential,candidate_pool_has_true,candidate_pool_rows,selected_branch_id,selected_candidate_role,selected_resolver_score,score_margin_top2,num_requests_selected,total_branch_requests
+test:35165,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,"[""Bronchospasm / acute asthma exacerbation"", ""GERD"", ""Bronchiolitis"", ""Allergic sinusitis""]",True,4,base,base,0.9911461337286057,0.9893129816756783,6.0,10.0
+test:91822,Croup,Epiglottitis,Epiglottitis,False,"[""Epiglottitis"", ""Chagas"", ""Bronchitis"", ""Croup""]",True,4,pseudo_bayes_topk,pseudo,0.5607036544882057,0.22119266295737522,23.0,23.0

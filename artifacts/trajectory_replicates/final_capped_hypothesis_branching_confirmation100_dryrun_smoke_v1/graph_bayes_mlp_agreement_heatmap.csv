@@ -1,0 +1,4 @@
+,graph_top_is_pred,bayes_top_is_pred,mlp_top_is_pred
+graph_top_is_pred,1.0,1.0,0.5
+bayes_top_is_pred,1.0,1.0,0.5
+mlp_top_is_pred,0.5,0.5,1.0

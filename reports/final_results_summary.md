@@ -2073,3 +2073,152 @@ Interpretation:
 Notebook `38` is much more encouraging than Notebook `37`: candidate-pool recall recovers from `92/98` to `194/196`, and final top-3/top-5 also reach `194/196`. The main problem has shifted from broad candidate discovery to final resolver discrimination among close confounders. The cost issue is a long tail: average total branch cost is reasonable, but hard cases can still spend up to `85` total branch requests.
 
 The labels from Notebook `38` may be used to tune thresholds. Therefore Notebook `38` accuracy must not be reported as held-out final performance. The correct next step is to freeze a separate confirmation policy using these calibration artifacts, then run a new held-out 98-case or 196-case confirmation cohort.
+
+## Notebook 39 Cross-Cohort Artifact Calibration Lab
+
+Notebook `39` is an offline calibration analysis over saved Notebook `33`, `37`, and `38` artifacts.
+
+- `notebooks/39_cross_cohort_artifact_calibration_lab.ipynb`
+- `reports/algorithmic_ledger/cross_cohort_artifact_calibration_lab_report.md`
+- artifact root: `artifacts/trajectory_replicates/cross_cohort_artifact_calibration_lab_v1/`
+
+Purpose:
+
+Notebook `38` showed that the candidate pool is nearly complete on a larger live calibration cohort, but the final resolver still misses close confounders. Notebook `39` asks whether the accumulated artifacts can calibrate that resolver layer without another live run.
+
+Pooled artifact result:
+
+| Policy | Claim type | Correct | Accuracy | Candidate-pool recall |
+|---|---|---:|---:|---:|
+| Current saved final pipeline | deployable saved artifact | 320/343 | 0.933 | 335/343 |
+| Raw GBM candidate argmax | diagnostic | 317/343 | 0.924 | 335/343 |
+| Notebook `38`-selected calibration rule layer | calibration-only candidate | 323/343 | 0.942 | 335/343 |
+| Pooled no-regret label-fit rules | diagnostic label-fit | 330/343 | 0.962 | 335/343 |
+| Candidate-pool oracle | non-deployable oracle | 335/343 | 0.977 | 335/343 |
+
+The selected calibration rule is:
+
+```text
+if current final = Chronic rhinosinusitis
+and Acute rhinosinusitis is in the candidate pool
+and visible evidence has E_103 present
+then promote Acute rhinosinusitis
+```
+
+Effect:
+
+- fixes three Notebook `38` Acute rhinosinusitis -> Chronic rhinosinusitis misses
+- causes zero pooled regressions across the saved 343-case artifacts
+- does not trigger on the older 49/98-case artifacts
+
+Interpretation:
+
+Notebook `39` does not prove a final new method. It shows that a modest calibration layer can improve the pooled saved artifacts from `320/343` to `323/343`, while label-fit diagnostic rules can reach `330/343`. The oracle ceiling is `335/343`, so the remaining problem is mostly resolver discrimination among close confounders, plus an `8/343` candidate-pool recall gap.
+
+The selected `E_103` rule is useful but fragile: train/validate disease statistics show E_103 present in `0.742` of Acute rhinosinusitis and `0.843` of Chronic rhinosinusitis, so it should not be treated as a robust medical discriminator. It is a calibration-only rescue candidate that needs fresh frozen confirmation before promotion.
+
+## Notebook 40 Synthetic-To-Live Listwise Resolver
+
+Notebook `40` is an offline resolver-transfer lab over the saved Notebook `33`, `37`, and `38` candidate pools.
+
+- `notebooks/40_synthetic_to_live_listwise_resolver.ipynb`
+- `scripts/synthetic_to_live_listwise_resolver_nb40.py`
+- `reports/algorithmic_ledger/synthetic_to_live_listwise_resolver_report.md`
+- artifact root: `artifacts/trajectory_replicates/synthetic_to_live_listwise_resolver_v1/`
+
+Purpose:
+
+Notebook `39` showed that the pooled candidate-pool oracle is `335/343`, while the current saved final pipeline is `320/343`. Notebook `40` asks whether a resolver trained on DDXPlus train/validate synthetic partial evidence states can transfer into these live candidate pools and close that gap without hand-written one-case rules.
+
+Training and evaluation setup:
+
+- synthetic train states: `4000`
+- synthetic validation states: `2000`
+- synthetic validation candidate-pool recall: `1810/2000 = 0.905`
+- live artifact cohorts: Notebook `33` 49-case, Notebook `37` 98-case, Notebook `38` 196-case
+- live pooled candidate-pool recall: `335/343 = 0.977`
+- no live API calls
+
+Pooled result:
+
+| Policy | Claim type | Correct | Accuracy | Candidate-pool recall |
+|---|---|---:|---:|---:|
+| Current saved final pipeline | saved artifact reference | 320/343 | 0.933 | 335/343 |
+| Candidate-pool oracle | non-deployable oracle | 335/343 | 0.977 | 335/343 |
+| Synthetic logistic | synthetic-only transfer | 315/343 | 0.918 | 335/343 |
+| Synthetic hist-GBM | synthetic-only transfer | 315/343 | 0.918 | 335/343 |
+| Synthetic listwise MLP | synthetic-only transfer | 307/343 | 0.895 | 335/343 |
+| Synthetic pairwise Bradley-Terry | synthetic-only transfer | 314/343 | 0.915 | 335/343 |
+| Artifact LOCO logistic | synthetic plus leave-one-cohort calibration | 317/343 | 0.924 | 335/343 |
+| Artifact LOCO hist-GBM | synthetic plus leave-one-cohort calibration | 315/343 | 0.918 | 335/343 |
+| Artifact-fit GBM | diagnostic label-fit | 319/343 | 0.930 | 335/343 |
+
+Selected policy:
+
+- policy name: `artifact_loco_logistic`
+- pooled result: `317/343`
+- wins versus current final pipeline: `1`
+- regressions versus current final pipeline: `4`
+- status: not promoted
+
+Interpretation:
+
+Notebook `40` gives a clean negative result. Synthetic partial evidence states are useful for creating large resolver training sets, but they do not match the live candidate-pool distribution well enough to beat the current saved final pipeline. Even leave-one-cohort-out artifact calibration underperforms the current final result. This means the near-oracle candidate-pool gap is not solved by a generic synthetic-to-live listwise or pairwise resolver.
+
+The practical conclusion is that the project should not claim a solved resolver. Candidate generation is strong, but final discrimination among close confounders remains the bottleneck. The next defensible improvement would need either a frozen held-out confirmation of a pre-registered calibration rule layer, or a resolver that can request missing discriminator evidence before committing to the final top-1.
+
+## Notebook 41 Final Capped Hypothesis-Branching Confirmation
+
+Notebook `41` is the final prepared live confirmation runner for the candidate-pool architecture.
+
+- `notebooks/41_final_capped_hypothesis_branching_confirmation.ipynb`
+- `scripts/final_capped_hypothesis_branching_confirmation_nb41.py`
+- `reports/algorithmic_ledger/final_capped_hypothesis_branching_confirmation_report.md`
+- live artifact root: `artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_v1/`
+- dry-run smoke artifact root: `artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_dryrun_smoke_v1/`
+
+Purpose:
+
+The project is no longer expanding to a 700+ case live calibration set. Notebook `41` freezes a clean, budget-controlled final live run over 100 held-out cases.
+
+Frozen setup:
+
+| Control | Value |
+|---|---:|
+| Cohort | 100 held-out test cases |
+| Sampling | two per pathology plus two extra held-out rows |
+| LLM | `gpt-4.1-mini`, temperature `0.0`, top-p `1.0` |
+| Base evidence cap | `24` |
+| Spawned branch cap | `8` |
+| Hard total request cap per case | `24` |
+| Max spawned branches | `2` |
+| Branch trigger threshold | `0.20` |
+| Continuation threshold | `0.20` |
+| Close-confounder extra-root layer | excluded |
+
+Outputs:
+
+- top-1, top-3, and top-5 accuracy
+- candidate-pool recall
+- selected-request cost
+- total branch-request cost
+- branch trigger usage
+- paired base-vs-final outcomes
+- final failure modes
+- request-cost figures
+
+Dry-run smoke verification:
+
+| Check | Result |
+|---|---:|
+| Dry-run cases | 2 |
+| Base correct | 1/2 |
+| Final capped branch-selected correct | 1/2 |
+| Wins/regressions | 0/0 |
+| Mean total branch requests | 16.5 |
+| Final resolver candidate-pool recall | 2/2 |
+| Artifact contract | passed |
+
+Interpretation:
+
+Notebook `41` is prepared and verified, but it is not yet a live performance result. It is the appropriate final run because it removes the fragile close-confounder rescue layer, enforces a hard total request cap, restores differential-diagnosis metrics, and keeps the architecture clean enough to compare against fixed-budget diagnostic baselines.

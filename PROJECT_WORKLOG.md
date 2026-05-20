@@ -5521,3 +5521,189 @@ Calibration implications:
 Claim status:
 
 Notebook `38` is a calibration result, not a final promoted method. It should be used to freeze Notebook `39` thresholds and safeguards, then tested on a separate cohort.
+
+## 87. Notebook 39 Cross-Cohort Artifact Calibration Lab
+
+Added and executed Notebook `39` as an offline calibration lab over the completed candidate-pool artifacts:
+
+- notebook: `notebooks/39_cross_cohort_artifact_calibration_lab.ipynb`
+- script mirror: `scripts/cross_cohort_artifact_calibration_lab_nb39.py`
+- report: `reports/algorithmic_ledger/cross_cohort_artifact_calibration_lab_report.md`
+- artifact root: `artifacts/trajectory_replicates/cross_cohort_artifact_calibration_lab_v1/`
+
+Inputs:
+
+- Notebook `33` 49-case close-confounder result
+- Notebook `37` 98-case fresh balanced live result
+- Notebook `38` 196-case live calibration result
+- candidate-level resolver score tables for all three cohorts
+- DDXPlus train/validate evidence presence rates for selected-rule plausibility checks
+
+Headline pooled artifact result:
+
+| Policy | Claim type | Correct | Accuracy | Candidate-pool recall |
+|---|---|---:|---:|---:|
+| Current saved final pipeline | deployable saved artifact | 320/343 | 0.933 | 335/343 |
+| Raw GBM candidate argmax | diagnostic | 317/343 | 0.924 | 335/343 |
+| Notebook `38`-selected calibration rule layer | calibration-only candidate | 323/343 | 0.942 | 335/343 |
+| Pooled no-regret label-fit rules | diagnostic label-fit | 330/343 | 0.962 | 335/343 |
+| Candidate-pool oracle | non-deployable oracle | 335/343 | 0.977 | 335/343 |
+
+Selected calibration rule:
+
+```text
+if current final = Chronic rhinosinusitis
+and Acute rhinosinusitis is in the candidate pool
+and visible evidence has E_103 present
+then promote Acute rhinosinusitis
+```
+
+Effect:
+
+- selected only from the Notebook `38` 196-case calibration cohort under a zero-regression constraint
+- fixes three repeated Acute rhinosinusitis -> Chronic rhinosinusitis errors in Notebook `38`
+- does not trigger on the older 49/98-case artifacts
+- pooled paired effect: `3` wins, `0` regressions
+
+Important caution:
+
+The selected `E_103` signal is not strongly supported as a general disease-statistic discriminator. Train/validate presence rates are `0.742` for Acute rhinosinusitis and `0.843` for Chronic rhinosinusitis, so this rule is best interpreted as an artifact-calibrated rescue for a repeated live resolver failure, not as a robust medical rule. It should not be promoted without a fresh frozen confirmation run.
+
+Diagnostic insight:
+
+The label-fit no-regret rule family can reach `330/343`, but most of those extra fixes are one-case rules. The candidate-pool oracle reaches `335/343`; therefore the remaining generalization bottleneck is still resolver discrimination among close confounders, plus the smaller `8/343` candidate-pool recall gap.
+
+Verification:
+
+- `python3 scripts/cross_cohort_artifact_calibration_lab_nb39.py` executed top-to-bottom offline
+- Notebook `39` code cells static-parsed successfully
+- required CSV/JSON artifacts and figures were written
+
+## 88. Notebook 40 Synthetic-To-Live Listwise Resolver
+
+Added and executed Notebook `40` as an offline resolver lab for the current candidate-pool bottleneck:
+
+- notebook: `notebooks/40_synthetic_to_live_listwise_resolver.ipynb`
+- script mirror: `scripts/synthetic_to_live_listwise_resolver_nb40.py`
+- report: `reports/algorithmic_ledger/synthetic_to_live_listwise_resolver_report.md`
+- artifact root: `artifacts/trajectory_replicates/synthetic_to_live_listwise_resolver_v1/`
+
+Control question:
+
+Can a resolver trained on DDXPlus train/validate synthetic partial evidence states, optionally calibrated by leave-one-cohort-out artifact labels, close the gap between the current saved final pipeline and the candidate-pool oracle?
+
+Inputs:
+
+- Notebook `33` 49-case candidate-pool/final artifacts
+- Notebook `37` 98-case live balanced candidate-pool/final artifacts
+- Notebook `38` 196-case live calibration candidate-pool/final artifacts
+- Notebook `38` synthetic train/validate candidate resolver features: `4000` train states and `2000` validation states
+
+Models tested:
+
+- synthetic-only logistic group-softmax scorer
+- synthetic-only histogram gradient boosting group-softmax scorer
+- synthetic listwise MLP with group-softmax loss
+- synthetic pairwise Bradley-Terry logistic scorer
+- synthetic plus leave-one-cohort-out artifact-calibrated logistic scorer
+- synthetic plus leave-one-cohort-out artifact-calibrated histogram GBM scorer
+- artifact label-fit diagnostic rows, explicitly not deployable
+
+Headline pooled result:
+
+| Policy | Claim type | Correct | Accuracy | Candidate-pool recall |
+|---|---|---:|---:|---:|
+| Current saved final pipeline | saved artifact reference | 320/343 | 0.933 | 335/343 |
+| Candidate-pool oracle | non-deployable oracle | 335/343 | 0.977 | 335/343 |
+| Synthetic logistic | synthetic-only transfer | 315/343 | 0.918 | 335/343 |
+| Synthetic hist-GBM | synthetic-only transfer | 315/343 | 0.918 | 335/343 |
+| Synthetic listwise MLP | synthetic-only transfer | 307/343 | 0.895 | 335/343 |
+| Synthetic pairwise Bradley-Terry | synthetic-only transfer | 314/343 | 0.915 | 335/343 |
+| Artifact LOCO logistic | synthetic plus artifact calibration | 317/343 | 0.924 | 335/343 |
+| Artifact LOCO hist-GBM | synthetic plus artifact calibration | 315/343 | 0.918 | 335/343 |
+| Artifact-fit GBM | diagnostic label-fit | 319/343 | 0.930 | 335/343 |
+
+Selected policy status:
+
+- selected diagnostic policy: `artifact_loco_logistic`
+- pooled result: `317/343`
+- paired wins versus current final pipeline: `1`
+- paired regressions versus current final pipeline: `4`
+- promotion decision: `not_promoted`
+
+Interpretation:
+
+Notebook `40` is useful precisely because it gives a clean negative answer. Synthetic DDXPlus partial states do teach strong row-level compatibility signals, but they do not transfer cleanly enough to the live agentic candidate pools to beat the current saved final pipeline. Even artifact-calibrated leave-one-cohort-out training remains below the current pipeline, and the diagnostic artifact-fit rows do not reach the Notebook `39` label-fit frontier. The remaining gap is not solved by a generic listwise/pairwise neural resolver trained mostly on synthetic states.
+
+Next likely step:
+
+Do not promote Notebook `40`. If continuing, the resolver needs either a genuinely held-out live calibration/confirmation split with enough artifact labels, or a different evidence-acquisition/resolution loop that asks missing discriminator evidence before final selection. For the course narrative, this strengthens the claim that candidate generation is strong but deployable resolver calibration remains the main unresolved research problem.
+
+Verification:
+
+- `python3 scripts/synthetic_to_live_listwise_resolver_nb40.py` executed top-to-bottom offline
+- Notebook `40` code cells static-parsed successfully
+- `python3 -m py_compile scripts/synthetic_to_live_listwise_resolver_nb40.py` passed
+- required CSV/JSON artifacts, figures, and report were written
+
+## 89. Notebook 41 Final Capped Hypothesis-Branching Confirmation
+
+Added Notebook `41` as the final clean live confirmation runner for the candidate-pool architecture:
+
+- notebook: `notebooks/41_final_capped_hypothesis_branching_confirmation.ipynb`
+- script mirror: `scripts/final_capped_hypothesis_branching_confirmation_nb41.py`
+- report: `reports/algorithmic_ledger/final_capped_hypothesis_branching_confirmation_report.md`
+- live artifact root: `artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_v1/`
+- dry-run smoke artifact root: `artifacts/trajectory_replicates/final_capped_hypothesis_branching_confirmation100_dryrun_smoke_v1/`
+
+Purpose:
+
+The project will not pursue a 700+ case live calibration expansion because the API cost is outside the current budget. Notebook `41` freezes a practical final policy for a 100-case live confirmation instead:
+
+- Notebook `13`-style base LLM evidence acquisition with MLP-guided stopping
+- learned branch gate with hypothesis-forced fresh branches
+- graph/Bayes/MLP candidate-pool resolver
+- top-1/top-3/top-5 and candidate-pool recall reporting
+- selected-request and total-branch-request accounting
+- no Notebook `33`/`38` close-confounder extra-root rescue layer
+
+Frozen controls:
+
+| Control | Value |
+|---|---:|
+| cases | `100` held-out test cases, two per pathology plus two extras |
+| LLM | `gpt-4.1-mini`, temperature `0.0`, top-p `1.0` |
+| branch trigger threshold | `0.20` |
+| max branches per case | `2` |
+| continuation threshold | `0.20` |
+| base request cap | `24` |
+| branch request cap | `8` |
+| hard total request cap per case | `24` |
+
+Implementation details:
+
+- excludes prior live benchmark cohorts where possible
+- keeps the API key as an interactive notebook variable rather than an environment-variable requirement
+- writes `final_resolver_trace.csv` instead of the old close-confounder discriminator trace
+- writes `pairwise_evidence_separation_graph.csv` for the train-derived branch-gate separation features
+- preserves the usual artifact contract and figure outputs
+
+Dry-run smoke verification:
+
+- executed the notebook script with `RUN_LIVE_API=False` and `ALLOW_DRY_RUN_BENCHMARK=True`
+- benchmark size: `2`
+- base correct: `1/2`
+- final capped branch-selected correct: `1/2`
+- wins/regressions versus base: `0/0`
+- mean total branch requests: `16.5`
+- final resolver candidate-pool recall: `2/2`
+- artifact contract passed
+
+Static verification:
+
+- `python3 -m py_compile scripts/final_capped_hypothesis_branching_confirmation_nb41.py`
+- all Notebook `41` code cells parsed with `ast.parse`
+
+Claim status:
+
+Notebook `41` is prepared and smoke-tested, but it is not yet a result. The next step is for Hassan to run the live 100-case notebook, then analyze `topk_summary.csv`, `metrics_final.json`, `final_confirmation_paired_outcomes.csv`, and the request-cost figures before making any final performance claim.

@@ -1,0 +1,2 @@
+anchor_prediction,challenger_prediction,root_id,status,trigger_count,wins,regressions,triggered_cases,net_gain,incremental_wins,incremental_regressions,incremental_triggers,incremental_net_gain
+Chronic rhinosinusitis,Acute rhinosinusitis,E_103,present,3,3,0,"['nb38_196::test:21703', 'nb38_196::test:52366', 'nb38_196::test:93342']",3,3,0,3,3

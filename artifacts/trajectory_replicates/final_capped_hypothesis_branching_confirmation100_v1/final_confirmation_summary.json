@@ -1,0 +1,20 @@
+{
+  "run_name": "final_capped_hypothesis_branching_confirmation100_v1",
+  "confirmation_cases": 100,
+  "target_candidate_pool_recall": 0.95,
+  "base_correct": 85,
+  "branchjudge_correct": 88,
+  "final_correct": 90,
+  "candidate_pool_recall_count": 97,
+  "candidate_pool_recall": 0.97,
+  "mean_candidate_pool_size": 3.8,
+  "branch_trigger_threshold_used": 0.2,
+  "continuation_value_threshold_used": 0.2,
+  "base_request_cap": 24,
+  "branch_request_cap": 8,
+  "hard_total_request_cap_per_case": 24,
+  "branch_trigger_diagnostics_file": "final_confirmation_branch_trigger_threshold_diagnostics.csv",
+  "resolver_margin_diagnostics_file": "final_confirmation_resolver_margin_diagnostics.csv",
+  "candidate_source_recall_file": "final_confirmation_candidate_source_recall.csv",
+  "use_rule": "Final confirmation diagnostics only. Do not retune this notebook from these labels."
+}

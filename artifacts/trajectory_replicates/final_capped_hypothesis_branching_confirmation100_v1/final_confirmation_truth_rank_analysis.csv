@@ -1,0 +1,101 @@
+case_id,true_pathology,truth_rank,candidate_pool_size,candidate_pool_has_true
+test:104708,Acute COPD exacerbation / infection,1.0,4,True
+test:131118,Acute COPD exacerbation / infection,1.0,4,True
+test:2681,Acute dystonic reactions,1.0,4,True
+test:19839,Acute dystonic reactions,1.0,4,True
+test:29655,Acute laryngitis,3.0,5,True
+test:132349,Acute laryngitis,1.0,4,True
+test:67245,Acute otitis media,1.0,6,True
+test:101183,Acute otitis media,1.0,4,True
+test:10203,Acute pulmonary edema,1.0,5,True
+test:99597,Acute pulmonary edema,1.0,5,True
+test:84226,Acute rhinosinusitis,1.0,4,True
+test:93063,Acute rhinosinusitis,1.0,4,True
+test:102650,Acute rhinosinusitis,2.0,5,True
+test:13533,Allergic sinusitis,1.0,5,True
+test:68930,Allergic sinusitis,1.0,3,True
+test:120711,Anaphylaxis,1.0,3,True
+test:133339,Anaphylaxis,1.0,4,True
+test:82873,Anemia,1.0,4,True
+test:115325,Anemia,1.0,3,True
+test:14003,Atrial fibrillation,1.0,3,True
+test:93397,Atrial fibrillation,1.0,5,True
+test:44518,Boerhaave,1.0,3,True
+test:129496,Boerhaave,,5,False
+test:19242,Bronchiectasis,1.0,4,True
+test:57160,Bronchiectasis,1.0,3,True
+test:102939,Bronchiolitis,1.0,3,True
+test:124762,Bronchiolitis,1.0,4,True
+test:9372,Bronchitis,,6,False
+test:59947,Bronchitis,1.0,3,True
+test:70946,Bronchospasm / acute asthma exacerbation,1.0,4,True
+test:87121,Bronchospasm / acute asthma exacerbation,1.0,4,True
+test:97901,Chagas,1.0,3,True
+test:121933,Chagas,2.0,4,True
+test:58677,Chronic rhinosinusitis,1.0,4,True
+test:129021,Chronic rhinosinusitis,1.0,3,True
+test:28039,Cluster headache,1.0,5,True
+test:39088,Cluster headache,1.0,4,True
+test:17122,Croup,1.0,6,True
+test:42856,Croup,2.0,4,True
+test:10694,Ebola,1.0,3,True
+test:126681,Ebola,1.0,3,True
+test:9604,Epiglottitis,1.0,4,True
+test:29559,Epiglottitis,1.0,3,True
+test:71562,GERD,1.0,6,True
+test:115560,GERD,1.0,5,True
+test:36512,Guillain-Barré syndrome,1.0,3,True
+test:115680,Guillain-Barré syndrome,1.0,3,True
+test:23483,HIV (initial infection),1.0,5,True
+test:66231,HIV (initial infection),1.0,3,True
+test:24999,Influenza,2.0,3,True
+test:64848,Influenza,2.0,3,True
+test:10728,Inguinal hernia,1.0,3,True
+test:62811,Inguinal hernia,1.0,3,True
+test:37371,Larygospasm,1.0,4,True
+test:94250,Larygospasm,1.0,4,True
+test:8687,Localized edema,1.0,4,True
+test:26631,Localized edema,1.0,4,True
+test:6230,Myasthenia gravis,1.0,3,True
+test:78662,Myasthenia gravis,1.0,3,True
+test:4673,Myocarditis,1.0,5,True
+test:35540,Myocarditis,1.0,5,True
+test:40111,PSVT,1.0,4,True
+test:84096,PSVT,1.0,4,True
+test:1896,Pancreatic neoplasm,1.0,3,True
+test:6960,Pancreatic neoplasm,1.0,3,True
+test:18065,Panic attack,1.0,3,True
+test:66397,Panic attack,1.0,3,True
+test:39594,Pericarditis,1.0,4,True
+test:108251,Pericarditis,1.0,4,True
+test:70971,Pneumonia,1.0,3,True
+test:85638,Pneumonia,1.0,5,True
+test:33502,Possible NSTEMI / STEMI,1.0,3,True
+test:67476,Possible NSTEMI / STEMI,1.0,3,True
+test:102550,Pulmonary embolism,1.0,3,True
+test:129603,Pulmonary embolism,1.0,3,True
+test:5146,Pulmonary neoplasm,1.0,4,True
+test:50883,Pulmonary neoplasm,1.0,3,True
+test:5763,SLE,1.0,5,True
+test:111301,SLE,1.0,3,True
+test:48384,Sarcoidosis,1.0,3,True
+test:78310,Sarcoidosis,1.0,3,True
+test:7772,Scombroid food poisoning,1.0,4,True
+test:93365,Scombroid food poisoning,1.0,3,True
+test:46410,Spontaneous pneumothorax,,4,False
+test:116825,Spontaneous pneumothorax,1.0,4,True
+test:3986,Spontaneous rib fracture,4.0,6,True
+test:27404,Spontaneous rib fracture,1.0,3,True
+test:66251,Stable angina,1.0,4,True
+test:72464,Stable angina,1.0,3,True
+test:5174,Tuberculosis,1.0,4,True
+test:121765,Tuberculosis,1.0,3,True
+test:88336,URTI,1.0,3,True
+test:119638,URTI,1.0,4,True
+test:60030,Unstable angina,1.0,3,True
+test:102151,Unstable angina,1.0,3,True
+test:102927,Unstable angina,1.0,3,True
+test:29606,Viral pharyngitis,1.0,4,True
+test:74862,Viral pharyngitis,1.0,3,True
+test:13141,Whooping cough,1.0,5,True
+test:110534,Whooping cough,1.0,3,True

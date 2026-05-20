@@ -1,0 +1,2 @@
+resolver_name,feature_count,validate_rows,validate_candidate_pool_recall,validate_row_auc,validate_row_average_precision
+gradient_boosting_name_family,101,16554,0.906,0.9530672414686396,0.8014197677328317

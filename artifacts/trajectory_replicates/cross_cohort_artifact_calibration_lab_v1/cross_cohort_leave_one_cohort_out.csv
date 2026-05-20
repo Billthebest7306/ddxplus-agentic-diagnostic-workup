@@ -1,0 +1,7 @@
+model_name,holdout_cohort,correct,n_cases,accuracy,feature_count,error
+logistic_l2_numeric_loco,nb33_49,47,49,0.9591836734693877,46,
+extra_trees_numeric_loco,nb33_49,46,49,0.9387755102040817,46,
+logistic_l2_numeric_loco,nb37_98,89,98,0.9081632653061225,88,
+extra_trees_numeric_loco,nb37_98,88,98,0.8979591836734694,88,
+logistic_l2_numeric_loco,nb38_196,184,196,0.9387755102040817,88,
+extra_trees_numeric_loco,nb38_196,183,196,0.9336734693877551,88,

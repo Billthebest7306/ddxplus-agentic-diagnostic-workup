@@ -1,0 +1,3 @@
+case_id,PATHOLOGY,AGE,SEX,INITIAL_EVIDENCE,prior_available
+test:35165,Bronchospasm / acute asthma exacerbation,72,F,E_201,False
+test:91822,Croup,7,F,E_66,False

@@ -1,0 +1,21 @@
+cohort,failure_pair_calibration196,cases,candidate_pool_has_true
+nb33_49,Acute rhinosinusitis -> Chronic rhinosinusitis,1,1
+nb37_98,Acute laryngitis -> Viral pharyngitis,1,0
+nb37_98,Acute rhinosinusitis -> Pneumonia,1,0
+nb37_98,Atrial fibrillation -> Myocarditis,1,1
+nb37_98,Bronchiolitis -> Bronchitis,1,1
+nb37_98,Croup -> Bronchitis,1,0
+nb37_98,Inguinal hernia -> Viral pharyngitis,1,0
+nb37_98,Myasthenia gravis -> Acute dystonic reactions,1,1
+nb37_98,Pericarditis -> Bronchitis,1,0
+nb37_98,Pulmonary embolism -> Acute dystonic reactions,1,1
+nb37_98,Stable angina -> Possible NSTEMI / STEMI,1,0
+nb38_196,Acute laryngitis -> Acute otitis media,1,1
+nb38_196,Acute rhinosinusitis -> Chronic rhinosinusitis,1,1
+nb38_196,Allergic sinusitis -> Acute otitis media,1,0
+nb38_196,Atrial fibrillation -> Spontaneous pneumothorax,1,1
+nb38_196,Croup -> Larygospasm,1,1
+nb38_196,Ebola -> Acute dystonic reactions,1,0
+nb38_196,Ebola -> URTI,1,1
+nb38_196,Epiglottitis -> Larygospasm,1,1
+nb38_196,Pneumonia -> Bronchiectasis,1,1

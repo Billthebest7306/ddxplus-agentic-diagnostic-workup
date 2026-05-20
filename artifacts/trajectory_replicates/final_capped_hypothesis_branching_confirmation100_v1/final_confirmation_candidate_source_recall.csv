@@ -1,0 +1,5 @@
+subset_name,num_cases,candidate_pool_recall_count,candidate_pool_recall,mean_pool_size,max_pool_size
+base_only,100,85,0.85,1.0,1
+base_plus_pseudo,100,94,0.94,3.72,6
+base_plus_real_branch,100,88,0.88,1.08,3
+all_candidates,100,97,0.97,3.8,6
