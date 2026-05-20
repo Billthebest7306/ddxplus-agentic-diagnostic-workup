@@ -1,0 +1,442 @@
+scenario_key,case_id,true_pathology,selected_pre_discriminator,selected_pathology,correct,selected_branch_id,selected_candidate_role,selected_score,selected_candidate_request_count,extra_roots_requested,override_applied,discriminator_pair_matched,candidate_pool_has_true,candidate_pool_rows,unique_candidate_diagnoses,num_requests_base,branch_requests_replayed,branches_spent,total_replayed_requests
+native_adaptive_reference|thr=0.40|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,6,5,24.0,24.0,1,48.0
+native_adaptive_reference|thr=0.40|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+native_adaptive_reference|thr=0.40|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+native_adaptive_reference|thr=0.40|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,hypothesis_01_influenza,branch,0.8249578482802913,9.0,0,False,False,True,6,5,7.0,9.0,1,16.0
+native_adaptive_reference|thr=0.40|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+native_adaptive_reference|thr=0.40|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+native_adaptive_reference|thr=0.40|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+native_adaptive_reference|thr=0.40|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+native_adaptive_reference|thr=0.40|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+native_adaptive_reference|thr=0.40|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+native_adaptive_reference|thr=0.40|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+native_adaptive_reference|thr=0.40|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+native_adaptive_reference|thr=0.40|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+native_adaptive_reference|thr=0.40|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+native_adaptive_reference|thr=0.40|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+native_adaptive_reference|thr=0.40|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+native_adaptive_reference|thr=0.40|suppress=True,test:81691,Croup,Croup,Croup,True,hypothesis_01_influenza,branch,0.4411381699673942,15.0,0,False,False,True,6,6,7.0,15.0,1,22.0
+native_adaptive_reference|thr=0.40|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+native_adaptive_reference|thr=0.40|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+native_adaptive_reference|thr=0.40|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+native_adaptive_reference|thr=0.40|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+native_adaptive_reference|thr=0.40|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+native_adaptive_reference|thr=0.40|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+native_adaptive_reference|thr=0.40|suppress=True,test:35039,Myocarditis,Myocarditis,Myocarditis,True,hypothesis_01_myocarditis,branch,0.9930246745237395,21.0,2,False,True,True,3,3,22.0,21.0,1,45.0
+native_adaptive_reference|thr=0.40|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+native_adaptive_reference|thr=0.40|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_01_panic_attack,branch,0.9942804806257248,5.0,0,False,False,True,4,4,8.0,5.0,1,13.0
+native_adaptive_reference|thr=0.40|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,5,5,24.0,21.0,1,47.0
+native_adaptive_reference|thr=0.40|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+native_adaptive_reference|thr=0.40|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+native_adaptive_reference|thr=0.40|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+native_adaptive_reference|thr=0.40|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+native_adaptive_reference|thr=0.40|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+native_adaptive_reference|thr=0.40|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+native_adaptive_reference|thr=0.40|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+native_adaptive_reference|thr=0.40|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+native_adaptive_reference|thr=0.40|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+native_adaptive_reference|thr=0.40|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+native_adaptive_reference|thr=0.40|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+native_adaptive_reference|thr=0.40|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+native_adaptive_reference|thr=0.40|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+native_adaptive_reference|thr=0.40|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,6,6,24.0,12.0,1,36.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,6,6,7.0,6.0,1,13.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,6,6,7.0,21.0,1,28.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,3,3,22.0,6.0,1,28.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_02_myocarditis,branch,0.9917039382037036,6.0,0,False,False,True,4,4,8.0,6.0,1,14.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,5,5,24.0,14.0,1,40.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_removed_slot_remap|thr=0.40|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:76022,Panic attack,Myocarditis,Myocarditis,False,pseudo_graph_topk,pseudo,0.632630763871498,8.0,0,False,False,False,3,3,8.0,5.0,1,13.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,4,4,24.0,21.0,1,47.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_selected|thr=0.40|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:76022,Panic attack,Myocarditis,Myocarditis,False,pseudo_graph_topk,pseudo,0.632630763871498,8.0,0,False,False,False,3,3,8.0,5.0,1,13.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,4,4,24.0,21.0,1,47.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_no_support_suppression|thr=0.40|suppress=False,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,6,6,24.0,36.0,2,60.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,hypothesis_03_pneumonia,branch,0.7685224330114474,8.0,0,False,False,True,7,6,7.0,23.0,3,30.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,7,7,7.0,49.0,3,56.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,3,3,22.0,27.0,2,49.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_02_myocarditis,branch,0.9917039382037036,6.0,0,False,False,True,4,4,8.0,11.0,2,19.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,6,6,24.0,59.0,3,85.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_threshold_sweep|thr=0.05|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_02_myocarditis,branch,0.9917039382037036,6.0,0,False,False,True,4,4,8.0,11.0,2,19.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,5,5,24.0,35.0,2,61.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_threshold_sweep|thr=0.10|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_02_myocarditis,branch,0.9917039382037036,6.0,0,False,False,True,4,4,8.0,11.0,2,19.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,4,4,24.0,21.0,1,47.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_threshold_sweep|thr=0.20|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:76022,Panic attack,Panic attack,Panic attack,True,hypothesis_02_myocarditis,branch,0.9917039382037036,6.0,0,False,False,True,4,4,8.0,11.0,2,19.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,4,4,24.0,21.0,1,47.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_threshold_sweep|thr=0.30|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:38475,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,base,base,0.641443942017399,24.0,0,False,False,True,5,5,24.0,24.0,1,48.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:104857,Acute dystonic reactions,Acute dystonic reactions,Acute dystonic reactions,True,base,base,0.9560650694611654,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:58986,Acute laryngitis,Acute laryngitis,Acute laryngitis,True,base,base,0.9595636453208868,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:33118,Acute otitis media,Acute otitis media,Acute otitis media,True,base,base,0.4218475437059635,7.0,0,False,False,True,5,5,7.0,9.0,1,16.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:93930,Acute pulmonary edema,Acute pulmonary edema,Acute pulmonary edema,True,base,base,0.991457616547158,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:111176,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,False,base,base,0.9630078481278076,8.0,2,False,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:88250,Allergic sinusitis,Allergic sinusitis,Allergic sinusitis,True,base,base,0.9918050742909728,13.0,0,False,False,True,3,3,13.0,0.0,0,13.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:121319,Anaphylaxis,Anaphylaxis,Anaphylaxis,True,base,base,0.9912385842139704,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:18744,Anemia,Anemia,Anemia,True,base,base,0.9908557251327952,1.0,0,False,False,True,4,4,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:11342,Atrial fibrillation,Atrial fibrillation,Atrial fibrillation,True,base,base,0.991616365818245,5.0,0,False,False,True,5,5,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:11198,Boerhaave,Boerhaave,Boerhaave,True,base,base,0.9911327821128016,4.0,0,False,False,True,3,3,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:112233,Bronchiectasis,Bronchiectasis,Bronchiectasis,True,base,base,0.9779952136758824,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:90978,Bronchiolitis,Bronchiolitis,Bronchiolitis,True,base,base,0.7415458893720546,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:11655,Bronchitis,URTI,Bronchitis,True,base,base,0.9176225145970988,8.0,2,True,True,True,3,3,8.0,0.0,0,10.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:29123,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,base,base,0.9914347902855334,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:51421,Chagas,Chagas,Chagas,True,base,base,0.992102687861103,23.0,0,False,False,True,4,4,23.0,0.0,0,23.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:130566,Chronic rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,True,base,base,0.7540863587762149,7.0,2,False,True,True,4,4,7.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:46152,Cluster headache,Cluster headache,Cluster headache,True,base,base,0.9919499119547636,5.0,0,False,False,True,3,3,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:81691,Croup,Acute otitis media,Acute otitis media,False,base,base,0.4139568135671058,7.0,0,False,False,False,5,5,7.0,15.0,1,22.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:77908,Ebola,Ebola,Ebola,True,base,base,0.992102687861103,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:91516,Epiglottitis,Epiglottitis,Epiglottitis,True,base,base,0.9911327821128016,5.0,0,False,False,True,4,4,5.0,0.0,0,5.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:96956,GERD,GERD,GERD,True,base,base,0.9691589206123236,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:34242,Guillain-Barré syndrome,Guillain-Barré syndrome,Guillain-Barré syndrome,True,base,base,0.991509033851488,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:106010,HIV (initial infection),HIV (initial infection),HIV (initial infection),True,base,base,0.9897525467898884,3.0,0,False,False,True,5,5,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:8666,Influenza,Influenza,Influenza,True,base,base,0.99032176233556,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:38202,Inguinal hernia,Inguinal hernia,Inguinal hernia,True,base,base,0.991411444772476,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:133888,Larygospasm,Larygospasm,Larygospasm,True,base,base,0.9911327821128016,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:89477,Localized edema,Localized edema,Localized edema,True,base,base,0.9918050742909728,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:100664,Myasthenia gravis,Myasthenia gravis,Myasthenia gravis,True,base,base,0.9918050742909728,2.0,0,False,False,True,3,3,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:35039,Myocarditis,Pericarditis,Pericarditis,False,pseudo_graph_topk,pseudo,0.9033291655047632,22.0,0,False,False,False,2,2,22.0,21.0,1,43.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:51611,PSVT,PSVT,PSVT,True,base,base,0.9911327821128016,19.0,0,False,False,True,3,3,19.0,0.0,0,19.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:2801,Pancreatic neoplasm,Pancreatic neoplasm,Pancreatic neoplasm,True,base,base,0.991616365818245,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:76022,Panic attack,Myocarditis,Myocarditis,False,pseudo_graph_topk,pseudo,0.632630763871498,8.0,0,False,False,False,3,3,8.0,5.0,1,13.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:62878,Pericarditis,Pericarditis,Pericarditis,True,pseudo_bayes_topk,pseudo,0.757431411224642,24.0,2,False,True,True,4,4,24.0,21.0,1,47.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:95923,Pneumonia,Pneumonia,Pneumonia,True,base,base,0.9911704625959428,9.0,0,False,False,True,3,3,9.0,0.0,0,9.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:19160,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,base,base,0.9903068033534288,7.0,0,False,False,True,4,4,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:23687,Pulmonary embolism,Pulmonary embolism,Pulmonary embolism,True,base,base,0.9060990320995714,3.0,0,False,False,True,3,3,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:105129,Pulmonary neoplasm,Pulmonary neoplasm,Pulmonary neoplasm,True,base,base,0.9918269218816048,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:52755,SLE,SLE,SLE,True,base,base,0.9930853043274374,7.0,0,False,False,True,5,5,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:36032,Sarcoidosis,Sarcoidosis,Sarcoidosis,True,base,base,0.9896883358577394,8.0,0,False,False,True,4,4,8.0,0.0,0,8.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:133024,Scombroid food poisoning,Scombroid food poisoning,Scombroid food poisoning,True,base,base,0.9919676360156454,3.0,0,False,False,True,4,4,3.0,0.0,0,3.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:749,Spontaneous pneumothorax,Spontaneous pneumothorax,Spontaneous pneumothorax,True,base,base,0.9908491675559532,4.0,0,False,False,True,4,4,4.0,0.0,0,4.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:71107,Spontaneous rib fracture,Spontaneous rib fracture,Spontaneous rib fracture,True,base,base,0.991616365818245,1.0,0,False,False,True,5,5,1.0,0.0,0,1.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:16097,Stable angina,Stable angina,Stable angina,True,base,base,0.9581409348029492,17.0,0,False,False,True,3,3,17.0,0.0,0,17.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:107472,Tuberculosis,Tuberculosis,Tuberculosis,True,base,base,0.989714820910006,6.0,0,False,False,True,3,3,6.0,0.0,0,6.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:13402,URTI,URTI,URTI,True,pseudo_graph_topk,pseudo,0.961479734525191,2.0,0,False,False,True,4,4,2.0,0.0,0,2.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:125508,Unstable angina,Unstable angina,Unstable angina,True,base,base,0.9918050742909728,7.0,0,False,False,True,3,3,7.0,0.0,0,7.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:39033,Viral pharyngitis,Viral pharyngitis,Viral pharyngitis,True,base,base,0.9662107623165616,10.0,2,False,True,True,3,3,10.0,0.0,0,12.0
+branch1_no_signal_threshold_sweep|thr=0.40|suppress=True,test:19424,Whooping cough,Whooping cough,Whooping cough,True,base,base,0.9908444525708128,0.0,0,False,False,True,5,5,0.0,0.0,0,0.0

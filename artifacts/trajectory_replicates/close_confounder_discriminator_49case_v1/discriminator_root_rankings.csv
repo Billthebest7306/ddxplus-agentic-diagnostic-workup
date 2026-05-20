@@ -1,0 +1,93 @@
+case_id,anchor_pathology,challenger_pathology,root_rank,root_evidence_id,question_en,pair_utility,observed_outcome_state,flagged_for_discriminator
+test:100664,Myasthenia gravis,Epiglottitis,1,E_54,Characterize your pain:,0.5486098135201631,__ABSENT__,False
+test:100664,Myasthenia gravis,Epiglottitis,2,E_55,Do you feel pain somewhere?,0.3347710844265456,__ABSENT__,False
+test:104857,Acute dystonic reactions,Myasthenia gravis,1,E_62,Do you regularly take stimulant drugs?,0.01643559845395845,__PRESENT__,False
+test:104857,Acute dystonic reactions,Myasthenia gravis,2,E_65,"Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",0.013984749747212307,__ABSENT__,False
+test:105129,Pulmonary neoplasm,Pneumonia,1,E_54,Characterize your pain:,0.4016295526647067,V_161|V_179|V_198,False
+test:105129,Pulmonary neoplasm,Pneumonia,2,E_55,Do you feel pain somewhere?,0.28105558051265533,V_170,False
+test:106010,HIV (initial infection),Tuberculosis,1,E_54,Characterize your pain:,0.5504166502198382,V_154|V_161,False
+test:106010,HIV (initial infection),Tuberculosis,2,E_55,Do you feel pain somewhere?,0.3693255876673696,V_124|V_167|V_62,False
+test:107472,Tuberculosis,Pneumonia,1,E_54,Characterize your pain:,0.5511587914908013,__ABSENT__,False
+test:107472,Tuberculosis,Pneumonia,2,E_55,Do you feel pain somewhere?,0.3577833345886199,__ABSENT__,False
+test:111176,Chronic rhinosinusitis,Acute rhinosinusitis,1,E_55,Do you feel pain somewhere?,0.06320526863570142,V_109|V_122|V_125|V_32|V_89,True
+test:111176,Chronic rhinosinusitis,Acute rhinosinusitis,2,E_56,How intense is the pain?,0.04687350141704734,4,True
+test:11198,Boerhaave,Panic attack,1,E_54,Characterize your pain:,0.547909002132985,V_112|V_179|V_191|V_71,False
+test:11198,Boerhaave,Panic attack,2,E_55,Do you feel pain somewhere?,0.30259267967707437,V_197|V_29|V_84|V_85,False
+test:112233,Bronchiectasis,Pneumonia,1,E_54,Characterize your pain:,0.5523581851523508,__ABSENT__,False
+test:112233,Bronchiectasis,Pneumonia,2,E_55,Do you feel pain somewhere?,0.36937233070888564,__ABSENT__,False
+test:11342,Atrial fibrillation,Panic attack,1,E_54,Characterize your pain:,0.5531223879011424,__ABSENT__,False
+test:11342,Atrial fibrillation,Panic attack,2,E_55,Do you feel pain somewhere?,0.3447093203480278,__ABSENT__,False
+test:11655,URTI,Bronchitis,1,E_55,Do you feel pain somewhere?,0.4708257409926702,V_159|V_29|V_55,True
+test:11655,URTI,Bronchitis,2,E_54,Characterize your pain:,0.46760482124696173,V_181,True
+test:121319,Anaphylaxis,SLE,1,E_54,Characterize your pain:,0.4463651427683291,V_179,False
+test:121319,Anaphylaxis,SLE,2,E_55,Do you feel pain somewhere?,0.3216012895635184,V_197|V_85|V_88,False
+test:125508,Unstable angina,Stable angina,1,E_56,How intense is the pain?,0.028500905462812146,5,False
+test:125508,Unstable angina,Stable angina,2,E_50,Have you had significantly increased sweating?,0.020122016450969418,__PRESENT__,False
+test:130566,Chronic rhinosinusitis,Acute rhinosinusitis,1,E_55,Do you feel pain somewhere?,0.06320526863570142,V_108|V_109|V_125|V_32|V_89,True
+test:130566,Chronic rhinosinusitis,Acute rhinosinusitis,2,E_56,How intense is the pain?,0.04687350141704734,5,True
+test:133024,Scombroid food poisoning,Anaphylaxis,1,E_54,Characterize your pain:,0.5523442629046418,__ABSENT__,False
+test:133024,Scombroid food poisoning,Anaphylaxis,2,E_55,Do you feel pain somewhere?,0.3684015017399123,__ABSENT__,False
+test:133888,Larygospasm,Acute laryngitis,1,E_54,Characterize your pain:,0.5470762359586806,__ABSENT__,False
+test:133888,Larygospasm,Acute laryngitis,2,E_55,Do you feel pain somewhere?,0.3279613279475347,__ABSENT__,False
+test:13402,URTI,Ebola,1,E_54,Characterize your pain:,0.535735771843895,V_154|V_161,False
+test:13402,URTI,Ebola,2,E_55,Do you feel pain somewhere?,0.39245440361449335,V_124|V_166|V_167|V_62,False
+test:16097,Stable angina,Unstable angina,1,E_56,How intense is the pain?,0.028500905462812146,4,False
+test:16097,Stable angina,Unstable angina,2,E_50,Have you had significantly increased sweating?,0.020122016450969418,__ABSENT__,False
+test:18744,Anemia,Bronchiolitis,1,E_54,Characterize your pain:,0.5085818500858162,V_161,False
+test:18744,Anemia,Bronchiolitis,2,E_55,Do you feel pain somewhere?,0.3652645587096672,V_25|V_89,False
+test:19160,Possible NSTEMI / STEMI,Unstable angina,1,E_54,Characterize your pain:,0.5250297380409888,V_154|V_183|V_192|V_196,False
+test:19160,Possible NSTEMI / STEMI,Unstable angina,2,E_59,How fast did the pain appear?,0.048189966957945404,10,False
+test:19424,Whooping cough,Bronchiolitis,1,E_54,Characterize your pain:,0.1786289256725271,__ABSENT__,False
+test:19424,Whooping cough,Bronchiolitis,2,E_57,Does the pain radiate to another location?,0.11299203174407166,__ABSENT__,False
+test:23687,Pulmonary embolism,Pneumonia,1,E_55,Do you feel pain somewhere?,0.36456482484897007,V_159|V_160|V_170|V_171|V_55,False
+test:23687,Pulmonary embolism,Pneumonia,2,E_57,Does the pain radiate to another location?,0.3109217925061024,V_127|V_159|V_160|V_171|V_55,False
+test:2801,Pancreatic neoplasm,Scombroid food poisoning,1,E_54,Characterize your pain:,0.5493460704220859,V_182,False
+test:2801,Pancreatic neoplasm,Scombroid food poisoning,2,E_55,Do you feel pain somewhere?,0.34964703898519156,V_104,False
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchiolitis,1,E_54,Characterize your pain:,0.2403179716076467,__ABSENT__,False
+test:29123,Bronchospasm / acute asthma exacerbation,Bronchiolitis,2,E_55,Do you feel pain somewhere?,0.19806404645955228,__ABSENT__,False
+test:34242,Guillain-Barré syndrome,Pericarditis,1,E_54,Characterize your pain:,0.5530440725534965,__ABSENT__,False
+test:34242,Guillain-Barré syndrome,Pericarditis,2,E_55,Do you feel pain somewhere?,0.3833762095976222,__ABSENT__,False
+test:35039,Myocarditis,Pericarditis,1,E_54,Characterize your pain:,0.3718762807161022,V_179,True
+test:35039,Myocarditis,Pericarditis,2,E_57,Does the pain radiate to another location?,0.28741458165698774,V_123,True
+test:36032,Sarcoidosis,GERD,1,E_54,Characterize your pain:,0.5265502738095118,V_161|V_192,False
+test:36032,Sarcoidosis,GERD,2,E_55,Do you feel pain somewhere?,0.358640053886943,V_64|V_65|V_66|V_67|V_69,False
+test:38202,Inguinal hernia,Whooping cough,1,E_54,Characterize your pain:,0.5391854434909163,V_183,False
+test:38202,Inguinal hernia,Whooping cough,2,E_57,Does the pain radiate to another location?,0.2981916725359494,V_123,False
+test:39033,Viral pharyngitis,URTI,1,E_55,Do you feel pain somewhere?,0.5314861395192261,V_137|V_148|V_20|V_21,True
+test:39033,Viral pharyngitis,URTI,2,E_54,Characterize your pain:,0.48825741806616424,V_161|V_181,True
+test:46152,Cluster headache,GERD,1,E_54,Characterize your pain:,0.5287273496544899,V_180|V_191|V_192,False
+test:46152,Cluster headache,GERD,2,E_55,Do you feel pain somewhere?,0.3802652559155403,V_108|V_109|V_125|V_126|V_167,False
+test:51421,Chagas,Ebola,1,E_54,Characterize your pain:,0.3774961948477034,V_161|V_180|V_184,False
+test:51421,Chagas,Ebola,2,E_57,Does the pain radiate to another location?,0.2416633444915041,V_123,False
+test:51611,PSVT,Epiglottitis,1,E_54,Characterize your pain:,0.46292370899916696,V_180|V_184,False
+test:51611,PSVT,Epiglottitis,2,E_55,Do you feel pain somewhere?,0.3337985986218016,V_89,False
+test:52755,SLE,Pericarditis,1,E_54,Characterize your pain:,0.40245425219747527,V_192,False
+test:52755,SLE,Pericarditis,2,E_55,Do you feel pain somewhere?,0.3179211456240596,V_194|V_195|V_26|V_34|V_35,False
+test:58986,Acute laryngitis,Epiglottitis,1,E_54,Characterize your pain:,0.5508452296927638,V_161|V_181,False
+test:58986,Acute laryngitis,Epiglottitis,2,E_55,Do you feel pain somewhere?,0.33679421164130496,V_137|V_148|V_163|V_20|V_21,False
+test:62878,Pericarditis,PSVT,1,E_54,Characterize your pain:,0.46736066270416854,V_179|V_192,True
+test:62878,Pericarditis,PSVT,2,E_55,Do you feel pain somewhere?,0.36501454500622554,V_101|V_160|V_29,True
+test:71107,Spontaneous rib fracture,Whooping cough,1,E_54,Characterize your pain:,0.5030261085831174,V_112|V_191|V_192,False
+test:71107,Spontaneous rib fracture,Whooping cough,2,E_57,Does the pain radiate to another location?,0.2644149875685468,V_171,False
+test:749,Spontaneous pneumothorax,Pneumonia,1,E_54,Characterize your pain:,0.47100930019244336,V_179|V_191,False
+test:749,Spontaneous pneumothorax,Pneumonia,2,E_55,Do you feel pain somewhere?,0.24290880588352565,V_159|V_160|V_29|V_55,False
+test:77908,Ebola,Bronchiolitis,1,E_181,Do you have nasal congestion or a clear runny nose?,0.07497341808180542,__ABSENT__,False
+test:77908,Ebola,Bronchiolitis,2,E_204,Have you traveled out of the country in the last 4 weeks?,0.02997064370432833,V_1,False
+test:81691,Croup,Acute otitis media,1,E_54,Characterize your pain:,0.5349778932139289,__ABSENT__,False
+test:81691,Croup,Acute otitis media,2,E_57,Does the pain radiate to another location?,0.2963098990957022,__ABSENT__,False
+test:8666,Influenza,HIV (initial infection),1,E_54,Characterize your pain:,0.4344277533260439,V_183|V_198,False
+test:8666,Influenza,HIV (initial infection),2,E_55,Do you feel pain somewhere?,0.36975089778851955,V_148|V_26|V_53|V_62|V_89,False
+test:88250,Allergic sinusitis,Acute otitis media,1,E_54,Characterize your pain:,0.5550115982293777,__ABSENT__,False
+test:88250,Allergic sinusitis,Acute otitis media,2,E_55,Do you feel pain somewhere?,0.407717535100883,__ABSENT__,False
+test:89477,Localized edema,Anaphylaxis,1,E_54,Characterize your pain:,0.5348473230929439,V_154|V_180|V_183,False
+test:89477,Localized edema,Anaphylaxis,2,E_55,Do you feel pain somewhere?,0.37749035288548727,V_34|V_35|V_51|V_52|V_73,False
+test:90978,Bronchiolitis,Ebola,1,E_181,Do you have nasal congestion or a clear runny nose?,0.07497341808180542,__PRESENT__,False
+test:90978,Bronchiolitis,Ebola,2,E_41,Have you been in contact with a person with similar symptoms in the past 2 weeks?,0.03545916315738422,__ABSENT__,False
+test:91516,Epiglottitis,Acute laryngitis,1,E_54,Characterize your pain:,0.5508452296927638,V_192,False
+test:91516,Epiglottitis,Acute laryngitis,2,E_55,Do you feel pain somewhere?,0.33679421164130496,V_137|V_148|V_26|V_53|V_54,False
+test:93930,Acute pulmonary edema,Pneumonia,1,E_54,Characterize your pain:,0.5510162159906327,V_154|V_161|V_180|V_183,False
+test:93930,Acute pulmonary edema,Pneumonia,2,E_57,Does the pain radiate to another location?,0.2983919556069355,V_118|V_177|V_194,False
+test:95923,Pneumonia,SLE,1,E_54,Characterize your pain:,0.3818998967637629,V_179|V_192,False
+test:95923,Pneumonia,SLE,2,E_55,Do you feel pain somewhere?,0.32122352812542404,V_101|V_160|V_170|V_55|V_56,False
+test:96956,GERD,Myocarditis,1,E_54,Characterize your pain:,0.5166613558633742,V_112|V_179|V_181|V_193,False
+test:96956,GERD,Myocarditis,2,E_55,Do you feel pain somewhere?,0.3278244817281838,V_101|V_103|V_197|V_29,False

@@ -1,0 +1,100 @@
+case_id,decision_step,action,next_branch_id,next_target_hypothesis,next_role_kind,top_pathology,second_pathology,previous_top_pathology,resolver_raw_margin,resolver_entropy,ledger_disagreement,math_support_count,unresolved_mass,next_priority_ratio,top_changed_after_last_branch,sufficient_update,suppression,continuation_value,continuation_value_threshold,reason
+test:94089,0,stop_no_initial_branch,,,,Acute COPD exacerbation / infection,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:126942,0,stop_no_initial_branch,,,,Acute COPD exacerbation / infection,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:95053,0,stop_no_initial_branch,,,,Sarcoidosis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:116697,0,stop_no_initial_branch,,,,Acute dystonic reactions,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:15080,0,stop_no_initial_branch,,,,Acute laryngitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:54031,0,stop_no_initial_branch,,,,Bronchitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:12528,0,stop_no_initial_branch,,,,Acute otitis media,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:49314,0,stop_no_initial_branch,,,,Acute otitis media,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:1334,0,stop_no_initial_branch,,,,Acute pulmonary edema,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:18505,0,stop_no_initial_branch,,,,Acute pulmonary edema,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:21201,0,stop_no_initial_branch,,,,Acute rhinosinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:127556,0,stop_no_initial_branch,,,,Bronchospasm / acute asthma exacerbation,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:30946,0,stop_no_initial_branch,,,,Allergic sinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:125929,0,stop_no_initial_branch,,,,Allergic sinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:10697,0,stop_no_initial_branch,,,,Anaphylaxis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:118731,0,stop_no_initial_branch,,,,Anaphylaxis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:44839,0,stop_no_initial_branch,,,,Anemia,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:111295,0,stop_no_initial_branch,,,,Anemia,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:92249,0,stop_no_initial_branch,,,,PSVT,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:131403,0,stop_no_initial_branch,,,,Atrial fibrillation,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:28012,0,stop_no_initial_branch,,,,Boerhaave,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:121061,0,stop_no_initial_branch,,,,Boerhaave,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:851,0,stop_no_initial_branch,,,,Bronchiectasis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:128997,0,stop_no_initial_branch,,,,Bronchiectasis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:37106,0,stop_no_initial_branch,,,,Tuberculosis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:82580,0,stop_no_initial_branch,,,,Bronchiolitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:45547,0,stop_no_initial_branch,,,,Acute otitis media,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:65655,0,stop_no_initial_branch,,,,Bronchitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:24765,0,stop_no_initial_branch,,,,Bronchospasm / acute asthma exacerbation,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:77490,0,stop_no_initial_branch,,,,Bronchospasm / acute asthma exacerbation,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:35193,0,stop_no_initial_branch,,,,Chagas,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:83913,0,stop_no_initial_branch,,,,Chagas,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:38974,0,stop_no_initial_branch,,,,Chronic rhinosinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:58606,0,stop_no_initial_branch,,,,Chronic rhinosinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:60858,0,stop_no_initial_branch,,,,Cluster headache,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:117440,0,stop_no_initial_branch,,,,Cluster headache,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:2255,0,stop_no_initial_branch,,,,Croup,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:85739,1,launch_branch,hypothesis_01_cluster_headache,Cluster headache,graph_bayes_challenger,Cluster headache,Viral pharyngitis,,0.0025862209478697,0.9882527669490492,0.3333333333333333,2.0,,1.0,False,False,1.0,1.0,0.4,initial_branch_trigger_fired
+test:85739,2,stop_branching,hypothesis_02_allergic_sinusitis,Allergic sinusitis,pairwise_discriminator,Cluster headache,Viral pharyngitis,Cluster headache,0.0025862209478697,0.9919145429774062,0.3333333333333333,2.0,0.6949881419453521,0.2358230310425152,False,False,1.0,0.1638942101721587,0.4,continuation_value_below_threshold_or_sufficient_update
+test:18016,0,stop_no_initial_branch,,,,Ebola,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:72661,0,stop_no_initial_branch,,,,Ebola,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:51510,0,stop_no_initial_branch,,,,Epiglottitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:86148,0,stop_no_initial_branch,,,,Larygospasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:26970,0,stop_no_initial_branch,,,,GERD,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:121813,0,stop_no_initial_branch,,,,GERD,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:75577,0,stop_no_initial_branch,,,,Guillain-Barré syndrome,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:83901,0,stop_no_initial_branch,,,,Guillain-Barré syndrome,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:106536,0,stop_no_initial_branch,,,,HIV (initial infection),,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:106714,0,stop_no_initial_branch,,,,HIV (initial infection),,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:106856,0,stop_no_initial_branch,,,,Influenza,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:132679,0,stop_no_initial_branch,,,,Influenza,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:39464,0,stop_no_initial_branch,,,,Acute dystonic reactions,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:58668,0,stop_no_initial_branch,,,,Inguinal hernia,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:33265,0,stop_no_initial_branch,,,,Larygospasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:57219,0,stop_no_initial_branch,,,,Larygospasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:10099,0,stop_no_initial_branch,,,,Localized edema,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:86910,0,stop_no_initial_branch,,,,Localized edema,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:39056,0,stop_no_initial_branch,,,,Myasthenia gravis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:108410,0,stop_no_initial_branch,,,,Acute dystonic reactions,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:51329,0,stop_no_initial_branch,,,,Myocarditis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:80383,0,stop_no_initial_branch,,,,Myocarditis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:64020,0,stop_no_initial_branch,,,,PSVT,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:91648,0,stop_no_initial_branch,,,,PSVT,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:1333,0,stop_no_initial_branch,,,,Pancreatic neoplasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:129841,0,stop_no_initial_branch,,,,Pancreatic neoplasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:78726,0,stop_no_initial_branch,,,,Panic attack,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:131162,0,stop_no_initial_branch,,,,Panic attack,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:20922,0,stop_no_initial_branch,,,,Guillain-Barré syndrome,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:46655,0,stop_no_initial_branch,,,,Pericarditis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:26133,0,stop_no_initial_branch,,,,Pneumonia,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:121292,0,stop_no_initial_branch,,,,Chronic rhinosinusitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:41659,0,stop_no_initial_branch,,,,Possible NSTEMI / STEMI,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:54407,0,stop_no_initial_branch,,,,Possible NSTEMI / STEMI,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:100510,0,stop_no_initial_branch,,,,Pulmonary embolism,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:130885,0,stop_no_initial_branch,,,,Chagas,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:83165,0,stop_no_initial_branch,,,,Pulmonary neoplasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:103274,0,stop_no_initial_branch,,,,Pulmonary neoplasm,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:80639,0,stop_no_initial_branch,,,,SLE,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:83391,0,stop_no_initial_branch,,,,SLE,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:68879,0,stop_no_initial_branch,,,,Sarcoidosis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:114160,0,stop_no_initial_branch,,,,Boerhaave,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:39540,0,stop_no_initial_branch,,,,Scombroid food poisoning,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:77521,0,stop_no_initial_branch,,,,Scombroid food poisoning,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:41043,0,stop_no_initial_branch,,,,Spontaneous pneumothorax,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:47148,0,stop_no_initial_branch,,,,Spontaneous pneumothorax,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:5929,0,stop_no_initial_branch,,,,Spontaneous rib fracture,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:82357,0,stop_no_initial_branch,,,,Spontaneous rib fracture,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:63258,0,stop_no_initial_branch,,,,Possible NSTEMI / STEMI,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:85371,0,stop_no_initial_branch,,,,Stable angina,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:74383,0,stop_no_initial_branch,,,,Tuberculosis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:79723,0,stop_no_initial_branch,,,,Tuberculosis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:36688,0,stop_no_initial_branch,,,,URTI,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:51699,0,stop_no_initial_branch,,,,URTI,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:34188,0,stop_no_initial_branch,,,,Unstable angina,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:34526,0,stop_no_initial_branch,,,,Unstable angina,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:82790,0,stop_no_initial_branch,,,,Viral pharyngitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:95643,0,stop_no_initial_branch,,,,Viral pharyngitis,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:19168,0,stop_no_initial_branch,,,,Whooping cough,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold
+test:40583,0,stop_no_initial_branch,,,,Whooping cough,,,,,,,,0.0,False,False,1.0,0.0,0.4,branch_trigger_below_threshold

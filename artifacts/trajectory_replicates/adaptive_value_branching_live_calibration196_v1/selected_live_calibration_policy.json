@@ -1,0 +1,48 @@
+{
+  "policy_name": "adaptive_value_branching_live_calibration196_v1",
+  "selected_before_live_results": true,
+  "cohort_rule": "four held-out test cases per pathology, excluding prior live benchmark cohorts when possible",
+  "llm_model": "gpt-4.1-mini",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "branch_trigger_threshold": 0.2,
+  "max_branches": 3,
+  "continuation_value_threshold": 0.2,
+  "resolver_name": "gradient_boosting_name_family",
+  "close_confounder_rule": {
+    "extra_root_budget": 2,
+    "max_score_margin": 0.7,
+    "min_pair_utility": 0.08,
+    "lbf_override_min": 2.0
+  },
+  "metrics_final": {
+    "system": "notebook38_calibration_gbm_close_confounder_final",
+    "num_cases": 196,
+    "num_correct": 184,
+    "accuracy": 0.9387755102040817,
+    "top3_accuracy": 0.9897959183673469,
+    "top5_accuracy": 0.9897959183673469,
+    "mean_selected_requests": 6.770408163265306,
+    "mean_total_requests": 9.556122448979592,
+    "p90_total_requests": 22.0,
+    "max_total_requests": 85.0,
+    "candidate_pool_recall": 0.9897959183673469,
+    "run_name": "adaptive_value_branching_live_calibration196_v1",
+    "calibration_run": true,
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/adaptive_value_branching_live_calibration196_v1",
+    "resolver_name": "gradient_boosting_name_family",
+    "close_confounder_extra_root_budget": 2,
+    "close_confounder_flags": 4,
+    "close_confounder_overrides": 1,
+    "candidate_pool_recall_count": 194,
+    "branch_trigger_rate": 0.11734693877551021,
+    "mean_branches_spawned": 0.21428571428571427,
+    "branches_spawned_distribution": {
+      "0": 173,
+      "1": 12,
+      "2": 3,
+      "3": 8
+    }
+  },
+  "calibration_target_candidate_pool_recall": 0.98
+}

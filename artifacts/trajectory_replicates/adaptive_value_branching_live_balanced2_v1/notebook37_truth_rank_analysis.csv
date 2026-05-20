@@ -1,0 +1,99 @@
+case_id,true_pathology,truth_rank,candidate_pool_size
+test:100510,Pulmonary embolism,1.0,3
+test:10099,Localized edema,1.0,4
+test:103274,Pulmonary neoplasm,1.0,3
+test:106536,HIV (initial infection),1.0,4
+test:106714,HIV (initial infection),1.0,3
+test:106856,Influenza,1.0,3
+test:10697,Anaphylaxis,1.0,3
+test:108410,Myasthenia gravis,2.0,4
+test:111295,Anemia,1.0,4
+test:114160,Sarcoidosis,1.0,6
+test:116697,Acute dystonic reactions,1.0,4
+test:117440,Cluster headache,1.0,3
+test:118731,Anaphylaxis,1.0,3
+test:121061,Boerhaave,1.0,4
+test:121292,Pneumonia,1.0,4
+test:121813,GERD,1.0,3
+test:12528,Acute otitis media,1.0,4
+test:125929,Allergic sinusitis,1.0,3
+test:126942,Acute COPD exacerbation / infection,1.0,3
+test:127556,Acute rhinosinusitis,,4
+test:128997,Bronchiectasis,1.0,4
+test:129841,Pancreatic neoplasm,1.0,3
+test:130885,Pulmonary embolism,2.0,6
+test:131162,Panic attack,1.0,4
+test:131403,Atrial fibrillation,1.0,4
+test:132679,Influenza,1.0,3
+test:1333,Pancreatic neoplasm,1.0,3
+test:1334,Acute pulmonary edema,1.0,4
+test:15080,Acute laryngitis,1.0,4
+test:18016,Ebola,1.0,3
+test:18505,Acute pulmonary edema,1.0,3
+test:19168,Whooping cough,1.0,3
+test:20922,Pericarditis,,4
+test:21201,Acute rhinosinusitis,1.0,4
+test:2255,Croup,2.0,3
+test:24765,Bronchospasm / acute asthma exacerbation,1.0,4
+test:26133,Pneumonia,1.0,4
+test:26970,GERD,1.0,3
+test:28012,Boerhaave,1.0,4
+test:30946,Allergic sinusitis,1.0,4
+test:33265,Larygospasm,1.0,4
+test:34188,Unstable angina,1.0,3
+test:34526,Unstable angina,1.0,3
+test:35193,Chagas,1.0,3
+test:36688,URTI,1.0,3
+test:37106,Bronchiolitis,2.0,6
+test:38974,Chronic rhinosinusitis,1.0,3
+test:39056,Myasthenia gravis,1.0,3
+test:39464,Inguinal hernia,,6
+test:39540,Scombroid food poisoning,1.0,3
+test:40583,Whooping cough,1.0,5
+test:41043,Spontaneous pneumothorax,1.0,4
+test:41659,Possible NSTEMI / STEMI,1.0,4
+test:44839,Anemia,1.0,3
+test:45547,Bronchitis,1.0,4
+test:46655,Pericarditis,1.0,4
+test:47148,Spontaneous pneumothorax,1.0,4
+test:49314,Acute otitis media,1.0,4
+test:51329,Myocarditis,1.0,3
+test:51510,Epiglottitis,1.0,4
+test:51699,URTI,1.0,4
+test:54031,Acute laryngitis,,5
+test:54407,Possible NSTEMI / STEMI,1.0,4
+test:57219,Larygospasm,1.0,4
+test:58606,Chronic rhinosinusitis,1.0,3
+test:58668,Inguinal hernia,1.0,4
+test:5929,Spontaneous rib fracture,1.0,4
+test:60858,Cluster headache,1.0,5
+test:63258,Stable angina,,3
+test:64020,PSVT,1.0,4
+test:65655,Bronchitis,1.0,3
+test:68879,Sarcoidosis,1.0,4
+test:72661,Ebola,1.0,4
+test:74383,Tuberculosis,1.0,3
+test:75577,Guillain-Barré syndrome,1.0,3
+test:77490,Bronchospasm / acute asthma exacerbation,1.0,4
+test:77521,Scombroid food poisoning,1.0,3
+test:78726,Panic attack,1.0,4
+test:79723,Tuberculosis,1.0,5
+test:80383,Myocarditis,1.0,4
+test:80639,SLE,1.0,3
+test:82357,Spontaneous rib fracture,1.0,5
+test:82580,Bronchiolitis,1.0,5
+test:82790,Viral pharyngitis,1.0,3
+test:83165,Pulmonary neoplasm,1.0,3
+test:83391,SLE,1.0,3
+test:83901,Guillain-Barré syndrome,1.0,3
+test:83913,Chagas,1.0,4
+test:851,Bronchiectasis,1.0,3
+test:85371,Stable angina,1.0,4
+test:85739,Croup,,5
+test:86148,Epiglottitis,1.0,3
+test:86910,Localized edema,1.0,3
+test:91648,PSVT,1.0,5
+test:92249,Atrial fibrillation,3.0,4
+test:94089,Acute COPD exacerbation / infection,1.0,4
+test:95053,Acute dystonic reactions,1.0,5
+test:95643,Viral pharyngitis,1.0,3

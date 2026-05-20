@@ -1,0 +1,104 @@
+{
+  "policy_name": "trigger=hypothesis_branch_trigger_mlp_v1|threshold=0.80|max_branches=3|continuation=0.40|judge=adaptive_value_graph_bayes_mlp_resolver_v1",
+  "selected_before_live_results": true,
+  "source_analysis": "Notebook 30/32/33/35 candidate-pool and adaptive branching analysis; branch targets are computed from visible graph/Bayes/MLP differentials and continuation is label-free.",
+  "inputs_used_for_decisions": [
+    "visible evidence ledger",
+    "learned branch-trigger MLP",
+    "target-hypothesis assignment table",
+    "partial-evidence diagnostic MLP",
+    "Notebook 16 graph edges",
+    "Notebook 19 Bayes likelihoods/priors",
+    "confounder pair coverage graph"
+  ],
+  "branch_trigger_threshold": 0.8,
+  "adaptive_continuation_value_threshold": 0.4,
+  "max_branches": 3,
+  "branch_mlp_validation_summary": [
+    {
+      "train_states": 4000,
+      "validate_states": 2000,
+      "branch_label_rate_train": 0.434,
+      "branch_label_rate_validate": 0.4325,
+      "selected_threshold": 0.8,
+      "selected_threshold_precision": 0.9167950693374423,
+      "selected_threshold_recall": 0.6878612716763006,
+      "selected_threshold_branch_rate": 0.3245,
+      "auc": 0.9502839245244581,
+      "average_precision": 0.9193065336868226,
+      "brier_score": 0.08461269178100292
+    }
+  ],
+  "resolver_validation_summary": [
+    {
+      "validate_candidate_rows": 16487,
+      "validate_positive_rate": 0.11002608115484927,
+      "candidate_auc": 0.9569051481803501,
+      "candidate_average_precision": 0.8179127575319558
+    }
+  ],
+  "branch_profile_templates": [
+    {
+      "role_kind": "graph_bayes_challenger",
+      "role_name_prefix": "Graph/Bayes hypothesis scout",
+      "directive_template": "Treat {target_hypothesis} as the assigned challenger to {base_prediction}. Actively seek evidence that would support or refute {target_hypothesis}, especially roots that separate it from {base_prediction}."
+    },
+    {
+      "role_kind": "pairwise_discriminator",
+      "role_name_prefix": "Pairwise discriminator scout",
+      "directive_template": "Your assigned job is to resolve {base_prediction} versus {target_hypothesis}. Prefer evidence roots with high pairwise discriminator utility before broad exploration."
+    },
+    {
+      "role_kind": "counteranchor_stress_test",
+      "role_name_prefix": "Counter-anchor stress-test scout",
+      "directive_template": "Assume the base answer {base_prediction} may be an anchoring error. Build the best evidence-grounded case for {target_hypothesis}, then abandon it only if the revealed ledger contradicts it."
+    }
+  ],
+  "metrics": {
+    "num_cases": 98,
+    "accuracy": 0.8775510204081632,
+    "num_correct": 86,
+    "top3_accuracy": 0.9081632653061225,
+    "top5_accuracy": 0.9285714285714286,
+    "base_top3_accuracy": 0.8877551020408163,
+    "base_top5_accuracy": 0.9081632653061225,
+    "macro_f1": 0.8653061224489798,
+    "base_accuracy": 0.8469387755102041,
+    "base_num_correct": 83,
+    "wins_vs_base": 5,
+    "regressions_vs_base": 2,
+    "changed_predictions": 15,
+    "branch_trigger_rate": 0.01020408163265306,
+    "branches_spawned_total": 1,
+    "mean_branches_spawned": 0.01020408163265306,
+    "mean_selected_requests": 8.204081632653061,
+    "mean_base_requests": 8.204081632653061,
+    "mean_total_branch_requests": 8.306122448979592,
+    "total_api_calls": 903,
+    "total_input_tokens": 2025842,
+    "total_output_tokens": 105042,
+    "selection_source_distribution": {
+      "base": 83,
+      "pseudo_bayes_topk": 1,
+      "pseudo_graph_topk": 13,
+      "pseudo_mlp_top1": 1
+    },
+    "stop_reason_distribution": {
+      "agent_stop": 31,
+      "max_requests_reached": 10,
+      "selected_mlp_stop": 57
+    },
+    "run_name": "adaptive_value_branching_live_balanced2_v1",
+    "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/adaptive_value_branching_live_balanced2_v1",
+    "runtime_seconds": 2493.5406918525696,
+    "run_live_api": true,
+    "allow_dry_run_benchmark": false,
+    "branch_trigger_name": "hypothesis_branch_trigger_mlp_v1",
+    "branch_trigger_threshold": 0.8,
+    "max_branches": 3,
+    "adaptive_continuation_value_threshold": 0.4,
+    "branch_judge_name": "adaptive_value_graph_bayes_mlp_resolver_v1",
+    "dry_run_force_branch_path_smoke": true,
+    "promotion_decision": "not_promoted_pending_analysis_or_keep_prior_confirmed_method"
+  }
+}

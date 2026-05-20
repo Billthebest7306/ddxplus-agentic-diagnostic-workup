@@ -1,0 +1,7 @@
+prefix,candidate_pool_recall_count,num_correct,candidate_pool_misses,misses
+no_branch,46,45,test:81691; test:35039; test:76022,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis; test:81691:Croup->Acute otitis media; test:35039:Myocarditis->Pericarditis; test:76022:Panic attack->Myocarditis
+branch1_only,49,48,,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis
+branch2_only,47,46,test:81691; test:35039,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis; test:81691:Croup->Acute otitis media; test:35039:Myocarditis->Pericarditis
+branch3_only,47,46,test:81691; test:35039,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis; test:81691:Croup->Acute otitis media; test:35039:Myocarditis->Pericarditis
+branch1_2,49,48,,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis
+branch1_2_3,49,48,,test:111176:Acute rhinosinusitis->Chronic rhinosinusitis

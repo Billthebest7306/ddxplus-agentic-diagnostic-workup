@@ -5056,3 +5056,468 @@ Next action:
 
 - independently confirm the `gradient_boosting_name_family` resolver on a fresh trace, held-out replicate, or pre-registered validation procedure before reporting it as the selected resolver
 - if confirmation fails, implement a close-confounder adjudicator or cheap discriminator-question mechanism for acute-vs-chronic rhinosinusitis and Bronchitis-vs-URTI
+
+## 79. Notebook 33 Close-Confounder Discriminator
+
+Implemented and executed Notebook `33`:
+
+- `notebooks/33_close_confounder_discriminator.ipynb`
+- source script: `scripts/close_confounder_discriminator_nb33.py`
+- report: `reports/algorithmic_ledger/close_confounder_discriminator_report.md`
+- artifact root: `artifacts/trajectory_replicates/close_confounder_discriminator_49case_v1/`
+
+Notebook `33` tests the next targeted hypothesis from Notebook `32`: candidate generation is basically solved, so the remaining useful work is selective discrimination among close confounders rather than another broad resolver sweep.
+
+Selected policy:
+
+```text
+close_confounder_discriminator_v1
+base resolver = fixed Notebook 32 gradient_boosting_name_family row
+flag = same-family or near-name top-2 candidate pair with missing pair utility
+extra evidence = up to 2 roots ranked by train-derived JS separation * root MI
+override = challenger only if extra-root log Bayes factor >= 2.0
+```
+
+Execution:
+
+- static parse passed for all Notebook `33` code cells
+- Notebook `33` executed top-to-bottom offline with no API calls
+- artifact contract passed
+- reference checks passed: Notebook `31` recovered at `46/49`; Notebook `32` GBM recovered at `47/49`
+
+Result:
+
+| System | Correct | Mean selected requests | Mean total branch requests |
+|---|---:|---:|---:|
+| Notebook `30` hand resolver | 44/49 | 6.78 | 12.10 |
+| Notebook `31` compact neural resolver | 46/49 | 6.78 | 12.10 |
+| Notebook `32` GBM diagnostic row | 47/49 | 6.78 | 12.10 |
+| Notebook `33` close-confounder discriminator | 48/49 | 7.02 | 12.35 |
+
+Paired result:
+
+- wins vs Notebook `31`: 2
+- regressions vs Notebook `31`: 0
+- wins vs Notebook `32` GBM: 1
+- regressions vs Notebook `32` GBM: 0
+- flagged cases: 6/49
+- overrides applied: 1/49
+- extra evidence requests: 12 total, 0.245 per case
+
+Flagged cases:
+
+| Case | True diagnosis | Anchor | Challenger | Extra roots | Decision |
+|---|---|---|---|---|---|
+| `test:111176` | Acute rhinosinusitis | Chronic rhinosinusitis | Acute rhinosinusitis | `E_55`, `E_56` | no override; still wrong |
+| `test:11655` | Bronchitis | URTI | Bronchitis | `E_55`, `E_54` | override; fixed |
+| `test:130566` | Chronic rhinosinusitis | Chronic rhinosinusitis | Acute rhinosinusitis | `E_55`, `E_56` | no override; correct |
+| `test:35039` | Myocarditis | Myocarditis | Pericarditis | `E_54`, `E_57` | no override; correct |
+| `test:39033` | Viral pharyngitis | Viral pharyngitis | URTI | `E_55`, `E_54` | no override; correct |
+| `test:62878` | Pericarditis | Pericarditis | PSVT | `E_54`, `E_55` | no override; correct |
+
+Interpretation:
+
+- Notebook `33` is the strongest offline candidate-pool final-head result so far.
+- It provides the first non-oracle saved artifact at `48/49`, using only requested extra evidence and no full-evidence diagnostic features.
+- The method is not a final promoted live result. The fixed GBM base row came from Notebook `32` ablation inspection, so this should be described as an offline candidate requiring independent confirmation on a fresh trace or held-out pool.
+- The remaining miss, Acute rhinosinusitis vs Chronic rhinosinusitis, remains difficult because the selected discriminator roots do not produce a Bayes-factor case for the acute label.
+
+Next action:
+
+- independently confirm Notebook `33` on a fresh live candidate pool or separate held-out replicate
+- if confirmation holds, present Notebook `33` as a candidate-pool final-head enhancement with a separate request-cost tier
+- do not claim `49/49`; the `49/49` candidate-pool oracle still uses labels and remains diagnostic only
+
+## 80. Notebook 34 Candidate-Recall-Gated Branching Efficiency Lab
+
+Implemented and executed Notebook `34`:
+
+- `notebooks/34_candidate_recall_gated_branching_efficiency_lab.ipynb`
+- source script: `scripts/candidate_recall_gated_branching_efficiency_nb34.py`
+- report: `reports/algorithmic_ledger/candidate_recall_gated_branching_efficiency_report.md`
+- artifact root: `artifacts/trajectory_replicates/candidate_recall_gated_branching_efficiency_49case_v1/`
+
+Notebook `34` tests the efficiency question raised after Notebook `33`: candidate generation is strong enough, but the three-branch hypothesis-forced pool is expensive. The control question is whether the saved Notebook `30` branch pool can be pruned while keeping the key property:
+
+```text
+candidate-pool recall = 49/49
+final accuracy = 48/49
+```
+
+Method:
+
+- keep base candidates and graph/Bayes/MLP pseudo-candidates as free final-head candidates
+- include LLM branch candidates only if the saved branch-trigger probability crosses a threshold
+- limit triggered cases to the first `k` highest-priority hypothesis branches
+- resolve with the fixed Notebook `32` `gradient_boosting_name_family` candidate score
+- apply the Notebook `33` close-confounder discriminator when the replayed top pair matches the saved discriminator pair
+
+Execution:
+
+- static parse passed for all Notebook `34` code cells
+- Notebook `34` equivalent script executed top-to-bottom offline with no API calls
+- artifact contract passed
+
+Important result:
+
+| Policy | Candidate-pool recall | Correct | Mean selected requests | Mean total requests | P90 total | Max total |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `33` native | 49/49 | 48/49 | 7.02 | 12.35 | 26.8 | 85 |
+| Notebook `34` selected replay | 49/49 | 48/49 | 7.16 | 8.98 | 19.6 | 48 |
+
+Selected policy:
+
+```text
+candidate_recall_gated_branching_v1
+branch_trigger_threshold = 0.80
+branch_budget = 1 highest-priority hypothesis branch
+resolver = Notebook 32 gradient_boosting_name_family
+final discriminator = Notebook 33 close-confounder Bayes-factor override
+```
+
+The absolute cheapest same-accuracy replay row uses a threshold around `0.8058`, with mean total requests `8.80`, but that threshold is a knife-edge between an unnecessary branch case and the necessary Croup branch. The selected policy uses `0.80` for a small robustness margin.
+
+Interpretation:
+
+- threshold alone is not the main efficiency lever because the useful Croup branch and an unnecessary Acute otitis media branch have almost identical trigger scores
+- branch budget is the key lever: one highest-priority branch preserves the full candidate-pool recall and final `48/49`
+- this reduces mean total branch requests by `27.3%` versus Notebook `33` native replay
+- the remaining miss is still `test:111176`, Acute rhinosinusitis predicted as Chronic rhinosinusitis
+
+Next action:
+
+- replace the hard one-branch cap with an adaptive continuation controller that can allow branch 2/3 only when another branch has positive decision value
+- report both native adaptive cost and hard-cap cost views for comparison against MEDDxAgent-style 5/10/15 question budgets
+- keep Notebook `34` as an offline pruning replay until live-confirmed
+
+## 81. Notebook 35 Adaptive Value Branching Controller
+
+Implemented and executed Notebook `35`:
+
+- `notebooks/35_adaptive_value_branching_controller.ipynb`
+- source script: `scripts/adaptive_value_branching_controller_nb35.py`
+- report: `reports/algorithmic_ledger/adaptive_value_branching_controller_report.md`
+- artifact root: `artifacts/trajectory_replicates/adaptive_value_branching_controller_49case_v1/`
+
+Notebook `35` addresses the concern that Notebook `34` looked like a hard-coded one-branch policy. It keeps the same saved Notebook `30`/`32`/`33` replay inputs, but changes the controller:
+
+```text
+max_branches = 3
+branch_trigger_threshold = 0.80
+launch branch 1 when the learned trigger fires
+after each completed branch, launch branch 2/3 only if continuation_value >= 0.40
+```
+
+Continuation value is label-free:
+
+```text
+continuation_value = unresolved_mass * next_priority_ratio * suppression
+unresolved_mass = 0.45 * ledger_disagreement
+                + 0.30 * resolver_entropy
+                + 0.25 * margin_uncertainty
+```
+
+Suppression terms reduce continuation value when the current diagnosis has enough graph/Bayes/MLP support or when the cheaper Notebook `33` close-confounder discriminator is available. This makes branch count an adaptive decision rather than a fixed one-branch cap.
+
+Execution:
+
+- `python3 -m py_compile scripts/adaptive_value_branching_controller_nb35.py` passed
+- Notebook `35` code cells static-parsed successfully
+- Notebook-equivalent script executed top-to-bottom offline with no API calls
+- artifact contract passed
+
+Selected result:
+
+| System | Candidate-pool recall | Correct | Mean selected requests | Mean total requests | P90 total | Max total |
+|---|---:|---:|---:|---:|---:|---:|
+| Notebook `33` native replay | 49/49 | 48/49 | 7.02 | 12.35 | 26.8 | 85 |
+| Notebook `34` fixed one-branch replay | 49/49 | 48/49 | 7.16 | 8.98 | 19.6 | 48 |
+| Notebook `35` adaptive controller replay | 49/49 | 48/49 | 7.16 | 8.98 | 19.6 | 48 |
+
+Interpretation:
+
+- the controller is allowed to launch up to three branches, but on this replay it chooses one branch for each high-trigger case
+- this supports the empirical Notebook `34` finding without making one branch a hard architectural constraint
+- branch 2/3 did not pass the expected-value test because the first branch either provided sufficient decision support, left a cheaper close-confounder discriminator as the better next action, or had continuation value below threshold
+- the remaining miss is still `test:111176`, Acute rhinosinusitis predicted as Chronic rhinosinusitis
+
+Next action:
+
+- live-confirm Notebook `35` with `gpt-4.1-mini`, `temperature = 0.0`, `top_p = 1.0`
+- compare the live result against MEDDxAgent-style hard evidence budgets after confirmation
+- report Notebook `35` as an adaptive offline efficiency candidate, not a promoted live method, until that confirmation is complete
+
+## 82. Notebook 36 Adaptive Branching Stress Test
+
+Implemented and executed Notebook `36`:
+
+- `notebooks/36_adaptive_branching_stress_test.ipynb`
+- source script: `scripts/adaptive_branching_stress_test_nb36.py`
+- report: `reports/algorithmic_ledger/adaptive_branching_stress_test_report.md`
+- artifact root: `artifacts/trajectory_replicates/adaptive_branching_stress_test_49case_v1/`
+
+Purpose:
+
+Notebook `35` showed that an adaptive max-3 branch controller chooses one branch on the saved 49-case replay. The open question was whether this proves the controller would spend branch 2/3 when necessary. Notebook `36` tests that offline by creating artificial stress conditions:
+
+- branch 1 removed, so branch 2 becomes the first available branch
+- branch 1 spent but hidden from the candidate pool, simulating a no-signal first branch
+- continuation threshold sweep under the no-signal branch-1 setting
+
+Execution:
+
+- `python3 -m py_compile scripts/adaptive_branching_stress_test_nb36.py` passed
+- Notebook `36` code cells static-parsed successfully
+- Notebook-equivalent script executed top-to-bottom offline with no API calls
+- artifact contract passed
+
+Prefix diagnostics:
+
+| Replay prefix | Candidate-pool recall | Correct |
+|---|---:|---:|
+| No branch | 46/49 | 45/49 |
+| Branch 1 only | 49/49 | 48/49 |
+| Branch 2 only | 47/49 | 46/49 |
+| Branch 3 only | 47/49 | 46/49 |
+| Branch 1 + 2 + 3 | 49/49 | 48/49 |
+
+Stress results:
+
+| Scenario | Candidate-pool recall | Correct | Mean total requests | Branch 2 launches | Branch 3 launches |
+|---|---:|---:|---:|---:|---:|
+| Native Notebook `35` adaptive replay | 49/49 | 48/49 | 8.98 | 0 | 0 |
+| Branch 1 removed, branch 2 remapped first | 47/49 | 46/49 | 8.33 | 6 | 0 |
+| Branch 1 no-signal, selected controller | 46/49 | 45/49 | 8.94 | 0 | 0 |
+| Branch 1 no-signal, threshold `0.05` | 47/49 | 46/49 | 11.18 | 6 | 3 |
+
+Important finding:
+
+- the saved 49-case pool has no natural case where branch 2/3 improve beyond branch 1
+- branch 1 is the only saved useful branch for Croup and Myocarditis
+- even forcing branch 2/3 cannot recover those two cases if branch 1 is removed
+- Panic attack can be recovered by branch 2/3, but the selected continuation threshold does not launch them after a no-signal branch 1
+- the main artificial failure mode is false stability: graph/Bayes/MLP can agree on the wrong current top diagnosis, suppressing continuation
+
+Interpretation:
+
+Notebook `36` does not invalidate Notebook `35`; it clarifies the evidence boundary. Notebook `35` proves efficient non-overbranching on the saved replay. It does not prove that branch 2/3 will fire under natural need, because the current 49-case branch pool lacks positive examples where branch 2/3 are actually needed after branch 1.
+
+Next action:
+
+- keep Notebook `35` as the live-confirmation candidate
+- do not claim branch-2/3 recovery has been proven
+- to prove that behavior, collect a larger max-3 branch pool or run a live confirmation where branch 2/3 opportunities can occur naturally
+
+## 83. Notebook 37 Adaptive Live Balanced Confirmation Prepared
+
+Implemented Notebook `37`:
+
+- `notebooks/37_adaptive_value_branching_live_balanced_confirmation.ipynb`
+- notebook-equivalent script: `scripts/adaptive_value_branching_live_balanced_confirmation_nb37.py`
+- report: `reports/algorithmic_ledger/adaptive_value_branching_live_balanced_confirmation_report.md`
+- planned artifact root: `artifacts/trajectory_replicates/adaptive_value_branching_live_balanced2_v1/`
+
+Purpose:
+
+Notebook `36` showed that the saved 49-case branch pool cannot prove natural branch-2/3 recovery. Notebook `37` therefore prepares the prospective larger live run:
+
+- balanced test cohort with `2` held-out cases per DDXPlus pathology
+- excludes the original Notebook `13`/`30` 49-case confirmation set when possible
+- expected size is `98` cases because this DDXPlus release has `49` pathologies
+- keeps `gpt-4.1-mini`, `temperature = 0.0`, `top_p = 1.0`
+- keeps the Notebook `35` adaptive controller: `branch_trigger_threshold = 0.80`, `max_branches = 3`, `continuation_value_threshold = 0.40`
+
+Important implementation additions:
+
+- restores top-3 and top-5 reporting for base branch, branch-selected differential, and final candidate-pool resolver differential
+- writes `candidate_pool_topk_rankings.csv`, `topk_summary.csv`, and `metrics_final.json`
+- applies the Notebook `32` `gradient_boosting_name_family` resolver after live candidate collection
+- applies a Notebook `33` style close-confounder discriminator with up to two extra train-statistic-ranked roots
+- records `adaptive_branch_decision_trace.csv` so branch 2/3 launch decisions can be audited
+
+Verification:
+
+- Notebook `37` code cells static-parsed successfully
+- `python3 -m py_compile scripts/adaptive_value_branching_live_balanced_confirmation_nb37.py` passed
+- no live API run has been executed yet
+
+Interpretation:
+
+Notebook `37` is a confirmation runner, not a new result. It should answer whether the `48/49` offline candidate-pool architecture remains strong on a fresh balanced cohort, whether candidate-pool recall remains near `100%`, and whether branch 2/3 naturally fire when harder cases require them.
+
+## 84. Notebook 37 Live Result And Failure Analysis
+
+Analyzed the completed Notebook `37` live artifacts:
+
+- artifact root: `artifacts/trajectory_replicates/adaptive_value_branching_live_balanced2_v1/`
+- updated report: `reports/algorithmic_ledger/adaptive_value_branching_live_balanced_confirmation_report.md`
+- new analysis artifacts:
+  - `notebook37_paired_outcome_analysis.csv`
+  - `notebook37_failure_modes.csv`
+  - `notebook37_truth_rank_analysis.csv`
+  - `notebook37_branch_trigger_threshold_counterfactual.csv`
+  - `notebook37_analysis_summary.json`
+
+Live result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Mean selected requests | Mean total requests |
+|---|---:|---:|---:|---:|---:|---:|
+| Base Notebook `13`-style branch | 83/98 | 0.847 | 0.888 | 0.908 | 8.20 | 8.20 |
+| Notebook `37` branch-judge selected | 86/98 | 0.878 | 0.908 | 0.929 | 8.20 | 8.31 |
+| Notebook `37` GBM + close-confounder final | 88/98 | 0.898 | 0.939 | 0.939 | 8.37 | 8.43 |
+
+Paired result:
+
+- branch-judge output had `5` wins and `2` regressions versus the base branch
+- final GBM + close-confounder output had `5` wins and `0` regressions
+- the final layer fixed the two branch-judge regressions:
+  - `test:2255`, Croup, restored by the close-confounder Bayes-factor override
+  - `test:83391`, SLE, restored by the GBM resolver selecting the base candidate
+
+Main failure:
+
+- candidate-pool recall was only `92/98`, not the `49/49` seen on the original Notebook `30`/`35` 49-case pool
+- this capped final top-3/top-5 at `92/98`
+- among the 10 final misses, 6 were candidate-pool misses and 4 were resolver misses with the truth present in the pool
+
+Candidate-pool misses:
+
+- `test:54031`, Acute laryngitis -> Viral pharyngitis
+- `test:127556`, Acute rhinosinusitis -> Pneumonia
+- `test:85739`, Croup -> Bronchitis
+- `test:39464`, Inguinal hernia -> Viral pharyngitis
+- `test:20922`, Pericarditis -> Bronchitis
+- `test:63258`, Stable angina -> Possible NSTEMI / STEMI
+
+Resolver misses with the truth present:
+
+- `test:92249`, Atrial fibrillation -> Myocarditis
+- `test:37106`, Bronchiolitis -> Bronchitis
+- `test:108410`, Myasthenia gravis -> Acute dystonic reactions
+- `test:130885`, Pulmonary embolism -> Acute dystonic reactions
+
+Branching behavior:
+
+- the selected `0.80` branch-trigger threshold fired on only `1/98` cases
+- total real LLM branches spawned: `1`
+- branch 2/3 launches: `0`
+- the only triggered case was `test:85739` Croup, but the branch was assigned to Cluster headache and ended at Bronchitis
+
+Interpretation:
+
+Notebook `37` is a useful independent confirmation, but it does not validate the optimistic `48/49` replay rate. The architecture still helps: final accuracy improves from `83/98` to `88/98` with no final regressions and modest request cost. But the old 49-case candidate-pool result did not transfer because candidate generation was no longer perfect and the adaptive branch trigger almost never activated. The next methodological fix should target candidate-pool expansion and trigger calibration, not just stronger final resolution.
+
+## 85. Notebook 38 Live Calibration Cohort Prepared
+
+Implemented Notebook `38`:
+
+- `notebooks/38_live_adaptive_branching_calibration_cohort.ipynb`
+- notebook-equivalent script: `scripts/live_adaptive_branching_calibration_cohort_nb38.py`
+- report: `reports/algorithmic_ledger/live_adaptive_branching_calibration_cohort_report.md`
+- artifact root: `artifacts/trajectory_replicates/adaptive_value_branching_live_calibration196_v1/`
+
+Purpose:
+
+Notebook `37` showed that the old replay calibration did not transfer cleanly to fresh live terminal states. Notebook `38` therefore prepares a live calibration cohort rather than another final confirmation run.
+
+Cohort design:
+
+- `4` held-out test cases per DDXPlus pathology
+- expected size: `196` cases
+- excludes prior live benchmark cases by reading existing `benchmark_cases.csv` artifacts
+- keeps `gpt-4.1-mini`, `temperature = 0.0`, `top_p = 1.0`
+
+Exploratory calibration policy:
+
+```text
+branch_trigger_threshold = 0.20
+max_branches = 3
+continuation_value_threshold = 0.20
+target candidate-pool recall for calibration = 0.98
+```
+
+The lower thresholds are intentional. Notebook `37` fired the branch trigger on only `1/98` cases at `0.80`, so a calibration run needs to collect more branch/candidate-pool behavior. These are not the frozen confirmation values.
+
+Calibration outputs:
+
+- `live_calibration_paired_outcomes.csv`
+- `live_calibration_truth_rank_analysis.csv`
+- `live_calibration_failure_modes.csv`
+- `live_calibration_branch_trigger_threshold_sweep.csv`
+- `live_calibration_resolver_margin_sweep.csv`
+- `live_calibration_candidate_source_recall.csv`
+- `selected_live_calibration_policy.json`
+
+Verification:
+
+- Notebook `38` code cells static-parsed successfully
+- `python3 -m py_compile scripts/live_adaptive_branching_calibration_cohort_nb38.py` passed
+- no live API run has been executed by Codex
+
+Interpretation:
+
+Notebook `38` is a development/calibration instrument. Its labels can be used to tune thresholds, but then its accuracy must not be reported as held-out final performance. This preparation note is superseded by the completed run analysis in section 86.
+
+## 86. Notebook 38 Live Calibration Result And Analysis
+
+Analyzed the completed Notebook `38` live artifacts:
+
+- artifact root: `artifacts/trajectory_replicates/adaptive_value_branching_live_calibration196_v1/`
+- updated report: `reports/algorithmic_ledger/live_adaptive_branching_calibration_cohort_report.md`
+- added post-run analysis artifacts:
+  - `live_calibration_post_run_analysis_summary.json`
+  - `live_calibration_post_run_case_outcomes.csv`
+
+Headline result:
+
+| System | Correct | Accuracy | Top-3 | Top-5 | Mean selected requests | Mean total requests | P90 total requests | Max total requests |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Base Notebook `13`-style branch | 172/196 | 0.878 | 0.944 | 0.964 | 6.77 | 6.77 | 17 | 24 |
+| Notebook `38` branch-judge selected | 183/196 | 0.934 | 0.974 | 0.985 | 6.79 | 9.52 | 22 | 85 |
+| Notebook `38` GBM + close-confounder final | 184/196 | 0.939 | 0.990 | 0.990 | 6.77 | 9.56 | 22 | 85 |
+
+Paired final result versus the base branch:
+
+- wins: `13`
+- regressions: `1`
+- both correct: `171`
+- both wrong: `11`
+
+Candidate-pool recall:
+
+| Candidate subset | Recall | Mean pool size |
+|---|---:|---:|
+| Base only | 166/196 = 0.847 | 0.96 |
+| Base + pseudo graph/Bayes/MLP | 181/196 = 0.923 | 3.62 |
+| Base + real branches | 179/196 = 0.913 | 1.13 |
+| All candidates | 194/196 = 0.990 | 3.79 |
+
+Branching behavior:
+
+- branch trigger rate: `23/196 = 0.117`
+- total branches spawned: `42`
+- mean branches spawned: `0.214`
+- branch count distribution: `173` cases with no branch, `12` with one branch, `3` with two branches, `8` with three branches
+
+Interpretation:
+
+Notebook `38` is much more encouraging than Notebook `37`. The lower exploratory threshold restored candidate-pool recall from `92/98` in Notebook `37` to `194/196` on the larger calibration cohort, and final top-3/top-5 also reached `194/196`. The adaptive controller also naturally launched branch 2/3 on a small subset of hard cases, which the saved 49-case replay could not demonstrate.
+
+What still went wrong:
+
+- remaining misses are mostly resolver misses, not candidate-generation misses: `10/12` final misses had the true diagnosis in the pool
+- all four Acute rhinosinusitis cases were resolved as Chronic rhinosinusitis even though Acute rhinosinusitis was present in the pool
+- two candidate-pool misses remain: `test:127067` Allergic sinusitis and `test:30358` Ebola
+- one base-correct Ebola case, `test:113762`, regressed to URTI via a pseudo-candidate resolver override
+- the mean total request cost is acceptable, but the tail is too high for a final efficiency claim: p90 `22`, max `85`
+
+Calibration implications:
+
+- the branch-trigger sweep shows threshold `0.20` flagged all candidate-pool misses but only `6/12` final errors
+- a lower threshold such as `0.05` would flag `39/196` cases and `9/12` final errors, but this is only a flagging analysis; those additional branches were not run
+- resolver score-margin is a strong suspect signal: margin threshold `0.75` flags `30/196` cases and catches `10/12` final errors
+- the next frozen policy should combine a sensitive branch trigger, a resolver-margin guard, stronger base protection for rare/high-risk base answers, and a dedicated acute/chronic rhinosinusitis discriminator before running a separate held-out confirmation cohort
+
+Claim status:
+
+Notebook `38` is a calibration result, not a final promoted method. It should be used to freeze Notebook `39` thresholds and safeguards, then tested on a separate cohort.

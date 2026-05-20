@@ -1,0 +1,45 @@
+{
+  "num_cases": 98,
+  "base_correct": 83,
+  "branchjudge_correct": 86,
+  "final_correct": 88,
+  "base_accuracy": 0.8469387755102041,
+  "branchjudge_accuracy": 0.8775510204081632,
+  "final_accuracy": 0.8979591836734694,
+  "branchjudge_wins_vs_base": 5,
+  "branchjudge_regressions_vs_base": 2,
+  "final_wins_vs_base": 5,
+  "final_regressions_vs_base": 0,
+  "candidate_pool_recall_count": 92,
+  "candidate_pool_recall": 0.9387755102040817,
+  "candidate_pool_misses": [
+    "test:54031",
+    "test:127556",
+    "test:85739",
+    "test:39464",
+    "test:20922",
+    "test:63258"
+  ],
+  "resolver_misses_truth_in_pool": [
+    "test:92249",
+    "test:37106",
+    "test:108410",
+    "test:130885"
+  ],
+  "branch_trigger_count": 1,
+  "branch_trigger_rate": 0.01020408163265306,
+  "branches_spawned_total": 1,
+  "close_confounder_flags": 6,
+  "close_confounder_overrides": 1,
+  "mean_selected_requests_final": 8.36734693877551,
+  "mean_total_requests_final": 8.428571428571429,
+  "p90_total_requests_final": 22.599999999999994,
+  "max_total_requests_final": 24.0,
+  "truth_rank_distribution": {
+    "1.0": 87,
+    "2.0": 4,
+    "3.0": 1,
+    "missing": 6
+  },
+  "mean_candidate_pool_size": 3.7448979591836733
+}

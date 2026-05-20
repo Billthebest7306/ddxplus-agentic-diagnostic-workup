@@ -1,0 +1,570 @@
+[
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.9630078481278076,
+        "base_score_rank": 1,
+        "candidate_label": false,
+        "candidate_pathology": "Chronic rhinosinusitis",
+        "final_discriminator_score": 0.9630078481278076,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.3350989476224553,
+        "base_score_rank": 2,
+        "candidate_label": true,
+        "candidate_pathology": "Acute rhinosinusitis",
+        "final_discriminator_score": 0.3350989476224553,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.013905728755395,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Allergic sinusitis",
+        "final_discriminator_score": 0.013905728755395,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": true,
+      "base_correct": false,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.9630078481278076,
+      "base_score_margin": 0.6279089005053523,
+      "base_selected_pathology": "Chronic rhinosinusitis",
+      "candidate_pair_families_overlap": "respiratory",
+      "case_id": "test:111176",
+      "challenger_pathology": "Acute rhinosinusitis",
+      "challenger_score": 0.3350989476224553,
+      "correct": false,
+      "extra_log_bayes_factor_challenger_vs_anchor": -0.2566635044775088,
+      "extra_pair_posterior_challenger": 0.43618406885592437,
+      "extra_root_ids": "[\"E_55\", \"E_56\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": false,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 0.11007877005274876,
+      "override_applied": false,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Chronic rhinosinusitis",
+      "true_pathology": "Acute rhinosinusitis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "Chronic rhinosinusitis",
+        "case_id": "test:111176",
+        "challenger_pathology": "Acute rhinosinusitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_109|V_122|V_125|V_32|V_89",
+        "pair_utility": 0.06320526863570142,
+        "question_en": "Do you feel pain somewhere?",
+        "root_evidence_id": "E_55",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "Chronic rhinosinusitis",
+        "case_id": "test:111176",
+        "challenger_pathology": "Acute rhinosinusitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "4",
+        "pair_utility": 0.04687350141704734,
+        "question_en": "How intense is the pain?",
+        "root_evidence_id": "E_56",
+        "root_rank": 2
+      }
+    ]
+  },
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.9176225145970988,
+        "base_score_rank": 1,
+        "candidate_label": false,
+        "candidate_pathology": "URTI",
+        "final_discriminator_score": 0.9176225145970988,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.4377152990585545,
+        "base_score_rank": 2,
+        "candidate_label": true,
+        "candidate_pathology": "Bronchitis",
+        "final_discriminator_score": 10.437715299058555,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.0427306076644627,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Influenza",
+        "final_discriminator_score": 0.0427306076644627,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": false,
+      "base_correct": false,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.9176225145970988,
+      "base_score_margin": 0.47990721553854426,
+      "base_selected_pathology": "URTI",
+      "candidate_pair_families_overlap": "respiratory",
+      "case_id": "test:11655",
+      "challenger_pathology": "Bronchitis",
+      "challenger_score": 0.4377152990585545,
+      "correct": true,
+      "extra_log_bayes_factor_challenger_vs_anchor": 15.188919048045255,
+      "extra_pair_posterior_challenger": 0.9999997467577513,
+      "extra_root_ids": "[\"E_55\", \"E_54\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": true,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 0.938430562239632,
+      "override_applied": true,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Bronchitis",
+      "true_pathology": "Bronchitis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "URTI",
+        "case_id": "test:11655",
+        "challenger_pathology": "Bronchitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_159|V_29|V_55",
+        "pair_utility": 0.4708257409926702,
+        "question_en": "Do you feel pain somewhere?",
+        "root_evidence_id": "E_55",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "URTI",
+        "case_id": "test:11655",
+        "challenger_pathology": "Bronchitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_181",
+        "pair_utility": 0.46760482124696173,
+        "question_en": "Characterize your pain:",
+        "root_evidence_id": "E_54",
+        "root_rank": 2
+      }
+    ]
+  },
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.7540863587762149,
+        "base_score_rank": 1,
+        "candidate_label": true,
+        "candidate_pathology": "Chronic rhinosinusitis",
+        "final_discriminator_score": 0.7540863587762149,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.7288953126112047,
+        "base_score_rank": 2,
+        "candidate_label": false,
+        "candidate_pathology": "Acute rhinosinusitis",
+        "final_discriminator_score": 0.7288953126112047,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0138598981038937,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Ebola",
+        "final_discriminator_score": 0.0138598981038937,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0134103297020727,
+        "base_score_rank": 4,
+        "candidate_label": false,
+        "candidate_pathology": "Bronchospasm / acute asthma exacerbation",
+        "final_discriminator_score": 0.0134103297020727,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": true,
+      "base_correct": true,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.7540863587762149,
+      "base_score_margin": 0.025191046165010222,
+      "base_selected_pathology": "Chronic rhinosinusitis",
+      "candidate_pair_families_overlap": "respiratory",
+      "case_id": "test:130566",
+      "challenger_pathology": "Acute rhinosinusitis",
+      "challenger_score": 0.7288953126112047,
+      "correct": true,
+      "extra_log_bayes_factor_challenger_vs_anchor": -0.3362023248468905,
+      "extra_pair_posterior_challenger": 0.4167322716981582,
+      "extra_root_ids": "[\"E_55\", \"E_56\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": false,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 0.11007877005274876,
+      "override_applied": false,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Chronic rhinosinusitis",
+      "true_pathology": "Chronic rhinosinusitis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "Chronic rhinosinusitis",
+        "case_id": "test:130566",
+        "challenger_pathology": "Acute rhinosinusitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_108|V_109|V_125|V_32|V_89",
+        "pair_utility": 0.06320526863570142,
+        "question_en": "Do you feel pain somewhere?",
+        "root_evidence_id": "E_55",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "Chronic rhinosinusitis",
+        "case_id": "test:130566",
+        "challenger_pathology": "Acute rhinosinusitis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "5",
+        "pair_utility": 0.04687350141704734,
+        "question_en": "How intense is the pain?",
+        "root_evidence_id": "E_56",
+        "root_rank": 2
+      }
+    ]
+  },
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.9930246745237395,
+        "base_score_rank": 1,
+        "candidate_label": true,
+        "candidate_pathology": "Myocarditis",
+        "final_discriminator_score": 0.9930246745237395,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.9033291655047632,
+        "base_score_rank": 2,
+        "candidate_label": false,
+        "candidate_pathology": "Pericarditis",
+        "final_discriminator_score": 0.9033291655047632,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0026799166725584,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Acute pulmonary edema",
+        "final_discriminator_score": 0.0026799166725584,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0021009109265618,
+        "base_score_rank": 4,
+        "candidate_label": false,
+        "candidate_pathology": "GERD",
+        "final_discriminator_score": 0.0021009109265618,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0020278385154667,
+        "base_score_rank": 5,
+        "candidate_label": false,
+        "candidate_pathology": "Sarcoidosis",
+        "final_discriminator_score": 0.0020278385154667,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": false,
+      "base_correct": true,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.9930246745237395,
+      "base_score_margin": 0.08969550901897638,
+      "base_selected_pathology": "Myocarditis",
+      "candidate_pair_families_overlap": "cardiac",
+      "case_id": "test:35039",
+      "challenger_pathology": "Pericarditis",
+      "challenger_score": 0.9033291655047632,
+      "correct": true,
+      "extra_log_bayes_factor_challenger_vs_anchor": -4.5239540067943995,
+      "extra_pair_posterior_challenger": 0.010729678734770738,
+      "extra_root_ids": "[\"E_54\", \"E_57\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": false,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 0.65929086237309,
+      "override_applied": false,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Myocarditis",
+      "true_pathology": "Myocarditis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "Myocarditis",
+        "case_id": "test:35039",
+        "challenger_pathology": "Pericarditis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_179",
+        "pair_utility": 0.3718762807161022,
+        "question_en": "Characterize your pain:",
+        "root_evidence_id": "E_54",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "Myocarditis",
+        "case_id": "test:35039",
+        "challenger_pathology": "Pericarditis",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_123",
+        "pair_utility": 0.28741458165698774,
+        "question_en": "Does the pain radiate to another location?",
+        "root_evidence_id": "E_57",
+        "root_rank": 2
+      }
+    ]
+  },
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.9662107623165616,
+        "base_score_rank": 1,
+        "candidate_label": true,
+        "candidate_pathology": "Viral pharyngitis",
+        "final_discriminator_score": 0.9662107623165616,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.6004394209680837,
+        "base_score_rank": 2,
+        "candidate_label": false,
+        "candidate_pathology": "URTI",
+        "final_discriminator_score": 0.6004394209680837,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.0142593072605256,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Acute otitis media",
+        "final_discriminator_score": 0.0142593072605256,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": false,
+      "base_correct": true,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.9662107623165616,
+      "base_score_margin": 0.3657713413484779,
+      "base_selected_pathology": "Viral pharyngitis",
+      "candidate_pair_families_overlap": "respiratory",
+      "case_id": "test:39033",
+      "challenger_pathology": "URTI",
+      "challenger_score": 0.6004394209680837,
+      "correct": true,
+      "extra_log_bayes_factor_challenger_vs_anchor": -17.64584076187722,
+      "extra_pair_posterior_challenger": 2.1702447742242413e-08,
+      "extra_root_ids": "[\"E_55\", \"E_54\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": false,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 1.0197435575853904,
+      "override_applied": false,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Viral pharyngitis",
+      "true_pathology": "Viral pharyngitis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "Viral pharyngitis",
+        "case_id": "test:39033",
+        "challenger_pathology": "URTI",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_137|V_148|V_20|V_21",
+        "pair_utility": 0.5314861395192261,
+        "question_en": "Do you feel pain somewhere?",
+        "root_evidence_id": "E_55",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "Viral pharyngitis",
+        "case_id": "test:39033",
+        "challenger_pathology": "URTI",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_161|V_181",
+        "pair_utility": 0.48825741806616424,
+        "question_en": "Characterize your pain:",
+        "root_evidence_id": "E_54",
+        "root_rank": 2
+      }
+    ]
+  },
+  {
+    "candidate_score_ladder": [
+      {
+        "base_score": 0.757431411224642,
+        "base_score_rank": 1,
+        "candidate_label": true,
+        "candidate_pathology": "Pericarditis",
+        "final_discriminator_score": 0.757431411224642,
+        "is_anchor": true,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": true
+      },
+      {
+        "base_score": 0.7208131024166071,
+        "base_score_rank": 2,
+        "candidate_label": false,
+        "candidate_pathology": "PSVT",
+        "final_discriminator_score": 0.7208131024166071,
+        "is_anchor": false,
+        "is_challenger": true,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.683937729498934,
+        "base_score_rank": 3,
+        "candidate_label": false,
+        "candidate_pathology": "Myocarditis",
+        "final_discriminator_score": 0.683937729498934,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.1965986139260941,
+        "base_score_rank": 4,
+        "candidate_label": false,
+        "candidate_pathology": "Anemia",
+        "final_discriminator_score": 0.1965986139260941,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.1683692220169294,
+        "base_score_rank": 5,
+        "candidate_label": false,
+        "candidate_pathology": "Panic attack",
+        "final_discriminator_score": 0.1683692220169294,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.1533305983553002,
+        "base_score_rank": 6,
+        "candidate_label": false,
+        "candidate_pathology": "Atrial fibrillation",
+        "final_discriminator_score": 0.1533305983553002,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      },
+      {
+        "base_score": 0.1123773406745298,
+        "base_score_rank": 7,
+        "candidate_label": false,
+        "candidate_pathology": "Sarcoidosis",
+        "final_discriminator_score": 0.1123773406745298,
+        "is_anchor": false,
+        "is_challenger": false,
+        "selected_by_close_confounder_discriminator": false
+      }
+    ],
+    "case": {
+      "acute_chronic_variant": false,
+      "base_correct": true,
+      "base_resolver": "gradient_boosting_name_family",
+      "base_score": 0.757431411224642,
+      "base_score_margin": 0.03661830880803485,
+      "base_selected_pathology": "Pericarditis",
+      "candidate_pair_families_overlap": "cardiac",
+      "case_id": "test:62878",
+      "challenger_pathology": "PSVT",
+      "challenger_score": 0.7208131024166071,
+      "correct": true,
+      "extra_log_bayes_factor_challenger_vs_anchor": -11.735003494238267,
+      "extra_pair_posterior_challenger": 8.008464583313079e-06,
+      "extra_root_ids": "[\"E_54\", \"E_55\"]",
+      "extra_roots_requested": 2,
+      "flagged_for_discriminator": true,
+      "improvement_vs_base_resolver": false,
+      "is_close_confounder_pair": true,
+      "missing_pair_utility_mass": 0.8323752077103941,
+      "override_applied": false,
+      "regression_vs_base_resolver": false,
+      "selected_pathology": "Pericarditis",
+      "true_pathology": "Pericarditis"
+    },
+    "root_rankings": [
+      {
+        "anchor_pathology": "Pericarditis",
+        "case_id": "test:62878",
+        "challenger_pathology": "PSVT",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_179|V_192",
+        "pair_utility": 0.46736066270416854,
+        "question_en": "Characterize your pain:",
+        "root_evidence_id": "E_54",
+        "root_rank": 1
+      },
+      {
+        "anchor_pathology": "Pericarditis",
+        "case_id": "test:62878",
+        "challenger_pathology": "PSVT",
+        "flagged_for_discriminator": true,
+        "observed_outcome_state": "V_101|V_160|V_29",
+        "pair_utility": 0.36501454500622554,
+        "question_en": "Do you feel pain somewhere?",
+        "root_evidence_id": "E_55",
+        "root_rank": 2
+      }
+    ]
+  }
+]

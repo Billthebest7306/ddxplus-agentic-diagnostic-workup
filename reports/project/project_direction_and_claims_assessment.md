@@ -1,6 +1,6 @@
 # Project Direction And Claims Assessment
 
-Last updated: 2026-05-08
+Last updated: 2026-05-20
 
 ## Executive Assessment
 
@@ -20,6 +20,8 @@ The stronger, cleaner, and currently defensible claim is narrower:
 > On a balanced DDXPlus live confirmation, a structured sequential workup policy with online partial-evidence MLP stopping reached `43/49 = 0.878` accuracy and `0.939` top-5 while using only `6.59` requested evidence fields per case. A fresh live run of the same backbone inside Notebook `24` reached `45/49 = 0.918` with `6.20` requests. Earlier 24-case controls showed that this MLP stop rule could preserve the best LLM-only sequential accuracy while reducing requested evidence by about half.
 
 That is a real result. It is not just a demo. It should still be presented as a course-project live confirmation rather than a definitive benchmark against official DDXPlus RL methods.
+
+Later candidate-pool work strengthens the research path but should be kept in the right evidence tier. Notebook `30` showed that hypothesis-forced branching plus graph/Bayes/MLP pseudo-candidates can put the correct diagnosis somewhere in the small resolver candidate pool for `49/49` cases. Notebook `33` then reached `48/49` offline by adding targeted close-confounder evidence, and Notebook `35` preserved that result with an adaptive branch-continuation controller at `8.98` mean total replayed requests. Notebook `36` stress-tested the adaptive claim and found that the saved 49-case pool proves efficient non-overbranching, but not natural branch-2/3 rescue. Notebook `37` live-confirmed the architecture on a fresh 98-case cohort and improved the base from `83/98` to `88/98`, but candidate-pool recall fell to `92/98`. Notebook `38` then ran a 196-case calibration cohort with more sensitive branching: final accuracy improved from `172/196` to `184/196`, candidate-pool recall recovered to `194/196`, and top-3/top-5 also reached `194/196`. This is now the strongest follow-up direction, but Notebook `38` is a calibration result, not a final held-out claim.
 
 ## What The Project Is Really Becoming
 
@@ -164,6 +166,12 @@ Key results:
 | Notebook 23 calibrated graph-Bayes rescue, 49 cases | 0.959 | n/a | n/a | 6.96 |
 | Notebook 28 MLP-gated branching, 49 cases | 0.898 | 0.959 | 0.864 | 6.63 selected / 9.96 total branch |
 | Notebook 29 listwise differential adjudicator, 49 cases | 0.918 | n/a | n/a | 6.63 selected / 9.96 total branch |
+| Notebook 30 hypothesis-forced branching, 49 cases | 0.898 | 0.959 | 0.871 | 6.78 selected / 12.10 total branch |
+| Notebook 31 neural candidate-pool resolver, 49 cases | 0.939 | n/a | n/a | 6.78 selected / 12.10 total branch |
+| Notebook 33 close-confounder discriminator, 49 cases | 0.980 | n/a | n/a | 7.02 selected / 12.35 total branch |
+| Notebook 35 adaptive value branching, 49 cases | 0.980 | n/a | n/a | 7.16 selected / 8.98 total branch |
+| Notebook 37 adaptive live balanced final, 98 cases | 0.898 | 0.939 | n/a | 8.37 selected / 8.43 total branch |
+| Notebook 38 adaptive live calibration final, 196 cases | 0.939 | 0.990 | n/a | 6.77 selected / 9.56 total branch |
 
 Notebook 13 reduced requested evidence by:
 
@@ -184,6 +192,8 @@ Interpretation:
 - Notebook 24 tested that rescue layer live. It did not promote the rescue layer, but the fresh live base reached `45/49` with `6.20` mean requests.
 - Notebook 28 tested learned-gate live branching and reached `44/49` with zero regressions versus its own base.
 - Notebook 29 tested ranked-differential listwise adjudication over frozen Notebook 28 traces and reached `45/49` with zero regressions, but did not reach the `47/49` promotion target.
+- Notebook 37 confirmed that the adaptive candidate-pool architecture can improve a fresh larger base cohort, from `83/98` to `88/98`, but also showed that candidate-pool recall was not stable.
+- Notebook 38 restored candidate-pool recall to `194/196` on a larger live calibration cohort and improved the same-run base from `172/196` to `184/196`; because it is calibration data, the next claim requires a frozen held-out confirmation.
 
 ## Are We Done With The Simple Sequential Agent?
 
@@ -476,6 +486,8 @@ The project should be presented as an evidence-acquisition study:
 19. Notebook 29 tested ranked-differential listwise adjudication over Notebook 28 traces; it reached `45/49` with zero regressions and showed a `47/49` to `48/49` oracle in the ranked differential pool.
 20. Notebook 30 tested hypothesis-forced live branching; it improved its own base from `42/49` to `44/49` with zero regressions but increased branch cost substantially.
 21. Notebook 31 trained a compact neural resolver over Notebook 30's small candidate pool; it reached `46/49` with zero regressions and confirmed a diagnostic `49/49` candidate-pool oracle.
+22. Notebook 37 tested the adaptive candidate-pool architecture on a fresh balanced 98-case cohort; the final GBM plus close-confounder output improved the base from `83/98` to `88/98` with zero final regressions, but candidate-pool recall fell to `92/98` and the branch trigger fired on only `1/98` cases.
+23. Notebook 38 is prepared as a 196-case live calibration cohort, not a final confirmation run. It uses four cases per pathology, excludes prior benchmark cases, and deliberately lowers branch/continuation thresholds to collect enough live-domain data for future threshold calibration.
 
 ## Bottom Line
 
@@ -490,13 +502,16 @@ The work is not rootless. The frame of reference is now clear:
 - ranked-differential listwise adjudication: diagnostic path showing the `47/49+` candidate ceiling
 - hypothesis-forced differential branching: completed live candidate-generation test
 - neural candidate-pool resolver: current strongest learned final-head result over the Notebook 30 pool
+- close-confounder discriminator: current strongest offline candidate-pool final-head result
+- Notebook 37 balanced live confirmation: independent confirmation that the candidate-pool architecture helps, but does not yet generalize to the `48/49` replay rate
+- Notebook 38 live calibration cohort: planned development run for candidate-pool recall and branch-trigger calibration before a frozen confirmation cohort
 
 The current work is enough to claim:
 
-> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer. Prospective branching and ranked-differential adjudication now show that `47/49+` is available in small candidate pools; Notebook 31's neural resolver reaches `46/49`, while safe selection among close confounders remains unresolved.
+> We built a rigorous DDXPlus baseline ladder and found that online MLP-guided stopping supports evidence-efficient sequential diagnosis: the frozen live 49-case confirmation reached `43/49` accuracy with about `6.6` requested evidence fields per case, and a fresh live run of the same backbone reached `45/49` with `6.2` requests. Offline train-derived graph-ledger enhancements improved the saved 49-case trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but the live rescue confirmation did not promote that layer. Prospective branching and ranked-differential adjudication show that `47/49+` is available in small candidate pools on the original slice; Notebook 31's neural resolver reaches `46/49`, Notebook 32 identifies a `47/49` resolver candidate, and Notebook 33's targeted close-confounder discriminator reaches `48/49` offline with zero regressions. The fresh Notebook 37 balanced confirmation is weaker but still positive: `88/98` final accuracy versus `83/98` base, zero final regressions, `92/98` top-3/top-5, and `8.43` mean total requests. This confirms the architecture helps, but candidate generation and branch-trigger calibration are not solved universally.
 
 The current work is not enough to claim:
 
 > Our agentic architecture is generally superior to all direct neural baselines or official DDXPlus sequential methods.
 
-Notebooks 14, 17, 18, 19, 24, 28, 29, 30, and 31 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live evidence-acquisition method. The right next move is to stop broad method-chasing, freeze notebook 13 as the current acquisition backbone, and treat any further work as targeted confounder adjudication rather than a new controller family.
+Notebooks 14, 17, 18, 19, 24, 28, 29, 30, 31, 32, and 33 reinforce this direction: they were useful to test, but the results make notebook 13 the cleaner current live evidence-acquisition method. Notebooks 34, 35, and 36 then narrowed the branch-cost question: one high-priority branch was enough on the saved replay, but a larger live run was needed to test whether branch 2/3 fire naturally. Notebook 37 provides that confirmation and shows they do not naturally fire under the selected threshold. Notebook 38 is the calibration response: use a larger live development cohort to estimate thresholds, then freeze them before a separate confirmation cohort. The right next move is to run Notebook 38, freeze calibrated values, and only then make fixed-budget MEDDxAgent-style comparisons.

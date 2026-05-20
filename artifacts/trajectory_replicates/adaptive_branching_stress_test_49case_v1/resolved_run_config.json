@@ -1,0 +1,57 @@
+{
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/adaptive_branching_stress_test_49case_v1",
+  "created_at": "2026-05-19T19:21:41",
+  "project_root": "/Users/alfred/Documents/baseline_model",
+  "run_name": "adaptive_branching_stress_test_49case_v1",
+  "scenario_specs": [
+    {
+      "continuation_threshold": 0.4,
+      "scenario": "native_adaptive_reference",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.4,
+      "scenario": "branch1_removed_slot_remap",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.4,
+      "scenario": "branch1_no_signal_selected",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.4,
+      "scenario": "branch1_no_signal_no_support_suppression",
+      "suppress_sufficient_support": false
+    },
+    {
+      "continuation_threshold": 0.05,
+      "scenario": "branch1_no_signal_threshold_sweep",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.1,
+      "scenario": "branch1_no_signal_threshold_sweep",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.2,
+      "scenario": "branch1_no_signal_threshold_sweep",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.3,
+      "scenario": "branch1_no_signal_threshold_sweep",
+      "suppress_sufficient_support": true
+    },
+    {
+      "continuation_threshold": 0.4,
+      "scenario": "branch1_no_signal_threshold_sweep",
+      "suppress_sufficient_support": true
+    }
+  ],
+  "selected_branch_trigger_threshold": 0.8,
+  "selected_continuation_threshold": 0.4,
+  "selected_max_branches": 3,
+  "selected_score_col": "score__gradient_boosting_name_family"
+}

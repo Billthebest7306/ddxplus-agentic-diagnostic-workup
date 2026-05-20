@@ -1,6 +1,6 @@
 # Final Report: Evidence-Efficient Diagnostic Workup On DDXPlus
 
-Last updated: 2026-05-18
+Last updated: 2026-05-20
 
 ## Executive Summary
 
@@ -32,11 +32,11 @@ Notebook `27` completed the prospective live targeted-branching confirmation. It
 
 Notebook `28` completed the successor branching design: a learned branch-trigger MLP, up to three fresh-context LLM branches, graph/Bayes/MLP pseudo-candidates, and a calibrated resolver with base protection. It improved its own live base from `42/49` to `44/49` with zero regressions, but it did not reach the `47/49` promotion target.
 
-Notebook `29` added an offline ranked-differential adjudicator and improved Notebook `28` to `45/49` with zero regressions. Notebook `30` then completed hypothesis-forced live branching: it improved its own base from `42/49` to `44/49` with zero regressions, but at high branch cost. Its stronger result is that the broader resolver candidate pool contains the true diagnosis in all `49/49` cases. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`. Notebook `32` converted the resolver into an offline ablation lab: the strict validation-selected resolver did not improve (`45/49`), but the best deployable live-diagnostic ablation reached `47/49` and should be independently confirmed before promotion; the `49/49` number remains an oracle ceiling, not achieved deployable accuracy.
+Notebook `29` added an offline ranked-differential adjudicator and improved Notebook `28` to `45/49` with zero regressions. Notebook `30` then completed hypothesis-forced live branching: it improved its own base from `42/49` to `44/49` with zero regressions, but at high branch cost. Its stronger result is that the broader resolver candidate pool contains the true diagnosis in all `49/49` cases. Notebook `31` trained a compact neural resolver over that pool and reached `46/49` with zero regressions against Notebook `30`. Notebook `32` converted the resolver into an offline ablation lab: the strict validation-selected resolver did not improve (`45/49`), but the best deployable live-diagnostic ablation reached `47/49` and should be independently confirmed before promotion. Notebook `33` then added a close-confounder discriminator on top of that fixed GBM candidate, asked two targeted train-derived discriminator roots for six flagged cases, and reached `48/49` with zero regressions. Notebook `34` pruned the branch pool offline: one highest-priority hypothesis branch at trigger threshold `0.80` preserved `49/49` candidate-pool recall and `48/49` final accuracy while reducing mean total branch requests from `12.35` to `8.98`. Notebook `35` turns that into an adaptive value controller: up to three branches are allowed, but branch 2/3 launch only when a label-free continuation-value score crosses `0.40`; on the saved replay it still chooses one branch per high-trigger case and preserves the `48/49`, `49/49`, `8.98` result. Notebook `36` stress-tests that claim and shows the saved 49-case pool has no natural branch-2/3 rescue example. Notebook `37` then live-confirmed the architecture on a fresh balanced 98-case cohort: the base branch reached `83/98`, the branch-judge output reached `86/98`, and the final GBM plus close-confounder output reached `88/98` with no final regressions. The `49/49` candidate-pool result did not transfer; fresh candidate-pool recall was `92/98`. Notebook `38` responded with a 196-case calibration cohort using more sensitive branching. It improved the same-run base from `172/196` to `184/196`, restored candidate-pool recall to `194/196`, and reached `194/196` top-3/top-5, but it is calibration-only and exposed a long branch-cost tail plus close-confounder resolver failures.
 
 The strongest conclusion is not that “agentic diagnosis beats every classifier.” The strongest conclusion is:
 
-> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, Notebook `29` shows that ranked-differential listwise adjudication can add another no-regression win, and Notebooks `30`/`31` show that small candidate pools can contain all true labels while a learned resolver reaches `46/49`. Notebook `32` identifies a `47/49` deployable resolver candidate in ablation, but not through strict validation selection. The remaining opportunity is independently confirmed close-confounder adjudication.
+> Online MLP-guided stopping makes sequential LLM workup evidence-efficient. Graph/Bayes rescue is promising offline, and targeted multi-agent branching can recover some live wrong trajectories. The learned-gate Notebook `28` run improved over its own base without regressions, Notebook `29` shows that ranked-differential listwise adjudication can add another no-regression win, and Notebooks `30`/`31` show that small candidate pools can contain all true labels while a learned resolver reaches `46/49`. Notebook `32` identifies a `47/49` deployable resolver candidate in ablation, Notebook `33` adds targeted close-confounder evidence to reach `48/49` offline, Notebook `34` shows that the same `48/49` result can be replayed with much less branch cost, Notebook `35` makes that branch budget adaptive rather than hard-capped, and Notebook `36` clarifies that branch-2/3 rescue still needs a larger or live branch pool to prove. Notebook `37` is the fresh confirmation: it still improves base performance, but the candidate-pool recall and branch-trigger behavior do not support promoting the `48/49` replay rate as a stable live result. Notebook `38` is the calibration answer: it restores near-complete candidate-pool recall on 196 cases, but the final claim now depends on freezing thresholds and resolver safeguards before a separate held-out confirmation.
 
 ## Research Question
 
@@ -96,6 +96,11 @@ The project built a full baseline ladder rather than comparing against a weak st
 | Graph/Bayes rescue | `23-24` | Offline rescue candidate plus live confirmation that did not promote it |
 | Branching and adjudication | `25-30` | Trajectory replicates, live branching, ranked-differential adjudication, and hypothesis-forced branch implementation |
 | Candidate-pool resolver | `31-32` | Neural resolver plus resolver ablation lab over the Notebook `30` candidate pool |
+| Candidate-recall branch pruning | `33-34` | Close-confounder discrimination and branch-efficiency replay over the Notebook `30` candidate pool |
+| Adaptive branch continuation | `35` | Value-based controller that allows up to three branches but stops when another branch is unlikely to change the decision |
+| Adaptive branch stress test | `36` | Artificial offline test showing the current 49-case pool cannot prove natural branch-2/3 rescue behavior |
+| Adaptive live confirmation | `37` | Fresh 98-case live confirmation; improves base but candidate-pool recall drops |
+| Live calibration cohort | `38` | 196-case calibration run for branch-trigger, continuation, resolver-margin, and close-confounder policy selection |
 
 ## Model And System Design
 
@@ -214,6 +219,8 @@ The LLM still chooses the evidence. The MLP primarily tells the system when enou
 | Hybrid v2 MLP shortlist | 24 | 0.875 | 0.958 | 0.840 | 7.38 |
 | MedKGI graph shortlist | 24 | 0.833 | 0.875 | 0.744 | 6.21 |
 | Hybrid v1 selected stop | 49 | 0.878 | 0.939 | 0.845 | 6.59 |
+| Notebook `37` adaptive live final | 98 | 0.898 | 0.939 | n/a | 8.37 selected / 8.43 total |
+| Notebook `38` adaptive calibration final | 196 | 0.939 | 0.990 | n/a | 6.77 selected / 9.56 total |
 
 ### Final 49-Case Confirmation
 
@@ -489,6 +496,10 @@ Supported:
 - Notebook `30` live hypothesis-forced branching improved its own base from `42/49` to `44/49` with zero regressions and revealed a `49/49` diagnostic candidate-pool oracle.
 - Notebook `31` neural candidate-pool resolution reached `46/49` with zero regressions against Notebook `30`, but did not achieve the `47/49+` target as an actual selected policy.
 - Notebook `32` found a deployable-looking resolver ablation at `47/49`, but strict validation selection did not choose it, so it is a confirmation candidate rather than a promoted final policy.
+- Notebook `33` close-confounder discrimination reached `48/49` offline with one win over Notebook `32` GBM, zero regressions, and only `12` total extra evidence requests; it still needs independent confirmation because the fixed GBM base row came from Notebook `32` ablation inspection.
+- Notebook `34` pruned the saved branch pool to one highest-priority branch at threshold `0.80`, preserving `49/49` candidate-pool recall and `48/49` final accuracy while reducing mean total branch requests to `8.98`.
+- Notebook `35` keeps the same `48/49` and `49/49` candidate-pool recall, but replaces the hard one-branch cap with an adaptive value controller that allows up to three branches and chooses one branch on this replay because branch 2/3 fail the continuation-value test.
+- Notebook `36` stress-tests branch 2/3 behavior and finds the saved 49-case pool has no natural positive example where branch 2/3 are needed; when branch 1 is removed, branch 2/3 cannot recover Croup or Myocarditis because those saved branches do not contain the true diagnosis.
 
 Not supported:
 
@@ -510,7 +521,7 @@ The project should be presented as an **evidence-efficient diagnostic workup sys
 
 The strongest final statement is:
 
-> We built a reproducible DDXPlus baseline ladder and proposed a structured sequential workup system where an LLM acquires evidence under a deterministic ledger and a partial-evidence MLP decides when enough information has been gathered. The frozen live 49-case confirmation reached `43/49` accuracy and `0.939` top-5 while requesting about `6.6` evidence fields per case; a fresh live run of the same backbone inside Notebook `24` reached `45/49` with `6.20` requests. Offline train-derived graph-ledger enhancements improve the saved trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but that rescue was not promoted by the fresh live confirmation. Prospective live branching recovered some wrong trajectories; Notebook `28` improved its own live base to `44/49` with zero regressions, and Notebook `29` improved the frozen Notebook `28` trace to `45/49` by scoring ranked differentials. The current evidence says `47/49+` is available in the candidate pool, but selecting it safely needs a more specialized confounder adjudicator.
+> We built a reproducible DDXPlus baseline ladder and proposed a structured sequential workup system where an LLM acquires evidence under a deterministic ledger and a partial-evidence MLP decides when enough information has been gathered. The frozen live 49-case confirmation reached `43/49` accuracy and `0.939` top-5 while requesting about `6.6` evidence fields per case; a fresh live run of the same backbone inside Notebook `24` reached `45/49` with `6.20` requests. Offline train-derived graph-ledger enhancements improve the saved trace to `44/49` with a simple graph critic and to `47/49` with a calibrated graph/Bayes rescue layer, but that rescue was not promoted by the fresh live confirmation. Prospective live branching recovered some wrong trajectories; Notebook `30` showed that the small candidate pool can contain all true labels, Notebook `31` learned to select `46/49`, Notebook `32` found a `47/49` resolver candidate, Notebook `33` reached `48/49` by asking targeted close-confounder evidence, Notebook `34` replayed the same result with one branch and `8.98` mean total requests, Notebook `35` turns that into an adaptive value-based branch controller, and Notebook `36` clarifies its stress-test boundary. The current evidence says candidate generation is mostly solved on this slice, while live-confirmed efficient candidate-pool resolution is the key next step.
 
 Updated graph-ledger statement:
 
@@ -612,13 +623,53 @@ Errors are mainly wrong-belief convergence and under-adjudicated confounders, no
 
 Notebook `31` then trains a compact neural resolver over that candidate pool. It reaches `46/49`, with two wins over Notebook `30` and zero regressions. Notebook `32` tests resolver alternatives over the same frozen pool. The strict validation-selected policy reaches only `45/49`, but a deployable gradient-boosting row reaches `47/49` diagnostically; because that row was found by inspecting the 49-case ablation table, it is a confirmation candidate rather than a promoted final policy.
 
+Notebook `33` adds the targeted discriminator version of that idea. It flags close top-pair confounders, asks two train-statistic-ranked roots only for flagged cases, and overrides only on a strong extra-root Bayes factor. It reaches `48/49` offline with one win over Notebook `32` and zero regressions, while adding `12` total evidence requests. Notebook `34` then shows that the saved three-branch pool can be pruned to one highest-priority branch while preserving `49/49` candidate-pool recall and `48/49` final accuracy, reducing mean total branch requests to `8.98`. Notebook `35` keeps the same efficiency result but makes the branch count adaptive: max three branches are allowed, and branch 2/3 launch only if a continuation-value controller says another branch is likely to change the decision. Notebook `36` stress-tests that controller and shows the current 49-case pool can prove efficient non-overbranching, but cannot prove natural branch-2/3 rescue because branch 2/3 do not contain the Croup or Myocarditis recovery candidates when branch 1 is removed. Notebook `37` then runs the larger fresh live confirmation: two held-out test cases per pathology, restored top-3/top-5 reporting, adaptive branch-continuation traces, GBM candidate-pool resolution, and the close-confounder discriminator. It improves its base branch from `83/98` to `88/98` with zero final regressions, but candidate-pool recall drops to `92/98` and the branch trigger fires on only `1/98` cases, so it does not promote the old `48/49` replay rate as a stable live result.
+
+Notebook `35` asks whether the expensive three-branch pool is actually necessary without hard-capping the system to one branch. It replays the saved Notebook `30` candidates, keeps base plus graph/Bayes/MLP pseudo-candidates for free, and then applies the Notebook `32` GBM resolver plus Notebook `33` discriminator.
+
+The selected offline efficiency candidate is:
+
+```text
+branch_trigger_threshold = 0.80
+max_branches = 3
+continuation_value_threshold = 0.40
+```
+
+| System | Candidate-pool recall | Correct | Mean selected requests | Mean total requests |
+|---|---:|---:|---:|---:|
+| Notebook `33` native replay | 49/49 | 48/49 | 7.02 | 12.35 |
+| Notebook `34` pruned replay | 49/49 | 48/49 | 7.16 | 8.98 |
+| Notebook `35` adaptive replay | 49/49 | 48/49 | 7.16 | 8.98 |
+
+This is a `27.3%` reduction in mean total branch requests without losing candidate-pool recall or final accuracy on the replay. The key interpretation is that the first high-priority hypothesis branch is doing the useful candidate-pool repair. Additional branches are not forbidden; on this replay they fail the continuation-value test. This should be confirmed live before being used as a promoted method or for MEDDxAgent-style hard-cap comparisons.
+
+Notebook `37` is that live confirmation. It is positive but weaker than the replay:
+
+| System | Correct | Top-3 | Top-5 | Mean total requests |
+|---|---:|---:|---:|---:|
+| Base branch | 83/98 | 0.888 | 0.908 | 8.20 |
+| Branch-judge selected | 86/98 | 0.908 | 0.929 | 8.31 |
+| GBM + close-confounder final | 88/98 | 0.939 | 0.939 | 8.43 |
+
+The final output has five wins and zero regressions versus base, but the candidate pool contains the true diagnosis in only `92/98` cases. The live run also does not demonstrate natural multi-branch behavior: only one case crossed the `0.80` trigger threshold, and branch 2/3 never launched.
+
+Notebook `38` is the response to that finding. It is a completed 196-case live calibration cohort, four cases per pathology, excluding prior benchmark cases. It deliberately lowers the branch trigger to `0.20` and the continuation threshold to `0.20` so the run collects enough live-domain branch/candidate-pool behavior to tune future thresholds. Because its labels will be used for calibration, it is a development run, not a final confirmation claim.
+
+| System | Correct | Top-3 | Top-5 | Mean selected requests | Mean total requests |
+|---|---:|---:|---:|---:|---:|
+| Notebook `38` base branch | 172/196 | 0.944 | 0.964 | 6.77 | 6.77 |
+| Notebook `38` branch-judge selected | 183/196 | 0.974 | 0.985 | 6.79 | 9.52 |
+| Notebook `38` GBM + close-confounder final | 184/196 | 0.990 | 0.990 | 6.77 | 9.56 |
+
+Candidate-pool recall rises to `194/196`, matching the final top-3/top-5 ceiling. That is the key positive result. The failure mode also becomes clearer: `10/12` final misses already have the true diagnosis in the pool, while only `2/12` are true candidate-pool misses. The next bottleneck is therefore resolver discrimination among close confounders, especially Acute rhinosinusitis versus Chronic rhinosinusitis, plus stronger base protection for rare/high-risk base answers such as Ebola.
+
 ### Slide 20. Claims And Limitations
 
-Strong claim: evidence-efficient sequential workup with MLP-guided stopping, plus a clear candidate-generation result from hypothesis-forced branching. Limitation: not a proof of multi-agent superiority or RL baseline dominance. The `49/49` candidate-pool result is an oracle ceiling, not achieved deployable accuracy.
+Strong claim: evidence-efficient sequential workup with MLP-guided stopping, plus a clear candidate-generation result from hypothesis-forced branching and Notebook `38` calibration. Limitation: not a proof of multi-agent superiority or RL baseline dominance. The `49/49` and `194/196` candidate-pool results are candidate availability results; final deployable accuracy still depends on resolver calibration.
 
 ### Slide 21. Future Work
 
-Use Notebook `32` as the final-head workflow. The next credible step is to independently confirm the `gradient_boosting_name_family` `47/49` resolver candidate and then focus on the remaining close confounders: acute-vs-chronic rhinosinusitis and Bronchitis-vs-URTI. If confirmation fails, move to a close-confounder resolver or one cheap targeted discriminator question, not more broad branch-to-completion agents.
+Notebook `37` shows that the adaptive candidate-pool architecture improves the base, but the old 49-case replay was optimistic. Notebook `38` shows that a more sensitive calibration policy can restore near-complete candidate-pool recall on a larger live cohort. The next credible work is to freeze thresholds from Notebook `38`, add resolver-margin and base-protection safeguards, and run a separate confirmation cohort before making any new headline claim.
 
 ## Key Files
 
@@ -646,6 +697,12 @@ Use Notebook `32` as the final-head workflow. The next credible step is to indep
 - `notebooks/30_hypothesis_forced_differential_branching.ipynb`
 - `notebooks/31_neural_candidate_pool_resolver.ipynb`
 - `notebooks/32_resolver_ablation_lab.ipynb`
+- `notebooks/33_close_confounder_discriminator.ipynb`
+- `notebooks/34_candidate_recall_gated_branching_efficiency_lab.ipynb`
+- `notebooks/35_adaptive_value_branching_controller.ipynb`
+- `notebooks/36_adaptive_branching_stress_test.ipynb`
+- `notebooks/37_adaptive_value_branching_live_balanced_confirmation.ipynb`
+- `notebooks/38_live_adaptive_branching_calibration_cohort.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -665,3 +722,9 @@ Use Notebook `32` as the final-head workflow. The next credible step is to indep
 - `reports/algorithmic_ledger/hypothesis_forced_differential_branching_report.md`
 - `reports/algorithmic_ledger/neural_candidate_pool_resolver_report.md`
 - `reports/algorithmic_ledger/resolver_ablation_lab_report.md`
+- `reports/algorithmic_ledger/close_confounder_discriminator_report.md`
+- `reports/algorithmic_ledger/candidate_recall_gated_branching_efficiency_report.md`
+- `reports/algorithmic_ledger/adaptive_value_branching_controller_report.md`
+- `reports/algorithmic_ledger/adaptive_branching_stress_test_report.md`
+- `reports/algorithmic_ledger/adaptive_value_branching_live_balanced_confirmation_report.md`
+- `reports/algorithmic_ledger/live_adaptive_branching_calibration_cohort_report.md`

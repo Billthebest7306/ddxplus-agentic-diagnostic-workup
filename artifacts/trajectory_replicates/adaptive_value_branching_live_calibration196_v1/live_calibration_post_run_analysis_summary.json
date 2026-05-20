@@ -1,0 +1,631 @@
+{
+  "run_name": "adaptive_value_branching_live_calibration196_v1",
+  "analysis_date": "2026-05-20",
+  "cohort": {
+    "num_cases": 196,
+    "cases_per_pathology": 4,
+    "calibration_run": true
+  },
+  "headline": {
+    "base_correct": 172,
+    "base_accuracy": 0.8775510204081632,
+    "branch_judge_correct": 183,
+    "branch_judge_accuracy": 0.9336734693877552,
+    "final_correct": 184,
+    "final_accuracy": 0.9387755102040817,
+    "final_top3_accuracy": 0.9897959183673469,
+    "final_top5_accuracy": 0.9897959183673469,
+    "candidate_pool_recall": 0.9897959183673469,
+    "candidate_pool_recall_count": 194,
+    "mean_selected_requests": 6.770408163265306,
+    "mean_total_requests": 9.556122448979592,
+    "p90_total_requests": 22.0,
+    "max_total_requests": 85.0
+  },
+  "paired_final_vs_base": {
+    "wins": 13,
+    "regressions": 1,
+    "both_correct": 171,
+    "both_wrong": 11
+  },
+  "branch_behavior": {
+    "branch_trigger_rate": 0.11734693877551021,
+    "mean_branches_spawned": 0.21428571428571427,
+    "branches_spawned_distribution": {
+      "0": 173,
+      "1": 12,
+      "2": 3,
+      "3": 8
+    },
+    "branches_spawned_total": 42,
+    "mean_total_branch_requests_from_branch_judge_file": 9.51530612244898
+  },
+  "candidate_source_recall": [
+    {
+      "subset_name": "base_only",
+      "num_cases": 196,
+      "candidate_pool_recall_count": 166,
+      "candidate_pool_recall": 0.8469387755102041,
+      "mean_pool_size": 0.9591836734693876,
+      "max_pool_size": 1
+    },
+    {
+      "subset_name": "base_plus_pseudo",
+      "num_cases": 196,
+      "candidate_pool_recall_count": 181,
+      "candidate_pool_recall": 0.923469387755102,
+      "mean_pool_size": 3.61734693877551,
+      "max_pool_size": 6
+    },
+    {
+      "subset_name": "base_plus_real_branch",
+      "num_cases": 196,
+      "candidate_pool_recall_count": 179,
+      "candidate_pool_recall": 0.9132653061224488,
+      "mean_pool_size": 1.1275510204081634,
+      "max_pool_size": 4
+    },
+    {
+      "subset_name": "all_candidates",
+      "num_cases": 196,
+      "candidate_pool_recall_count": 194,
+      "candidate_pool_recall": 0.9897959183673468,
+      "mean_pool_size": 3.7857142857142856,
+      "max_pool_size": 8
+    }
+  ],
+  "failure_mode_counts": {
+    "resolver_miss_truth_in_pool": 10,
+    "candidate_pool_miss": 2
+  },
+  "final_misses": [
+    {
+      "case_id": "test:105339",
+      "true_pathology": "Acute laryngitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Tuberculosis",
+      "branchjudge_prediction": "Bronchitis",
+      "final_prediction": "Acute otitis media",
+      "branch_trigger_probability": 0.9800510984405136,
+      "branch_trigger_fired": true,
+      "branches_spawned": 3,
+      "score_margin_top2": 0.1416887789157382,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:21703",
+      "true_pathology": "Acute rhinosinusitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Chronic rhinosinusitis",
+      "branchjudge_prediction": "Chronic rhinosinusitis",
+      "final_prediction": "Chronic rhinosinusitis",
+      "branch_trigger_probability": 0.317340413386951,
+      "branch_trigger_fired": true,
+      "branches_spawned": 1,
+      "score_margin_top2": 0.5640559342236698,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:52366",
+      "true_pathology": "Acute rhinosinusitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Chronic rhinosinusitis",
+      "branchjudge_prediction": "Chronic rhinosinusitis",
+      "final_prediction": "Chronic rhinosinusitis",
+      "branch_trigger_probability": 0.0750159584294378,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.6695518308489918,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:61503",
+      "true_pathology": "Acute rhinosinusitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Chronic rhinosinusitis",
+      "branchjudge_prediction": "Chronic rhinosinusitis",
+      "final_prediction": "Chronic rhinosinusitis",
+      "branch_trigger_probability": 0.0184436896222053,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.8338554921266887,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:93342",
+      "true_pathology": "Acute rhinosinusitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Chronic rhinosinusitis",
+      "branchjudge_prediction": "Chronic rhinosinusitis",
+      "final_prediction": "Chronic rhinosinusitis",
+      "branch_trigger_probability": 0.0420756944456225,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.749038766744498,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:127067",
+      "true_pathology": "Allergic sinusitis",
+      "failure_mode": "candidate_pool_miss",
+      "base_prediction": "Acute otitis media",
+      "branchjudge_prediction": "Acute otitis media",
+      "final_prediction": "Acute otitis media",
+      "branch_trigger_probability": 0.8229360366797944,
+      "branch_trigger_fired": true,
+      "branches_spawned": 1,
+      "score_margin_top2": 0.2945465459051282,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:23690",
+      "true_pathology": "Atrial fibrillation",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Panic attack",
+      "branchjudge_prediction": "Spontaneous pneumothorax",
+      "final_prediction": "Spontaneous pneumothorax",
+      "branch_trigger_probability": 0.992583182504793,
+      "branch_trigger_fired": true,
+      "branches_spawned": 3,
+      "score_margin_top2": 0.0504790267581769,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:609",
+      "true_pathology": "Croup",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Larygospasm",
+      "branchjudge_prediction": "Larygospasm",
+      "final_prediction": "Larygospasm",
+      "branch_trigger_probability": 0.1263582525473437,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.4737396320125989,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:30358",
+      "true_pathology": "Ebola",
+      "failure_mode": "candidate_pool_miss",
+      "base_prediction": "Acute dystonic reactions",
+      "branchjudge_prediction": "Anemia",
+      "final_prediction": "Acute dystonic reactions",
+      "branch_trigger_probability": 0.897571237904626,
+      "branch_trigger_fired": true,
+      "branches_spawned": 2,
+      "score_margin_top2": 0.0380206540790934,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:113762",
+      "true_pathology": "Ebola",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Ebola",
+      "branchjudge_prediction": "URTI",
+      "final_prediction": "URTI",
+      "branch_trigger_probability": 0.0021049164619428,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.8058613348967861,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:132876",
+      "true_pathology": "Epiglottitis",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Larygospasm",
+      "branchjudge_prediction": "Larygospasm",
+      "final_prediction": "Larygospasm",
+      "branch_trigger_probability": 0.3172499580396516,
+      "branch_trigger_fired": true,
+      "branches_spawned": 1,
+      "score_margin_top2": 0.3808600448865258,
+      "close_confounder_flag": false,
+      "extra_roots_requested": 0
+    },
+    {
+      "case_id": "test:93816",
+      "true_pathology": "Pneumonia",
+      "failure_mode": "resolver_miss_truth_in_pool",
+      "base_prediction": "Bronchiectasis",
+      "branchjudge_prediction": "Bronchiectasis",
+      "final_prediction": "Bronchiectasis",
+      "branch_trigger_probability": 0.1256356456479871,
+      "branch_trigger_fired": false,
+      "branches_spawned": 0,
+      "score_margin_top2": 0.493481471135885,
+      "close_confounder_flag": true,
+      "extra_roots_requested": 2
+    }
+  ],
+  "trigger_threshold_sweep": [
+    {
+      "threshold": 0.0,
+      "cases_triggered": 196,
+      "case_rate": 1.0,
+      "base_incorrect_triggered": 24,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 12,
+      "final_error_capture_rate": 1.0
+    },
+    {
+      "threshold": 0.05,
+      "cases_triggered": 39,
+      "case_rate": 0.1989795918367347,
+      "base_incorrect_triggered": 20,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 9,
+      "final_error_capture_rate": 0.75
+    },
+    {
+      "threshold": 0.1,
+      "cases_triggered": 27,
+      "case_rate": 0.1377551020408163,
+      "base_incorrect_triggered": 18,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 8,
+      "final_error_capture_rate": 0.6666666666666666
+    },
+    {
+      "threshold": 0.15,
+      "cases_triggered": 23,
+      "case_rate": 0.1173469387755102,
+      "base_incorrect_triggered": 16,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 6,
+      "final_error_capture_rate": 0.5
+    },
+    {
+      "threshold": 0.2,
+      "cases_triggered": 23,
+      "case_rate": 0.1173469387755102,
+      "base_incorrect_triggered": 16,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 6,
+      "final_error_capture_rate": 0.5
+    },
+    {
+      "threshold": 0.25,
+      "cases_triggered": 23,
+      "case_rate": 0.1173469387755102,
+      "base_incorrect_triggered": 16,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 6,
+      "final_error_capture_rate": 0.5
+    },
+    {
+      "threshold": 0.3,
+      "cases_triggered": 23,
+      "case_rate": 0.1173469387755102,
+      "base_incorrect_triggered": 16,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 6,
+      "final_error_capture_rate": 0.5
+    },
+    {
+      "threshold": 0.35,
+      "cases_triggered": 20,
+      "case_rate": 0.1020408163265306,
+      "base_incorrect_triggered": 14,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.4,
+      "cases_triggered": 19,
+      "case_rate": 0.096938775510204,
+      "base_incorrect_triggered": 13,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.45,
+      "cases_triggered": 17,
+      "case_rate": 0.086734693877551,
+      "base_incorrect_triggered": 13,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.5,
+      "cases_triggered": 16,
+      "case_rate": 0.0816326530612244,
+      "base_incorrect_triggered": 12,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.55,
+      "cases_triggered": 13,
+      "case_rate": 0.0663265306122449,
+      "base_incorrect_triggered": 11,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.6,
+      "cases_triggered": 13,
+      "case_rate": 0.0663265306122449,
+      "base_incorrect_triggered": 11,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.65,
+      "cases_triggered": 13,
+      "case_rate": 0.0663265306122449,
+      "base_incorrect_triggered": 11,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.7,
+      "cases_triggered": 10,
+      "case_rate": 0.0510204081632653,
+      "base_incorrect_triggered": 9,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.75,
+      "cases_triggered": 8,
+      "case_rate": 0.0408163265306122,
+      "base_incorrect_triggered": 8,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.8,
+      "cases_triggered": 7,
+      "case_rate": 0.0357142857142857,
+      "base_incorrect_triggered": 7,
+      "candidate_pool_misses_triggered": 2,
+      "candidate_pool_miss_capture_rate": 1.0,
+      "final_errors_triggered": 4,
+      "final_error_capture_rate": 0.3333333333333333
+    },
+    {
+      "threshold": 0.85,
+      "cases_triggered": 6,
+      "case_rate": 0.0306122448979591,
+      "base_incorrect_triggered": 6,
+      "candidate_pool_misses_triggered": 1,
+      "candidate_pool_miss_capture_rate": 0.5,
+      "final_errors_triggered": 3,
+      "final_error_capture_rate": 0.25
+    },
+    {
+      "threshold": 0.9,
+      "cases_triggered": 3,
+      "case_rate": 0.0153061224489795,
+      "base_incorrect_triggered": 3,
+      "candidate_pool_misses_triggered": 0,
+      "candidate_pool_miss_capture_rate": 0.0,
+      "final_errors_triggered": 2,
+      "final_error_capture_rate": 0.1666666666666666
+    },
+    {
+      "threshold": 0.95,
+      "cases_triggered": 3,
+      "case_rate": 0.0153061224489795,
+      "base_incorrect_triggered": 3,
+      "candidate_pool_misses_triggered": 0,
+      "candidate_pool_miss_capture_rate": 0.0,
+      "final_errors_triggered": 2,
+      "final_error_capture_rate": 0.1666666666666666
+    }
+  ],
+  "resolver_margin_sweep": [
+    {
+      "score_margin_threshold": 0.0,
+      "cases_flagged": 0,
+      "case_rate": 0.0,
+      "final_errors_flagged": 0,
+      "final_error_capture_rate": 0.0,
+      "resolver_misses_flagged": 0
+    },
+    {
+      "score_margin_threshold": 0.05,
+      "cases_flagged": 1,
+      "case_rate": 0.0051020408163265,
+      "final_errors_flagged": 1,
+      "final_error_capture_rate": 0.0833333333333333,
+      "resolver_misses_flagged": 0
+    },
+    {
+      "score_margin_threshold": 0.1,
+      "cases_flagged": 2,
+      "case_rate": 0.010204081632653,
+      "final_errors_flagged": 2,
+      "final_error_capture_rate": 0.1666666666666666,
+      "resolver_misses_flagged": 1
+    },
+    {
+      "score_margin_threshold": 0.15,
+      "cases_flagged": 4,
+      "case_rate": 0.0204081632653061,
+      "final_errors_flagged": 3,
+      "final_error_capture_rate": 0.25,
+      "resolver_misses_flagged": 2
+    },
+    {
+      "score_margin_threshold": 0.2,
+      "cases_flagged": 6,
+      "case_rate": 0.0306122448979591,
+      "final_errors_flagged": 3,
+      "final_error_capture_rate": 0.25,
+      "resolver_misses_flagged": 2
+    },
+    {
+      "score_margin_threshold": 0.25,
+      "cases_flagged": 7,
+      "case_rate": 0.0357142857142857,
+      "final_errors_flagged": 3,
+      "final_error_capture_rate": 0.25,
+      "resolver_misses_flagged": 2
+    },
+    {
+      "score_margin_threshold": 0.3,
+      "cases_flagged": 10,
+      "case_rate": 0.0510204081632653,
+      "final_errors_flagged": 4,
+      "final_error_capture_rate": 0.3333333333333333,
+      "resolver_misses_flagged": 2
+    },
+    {
+      "score_margin_threshold": 0.35,
+      "cases_flagged": 11,
+      "case_rate": 0.0561224489795918,
+      "final_errors_flagged": 4,
+      "final_error_capture_rate": 0.3333333333333333,
+      "resolver_misses_flagged": 2
+    },
+    {
+      "score_margin_threshold": 0.4,
+      "cases_flagged": 12,
+      "case_rate": 0.0612244897959183,
+      "final_errors_flagged": 5,
+      "final_error_capture_rate": 0.4166666666666667,
+      "resolver_misses_flagged": 3
+    },
+    {
+      "score_margin_threshold": 0.45,
+      "cases_flagged": 13,
+      "case_rate": 0.0663265306122449,
+      "final_errors_flagged": 5,
+      "final_error_capture_rate": 0.4166666666666667,
+      "resolver_misses_flagged": 3
+    },
+    {
+      "score_margin_threshold": 0.5,
+      "cases_flagged": 17,
+      "case_rate": 0.086734693877551,
+      "final_errors_flagged": 7,
+      "final_error_capture_rate": 0.5833333333333334,
+      "resolver_misses_flagged": 5
+    },
+    {
+      "score_margin_threshold": 0.55,
+      "cases_flagged": 20,
+      "case_rate": 0.1020408163265306,
+      "final_errors_flagged": 7,
+      "final_error_capture_rate": 0.5833333333333334,
+      "resolver_misses_flagged": 5
+    },
+    {
+      "score_margin_threshold": 0.6,
+      "cases_flagged": 23,
+      "case_rate": 0.1173469387755102,
+      "final_errors_flagged": 8,
+      "final_error_capture_rate": 0.6666666666666666,
+      "resolver_misses_flagged": 6
+    },
+    {
+      "score_margin_threshold": 0.65,
+      "cases_flagged": 25,
+      "case_rate": 0.1275510204081632,
+      "final_errors_flagged": 8,
+      "final_error_capture_rate": 0.6666666666666666,
+      "resolver_misses_flagged": 6
+    },
+    {
+      "score_margin_threshold": 0.7,
+      "cases_flagged": 29,
+      "case_rate": 0.1479591836734693,
+      "final_errors_flagged": 9,
+      "final_error_capture_rate": 0.75,
+      "resolver_misses_flagged": 7
+    },
+    {
+      "score_margin_threshold": 0.75,
+      "cases_flagged": 30,
+      "case_rate": 0.1530612244897959,
+      "final_errors_flagged": 10,
+      "final_error_capture_rate": 0.8333333333333334,
+      "resolver_misses_flagged": 8
+    },
+    {
+      "score_margin_threshold": 0.8,
+      "cases_flagged": 36,
+      "case_rate": 0.1836734693877551,
+      "final_errors_flagged": 10,
+      "final_error_capture_rate": 0.8333333333333334,
+      "resolver_misses_flagged": 8
+    },
+    {
+      "score_margin_threshold": 0.85,
+      "cases_flagged": 45,
+      "case_rate": 0.2295918367346938,
+      "final_errors_flagged": 12,
+      "final_error_capture_rate": 1.0,
+      "resolver_misses_flagged": 10
+    },
+    {
+      "score_margin_threshold": 0.9,
+      "cases_flagged": 50,
+      "case_rate": 0.2551020408163265,
+      "final_errors_flagged": 12,
+      "final_error_capture_rate": 1.0,
+      "resolver_misses_flagged": 10
+    },
+    {
+      "score_margin_threshold": 0.95,
+      "cases_flagged": 52,
+      "case_rate": 0.2653061224489796,
+      "final_errors_flagged": 12,
+      "final_error_capture_rate": 1.0,
+      "resolver_misses_flagged": 10
+    },
+    {
+      "score_margin_threshold": 1.0,
+      "cases_flagged": 196,
+      "case_rate": 1.0,
+      "final_errors_flagged": 12,
+      "final_error_capture_rate": 1.0,
+      "resolver_misses_flagged": 10
+    }
+  ],
+  "interpretation": [
+    "The exploratory lower branch threshold restored broad candidate-pool recall: all candidates contain the true diagnosis in 194/196 cases.",
+    "The final result improves the base from 172/196 to 184/196, but this is a calibration result because labels can now influence the next frozen policy.",
+    "Most remaining errors are resolver misses with the truth already in the pool, not candidate-generation failures.",
+    "Acute rhinosinusitis is the clearest systematic miss: all four cases have the true disease in the pool but are resolved as chronic rhinosinusitis.",
+    "The request-cost mean is moderate, but the tail is large because hard cases can spawn multiple full branches; p90 total requests is 22 and max is 85.",
+    "A future confirmation policy should freeze thresholds from this run and cap or value-stop branch spending more tightly before testing on a separate heldout cohort."
+  ]
+}

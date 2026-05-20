@@ -1,0 +1,15 @@
+{
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/close_confounder_discriminator_49case_v1",
+  "created_at": "2026-05-18T23:23:25",
+  "extra_root_budget": 2,
+  "flag_max_score_margin": 0.7,
+  "flag_min_pair_utility": 0.08,
+  "notebook": "33_close_confounder_discriminator.ipynb",
+  "offline_only": true,
+  "pair_log_bayes_factor_override_min": 2.0,
+  "random_seed": 33,
+  "root_candidate_max": 96,
+  "run_name": "close_confounder_discriminator_49case_v1",
+  "script_source": "scripts/close_confounder_discriminator_nb33.py",
+  "selected_base_resolver": "gradient_boosting_name_family"
+}

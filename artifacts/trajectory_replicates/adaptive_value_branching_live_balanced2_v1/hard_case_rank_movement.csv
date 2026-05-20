@@ -1,0 +1,18 @@
+case_id,true_pathology,base_predicted_pathology,predicted_pathology,base_pred_graph_rank,selected_pred_graph_rank,base_pred_bayes_posterior,selected_pred_bayes_posterior
+test:95053,Acute dystonic reactions,Sarcoidosis,Acute dystonic reactions,6,1,0.0702215301592227,0.2506726084329151
+test:54031,Acute laryngitis,Bronchitis,URTI,2,8,0.1180588871417863,0.1464201104267465
+test:127556,Acute rhinosinusitis,Bronchospasm / acute asthma exacerbation,Pneumonia,5,1,8.938172562228618e-05,0.6124739115496608
+test:92249,Atrial fibrillation,PSVT,Myocarditis,2,1,0.2959666023629083,0.377254903188963
+test:37106,Bronchiolitis,Tuberculosis,Bronchitis,5,2,0.0004106250537642,0.945014507995135
+test:45547,Bronchitis,Acute otitis media,Bronchitis,3,1,0.0011549481443062,0.9938448627393184
+test:2255,Croup,Croup,Epiglottitis,1,2,0.3106824973375088,0.6890408029560272
+test:85739,Croup,Acute otitis media,Cluster headache,2,1,0.2236219220737771,0.3699388517058594
+test:86148,Epiglottitis,Larygospasm,Epiglottitis,3,1,5.18468180988068e-07,0.9998787727206112
+test:39464,Inguinal hernia,Acute dystonic reactions,Acute otitis media,33,3,6.375907075394119e-06,0.1251138166482287
+test:108410,Myasthenia gravis,Acute dystonic reactions,Acute dystonic reactions,1,1,0.8228796279948812,0.8228796279948812
+test:20922,Pericarditis,Guillain-Barré syndrome,Bronchitis,1,11,0.132708170755848,0.0564087247414294
+test:121292,Pneumonia,Chronic rhinosinusitis,Pneumonia,2,1,0.0007468391402345,0.9976158408558636
+test:130885,Pulmonary embolism,Chagas,Acute dystonic reactions,12,1,0.0161203623085484,0.2245898669715479
+test:83391,SLE,SLE,Pancreatic neoplasm,1,2,0.4857824116954248,0.5137760061625076
+test:114160,Sarcoidosis,Boerhaave,Sarcoidosis,14,1,0.0227528753999427,0.168701390204527
+test:63258,Stable angina,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,1,1,0.4900396212889559,0.4900396212889559

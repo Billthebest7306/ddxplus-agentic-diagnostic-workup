@@ -1,0 +1,26 @@
+case_id,branch_id,candidate_role,branch_role_name,true_pathology,candidate_pathology,candidate_label,base_score,base_score_rank,is_anchor,is_challenger,flagged_for_discriminator,extra_log_bayes_factor_challenger_vs_anchor,final_discriminator_score,selected_by_close_confounder_discriminator
+test:111176,base,base,base,Acute rhinosinusitis,Chronic rhinosinusitis,False,0.9630078481278076,1,True,False,True,-0.2566635044775088,0.9630078481278076,True
+test:111176,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute rhinosinusitis,Acute rhinosinusitis,True,0.3350989476224553,2,False,True,True,-0.2566635044775088,0.3350989476224553,False
+test:111176,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute rhinosinusitis,Allergic sinusitis,False,0.013905728755395,3,False,False,True,-0.2566635044775088,0.013905728755395,False
+test:11655,base,base,base,Bronchitis,URTI,False,0.9176225145970988,1,True,False,True,15.188919048045255,0.9176225145970988,False
+test:11655,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchitis,Bronchitis,True,0.4377152990585545,2,False,True,True,15.188919048045255,10.437715299058555,True
+test:11655,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchitis,Influenza,False,0.0427306076644627,3,False,False,True,15.188919048045255,0.0427306076644627,False
+test:130566,base,base,base,Chronic rhinosinusitis,Chronic rhinosinusitis,True,0.7540863587762149,1,True,False,True,-0.3362023248468905,0.7540863587762149,True
+test:130566,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chronic rhinosinusitis,Acute rhinosinusitis,False,0.7288953126112047,2,False,True,True,-0.3362023248468905,0.7288953126112047,False
+test:130566,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Chronic rhinosinusitis,Ebola,False,0.0138598981038937,3,False,False,True,-0.3362023248468905,0.0138598981038937,False
+test:130566,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chronic rhinosinusitis,Bronchospasm / acute asthma exacerbation,False,0.0134103297020727,4,False,False,True,-0.3362023248468905,0.0134103297020727,False
+test:35039,hypothesis_01_myocarditis,branch,Graph/Bayes hypothesis scout: Myocarditis,Myocarditis,Myocarditis,True,0.9930246745237395,1,True,False,True,-4.5239540067943995,0.9930246745237395,True
+test:35039,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Myocarditis,Pericarditis,False,0.9033291655047632,2,False,True,True,-4.5239540067943995,0.9033291655047632,False
+test:35039,hypothesis_03_acute_pulmonary_edema,branch,Counter-anchor stress-test scout: Acute pulmonary edema,Myocarditis,Acute pulmonary edema,False,0.0026799166725584,3,False,False,True,-4.5239540067943995,0.0026799166725584,False
+test:35039,hypothesis_02_pericarditis,branch,Pairwise discriminator scout: Pericarditis,Myocarditis,GERD,False,0.0021009109265618,4,False,False,True,-4.5239540067943995,0.0021009109265618,False
+test:35039,base,base,base,Myocarditis,Sarcoidosis,False,0.0020278385154667,5,False,False,True,-4.5239540067943995,0.0020278385154667,False
+test:39033,base,base,base,Viral pharyngitis,Viral pharyngitis,True,0.9662107623165616,1,True,False,True,-17.64584076187722,0.9662107623165616,True
+test:39033,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Viral pharyngitis,URTI,False,0.6004394209680837,2,False,True,True,-17.64584076187722,0.6004394209680837,False
+test:39033,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Viral pharyngitis,Acute otitis media,False,0.0142593072605256,3,False,False,True,-17.64584076187722,0.0142593072605256,False
+test:62878,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Pericarditis,Pericarditis,True,0.757431411224642,1,True,False,True,-11.735003494238267,0.757431411224642,True
+test:62878,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pericarditis,PSVT,False,0.7208131024166071,2,False,True,True,-11.735003494238267,0.7208131024166071,False
+test:62878,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pericarditis,Myocarditis,False,0.683937729498934,3,False,False,True,-11.735003494238267,0.683937729498934,False
+test:62878,hypothesis_02_psvt,branch,Pairwise discriminator scout: PSVT,Pericarditis,Anemia,False,0.1965986139260941,4,False,False,True,-11.735003494238267,0.1965986139260941,False
+test:62878,base,base,base,Pericarditis,Panic attack,False,0.1683692220169294,5,False,False,True,-11.735003494238267,0.1683692220169294,False
+test:62878,hypothesis_01_atrial_fibrillation,branch,Graph/Bayes hypothesis scout: Atrial fibrillation,Pericarditis,Atrial fibrillation,False,0.1533305983553002,6,False,False,True,-11.735003494238267,0.1533305983553002,False
+test:62878,hypothesis_03_myocarditis,branch,Counter-anchor stress-test scout: Myocarditis,Pericarditis,Sarcoidosis,False,0.1123773406745298,7,False,False,True,-11.735003494238267,0.1123773406745298,False

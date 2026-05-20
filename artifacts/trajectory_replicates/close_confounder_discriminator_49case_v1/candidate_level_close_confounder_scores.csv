@@ -1,0 +1,201 @@
+case_id,branch_id,candidate_role,branch_role_name,true_pathology,candidate_pathology,candidate_label,base_score,base_score_rank,is_anchor,is_challenger,flagged_for_discriminator,extra_log_bayes_factor_challenger_vs_anchor,final_discriminator_score,selected_by_close_confounder_discriminator
+test:100664,base,base,base,Myasthenia gravis,Myasthenia gravis,True,0.9918050742909728,1,True,False,False,,0.9918050742909728,True
+test:100664,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Myasthenia gravis,Epiglottitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:100664,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Myasthenia gravis,Bronchiolitis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:104857,base,base,base,Acute dystonic reactions,Acute dystonic reactions,True,0.9560650694611654,1,True,False,False,,0.9560650694611654,True
+test:104857,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute dystonic reactions,Myasthenia gravis,False,0.6939922264740787,2,False,True,False,,0.6939922264740787,False
+test:104857,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Acute dystonic reactions,URTI,False,0.0138598981038937,3,False,False,False,,0.0138598981038937,False
+test:104857,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute dystonic reactions,Bronchiolitis,False,0.0138598981038937,4,False,False,False,,0.0138598981038937,False
+test:105129,base,base,base,Pulmonary neoplasm,Pulmonary neoplasm,True,0.9918269218816048,1,True,False,False,,0.9918269218816048,True
+test:105129,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pulmonary neoplasm,Pneumonia,False,0.0030483894042235,2,False,True,False,,0.0030483894042235,False
+test:105129,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Pulmonary neoplasm,Tuberculosis,False,0.0020570358776279,3,False,False,False,,0.0020570358776279,False
+test:105129,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pulmonary neoplasm,Possible NSTEMI / STEMI,False,0.0017852575653407,4,False,False,False,,0.0017852575653407,False
+test:106010,base,base,base,HIV (initial infection),HIV (initial infection),True,0.9897525467898884,1,True,False,False,,0.9897525467898884,True
+test:106010,pseudo_graph_topk,pseudo,Pseudo Graph Topk,HIV (initial infection),Tuberculosis,False,0.0024645982218143,2,False,True,False,,0.0024645982218143,False
+test:106010,pseudo_graph_topk,pseudo,Pseudo Graph Topk,HIV (initial infection),Pancreatic neoplasm,False,0.0021416371141521,3,False,False,False,,0.0021416371141521,False
+test:106010,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,HIV (initial infection),Pneumonia,False,0.0020570358776279,4,False,False,False,,0.0020570358776279,False
+test:106010,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,HIV (initial infection),Influenza,False,0.0020570358776279,5,False,False,False,,0.0020570358776279,False
+test:107472,base,base,base,Tuberculosis,Tuberculosis,True,0.989714820910006,1,True,False,False,,0.989714820910006,True
+test:107472,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Tuberculosis,Pneumonia,False,0.0028572426112449,2,False,True,False,,0.0028572426112449,False
+test:107472,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Tuberculosis,Viral pharyngitis,False,0.0022528380951757,3,False,False,False,,0.0022528380951757,False
+test:111176,base,base,base,Acute rhinosinusitis,Chronic rhinosinusitis,False,0.9630078481278076,1,True,False,True,-0.2566635044775088,0.9630078481278076,True
+test:111176,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute rhinosinusitis,Acute rhinosinusitis,True,0.3350989476224553,2,False,True,True,-0.2566635044775088,0.3350989476224553,False
+test:111176,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute rhinosinusitis,Allergic sinusitis,False,0.013905728755395,3,False,False,True,-0.2566635044775088,0.013905728755395,False
+test:11198,base,base,base,Boerhaave,Boerhaave,True,0.9911327821128016,1,True,False,False,,0.9911327821128016,True
+test:11198,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Boerhaave,Panic attack,False,0.0169673516093343,2,False,True,False,,0.0169673516093343,False
+test:11198,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Boerhaave,Unstable angina,False,0.0168567069582889,3,False,False,False,,0.0168567069582889,False
+test:112233,base,base,base,Bronchiectasis,Bronchiectasis,True,0.9779952136758824,1,True,False,False,,0.9779952136758824,True
+test:112233,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchiectasis,Pneumonia,False,0.1976208401381803,2,False,True,False,,0.1976208401381803,False
+test:112233,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchiectasis,Bronchitis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:11342,base,base,base,Atrial fibrillation,Atrial fibrillation,True,0.991616365818245,1,True,False,False,,0.991616365818245,True
+test:11342,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Atrial fibrillation,Panic attack,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:11342,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Atrial fibrillation,Myocarditis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:11342,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Atrial fibrillation,Bronchiolitis,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:11342,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Atrial fibrillation,Acute COPD exacerbation / infection,False,0.012775101472335,5,False,False,False,,0.012775101472335,False
+test:11655,base,base,base,Bronchitis,URTI,False,0.9176225145970988,1,True,False,True,15.188919048045255,0.9176225145970988,False
+test:11655,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchitis,Bronchitis,True,0.4377152990585545,2,False,True,True,15.188919048045255,10.437715299058555,True
+test:11655,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchitis,Influenza,False,0.0427306076644627,3,False,False,True,15.188919048045255,0.0427306076644627,False
+test:121319,base,base,base,Anaphylaxis,Anaphylaxis,True,0.9912385842139704,1,True,False,False,,0.9912385842139704,True
+test:121319,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Anaphylaxis,SLE,False,0.0155071360645596,2,False,True,False,,0.0155071360645596,False
+test:121319,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Anaphylaxis,Localized edema,False,0.013905728755395,3,False,False,False,,0.013905728755395,False
+test:121319,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Anaphylaxis,Acute pulmonary edema,False,0.0137353394300112,4,False,False,False,,0.0137353394300112,False
+test:125508,base,base,base,Unstable angina,Unstable angina,True,0.9918050742909728,1,True,False,False,,0.9918050742909728,True
+test:125508,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Unstable angina,Stable angina,False,0.0169673516093343,2,False,True,False,,0.0169673516093343,False
+test:125508,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Unstable angina,Spontaneous pneumothorax,False,0.0153312813138421,3,False,False,False,,0.0153312813138421,False
+test:130566,base,base,base,Chronic rhinosinusitis,Chronic rhinosinusitis,True,0.7540863587762149,1,True,False,True,-0.3362023248468905,0.7540863587762149,True
+test:130566,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chronic rhinosinusitis,Acute rhinosinusitis,False,0.7288953126112047,2,False,True,True,-0.3362023248468905,0.7288953126112047,False
+test:130566,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Chronic rhinosinusitis,Ebola,False,0.0138598981038937,3,False,False,True,-0.3362023248468905,0.0138598981038937,False
+test:130566,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chronic rhinosinusitis,Bronchospasm / acute asthma exacerbation,False,0.0134103297020727,4,False,False,True,-0.3362023248468905,0.0134103297020727,False
+test:133024,base,base,base,Scombroid food poisoning,Scombroid food poisoning,True,0.9919676360156454,1,True,False,False,,0.9919676360156454,True
+test:133024,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Scombroid food poisoning,Anaphylaxis,False,0.0156905258937111,2,False,True,False,,0.0156905258937111,False
+test:133024,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Scombroid food poisoning,SLE,False,0.0143436681722559,3,False,False,False,,0.0143436681722559,False
+test:133024,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Scombroid food poisoning,Inguinal hernia,False,0.013905728755395,4,False,False,False,,0.013905728755395,False
+test:133888,base,base,base,Larygospasm,Larygospasm,True,0.9911327821128016,1,True,False,False,,0.9911327821128016,True
+test:133888,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Larygospasm,Acute laryngitis,False,0.0177012111149889,2,False,True,False,,0.0177012111149889,False
+test:133888,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Larygospasm,Chronic rhinosinusitis,False,0.0137709433104217,3,False,False,False,,0.0137709433104217,False
+test:133888,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Larygospasm,Acute rhinosinusitis,False,0.0137353394300112,4,False,False,False,,0.0137353394300112,False
+test:13402,pseudo_graph_topk,pseudo,Pseudo Graph Topk,URTI,URTI,True,0.961479734525191,1,True,False,False,,0.961479734525191,True
+test:13402,base,base,base,URTI,Ebola,False,0.0045396033575596,2,False,True,False,,0.0045396033575596,False
+test:13402,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,URTI,Influenza,False,0.0020978294380118,3,False,False,False,,0.0020978294380118,False
+test:13402,pseudo_graph_topk,pseudo,Pseudo Graph Topk,URTI,Pneumonia,False,0.0020978294380118,4,False,False,False,,0.0020978294380118,False
+test:16097,base,base,base,Stable angina,Stable angina,True,0.9581409348029492,1,True,False,False,,0.9581409348029492,True
+test:16097,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Stable angina,Unstable angina,False,0.4596602726225469,2,False,True,False,,0.4596602726225469,False
+test:16097,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Stable angina,Atrial fibrillation,False,0.0160915410918561,3,False,False,False,,0.0160915410918561,False
+test:18744,base,base,base,Anemia,Anemia,True,0.9908557251327952,1,True,False,False,,0.9908557251327952,True
+test:18744,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Anemia,Bronchiolitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:18744,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Anemia,Ebola,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:18744,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Anemia,Spontaneous pneumothorax,False,0.0128082486090802,4,False,False,False,,0.0128082486090802,False
+test:19160,base,base,base,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,0.9903068033534288,1,True,False,False,,0.9903068033534288,True
+test:19160,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Possible NSTEMI / STEMI,Unstable angina,False,0.0168567069582889,2,False,True,False,,0.0168567069582889,False
+test:19160,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Possible NSTEMI / STEMI,Stable angina,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:19160,pseudo_mlp_top1,pseudo,Pseudo Mlp Top1,Possible NSTEMI / STEMI,Panic attack,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:19424,base,base,base,Whooping cough,Whooping cough,True,0.9908444525708128,1,True,False,False,,0.9908444525708128,True
+test:19424,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Whooping cough,Bronchiolitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:19424,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Whooping cough,Ebola,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:19424,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Whooping cough,URTI,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:19424,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Whooping cough,Viral pharyngitis,False,0.0139919915431228,5,False,False,False,,0.0139919915431228,False
+test:23687,base,base,base,Pulmonary embolism,Pulmonary embolism,True,0.9060990320995714,1,True,False,False,,0.9060990320995714,True
+test:23687,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pulmonary embolism,Pneumonia,False,0.6267577361055413,2,False,True,False,,0.6267577361055413,False
+test:23687,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pulmonary embolism,Pericarditis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:2801,base,base,base,Pancreatic neoplasm,Pancreatic neoplasm,True,0.991616365818245,1,True,False,False,,0.991616365818245,True
+test:2801,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pancreatic neoplasm,Scombroid food poisoning,False,0.0152217894948433,2,False,True,False,,0.0152217894948433,False
+test:2801,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pancreatic neoplasm,Ebola,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:29123,base,base,base,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,0.9914347902855334,1,True,False,False,,0.9914347902855334,True
+test:29123,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchospasm / acute asthma exacerbation,Bronchiolitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:29123,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Bronchospasm / acute asthma exacerbation,GERD,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:29123,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchospasm / acute asthma exacerbation,Allergic sinusitis,False,0.013905728755395,4,False,False,False,,0.013905728755395,False
+test:33118,hypothesis_01_influenza,branch,Graph/Bayes hypothesis scout: Influenza,Acute otitis media,Acute otitis media,True,0.8249578482802913,1,True,True,False,,0.8249578482802913,True
+test:33118,hypothesis_03_pneumonia,branch,Counter-anchor stress-test scout: Pneumonia,Acute otitis media,Acute otitis media,True,0.7685224330114474,2,True,True,False,,0.7685224330114474,True
+test:33118,base,base,base,Acute otitis media,Acute otitis media,True,0.4218475437059635,3,True,True,False,,0.4218475437059635,True
+test:33118,hypothesis_02_viral_pharyngitis,branch,Pairwise discriminator scout: Viral pharyngitis,Acute otitis media,URTI,False,0.3181603661769693,4,False,False,False,,0.3181603661769693,False
+test:33118,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Acute otitis media,Viral pharyngitis,False,0.0990580747589748,5,False,False,False,,0.0990580747589748,False
+test:33118,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute otitis media,Influenza,False,0.072130235815962,6,False,False,False,,0.072130235815962,False
+test:33118,pseudo_assigned_hypothesis,pseudo,Pseudo Assigned Hypothesis,Acute otitis media,Pneumonia,False,0.0309222349204701,7,False,False,False,,0.0309222349204701,False
+test:33118,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute otitis media,Bronchiolitis,False,0.0025129851625013,8,False,False,False,,0.0025129851625013,False
+test:34242,base,base,base,Guillain-Barré syndrome,Guillain-Barré syndrome,True,0.991509033851488,1,True,False,False,,0.991509033851488,True
+test:34242,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Guillain-Barré syndrome,Pericarditis,False,0.0138598981038937,2,False,True,False,,0.0138598981038937,False
+test:34242,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Guillain-Barré syndrome,Myocarditis,False,0.0138598981038937,3,False,False,False,,0.0138598981038937,False
+test:35039,hypothesis_01_myocarditis,branch,Graph/Bayes hypothesis scout: Myocarditis,Myocarditis,Myocarditis,True,0.9930246745237395,1,True,False,True,-4.5239540067943995,0.9930246745237395,True
+test:35039,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Myocarditis,Pericarditis,False,0.9033291655047632,2,False,True,True,-4.5239540067943995,0.9033291655047632,False
+test:35039,hypothesis_03_acute_pulmonary_edema,branch,Counter-anchor stress-test scout: Acute pulmonary edema,Myocarditis,Acute pulmonary edema,False,0.0026799166725584,3,False,False,True,-4.5239540067943995,0.0026799166725584,False
+test:35039,hypothesis_02_pericarditis,branch,Pairwise discriminator scout: Pericarditis,Myocarditis,GERD,False,0.0021009109265618,4,False,False,True,-4.5239540067943995,0.0021009109265618,False
+test:35039,base,base,base,Myocarditis,Sarcoidosis,False,0.0020278385154667,5,False,False,True,-4.5239540067943995,0.0020278385154667,False
+test:36032,base,base,base,Sarcoidosis,Sarcoidosis,True,0.9896883358577394,1,True,False,False,,0.9896883358577394,True
+test:36032,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Sarcoidosis,GERD,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:36032,pseudo_mlp_top1,pseudo,Pseudo Mlp Top1,Sarcoidosis,URTI,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:36032,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Sarcoidosis,Pancreatic neoplasm,False,0.0137709433104217,4,False,False,False,,0.0137709433104217,False
+test:38202,base,base,base,Inguinal hernia,Inguinal hernia,True,0.991411444772476,1,True,False,False,,0.991411444772476,True
+test:38202,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Inguinal hernia,Whooping cough,False,0.0216796478094068,2,False,True,False,,0.0216796478094068,False
+test:38202,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Inguinal hernia,Spontaneous rib fracture,False,0.0176133151122343,3,False,False,False,,0.0176133151122343,False
+test:38475,base,base,base,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,0.641443942017399,1,True,True,False,,0.641443942017399,True
+test:38475,hypothesis_01_bronchitis,branch,Graph/Bayes hypothesis scout: Bronchitis,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,0.6207844127156412,2,True,True,False,,0.6207844127156412,True
+test:38475,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute COPD exacerbation / infection,Bronchitis,False,0.3145556064015941,3,False,False,False,,0.3145556064015941,False
+test:38475,hypothesis_02_bronchiectasis,branch,Pairwise discriminator scout: Bronchiectasis,Acute COPD exacerbation / infection,Myasthenia gravis,False,0.0020818629499184,4,False,False,False,,0.0020818629499184,False
+test:38475,pseudo_mlp_top1,pseudo,Pseudo Mlp Top1,Acute COPD exacerbation / infection,Scombroid food poisoning,False,0.0019758743645383,5,False,False,False,,0.0019758743645383,False
+test:38475,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute COPD exacerbation / infection,Bronchiectasis,False,0.0018410059013227,6,False,False,False,,0.0018410059013227,False
+test:38475,hypothesis_03_sarcoidosis,branch,Counter-anchor stress-test scout: Sarcoidosis,Acute COPD exacerbation / infection,Myocarditis,False,0.0018410059013227,7,False,False,False,,0.0018410059013227,False
+test:38475,pseudo_assigned_hypothesis,pseudo,Pseudo Assigned Hypothesis,Acute COPD exacerbation / infection,Sarcoidosis,False,0.0018410059013227,8,False,False,False,,0.0018410059013227,False
+test:39033,base,base,base,Viral pharyngitis,Viral pharyngitis,True,0.9662107623165616,1,True,False,True,-17.64584076187722,0.9662107623165616,True
+test:39033,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Viral pharyngitis,URTI,False,0.6004394209680837,2,False,True,True,-17.64584076187722,0.6004394209680837,False
+test:39033,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Viral pharyngitis,Acute otitis media,False,0.0142593072605256,3,False,False,True,-17.64584076187722,0.0142593072605256,False
+test:46152,base,base,base,Cluster headache,Cluster headache,True,0.9919499119547636,1,True,False,False,,0.9919499119547636,True
+test:46152,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Cluster headache,GERD,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:46152,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Cluster headache,Stable angina,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:51421,base,base,base,Chagas,Chagas,True,0.992102687861103,1,True,False,False,,0.992102687861103,True
+test:51421,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chagas,Ebola,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:51421,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Chagas,Croup,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:51421,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Chagas,Bronchiolitis,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:51611,base,base,base,PSVT,PSVT,True,0.9911327821128016,1,True,False,False,,0.9911327821128016,True
+test:51611,pseudo_graph_topk,pseudo,Pseudo Graph Topk,PSVT,Epiglottitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:51611,pseudo_graph_topk,pseudo,Pseudo Graph Topk,PSVT,Myocarditis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:52755,base,base,base,SLE,SLE,True,0.9930853043274374,1,True,False,False,,0.9930853043274374,True
+test:52755,pseudo_graph_topk,pseudo,Pseudo Graph Topk,SLE,Pericarditis,False,0.0169673516093343,2,False,True,False,,0.0169673516093343,False
+test:52755,pseudo_mlp_top1,pseudo,Pseudo Mlp Top1,SLE,Scombroid food poisoning,False,0.0152217894948433,3,False,False,False,,0.0152217894948433,False
+test:52755,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,SLE,Ebola,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:52755,pseudo_graph_topk,pseudo,Pseudo Graph Topk,SLE,Pneumonia,False,0.0132036594582235,5,False,False,False,,0.0132036594582235,False
+test:58986,base,base,base,Acute laryngitis,Acute laryngitis,True,0.9595636453208868,1,True,False,False,,0.9595636453208868,True
+test:58986,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute laryngitis,Epiglottitis,False,0.527163998375748,2,False,True,False,,0.527163998375748,False
+test:58986,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Acute laryngitis,URTI,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:58986,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute laryngitis,Bronchiolitis,False,0.0141956466972731,4,False,False,False,,0.0141956466972731,False
+test:62878,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Pericarditis,Pericarditis,True,0.757431411224642,1,True,False,True,-11.735003494238267,0.757431411224642,True
+test:62878,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pericarditis,PSVT,False,0.7208131024166071,2,False,True,True,-11.735003494238267,0.7208131024166071,False
+test:62878,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pericarditis,Myocarditis,False,0.683937729498934,3,False,False,True,-11.735003494238267,0.683937729498934,False
+test:62878,hypothesis_02_psvt,branch,Pairwise discriminator scout: PSVT,Pericarditis,Anemia,False,0.1965986139260941,4,False,False,True,-11.735003494238267,0.1965986139260941,False
+test:62878,base,base,base,Pericarditis,Panic attack,False,0.1683692220169294,5,False,False,True,-11.735003494238267,0.1683692220169294,False
+test:62878,hypothesis_01_atrial_fibrillation,branch,Graph/Bayes hypothesis scout: Atrial fibrillation,Pericarditis,Atrial fibrillation,False,0.1533305983553002,6,False,False,True,-11.735003494238267,0.1533305983553002,False
+test:62878,hypothesis_03_myocarditis,branch,Counter-anchor stress-test scout: Myocarditis,Pericarditis,Sarcoidosis,False,0.1123773406745298,7,False,False,True,-11.735003494238267,0.1123773406745298,False
+test:71107,base,base,base,Spontaneous rib fracture,Spontaneous rib fracture,True,0.991616365818245,1,True,False,False,,0.991616365818245,True
+test:71107,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Spontaneous rib fracture,Whooping cough,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:71107,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Spontaneous rib fracture,Inguinal hernia,False,0.013905728755395,3,False,False,False,,0.013905728755395,False
+test:71107,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Spontaneous rib fracture,Pulmonary embolism,False,0.013905728755395,4,False,False,False,,0.013905728755395,False
+test:71107,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Spontaneous rib fracture,Spontaneous pneumothorax,False,0.0128082486090802,5,False,False,False,,0.0128082486090802,False
+test:749,base,base,base,Spontaneous pneumothorax,Spontaneous pneumothorax,True,0.9908491675559532,1,True,False,False,,0.9908491675559532,True
+test:749,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Spontaneous pneumothorax,Pneumonia,False,0.0020570358776279,2,False,True,False,,0.0020570358776279,False
+test:749,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Spontaneous pneumothorax,Pulmonary embolism,False,0.001802945537119,3,False,False,False,,0.001802945537119,False
+test:749,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Spontaneous pneumothorax,Pulmonary neoplasm,False,0.001802945537119,4,False,False,False,,0.001802945537119,False
+test:76022,hypothesis_01_panic_attack,branch,Graph/Bayes hypothesis scout: Panic attack,Panic attack,Panic attack,True,0.9942804806257248,1,True,True,False,,0.9942804806257248,True
+test:76022,hypothesis_03_psvt,branch,Counter-anchor stress-test scout: PSVT,Panic attack,Panic attack,True,0.9917039382037036,2,True,True,False,,0.9917039382037036,True
+test:76022,hypothesis_02_myocarditis,branch,Pairwise discriminator scout: Myocarditis,Panic attack,Panic attack,True,0.9917039382037036,3,True,True,False,,0.9917039382037036,True
+test:76022,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Panic attack,Myocarditis,False,0.632630763871498,4,False,False,False,,0.632630763871498,False
+test:76022,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Panic attack,PSVT,False,0.4765880988846105,5,False,False,False,,0.4765880988846105,False
+test:76022,base,base,base,Panic attack,Anaphylaxis,False,0.0022908478745205,6,False,False,False,,0.0022908478745205,False
+test:77908,base,base,base,Ebola,Ebola,True,0.992102687861103,1,True,False,False,,0.992102687861103,True
+test:77908,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Ebola,Bronchiolitis,False,0.0141956466972731,2,False,True,False,,0.0141956466972731,False
+test:77908,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Ebola,Chagas,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:81691,hypothesis_01_influenza,branch,Graph/Bayes hypothesis scout: Influenza,Croup,Croup,True,0.4411381699673942,1,True,False,False,,0.4411381699673942,True
+test:81691,base,base,base,Croup,Acute otitis media,False,0.4139568135671058,2,False,True,False,,0.4139568135671058,False
+test:81691,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Croup,Viral pharyngitis,False,0.1117953319048943,3,False,False,False,,0.1117953319048943,False
+test:81691,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Croup,Influenza,False,0.081211319697684,4,False,False,False,,0.081211319697684,False
+test:81691,pseudo_assigned_hypothesis,pseudo,Pseudo Assigned Hypothesis,Croup,Pneumonia,False,0.0381314244604918,5,False,False,False,,0.0381314244604918,False
+test:81691,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Croup,Bronchiolitis,False,0.0028563472596161,6,False,False,False,,0.0028563472596161,False
+test:81691,hypothesis_03_pneumonia,branch,Counter-anchor stress-test scout: Pneumonia,Croup,Cluster headache,False,0.0025763124532114,7,False,False,False,,0.0025763124532114,False
+test:81691,hypothesis_02_viral_pharyngitis,branch,Pairwise discriminator scout: Viral pharyngitis,Croup,Anemia,False,0.0019683457956643,8,False,False,False,,0.0019683457956643,False
+test:8666,base,base,base,Influenza,Influenza,True,0.99032176233556,1,True,False,False,,0.99032176233556,True
+test:8666,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Influenza,HIV (initial infection),False,0.0023928596240571,2,False,True,False,,0.0023928596240571,False
+test:8666,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Influenza,Pneumonia,False,0.0020570358776279,3,False,False,False,,0.0020570358776279,False
+test:88250,base,base,base,Allergic sinusitis,Allergic sinusitis,True,0.9918050742909728,1,True,False,False,,0.9918050742909728,True
+test:88250,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Allergic sinusitis,Acute otitis media,False,0.0146045880340674,2,False,True,False,,0.0146045880340674,False
+test:88250,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Allergic sinusitis,Viral pharyngitis,False,0.0139919915431228,3,False,False,False,,0.0139919915431228,False
+test:89477,base,base,base,Localized edema,Localized edema,True,0.9918050742909728,1,True,False,False,,0.9918050742909728,True
+test:89477,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Localized edema,Anaphylaxis,False,0.0156905258937111,2,False,True,False,,0.0156905258937111,False
+test:89477,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Localized edema,Pulmonary embolism,False,0.013905728755395,3,False,False,False,,0.013905728755395,False
+test:89477,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Localized edema,Acute pulmonary edema,False,0.0137353394300112,4,False,False,False,,0.0137353394300112,False
+test:90978,base,base,base,Bronchiolitis,Bronchiolitis,True,0.7415458893720546,1,True,False,False,,0.7415458893720546,True
+test:90978,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchiolitis,Ebola,False,0.0271383031193671,2,False,True,False,,0.0271383031193671,False
+test:90978,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Bronchiolitis,Croup,False,0.0248437597406746,3,False,False,False,,0.0248437597406746,False
+test:90978,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Bronchiolitis,URTI,False,0.0153472949710367,4,False,False,False,,0.0153472949710367,False
+test:90978,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Bronchiolitis,Viral pharyngitis,False,0.0139919915431228,5,False,False,False,,0.0139919915431228,False
+test:91516,base,base,base,Epiglottitis,Epiglottitis,True,0.9911327821128016,1,True,False,False,,0.9911327821128016,True
+test:91516,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Epiglottitis,Acute laryngitis,False,0.0177012111149889,2,False,True,False,,0.0177012111149889,False
+test:91516,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Epiglottitis,Bronchiolitis,False,0.0141956466972731,3,False,False,False,,0.0141956466972731,False
+test:91516,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Epiglottitis,Myasthenia gravis,False,0.013905728755395,4,False,False,False,,0.013905728755395,False
+test:93930,base,base,base,Acute pulmonary edema,Acute pulmonary edema,True,0.991457616547158,1,True,False,False,,0.991457616547158,True
+test:93930,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute pulmonary edema,Pneumonia,False,0.0020570358776279,2,False,True,False,,0.0020570358776279,False
+test:93930,pseudo_bayes_topk,pseudo,Pseudo Bayes Topk,Acute pulmonary edema,Spontaneous pneumothorax,False,0.0019947589129868,3,False,False,False,,0.0019947589129868,False
+test:93930,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Acute pulmonary edema,Localized edema,False,0.001802945537119,4,False,False,False,,0.001802945537119,False
+test:95923,base,base,base,Pneumonia,Pneumonia,True,0.9911704625959428,1,True,False,False,,0.9911704625959428,True
+test:95923,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pneumonia,SLE,False,0.0180589715727843,2,False,True,False,,0.0180589715727843,False
+test:95923,pseudo_graph_topk,pseudo,Pseudo Graph Topk,Pneumonia,Scombroid food poisoning,False,0.015767310604222,3,False,False,False,,0.015767310604222,False
+test:96956,base,base,base,GERD,GERD,True,0.9691589206123236,1,True,False,False,,0.9691589206123236,True
+test:96956,pseudo_graph_topk,pseudo,Pseudo Graph Topk,GERD,Myocarditis,False,0.4225651179889269,2,False,True,False,,0.4225651179889269,False
+test:96956,pseudo_graph_topk,pseudo,Pseudo Graph Topk,GERD,Pericarditis,False,0.0942669464784732,3,False,False,False,,0.0942669464784732,False

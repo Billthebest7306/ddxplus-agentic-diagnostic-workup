@@ -1,0 +1,51 @@
+{
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/close_confounder_discriminator_49case_v1",
+  "base_resolver": "gradient_boosting_name_family",
+  "base_resolver_status": "Notebook 32 deployable-looking diagnostic row, treated as fixed input for this follow-up lab.",
+  "caveat": "This beats Notebook 31 and the Notebook 32 GBM row on the saved 49-case artifact, but it still needs independent/fresh confirmation because the base GBM row was discovered in Notebook 32 ablations.",
+  "extra_evidence_policy": {
+    "extra_root_budget": 2,
+    "root_ranking": "train-derived Jensen-Shannon separation times root mutual-information weight",
+    "root_reveal_source": "DDXPlus row, only for explicitly selected roots"
+  },
+  "flag_rule": {
+    "acute_chronic_variant_always_margin_eligible": true,
+    "max_base_score_margin": 0.7,
+    "min_missing_pair_utility": 0.08,
+    "same_family_or_near_name_pair": true
+  },
+  "inputs_used": {
+    "bayesian_likelihoods": "/Users/alfred/Documents/baseline_model/artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1/root_outcome_likelihoods.csv",
+    "ddxplus_test_rows": "/Users/alfred/Documents/baseline_model/dataset/release_test_patients.zip",
+    "graph_edges": "/Users/alfred/Documents/baseline_model/artifacts/graph_algorithmic_ledger/medkgi_style_offline_notebook13_49case_v1/global_evidence_graph_edges.csv",
+    "notebook30_candidate_pool": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/hypothesis_forced_differential_branching_49case_v1",
+    "notebook31_reference": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/neural_candidate_pool_resolver_49case_v1",
+    "notebook32_resolver_ablation": "/Users/alfred/Documents/baseline_model/artifacts/trajectory_replicates/resolver_ablation_lab_49case_v1"
+  },
+  "override_rule": {
+    "criterion": "extra_root_log_bayes_factor_challenger_vs_anchor >= threshold",
+    "threshold": 2.0,
+    "threshold_rationale": "pre-registered strong Bayes-factor threshold; sensitivity rows are diagnostic only"
+  },
+  "promotion_decision": "promote_as_offline_candidate_for_independent_confirmation",
+  "result": {
+    "accuracy": 0.9795918367346939,
+    "additional_api_calls": 0,
+    "additional_evidence_requests_total": 12,
+    "flagged_cases": 6,
+    "mean_additional_evidence_requests": 0.24489795918367346,
+    "mean_selected_requests": 7.020408163265307,
+    "mean_total_branch_requests": 12.346938775510203,
+    "notebook31_correct": 46,
+    "notebook32_gbm_correct": 47,
+    "num_cases": 49,
+    "num_correct": 48,
+    "overrides": 1,
+    "promotion_status": "offline_candidate_promoted_for_followup_confirmation",
+    "regressions_vs_notebook31": 0,
+    "regressions_vs_notebook32_gbm": 0,
+    "wins_vs_notebook31": 2,
+    "wins_vs_notebook32_gbm": 1
+  },
+  "selected_policy_name": "close_confounder_discriminator_v1"
+}

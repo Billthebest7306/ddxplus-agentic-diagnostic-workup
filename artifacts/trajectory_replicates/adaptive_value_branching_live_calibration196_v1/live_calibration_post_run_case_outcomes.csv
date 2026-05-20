@@ -1,0 +1,197 @@
+case_id,true_pathology,base_predicted_pathology,base_correct,selected_pathology_pre_discriminator,predicted_pathology_final,correct_final,candidate_pool_has_true,final_outcome_vs_base,branch_trigger_probability,branch_trigger_fired,branches_spawned,score_margin_top2,close_confounder_flag,close_confounder_override,extra_roots_requested,num_requests_base,num_requests_selected_final,total_branch_requests_final
+test:22506,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,True,both_correct,0.0148131775868761,False,0,0.9878108443431892,False,False,0,6,6.0,6.0
+test:55836,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,True,both_correct,0.0094285723574768,False,0,0.9878108443431892,False,False,0,5,5.0,5.0
+test:122787,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,True,both_correct,0.0149640747537437,False,0,0.9891748784888732,False,False,0,2,2.0,2.0
+test:125700,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,Acute COPD exacerbation / infection,Acute COPD exacerbation / infection,True,True,both_correct,0.0118219190454622,False,0,0.9871658221892874,False,False,0,5,5.0,5.0
+test:32430,Acute dystonic reactions,Acute dystonic reactions,True,Acute dystonic reactions,Acute dystonic reactions,True,True,both_correct,0.0133170399043375,False,0,0.98980863991566,False,False,0,0,0.0,0.0
+test:43433,Acute dystonic reactions,Acute dystonic reactions,True,Acute dystonic reactions,Acute dystonic reactions,True,True,both_correct,0.0088065397500089,False,0,0.9900029215731349,False,False,0,1,1.0,1.0
+test:94267,Acute dystonic reactions,Acute dystonic reactions,True,Acute dystonic reactions,Acute dystonic reactions,True,True,both_correct,0.0114225200811175,False,0,0.9900079714831762,False,False,0,1,1.0,1.0
+test:132880,Acute dystonic reactions,Acute dystonic reactions,True,Acute dystonic reactions,Acute dystonic reactions,True,True,both_correct,0.0113520023801885,False,0,0.9901418374129726,False,False,0,1,1.0,1.0
+test:80690,Acute laryngitis,Acute laryngitis,True,Acute laryngitis,Acute laryngitis,True,True,both_correct,0.0125816394453797,False,0,0.9905907598733982,False,False,0,1,1.0,1.0
+test:105339,Acute laryngitis,Tuberculosis,False,Acute otitis media,Acute otitis media,False,True,both_wrong,0.9800510984405136,True,3,0.1416887789157382,False,False,0,24,17.0,81.0
+test:124793,Acute laryngitis,Acute laryngitis,True,Acute laryngitis,Acute laryngitis,True,True,both_correct,0.0113374622764511,False,0,0.9896639424303731,False,False,0,10,10.0,10.0
+test:127254,Acute laryngitis,Acute laryngitis,True,Acute laryngitis,Acute laryngitis,True,True,both_correct,0.0180667646698206,False,0,0.9896639424303731,False,False,0,10,10.0,10.0
+test:3964,Acute otitis media,Acute otitis media,True,Acute otitis media,Acute otitis media,True,True,both_correct,0.0132305309146582,False,0,0.9892435007887324,False,False,0,9,9.0,9.0
+test:55869,Acute otitis media,Acute otitis media,True,Acute otitis media,Acute otitis media,True,True,both_correct,0.6658686644830024,True,3,0.2626706493421584,False,False,0,12,10.0,47.0
+test:68148,Acute otitis media,Acute otitis media,True,Acute otitis media,Acute otitis media,True,True,both_correct,0.0170023956667328,False,0,0.9902301307810102,False,False,0,1,1.0,1.0
+test:84852,Acute otitis media,Acute otitis media,True,Acute otitis media,Acute otitis media,True,True,both_correct,0.01401313525145,False,0,0.9892435007887324,False,False,0,8,8.0,8.0
+test:27475,Acute pulmonary edema,Acute pulmonary edema,True,Acute pulmonary edema,Acute pulmonary edema,True,True,both_correct,0.0035902881136241,False,0,0.9889938257730984,False,False,0,7,7.0,7.0
+test:81766,Acute pulmonary edema,Acute pulmonary edema,True,Acute pulmonary edema,Acute pulmonary edema,True,True,both_correct,0.0024380990933208,False,0,0.9875314920349634,False,False,0,6,6.0,6.0
+test:100704,Acute pulmonary edema,Acute pulmonary edema,True,Acute pulmonary edema,Acute pulmonary edema,True,True,both_correct,0.00758138237583,False,0,0.9901325339556302,False,False,0,1,1.0,1.0
+test:125311,Acute pulmonary edema,Acute pulmonary edema,True,Acute pulmonary edema,Acute pulmonary edema,True,True,both_correct,0.0077597422002083,False,0,0.989962025735869,False,False,0,2,2.0,2.0
+test:21703,Acute rhinosinusitis,Chronic rhinosinusitis,False,Chronic rhinosinusitis,Chronic rhinosinusitis,False,True,both_wrong,0.317340413386951,True,1,0.5640559342236698,False,False,0,3,3.0,5.0
+test:52366,Acute rhinosinusitis,Chronic rhinosinusitis,False,Chronic rhinosinusitis,Chronic rhinosinusitis,False,True,both_wrong,0.0750159584294378,False,0,0.6695518308489918,False,False,0,4,4.0,4.0
+test:61503,Acute rhinosinusitis,Chronic rhinosinusitis,False,Chronic rhinosinusitis,Chronic rhinosinusitis,False,True,both_wrong,0.0184436896222053,False,0,0.8338554921266887,False,False,0,8,8.0,8.0
+test:93342,Acute rhinosinusitis,Chronic rhinosinusitis,False,Chronic rhinosinusitis,Chronic rhinosinusitis,False,True,both_wrong,0.0420756944456225,False,0,0.749038766744498,False,False,0,2,2.0,2.0
+test:27272,Allergic sinusitis,Allergic sinusitis,True,Allergic sinusitis,Allergic sinusitis,True,True,both_correct,0.0133350208768877,False,0,0.990224723948813,False,False,0,2,2.0,2.0
+test:29699,Allergic sinusitis,Allergic sinusitis,True,Allergic sinusitis,Allergic sinusitis,True,True,both_correct,0.0108133915932958,False,0,0.9902262182223428,False,False,0,1,1.0,1.0
+test:50574,Allergic sinusitis,Allergic sinusitis,True,Allergic sinusitis,Allergic sinusitis,True,True,both_correct,0.0291700705989056,False,0,0.9885767434986644,False,False,0,6,6.0,6.0
+test:127067,Allergic sinusitis,Acute otitis media,False,Acute otitis media,Acute otitis media,False,False,both_wrong,0.8229360366797944,True,1,0.2945465459051282,False,False,0,23,23.0,42.0
+test:810,Anaphylaxis,Anaphylaxis,True,Anaphylaxis,Anaphylaxis,True,True,both_correct,0.0131456662975436,False,0,0.989849500079212,False,False,0,1,1.0,1.0
+test:17836,Anaphylaxis,Anaphylaxis,True,Anaphylaxis,Anaphylaxis,True,True,both_correct,0.0127363486946456,False,0,0.9888189425332968,False,False,0,3,3.0,3.0
+test:49934,Anaphylaxis,Anaphylaxis,True,Anaphylaxis,Anaphylaxis,True,True,both_correct,0.0078274248314976,False,0,0.9888189425332968,False,False,0,3,3.0,3.0
+test:81333,Anaphylaxis,Anaphylaxis,True,Anaphylaxis,Anaphylaxis,True,True,both_correct,0.0078249273356335,False,0,0.9888189425332968,False,False,0,3,3.0,3.0
+test:7624,Anemia,Anemia,True,Anemia,Anemia,True,True,both_correct,0.5049788844513907,True,1,0.6803230472500109,False,False,0,11,9.0,20.0
+test:8943,Anemia,Anemia,True,Anemia,Anemia,True,True,both_correct,0.0145602360552419,False,0,0.9821698363562356,False,False,0,2,2.0,2.0
+test:79005,Anemia,Anemia,True,Anemia,Anemia,True,True,both_correct,0.0195202121085159,False,0,0.9872933569278938,False,False,0,12,12.0,12.0
+test:133165,Anemia,Anemia,True,Anemia,Anemia,True,True,both_correct,0.5000115956205986,True,1,0.6803230472500109,False,False,0,11,9.0,20.0
+test:23690,Atrial fibrillation,Panic attack,False,Spontaneous pneumothorax,Spontaneous pneumothorax,False,True,both_wrong,0.992583182504793,True,3,0.0504790267581769,False,False,0,24,24.0,80.0
+test:52726,Atrial fibrillation,Atrial fibrillation,True,Atrial fibrillation,Atrial fibrillation,True,True,both_correct,0.0122713486034528,False,0,0.989075167649259,False,False,0,5,5.0,5.0
+test:125873,Atrial fibrillation,Atrial fibrillation,True,Atrial fibrillation,Atrial fibrillation,True,True,both_correct,0.0176261567453569,False,0,0.9900174070507568,False,False,0,0,0.0,0.0
+test:126708,Atrial fibrillation,Atrial fibrillation,True,Atrial fibrillation,Atrial fibrillation,True,True,both_correct,0.0118647599104482,False,0,0.9901231208840876,False,False,0,1,1.0,1.0
+test:2066,Boerhaave,Boerhaave,True,Boerhaave,Boerhaave,True,True,both_correct,0.0145574316164988,False,0,0.9896385732934184,False,False,0,0,0.0,0.0
+test:46178,Boerhaave,Boerhaave,True,Boerhaave,Boerhaave,True,True,both_correct,0.0134438696208666,False,0,0.9900903409533286,False,False,0,1,1.0,1.0
+test:95571,Boerhaave,Boerhaave,True,Boerhaave,Boerhaave,True,True,both_correct,0.0145671299641029,False,0,0.9896385732934184,False,False,0,0,0.0,0.0
+test:119943,Boerhaave,Boerhaave,True,Boerhaave,Boerhaave,True,True,both_correct,0.0134255535116163,False,0,0.9900903409533286,False,False,0,1,1.0,1.0
+test:3379,Bronchiectasis,Bronchiectasis,True,Bronchiectasis,Bronchiectasis,True,True,both_correct,0.0471507252967055,False,0,0.9825215126774454,False,False,0,12,12.0,12.0
+test:35167,Bronchiectasis,Bronchiectasis,True,Bronchiectasis,Bronchiectasis,True,True,both_correct,0.0117121153649493,False,0,0.988663071238578,False,False,0,4,4.0,4.0
+test:40700,Bronchiectasis,Bronchiectasis,True,Bronchiectasis,Bronchiectasis,True,True,both_correct,0.0131372892263347,False,0,0.9888502600717254,False,False,0,4,4.0,4.0
+test:134107,Bronchiectasis,Bronchiectasis,True,Bronchiectasis,Bronchiectasis,True,True,both_correct,0.0121464573368671,False,0,0.9892001937064538,False,False,0,6,6.0,6.0
+test:10950,Bronchiolitis,Bronchiolitis,True,Bronchiolitis,Bronchiolitis,True,True,both_correct,0.00649884091022,False,0,0.9888522423166451,False,False,0,12,12.0,12.0
+test:33679,Bronchiolitis,Bronchiolitis,True,Bronchiolitis,Bronchiolitis,True,True,both_correct,0.0028033793846329,False,0,0.9884220906607444,False,False,0,15,15.0,15.0
+test:71912,Bronchiolitis,Bronchiolitis,True,Bronchiolitis,Bronchiolitis,True,True,both_correct,0.0115260152186024,False,0,0.9880840188054972,False,False,0,13,13.0,13.0
+test:109763,Bronchiolitis,Bronchiolitis,True,Bronchiolitis,Bronchiolitis,True,True,both_correct,0.0082398226385418,False,0,0.9887583471236012,False,False,0,3,3.0,3.0
+test:29193,Bronchitis,Bronchitis,True,Bronchitis,Bronchitis,True,True,both_correct,0.0372319784195586,False,0,0.8298975513130176,False,False,0,9,9.0,9.0
+test:62294,Bronchitis,Bronchitis,True,Bronchitis,Bronchitis,True,True,both_correct,0.0325538070539077,False,0,0.7969805510859875,False,False,0,9,9.0,9.0
+test:90104,Bronchitis,URTI,False,URTI,Bronchitis,True,True,final_only_correct,0.4519992545864567,True,3,0.1220373703122191,True,True,2,3,5.0,27.0
+test:115388,Bronchitis,Bronchitis,True,Bronchitis,Bronchitis,True,True,both_correct,0.0112624237175278,False,0,0.9886850211354642,False,False,0,4,4.0,4.0
+test:17888,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,both_correct,0.0113577749679424,False,0,0.9892762447961804,False,False,0,3,3.0,3.0
+test:21999,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,both_correct,0.0115931313575833,False,0,0.9892762447961804,False,False,0,3,3.0,3.0
+test:115290,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,both_correct,0.0099369753062437,False,0,0.9890869733837436,False,False,0,3,3.0,3.0
+test:130230,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,Bronchospasm / acute asthma exacerbation,Bronchospasm / acute asthma exacerbation,True,True,both_correct,0.0114987036493844,False,0,0.9892762447961804,False,False,0,3,3.0,3.0
+test:33412,Chagas,Chagas,True,Chagas,Chagas,True,True,both_correct,0.0114015545635899,False,0,0.9889787511797148,False,False,0,22,22.0,22.0
+test:54380,Chagas,Chagas,True,Chagas,Chagas,True,True,both_correct,0.0103117356847092,False,0,0.9889791297267242,False,False,0,10,10.0,10.0
+test:67364,Chagas,Chagas,True,Chagas,Chagas,True,True,both_correct,0.0069858380273658,False,0,0.9891661468123564,False,False,0,23,23.0,23.0
+test:121387,Chagas,Chagas,True,Chagas,Chagas,True,True,both_correct,0.0053429021766676,False,0,0.9888642324117703,False,False,0,9,9.0,9.0
+test:42918,Chronic rhinosinusitis,Chronic rhinosinusitis,True,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,both_correct,0.0623401903475476,False,0,0.8557700754192463,False,False,0,3,3.0,3.0
+test:57428,Chronic rhinosinusitis,Chronic rhinosinusitis,True,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,both_correct,0.0807870412692161,False,0,0.5380141007673584,False,False,0,5,5.0,5.0
+test:59233,Chronic rhinosinusitis,Chronic rhinosinusitis,True,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,both_correct,0.001342912783996,False,0,0.7887710948383854,False,False,0,23,23.0,23.0
+test:100008,Chronic rhinosinusitis,Chronic rhinosinusitis,True,Chronic rhinosinusitis,Chronic rhinosinusitis,True,True,both_correct,0.0793285265315554,False,0,0.5380141007673584,False,False,0,5,5.0,5.0
+test:54762,Cluster headache,Cluster headache,True,Cluster headache,Cluster headache,True,True,both_correct,0.0116623817787373,False,0,0.9889282113825852,False,False,0,8,8.0,8.0
+test:71825,Cluster headache,Cluster headache,True,Cluster headache,Cluster headache,True,True,both_correct,0.0147587116787034,False,0,0.9893588703390124,False,False,0,7,7.0,7.0
+test:76617,Cluster headache,Cluster headache,True,Cluster headache,Cluster headache,True,True,both_correct,0.0147465660156082,False,0,0.9899594368100092,False,False,0,0,0.0,0.0
+test:102273,Cluster headache,Pneumonia,False,Cluster headache,Cluster headache,True,True,final_only_correct,0.6903143711427968,True,1,0.8091459794361266,False,False,0,4,7.0,11.0
+test:609,Croup,Larygospasm,False,Larygospasm,Larygospasm,False,True,both_wrong,0.1263582525473437,False,0,0.4737396320125989,False,False,0,2,2.0,2.0
+test:34582,Croup,Croup,True,Croup,Croup,True,True,both_correct,0.0048755818913038,False,0,0.9888322785247742,False,False,0,8,8.0,8.0
+test:56690,Croup,Croup,True,Croup,Croup,True,True,both_correct,0.3328689405296428,True,3,0.2300002537053222,True,False,2,1,3.0,13.0
+test:110564,Croup,Croup,True,Croup,Croup,True,True,both_correct,0.0156558053301418,False,0,0.9896890330701076,False,False,0,1,1.0,1.0
+test:30358,Ebola,Acute dystonic reactions,False,Acute dystonic reactions,Acute dystonic reactions,False,False,both_wrong,0.897571237904626,True,2,0.0380206540790934,False,False,0,9,9.0,51.0
+test:37820,Ebola,Ebola,True,Ebola,Ebola,True,True,both_correct,0.0065261702091178,False,0,0.9891411606995628,False,False,0,5,5.0,5.0
+test:59965,Ebola,Myocarditis,False,Ebola,Ebola,True,True,final_only_correct,0.7919590923927611,True,1,0.5778840939637132,False,False,0,24,5.0,29.0
+test:113762,Ebola,Ebola,True,URTI,URTI,False,True,base_only_correct,0.0021049164619428,False,0,0.8058613348967861,False,False,0,5,5.0,5.0
+test:457,Epiglottitis,Epiglottitis,True,Epiglottitis,Epiglottitis,True,True,both_correct,0.0525083335654846,False,0,0.6487641997663086,True,False,2,1,3.0,3.0
+test:31308,Epiglottitis,Epiglottitis,True,Epiglottitis,Epiglottitis,True,True,both_correct,0.0129560144133833,False,0,0.9899635355962698,False,False,0,1,1.0,1.0
+test:100513,Epiglottitis,Epiglottitis,True,Epiglottitis,Epiglottitis,True,True,both_correct,0.0088652903491813,False,0,0.988953962696367,False,False,0,8,8.0,8.0
+test:132876,Epiglottitis,Larygospasm,False,Larygospasm,Larygospasm,False,True,both_wrong,0.3172499580396516,True,1,0.3808600448865258,False,False,0,3,4.0,7.0
+test:5445,GERD,GERD,True,GERD,GERD,True,True,both_correct,0.0109363769966811,False,0,0.9889778404986486,False,False,0,3,3.0,3.0
+test:51012,GERD,GERD,True,GERD,GERD,True,True,both_correct,0.0092587489697435,False,0,0.9891433542655234,False,False,0,9,9.0,9.0
+test:59989,GERD,GERD,True,GERD,GERD,True,True,both_correct,0.0122375434296423,False,0,0.9893340424091738,False,False,0,7,7.0,7.0
+test:126203,GERD,GERD,True,GERD,GERD,True,True,both_correct,0.0114112331484627,False,0,0.9900691053716304,False,False,0,1,1.0,1.0
+test:1852,Guillain-Barré syndrome,Guillain-Barré syndrome,True,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,both_correct,0.0056241301387,False,0,0.9890690501359406,False,False,0,10,10.0,10.0
+test:29347,Guillain-Barré syndrome,Guillain-Barré syndrome,True,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,both_correct,0.0097224095669466,False,0,0.9903208485921788,False,False,0,2,2.0,2.0
+test:77972,Guillain-Barré syndrome,Sarcoidosis,False,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,final_only_correct,0.6918902423375332,True,3,0.1733089132655538,False,False,0,24,24.0,80.0
+test:112956,Guillain-Barré syndrome,Guillain-Barré syndrome,True,Guillain-Barré syndrome,Guillain-Barré syndrome,True,True,both_correct,0.0200930351035729,False,0,0.9819964850732984,False,False,0,1,1.0,1.0
+test:21800,HIV (initial infection),HIV (initial infection),True,HIV (initial infection),HIV (initial infection),True,True,both_correct,0.0124769034952593,False,0,0.989963971877628,False,False,0,1,1.0,1.0
+test:45939,HIV (initial infection),HIV (initial infection),True,HIV (initial infection),HIV (initial infection),True,True,both_correct,0.0148226922116749,False,0,0.9890114787736276,False,False,0,3,3.0,3.0
+test:76382,HIV (initial infection),HIV (initial infection),True,HIV (initial infection),HIV (initial infection),True,True,both_correct,0.0328222487738576,False,0,0.8213038264708262,False,False,0,3,3.0,3.0
+test:101559,HIV (initial infection),HIV (initial infection),True,HIV (initial infection),HIV (initial infection),True,True,both_correct,0.0147985063284791,False,0,0.9890114787736276,False,False,0,3,3.0,3.0
+test:45267,Influenza,Influenza,True,Influenza,Influenza,True,True,both_correct,0.0179198393138924,False,0,0.9887087585797784,False,False,0,9,9.0,9.0
+test:53391,Influenza,Influenza,True,Influenza,Influenza,True,True,both_correct,0.0080716845201486,False,0,0.988739233691343,False,False,0,23,23.0,23.0
+test:77939,Influenza,Influenza,True,Influenza,Influenza,True,True,both_correct,0.0093803652135718,False,0,0.988656643428397,False,False,0,4,4.0,4.0
+test:86128,Influenza,Influenza,True,Influenza,Influenza,True,True,both_correct,0.014602976224691,False,0,0.9634239951953624,False,False,0,10,10.0,10.0
+test:45768,Inguinal hernia,Inguinal hernia,True,Inguinal hernia,Inguinal hernia,True,True,both_correct,0.0183254846687917,False,0,0.9901115406801874,False,False,0,0,0.0,0.0
+test:121934,Inguinal hernia,Inguinal hernia,True,Inguinal hernia,Inguinal hernia,True,True,both_correct,0.0084696848021464,False,0,0.9893839312258228,False,False,0,4,4.0,4.0
+test:125197,Inguinal hernia,Inguinal hernia,True,Inguinal hernia,Inguinal hernia,True,True,both_correct,0.0137089381018777,False,0,0.9893659272473616,False,False,0,11,11.0,11.0
+test:133289,Inguinal hernia,Inguinal hernia,True,Inguinal hernia,Inguinal hernia,True,True,both_correct,0.0183157699163784,False,0,0.9901115406801874,False,False,0,0,0.0,0.0
+test:51562,Larygospasm,Larygospasm,True,Larygospasm,Larygospasm,True,True,both_correct,0.1211687847815568,False,0,0.460293818933656,False,False,0,2,2.0,2.0
+test:60218,Larygospasm,Larygospasm,True,Larygospasm,Larygospasm,True,True,both_correct,0.0687302468970805,False,0,0.8363434079955164,False,False,0,3,3.0,3.0
+test:71991,Larygospasm,Larygospasm,True,Larygospasm,Larygospasm,True,True,both_correct,0.4395100312236026,True,2,0.3309917526029102,False,False,0,1,3.0,6.0
+test:95902,Larygospasm,Larygospasm,True,Larygospasm,Larygospasm,True,True,both_correct,0.4395100312236026,True,1,0.4202307880126728,False,False,0,1,3.0,4.0
+test:34824,Localized edema,Localized edema,True,Localized edema,Localized edema,True,True,both_correct,0.0146749988399664,False,0,0.9904775658038482,False,False,0,1,1.0,1.0
+test:40298,Localized edema,Localized edema,True,Localized edema,Localized edema,True,True,both_correct,0.7143190720958486,True,1,0.5767115622374395,False,False,0,2,9.0,11.0
+test:71951,Localized edema,Localized edema,True,Localized edema,Localized edema,True,True,both_correct,0.0146749988399664,False,0,0.9904775658038482,False,False,0,1,1.0,1.0
+test:87390,Localized edema,Localized edema,True,Localized edema,Localized edema,True,True,both_correct,8.291428834846911e-06,False,0,0.9881560755127308,False,False,0,24,24.0,24.0
+test:19892,Myasthenia gravis,Myasthenia gravis,True,Myasthenia gravis,Myasthenia gravis,True,True,both_correct,0.0068175412320971,False,0,0.9903108833770924,False,False,0,2,2.0,2.0
+test:22450,Myasthenia gravis,Myasthenia gravis,True,Myasthenia gravis,Myasthenia gravis,True,True,both_correct,0.0069036466134492,False,0,0.9903108833770924,False,False,0,2,2.0,2.0
+test:23963,Myasthenia gravis,Myasthenia gravis,True,Myasthenia gravis,Myasthenia gravis,True,True,both_correct,0.0116512459844988,False,0,0.9905318329532348,False,False,0,1,1.0,1.0
+test:116166,Myasthenia gravis,Myasthenia gravis,True,Myasthenia gravis,Myasthenia gravis,True,True,both_correct,0.007232591754865,False,0,0.9893374207997376,False,False,0,17,17.0,17.0
+test:29414,Myocarditis,Myocarditis,True,Myocarditis,Myocarditis,True,True,both_correct,0.006869584960918,False,0,0.9901301688905868,False,False,0,8,8.0,8.0
+test:97460,Myocarditis,Stable angina,False,Myocarditis,Myocarditis,True,True,final_only_correct,0.8851257023927357,True,2,0.2992798678836087,False,False,0,24,24.0,51.0
+test:118428,Myocarditis,Myocarditis,True,Myocarditis,Myocarditis,True,True,both_correct,0.0129463641466256,False,0,0.9901301688905868,False,False,0,3,3.0,3.0
+test:124713,Myocarditis,Myocarditis,True,Myocarditis,Myocarditis,True,True,both_correct,0.0132211740468589,False,0,0.9901301688905868,False,False,0,3,3.0,3.0
+test:20287,PSVT,PSVT,True,PSVT,PSVT,True,True,both_correct,0.0075887924594477,False,0,0.989443179137576,False,False,0,3,3.0,3.0
+test:39091,PSVT,PSVT,True,PSVT,PSVT,True,True,both_correct,0.0229353372658919,False,0,0.9906511301863186,False,False,0,1,1.0,1.0
+test:80077,PSVT,Chagas,False,PSVT,PSVT,True,True,final_only_correct,0.9828970063167872,True,3,0.1778049934207046,False,False,0,24,24.0,85.0
+test:80735,PSVT,PSVT,True,PSVT,PSVT,True,True,both_correct,0.0242314700335646,False,0,0.9906358595981952,False,False,0,1,1.0,1.0
+test:22120,Pancreatic neoplasm,Pancreatic neoplasm,True,Pancreatic neoplasm,Pancreatic neoplasm,True,True,both_correct,0.0127356740417827,False,0,0.989285931546501,False,False,0,4,4.0,4.0
+test:23208,Pancreatic neoplasm,Pancreatic neoplasm,True,Pancreatic neoplasm,Pancreatic neoplasm,True,True,both_correct,0.0110413423311911,False,0,0.9901539255446036,False,False,0,1,1.0,1.0
+test:36152,Pancreatic neoplasm,Pancreatic neoplasm,True,Pancreatic neoplasm,Pancreatic neoplasm,True,True,both_correct,0.0062846117600981,False,0,0.98910128645279,False,False,0,10,10.0,10.0
+test:119627,Pancreatic neoplasm,Pancreatic neoplasm,True,Pancreatic neoplasm,Pancreatic neoplasm,True,True,both_correct,0.0110420589088337,False,0,0.9901539255446036,False,False,0,1,1.0,1.0
+test:11778,Panic attack,Panic attack,True,Panic attack,Panic attack,True,True,both_correct,0.0121707001233536,False,0,0.989271854549286,False,False,0,4,4.0,4.0
+test:30171,Panic attack,Panic attack,True,Panic attack,Panic attack,True,True,both_correct,0.0154755359700373,False,0,0.9887346584950266,False,False,0,3,3.0,3.0
+test:93539,Panic attack,Panic attack,True,Panic attack,Panic attack,True,True,both_correct,0.0153826412493102,False,0,0.9889724046171384,False,False,0,5,5.0,5.0
+test:133618,Panic attack,Pneumonia,False,Panic attack,Panic attack,True,True,final_only_correct,0.7050297296211117,True,1,0.7572050470991614,False,False,0,5,6.0,11.0
+test:78953,Pericarditis,Pericarditis,True,Pericarditis,Pericarditis,True,True,both_correct,0.0002812054770315,False,0,0.9891291779354132,False,False,0,11,11.0,11.0
+test:90666,Pericarditis,Pericarditis,True,Pericarditis,Pericarditis,True,True,both_correct,0.0117752956662591,False,0,0.989647148512958,False,False,0,7,7.0,7.0
+test:101294,Pericarditis,Pericarditis,True,Pericarditis,Pericarditis,True,True,both_correct,0.0061580715737146,False,0,0.9901301688905868,False,False,0,8,8.0,8.0
+test:126738,Pericarditis,Pericarditis,True,Pericarditis,Pericarditis,True,True,both_correct,0.0032889299640744,False,0,0.9902154998503394,False,False,0,3,3.0,3.0
+test:53986,Pneumonia,Pneumonia,True,Pneumonia,Pneumonia,True,True,both_correct,0.014927674933849,False,0,0.9888519724592922,False,False,0,4,4.0,4.0
+test:62484,Pneumonia,Pneumonia,True,Pneumonia,Pneumonia,True,True,both_correct,0.0099959580350992,False,0,0.98890803086431,False,False,0,3,3.0,3.0
+test:67784,Pneumonia,Pneumonia,True,Pneumonia,Pneumonia,True,True,both_correct,0.00771520636039,False,0,0.9898521273389144,False,False,0,2,2.0,2.0
+test:93816,Pneumonia,Bronchiectasis,False,Bronchiectasis,Bronchiectasis,False,True,both_wrong,0.1256356456479871,False,0,0.493481471135885,True,False,2,4,6.0,6.0
+test:12432,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,both_correct,0.0496777817738807,False,0,0.9877561059323108,False,False,0,6,6.0,6.0
+test:60601,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,both_correct,0.0612942918280228,False,0,0.8748599923240734,False,False,0,9,9.0,9.0
+test:115522,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,both_correct,0.0020088382281555,False,0,0.9884871601888192,False,False,0,15,15.0,15.0
+test:117607,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,Possible NSTEMI / STEMI,Possible NSTEMI / STEMI,True,True,both_correct,0.1314096404511798,False,0,0.6149167916426392,False,False,0,17,17.0,17.0
+test:19984,Pulmonary embolism,Pulmonary embolism,True,Pulmonary embolism,Pulmonary embolism,True,True,both_correct,0.0143377086867741,False,0,0.9333404605441168,False,False,0,3,3.0,3.0
+test:34189,Pulmonary embolism,Pulmonary embolism,True,Pulmonary embolism,Pulmonary embolism,True,True,both_correct,0.0816586863355858,False,0,0.543421862311307,False,False,0,3,3.0,3.0
+test:55857,Pulmonary embolism,Pulmonary embolism,True,Pulmonary embolism,Pulmonary embolism,True,True,both_correct,0.0077753808745881,False,0,0.9892706611669372,False,False,0,7,7.0,7.0
+test:71152,Pulmonary embolism,Pulmonary embolism,True,Pulmonary embolism,Pulmonary embolism,True,True,both_correct,0.0093844725694305,False,0,0.989019478876746,False,False,0,8,8.0,8.0
+test:6242,Pulmonary neoplasm,Pulmonary neoplasm,True,Pulmonary neoplasm,Pulmonary neoplasm,True,True,both_correct,0.0129683046474206,False,0,0.9899913014887478,False,False,0,2,2.0,2.0
+test:17496,Pulmonary neoplasm,Pulmonary neoplasm,True,Pulmonary neoplasm,Pulmonary neoplasm,True,True,both_correct,0.0107568186005643,False,0,0.9901654292897268,False,False,0,2,2.0,2.0
+test:26671,Pulmonary neoplasm,Pulmonary neoplasm,True,Pulmonary neoplasm,Pulmonary neoplasm,True,True,both_correct,0.0127745126477264,False,0,0.9901320511253772,False,False,0,2,2.0,2.0
+test:53721,Pulmonary neoplasm,Pulmonary neoplasm,True,Pulmonary neoplasm,Pulmonary neoplasm,True,True,both_correct,0.0127745126477264,False,0,0.9901320511253772,False,False,0,2,2.0,2.0
+test:62026,SLE,SLE,True,SLE,SLE,True,True,both_correct,0.0095132449844194,False,0,0.98767120972504,False,False,0,16,16.0,16.0
+test:62463,SLE,SLE,True,SLE,SLE,True,True,both_correct,0.0680619487264348,False,0,0.8398109781932479,False,False,0,7,7.0,7.0
+test:117204,SLE,SLE,True,SLE,SLE,True,True,both_correct,0.0155864686965336,False,0,0.9879459364923446,False,False,0,8,8.0,8.0
+test:129579,SLE,SLE,True,SLE,SLE,True,True,both_correct,0.0043052556401451,False,0,0.9886945827171506,False,False,0,11,11.0,11.0
+test:10395,Sarcoidosis,Sarcoidosis,True,Sarcoidosis,Sarcoidosis,True,True,both_correct,0.0128906137213152,False,0,0.989870138566182,False,False,0,2,2.0,2.0
+test:101755,Sarcoidosis,Sarcoidosis,True,Sarcoidosis,Sarcoidosis,True,True,both_correct,0.034790435706826,False,0,0.9728731613877608,False,False,0,22,22.0,22.0
+test:120114,Sarcoidosis,Sarcoidosis,True,Sarcoidosis,Sarcoidosis,True,True,both_correct,0.0735766210115319,False,0,0.6511345035947754,False,False,0,24,24.0,24.0
+test:128826,Sarcoidosis,Sarcoidosis,True,Sarcoidosis,Sarcoidosis,True,True,both_correct,0.0137404005257319,False,0,0.9898715644168622,False,False,0,1,1.0,1.0
+test:9464,Scombroid food poisoning,Scombroid food poisoning,True,Scombroid food poisoning,Scombroid food poisoning,True,True,both_correct,0.0093637099316457,False,0,0.9903721078831668,False,False,0,1,1.0,1.0
+test:37968,Scombroid food poisoning,Scombroid food poisoning,True,Scombroid food poisoning,Scombroid food poisoning,True,True,both_correct,0.0064842262838957,False,0,0.9895309855636972,False,False,0,3,3.0,3.0
+test:58470,Scombroid food poisoning,Scombroid food poisoning,True,Scombroid food poisoning,Scombroid food poisoning,True,True,both_correct,0.0056413605904559,False,0,0.989285931546501,False,False,0,4,4.0,4.0
+test:120057,Scombroid food poisoning,Scombroid food poisoning,True,Scombroid food poisoning,Scombroid food poisoning,True,True,both_correct,0.0056421368909582,False,0,0.989285931546501,False,False,0,4,4.0,4.0
+test:12030,Spontaneous pneumothorax,Spontaneous pneumothorax,True,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,both_correct,0.0077191208942947,False,0,0.9887807234699216,False,False,0,16,16.0,16.0
+test:37163,Spontaneous pneumothorax,Spontaneous pneumothorax,True,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,both_correct,0.0077393874788462,False,0,0.9887807234699216,False,False,0,16,16.0,16.0
+test:50292,Spontaneous pneumothorax,Spontaneous pneumothorax,True,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,both_correct,0.0148850868614225,False,0,0.9877775277725004,False,False,0,4,4.0,4.0
+test:113629,Spontaneous pneumothorax,Spontaneous pneumothorax,True,Spontaneous pneumothorax,Spontaneous pneumothorax,True,True,both_correct,0.0186470262915088,False,0,0.988245228249422,False,False,0,18,18.0,18.0
+test:19069,Spontaneous rib fracture,Spontaneous rib fracture,True,Spontaneous rib fracture,Spontaneous rib fracture,True,True,both_correct,0.0096297997943635,False,0,0.9898847087071304,False,False,0,1,1.0,1.0
+test:27034,Spontaneous rib fracture,Spontaneous rib fracture,True,Spontaneous rib fracture,Spontaneous rib fracture,True,True,both_correct,0.007171279649629,False,0,0.9887160141185876,False,False,0,13,13.0,13.0
+test:69335,Spontaneous rib fracture,Spontaneous rib fracture,True,Spontaneous rib fracture,Spontaneous rib fracture,True,True,both_correct,0.0132296204481101,False,0,0.9899895200441324,False,False,0,1,1.0,1.0
+test:130353,Spontaneous rib fracture,Spontaneous rib fracture,True,Spontaneous rib fracture,Spontaneous rib fracture,True,True,both_correct,0.0096454746115143,False,0,0.9898847087071304,False,False,0,1,1.0,1.0
+test:102855,Stable angina,Stable angina,True,Stable angina,Stable angina,True,True,both_correct,0.0165182781045533,False,0,0.8856734536082682,False,False,0,7,7.0,7.0
+test:122679,Stable angina,Epiglottitis,False,Stable angina,Stable angina,True,True,final_only_correct,0.8751515859269778,True,3,0.4623856150432717,False,False,0,11,19.0,57.0
+test:127812,Stable angina,Stable angina,True,Stable angina,Stable angina,True,True,both_correct,0.0228971728369029,False,0,0.8875703165795056,False,False,0,7,7.0,7.0
+test:130201,Stable angina,Stable angina,True,Stable angina,Stable angina,True,True,both_correct,0.0053744276443786,False,0,0.8360827855149872,False,False,0,24,24.0,24.0
+test:2461,Tuberculosis,Tuberculosis,True,Tuberculosis,Tuberculosis,True,True,both_correct,0.0153749344525536,False,0,0.9058713143287336,False,False,0,6,6.0,6.0
+test:33420,Tuberculosis,Pulmonary neoplasm,False,Tuberculosis,Tuberculosis,True,True,final_only_correct,0.3618511148543627,True,1,0.8863986690085277,False,False,0,24,24.0,48.0
+test:94849,Tuberculosis,Cluster headache,False,Tuberculosis,Tuberculosis,True,True,final_only_correct,0.5426409765642373,True,1,0.9874119797153112,False,False,0,24,24.0,48.0
+test:125644,Tuberculosis,Tuberculosis,True,Tuberculosis,Tuberculosis,True,True,both_correct,0.0084744120234771,False,0,0.9877853294958642,False,False,0,4,4.0,4.0
+test:17625,URTI,URTI,True,URTI,URTI,True,True,both_correct,0.0411753362817646,False,0,0.9722214993905516,False,False,0,22,22.0,22.0
+test:18962,URTI,URTI,True,URTI,URTI,True,True,both_correct,0.0049076724989726,False,0,0.989503078733856,False,False,0,2,2.0,2.0
+test:21486,URTI,Bronchiectasis,False,URTI,URTI,True,True,final_only_correct,0.0448993110383269,False,0,0.988646068745697,False,False,0,2,2.0,2.0
+test:60675,URTI,Ebola,False,URTI,URTI,True,True,final_only_correct,0.037995396810689,False,0,0.8058613348967861,False,False,0,5,5.0,5.0
+test:49990,Unstable angina,Unstable angina,True,Unstable angina,Unstable angina,True,True,both_correct,0.0004753022936399,False,0,0.9886721377172182,False,False,0,15,15.0,15.0
+test:66826,Unstable angina,Unstable angina,True,Unstable angina,Unstable angina,True,True,both_correct,0.007954390677863,False,0,0.990234991971246,False,False,0,2,2.0,2.0
+test:91156,Unstable angina,Stable angina,False,Unstable angina,Unstable angina,True,True,final_only_correct,0.0701668872366301,False,0,0.9872712495381292,False,False,0,11,11.0,11.0
+test:118007,Unstable angina,Unstable angina,True,Unstable angina,Unstable angina,True,True,both_correct,0.0126844927456966,False,0,0.9891516747050004,False,False,0,8,8.0,8.0
+test:87173,Viral pharyngitis,Viral pharyngitis,True,Viral pharyngitis,Viral pharyngitis,True,True,both_correct,0.0537595741552915,False,0,0.7964743828407707,False,False,0,11,11.0,11.0
+test:94294,Viral pharyngitis,Viral pharyngitis,True,Viral pharyngitis,Viral pharyngitis,True,True,both_correct,0.0450770064636179,False,0,0.7844888041861353,False,False,0,11,11.0,11.0
+test:119650,Viral pharyngitis,Viral pharyngitis,True,Viral pharyngitis,Viral pharyngitis,True,True,both_correct,0.007371081989602,False,0,0.9895495902084136,False,False,0,10,10.0,10.0
+test:124382,Viral pharyngitis,Viral pharyngitis,True,Viral pharyngitis,Viral pharyngitis,True,True,both_correct,0.0442217027561658,False,0,0.7844888041861353,False,False,0,11,11.0,11.0
+test:27223,Whooping cough,Whooping cough,True,Whooping cough,Whooping cough,True,True,both_correct,0.0197353720898906,False,0,0.9898087224058618,False,False,0,0,0.0,0.0
+test:52970,Whooping cough,Whooping cough,True,Whooping cough,Whooping cough,True,True,both_correct,0.0197353720898906,False,0,0.9898087224058618,False,False,0,0,0.0,0.0
+test:65568,Whooping cough,Whooping cough,True,Whooping cough,Whooping cough,True,True,both_correct,0.0109545265153298,False,0,0.9901003789397644,False,False,0,2,2.0,2.0
+test:105864,Whooping cough,Whooping cough,True,Whooping cough,Whooping cough,True,True,both_correct,0.0197353720898906,False,0,0.9898087224058618,False,False,0,0,0.0,0.0

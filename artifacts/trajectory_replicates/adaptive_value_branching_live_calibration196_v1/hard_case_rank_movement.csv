@@ -1,0 +1,27 @@
+case_id,true_pathology,base_predicted_pathology,predicted_pathology,base_pred_graph_rank,selected_pred_graph_rank,base_pred_bayes_posterior,selected_pred_bayes_posterior
+test:105339,Acute laryngitis,Tuberculosis,Bronchitis,13,6,4.098144322204701e-05,0.0927785327095186
+test:21703,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,1,1,0.7298205877671984,0.7298205877671984
+test:52366,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,1,1,0.7563172281099454,0.7563172281099454
+test:61503,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,1,1,0.8580641364555087,0.8580641364555087
+test:93342,Acute rhinosinusitis,Chronic rhinosinusitis,Chronic rhinosinusitis,1,1,0.8438609102726287,0.8438609102726287
+test:127067,Allergic sinusitis,Acute otitis media,Acute otitis media,1,1,0.3287659531257711,0.3287659531257711
+test:23690,Atrial fibrillation,Panic attack,Spontaneous pneumothorax,29,1,2.3092917250421862e-05,0.2879388448487591
+test:90104,Bronchitis,URTI,Bronchitis,2,1,0.4889823712027838,0.4417210891809511
+test:102273,Cluster headache,Pneumonia,Cluster headache,3,1,0.1626908599810222,0.9993835159349614
+test:609,Croup,Larygospasm,Larygospasm,1,1,0.6774763062085271,0.6774763062085271
+test:56690,Croup,Croup,Pneumonia,1,2,0.2879032294459169,0.4009530108811179
+test:30358,Ebola,Acute dystonic reactions,Anemia,3,2,0.1500651690423123,0.2974754902195206
+test:59965,Ebola,Myocarditis,Ebola,2,1,0.0146580808193288,0.9999999999080906
+test:113762,Ebola,Ebola,URTI,2,1,0.0202167576324369,0.979754277357726
+test:132876,Epiglottitis,Larygospasm,Larygospasm,1,1,0.4959999438789926,0.4959999438789926
+test:77972,Guillain-Barré syndrome,Sarcoidosis,Guillain-Barré syndrome,4,1,0.0001346537345429,0.5587321132908937
+test:97460,Myocarditis,Stable angina,Myocarditis,5,1,1.8911903754486113e-05,0.6402947787709075
+test:80077,PSVT,Chagas,PSVT,12,1,6.10973087052924e-08,0.9999874130798984
+test:133618,Panic attack,Pneumonia,Panic attack,2,1,0.1860097287130947,0.9999731670985732
+test:93816,Pneumonia,Bronchiectasis,Bronchiectasis,1,1,0.6634554039067493,0.6634554039067493
+test:122679,Stable angina,Epiglottitis,Stable angina,3,1,0.0005048064648241,0.9785953214915116
+test:33420,Tuberculosis,Pulmonary neoplasm,Tuberculosis,2,1,0.0764889319365556,0.975763533406498
+test:94849,Tuberculosis,Cluster headache,Tuberculosis,15,1,1.002649483019626e-08,0.9999987849793353
+test:21486,URTI,Bronchiectasis,URTI,3,1,5.424678294183493e-05,0.9932742713719692
+test:60675,URTI,Ebola,URTI,2,1,0.0202167576324369,0.979754277357726
+test:91156,Unstable angina,Stable angina,Unstable angina,2,1,0.0013003015171976,0.9986996132136656

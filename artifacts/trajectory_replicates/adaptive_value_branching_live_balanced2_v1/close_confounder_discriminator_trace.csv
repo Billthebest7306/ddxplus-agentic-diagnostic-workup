@@ -1,0 +1,99 @@
+case_id,anchor,challenger,score_margin_top2,close_confounder_pair,pair_missing_utility,flagged_for_discriminator,extra_roots,extra_roots_requested,extra_log_bayes_factor_challenger_vs_anchor,override_applied,final_prediction
+test:94089,Acute COPD exacerbation / infection,Bronchitis,0.21321748797948376,True,1.1216598679127727,True,"[""E_54"", ""E_55""]",2,-20.166349744276605,False,Acute COPD exacerbation / infection
+test:126942,Acute COPD exacerbation / infection,Bronchiolitis,0.9884765873706958,True,0.6143450989587568,False,[],0,0.0,False,Acute COPD exacerbation / infection
+test:95053,Acute dystonic reactions,Anemia,0.26347812619406014,False,1.1161091333474635,False,[],0,0.0,False,Acute dystonic reactions
+test:116697,Acute dystonic reactions,Myasthenia gravis,0.6681688036267689,False,0.10054905822462348,False,[],0,0.0,False,Acute dystonic reactions
+test:15080,Acute laryngitis,Epiglottitis,0.6858661456017666,False,0.2610020244362661,False,[],0,0.0,False,Acute laryngitis
+test:54031,Viral pharyngitis,Acute otitis media,0.025090963713607195,False,0.08938315347187088,False,[],0,0.0,False,Viral pharyngitis
+test:12528,Acute otitis media,Influenza,0.2543345415610313,False,0.6902288100648521,False,[],0,0.0,False,Acute otitis media
+test:49314,Acute otitis media,Influenza,0.2543345415610313,False,0.6902288100648521,False,[],0,0.0,False,Acute otitis media
+test:1334,Acute pulmonary edema,Spontaneous pneumothorax,0.9891521905574479,False,0.32643916210781565,False,[],0,0.0,False,Acute pulmonary edema
+test:18505,Acute pulmonary edema,Possible NSTEMI / STEMI,0.9894126797350173,False,0.3129556267529187,False,[],0,0.0,False,Acute pulmonary edema
+test:21201,Acute rhinosinusitis,Bronchiolitis,0.9890466058018884,True,0.8359321898217298,False,[],0,0.0,False,Acute rhinosinusitis
+test:127556,Pneumonia,Allergic sinusitis,0.3502558568334901,True,1.4500464413278447,True,"[""E_54"", ""E_55""]",2,0.0,False,Pneumonia
+test:30946,Allergic sinusitis,Viral pharyngitis,0.9903277569764847,True,1.2168725611276427,False,[],0,0.0,False,Allergic sinusitis
+test:125929,Allergic sinusitis,Pneumonia,0.9898277015392833,True,1.4500464413278447,False,[],0,0.0,False,Allergic sinusitis
+test:10697,Anaphylaxis,Pulmonary embolism,0.9897448688750481,False,0.5934715557221075,False,[],0,0.0,False,Anaphylaxis
+test:118731,Anaphylaxis,Localized edema,0.9895657275501061,False,0.6962209820062281,False,[],0,0.0,False,Anaphylaxis
+test:44839,Anemia,Scombroid food poisoning,0.987448815439259,False,1.4366323935995047,False,[],0,0.0,False,Anemia
+test:111295,Anemia,HIV (initial infection),0.9875819197270124,False,0.7324493795029217,False,[],0,0.0,False,Anemia
+test:92249,Myocarditis,PSVT,0.05149779921848294,True,0.0764250398701133,False,[],0,0.0,False,Myocarditis
+test:131403,Atrial fibrillation,PSVT,0.9895720861504123,True,1.0922087078313376,False,[],0,0.0,False,Atrial fibrillation
+test:28012,Boerhaave,Unstable angina,0.9880466976085537,False,0.1773311529341119,False,[],0,0.0,False,Boerhaave
+test:121061,Boerhaave,PSVT,0.9891733369138827,False,0.17946406923497557,False,[],0,0.0,False,Boerhaave
+test:851,Bronchiectasis,Acute COPD exacerbation / infection,0.9899651913198854,True,0.23336023628869756,False,[],0,0.0,False,Bronchiectasis
+test:128997,Bronchiectasis,Acute COPD exacerbation / infection,0.9900858548662017,True,0.21246423487219457,False,[],0,0.0,False,Bronchiectasis
+test:37106,Bronchitis,Bronchiolitis,0.8250999440652199,True,0.6901496942185572,False,[],0,0.0,False,Bronchitis
+test:82580,Bronchiolitis,Croup,0.9520352317967559,True,0.24339223748339384,False,[],0,0.0,False,Bronchiolitis
+test:45547,Bronchitis,Acute otitis media,0.9306621252327428,False,0.06451386631662528,False,[],0,0.0,False,Bronchitis
+test:65655,Bronchitis,Pneumonia,0.9883617816375234,True,0.5979847924161878,False,[],0,0.0,False,Bronchitis
+test:24765,Bronchospasm / acute asthma exacerbation,Chronic rhinosinusitis,0.9894058777678754,True,1.0997633813620955,False,[],0,0.0,False,Bronchospasm / acute asthma exacerbation
+test:77490,Bronchospasm / acute asthma exacerbation,Acute COPD exacerbation / infection,0.9897934869266036,True,0.24756175762608792,False,[],0,0.0,False,Bronchospasm / acute asthma exacerbation
+test:35193,Chagas,Pancreatic neoplasm,0.9890608875171331,False,0.5901934267512285,False,[],0,0.0,False,Chagas
+test:83913,Chagas,HIV (initial infection),0.9864868851107699,False,0.6069226636067099,False,[],0,0.0,False,Chagas
+test:38974,Chronic rhinosinusitis,Acute rhinosinusitis,0.6380729376636111,True,0.0008353225445321966,False,[],0,0.0,False,Chronic rhinosinusitis
+test:58606,Chronic rhinosinusitis,Acute rhinosinusitis,0.610617465225212,True,0.011532147828673504,False,[],0,0.0,False,Chronic rhinosinusitis
+test:60858,Cluster headache,Viral pharyngitis,0.9879551302141304,False,0.26048651915810966,False,[],0,0.0,False,Cluster headache
+test:117440,Cluster headache,Acute otitis media,0.9895428450205409,False,0.08703825122928346,False,[],0,0.0,False,Cluster headache
+test:2255,Epiglottitis,Croup,0.5593697370160879,True,0.957737598654779,True,"[""E_54"", ""E_53""]",2,19.334590339924905,True,Croup
+test:85739,Bronchitis,Cluster headache,0.07678058442010194,False,0.23554446115372124,False,[],0,0.0,False,Bronchitis
+test:18016,Ebola,URTI,0.9866540739201982,False,0.8679868103918837,False,[],0,0.0,False,Ebola
+test:72661,Ebola,Possible NSTEMI / STEMI,0.9868878386969707,False,0.8335513483889707,False,[],0,0.0,False,Ebola
+test:51510,Epiglottitis,Bronchiolitis,0.9875087981973448,True,0.7526605625498912,False,[],0,0.0,False,Epiglottitis
+test:86148,Epiglottitis,Larygospasm,0.9875214229057511,False,1.0571347467715233,False,[],0,0.0,False,Epiglottitis
+test:26970,GERD,Bronchiolitis,0.9893224845390918,False,0.9006434173762964,False,[],0,0.0,False,GERD
+test:121813,GERD,Bronchiolitis,0.9893224845390918,False,0.9006434173762964,False,[],0,0.0,False,GERD
+test:75577,Guillain-Barré syndrome,Myasthenia gravis,0.9892940784137796,False,0.06734685685173536,False,[],0,0.0,False,Guillain-Barré syndrome
+test:83901,Guillain-Barré syndrome,Bronchiolitis,0.9891567908562803,False,0.5911611676814776,False,[],0,0.0,False,Guillain-Barré syndrome
+test:106536,HIV (initial infection),Influenza,0.9884573362109653,True,0.26371391015000484,False,[],0,0.0,False,HIV (initial infection)
+test:106714,HIV (initial infection),Influenza,0.990356150260745,True,0.205947597531068,False,[],0,0.0,False,HIV (initial infection)
+test:106856,Influenza,HIV (initial infection),0.9896322622854713,True,0.21632771767421,False,[],0,0.0,False,Influenza
+test:132679,Influenza,Pneumonia,0.7785721512644241,True,0.27469118488680105,False,[],0,0.0,False,Influenza
+test:39464,Viral pharyngitis,Sarcoidosis,0.0009691980448131576,False,0.5712594789295018,False,[],0,0.0,False,Viral pharyngitis
+test:58668,Inguinal hernia,Pancreatic neoplasm,0.9894126797350173,False,0.17829754929754096,False,[],0,0.0,False,Inguinal hernia
+test:33265,Larygospasm,Bronchospasm / acute asthma exacerbation,0.9904386908924566,False,0.25696105993061735,False,[],0,0.0,False,Larygospasm
+test:57219,Larygospasm,Bronchospasm / acute asthma exacerbation,0.9896065382028123,False,0.25696105993061735,False,[],0,0.0,False,Larygospasm
+test:10099,Localized edema,Acute pulmonary edema,0.5500453479367499,True,0.18049289005603525,True,"[""E_105"", ""E_104""]",2,-3.08449380661202,False,Localized edema
+test:86910,Localized edema,Acute pulmonary edema,0.9897712834951986,True,0.24774483640982428,False,[],0,0.0,False,Localized edema
+test:39056,Myasthenia gravis,Acute dystonic reactions,0.9891602008668902,False,0.10054905822462348,False,[],0,0.0,False,Myasthenia gravis
+test:108410,Acute dystonic reactions,Myasthenia gravis,0.6681688036267689,False,0.10054905822462348,False,[],0,0.0,False,Acute dystonic reactions
+test:51329,Myocarditis,Pericarditis,0.9893790834631367,True,0.047474170743666916,False,[],0,0.0,False,Myocarditis
+test:80383,Myocarditis,Spontaneous pneumothorax,0.9898803355491984,False,0.1679590400055373,False,[],0,0.0,False,Myocarditis
+test:64020,PSVT,Atrial fibrillation,0.9899236857939774,True,1.0671661896768236,False,[],0,0.0,False,PSVT
+test:91648,PSVT,Acute dystonic reactions,0.9900954490263427,False,1.0504496119522928,False,[],0,0.0,False,PSVT
+test:1333,Pancreatic neoplasm,Bronchiolitis,0.9894092697244075,False,1.0090862251031465,False,[],0,0.0,False,Pancreatic neoplasm
+test:129841,Pancreatic neoplasm,HIV (initial infection),0.9891560819480673,False,0.23681859551080625,False,[],0,0.0,False,Pancreatic neoplasm
+test:78726,Panic attack,Guillain-Barré syndrome,0.9893770403089053,False,1.174008220149043,False,[],0,0.0,False,Panic attack
+test:131162,Panic attack,Guillain-Barré syndrome,0.9894485596713,False,1.174008220149043,False,[],0,0.0,False,Panic attack
+test:20922,Bronchitis,Guillain-Barré syndrome,0.007986278597255689,False,1.1942154327448857,False,[],0,0.0,False,Bronchitis
+test:46655,Pericarditis,Spontaneous pneumothorax,0.9895386560438298,False,0.14129534045617304,False,[],0,0.0,False,Pericarditis
+test:26133,Pneumonia,Bronchiectasis,0.9888336015476188,True,1.3225772957758408,False,[],0,0.0,False,Pneumonia
+test:121292,Pneumonia,Chronic rhinosinusitis,0.9866340325521961,True,0.7334023111076262,False,[],0,0.0,False,Pneumonia
+test:41659,Possible NSTEMI / STEMI,Tuberculosis,0.9891993929025361,False,1.2435544847804387,False,[],0,0.0,False,Possible NSTEMI / STEMI
+test:54407,Possible NSTEMI / STEMI,Panic attack,0.9893879323327668,False,0.29692026861407755,False,[],0,0.0,False,Possible NSTEMI / STEMI
+test:100510,Pulmonary embolism,Pneumonia,0.9882872008318523,False,0.7440643290270322,False,[],0,0.0,False,Pulmonary embolism
+test:130885,Acute dystonic reactions,Pulmonary embolism,0.14467082538845633,False,1.1848902025545143,False,[],0,0.0,False,Acute dystonic reactions
+test:83165,Pulmonary neoplasm,Viral pharyngitis,0.9893496839618829,False,0.28356340273657016,False,[],0,0.0,False,Pulmonary neoplasm
+test:103274,Pulmonary neoplasm,Viral pharyngitis,0.9895319782417475,False,0.2927430479762339,False,[],0,0.0,False,Pulmonary neoplasm
+test:80639,SLE,Spontaneous pneumothorax,0.9906747800472863,False,0.4327976539659456,False,[],0,0.0,False,SLE
+test:83391,SLE,Pancreatic neoplasm,0.02673263443270757,False,0.20121789199786244,False,[],0,0.0,False,SLE
+test:68879,Sarcoidosis,Acute COPD exacerbation / infection,0.9874771169013654,True,1.3875830336440842,False,[],0,0.0,False,Sarcoidosis
+test:114160,Sarcoidosis,Anemia,0.05605013493988771,False,0.5454759790399664,False,[],0,0.0,False,Sarcoidosis
+test:39540,Scombroid food poisoning,Bronchiolitis,0.9899427786155012,False,0.9065762999562148,False,[],0,0.0,False,Scombroid food poisoning
+test:77521,Scombroid food poisoning,Bronchiolitis,0.9895915640042721,False,0.9065762999562148,False,[],0,0.0,False,Scombroid food poisoning
+test:41043,Spontaneous pneumothorax,Ebola,0.9885297156001557,False,0.6231461843253605,False,[],0,0.0,False,Spontaneous pneumothorax
+test:47148,Spontaneous pneumothorax,Stable angina,0.9891973562895636,False,0.1411537221034654,False,[],0,0.0,False,Spontaneous pneumothorax
+test:5929,Spontaneous rib fracture,Spontaneous pneumothorax,0.9866072402655333,True,0.06534902562965683,False,[],0,0.0,False,Spontaneous rib fracture
+test:82357,Spontaneous rib fracture,Bronchiolitis,0.9868118159154584,False,0.8307952385973795,False,[],0,0.0,False,Spontaneous rib fracture
+test:63258,Possible NSTEMI / STEMI,Unstable angina,0.36558090696122714,False,0.09576935018966606,False,[],0,0.0,False,Possible NSTEMI / STEMI
+test:85371,Stable angina,Unstable angina,0.6999192949889058,True,5.0310758759476715e-05,False,[],0,0.0,False,Stable angina
+test:74383,Tuberculosis,Pneumonia,0.9884038154656462,True,1.3085736726366761,False,[],0,0.0,False,Tuberculosis
+test:79723,Tuberculosis,Pneumonia,0.9881930114281102,True,1.4075760481824728,False,[],0,0.0,False,Tuberculosis
+test:36688,URTI,Influenza,0.9869122313783588,True,0.5235313042744618,False,[],0,0.0,False,URTI
+test:51699,URTI,Bronchitis,0.8957231558670948,True,0.24035805403116284,False,[],0,0.0,False,URTI
+test:34188,Unstable angina,Stable angina,0.9892940784137796,True,0.04718573574708148,False,[],0,0.0,False,Unstable angina
+test:34526,Unstable angina,Stable angina,0.9891602008668902,True,0.04791338409124386,False,[],0,0.0,False,Unstable angina
+test:82790,Viral pharyngitis,URTI,0.6881997594382427,True,0.11753199014833471,True,"[""E_50"", ""E_144""]",2,-1.9284638880239582,False,Viral pharyngitis
+test:95643,Viral pharyngitis,URTI,0.6931685169857251,True,0.11753199014833471,True,"[""E_50"", ""E_144""]",2,-1.9284638880239582,False,Viral pharyngitis
+test:19168,Whooping cough,Bronchiolitis,0.9900549217912586,True,0.538293581423189,False,[],0,0.0,False,Whooping cough
+test:40583,Whooping cough,Bronchiolitis,0.9885902358418552,True,0.538293581423189,False,[],0,0.0,False,Whooping cough
