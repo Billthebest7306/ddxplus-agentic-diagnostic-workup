@@ -1,0 +1,10 @@
+dataset_name,budget,num_cases,gtpa_at_1,gtpa_at_3,gtpa_at_5,mean_true_rank_capped_11,progress_rate,mean_questions,median_questions,stop_before_budget_rate,graph_resolver_change_rate,graph_discriminator_use_rate,mean_input_tokens,mean_output_tokens
+ddxplus,5,1,1.0,1.0,1.0,1.0,1.0,5.0,5.0,0.0,0.0,0.0,6644.0,450.0
+ddxplus,10,1,1.0,1.0,1.0,1.0,1.0,10.0,10.0,0.0,0.0,0.0,11888.0,841.0
+ddxplus,15,1,1.0,1.0,1.0,1.0,1.0,15.0,15.0,0.0,0.0,0.0,18375.0,1187.0
+icraft_md,5,1,1.0,1.0,1.0,1.0,0.0,5.0,5.0,0.0,0.0,0.0,4355.0,535.0
+icraft_md,10,1,1.0,1.0,1.0,1.0,0.0,10.0,10.0,0.0,0.0,0.0,9266.0,1003.0
+icraft_md,15,1,1.0,1.0,1.0,1.0,0.0,15.0,15.0,0.0,0.0,0.0,15705.0,1415.0
+rarebench,5,1,1.0,1.0,1.0,1.0,0.0,5.0,5.0,0.0,1.0,1.0,19328.0,790.0
+rarebench,10,1,1.0,1.0,1.0,1.0,0.0,10.0,10.0,0.0,1.0,1.0,35569.0,1240.0
+rarebench,15,1,1.0,1.0,1.0,1.0,0.0,15.0,15.0,0.0,1.0,1.0,52310.0,1570.0

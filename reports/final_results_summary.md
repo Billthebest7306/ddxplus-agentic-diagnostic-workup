@@ -2222,3 +2222,151 @@ Dry-run smoke verification:
 Interpretation:
 
 Notebook `41` is prepared and verified, but it is not yet a live performance result. It is the appropriate final run because it removes the fragile close-confounder rescue layer, enforces a hard total request cap, restores differential-diagnosis metrics, and keeps the architecture clean enough to compare against fixed-budget diagnostic baselines.
+
+## Notebook 42 Universal MEDDx Benchmark Adapter
+
+Notebook `42` starts the cross-dataset MEDDx-style generalization phase.
+
+- `notebooks/42_universal_meddx_benchmark_adapter.ipynb`
+- `scripts/universal_meddx_benchmark_adapter_nb42.py`
+- `reports/algorithmic_ledger/universal_meddx_benchmark_adapter_report.md`
+- active pilot dry-run artifact root: `artifacts/universal_meddx/universal_meddx_benchmark_adapter_dryrun_smoke_v6_pilot3/`
+- failed live diagnostic root: `artifacts/universal_meddx/universal_meddx_benchmark_adapter_v4/`
+
+Purpose:
+
+DDXPlus uses legal structured evidence roots, but the broader MEDDxAgent benchmark family uses patient-profile style datasets. Notebook `42` creates a universal harness that lets the LLM acquire information through natural-language questions instead of dataset-specific fields.
+
+Architecture:
+
+```text
+dataset adapter
+  -> universal patient case schema
+  -> LLM natural-language question
+  -> guarded hidden-profile retrieval simulator
+  -> question-answer ledger
+  -> LLM final ranked differential
+  -> MEDDx-style evaluation
+```
+
+Supported adapters:
+
+| Dataset | Notebook 42 status |
+|---|---|
+| DDXPlus | implemented immediately by converting structured evidence into hidden profile text |
+| iCraft-MD | native MEDDxAgent JSONL adapter loaded from `external/meddxagent` |
+| RareBench | native adapter using MEDDxAgent mappings plus the public HuggingFace RareBench data zip |
+
+Live runs now use `49` total unique cases across the loaded adapters at all three reference budgets `5`, `10`, and `15`, for `147` intended workups.
+
+The notebook now requires all enabled adapters to load before live evaluation. The dry-run smoke selected one case each from DDXPlus, iCraft-MD, and RareBench.
+
+The first live `v4` run failed badly, but the failure was diagnostic rather than a valid benchmark result. At budget `15`, overall GTPA@1 was only `13/49`, with GTPA@5 `19/49`. The main cause was the harness: iCraft-MD/RareBench candidate lists were truncated alphabetically, hiding the true label in half of selected iCraft-MD cases and three quarters of selected RareBench cases; DDXPlus question-answer spans were also split so the simulator often returned a question without its `Answer:` value.
+
+Notebook `42` `v5` repaired those issues by raising candidate text capacity, using iCraft case-level options, using RareBench subset-level options, keeping DDXPlus `Question? Answer: value` spans intact, skipping previously revealed spans, and adding dataset-specific prompting.
+
+The `v5_pilot3` live run then completed the intended `9` workups. It was a real diagnostic failure rather than a broken-harness failure: DDXPlus `Influenza` was missed after the agent narrowed too early to bronchiolitis/pneumonia-style respiratory questions; iCraft-MD solved the levamisole-induced ANCA vasculitis option case; RareBench `Cockayne syndrome` was missed because the final resolver could not rank the correct rare disease inside a `216`-diagnosis LIRICAL candidate list.
+
+Notebook `42` `v6_pilot3` is now the active pilot. It adds broad first-turn positive-finding inventory guidance, a simulator mode that returns high-yield positive spans for broad inventory questions, and a margin-gated visible-evidence reference-case prior. The prior uses Jaccard overlap with reference profiles, only applies to candidate lists with at least `10` diagnoses, and cannot force a final rerank unless its margin is at least `0.12`.
+
+Metrics:
+
+- `GTPA@1`
+- `GTPA@3`
+- `GTPA@5`
+- capped true-diagnosis rank, missing rank `11`
+- progress rate
+- mean questions
+- stop-before-budget rate
+
+Dry-run smoke result:
+
+| Dataset | Budget | Cases | GTPA@1 | GTPA@3 | GTPA@5 | Mean questions |
+|---|---:|---:|---:|---:|---:|---:|
+| DDXPlus | 5 | 1 | 0.000 | 0.000 | 0.000 | 2.0 |
+| iCraft-MD | 5 | 1 | 0.000 | 0.000 | 0.000 | 2.0 |
+| RareBench | 5 | 1 | 0.000 | 0.000 | 0.000 | 2.0 |
+
+Interpretation:
+
+The dry-run is not a performance claim because the no-API agent is scripted. The result means the repaired DDXPlus/iCraft-MD/RareBench adapter boundary, guarded patient simulator, question-answer ledger, MEDDx-style metrics, figures, casebase-prior summary, and artifact contract work. The next real step is the `v6_pilot3` live cross-dataset pilot at budgets `5`, `10`, and `15`.
+
+## Notebook 43 Unified MEDDx-Style Hybrid Driver
+
+Notebook `43` supersedes Notebook `42` as the preferred MEDDxAgent-style method pilot.
+
+- `notebooks/43_unified_meddxstyle_hybrid_driver.ipynb`
+- `scripts/unified_meddxstyle_hybrid_driver_nb43.py`
+- `reports/algorithmic_ledger/unified_meddxstyle_hybrid_driver_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/unified_meddxstyle_hybrid_driver_dryrun_smoke_v1_pilot3/`
+
+The key correction is architectural. MEDDxAgent does not ask one generic LLM prompt to solve every dataset. It uses a shared patient schema and driver, but separates history-taking, patient simulation, retrieval/few-shot support, and final diagnosis.
+
+Notebook `43` adapts that pattern:
+
+```text
+dataset adapter
+  -> universal patient schema
+  -> MEDDx-style history-taking agent
+  -> deterministic guarded patient simulator
+  -> visible patient-profile ledger
+  -> MEDDx-style diagnosis strategy agent
+  -> dynamic similar-patient examples
+  -> margin-gated reference-case prior rerank
+  -> MEDDx-style evaluation
+```
+
+Dry-run smoke completed with no API calls:
+
+| Dataset | Adapter status | Reference cases |
+|---|---|---:|
+| DDXPlus | loaded | 1500 |
+| iCraft-MD | loaded | 140 |
+| RareBench | loaded | 1120 |
+
+The dry-run is not a performance claim because the no-API agents are scripted. It verifies that Notebook `43` writes the expected artifacts and is ready for the `v1_pilot3` live run: three selected cases across DDXPlus, iCraft-MD, and RareBench at budgets `5`, `10`, and `15`.
+
+## Notebook 44 Graph-Phenotype MEDDx Driver
+
+Notebook `44` is the successor to Notebook `43` for the MEDDxAgent-style multi-dataset line.
+
+- `notebooks/44_unified_graph_phenotype_meddx_driver.ipynb`
+- `scripts/unified_graph_phenotype_meddx_driver_nb44.py`
+- `reports/algorithmic_ledger/unified_graph_phenotype_meddx_driver_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/unified_graph_phenotype_meddx_driver_dryrun_smoke_v1_pilot3/`
+
+The Notebook `43` live `v1_pilot3` run diagnosed the failure:
+
+| Dataset | Case | Budget 5 | Budget 10 | Budget 15 |
+|---|---:|---:|---:|---:|
+| DDXPlus | Influenza | wrong | correct | correct |
+| iCraft-MD | Levamisole-induced ANCA vasculitis | correct | correct | correct |
+| RareBench | Cockayne syndrome | wrong | wrong | wrong |
+
+The RareBench issue was not candidate visibility. The true `Cockayne syndrome` label was present in the `216`-diagnosis LIRICAL option list. The problem was the representation: Notebook `43` used prose-token overlap and LLM ranking over long phenotype profiles, which favored a broad neurodevelopmental phenotype-category label.
+
+Notebook `44` changes RareBench to an exact graph representation:
+
+```text
+visible phenotype names
+  -> exact HPO phenotype-node set
+  -> leave-one-case-out same-subset disease exemplar support
+  -> graph-prior rerank/discriminator
+```
+
+No-API smoke passed. The dry run is not a performance claim, but it verifies the artifact contract and shows that the new graph-phenotype layer ranks `Cockayne syndrome` as the top graph-supported diagnosis on the previously failed RareBench smoke case.
+
+Follow-up live pilot:
+
+- Notebook `44` live `v1_pilot3` completed the same three-case, three-budget pilot shape as Notebook `43`
+- row-level result improved from Notebook `43`'s `5/9` top-1/top-3/top-5 to `9/9` top-1/top-3/top-5
+- DDXPlus, iCraft-MD, and RareBench were all correct at budgets `5`, `10`, and `15`
+- the RareBench base diagnosis still initially selected the broad neurodevelopmental category, but the graph-phenotype layer and discriminator promoted `Cockayne syndrome`
+
+Scaled evaluation config:
+
+- active Notebook `44` config is now `RUN_VERSION_SUFFIX = "v1_eval30"`
+- `LIVE_TOTAL_MAX_CASES = 30`
+- budgets remain `[5, 10, 15]`
+- intended scaled run is `90` live workups, balanced across the three datasets when all adapters load
+- no-API smoke passed under `artifacts/universal_meddx/unified_graph_phenotype_meddx_driver_dryrun_smoke_v1_eval30/`

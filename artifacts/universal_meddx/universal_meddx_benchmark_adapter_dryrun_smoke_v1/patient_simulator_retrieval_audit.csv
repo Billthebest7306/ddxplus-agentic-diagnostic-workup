@@ -1,0 +1,5 @@
+dataset_name,case_id,budget,turn_index,question,answer,retrieved_span_count,retrieved_spans
+ddxplus,test:6707,5,1,What additional symptoms or findings are reported in the patient profile?,Known patient findings from the hidden profile: Age: 4. Sex: F.,3,"[""Known patient findings from the hidden profile:"", ""Age: 4."", ""Sex: F.""]"
+ddxplus,test:6707,5,2,"What timing, duration, exposures, or context are reported?",The available patient profile does not mention that.,0,[]
+ddxplus,test:127667,5,1,What additional symptoms or findings are reported in the patient profile?,Known patient findings from the hidden profile: Age: 60. Sex: M.,3,"[""Known patient findings from the hidden profile:"", ""Age: 60."", ""Sex: M.""]"
+ddxplus,test:127667,5,2,"What timing, duration, exposures, or context are reported?",The available patient profile does not mention that.,0,[]

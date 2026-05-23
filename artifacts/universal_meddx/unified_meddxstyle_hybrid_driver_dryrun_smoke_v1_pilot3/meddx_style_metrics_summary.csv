@@ -1,0 +1,4 @@
+dataset_name,budget,num_cases,gtpa_at_1,gtpa_at_3,gtpa_at_5,mean_true_rank_capped_11,progress_rate,mean_questions,median_questions,stop_before_budget_rate,mean_input_tokens,mean_output_tokens
+ddxplus,5,1,1.0,1.0,1.0,1.0,1.0,2.0,2.0,1.0,0.0,0.0
+icraft_md,5,1,0.0,0.0,1.0,4.0,0.0,2.0,2.0,1.0,0.0,0.0
+rarebench,5,1,0.0,0.0,0.0,11.0,0.0,2.0,2.0,1.0,0.0,0.0

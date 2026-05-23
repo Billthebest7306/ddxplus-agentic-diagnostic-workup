@@ -1,0 +1,48 @@
+case_id,dataset_name,initial_patient_info,hidden_full_profile,ground_truth_diagnosis,candidate_disease_list,metadata
+test:6707,ddxplus,"Age: 4
+Sex: F
+Initial finding: Have you lost your sense of smell? Answer: yes.","Age: 4.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: burning.
+- Characterize your pain: Answer: sharp.
+- Do you feel pain somewhere? Answer: forehead.
+- Do you feel pain somewhere? Answer: cheek(R).
+- Do you feel pain somewhere? Answer: cheek(L).
+- Do you feel pain somewhere? Answer: eye(R).
+- Do you feel pain somewhere? Answer: eye(L).
+- How intense is the pain? Answer: 8.
+- Does the pain radiate to another location? Answer: back of head.
+- Does the pain radiate to another location? Answer: nose.
+- Does the pain radiate to another location? Answer: temple(R).
+- How precisely is the pain located? Answer: 5.
+- How fast did the pain appear? Answer: 6.
+- Do you smoke cigarettes? Answer: yes.
+- Have you lost your sense of smell? Answer: yes.
+- Have you had a cold in the last 2 weeks? Answer: yes.
+- Have you ever had pneumonia? Answer: yes.
+- Do you have polyps in your nose? Answer: yes.
+- Do you have asthma or have you ever had to use a bronchodilator in the past? Answer: yes.
+- Have you ever been diagnosed with gastroesophageal reflux? Answer: yes.
+- Do you have nasal congestion or a clear runny nose? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are you more likely to develop common allergies than the general population? Answer: yes.",Acute rhinosinusitis,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 4, ""sex"": ""F"", ""official_differential"": [""Chronic rhinosinusitis"", ""Bronchitis"", ""URTI"", ""Acute rhinosinusitis"", ""Chagas"", ""Anemia""], ""initial_evidence"": ""E_103"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:127667,ddxplus,"Age: 60
+Sex: M
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 60.
+Sex: M.
+Known patient findings from the hidden profile:
+- Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Do you feel pain somewhere? Answer: ear(L).
+- How intense is the pain? Answer: 8.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 7.
+- How fast did the pain appear? Answer: 5.
+- Are you more irritable or has your mood been very unstable recently? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are your vaccinations up to date? Answer: yes.",Acute otitis media,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 60, ""sex"": ""M"", ""official_differential"": [""Bronchitis"", ""Acute otitis media""], ""initial_evidence"": ""E_53"", ""source"": ""ddxplus_structured_to_profile_v1""}"

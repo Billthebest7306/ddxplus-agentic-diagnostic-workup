@@ -1,0 +1,123 @@
+{
+  "active_budgets": [
+    5
+  ],
+  "adapter_status": [
+    {
+      "dataset_name": "ddxplus",
+      "message": "Loaded 3 DDXPlus cases from test split.",
+      "num_cases": 3,
+      "source_path": "/Users/alfred/Documents/baseline_model/dataset",
+      "status": "loaded"
+    },
+    {
+      "dataset_name": "icraft_md",
+      "message": "Loaded 3 iCraft-MD cases from MEDDxAgent JSONL.",
+      "num_cases": 3,
+      "source_path": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl",
+      "status": "loaded"
+    },
+    {
+      "dataset_name": "rarebench",
+      "message": "Loaded 3 RareBench cases from HuggingFace zip and MEDDxAgent mappings.",
+      "num_cases": 3,
+      "source_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip",
+      "status": "loaded"
+    }
+  ],
+  "allow_dry_run_benchmark": true,
+  "broad_inventory_first_turn": true,
+  "candidate_text_max_chars": 50000,
+  "casebase_prior": {
+    "context_labels": 6,
+    "enabled": true,
+    "min_candidates": 10,
+    "min_normalized_score": 0.05,
+    "policy": "visible-evidence Jaccard casebase prior plus margin-gated LLM rank fusion",
+    "prior_weight": 1.25,
+    "promotion_margin": 0.12,
+    "reference_counts": {
+      "ddxplus": 1500,
+      "icraft_md": 140,
+      "rarebench": 1120
+    },
+    "reference_max_cases_per_dataset": 1500,
+    "rerank_labels": 10
+  },
+  "driver_architecture": {
+    "diagnosis_policy": "separate final diagnosis prompt with exact diagnosis options, dynamic similar-patient examples, and RareBench exact phenotype support",
+    "history_policy": "one natural-language question per budget step, with broad first-turn inventory preference",
+    "meddxagent_alignment": "shared patient schema plus fixed history-taking/diagnosis phases, adapted with deterministic simulator, hybrid prior reranker, and HPO-style phenotype graph adjudication",
+    "name": "unified_graph_phenotype_meddx_driver_v1",
+    "phases": [
+      "history_taking",
+      "deterministic_patient_simulator",
+      "diagnosis_strategy",
+      "casebase_prior_rerank",
+      "rarebench_graph_phenotype_discriminator"
+    ]
+  },
+  "dry_run_total_max_cases": 3,
+  "effective_total_case_cap": 3,
+  "enabled_datasets": [
+    "ddxplus",
+    "icraft_md",
+    "rarebench"
+  ],
+  "icraft_md_path": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl",
+  "live_budgets_to_run": [
+    5,
+    10,
+    15
+  ],
+  "live_total_max_cases": 3,
+  "llm_model": "gpt-4.1-mini",
+  "meddx_reference_budgets": [
+    5,
+    10,
+    15
+  ],
+  "meddxagent_data_root": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data",
+  "patient_simulator": {
+    "answer_policy": "answer only from hidden_full_profile spans; otherwise report not mentioned",
+    "max_spans": 5,
+    "min_overlap": 1,
+    "name": "retrieval_patient_simulator_v1",
+    "skip_previously_seen_spans": true
+  },
+  "rarebench_data_zip_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip",
+  "rarebench_data_zip_url": "https://huggingface.co/datasets/chenxz/RareBench/resolve/main/data.zip",
+  "rarebench_graph_phenotype_resolver": {
+    "context_labels": 8,
+    "descriptive_label_penalty": 0.2,
+    "enabled": true,
+    "llm_discriminator": true,
+    "llm_rank_weight": 0.25,
+    "min_visible_phenotypes": 3,
+    "policy": "exact visible HPO phenotype nodes -> leave-one-case-out disease exemplar support -> rank fusion/adjudication",
+    "prior_weight": 2.25,
+    "reference_count": 1120,
+    "rerank_labels": 12
+  },
+  "rarebench_mapping_dir": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench",
+  "rarebench_subsets": [
+    "RAMEDIS",
+    "MME",
+    "HMS",
+    "LIRICAL"
+  ],
+  "require_all_enabled_datasets": true,
+  "run_live_api": false,
+  "run_name": "unified_graph_phenotype_meddx_driver_dryrun_smoke_v1_pilot3",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "universal_schema": [
+    "case_id",
+    "dataset_name",
+    "initial_patient_info",
+    "hidden_full_profile",
+    "ground_truth_diagnosis",
+    "candidate_disease_list",
+    "metadata"
+  ]
+}

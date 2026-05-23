@@ -1,0 +1,2 @@
+dataset_name,budget,num_cases,gtpa_at_1,gtpa_at_3,gtpa_at_5,mean_true_rank_capped_11,progress_rate,mean_questions,median_questions,stop_before_budget_rate,mean_input_tokens,mean_output_tokens
+ddxplus,5,2,0.0,0.0,0.5,5.0,0.0,2.0,2.0,1.0,0.0,0.0

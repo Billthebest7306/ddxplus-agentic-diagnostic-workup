@@ -1,0 +1,4 @@
+dataset_name,status,num_cases,source_path,message
+ddxplus,loaded,30,/Users/alfred/Documents/baseline_model/dataset,Loaded 30 DDXPlus cases from test split.
+icraft_md,loaded,30,/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl,Loaded 30 iCraft-MD cases from MEDDxAgent JSONL.
+rarebench,loaded,30,/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip,Loaded 30 RareBench cases from HuggingFace zip and MEDDxAgent mappings.

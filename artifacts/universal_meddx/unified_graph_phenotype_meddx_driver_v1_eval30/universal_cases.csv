@@ -1,0 +1,622 @@
+case_id,dataset_name,initial_patient_info,hidden_full_profile,ground_truth_diagnosis,candidate_disease_list,metadata
+test:100196,ddxplus,"Age: 24
+Sex: F
+Initial finding: Do you have a cough? Answer: yes.","Age: 24.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have chronic pancreatitis? Answer: yes.
+- Have you had diarrhea or an increase in stool frequency? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Characterize your pain: Answer: a cramp.
+- Do you feel pain somewhere? Answer: belly.
+- Do you feel pain somewhere? Answer: epigastric.
+- How intense is the pain? Answer: 6.
+- Does the pain radiate to another location? Answer: thoracic spine.
+- How precisely is the pain located? Answer: 0.
+- How fast did the pain appear? Answer: 2.
+- Do you have diabetes? Answer: yes.
+- Are you significantly overweight compared to people of the same height as you? Answer: yes.
+- Do you smoke cigarettes? Answer: yes.
+- Do you constantly feel fatigued or do you have non-restful sleep? Answer: yes.
+- Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? Answer: yes.
+- What color is the rash? Answer: yellow.
+- Do your lesions peel off? Answer: N.
+- Is the rash swollen? Answer: 3.
+- Where is the affected region located? Answer: epigastric.
+- How intense is the pain caused by the rash? Answer: 1.
+- Is the lesion (or are the lesions) larger than 1cm? Answer: Y.
+- How severe is the itching? Answer: 0.
+- Are you feeling nauseous or do you feel like vomiting? Answer: yes.
+- Do you have pale stools and dark urine? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",Pancreatic neoplasm,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 24, ""sex"": ""F"", ""official_differential"": [""Pancreatic neoplasm"", ""GERD"", ""Boerhaave"", ""Scombroid food poisoning"", ""Bronchitis"", ""Possible NSTEMI / STEMI"", ""Anemia"", ""Unstable angina""], ""initial_evidence"": ""E_201"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:119540,ddxplus,"Age: 71
+Sex: F
+Initial finding: Have you been coughing up blood? Answer: yes.","Age: 71.
+Sex: F.
+Known patient findings from the hidden profile:
+- Have you been in contact with a person with similar symptoms in the past 2 weeks? Answer: yes.
+- Have you been coughing up blood? Answer: yes.
+- Do you attend or work in a daycare? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Characterize your pain: Answer: burning.
+- Do you feel pain somewhere? Answer: tonsil(R).
+- Do you feel pain somewhere? Answer: thyroid cartilage.
+- Do you feel pain somewhere? Answer: palace.
+- Do you feel pain somewhere? Answer: pharynx.
+- Do you feel pain somewhere? Answer: under the jaw.
+- How intense is the pain? Answer: 5.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 7.
+- How fast did the pain appear? Answer: 0.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Do you have nasal congestion or a clear runny nose? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",Viral pharyngitis,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 71, ""sex"": ""F"", ""official_differential"": [""Viral pharyngitis"", ""Possible NSTEMI / STEMI"", ""Unstable angina"", ""URTI"", ""Acute laryngitis"", ""Influenza"", ""Stable angina""], ""initial_evidence"": ""E_45"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:122530,ddxplus,"Age: 39
+Sex: M
+Initial finding: Do you have a cough that produces colored or more abundant sputum than usual? Answer: yes.","Age: 39.
+Sex: M.
+Known patient findings from the hidden profile:
+- Have you been in contact with a person with similar symptoms in the past 2 weeks? Answer: yes.
+- Have you had significantly increased sweating? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: tedious.
+- Do you feel pain somewhere? Answer: top of the head.
+- Do you feel pain somewhere? Answer: forehead.
+- Do you feel pain somewhere? Answer: cheek(R).
+- Do you feel pain somewhere? Answer: cheek(L).
+- Do you feel pain somewhere? Answer: temple(L).
+- How intense is the pain? Answer: 5.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 5.
+- How fast did the pain appear? Answer: 4.
+- Do you have a cough that produces colored or more abundant sputum than usual? Answer: yes.
+- Do you smoke cigarettes? Answer: yes.
+- Do you have a sore throat? Answer: yes.
+- Do you have diffuse (widespread) muscle pain? Answer: yes.
+- Do you have nasal congestion or a clear runny nose? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",URTI,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 39, ""sex"": ""M"", ""official_differential"": [""URTI"", ""Bronchitis"", ""Pneumonia"", ""Influenza"", ""Bronchiectasis"", ""Cluster headache"", ""Chronic rhinosinusitis"", ""Acute rhinosinusitis"", ""Chagas"", ""Anemia""], ""initial_evidence"": ""E_77"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:124172,ddxplus,"Age: 47
+Sex: F
+Initial finding: Are you experiencing shortness of breath or difficulty breathing in a significant way? Answer: yes.","Age: 47.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have cystic fibrosis? Answer: yes.
+- Do you have Rheumatoid Arthritis? Answer: yes.
+- Have you been coughing up blood? Answer: yes.
+- Do you suffer from Crohn’s disease or ulcerative colitis (UC)? Answer: yes.
+- Are you experiencing shortness of breath or difficulty breathing in a significant way? Answer: yes.
+- Do you have a cough that produces colored or more abundant sputum than usual? Answer: yes.
+- Have you ever had pneumonia? Answer: yes.
+- Do you have a chronic obstructive pulmonary disease (COPD)? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",Bronchiectasis,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 47, ""sex"": ""F"", ""official_differential"": [""Bronchitis"", ""Bronchiectasis"", ""Pneumonia"", ""Pulmonary neoplasm"", ""Acute COPD exacerbation / infection"", ""Tuberculosis"", ""Pulmonary embolism"", ""Guillain-Barr\u00e9 syndrome"", ""Bronchospasm / acute asthma exacerbation"", ""Atrial fibrillation""], ""initial_evidence"": ""E_66"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:126130,ddxplus,"Age: 40
+Sex: F
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 40.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Characterize your pain: Answer: burning.
+- Do you feel pain somewhere? Answer: lower chest.
+- Do you feel pain somewhere? Answer: side of the chest(R).
+- Do you feel pain somewhere? Answer: side of the chest(L).
+- Do you feel pain somewhere? Answer: breast(R).
+- Do you feel pain somewhere? Answer: posterior chest wall(R).
+- How intense is the pain? Answer: 1.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 4.
+- How fast did the pain appear? Answer: 0.
+- Are you experiencing shortness of breath or difficulty breathing in a significant way? Answer: yes.
+- Do you have a cough that produces colored or more abundant sputum than usual? Answer: yes.
+- Do you smoke cigarettes? Answer: yes.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are your symptoms more prominent at night? Answer: yes.",Bronchitis,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 40, ""sex"": ""F"", ""official_differential"": [""Pneumonia"", ""Bronchitis"", ""Pulmonary neoplasm"", ""Bronchiectasis"", ""Panic attack"", ""Acute COPD exacerbation / infection"", ""Possible NSTEMI / STEMI"", ""GERD"", ""Tuberculosis"", ""Unstable angina""], ""initial_evidence"": ""E_53"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:127667,ddxplus,"Age: 60
+Sex: M
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 60.
+Sex: M.
+Known patient findings from the hidden profile:
+- Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Do you feel pain somewhere? Answer: ear(L).
+- How intense is the pain? Answer: 8.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 7.
+- How fast did the pain appear? Answer: 5.
+- Are you more irritable or has your mood been very unstable recently? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are your vaccinations up to date? Answer: yes.",Acute otitis media,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 60, ""sex"": ""M"", ""official_differential"": [""Bronchitis"", ""Acute otitis media""], ""initial_evidence"": ""E_53"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:51518,ddxplus,"Age: 33
+Sex: F
+Initial finding: Have you had significantly increased sweating? Answer: yes.","Age: 33.
+Sex: F.
+Known patient findings from the hidden profile:
+- Have you ever had fluid in your lungs? Answer: yes.
+- Do you currently undergo dialysis? Answer: yes.
+- Have you had significantly increased sweating? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: tedious.
+- Characterize your pain: Answer: heavy.
+- Do you feel pain somewhere? Answer: lower chest.
+- Do you feel pain somewhere? Answer: side of the chest(L).
+- Do you feel pain somewhere? Answer: breast(R).
+- Do you feel pain somewhere? Answer: posterior chest wall(R).
+- Do you feel pain somewhere? Answer: posterior chest wall(L).
+- How intense is the pain? Answer: 5.
+- Does the pain radiate to another location? Answer: biceps(R).
+- Does the pain radiate to another location? Answer: chin.
+- Does the pain radiate to another location? Answer: jaw.
+- Does the pain radiate to another location? Answer: shoulder(R).
+- Does the pain radiate to another location? Answer: shoulder(L).
+- How precisely is the pain located? Answer: 5.
+- How fast did the pain appear? Answer: 8.
+- Are you experiencing shortness of breath or difficulty breathing in a significant way? Answer: yes.
+- Do you have bouts of choking or shortness of breath that wake you up at night? Answer: yes.
+- Have you ever had a heart attack or do you have angina (chest pain)? Answer: yes.
+- Do you have heart failure? Answer: yes.
+- Do you have swelling in one or more areas of your body? Answer: yes.
+- Where is the swelling located? Answer: ankle(L).
+- Where is the swelling located? Answer: calf(R).
+- Where is the swelling located? Answer: calf(L).
+- Where is the swelling located? Answer: tibia(R).
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are your symptoms worse when lying down and alleviated while sitting up? Answer: yes.
+- Do you have symptoms that are increased with physical exertion but alleviated with rest? Answer: yes.",Acute pulmonary edema,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 33, ""sex"": ""F"", ""official_differential"": [""Acute pulmonary edema"", ""Unstable angina"", ""Pericarditis"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Panic attack"", ""Myocarditis"", ""Stable angina"", ""Anaphylaxis"", ""Spontaneous pneumothorax""], ""initial_evidence"": ""E_50"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:51945,ddxplus,"Age: 38
+Sex: M
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 38.
+Sex: M.
+Known patient findings from the hidden profile:
+- Have you had significantly increased sweating? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: heavy.
+- Do you feel pain somewhere? Answer: top of the head.
+- Do you feel pain somewhere? Answer: cheek(R).
+- Do you feel pain somewhere? Answer: cheek(L).
+- Do you feel pain somewhere? Answer: occiput.
+- How intense is the pain? Answer: 7.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 4.
+- How fast did the pain appear? Answer: 3.
+- Do you smoke cigarettes? Answer: yes.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Do you have a sore throat? Answer: yes.
+- Do you have diffuse (widespread) muscle pain? Answer: yes.
+- Do you have nasal congestion or a clear runny nose? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are you exposed to secondhand cigarette smoke on a daily basis? Answer: yes.",URTI,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 38, ""sex"": ""M"", ""official_differential"": [""URTI"", ""Influenza"", ""HIV (initial infection)"", ""Chagas""], ""initial_evidence"": ""E_53"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:56012,ddxplus,"Age: 53
+Sex: F
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 53.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have a known issue with one of your heart valves? Answer: yes.
+- Do you take corticosteroids? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: tedious.
+- Characterize your pain: Answer: tugging.
+- Characterize your pain: Answer: heavy.
+- Do you feel pain somewhere? Answer: ankle(L).
+- Do you feel pain somewhere? Answer: lateral side of the foot(R).
+- Do you feel pain somewhere? Answer: lateral side of the foot(L).
+- Do you feel pain somewhere? Answer: thigh(L).
+- Do you feel pain somewhere? Answer: dorsal aspect of the foot(R).
+- How intense is the pain? Answer: 3.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 2.
+- How fast did the pain appear? Answer: 7.
+- Have you gained weight recently? Answer: yes.
+- Do you have heart failure? Answer: yes.
+- Have you ever had deep vein thrombosis (DVT)? Answer: yes.
+- Do you have swelling in one or more areas of your body? Answer: yes.
+- Where is the swelling located? Answer: ankle(R).
+- Where is the swelling located? Answer: lateral side of the foot(R).
+- Where is the swelling located? Answer: thigh(L).
+- Where is the swelling located? Answer: sole(R).
+- Where is the swelling located? Answer: sole(L).
+- Were you diagnosed with endocrine disease or a hormone dysfunction? Answer: yes.
+- Have you ever been diagnosed with obstructive sleep apnea (OSA)? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",Localized edema,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 53, ""sex"": ""F"", ""official_differential"": [""Localized edema"", ""Pulmonary embolism"", ""Chagas"", ""Anaphylaxis"", ""SLE""], ""initial_evidence"": ""E_53"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+test:89931,ddxplus,"Age: 5
+Sex: M
+Initial finding: Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? Answer: yes.","Age: 5.
+Sex: M.
+Known patient findings from the hidden profile:
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: a knife stroke.
+- Characterize your pain: Answer: sharp.
+- Do you feel pain somewhere? Answer: posterior chest wall(L).
+- How intense is the pain? Answer: 4.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 7.
+- How fast did the pain appear? Answer: 5.
+- Do you have a cough that produces colored or more abundant sputum than usual? Answer: yes.
+- Do you drink alcohol excessively or do you have an addiction to alcohol? Answer: yes.
+- Do you smoke cigarettes? Answer: yes.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Have you had chills or shivers? Answer: yes.
+- Do you have Parkinson’s disease? Answer: yes.
+- Do you have heart failure? Answer: yes.
+- Have you ever had pneumonia? Answer: yes.
+- Do you have a chronic obstructive pulmonary disease (COPD)? Answer: yes.
+- Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? Answer: yes.
+- What color is the rash? Answer: pink.
+- Do your lesions peel off? Answer: Y.
+- Is the rash swollen? Answer: 3.
+- Where is the affected region located? Answer: cervical spine.
+- Where is the affected region located? Answer: commissure(L).
+- Where is the affected region located? Answer: buttock(L).
+- Where is the affected region located? Answer: posterior chest wall(R).
+- Where is the affected region located? Answer: shoulder(R).
+- How intense is the pain caused by the rash? Answer: 1.
+- Is the lesion (or are the lesions) larger than 1cm? Answer: N.
+- How severe is the itching? Answer: 5.
+- Do you have diffuse (widespread) muscle pain? Answer: yes.
+- Have you had surgery within the last month? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are your symptoms more prominent at night? Answer: yes.",Pneumonia,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 5, ""sex"": ""M"", ""official_differential"": [""Pneumonia"", ""Bronchitis"", ""Influenza"", ""HIV (initial infection)"", ""Tuberculosis"", ""Scombroid food poisoning"", ""Croup"", ""Chagas""], ""initial_evidence"": ""E_129"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+icraft_md:109,icraft_md,"Age: 2 months
+Sex: male
+Chief complaint: A 2-month-old male infant presents with a rash in the diaper area","- A 2-month-old male infant presents with a rash in the diaper area
+- It has been present for the last month
+- He was seen by his pediatrician and was given topical triamcinolone as well as zinc oxide paste which did not help
+- His mom says that she was unable to make enough breastmilk and so has recently been feeding him from a new formula
+- Physical exam reveals erythematous erosions in the diaper area, as well as peri-oral scaling and a shiny tongue
+- There is no rash on the scalp.
+- 1. A 2-month-old male infant presents with a rash in the diaper area.
+- 2. The rash has been present for the last month.
+- 3. The infant was seen by his pediatrician.
+- 4. The pediatrician prescribed topical triamcinolone for the infant.
+- 5. The pediatrician also prescribed zinc oxide paste for the infant.
+- 6. The topical triamcinolone did not help the rash.
+- 7. The zinc oxide paste did not help the rash.
+- 8. The infant's mom was unable to make enough breastmilk.
+- 9. The infant has recently been fed a new formula.
+- 10. Physical exam reveals erythematous erosions in the diaper area.
+- 11. Physical exam reveals peri-oral scaling.
+- 12. Physical exam reveals a shiny tongue.
+- 13. There is no rash on the infant's scalp.",Acrodermatitis enteropathica,"[""Langerhans cell histiocytosis"", ""Jacquet's dermatitis"", ""Eczema coxsackium"", ""Acrodermatitis enteropathica""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:111,icraft_md,"Age: 60 years
+Sex: female
+Chief complaint: A 60-year-old female presents with a non-healing painful ulcer on her right leg for 4 months","- A 60-year-old female presents with a non-healing painful ulcer on her right leg for 4 months
+- She says she first noticed it after she accidentally bumped into a chair
+- She is known for rheumatoid arthritis and hypertension, and has taken methotrexate and bisoprolol for years
+- According to the patient, oral antibiotics and wound debridement have only increase the size of the ulcer
+- Physical exam reveals a 5x5 cm fibrinous ulcer with violaceous undermined borders on her right shin.
+- 1. The patient is a 60-year-old female.
+- 2. The patient presents with a non-healing painful ulcer.
+- 3. The ulcer is located on her right leg.
+- 4. The ulcer has been present for 4 months.
+- 5. The patient first noticed the ulcer after bumping into a chair.
+- 6. The patient has a history of rheumatoid arthritis.
+- 7. The patient has a history of hypertension.
+- 8. The patient has been taking methotrexate for years.
+- 9. The patient has been taking bisoprolol for years.
+- 10. The patient has tried oral antibiotics for the ulcer.
+- 11. The patient has undergone wound debridement for the ulcer.
+- 12. The ulcer increased in size after treatments with antibiotics and debridement.
+- 13. Physical exam shows the ulcer measures 5x5 cm.
+- 14. The ulcer has fibrinous characteristics.
+- 15. The ulcer has violaceous undermined borders.
+- 16. The ulcer is located on the patient's right shin.",Pyoderma grangrenosum,"[""Venous ulcer"", ""Arterial ulcer"", ""Traumatic wound"", ""Pyoderma grangrenosum""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:113,icraft_md,"Age: 12 years
+Sex: female
+Chief complaint: A 12-year-old female presents with hemorrhagic crusts on the lips and erosions of the oral, genital, and conjunctival mucosa for 2 days","- A 12-year-old female presents with hemorrhagic crusts on the lips and erosions of the oral, genital, and conjunctival mucosa for 2 days
+- According to the parents, there was a pneumonia outbreak at school
+- The patient also had a high fever and cough a week before the onset of cutaneous lesions
+- The parents deny any new medication and a history of allergies
+- The physical exam reveals no other skin findings.
+- 1. The patient is a 12-year-old female.
+- 2. The patient presents with hemorrhagic crusts on the lips.
+- 3. The patient has erosions of the oral mucosa.
+- 4. The patient has erosions of the genital mucosa.
+- 5. The patient has erosions of the conjunctival mucosa.
+- 6. The symptoms have been present for 2 days.
+- 7. There was a pneumonia outbreak at the patient's school.
+- 8. The patient had a high fever a week before the onset of cutaneous lesions.
+- 9. The patient had a cough a week before the onset of cutaneous lesions.
+- 10. The parents deny any new medication for the patient.
+- 11. The parents deny a history of allergies for the patient.
+- 12. The physical exam reveals no other skin findings.",Mycoplasma pneumoniae-induced rash and mucositis,"[""Stevens-Johnson Syndrome"", ""Erythema multiforme major"", ""Herpetic gingivostomatitis"", ""Mycoplasma pneumoniae-induced rash and mucositis""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:135,icraft_md,"Age: 5 years
+Sex: male
+Chief complaint: A 5-year-old boy presents to the pediatrician office with complaints of multiple spots that began on the abdomen and spread to the arms and legs","- A 5-year-old boy presents to the pediatrician office with complaints of multiple spots that began on the abdomen and spread to the arms and legs
+- The spots are not itchy or painful, unless he scratches them
+- Sometimes the skin surronding the lesion will become very red and painful, but then the lesion and redness fade
+- The parents report they have tried topical corticosteroids but the lesions do not go away
+-   Mom endorses a history of atopic dermatitis in her sister and herself
+-   Physical exam reveals multiple dome shaped skin colored to light pink papules with central umbilication and yellow core across the chest and back.
+- 1. A 5-year-old boy presents to the pediatrician office.
+- 2. The boy has complaints of multiple spots.
+- 3. The spots began on the abdomen.
+- 4. The spots spread to the arms and legs.
+- 5. The spots are not itchy.
+- 6. The spots are not painful.
+- 7. The spots become painful when scratched.
+- 8. Sometimes the skin surrounding the lesion becomes very red.
+- 9. Sometimes the skin surrounding the lesion becomes painful.
+- 10. The lesion and redness fade.
+- 11. The parents have tried topical corticosteroids.
+- 12. The lesions do not go away with topical corticosteroids.
+- 13. The boy's mother has a history of atopic dermatitis.
+- 14. The boy's maternal aunt has a history of atopic dermatitis.
+- 15. Physical exam reveals multiple dome-shaped skin-colored to light pink papules.
+- 16. The papules have central umbilication.
+- 17. The papules have a yellow core.
+- 18. The papules are located across the chest and back.",Molluscum contagiosum,"[""Herpes virus infection"", ""Basal cell carcinoma"", ""Molluscum contagiosum"", ""Fibrous papule""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""C"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:14,icraft_md,"Age: 15 months
+Sex: male
+Chief complaint: A 15-month-old boy presents with a history of skin blistering since birth, primarily on his hands, feet, and the perioral face","- A 15-month-old boy presents with a history of skin blistering since birth, primarily on his hands, feet, and the perioral face
+- Blisters and erosions also involve the trunk, some in an annular configuration
+- There is no family history of neonatal blistering or skin fragility
+- Over time, the patient has had a decreased number of new vesicles and bullae associated with trauma and friction but has developed thicker skin on the soles of the feet and dystrophic nails.
+- 1. The patient is a 15-month-old boy.
+- 2. The boy has a history of skin blistering since birth.
+- 3. The blistering primarily occurs on his hands, feet, and the perioral face.
+- 4. Blisters and erosions also affect the boy's trunk.
+- 5. Some blisters on the trunk are in an annular configuration.
+- 6. There is no family history of neonatal blistering.
+- 7. There is no family history of skin fragility.
+- 8. The number of new vesicles and bullae has decreased over time.
+- 9. The decrease in new vesicles and bullae is associated with trauma and friction.
+- 10. The boy has developed thicker skin on the soles of his feet.
+- 11. The boy has developed dystrophic nails.",EBS-Dowling Meara,"[""Severe recessive dystrophic EB"", ""Junctional EB"", ""Sweet syndrome"", ""EBS-Dowling Meara""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:18,icraft_md,"Age: 38 years
+Sex: female
+Chief complaint: A 38-year-old African American woman was referred to dermatology because of spots on her torso and arms","- A 38-year-old African American woman was referred to dermatology because of spots on her torso and arms
+- The lesions were asymptomatic, but their development, cause, and cosmesis were of concern
+- No benefit was seen with the use of OTC remedies such as hydroxycortisone 1% cream or vitamin E oil
+- Her medical history was significant for systemic lupus erythematosus, well controlled on hydroxychloroquine
+- Physical examination revealed numerous, well-circumscribed, 0.5- to 2-cm, hypopigmented, round-to-oval macules of wrinkled skin on her anterior chest wall, back, abdomen, and bilateral upper arms
+- Invagination of the lesions was noted with palpation
+- A punch biopsy was performed.
+- 1. A 38-year-old African American woman was referred to dermatology.
+- 2. The referral was due to spots on her torso and arms.
+- 3. The lesions on her skin were asymptomatic.
+- 4. The development of the lesions was of concern.
+- 5. The cause of the lesions was of concern.
+- 6. The cosmesis of the lesions was of concern.
+- 7. No benefit was seen with the use of over-the-counter remedies.
+- 8. The woman used hydrocortisone 1% cream.
+- 9. The woman used vitamin E oil.
+- 10. Her medical history was significant for systemic lupus erythematosus.
+- 11. Her systemic lupus erythematosus was well controlled on hydroxychloroquine.
+- 12. Physical examination revealed numerous lesions.
+- 13. The lesions were well-circumscribed.
+- 14. The lesions were hypopigmented.
+- 15. The lesions were round-to-oval macules.
+- 16. The lesions had wrinkled skin.
+- 17. The lesions were 0.5 to 2 cm in size.
+- 18. The lesions were located on her anterior chest wall.
+- 19. The lesions were located on her back.
+- 20. The lesions were located on her abdomen.
+- 21. The lesions were located on her bilateral upper arms.
+- 22. Invagination of the lesions was noted with palpation.
+- 23. A punch biopsy of the lesions was performed.",Anetoderma associated with SLE,"[""Cutis laxa"", ""Mid-dermal elastolysis"", ""Post-inflammatory elastolysis"", ""Anetoderma associated with SLE""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:38,icraft_md,"Age: 34 years
+Sex: male
+Chief complaint: A 34-year-old man presents with an itchy rash, primarily on his arms, but also, to a lesser extent, on his face","- A 34-year-old man presents with an itchy rash, primarily on his arms, but also, to a lesser extent, on his face
+- He denies any fever or malaise, and his medical history is unremarkable
+- He does not take any medications and notes that he spent the previous weekend doing yardwork on his property, and the rash appeared 4 days later
+- Physical examination reveals several linear arrangements of papulovesicles on the dorsal and ventral aspects of his forearms with surrounding erythema.
+- 1. A 34-year-old man presents with an itchy rash.
+- 2. The rash is primarily on his arms.
+- 3. The rash is also on his face, but to a lesser extent.
+- 4. The man denies having a fever.
+- 5. The man denies having malaise.
+- 6. The man's medical history is unremarkable.
+- 7. The man does not take any medications.
+- 8. The man spent the previous weekend doing yardwork on his property.
+- 9. The rash appeared 4 days after doing yardwork.
+- 10. Physical examination reveals several linear arrangements of papulovesicles.
+- 11. The papulovesicles are on the dorsal aspects of his forearms.
+- 12. The papulovesicles are on the ventral aspects of his forearms.
+- 13. There is surrounding erythema around the papulovesicles.",Toxicodendron dermatitis,"[""Bullous impetigo"", ""Toxicodendron dermatitis"", ""Shingles"", ""Phytophotodermatitis""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""B"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:55,icraft_md,"Age: 50 years
+Sex: female
+Chief complaint: A 50-year-old woman presents with a 5-day history of progressive, painful rash involving her face, trunk, extremities, nasal tip, and ears, in addition to fever and arthralgia","- A 50-year-old woman presents with a 5-day history of progressive, painful rash involving her face, trunk, extremities, nasal tip, and ears, in addition to fever and arthralgia
+- She admits to a history of polysubstance use and states that her last use was a week prior to symptom onset
+- She denies a history of autoimmune disease or recent travel
+- Examination reveals retiform purpura with areas of necrosis and bullae formation
+- Urine toxicology screening is positive for cocaine, and laboratory findings include leukopenia and an elevated erythrocyte sedimentation rate (70 mm/h).
+- 1. A 50-year-old woman presents with a rash.
+- 2. The rash has been progressing for 5 days.
+- 3. The rash is painful.
+- 4. The rash involves the woman's face.
+- 5. The rash involves the woman's trunk.
+- 6. The rash involves the woman's extremities.
+- 7. The rash involves the woman's nasal tip.
+- 8. The rash involves the woman's ears.
+- 9. The woman has a fever.
+- 10. The woman has arthralgia.
+- 11. The woman admits to a history of polysubstance use.
+- 12. The woman's last substance use was one week before symptom onset.
+- 13. The woman denies a history of autoimmune disease.
+- 14. The woman denies recent travel.
+- 15. Examination reveals retiform purpura.
+- 16. Examination reveals areas of necrosis.
+- 17. Examination reveals bullae formation.
+- 18. The woman's urine toxicology screening is positive for cocaine.
+- 19. The woman has leukopenia.
+- 20. The woman has an elevated erythrocyte sedimentation rate of 70 mm/h.",Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,"[""Disseminated intravascular coagulation"", ""Warfarin-induced skin necrosis"", ""Tinea incognito"", ""Levamisole-induced antineutrophil cytoplasmic antibody vasculitis""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:78,icraft_md,"Age: 54 years
+Sex: female
+Chief complaint: A 54-year-old woman with a history of depression presents to the clinic with a 1-year history of an intermittent rash","- A 54-year-old woman with a history of depression presents to the clinic with a 1-year history of an intermittent rash
+- She was hospitalized for COVID-19 approximately 1 year ago and soon after developed a rash all over her body
+- The lesions persist for several days and have a burning sensation
+- The patient has no associated joint pain or other systemic symptoms
+- She tried antihistamines for the rash with no symptomatic relief
+- On examination, erythematous wheals are evident on her arms and legs as well as her back and abdomen.
+- 1. The patient is a 54-year-old woman.
+- 2. The patient has a history of depression.
+- 3. The patient presents to the clinic with a 1-year history of an intermittent rash.
+- 4. The patient was hospitalized for COVID-19 approximately 1 year ago.
+- 5. The patient developed a rash all over her body soon after being hospitalized for COVID-19.
+- 6. The rash lesions persist for several days.
+- 7. The rash lesions have a burning sensation.
+- 8. The patient has no associated joint pain.
+- 9. The patient has no other systemic symptoms.
+- 10. The patient tried antihistamines for the rash.
+- 11. Antihistamines provided no symptomatic relief for the rash.
+- 12. On examination, erythematous wheals are evident.
+- 13. Erythematous wheals are located on the patient's arms.
+- 14. Erythematous wheals are located on the patient's legs.
+- 15. Erythematous wheals are located on the patient's back.
+- 16. Erythematous wheals are located on the patient's abdomen.",Urticarial vasculitis,"[""Schnitzler syndrome"", ""Urticarial vasculitis"", ""Systemic lupus erythematosus"", ""Photodermatitis""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""B"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+icraft_md:81,icraft_md,"Age: 15 years
+Sex: female
+Chief complaint: A 15-year-old girl presents with patches of hair loss on her scalp that have been present for the last 6 months","- A 15-year-old girl presents with patches of hair loss on her scalp that have been present for the last 6 months
+- She reports that her scalp is not itchy or painful and denies any recent illnesses, diet changes, or stressful life events
+- She does not have any other medical conditions and takes no medications
+- Her uncle had a similar condition that started when he was in his 20s, but no one else in the family has experienced hair loss
+- The patient says she has not tried any treatments for the condition
+- On examination, she has several well-demarcated patches of hair loss on her frontal and parietal scalp, with no perifollicular erythema or scale.
+- 1. The patient is a 15-year-old girl.
+- 2. The patient presents with patches of hair loss on her scalp.
+- 3. The hair loss has been present for the last 6 months.
+- 4. The patient reports that her scalp is not itchy.
+- 5. The patient reports that her scalp is not painful.
+- 6. The patient denies any recent illnesses.
+- 7. The patient denies any recent diet changes.
+- 8. The patient denies any recent stressful life events.
+- 9. The patient does not have any other medical conditions.
+- 10. The patient takes no medications.
+- 11. The patient's uncle had a similar condition.
+- 12. The patient's uncle's condition started when he was in his 20s.
+- 13. No one else in the patient's family has experienced hair loss.
+- 14. The patient has not tried any treatments for her condition.
+- 15. On examination, the patient has several well-demarcated patches of hair loss.
+- 16. The patches of hair loss are located on the patient's frontal scalp.
+- 17. The patches of hair loss are located on the patient's parietal scalp.
+- 18. There is no perifollicular erythema on the patient's scalp.
+- 19. There is no scale on the patient's scalp.",Alopecia areata,"[""Tinea capitis"", ""Androgenetic alopecia"", ""Alopecia areata"", ""Trichotillomania""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""C"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+rarebench:LIRICAL:289,rarebench,"- High palate
+- Microcephaly
+- Macrotia
+- Sensorineural hearing impairment","- High palate
+- Microcephaly
+- Macrotia
+- Sensorineural hearing impairment
+- Convex nasal ridge
+- Deeply set eye
+- Microphthalmia
+- Large hands
+- Intellectual disability
+- Cerebellar hypoplasia
+- Scoliosis
+- Thickened calvaria
+- Kyphosis
+- Limb joint contracture
+- Short stature
+- Bilateral intracerebral calcifications
+- Postnatal growth retardation
+- Nasogastric tube feeding in infancy",Cockayne syndrome,"[""3-Methylglutaconic aciduria with deafness, encephalopathy, and leigh-like syndrome"", ""Aarskog-Scott syndrome"", ""Acromesomelic dysplasia, Maroteaux type"", ""Acromicric dysplasia"", ""AGel amyloidosis"", ""Al Kaissi syndrome"", ""Alagille syndrome"", ""Alpha-thalassemia-X-linked intellectual disability syndrome"", ""Alzheimer disease"", ""Amyotrophic lateral sclerosis"", ""Apert syndrome"", ""Arthrogryposis, distal, with impaired proprioception and touch"", ""Ataxia-oculomotor apraxia type 1"", ""Ataxia-pancytopenia syndrome"", ""Autoimmune lymphoproliferative syndrome"", ""Autoimmune polyendocrinopathy type 1"", ""Bamforth-Lazarus syndrome"", ""Bardet-Biedl syndrome"", ""Bartter syndrome"", ""Bernard-Soulier syndrome"", ""Bethlem myopathy"", ""Bilateral frontoparietal polymicrogyria"", ""Bleeding disorder, platelet-type, 15"", ""Bleeding disorder, platelet-type, 17"", ""Boucher-Neuhauser syndrome"", ""Branchio-oculo-facial syndrome"", ""Brugada Syndrome"", ""Camurati-Engelmann disease"", ""Cardiofaciocutaneous syndrome"", ""Catecholaminergic polymorphic ventricular tachycardia"", ""CEDNIK syndrome"", ""Centronuclear myopathy"", ""Cerebral creatine deficiency syndrome"", ""Charcot-Marie-Tooth disease"", ""CHARGE syndrome"", ""Chitayat syndrome"", ""Choreoacanthocytosis"", ""Chronic mucocutaneous candidiasis"", ""Chudley-Mccullough syndrome"", ""Ch\u00e9diak-Higashi syndrome"", ""Citrullinemia"", ""Classic galactosemia"", ""Cleidocranial dysplasia"", ""Cockayne syndrome"", ""CODAS syndrome"", ""Cohen syndrome"", ""Combined oxidative phosphorylation deficiency 30"", ""Cone rod dystrophy"", ""Congenital contractural arachnodactyly"", ""Congenital disorder of glycosylation, type IIh"", ""Congenital disorder of glycosylation, type IIP"", ""Congenital disorder of glycosylation, type Il"", ""Congenital myasthenic syndrome"", ""Congenital nephrotic syndrome, Finnish type"", ""Congenital secretory diarrhea"", ""Cornelia de Lange syndrome"", ""Cortical dysplasia, complex, with other brain malformations 7"", ""Craniofrontonasal dysplasia"", ""CTCF-related neurodevelopmental disorder"", ""Cutis laxa, autosomal recessive, type IA"", ""Cutis laxa, autosomal recessive, type IIB"", ""Cutis laxa, autosomal recessive, type IIC"", ""Cutis laxa, autosomal recessive, type IID"", ""Desmosterolosis"", ""Developmental and epileptic encephalopathy 14"", ""Developmental and epileptic encephalopathy 28"", ""Diamond-Blackfan anemia"", ""Dilated cardiomyopathy 1G"", ""Distal myopathy, Tateyama type"", ""Donohue syndrome"", ""Dyggve-Melchior-Clausen disease"", ""DYRK1A-related intellectual disability syndrome"", ""Dyskeratosis congenita"", ""Ectodermal dysplasia 9, Hair/nail type"", ""Ehlers-Danlos syndrome"", ""Elliptocytosis 2"", ""Emery-Dreifuss muscular dystrophy"", ""Epidermolysis bullosa, junctional, Herlitz type"", ""Epidermolytic palmoplantar keratoderma"", ""Epileptic encephalopathy, early infantile, 4"", ""Fanconi anemia"", ""Fibrodysplasia ossificans progressiva"", ""Freeman-Sheldon syndrome"", ""Galactosialidosis"", ""Galloway-Mowat syndrome"", ""GAPO syndrome"", ""Gaucher disease"", ""Geleophysic dysplasia"", ""Glutaric acidemia type I"", ""Glycogen storage disease VI"", ""GM1-gangliosidosis, type III"", ""Hajdu-Cheney syndrome"", ""Hemophagocytic lymphohistiocytosis"", ""Hereditary neuropathy with liability to pressure palsies"", ""Hereditary sensory and autonomic neuropathy type IIB"", ""Hereditary spherocytosis"", ""Heterotaxy syndrome"", ""Holoprosencephaly"", ""Homocystinuria"", ""Hyaline fibromatosis syndrome"", ""Hyper-IgE syndrome"", ""Hyperekplexia"", ""Hypochondroplasia"", ""Hypomyelinating leukodystrophy"", ""Hypotrichosis with juvenile macular degeneration"", ""Ichthyosis-hypotrichosis syndrome"", ""Imerslund-Gr\u00e4sbeck syndrome"", ""Immunoskeletal dysplasia with neurodevelopmental abnormalities"", ""Inclusion body myopathy with Paget disease of bone and frontotemporal dementia"", ""Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities"", ""Intellectual developmental disorder with dysmorphic facies and ptosis"", ""Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies"", ""Jervell and Lange-Nielsen syndrome"", ""Joubert syndrome"", ""Kabuki syndrome"", ""Krabbe disease"", ""Kufor-Rakeb syndrome"", ""Larsen syndrome"", ""Leukocyte adhesion deficiency type II"", ""Leukocyte adhesion deficiency, type I"", ""Leukocyte adhesion deficiency, type III"", ""Limb-girdle muscular dystrophy"", ""Loeys-Dietz syndrome"", ""Long QT syndrome 14"", ""Long QT syndrome 15"", ""Lowe syndrome"", ""Marfan syndrome"", ""Megalocornea"", ""Mental retardation, autosomal recessive 18"", ""Mental retardation, autosomal recessive 38"", ""Microcephalic cortical malformations-short stature due to RTTN deficiency"", ""Microcephaly 3, primary, autosomal recessive"", ""Microcephaly 5, primary, autosomal recessive"", ""Microcephaly, primary autosomal recessive, 6"", ""Muckle-Wells syndrome"", ""Mucolipidosis type II"", ""Mucolipidosis type IV"", ""Muenke syndrome"", ""Multiple endocrine neoplasia type 1"", ""Multiple endocrine neoplasia, type IIA"", ""Myhre syndrome"", ""Myotonia congenita"", ""Nail-patella syndrome"", ""Nance-Horan syndrome"", ""Nemaline myopathy"", ""Neonatal severe encephalopathy with lactic acidosis and brain abnormalities"", ""Neurodegeneration with brain iron accumulation 2B"", ""Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart"", ""Neurofibromatosis type 1"", ""Niemann-Pick disease type C"", ""Nijmegen breakage syndrome"", ""Noonan syndrome"", ""Oculocutaneous albinism type 2"", ""Oculocutaneous albinism type 3"", ""Oliver-Mcfarlane syndrome"", ""Orofaciodigital syndrome type 5"", ""Osteogenesis imperfecta"", ""Osteogenesis imperfecta, type IX"", ""Osteogenesis imperfecta, type VIII"", ""Osteogenesis imperfecta, type XI"", ""Osteogenesis imperfecta, type XII"", ""Osteogenesis imperfecta, type XIV"", ""Palmoplantar keratoderma, punctate type IA"", ""Pantothenate kinase-associated neurodegeneration"", ""Papillon-Lef\u00e8vre syndrome"", ""Parkinson disease 15, autosomal recessive early-onset"", ""Parkinson disease 23, autosomal recessive early-onset"", ""Parkinson disease 7, autosomal recessive early-onset"", ""Pierpont syndrome"", ""PLAA-associated neurodevelopmental disorder"", ""Poikiloderma with neutropenia"", ""Primary hyperoxaluria type 2"", ""Progressive familial intrahepatic cholestasis 4"", ""Pseudoachondroplasia"", ""Recurrent metabolic encephalomyopathic crises-rhabdomyolysis-cardiac arrhythmia-intellectual disability syndrome"", ""Retinitis pigmentosa"", ""Rett syndrome"", ""Robinow syndrome"", ""Rubinstein-Taybi syndrome"", ""Schinzel-Giedion syndrome"", ""Severe combined immunodeficiency due to adenosine deaminase deficiency"", ""Sick sinus syndrome"", ""Skraban-Deardorff syndrome"", ""Smith-Kingsmore syndrome"", ""Smith-Lemli-Opitz syndrome"", ""Smith-Magenis syndrome"", ""Spastic paraplegia 10, autosomal dominant"", ""Spastic paraplegia 45, autosomal recessive"", ""Spastic paraplegia 7, autosomal recessive"", ""Spastic paraplegia 76, autosomal recessive"", ""Spinal muscular atrophy with progressive myoclonic epilepsy"", ""Spinocerebellar ataxia, autosomal recessive 20"", ""Spondylocostal dysostosis"", ""Spondyloepimetaphyseal dysplasia with joint laxity"", ""Stankiewicz-Isidor syndrome"", ""STAR syndrome"", ""Stickler syndrome"", ""TBCK-related intellectual disability syndrome"", ""Temtamy preaxial brachydactyly syndrome"", ""Thrombocytopenia 3"", ""Tietz syndrome"", ""Townes-Brocks syndrome"", ""Treacher Collins syndrome"", ""Trichohepatoenteric syndrome"", ""Trichorhinophalangeal syndrome, type I"", ""Trichothiodystrophy"", ""Tuberous sclerosis"", ""Tubulointerstitial kidney disease"", ""Van den Ende-Gupta syndrome"", ""Vasculitis, autoinflammation, immunodeficiency, and hematologic defects syndrome"", ""Vici syndrome"", ""Waardenburg syndrome type 3"", ""Weill-Marchesani syndrome"", ""Werner syndrome"", ""Wiedemann-Steiner syndrome"", ""X-linked hypohidrotic ectodermal dysplasia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""LIRICAL"", ""subset_candidate_count"": 216, ""raw_disease_codes"": [""OMIM:133540""]}"
+rarebench:LIRICAL:365,rarebench,"- Macrocephaly
+- Delayed speech and language development","- Macrocephaly
+- Delayed speech and language development
+- Intellectual disability
+- Seizure
+- Hypotonia
+- Reduced tendon reflexes
+- Abnormal facial shape
+- Ventriculomegaly
+- Developmental regression
+- Severe global developmental delay",TBCK-related intellectual disability syndrome,"[""3-Methylglutaconic aciduria with deafness, encephalopathy, and leigh-like syndrome"", ""Aarskog-Scott syndrome"", ""Acromesomelic dysplasia, Maroteaux type"", ""Acromicric dysplasia"", ""AGel amyloidosis"", ""Al Kaissi syndrome"", ""Alagille syndrome"", ""Alpha-thalassemia-X-linked intellectual disability syndrome"", ""Alzheimer disease"", ""Amyotrophic lateral sclerosis"", ""Apert syndrome"", ""Arthrogryposis, distal, with impaired proprioception and touch"", ""Ataxia-oculomotor apraxia type 1"", ""Ataxia-pancytopenia syndrome"", ""Autoimmune lymphoproliferative syndrome"", ""Autoimmune polyendocrinopathy type 1"", ""Bamforth-Lazarus syndrome"", ""Bardet-Biedl syndrome"", ""Bartter syndrome"", ""Bernard-Soulier syndrome"", ""Bethlem myopathy"", ""Bilateral frontoparietal polymicrogyria"", ""Bleeding disorder, platelet-type, 15"", ""Bleeding disorder, platelet-type, 17"", ""Boucher-Neuhauser syndrome"", ""Branchio-oculo-facial syndrome"", ""Brugada Syndrome"", ""Camurati-Engelmann disease"", ""Cardiofaciocutaneous syndrome"", ""Catecholaminergic polymorphic ventricular tachycardia"", ""CEDNIK syndrome"", ""Centronuclear myopathy"", ""Cerebral creatine deficiency syndrome"", ""Charcot-Marie-Tooth disease"", ""CHARGE syndrome"", ""Chitayat syndrome"", ""Choreoacanthocytosis"", ""Chronic mucocutaneous candidiasis"", ""Chudley-Mccullough syndrome"", ""Ch\u00e9diak-Higashi syndrome"", ""Citrullinemia"", ""Classic galactosemia"", ""Cleidocranial dysplasia"", ""Cockayne syndrome"", ""CODAS syndrome"", ""Cohen syndrome"", ""Combined oxidative phosphorylation deficiency 30"", ""Cone rod dystrophy"", ""Congenital contractural arachnodactyly"", ""Congenital disorder of glycosylation, type IIh"", ""Congenital disorder of glycosylation, type IIP"", ""Congenital disorder of glycosylation, type Il"", ""Congenital myasthenic syndrome"", ""Congenital nephrotic syndrome, Finnish type"", ""Congenital secretory diarrhea"", ""Cornelia de Lange syndrome"", ""Cortical dysplasia, complex, with other brain malformations 7"", ""Craniofrontonasal dysplasia"", ""CTCF-related neurodevelopmental disorder"", ""Cutis laxa, autosomal recessive, type IA"", ""Cutis laxa, autosomal recessive, type IIB"", ""Cutis laxa, autosomal recessive, type IIC"", ""Cutis laxa, autosomal recessive, type IID"", ""Desmosterolosis"", ""Developmental and epileptic encephalopathy 14"", ""Developmental and epileptic encephalopathy 28"", ""Diamond-Blackfan anemia"", ""Dilated cardiomyopathy 1G"", ""Distal myopathy, Tateyama type"", ""Donohue syndrome"", ""Dyggve-Melchior-Clausen disease"", ""DYRK1A-related intellectual disability syndrome"", ""Dyskeratosis congenita"", ""Ectodermal dysplasia 9, Hair/nail type"", ""Ehlers-Danlos syndrome"", ""Elliptocytosis 2"", ""Emery-Dreifuss muscular dystrophy"", ""Epidermolysis bullosa, junctional, Herlitz type"", ""Epidermolytic palmoplantar keratoderma"", ""Epileptic encephalopathy, early infantile, 4"", ""Fanconi anemia"", ""Fibrodysplasia ossificans progressiva"", ""Freeman-Sheldon syndrome"", ""Galactosialidosis"", ""Galloway-Mowat syndrome"", ""GAPO syndrome"", ""Gaucher disease"", ""Geleophysic dysplasia"", ""Glutaric acidemia type I"", ""Glycogen storage disease VI"", ""GM1-gangliosidosis, type III"", ""Hajdu-Cheney syndrome"", ""Hemophagocytic lymphohistiocytosis"", ""Hereditary neuropathy with liability to pressure palsies"", ""Hereditary sensory and autonomic neuropathy type IIB"", ""Hereditary spherocytosis"", ""Heterotaxy syndrome"", ""Holoprosencephaly"", ""Homocystinuria"", ""Hyaline fibromatosis syndrome"", ""Hyper-IgE syndrome"", ""Hyperekplexia"", ""Hypochondroplasia"", ""Hypomyelinating leukodystrophy"", ""Hypotrichosis with juvenile macular degeneration"", ""Ichthyosis-hypotrichosis syndrome"", ""Imerslund-Gr\u00e4sbeck syndrome"", ""Immunoskeletal dysplasia with neurodevelopmental abnormalities"", ""Inclusion body myopathy with Paget disease of bone and frontotemporal dementia"", ""Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities"", ""Intellectual developmental disorder with dysmorphic facies and ptosis"", ""Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies"", ""Jervell and Lange-Nielsen syndrome"", ""Joubert syndrome"", ""Kabuki syndrome"", ""Krabbe disease"", ""Kufor-Rakeb syndrome"", ""Larsen syndrome"", ""Leukocyte adhesion deficiency type II"", ""Leukocyte adhesion deficiency, type I"", ""Leukocyte adhesion deficiency, type III"", ""Limb-girdle muscular dystrophy"", ""Loeys-Dietz syndrome"", ""Long QT syndrome 14"", ""Long QT syndrome 15"", ""Lowe syndrome"", ""Marfan syndrome"", ""Megalocornea"", ""Mental retardation, autosomal recessive 18"", ""Mental retardation, autosomal recessive 38"", ""Microcephalic cortical malformations-short stature due to RTTN deficiency"", ""Microcephaly 3, primary, autosomal recessive"", ""Microcephaly 5, primary, autosomal recessive"", ""Microcephaly, primary autosomal recessive, 6"", ""Muckle-Wells syndrome"", ""Mucolipidosis type II"", ""Mucolipidosis type IV"", ""Muenke syndrome"", ""Multiple endocrine neoplasia type 1"", ""Multiple endocrine neoplasia, type IIA"", ""Myhre syndrome"", ""Myotonia congenita"", ""Nail-patella syndrome"", ""Nance-Horan syndrome"", ""Nemaline myopathy"", ""Neonatal severe encephalopathy with lactic acidosis and brain abnormalities"", ""Neurodegeneration with brain iron accumulation 2B"", ""Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart"", ""Neurofibromatosis type 1"", ""Niemann-Pick disease type C"", ""Nijmegen breakage syndrome"", ""Noonan syndrome"", ""Oculocutaneous albinism type 2"", ""Oculocutaneous albinism type 3"", ""Oliver-Mcfarlane syndrome"", ""Orofaciodigital syndrome type 5"", ""Osteogenesis imperfecta"", ""Osteogenesis imperfecta, type IX"", ""Osteogenesis imperfecta, type VIII"", ""Osteogenesis imperfecta, type XI"", ""Osteogenesis imperfecta, type XII"", ""Osteogenesis imperfecta, type XIV"", ""Palmoplantar keratoderma, punctate type IA"", ""Pantothenate kinase-associated neurodegeneration"", ""Papillon-Lef\u00e8vre syndrome"", ""Parkinson disease 15, autosomal recessive early-onset"", ""Parkinson disease 23, autosomal recessive early-onset"", ""Parkinson disease 7, autosomal recessive early-onset"", ""Pierpont syndrome"", ""PLAA-associated neurodevelopmental disorder"", ""Poikiloderma with neutropenia"", ""Primary hyperoxaluria type 2"", ""Progressive familial intrahepatic cholestasis 4"", ""Pseudoachondroplasia"", ""Recurrent metabolic encephalomyopathic crises-rhabdomyolysis-cardiac arrhythmia-intellectual disability syndrome"", ""Retinitis pigmentosa"", ""Rett syndrome"", ""Robinow syndrome"", ""Rubinstein-Taybi syndrome"", ""Schinzel-Giedion syndrome"", ""Severe combined immunodeficiency due to adenosine deaminase deficiency"", ""Sick sinus syndrome"", ""Skraban-Deardorff syndrome"", ""Smith-Kingsmore syndrome"", ""Smith-Lemli-Opitz syndrome"", ""Smith-Magenis syndrome"", ""Spastic paraplegia 10, autosomal dominant"", ""Spastic paraplegia 45, autosomal recessive"", ""Spastic paraplegia 7, autosomal recessive"", ""Spastic paraplegia 76, autosomal recessive"", ""Spinal muscular atrophy with progressive myoclonic epilepsy"", ""Spinocerebellar ataxia, autosomal recessive 20"", ""Spondylocostal dysostosis"", ""Spondyloepimetaphyseal dysplasia with joint laxity"", ""Stankiewicz-Isidor syndrome"", ""STAR syndrome"", ""Stickler syndrome"", ""TBCK-related intellectual disability syndrome"", ""Temtamy preaxial brachydactyly syndrome"", ""Thrombocytopenia 3"", ""Tietz syndrome"", ""Townes-Brocks syndrome"", ""Treacher Collins syndrome"", ""Trichohepatoenteric syndrome"", ""Trichorhinophalangeal syndrome, type I"", ""Trichothiodystrophy"", ""Tuberous sclerosis"", ""Tubulointerstitial kidney disease"", ""Van den Ende-Gupta syndrome"", ""Vasculitis, autoinflammation, immunodeficiency, and hematologic defects syndrome"", ""Vici syndrome"", ""Waardenburg syndrome type 3"", ""Weill-Marchesani syndrome"", ""Werner syndrome"", ""Wiedemann-Steiner syndrome"", ""X-linked hypohidrotic ectodermal dysplasia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""LIRICAL"", ""subset_candidate_count"": 216, ""raw_disease_codes"": [""OMIM:616900"", ""ORPHA:488632""]}"
+rarebench:MME:21,rarebench,"- Narrow mouth
+- Malar flattening","- Narrow mouth
+- Malar flattening
+- Epicanthus
+- Broad forehead
+- Nystagmus
+- Seizure
+- Short nose
+- Low hanging columella
+- Severe global developmental delay
+- Abnormality of ocular abduction","Epilepsy, focal, with speech disorder and mental retardation","[""Alacrimia-choreoathetosis-liver dysfunction syndrome"", ""Autosomal recessive primary microcephaly"", ""Beaulieu-Boycott-Innes syndrome"", ""Cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome"", ""Cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome"", ""Cerebrocostomandibular syndrome"", ""Combined immunodeficiency-enteropathy spectrum"", ""Epilepsy, focal, with speech disorder and mental retardation"", ""Mandibulofacial dysostosis-microcephaly syndrome"", ""Methylmalonate semialdehyde dehydrogenase deficiency"", ""Microcephaly-capillary malformation syndrome"", ""Perrault syndrome"", ""Poretti-Boltshauser syndrome"", ""Severe congenital neutropenia"", ""Short syndrome"", ""Shprintzen-Goldberg syndrome"", ""Spondylometaphyseal dysplasia, Sedaghatian type""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""MME"", ""subset_candidate_count"": 17, ""raw_disease_codes"": [""OMIM:245570""]}"
+rarebench:RAMEDIS:30,rarebench,"- Apathy
+- Seizure","- Apathy
+- Seizure
+- Spasticity
+- Death in infancy
+- Alopecia
+- Dyspnea
+- Fatigue
+- Elevated urinary carboxylic acid",Biotinidase deficiency,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:253260"", ""ORPHA:79241"", ""CCRD:13""]}"
+rarebench:RAMEDIS:369,rarebench,"- Dementia
+- Skin rash
+- Spasticity
+- Areflexia","- Dementia
+- Skin rash
+- Spasticity
+- Areflexia
+- Death in infancy
+- Fever
+- Hyperammonemia
+- Diarrhea
+- Cerebral edema
+- Hepatomegaly
+- Progressive neurologic deterioration
+- Hyperlysinuria
+- Hypoargininemia
+- Abnormal circulating methionine concentration
+- Abnormal circulating glutamine concentration
+- Abnormal circulating alanine concentration
+- Elevated plasma citrulline
+- Erythematous plaque
+- Erythematous macule
+- Erythematous papule",Citrullinemia type I,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:215700"", ""ORPHA:247525"", ""CCRD:18""]}"
+rarebench:RAMEDIS:459,rarebench,"- Hypospadias
+- Microcephaly
+- Abnormality of prenatal development or birth","- Hypospadias
+- Microcephaly
+- Abnormality of prenatal development or birth
+- Motor delay
+- Generalized hypotonia
+- Death in infancy
+- 4-Hydroxyphenylpyruvic aciduria
+- Hypertyrosinemia
+- 4-hydroxyphenylacetic aciduria
+- Neonatal death
+- Death in childhood
+- Hyperphenylalaninemia
+- Elevated circulating alpha-fetoprotein concentration",Tyrosinemia type 1,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:276700"", ""ORPHA:882"", ""CCRD:115.1""]}"
+rarebench:RAMEDIS:482,rarebench,- Intellectual disability,"- Intellectual disability
+- Paresthesia
+- Hyperphenylalaninemia
+- Death in early adulthood
+- Acute hepatitis
+- Chronic hepatitis",Phenylketonuria,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:261600"", ""ORPHA:716"", ""CCRD:90""]}"
+rarebench:RAMEDIS:589,rarebench,"- Macrocephaly
+- Ataxia","- Macrocephaly
+- Ataxia
+- Death in infancy
+- Dicarboxylic aciduria
+- Elevated circulating glutaric acid concentration
+- Neonatal death
+- Death in childhood
+- Decreased plasma free carnitine
+- Abnormality of movement",Glutaric acidemia type I,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:231670"", ""ORPHA:25""]}"
+rarebench:RAMEDIS:598,rarebench,"- Hip dysplasia
+- Death in infancy","- Hip dysplasia
+- Death in infancy
+- Premature birth
+- Hypertyrosinemia
+- Severe short stature
+- Neonatal death
+- Hyperphenylalaninemia
+- Death in adolescence
+- Elevated urinary carboxylic acid",Phenylketonuria,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:261600"", ""ORPHA:716"", ""CCRD:90""]}"
+rarebench:RAMEDIS:608,rarebench,- Abnormality of prenatal development or birth,"- Abnormality of prenatal development or birth
+- Death in infancy
+- Neonatal death
+- Death in childhood
+- Gastrointestinal inflammation
+- Decreased plasma free carnitine",Medium chain acyl-CoA dehydrogenase deficiency,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:201450"", ""ORPHA:42"", ""CCRD:70""]}"

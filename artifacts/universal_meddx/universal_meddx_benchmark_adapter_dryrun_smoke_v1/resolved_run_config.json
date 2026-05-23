@@ -1,0 +1,62 @@
+{
+  "active_budgets": [
+    5
+  ],
+  "adapter_status": [
+    {
+      "dataset_name": "ddxplus",
+      "message": "Loaded 2 DDXPlus cases from test split.",
+      "num_cases": 2,
+      "source_path": "/Users/alfred/Documents/baseline_model/dataset",
+      "status": "loaded"
+    },
+    {
+      "dataset_name": "icraft_md",
+      "message": "No local dataset path was supplied.",
+      "num_cases": 0,
+      "source_path": "",
+      "status": "skipped_missing_path"
+    },
+    {
+      "dataset_name": "rarebench",
+      "message": "No local dataset path was supplied.",
+      "num_cases": 0,
+      "source_path": "",
+      "status": "skipped_missing_path"
+    }
+  ],
+  "allow_dry_run_benchmark": true,
+  "budgets_to_run": [
+    5,
+    10,
+    15
+  ],
+  "dry_run_total_max_cases": 2,
+  "effective_total_case_cap": 2,
+  "enabled_datasets": [
+    "ddxplus",
+    "icraft_md",
+    "rarebench"
+  ],
+  "live_total_max_cases": 100,
+  "llm_model": "gpt-4.1-mini",
+  "patient_simulator": {
+    "answer_policy": "answer only from hidden_full_profile spans; otherwise report not mentioned",
+    "max_spans": 3,
+    "min_overlap": 1,
+    "name": "retrieval_patient_simulator_v1"
+  },
+  "run_live_api": false,
+  "run_name": "universal_meddx_benchmark_adapter_dryrun_smoke_v1",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "universal_schema": [
+    "case_id",
+    "dataset_name",
+    "initial_patient_info",
+    "hidden_full_profile",
+    "ground_truth_diagnosis",
+    "candidate_disease_list",
+    "metadata"
+  ]
+}

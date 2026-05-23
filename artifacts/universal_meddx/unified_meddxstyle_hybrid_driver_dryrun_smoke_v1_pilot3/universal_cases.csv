@@ -1,0 +1,84 @@
+case_id,dataset_name,initial_patient_info,hidden_full_profile,ground_truth_diagnosis,candidate_disease_list,metadata
+test:18312,ddxplus,"Age: 0
+Sex: F
+Initial finding: Have you had significantly increased sweating? Answer: yes.","Age: 0.
+Sex: F.
+Known patient findings from the hidden profile:
+- Have you had significantly increased sweating? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Characterize your pain: Answer: heavy.
+- Characterize your pain: Answer: exhausting.
+- Do you feel pain somewhere? Answer: back of the neck.
+- Do you feel pain somewhere? Answer: side of the neck(R).
+- Do you feel pain somewhere? Answer: side of the neck(L).
+- Do you feel pain somewhere? Answer: top of the head.
+- Do you feel pain somewhere? Answer: occiput.
+- How intense is the pain? Answer: 6.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 6.
+- How fast did the pain appear? Answer: 2.
+- Do you smoke cigarettes? Answer: yes.
+- Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long? Answer: yes.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Do you have a sore throat? Answer: yes.
+- What color is the rash? Answer: NA.
+- Do your lesions peel off? Answer: N.
+- Is the rash swollen? Answer: 0.
+- Where is the affected region located? Answer: nowhere.
+- How intense is the pain caused by the rash? Answer: 0.
+- Is the lesion (or are the lesions) larger than 1cm? Answer: N.
+- How severe is the itching? Answer: 0.
+- Do you have diffuse (widespread) muscle pain? Answer: yes.
+- Have you recently had a loss of appetite or do you get full more quickly then usually? Answer: yes.
+- Do you have a cough? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.
+- Are you immunosuppressed? Answer: yes.",Influenza,"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 0, ""sex"": ""F"", ""official_differential"": [""Influenza"", ""Pneumonia"", ""URTI"", ""HIV (initial infection)"", ""Bronchitis"", ""Acute otitis media"", ""Chagas"", ""Tuberculosis"", ""Anemia""], ""initial_evidence"": ""E_50"", ""source"": ""ddxplus_structured_to_profile_v1""}"
+icraft_md:55,icraft_md,"Age: 50 years
+Sex: female
+Chief complaint: A 50-year-old woman presents with a 5-day history of progressive, painful rash involving her face, trunk, extremities, nasal tip, and ears, in addition to fever and arthralgia","- A 50-year-old woman presents with a 5-day history of progressive, painful rash involving her face, trunk, extremities, nasal tip, and ears, in addition to fever and arthralgia
+- She admits to a history of polysubstance use and states that her last use was a week prior to symptom onset
+- She denies a history of autoimmune disease or recent travel
+- Examination reveals retiform purpura with areas of necrosis and bullae formation
+- Urine toxicology screening is positive for cocaine, and laboratory findings include leukopenia and an elevated erythrocyte sedimentation rate (70 mm/h).
+- 1. A 50-year-old woman presents with a rash.
+- 2. The rash has been progressing for 5 days.
+- 3. The rash is painful.
+- 4. The rash involves the woman's face.
+- 5. The rash involves the woman's trunk.
+- 6. The rash involves the woman's extremities.
+- 7. The rash involves the woman's nasal tip.
+- 8. The rash involves the woman's ears.
+- 9. The woman has a fever.
+- 10. The woman has arthralgia.
+- 11. The woman admits to a history of polysubstance use.
+- 12. The woman's last substance use was one week before symptom onset.
+- 13. The woman denies a history of autoimmune disease.
+- 14. The woman denies recent travel.
+- 15. Examination reveals retiform purpura.
+- 16. Examination reveals areas of necrosis.
+- 17. Examination reveals bullae formation.
+- 18. The woman's urine toxicology screening is positive for cocaine.
+- 19. The woman has leukopenia.
+- 20. The woman has an elevated erythrocyte sedimentation rate of 70 mm/h.",Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,"[""Disseminated intravascular coagulation"", ""Warfarin-induced skin necrosis"", ""Tinea incognito"", ""Levamisole-induced antineutrophil cytoplasmic antibody vasculitis""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""D"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+rarebench:LIRICAL:289,rarebench,"- High palate
+- Microcephaly
+- Macrotia
+- Sensorineural hearing impairment","- High palate
+- Microcephaly
+- Macrotia
+- Sensorineural hearing impairment
+- Convex nasal ridge
+- Deeply set eye
+- Microphthalmia
+- Large hands
+- Intellectual disability
+- Cerebellar hypoplasia
+- Scoliosis
+- Thickened calvaria
+- Kyphosis
+- Limb joint contracture
+- Short stature
+- Bilateral intracerebral calcifications
+- Postnatal growth retardation
+- Nasogastric tube feeding in infancy",Cockayne syndrome,"[""3-Methylglutaconic aciduria with deafness, encephalopathy, and leigh-like syndrome"", ""Aarskog-Scott syndrome"", ""Acromesomelic dysplasia, Maroteaux type"", ""Acromicric dysplasia"", ""AGel amyloidosis"", ""Al Kaissi syndrome"", ""Alagille syndrome"", ""Alpha-thalassemia-X-linked intellectual disability syndrome"", ""Alzheimer disease"", ""Amyotrophic lateral sclerosis"", ""Apert syndrome"", ""Arthrogryposis, distal, with impaired proprioception and touch"", ""Ataxia-oculomotor apraxia type 1"", ""Ataxia-pancytopenia syndrome"", ""Autoimmune lymphoproliferative syndrome"", ""Autoimmune polyendocrinopathy type 1"", ""Bamforth-Lazarus syndrome"", ""Bardet-Biedl syndrome"", ""Bartter syndrome"", ""Bernard-Soulier syndrome"", ""Bethlem myopathy"", ""Bilateral frontoparietal polymicrogyria"", ""Bleeding disorder, platelet-type, 15"", ""Bleeding disorder, platelet-type, 17"", ""Boucher-Neuhauser syndrome"", ""Branchio-oculo-facial syndrome"", ""Brugada Syndrome"", ""Camurati-Engelmann disease"", ""Cardiofaciocutaneous syndrome"", ""Catecholaminergic polymorphic ventricular tachycardia"", ""CEDNIK syndrome"", ""Centronuclear myopathy"", ""Cerebral creatine deficiency syndrome"", ""Charcot-Marie-Tooth disease"", ""CHARGE syndrome"", ""Chitayat syndrome"", ""Choreoacanthocytosis"", ""Chronic mucocutaneous candidiasis"", ""Chudley-Mccullough syndrome"", ""Ch\u00e9diak-Higashi syndrome"", ""Citrullinemia"", ""Classic galactosemia"", ""Cleidocranial dysplasia"", ""Cockayne syndrome"", ""CODAS syndrome"", ""Cohen syndrome"", ""Combined oxidative phosphorylation deficiency 30"", ""Cone rod dystrophy"", ""Congenital contractural arachnodactyly"", ""Congenital disorder of glycosylation, type IIh"", ""Congenital disorder of glycosylation, type IIP"", ""Congenital disorder of glycosylation, type Il"", ""Congenital myasthenic syndrome"", ""Congenital nephrotic syndrome, Finnish type"", ""Congenital secretory diarrhea"", ""Cornelia de Lange syndrome"", ""Cortical dysplasia, complex, with other brain malformations 7"", ""Craniofrontonasal dysplasia"", ""CTCF-related neurodevelopmental disorder"", ""Cutis laxa, autosomal recessive, type IA"", ""Cutis laxa, autosomal recessive, type IIB"", ""Cutis laxa, autosomal recessive, type IIC"", ""Cutis laxa, autosomal recessive, type IID"", ""Desmosterolosis"", ""Developmental and epileptic encephalopathy 14"", ""Developmental and epileptic encephalopathy 28"", ""Diamond-Blackfan anemia"", ""Dilated cardiomyopathy 1G"", ""Distal myopathy, Tateyama type"", ""Donohue syndrome"", ""Dyggve-Melchior-Clausen disease"", ""DYRK1A-related intellectual disability syndrome"", ""Dyskeratosis congenita"", ""Ectodermal dysplasia 9, Hair/nail type"", ""Ehlers-Danlos syndrome"", ""Elliptocytosis 2"", ""Emery-Dreifuss muscular dystrophy"", ""Epidermolysis bullosa, junctional, Herlitz type"", ""Epidermolytic palmoplantar keratoderma"", ""Epileptic encephalopathy, early infantile, 4"", ""Fanconi anemia"", ""Fibrodysplasia ossificans progressiva"", ""Freeman-Sheldon syndrome"", ""Galactosialidosis"", ""Galloway-Mowat syndrome"", ""GAPO syndrome"", ""Gaucher disease"", ""Geleophysic dysplasia"", ""Glutaric acidemia type I"", ""Glycogen storage disease VI"", ""GM1-gangliosidosis, type III"", ""Hajdu-Cheney syndrome"", ""Hemophagocytic lymphohistiocytosis"", ""Hereditary neuropathy with liability to pressure palsies"", ""Hereditary sensory and autonomic neuropathy type IIB"", ""Hereditary spherocytosis"", ""Heterotaxy syndrome"", ""Holoprosencephaly"", ""Homocystinuria"", ""Hyaline fibromatosis syndrome"", ""Hyper-IgE syndrome"", ""Hyperekplexia"", ""Hypochondroplasia"", ""Hypomyelinating leukodystrophy"", ""Hypotrichosis with juvenile macular degeneration"", ""Ichthyosis-hypotrichosis syndrome"", ""Imerslund-Gr\u00e4sbeck syndrome"", ""Immunoskeletal dysplasia with neurodevelopmental abnormalities"", ""Inclusion body myopathy with Paget disease of bone and frontotemporal dementia"", ""Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities"", ""Intellectual developmental disorder with dysmorphic facies and ptosis"", ""Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies"", ""Jervell and Lange-Nielsen syndrome"", ""Joubert syndrome"", ""Kabuki syndrome"", ""Krabbe disease"", ""Kufor-Rakeb syndrome"", ""Larsen syndrome"", ""Leukocyte adhesion deficiency type II"", ""Leukocyte adhesion deficiency, type I"", ""Leukocyte adhesion deficiency, type III"", ""Limb-girdle muscular dystrophy"", ""Loeys-Dietz syndrome"", ""Long QT syndrome 14"", ""Long QT syndrome 15"", ""Lowe syndrome"", ""Marfan syndrome"", ""Megalocornea"", ""Mental retardation, autosomal recessive 18"", ""Mental retardation, autosomal recessive 38"", ""Microcephalic cortical malformations-short stature due to RTTN deficiency"", ""Microcephaly 3, primary, autosomal recessive"", ""Microcephaly 5, primary, autosomal recessive"", ""Microcephaly, primary autosomal recessive, 6"", ""Muckle-Wells syndrome"", ""Mucolipidosis type II"", ""Mucolipidosis type IV"", ""Muenke syndrome"", ""Multiple endocrine neoplasia type 1"", ""Multiple endocrine neoplasia, type IIA"", ""Myhre syndrome"", ""Myotonia congenita"", ""Nail-patella syndrome"", ""Nance-Horan syndrome"", ""Nemaline myopathy"", ""Neonatal severe encephalopathy with lactic acidosis and brain abnormalities"", ""Neurodegeneration with brain iron accumulation 2B"", ""Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart"", ""Neurofibromatosis type 1"", ""Niemann-Pick disease type C"", ""Nijmegen breakage syndrome"", ""Noonan syndrome"", ""Oculocutaneous albinism type 2"", ""Oculocutaneous albinism type 3"", ""Oliver-Mcfarlane syndrome"", ""Orofaciodigital syndrome type 5"", ""Osteogenesis imperfecta"", ""Osteogenesis imperfecta, type IX"", ""Osteogenesis imperfecta, type VIII"", ""Osteogenesis imperfecta, type XI"", ""Osteogenesis imperfecta, type XII"", ""Osteogenesis imperfecta, type XIV"", ""Palmoplantar keratoderma, punctate type IA"", ""Pantothenate kinase-associated neurodegeneration"", ""Papillon-Lef\u00e8vre syndrome"", ""Parkinson disease 15, autosomal recessive early-onset"", ""Parkinson disease 23, autosomal recessive early-onset"", ""Parkinson disease 7, autosomal recessive early-onset"", ""Pierpont syndrome"", ""PLAA-associated neurodevelopmental disorder"", ""Poikiloderma with neutropenia"", ""Primary hyperoxaluria type 2"", ""Progressive familial intrahepatic cholestasis 4"", ""Pseudoachondroplasia"", ""Recurrent metabolic encephalomyopathic crises-rhabdomyolysis-cardiac arrhythmia-intellectual disability syndrome"", ""Retinitis pigmentosa"", ""Rett syndrome"", ""Robinow syndrome"", ""Rubinstein-Taybi syndrome"", ""Schinzel-Giedion syndrome"", ""Severe combined immunodeficiency due to adenosine deaminase deficiency"", ""Sick sinus syndrome"", ""Skraban-Deardorff syndrome"", ""Smith-Kingsmore syndrome"", ""Smith-Lemli-Opitz syndrome"", ""Smith-Magenis syndrome"", ""Spastic paraplegia 10, autosomal dominant"", ""Spastic paraplegia 45, autosomal recessive"", ""Spastic paraplegia 7, autosomal recessive"", ""Spastic paraplegia 76, autosomal recessive"", ""Spinal muscular atrophy with progressive myoclonic epilepsy"", ""Spinocerebellar ataxia, autosomal recessive 20"", ""Spondylocostal dysostosis"", ""Spondyloepimetaphyseal dysplasia with joint laxity"", ""Stankiewicz-Isidor syndrome"", ""STAR syndrome"", ""Stickler syndrome"", ""TBCK-related intellectual disability syndrome"", ""Temtamy preaxial brachydactyly syndrome"", ""Thrombocytopenia 3"", ""Tietz syndrome"", ""Townes-Brocks syndrome"", ""Treacher Collins syndrome"", ""Trichohepatoenteric syndrome"", ""Trichorhinophalangeal syndrome, type I"", ""Trichothiodystrophy"", ""Tuberous sclerosis"", ""Tubulointerstitial kidney disease"", ""Van den Ende-Gupta syndrome"", ""Vasculitis, autoinflammation, immunodeficiency, and hematologic defects syndrome"", ""Vici syndrome"", ""Waardenburg syndrome type 3"", ""Weill-Marchesani syndrome"", ""Werner syndrome"", ""Wiedemann-Steiner syndrome"", ""X-linked hypohidrotic ectodermal dysplasia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""LIRICAL"", ""subset_candidate_count"": 216, ""raw_disease_codes"": [""OMIM:133540""]}"
