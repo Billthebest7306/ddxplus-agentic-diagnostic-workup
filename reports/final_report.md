@@ -683,7 +683,9 @@ Strong claim: evidence-efficient sequential workup with MLP-guided stopping, plu
 
 ### Slide 21. Future Work
 
-Notebook `37` shows that the adaptive candidate-pool architecture improves the base, but the old 49-case replay was optimistic. Notebook `38` shows that a more sensitive calibration policy can restore near-complete candidate-pool recall on a larger live cohort. Notebook `39` shows that saved artifacts can produce a modest no-regression calibration layer, but not a fully general resolver. Notebook `40` shows that synthetic-state resolver training alone is not enough. The next credible work is to freeze a confirmation policy with a global request cap, resolver-margin/base-protection safeguards, and any calibrated close-confounder rescue only if pre-registered, then run a separate held-out confirmation cohort before making any new headline claim.
+Notebook `37` shows that the adaptive candidate-pool architecture improves the base, but the old 49-case replay was optimistic. Notebook `38` shows that a more sensitive calibration policy can restore near-complete candidate-pool recall on a larger live cohort. Notebook `39` shows that saved artifacts can produce a modest no-regression calibration layer, but not a fully general resolver. Notebook `40` shows that synthetic-state resolver training alone is not enough. The next credible DDXPlus work is to freeze a confirmation policy with a global request cap, resolver-margin/base-protection safeguards, and any calibrated close-confounder rescue only if pre-registered, then run a separate held-out confirmation cohort before making any new headline claim.
+
+For the multi-dataset MEDDx phase, Notebook `45` is the next architecture pilot. It ports the DDXPlus MLP stop, hypothesis-branching, and candidate-pool resolver stack into the universal DDXPlus/iCraft-MD/RareBench harness while keeping each case under the active MEDDx budget cap. The first tiny live pilot was diagnostically useful rather than successful: iCraft-MD and RareBench solved their selected cases at all budgets, but DDXPlus regressed on the selected Influenza case because early stopping treated a disagreeing MLP signal as safe. The active `v1_pilot4` patch now requires DDXPlus LLM/MLP top-1 agreement before early stop and preserves the conservative RareBench graph/discriminator gate.
 
 ## Key Files
 
@@ -723,6 +725,7 @@ Notebook `37` shows that the adaptive candidate-pool architecture improves the b
 - `notebooks/42_universal_meddx_benchmark_adapter.ipynb`
 - `notebooks/43_unified_meddxstyle_hybrid_driver.ipynb`
 - `notebooks/44_unified_graph_phenotype_meddx_driver.ipynb`
+- `notebooks/45_universal_branching_resolver_meddx_driver.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -754,3 +757,4 @@ Notebook `37` shows that the adaptive candidate-pool architecture improves the b
 - `reports/algorithmic_ledger/universal_meddx_benchmark_adapter_report.md`
 - `reports/algorithmic_ledger/unified_meddxstyle_hybrid_driver_report.md`
 - `reports/algorithmic_ledger/unified_graph_phenotype_meddx_driver_report.md`
+- `reports/algorithmic_ledger/universal_branching_resolver_meddx_driver_report.md`

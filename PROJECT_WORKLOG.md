@@ -5974,3 +5974,89 @@ Follow-up scaled-evaluation configuration:
 - active budgets remain `[5, 10, 15]`, so the intended scaled run is `30` unique cases x `3` budgets = `90` workups
 - expected balanced composition is about `10` DDXPlus, `10` iCraft-MD, and `10` RareBench cases if all adapters load
 - no-API smoke passed under `artifacts/universal_meddx/unified_graph_phenotype_meddx_driver_dryrun_smoke_v1_eval30/`
+
+Follow-up Notebook `44` scaled-run interpretation:
+
+- live `v1_eval30` completed `30` unique cases x budgets `[5, 10, 15]` = `90` workups
+- best operating point was budget `10`: `25/30` top-1 and `28/30` top-3/top-5
+- budget `15` did not improve top-k and dropped top-1 to `23/30`
+- RareBench remained the bottleneck: budget `10` reached `8/10`, but budget `15` dropped to `6/10`
+- the RareBench discriminator introduced regressions when it overrode correct LLM answers, especially when LLM and graph support were already aligned or graph margins were weak
+- conclusion: Notebook `44` proved the universal graph-phenotype shell, but it needs a conservative no-regression graph/discriminator gate before further scaling
+
+## 93. Notebook 45 Universal Branching Resolver MEDDx Driver
+
+Added Notebook `45` to port the original DDXPlus stop/branch/resolve architecture into the multi-dataset MEDDx-style harness.
+
+- notebook: `notebooks/45_universal_branching_resolver_meddx_driver.ipynb`
+- script mirror: `scripts/universal_branching_resolver_meddx_driver_nb45.py`
+- report: `reports/algorithmic_ledger/universal_branching_resolver_meddx_driver_report.md`
+- latest dry-run artifact root: `artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
+
+Purpose:
+
+Notebook `44` used the universal MEDDx-style shell plus RareBench graph-phenotype support, but it did not yet use the original DDXPlus architecture: MLP-guided stopping, hypothesis branching, and candidate-pool resolution. Notebook `45` adds those ideas under the MEDDx budget cap.
+
+Key implementation details:
+
+- active config is a cautious live pilot: `RUN_VERSION_SUFFIX = "v1_pilot4"`, `LIVE_TOTAL_MAX_CASES = 3`, budgets `[5, 10, 15]`
+- cap-aware stop probes allow the system to stop below the budget
+- base questions plus branch questions are capped by the active MEDDx budget
+- the actual DDXPlus partial-evidence MLP checkpoint is loaded when structured DDXPlus evidence roots can be reconstructed
+- iCraft-MD and RareBench use a universal confidence/score-margin fallback rather than the DDXPlus MLP
+- hypothesis branches are generated from challenger diagnoses in the base ranked differential, casebase prior, and RareBench graph support
+- the final candidate-pool resolver scores base rank, branch rank, casebase prior, and graph support with base protection
+- the RareBench graph/discriminator now has a conservative gate:
+  - lock the answer when LLM top-1 and graph top-1 agree
+  - block weak graph overrides
+  - block unsupported discriminator third options
+- patient-simulator retrieval now includes semantic-topic alignment and RareBench phenotype rarity weighting, reducing mismatched profile snippets
+
+Dry-run verification:
+
+- `python3 -m py_compile scripts/universal_branching_resolver_meddx_driver_nb45.py` passed
+- all Notebook `45` code cells parsed with `ast.parse`
+- no-API smoke executed successfully
+- all three adapters loaded
+- DDXPlus MLP monitor loaded successfully
+- artifact contract passed
+
+Dry-run smoke result, not a live performance claim:
+
+| Dataset | Case | Top-1 | Top-3 | Top-5 | Questions | Branches |
+|---|---|---:|---:|---:|---:|---:|
+| DDXPlus | `test:18312` | 1 | 1 | 1 | 2 | 0 |
+| iCraft-MD | `icraft_md:55` | 0 | 0 | 1 | 5 | 2 |
+| RareBench | `rarebench:LIRICAL:289` | 1 | 1 | 1 | 5 | 2 |
+
+Interpretation:
+
+Notebook `45` is the first complete cross-dataset port of the project’s DDXPlus architecture. It should supersede Notebook `44` for the next small live pilot, but no large performance claim should be made until the live pilot runs.
+
+Follow-up live `v1_pilot3` diagnosis and patch:
+
+- live `v1_pilot3` ran the intended tiny pilot shape: one DDXPlus case, one iCraft-MD case, and one RareBench case across budgets `[5, 10, 15]`
+- this is only a wiring/behavior pilot, not a performance estimate
+- row-level result was `6/9` top-1 and top-3, `7/9` top-5
+- iCraft-MD and RareBench were correct at all three budgets
+- DDXPlus `test:18312`, true `Influenza`, failed at all three budgets:
+  - budget `5`: predicted `Bronchiolitis`
+  - budget `10`: predicted `Viral pharyngitis`
+  - budget `15`: predicted `Bronchiolitis`
+- Notebook `44` solved the same DDXPlus case at budgets `5`, `10`, and `15`, so the problem was Notebook `45` integration rather than DDXPlus unsuitability
+- diagnosis:
+  - the semantic-topic retrieval penalty was appropriate for RareBench-style prose/phenotype matching but too strict for DDXPlus structured evidence spans
+  - it filtered out co-traveling systemic fields such as appetite/fatigue/myalgia when the LLM asked broad infectious questions
+  - the DDXPlus MLP monitor was incorrectly allowed to stop the case based on confidence alone
+  - on this failed case, the MLP was confident in `URTI` while the LLM selected `Bronchiolitis` or `Viral pharyngitis`; that should be disagreement, not a safe stop
+- patch:
+  - active suffix changed to `RUN_VERSION_SUFFIX = "v1_pilot4"` so old live artifacts are preserved
+  - DDXPlus retrieval no longer applies the topic-mismatch penalty
+  - DDXPlus early stop now requires LLM top-1 and DDXPlus MLP top-1 agreement
+  - high-confidence DDXPlus MLP branch suppression now requires agreement with the base top-1
+  - DDXPlus MLP/LLM disagreement can force branch eligibility when budget remains
+  - `ddxplus_mlp_top1` and `ddxplus_mlp_top5` are now recorded in artifacts
+- verification:
+  - `python3 -m py_compile scripts/universal_branching_resolver_meddx_driver_nb45.py` passed
+  - Notebook `45` code cells parsed with `ast.parse`
+  - no-API smoke passed under `artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`

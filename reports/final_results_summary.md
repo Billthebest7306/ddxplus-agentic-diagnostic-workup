@@ -2370,3 +2370,39 @@ Scaled evaluation config:
 - budgets remain `[5, 10, 15]`
 - intended scaled run is `90` live workups, balanced across the three datasets when all adapters load
 - no-API smoke passed under `artifacts/universal_meddx/unified_graph_phenotype_meddx_driver_dryrun_smoke_v1_eval30/`
+
+## Notebook 45 Universal Branching Resolver MEDDx Driver
+
+Notebook `45` is the next cross-dataset pilot after the Notebook `44` scaled run. Notebook `44` established that the universal MEDDx-style shell works and that RareBench needs exact phenotype-graph support, but the scaled run also showed that the graph/discriminator can regress correct LLM answers at high budget.
+
+Notebook `45` ports the DDXPlus project architecture into the universal harness:
+
+- DDXPlus partial-evidence MLP monitor when structured evidence roots can be reconstructed
+- cap-aware early stopping under MEDDx budgets `5`, `10`, and `15`
+- hypothesis-forced branches that spend only unused budget
+- final candidate-pool resolver over base LLM rank, branches, casebase prior, and graph/HPO support
+- conservative RareBench graph/discriminator gate that blocks weak graph overrides and unsupported third-option regressions
+- improved patient-simulator retrieval with semantic-topic alignment and RareBench phenotype rarity weighting
+
+Dry-run smoke passed with no API calls under:
+
+`artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
+
+This is not yet a performance claim. The active live config is intentionally small: `LIVE_TOTAL_MAX_CASES = 3`, budgets `[5, 10, 15]`.
+
+Follow-up live `v1_pilot3` was diagnostically useful but not successful enough to scale. It ran one case per dataset across budgets `[5, 10, 15]`: iCraft-MD and RareBench were correct at all budgets, but DDXPlus `test:18312` true `Influenza` failed at all three budgets. Since Notebook `44` solved that same DDXPlus case at all three budgets, the failure was traced to Notebook `45` integration:
+
+- DDXPlus retrieval inherited a RareBench-oriented topic-mismatch penalty that filtered useful systemic evidence
+- the DDXPlus MLP was allowed to stop based on confidence alone even when its top diagnosis disagreed with the LLM top diagnosis
+
+Notebook `45` has been patched for `v1_pilot4`:
+
+- DDXPlus retrieval no longer applies the topic-mismatch penalty
+- DDXPlus early stop requires LLM/MLP top-1 agreement
+- high-confidence MLP branch suppression requires agreement with the base top-1
+- MLP/LLM disagreement can force branch eligibility when budget remains
+- MLP top-1/top-5 are now written to artifacts
+
+No-API smoke passed under:
+
+`artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
