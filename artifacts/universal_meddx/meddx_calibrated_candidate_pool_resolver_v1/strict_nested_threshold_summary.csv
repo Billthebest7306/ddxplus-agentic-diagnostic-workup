@@ -1,0 +1,11 @@
+policy_name,dataset_name,budget,num_workups,top1,top3,top5,wins_vs_current,regressions_vs_current,changed_predictions
+strict_nested_threshold_logistic_diagnostic,ALL,-1,90,0.8555555555555555,0.8888888888888888,0.9,4,0,5
+strict_nested_threshold_logistic_diagnostic,ddxplus,5,10,0.8,0.8,0.9,2,0,2
+strict_nested_threshold_logistic_diagnostic,ddxplus,10,10,0.8,0.9,0.9,1,0,1
+strict_nested_threshold_logistic_diagnostic,ddxplus,15,10,0.9,0.9,0.9,1,0,2
+strict_nested_threshold_logistic_diagnostic,icraft_md,5,10,0.9,1.0,1.0,0,0,0
+strict_nested_threshold_logistic_diagnostic,icraft_md,10,10,1.0,1.0,1.0,0,0,0
+strict_nested_threshold_logistic_diagnostic,icraft_md,15,10,0.9,1.0,1.0,0,0,0
+strict_nested_threshold_logistic_diagnostic,rarebench,5,10,0.8,0.8,0.8,0,0,0
+strict_nested_threshold_logistic_diagnostic,rarebench,10,10,0.8,0.8,0.8,0,0,0
+strict_nested_threshold_logistic_diagnostic,rarebench,15,10,0.8,0.8,0.8,0,0,0

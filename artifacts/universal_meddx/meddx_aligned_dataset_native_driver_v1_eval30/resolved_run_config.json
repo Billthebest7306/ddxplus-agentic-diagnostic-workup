@@ -1,0 +1,189 @@
+{
+  "active_budgets": [
+    5,
+    10,
+    15
+  ],
+  "adapter_status": [
+    {
+      "dataset_name": "ddxplus",
+      "message": "Loaded 30 DDXPlus cases from test split.",
+      "num_cases": 30,
+      "source_path": "/Users/alfred/Documents/baseline_model/dataset",
+      "status": "loaded"
+    },
+    {
+      "dataset_name": "icraft_md",
+      "message": "Loaded 30 iCraft-MD cases from MEDDxAgent JSONL.",
+      "num_cases": 30,
+      "source_path": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl",
+      "status": "loaded"
+    },
+    {
+      "dataset_name": "rarebench",
+      "message": "Loaded 30 RareBench cases from HuggingFace zip and MEDDxAgent mappings.",
+      "num_cases": 30,
+      "source_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip",
+      "status": "loaded"
+    }
+  ],
+  "allow_dry_run_benchmark": false,
+  "broad_inventory_first_turn": true,
+  "candidate_pool_resolver": {
+    "base_protection_margin": 0.18,
+    "min_independent_support_to_override": 2,
+    "sources": [
+      "base_llm_rank",
+      "branch_rank",
+      "casebase_prior",
+      "rarebench_graph"
+    ]
+  },
+  "candidate_text_max_chars": 50000,
+  "cap_aware_stopping": {
+    "ddxplus_partial_mlp_available": true,
+    "ddxplus_partial_mlp_monitor_enabled": true,
+    "ddxplus_partial_mlp_reason": "",
+    "ddxplus_selected_policy": {
+      "mlp_confidence_min": 0.7,
+      "mlp_entropy_max": 0.1,
+      "mlp_margin_min": 0.2
+    },
+    "enabled": true,
+    "min_questions_by_budget": {
+      "5": 3,
+      "10": 4,
+      "15": 5
+    },
+    "universal_confidence_min": 0.82,
+    "universal_rank_margin_min": 0.18,
+    "universal_stability_min": 1
+  },
+  "casebase_prior": {
+    "context_labels": 6,
+    "enabled": true,
+    "min_candidates": 10,
+    "min_normalized_score": 0.05,
+    "policy": "visible-evidence Jaccard casebase prior plus margin-gated LLM rank fusion",
+    "prior_weight": 1.25,
+    "promotion_margin": 0.12,
+    "reference_counts": {
+      "ddxplus": 1500,
+      "icraft_md": 140,
+      "rarebench": 1120
+    },
+    "reference_max_cases_per_dataset": 1500,
+    "rerank_labels": 10
+  },
+  "ddxplus_native_structured_driver": {
+    "enabled": true,
+    "final_llm_audit": false,
+    "hypothesis_branching": true,
+    "llm_root_chooser": true,
+    "min_requests_by_budget": {
+      "5": 3,
+      "10": 4,
+      "15": 5
+    },
+    "policy": "train/validate-derived pairwise root-separation utility over current MLP top candidates; exact row reveal for present/absent root states",
+    "root_stats_available": true,
+    "root_stats_max_cases": 30000,
+    "root_stats_num_cases": 30000,
+    "root_stats_split": "validate",
+    "shortlist_size": 12,
+    "stop_confidence_min": 0.72,
+    "stop_entropy_max": 0.14,
+    "stop_margin_min": 0.2
+  },
+  "driver_architecture": {
+    "diagnosis_policy": "DDXPlus partial-evidence MLP/candidate resolver; iCraft-MD profile resolver; RareBench phenotype graph with conservative gate",
+    "history_policy": "dataset-native: DDXPlus legal root IDs; iCraft-MD/RareBench MEDDx-style natural-language history taking",
+    "meddxagent_alignment": "shared driver, fixed MEDDx budgets, and dataset-specific benchmark adapters, matching the MEDDxAgent design pattern instead of forcing one identical evidence representation",
+    "name": "meddx_aligned_dataset_native_driver_v1",
+    "phases": [
+      "shared_meddx_budgeted_run_loop",
+      "dataset_native_adapter_dispatch",
+      "ddxplus_structured_root_ledger_when_available",
+      "profile_history_taking_for_icraft_and_generic_cases",
+      "rarebench_phenotype_graph_gate",
+      "top1_top3_top5_request_cost_artifacts"
+    ]
+  },
+  "dry_run_total_max_cases": 3,
+  "effective_total_case_cap": 30,
+  "enabled_datasets": [
+    "ddxplus",
+    "icraft_md",
+    "rarebench"
+  ],
+  "hypothesis_branching": {
+    "enabled": true,
+    "max_branches": 2,
+    "max_questions_per_branch": 2,
+    "min_remaining_budget": 2,
+    "total_question_cap_policy": "base plus branch questions may not exceed the active MEDDx budget",
+    "trigger_confidence_max": 0.84,
+    "trigger_disagreement_min": 0.34,
+    "trigger_margin_max": 0.22
+  },
+  "icraft_md_path": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl",
+  "live_budgets_to_run": [
+    5,
+    10,
+    15
+  ],
+  "live_total_max_cases": 30,
+  "llm_model": "gpt-4.1-mini",
+  "meddx_reference_budgets": [
+    5,
+    10,
+    15
+  ],
+  "meddxagent_data_root": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data",
+  "patient_simulator": {
+    "answer_policy": "answer only from hidden_full_profile spans; otherwise report not mentioned",
+    "max_spans": 5,
+    "min_overlap": 1,
+    "name": "retrieval_patient_simulator_v1",
+    "skip_previously_seen_spans": true
+  },
+  "rarebench_data_zip_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip",
+  "rarebench_data_zip_url": "https://huggingface.co/datasets/chenxz/RareBench/resolve/main/data.zip",
+  "rarebench_graph_phenotype_resolver": {
+    "conservative_graph_gate": true,
+    "context_labels": 8,
+    "descriptive_label_penalty": 0.2,
+    "discriminator_third_option_margin_min": 0.28,
+    "enabled": true,
+    "graph_override_margin_min": 0.18,
+    "llm_discriminator": true,
+    "llm_rank_weight": 0.25,
+    "lock_when_llm_and_graph_agree": true,
+    "min_visible_phenotypes": 3,
+    "policy": "exact visible HPO phenotype nodes -> leave-one-case-out disease exemplar support -> conservative rank fusion/adjudication",
+    "prior_weight": 2.25,
+    "reference_count": 1120,
+    "rerank_labels": 12
+  },
+  "rarebench_mapping_dir": "/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench",
+  "rarebench_subsets": [
+    "RAMEDIS",
+    "MME",
+    "HMS",
+    "LIRICAL"
+  ],
+  "require_all_enabled_datasets": true,
+  "run_live_api": true,
+  "run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "universal_schema": [
+    "case_id",
+    "dataset_name",
+    "initial_patient_info",
+    "hidden_full_profile",
+    "ground_truth_diagnosis",
+    "candidate_disease_list",
+    "metadata"
+  ]
+}

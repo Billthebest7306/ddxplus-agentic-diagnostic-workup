@@ -1,0 +1,10 @@
+dataset_name,budget,num_workups,current_top1,current_top5,candidate_pool_recall,mean_pool_size,median_truth_pool_rank
+ddxplus,5,10,0.6,0.6,1.0,16.0,1.0
+ddxplus,10,10,0.7,0.8,1.0,17.0,1.0
+ddxplus,15,10,0.8,0.9,0.9,17.5,1.0
+icraft_md,5,10,0.9,1.0,1.0,4.0,1.0
+icraft_md,10,10,1.0,1.0,1.0,4.0,1.0
+icraft_md,15,10,0.9,1.0,1.0,4.0,1.0
+rarebench,5,10,0.8,0.8,1.0,11.1,1.0
+rarebench,10,10,0.8,0.8,0.9,11.3,1.0
+rarebench,15,10,0.8,0.8,1.0,11.2,1.0

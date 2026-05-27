@@ -346,7 +346,37 @@ Notebook progression:
   - live `v1_pilot3` was diagnostically useful but exposed a DDXPlus integration regression: the MLP stop signal was treated as confidence-only even when it disagreed with the LLM diagnosis
   - active config is now `RUN_VERSION_SUFFIX = "v1_pilot4"` and `LIVE_TOTAL_MAX_CASES = 3`; no-API smoke passed under `artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
 
-If you are continuing the main sequential-policy line, start from notebook `08` for the LLM-only cost-sensitive baseline, notebook `10` for the partial-evidence matched classifier, notebook `11` for hybrid v1, notebook `12` for stopping-policy ablation, notebook `13` for live selected-stop confirmation, notebook `14` for the candidate v2 shortlist experiment, notebook `15` for offline stop-threshold/evidence-trajectory analysis, notebook `16` for algorithmic graph-ledger analysis, notebook `17` for rejected hard graph-shortlist testing, notebook `18` for graph-advisory shortlist testing, notebook `19` for Bayesian VOI ledger analysis, notebook `20` for the corrected LLM-led graph-ledger context experiment, notebook `21` for offline graph-context adjudication analysis, notebook `22` for graph-posterior final adjudication over Notebook `13` traces, notebook `23` for calibrated graph/Bayes rescue reranking, notebook `24` for live rescue confirmation, notebook `25` for base trajectory replicate collection, notebook `26` for offline branching trajectory analysis, notebook `27` for prospective live targeted branching confirmation, notebook `28` for MLP-gated confounder branching, notebook `29` for ranked-differential listwise adjudication, notebook `30` for hypothesis-forced branching, notebook `31` for neural candidate-pool resolution, notebook `32` for resolver ablation, notebook `33` for close-confounder discriminator evidence, notebook `34` for candidate-recall-gated branch pruning, notebook `35` for adaptive value-based branch continuation, notebook `36` for artificial branch-stress testing, notebook `37` for fresh balanced live confirmation, notebook `38` for live calibration analysis, notebook `39` for cross-cohort artifact calibration, notebook `40` for synthetic-to-live resolver transfer analysis, notebook `41` for final capped live confirmation, notebook `42` for cross-dataset adapter diagnostics, notebook `43` for the MEDDxAgent-style unified driver diagnostic, notebook `44` for the graph-phenotype multi-dataset pilot, notebook `45` for the universal branch/resolver architecture pilot, or notebook `09` for integrated evaluation. Use notebooks `05` and `06` as the refined-policy history.
+- [46_meddx_aligned_dataset_native_driver.ipynb](notebooks/46_meddx_aligned_dataset_native_driver.ipynb)
+  - restores dataset-native evidence acquisition inside one shared MEDDx-style budget/evaluation shell
+  - DDXPlus uses structured evidence-root requests and the partial-evidence MLP monitor
+  - iCraft-MD uses profile Q/A retrieval; RareBench uses phenotype graph support
+  - live `v1_eval30` reached `73/90` top-1 and `77/90` top-3/top-5
+
+- [47_meddx_candidate_pool_repair_lab.ipynb](notebooks/47_meddx_candidate_pool_repair_lab.ipynb)
+  - offline repair lab over Notebook `46` `v1_eval30`
+  - broad candidate-pool recall is `88/90`, so the main bottleneck is resolver discrimination
+  - selected DDXPlus high-confidence MLP guard improves to `75/90` with zero regressions
+
+- [48_meddx_candidate_pool_adjudicator_lab.ipynb](notebooks/48_meddx_candidate_pool_adjudicator_lab.ipynb)
+  - candidate-level educator lab over Notebook `46`/`47` artifacts
+  - selected label-free conservative educator remains `75/90`
+  - case-blocked learned educator reaches `77/90`; label-fit diagnostic reaches `86/90` against an `88/90` pool oracle
+  - conclusion: resolver signal exists, but a learned universal adjudicator needs separate calibration and held-out confirmation
+
+- [49_meddx_calibrated_candidate_pool_resolver.ipynb](notebooks/49_meddx_calibrated_candidate_pool_resolver.ipynb)
+  - calibrated learned candidate-pool resolver over Notebook `48` features
+  - trains one L2 logistic candidate scorer across DDXPlus, iCraft-MD, and RareBench
+  - case-blocked result: `78/90` top-1, `80/90` top-3, `81/90` top-5, five wins, zero regressions
+  - strict nested threshold diagnostic: `77/90` top-1 with zero regressions
+  - status: strongest offline MEDDx resolver calibration candidate; needs fresh held-out/live confirmation before final claim
+
+- [50_meddx_candidate_signal_augmentation_lab.ipynb](notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb)
+  - candidate-signal augmentation audit over Notebook `46`/`48`/`49` artifacts
+  - adds DDXPlus exact-outcome Bayes, RareBench HPO reference overlap, iCraft-MD text-exemplar support, and generic candidate/text overlap
+  - selected case-blocked resolver reaches `77/90` top-1 and `83/90` top-3/top-5, so it is not promoted over Notebook `49`
+  - label-fit diagnostic reaches `85/90`, showing signal exists but is not robustly learnable from only `30` case groups
+
+If you are continuing the main sequential-policy line, start from notebook `08` for the LLM-only cost-sensitive baseline, notebook `10` for the partial-evidence matched classifier, notebook `11` for hybrid v1, notebook `12` for stopping-policy ablation, notebook `13` for live selected-stop confirmation, notebook `14` for the candidate v2 shortlist experiment, notebook `15` for offline stop-threshold/evidence-trajectory analysis, notebook `16` for algorithmic graph-ledger analysis, notebook `17` for rejected hard graph-shortlist testing, notebook `18` for graph-advisory shortlist testing, notebook `19` for Bayesian VOI ledger analysis, notebook `20` for the corrected LLM-led graph-ledger context experiment, notebook `21` for offline graph-context adjudication analysis, notebook `22` for graph-posterior final adjudication over Notebook `13` traces, notebook `23` for calibrated graph/Bayes rescue reranking, notebook `24` for live rescue confirmation, notebook `25` for base trajectory replicate collection, notebook `26` for offline branching trajectory analysis, notebook `27` for prospective live targeted branching confirmation, notebook `28` for MLP-gated confounder branching, notebook `29` for ranked-differential listwise adjudication, notebook `30` for hypothesis-forced branching, notebook `31` for neural candidate-pool resolution, notebook `32` for resolver ablation, notebook `33` for close-confounder discriminator evidence, notebook `34` for candidate-recall-gated branch pruning, notebook `35` for adaptive value-based branch continuation, notebook `36` for artificial branch-stress testing, notebook `37` for fresh balanced live confirmation, notebook `38` for live calibration analysis, notebook `39` for cross-cohort artifact calibration, notebook `40` for synthetic-to-live resolver transfer analysis, notebook `41` for final capped live confirmation, notebook `42` for cross-dataset adapter diagnostics, notebook `43` for the MEDDxAgent-style unified driver diagnostic, notebook `44` for the graph-phenotype multi-dataset pilot, notebook `45` for the universal branch/resolver architecture pilot, notebook `46` for the dataset-native MEDDx driver, notebook `47` for candidate-pool repair analysis, notebook `48` for candidate-pool adjudicator analysis, notebook `49` for calibrated candidate-pool resolver training, notebook `50` for candidate-signal augmentation audit, or notebook `09` for integrated evaluation. Use notebooks `05` and `06` as the refined-policy history.
 
 ## Current State Of The Project
 
@@ -705,7 +735,74 @@ If Hassan is continuing immediately, the best starting point is:
 - inspect [synthetic_to_live_listwise_resolver_report.md](reports/algorithmic_ledger/synthetic_to_live_listwise_resolver_report.md)
 - inspect [final_capped_hypothesis_branching_confirmation_report.md](reports/algorithmic_ledger/final_capped_hypothesis_branching_confirmation_report.md)
 - inspect [universal_meddx_benchmark_adapter_report.md](reports/algorithmic_ledger/universal_meddx_benchmark_adapter_report.md)
-- continue from notebook `43` for MEDDxAgent-style multi-dataset adaptation, notebook `42` for cross-dataset adapter diagnostics, notebook `41` for the final capped 100-case DDXPlus live confirmation runner, notebook `40` for synthetic-to-live resolver transfer analysis, notebook `39` for cross-cohort artifact calibration, notebook `38` for the 196-case live calibration cohort, notebook `37` for the fresh balanced live confirmation result, notebook `35` for adaptive branch-continuation replay, notebook `36` for artificial branch-stress testing, notebook `34` for fixed branch-pruning replay, notebook `33` for independent close-confounder confirmation, notebook `32` for resolver ablation, notebook `31` for neural candidate-pool resolution, notebook `30` for hypothesis-forced live branching, notebook `29` for ranked-differential adjudication, notebook `28` for the latest completed live branching result, notebook `27` for earlier live targeted-branching analysis, notebook `26` for branching trajectory analysis, notebook `25` for base trajectory replicate collection, notebook `13` for the frozen live acquisition method, notebook `24` for live rescue-confirmation analysis, notebook `23` for the strongest offline graph/Bayes rescue candidate, notebook `22` for graph-posterior final adjudication, notebook `15` for offline evidence-trajectory/threshold analysis, notebook `21` for graph-context critic/adjudication analysis, notebook `12` if working on stop-policy evidence, notebook `19` if studying the rejected Bayesian VOI ablation, notebook `11` if revisiting hybrid v1, or notebook `09` if updating integrated comparisons
+- inspect [meddx_aligned_dataset_native_driver_report.md](reports/algorithmic_ledger/meddx_aligned_dataset_native_driver_report.md)
+- inspect [meddx_candidate_pool_adjudicator_lab_report.md](reports/algorithmic_ledger/meddx_candidate_pool_adjudicator_lab_report.md)
+- inspect [meddx_calibrated_candidate_pool_resolver_report.md](reports/algorithmic_ledger/meddx_calibrated_candidate_pool_resolver_report.md)
+- inspect [meddx_candidate_signal_augmentation_lab_report.md](reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md)
+- inspect [meddx_scale_hypothesis_branching_confirmation_report.md](reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md)
+- continue from notebook `51` for the MEDDx-scale live run, notebook `49` for the strongest calibrated MEDDx top-1 resolver, notebook `50` for candidate-signal audit and top-k differential analysis, notebook `48` for candidate-pool adjudicator analysis, notebook `46` for the dataset-native multi-dataset live driver, notebook `45` for the rejected over-universalized branch/resolver integration, notebook `44` for the graph-phenotype MEDDx driver, notebook `43` for MEDDxAgent-style multi-dataset adaptation, notebook `42` for cross-dataset adapter diagnostics, notebook `41` for the final capped 100-case DDXPlus live confirmation runner, notebook `40` for synthetic-to-live resolver transfer analysis, notebook `39` for cross-cohort artifact calibration, notebook `38` for the 196-case live calibration cohort, notebook `37` for the fresh balanced live confirmation result, notebook `35` for adaptive branch-continuation replay, notebook `36` for artificial branch-stress testing, notebook `34` for fixed branch-pruning replay, notebook `33` for independent close-confounder confirmation, notebook `32` for resolver ablation, notebook `31` for neural candidate-pool resolution, notebook `30` for hypothesis-forced live branching, notebook `29` for ranked-differential adjudication, notebook `28` for the latest completed live branching result, notebook `27` for earlier live targeted-branching analysis, notebook `26` for branching trajectory analysis, notebook `25` for base trajectory replicate collection, notebook `13` for the frozen live acquisition method, notebook `24` for live rescue-confirmation analysis, notebook `23` for the strongest offline graph/Bayes rescue candidate, notebook `22` for graph-posterior final adjudication, notebook `15` for offline evidence-trajectory/threshold analysis, notebook `21` for graph-context critic/adjudication analysis, notebook `12` if working on stop-policy evidence, notebook `19` if studying the rejected Bayesian VOI ablation, notebook `11` if revisiting hybrid v1, or notebook `09` if updating integrated comparisons
+
+## Notebook 46 MEDDx-Aligned Dataset-Native Driver
+
+Notebook `46` is the active next MEDDxAgent-style pilot candidate.
+
+- `notebooks/46_meddx_aligned_dataset_native_driver.ipynb`
+- `scripts/meddx_aligned_dataset_native_driver_nb46.py`
+- `reports/algorithmic_ledger/meddx_aligned_dataset_native_driver_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_aligned_dataset_native_driver_dryrun_smoke_v1_pilot1/`
+
+The key correction is architectural: the system is unified at the MEDDx-style driver/evaluation layer, but evidence acquisition is dataset-native. DDXPlus now uses structured evidence-root requests and exact present/absent row reveals; iCraft-MD keeps the profile Q/A adapter; RareBench keeps the phenotype graph adapter.
+
+The dry-run smoke loaded all three adapters, loaded the DDXPlus partial-evidence MLP, built DDXPlus root stats from `30,000` validate cases, and passed the artifact contract. It recovered the DDXPlus `Influenza` smoke case at budget `5` after legal parent/child root gating was added. This is not a live performance claim, but it makes Notebook `46` the clean successor to Notebook `45`.
+
+Live `v1_pilot1` then completed one case per dataset across budgets `[5, 10, 15]` and reached `9/9` top-1/top-3/top-5 with `6.00` mean questions. This is a strong behavior pilot, not a stable accuracy estimate. The active config has now been advanced to `RUN_VERSION_SUFFIX = "v1_eval30"` and `LIVE_TOTAL_MAX_CASES = 30`, for `90` intended live workups.
+
+Notebook `46` live `v1_eval30` then completed the `90` workups. It reached `73/90` top-1 and `77/90` top-3/top-5. DDXPlus was the weak slice at `21/30` top-1, while iCraft-MD was `28/30` and RareBench was `24/30`.
+
+Notebook `47` is the offline repair lab over those artifacts:
+
+- `notebooks/47_meddx_candidate_pool_repair_lab.ipynb`
+- `scripts/meddx_candidate_pool_repair_lab_nb47.py`
+- `reports/algorithmic_ledger/meddx_candidate_pool_repair_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_repair_lab_v1/`
+
+The key result is that Notebook `46` broad candidate-pool recall is `88/90`, while final top-1 is only `73/90`. The old candidate-pool idea is therefore still alive; the main bottleneck is resolver discrimination. The selected no-API repair is a DDXPlus high-confidence MLP guard, which improves to `75/90` with two wins and zero regressions, but the candidate-pool oracle shows the next final live notebook needs a stronger candidate-pool adjudicator.
+
+Notebook `48` is the follow-up candidate-pool adjudicator lab:
+
+- `notebooks/48_meddx_candidate_pool_adjudicator_lab.ipynb`
+- `scripts/meddx_candidate_pool_adjudicator_lab_nb48.py`
+- `reports/algorithmic_ledger/meddx_candidate_pool_adjudicator_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_adjudicator_lab_v1/`
+
+It adds candidate-level features from final/LLM ranks, branch ranks, casebase priors, RareBench graph scores, DDXPlus MLP fields, and train-derived DDXPlus graph replay. The selected label-free conservative pool educator remains safe but modest at `75/90`. A case-blocked learned educator reaches `77/90` with zero regressions, while label-fit learned educators reach up to `86/90` against the `88/90` candidate-pool oracle. This means the broad pool contains useful resolver signal, but the learned universal adjudicator needs a separate calibration/held-out confirmation before it can become a final claim.
+
+Notebook `49` turns that into a calibrated learned resolver:
+
+- `notebooks/49_meddx_calibrated_candidate_pool_resolver.ipynb`
+- `scripts/meddx_calibrated_candidate_pool_resolver_nb49.py`
+- `reports/algorithmic_ledger/meddx_calibrated_candidate_pool_resolver_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_calibrated_candidate_pool_resolver_v1/`
+
+It trains one L2 logistic candidate scorer across all three datasets and evaluates it case-blocked by patient/case. The selected resolver improves Notebook `46` from `73/90` to `78/90` with five wins and zero regressions; the stricter nested threshold diagnostic reaches `77/90`. This is now the strongest offline MEDDx resolver calibration candidate, but it still needs a fresh held-out/live run before being treated as final performance.
+
+Notebook `50` then tested whether the remaining failures were caused by weak candidate signals rather than only resolver capacity:
+
+- `notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb`
+- `scripts/meddx_candidate_signal_augmentation_lab_nb50.py`
+- `reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_signal_augmentation_lab_v1/`
+
+It adds DDXPlus exact-outcome Bayes support, RareBench HPO reference overlap, iCraft-MD text-exemplar support, and generic visible-text/candidate-label overlap. The selected augmented resolver is not promoted: it reaches `77/90` top-1, below Notebook `49`, although it improves top-3/top-5 to `83/90`. The label-fit augmented logistic diagnostic reaches `85/90`, close to the `88/90` oracle, so the new finding is that the signal exists but is too data-limited to learn robustly from only `30` case groups.
+
+Notebook `51` is the next live-run scaffold:
+
+- `notebooks/51_meddx_scale_hypothesis_branching_confirmation.ipynb`
+- `scripts/meddx_scale_hypothesis_branching_confirmation_nb51.py`
+- `reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_scale_hypothesis_branching_confirmation_dryrun_smoke_v1_meddx100/`
+
+It freezes the current dataset-native MEDDx architecture and scales the live run to the original MEDDx-style shape: `100` cases per dataset, budgets `[5, 10, 15]`, and `900` budgeted workups. Sampling follows the MEDDxAgent driver pattern: shuffle patients with seed `42`, then take the first `N`. It keeps hypothesis branching and candidate-pool resolver exports, but does not train a new offline optimizer inside the live notebook. The no-API smoke passed and confirmed the artifact contract. After the live run, use its artifacts to train/calibrate the next resolver, then apply that frozen layer back to the old `90`-workup Notebook `46` artifact as a cross-cohort transfer test.
 
 ## Current Practical Recommendation
 
@@ -737,6 +834,12 @@ For the next clean experiment:
 - treat notebook `41` as the final prepared live confirmation runner: 100 held-out cases, no close-confounder extra-root rescue layer, base cap `24`, branch cap `8`, hard total cap `24`, max `2` branches, restored top-3/top-5 reporting, and no-API dry-run smoke verification complete
 - treat notebook `42` as the first universal MEDDx-style harness: `v4` diagnosed candidate/simulator failures, `v5_pilot3` diagnosed remaining early-narrowing and large-candidate resolver failures, and the active `v6_pilot3` config should be run before restoring the full `49` selected-case `v6` run
 - treat notebook `43` as the preferred next MEDDxAgent-style live pilot: it supersedes Notebook `42` for method comparison by separating history-taking and diagnosis and adding dynamic similar-case examples
+- treat notebook `46` as the next MEDDxAgent-style pilot candidate: it supersedes Notebook `45` by restoring DDXPlus native structured evidence roots while keeping one shared budget/evaluation harness across DDXPlus, iCraft-MD, and RareBench
+- treat notebook `47` as the current MEDDx repair analysis: it shows Notebook `46` already generates the correct candidate in `88/90` workups, so the next method should focus on candidate-pool adjudication plus DDXPlus high-confidence MLP protection rather than another broad live run
+- treat notebook `48` as the current MEDDx candidate-pool adjudicator analysis: the selected label-free educator reaches `75/90`, case-blocked learned adjudication reaches `77/90`, and label-fit diagnostic adjudication reaches `86/90`, showing real resolver headroom but not yet a deployable universal learned resolver
+- treat notebook `49` as the strongest current MEDDx resolver calibration candidate: a system-wide logistic candidate-pool resolver reaches `78/90` case-blocked with zero regressions, while a stricter nested threshold stress test reaches `77/90`; freeze and prospectively confirm before making a final universal claim
+- treat notebook `50` as the MEDDx candidate-signal audit: augmented signals improve top-3/top-5 to `83/90` and label-fit top-1 to `85/90`, but the case-blocked top-1 falls to `77/90`, so Notebook `49` remains the stronger top-1 candidate
+- treat notebook `51` as the MEDDx-scale live confirmation runner: `100` cases per dataset, budgets `[5, 10, 15]`, all three datasets enabled, hypothesis branching preserved, and no-API smoke complete
 - use notebook `25` if collecting more live base trajectories; it runs rescue-disabled base replicates for the branching/divergence lab
 - still present notebook `13` as the live evidence-acquisition backbone; present Notebook `23` as an offline enhancement candidate rather than a live-confirmed replacement
 - if improving the method after Notebook `41`, analyze the held-out 100-case artifacts before adding any new controller; the intended next comparison is a capped-cost MEDDxAgent-style evidence-budget table, not another retrospective calibration layer

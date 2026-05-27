@@ -1,0 +1,20 @@
+{
+  "run_name": "meddx_calibrated_candidate_pool_resolver_v1",
+  "input_run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "adjudicator_run_name": "meddx_candidate_pool_adjudicator_lab_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_calibrated_candidate_pool_resolver_v1",
+  "live_api_used": false,
+  "model": {
+    "family": "L2-regularized logistic regression",
+    "C": 1.0,
+    "class_weight": "balanced",
+    "candidate_probability": "raw predict_proba normalized within each workup candidate pool"
+  },
+  "selected_threshold": {
+    "min_probability_margin_vs_current": 0.0,
+    "min_top_probability": 0.0,
+    "min_independent_signal_delta_vs_current": -1.0,
+    "min_source_weighted_delta_vs_current": -999.0
+  },
+  "case_blocking": "case_group = dataset_name|case_id; all budgets for the same case are held out together"
+}

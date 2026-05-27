@@ -1,0 +1,91 @@
+workup_id,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct,truth_in_pool,truth_best_signal_rank,augmented_weighted_top_label,augmented_weighted_top_is_truth,candidate_pool_size,truth_final_rank,truth_llm_rank,truth_mlp_rank,truth_candidate_resolver_rank,truth_ddxplus_graph_rank,truth_ddxplus_bayes_rank,truth_rarebench_hpo_max_idf_fraction_rank_within_pool,truth_rarebench_hpo_max_jaccard_rank_within_pool,truth_icraft_tfidf_max_similarity_rank_within_pool
+ddxplus|test:100196|10,ddxplus,test:100196,10,Pancreatic neoplasm,Pancreatic neoplasm,True,True,1,Pancreatic neoplasm,True,13,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:100196|15,ddxplus,test:100196,15,Pancreatic neoplasm,Pancreatic neoplasm,True,True,1,Pancreatic neoplasm,True,19,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:100196|5,ddxplus,test:100196,5,Pancreatic neoplasm,Acute laryngitis,False,True,1,Acute laryngitis,False,13,99.0,2.0,2.0,99.0,4.0,2.0,1.0,1.0,1.0
+ddxplus|test:119540|10,ddxplus,test:119540,10,Viral pharyngitis,Viral pharyngitis,True,True,1,Viral pharyngitis,True,14,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:119540|15,ddxplus,test:119540,15,Viral pharyngitis,Viral pharyngitis,True,True,1,Viral pharyngitis,True,21,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:119540|5,ddxplus,test:119540,5,Viral pharyngitis,Viral pharyngitis,True,True,1,Viral pharyngitis,True,18,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:122530|10,ddxplus,test:122530,10,URTI,Bronchitis,False,True,1,URTI,True,23,3.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:122530|15,ddxplus,test:122530,15,URTI,Bronchitis,False,True,1,Bronchitis,False,22,3.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:122530|5,ddxplus,test:122530,5,URTI,URTI,True,True,1,URTI,True,14,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:124172|10,ddxplus,test:124172,10,Bronchiectasis,Bronchiectasis,True,True,1,Bronchiectasis,True,16,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:124172|15,ddxplus,test:124172,15,Bronchiectasis,Bronchiectasis,True,True,1,Bronchiectasis,True,16,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:124172|5,ddxplus,test:124172,5,Bronchiectasis,Bronchiectasis,True,True,1,Bronchiectasis,True,16,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:126130|10,ddxplus,test:126130,10,Bronchitis,Bronchitis,True,True,1,Bronchitis,True,16,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:126130|15,ddxplus,test:126130,15,Bronchitis,Bronchitis,True,True,1,Bronchitis,True,17,1.0,1.0,1.0,1.0,3.0,4.0,1.0,1.0,1.0
+ddxplus|test:126130|5,ddxplus,test:126130,5,Bronchitis,Pneumonia,False,True,1,Pneumonia,False,17,99.0,3.0,3.0,99.0,9.0,5.0,1.0,1.0,1.0
+ddxplus|test:127667|10,ddxplus,test:127667,10,Acute otitis media,Tuberculosis,False,True,1,Tuberculosis,False,16,99.0,2.0,2.0,99.0,2.0,1.0,1.0,1.0,1.0
+ddxplus|test:127667|15,ddxplus,test:127667,15,Acute otitis media,Acute otitis media,True,True,1,Acute otitis media,True,12,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:127667|5,ddxplus,test:127667,5,Acute otitis media,Pericarditis,False,True,1,Pericarditis,False,18,99.0,3.0,3.0,99.0,6.0,4.0,1.0,1.0,1.0
+ddxplus|test:51518|10,ddxplus,test:51518,10,Acute pulmonary edema,Acute pulmonary edema,True,True,1,Acute pulmonary edema,True,16,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:51518|15,ddxplus,test:51518,15,Acute pulmonary edema,Acute pulmonary edema,True,True,1,Acute pulmonary edema,True,15,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:51518|5,ddxplus,test:51518,5,Acute pulmonary edema,Acute pulmonary edema,True,True,1,Acute pulmonary edema,True,15,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:51945|10,ddxplus,test:51945,10,URTI,Anemia,False,True,1,Anemia,False,18,99.0,10.0,99.0,99.0,19.0,10.0,1.0,1.0,1.0
+ddxplus|test:51945|15,ddxplus,test:51945,15,URTI,Panic attack,False,False,99,Panic attack,False,17,,,,,,,,,
+ddxplus|test:51945|5,ddxplus,test:51945,5,URTI,Pneumonia,False,True,1,Pneumonia,False,18,8.0,99.0,99.0,8.0,29.0,19.0,1.0,1.0,1.0
+ddxplus|test:56012|10,ddxplus,test:56012,10,Localized edema,Localized edema,True,True,1,Localized edema,True,23,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:56012|15,ddxplus,test:56012,15,Localized edema,Localized edema,True,True,1,Localized edema,True,22,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:56012|5,ddxplus,test:56012,5,Localized edema,Localized edema,True,True,1,Localized edema,True,17,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:89931|10,ddxplus,test:89931,10,Pneumonia,Pneumonia,True,True,1,Pneumonia,True,15,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:89931|15,ddxplus,test:89931,15,Pneumonia,Pneumonia,True,True,1,Pneumonia,True,14,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:89931|5,ddxplus,test:89931,5,Pneumonia,Pneumonia,True,True,1,Pneumonia,True,14,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+icraft_md|icraft_md:109|10,icraft_md,icraft_md:109,10,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,1,Acrodermatitis enteropathica,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:109|15,icraft_md,icraft_md:109,15,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,1,Acrodermatitis enteropathica,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:109|5,icraft_md,icraft_md:109,5,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,1,Acrodermatitis enteropathica,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:111|10,icraft_md,icraft_md:111,10,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,1,Pyoderma grangrenosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:111|15,icraft_md,icraft_md:111,15,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,1,Pyoderma grangrenosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:111|5,icraft_md,icraft_md:111,5,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,1,Pyoderma grangrenosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:113|10,icraft_md,icraft_md:113,10,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,1,Mycoplasma pneumoniae-induced rash and mucositis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:113|15,icraft_md,icraft_md:113,15,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,1,Mycoplasma pneumoniae-induced rash and mucositis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:113|5,icraft_md,icraft_md:113,5,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,1,Mycoplasma pneumoniae-induced rash and mucositis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+icraft_md|icraft_md:135|10,icraft_md,icraft_md:135,10,Molluscum contagiosum,Molluscum contagiosum,True,True,1,Molluscum contagiosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:135|15,icraft_md,icraft_md:135,15,Molluscum contagiosum,Molluscum contagiosum,True,True,1,Molluscum contagiosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:135|5,icraft_md,icraft_md:135,5,Molluscum contagiosum,Molluscum contagiosum,True,True,1,Molluscum contagiosum,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:14|10,icraft_md,icraft_md:14,10,EBS-Dowling Meara,EBS-Dowling Meara,True,True,1,EBS-Dowling Meara,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:14|15,icraft_md,icraft_md:14,15,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,1,Severe recessive dystrophic EB,False,4,2.0,2.0,99.0,2.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:14|5,icraft_md,icraft_md:14,5,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,1,Severe recessive dystrophic EB,False,4,2.0,2.0,99.0,2.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:18|10,icraft_md,icraft_md:18,10,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,1,Anetoderma associated with SLE,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:18|15,icraft_md,icraft_md:18,15,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,1,Anetoderma associated with SLE,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:18|5,icraft_md,icraft_md:18,5,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,1,Anetoderma associated with SLE,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:38|10,icraft_md,icraft_md:38,10,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,1,Toxicodendron dermatitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:38|15,icraft_md,icraft_md:38,15,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,1,Toxicodendron dermatitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:38|5,icraft_md,icraft_md:38,5,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,1,Toxicodendron dermatitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:55|10,icraft_md,icraft_md:55,10,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:55|15,icraft_md,icraft_md:55,15,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:55|5,icraft_md,icraft_md:55,5,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:78|10,icraft_md,icraft_md:78,10,Urticarial vasculitis,Urticarial vasculitis,True,True,1,Urticarial vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:78|15,icraft_md,icraft_md:78,15,Urticarial vasculitis,Urticarial vasculitis,True,True,1,Urticarial vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:78|5,icraft_md,icraft_md:78,5,Urticarial vasculitis,Urticarial vasculitis,True,True,1,Urticarial vasculitis,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:81|10,icraft_md,icraft_md:81,10,Alopecia areata,Alopecia areata,True,True,1,Alopecia areata,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:81|15,icraft_md,icraft_md:81,15,Alopecia areata,Alopecia areata,True,True,1,Alopecia areata,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:81|5,icraft_md,icraft_md:81,5,Alopecia areata,Alopecia areata,True,True,1,Alopecia areata,True,4,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,2.0
+rarebench|rarebench:LIRICAL:289|10,rarebench,rarebench:LIRICAL:289,10,Cockayne syndrome,Cockayne syndrome,True,True,1,Cockayne syndrome,True,10,1.0,3.0,99.0,1.0,99.0,99.0,3.0,1.0,1.0
+rarebench|rarebench:LIRICAL:289|15,rarebench,rarebench:LIRICAL:289,15,Cockayne syndrome,Cockayne syndrome,True,True,1,Cockayne syndrome,True,11,1.0,3.0,99.0,1.0,99.0,99.0,3.0,1.0,1.0
+rarebench|rarebench:LIRICAL:289|5,rarebench,rarebench:LIRICAL:289,5,Cockayne syndrome,Cockayne syndrome,True,True,1,Cockayne syndrome,True,12,1.0,1.0,99.0,1.0,99.0,99.0,3.0,1.0,1.0
+rarebench|rarebench:LIRICAL:365|10,rarebench,rarebench:LIRICAL:365,10,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,1,TBCK-related intellectual disability syndrome,True,12,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:LIRICAL:365|15,rarebench,rarebench:LIRICAL:365,15,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,1,TBCK-related intellectual disability syndrome,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:LIRICAL:365|5,rarebench,rarebench:LIRICAL:365,5,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,1,TBCK-related intellectual disability syndrome,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:MME:21|10,rarebench,rarebench:MME:21,10,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,99,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,11,,,,,,,,,
+rarebench|rarebench:MME:21|15,rarebench,rarebench:MME:21,15,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,True,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,12,99.0,10.0,99.0,99.0,99.0,99.0,9.0,9.0,1.0
+rarebench|rarebench:MME:21|5,rarebench,rarebench:MME:21,5,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,True,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,12,99.0,10.0,99.0,99.0,99.0,99.0,9.0,9.0,1.0
+rarebench|rarebench:RAMEDIS:30|10,rarebench,rarebench:RAMEDIS:30,10,Biotinidase deficiency,Biotinidase deficiency,True,True,1,Biotinidase deficiency,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:30|15,rarebench,rarebench:RAMEDIS:30,15,Biotinidase deficiency,Biotinidase deficiency,True,True,1,Biotinidase deficiency,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:30|5,rarebench,rarebench:RAMEDIS:30,5,Biotinidase deficiency,Biotinidase deficiency,True,True,1,Biotinidase deficiency,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:369|10,rarebench,rarebench:RAMEDIS:369,10,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,14,6.0,2.0,99.0,6.0,99.0,99.0,8.0,8.0,1.0
+rarebench|rarebench:RAMEDIS:369|15,rarebench,rarebench:RAMEDIS:369,15,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,13,6.0,2.0,99.0,6.0,99.0,99.0,8.0,8.0,1.0
+rarebench|rarebench:RAMEDIS:369|5,rarebench,rarebench:RAMEDIS:369,5,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,11,7.0,10.0,99.0,7.0,99.0,99.0,8.0,8.0,1.0
+rarebench|rarebench:RAMEDIS:459|10,rarebench,rarebench:RAMEDIS:459,10,Tyrosinemia type 1,Tyrosinemia type 1,True,True,1,Tyrosinemia type 1,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:459|15,rarebench,rarebench:RAMEDIS:459,15,Tyrosinemia type 1,Tyrosinemia type 1,True,True,1,Tyrosinemia type 1,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:459|5,rarebench,rarebench:RAMEDIS:459,5,Tyrosinemia type 1,Tyrosinemia type 1,True,True,1,Tyrosinemia type 1,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:482|10,rarebench,rarebench:RAMEDIS:482,10,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,11,1.0,1.0,99.0,1.0,99.0,99.0,5.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:482|15,rarebench,rarebench:RAMEDIS:482,15,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,11,1.0,1.0,99.0,1.0,99.0,99.0,5.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:482|5,rarebench,rarebench:RAMEDIS:482,5,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,11,1.0,1.0,99.0,1.0,99.0,99.0,5.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:589|10,rarebench,rarebench:RAMEDIS:589,10,Glutaric acidemia type I,Glutaric acidemia type I,True,True,1,Glutaric acidemia type I,True,12,1.0,1.0,99.0,1.0,99.0,99.0,1.0,2.0,1.0
+rarebench|rarebench:RAMEDIS:589|15,rarebench,rarebench:RAMEDIS:589,15,Glutaric acidemia type I,Glutaric acidemia type I,True,True,1,Glutaric acidemia type I,True,12,1.0,1.0,99.0,1.0,99.0,99.0,1.0,2.0,1.0
+rarebench|rarebench:RAMEDIS:589|5,rarebench,rarebench:RAMEDIS:589,5,Glutaric acidemia type I,Glutaric acidemia type I,True,True,1,Glutaric acidemia type I,True,12,1.0,1.0,99.0,1.0,99.0,99.0,1.0,2.0,1.0
+rarebench|rarebench:RAMEDIS:598|10,rarebench,rarebench:RAMEDIS:598,10,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:598|15,rarebench,rarebench:RAMEDIS:598,15,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:598|5,rarebench,rarebench:RAMEDIS:598,5,Phenylketonuria,Phenylketonuria,True,True,1,Phenylketonuria,True,10,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:608|10,rarebench,rarebench:RAMEDIS:608,10,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,1,Medium chain acyl-CoA dehydrogenase deficiency,True,12,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:608|15,rarebench,rarebench:RAMEDIS:608,15,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,1,Medium chain acyl-CoA dehydrogenase deficiency,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0
+rarebench|rarebench:RAMEDIS:608|5,rarebench,rarebench:RAMEDIS:608,5,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,1,Medium chain acyl-CoA dehydrogenase deficiency,True,11,1.0,1.0,99.0,1.0,99.0,99.0,1.0,1.0,1.0

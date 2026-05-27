@@ -2406,3 +2406,135 @@ Notebook `45` has been patched for `v1_pilot4`:
 No-API smoke passed under:
 
 `artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
+
+## Notebook 46 MEDDx-Aligned Dataset-Native Driver
+
+Notebook `46` supersedes Notebook `45` as the next MEDDxAgent-style pilot candidate.
+
+- `notebooks/46_meddx_aligned_dataset_native_driver.ipynb`
+- `scripts/meddx_aligned_dataset_native_driver_nb46.py`
+- `reports/algorithmic_ledger/meddx_aligned_dataset_native_driver_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_aligned_dataset_native_driver_dryrun_smoke_v1_pilot1/`
+
+The key correction is that "unified" now means one shared driver/evaluation shell, not one identical evidence representation. DDXPlus uses its native structured evidence roots, iCraft-MD uses the MEDDx-style profile Q/A adapter, and RareBench uses phenotype graph support.
+
+DDXPlus-specific changes:
+
+- legal evidence-root ID acquisition rather than generic profile questions
+- exact present/absent root reveal from the DDXPlus row
+- train/validate-derived root utility based on pairwise separation over current MLP top candidates
+- child roots are selectable only after their parent root has been revealed present
+- the partial-evidence MLP remains the monitor/stop signal
+- optional hypothesis branching remains available under unused MEDDx budget
+
+Dry-run smoke result, not a live performance claim:
+
+| Dataset | Case | Architecture mode | Top-1 | Top-3 | Top-5 | Questions |
+|---|---|---|---:|---:|---:|---:|
+| DDXPlus | `test:18312` | `ddxplus_native_structured_root_driver` | 1 | 1 | 1 | 5 |
+| iCraft-MD | `icraft_md:55` | `profile_adapter_branching_resolver` | 0 | 0 | 1 | 5 |
+| RareBench | `rarebench:LIRICAL:289` | `profile_adapter_branching_resolver` | 1 | 1 | 1 | 5 |
+
+Verification passed:
+
+- script compile
+- Notebook `46` code-cell static parse
+- no-API execution
+- all adapters loaded
+- DDXPlus MLP loaded
+- DDXPlus root stats built from `30,000` validate cases
+- artifact contract
+
+Follow-up live `v1_pilot1`:
+
+- completed one case per dataset across budgets `[5, 10, 15]`
+- overall `9/9` top-1, `9/9` top-3, `9/9` top-5
+- mean questions `6.00`
+- budget `5`: `3/3`, mean questions `4.00`
+- budget `10`: `3/3`, mean questions `6.67`
+- budget `15`: `3/3`, mean questions `7.33`
+- DDXPlus `Influenza`, iCraft-MD `Levamisole-induced antineutrophil cytoplasmic antibody vasculitis`, and RareBench `Cockayne syndrome` were all correct at all budgets
+
+This is the strongest MEDDx-style wiring pilot so far, but it is still one case per dataset. The active Notebook `46` config is now `RUN_VERSION_SUFFIX = "v1_eval30"` and `LIVE_TOTAL_MAX_CASES = 30`, for `90` intended workups across the same budgets.
+
+Follow-up live `v1_eval30` completed those `90` workups:
+
+| Slice | Top-1 | Top-3 | Top-5 | Mean questions |
+|---|---:|---:|---:|---:|
+| Overall | 73/90 | 77/90 | 77/90 | 6.08 |
+| DDXPlus | 21/30 | 23/30 | 23/30 | 8.47 |
+| iCraft-MD | 28/30 | 30/30 | 30/30 | 4.63 |
+| RareBench | 24/30 | 24/30 | 24/30 | 5.13 |
+
+Notebook `47` then analyzed the artifacts offline. It found broad candidate-pool recall of `88/90`, meaning the old candidate-pool architecture is still generating the right answer most of the time. The selected deployable repair is a DDXPlus high-confidence MLP guard:
+
+```text
+if dataset == DDXPlus
+and MLP confidence >= 0.70
+and MLP margin >= 0.20
+then protect MLP top-1 as final.
+```
+
+This improves the saved Notebook `46` artifacts from `73/90` to `75/90` with zero regressions. The candidate-pool oracle reaches `88/90`, so the next live method should focus on candidate-pool adjudication rather than simply asking more questions.
+
+Notebook `48` adds that candidate-pool adjudicator analysis without spending API. It builds candidate-level educator features from final/LLM ranks, branch ranks, casebase priors, RareBench graph scores, DDXPlus MLP fields, and train-derived DDXPlus graph replay. The selected label-free conservative educator stays at `75/90` with zero regressions. A case-blocked learned HGB educator reaches `77/90` with zero regressions, while label-fit learned educators reach up to `86/90` against the `88/90` pool oracle. The result is a useful boundary: the current artifacts contain resolver signal, but a learned universal candidate-pool resolver needs a separate calibration/held-out confirmation before it can be promoted.
+
+Notebook `49` is the stronger calibrated resolver step. It trains one system-wide L2 logistic candidate scorer across DDXPlus, iCraft-MD, and RareBench using the Notebook `48` candidate features. Under case-blocked out-of-fold evaluation, it improves Notebook `46` from `73/90` to `78/90`, with top-3 `80/90`, top-5 `81/90`, five wins, and zero regressions. A stricter nested threshold stress test reaches `77/90` with zero regressions. This is the best current offline MEDDx resolver calibration candidate, but it should still be prospectively confirmed before making a final universal performance claim.
+
+## Notebook 50 MEDDx Candidate-Signal Augmentation Lab
+
+Notebook `50` tests whether the remaining Notebook `49` failures are caused by weak candidate evidence signals, not merely by resolver model capacity.
+
+- `notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb`
+- `scripts/meddx_candidate_signal_augmentation_lab_nb50.py`
+- `reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_signal_augmentation_lab_v1/`
+
+It keeps the Notebook `46` live traces frozen and adds:
+
+- DDXPlus exact-outcome train-derived Naive Bayes support over visible evidence roots
+- RareBench leave-one-case-out HPO phenotype reference overlap
+- iCraft-MD leave-one-case-out vignette/exemplar TF-IDF support
+- generic visible-text/candidate-label overlap
+
+| Policy | Top-1 | Top-3 | Top-5 | Wins | Regressions |
+|---|---:|---:|---:|---:|---:|
+| Notebook 46 current | 73/90 | 77/90 | 77/90 | 0 | 0 |
+| Notebook 49 calibrated logistic resolver | 78/90 | 80/90 | 81/90 | 5 | 0 |
+| Notebook 50 selected augmented resolver | 77/90 | 83/90 | 83/90 | 4 | 0 |
+| Notebook 50 label-fit augmented logistic diagnostic | 85/90 | 88/90 | 88/90 | 12 | 0 |
+| Candidate-pool oracle | 88/90 | 88/90 | 88/90 | 15 | 0 |
+
+Notebook `50` is not promoted over Notebook `49` because its case-blocked top-1 is lower. Its main contribution is diagnostic: it improves differential ranking and shows the augmented signal set can nearly fit the oracle under label-fit conditions, but cannot generalize safely from only `30` unique case groups. This points to calibration-data scarcity and candidate-signal quality as the remaining multi-dataset bottleneck.
+
+## Notebook 51 MEDDx-Scale Hypothesis-Branching Confirmation
+
+Notebook `51` is the next frozen live-run scaffold, not an offline optimizer.
+
+- `notebooks/51_meddx_scale_hypothesis_branching_confirmation.ipynb`
+- `scripts/meddx_scale_hypothesis_branching_confirmation_nb51.py`
+- `reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_scale_hypothesis_branching_confirmation_dryrun_smoke_v1_meddx100/`
+- intended live artifact root: `artifacts/universal_meddx/meddx_scale_hypothesis_branching_confirmation_v1_meddx100/`
+
+Live design:
+
+| Dataset | Unique cases | Budgets | Workups |
+|---|---:|---|---:|
+| DDXPlus | 100 | 5, 10, 15 | 300 |
+| iCraft-MD | 100 | 5, 10, 15 | 300 |
+| RareBench | 100 | 5, 10, 15 | 300 |
+| Total | 300 | 5, 10, 15 | 900 |
+
+Notebook `51` preserves the Notebook `46` dataset-native architecture: DDXPlus structured evidence-root acquisition with the partial-evidence MLP monitor, iCraft-MD profile Q/A, RareBench phenotype graph support, hypothesis branching under the active budget, candidate-pool resolver score export, and top-1/top-3/top-5 reporting.
+
+Sampling is aligned with the bundled MEDDxAgent driver: shuffle patients with seed `42`, then take the first `100` cases per dataset.
+
+No-API smoke verification completed successfully:
+
+- loaded one case from each enabled dataset
+- ran all three budgets for `9` dry-run workups
+- wrote `resolved_run_config.json`, `predictions.csv`, `candidate_level_resolver_scores.csv`, branch artifacts, metrics, and figures
+- confirmed `live_cases_per_dataset = 100` and active budgets `[5, 10, 15]` in the artifact config
+
+This notebook is designed to create the large live calibration corpus. After it runs, the next stage is to train/calibrate a frozen offline resolver from those artifacts and test transfer back to the older Notebook `46` `90`-workup batch.

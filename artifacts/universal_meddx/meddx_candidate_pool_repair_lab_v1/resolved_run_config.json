@@ -1,0 +1,28 @@
+{
+  "run_name": "meddx_candidate_pool_repair_lab_v1",
+  "input_run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "input_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_aligned_dataset_native_driver_v1_eval30",
+  "offline_only": true,
+  "api_calls": 0,
+  "policies_evaluated": [
+    "notebook46_current",
+    "ddxplus_high_conf_mlp_guard_v1",
+    "ddxplus_all_mlp_top1_diagnostic",
+    "current_top5_oracle_diagnostic",
+    "candidate_pool_oracle_diagnostic"
+  ],
+  "selected_policy": "ddxplus_high_conf_mlp_guard_v1",
+  "ddxplus_mlp_guard_confidence_min": 0.7,
+  "ddxplus_mlp_guard_margin_min": 0.2,
+  "required_outputs": [
+    "resolved_run_config.json",
+    "candidate_pool_coverage.csv",
+    "candidate_pool_summary.csv",
+    "candidate_pool_long.csv",
+    "case_level_policy_results.csv",
+    "policy_variant_summary.csv",
+    "failure_taxonomy.csv",
+    "failure_taxonomy_summary.csv",
+    "selected_repair_policy.json"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "selected_policy_name": "ddxplus_high_conf_mlp_guard_v1",
+  "status": "offline_candidate_for_next_live_notebook",
+  "label_use_note": "Ground-truth labels are used for evaluation only. The selected rule uses only dataset name, DDXPlus MLP confidence, and DDXPlus MLP margin.",
+  "input_run": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "input_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_aligned_dataset_native_driver_v1_eval30",
+  "policy_rule": {
+    "if": "dataset_name == 'ddxplus' and ddxplus_mlp_available and ddxplus_mlp_confidence >= threshold and ddxplus_mlp_margin >= threshold",
+    "then": "protect the DDXPlus MLP top-1 as the final top-1 and move it to rank 1",
+    "else": "keep Notebook 46 final prediction",
+    "confidence_threshold": 0.7,
+    "margin_threshold": 0.2
+  },
+  "current_overall": {
+    "policy_name": "notebook46_current",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8111111111111111,
+    "top3": 0.8555555555555555,
+    "top5": 0.8555555555555555,
+    "wins_vs_current": 0,
+    "regressions_vs_current": 0,
+    "changed_predictions": 0
+  },
+  "selected_overall": {
+    "policy_name": "ddxplus_high_conf_mlp_guard_v1",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8333333333333334,
+    "top3": 0.8555555555555555,
+    "top5": 0.8555555555555555,
+    "wins_vs_current": 2,
+    "regressions_vs_current": 0,
+    "changed_predictions": 2
+  },
+  "candidate_pool_oracle_overall": {
+    "policy_name": "candidate_pool_oracle_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.9777777777777777,
+    "top3": 0.9777777777777777,
+    "top5": 0.9777777777777777,
+    "wins_vs_current": 15,
+    "regressions_vs_current": 0,
+    "changed_predictions": 15
+  },
+  "candidate_pool_recall": {
+    "overall": 0.9777777777777777,
+    "hits": 88,
+    "num_workups": 90
+  },
+  "interpretation": [
+    "Notebook 46 already has a strong broad candidate pool: 88/90 workups contain the true diagnosis.",
+    "The selected no-API repair fixes high-confidence DDXPlus MLP regressions but cannot fully solve the run.",
+    "The remaining gap is resolver discrimination over a mostly-correct candidate pool, not simply a need for more evidence.",
+    "A final live notebook should add this DDXPlus guard plus a budget-aware candidate-pool adjudicator for flagged non-guarded cases."
+  ]
+}

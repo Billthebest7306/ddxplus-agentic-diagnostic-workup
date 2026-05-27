@@ -1,0 +1,19 @@
+{
+  "run_name": "meddx_candidate_signal_augmentation_lab_v1",
+  "input_run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "base_feature_run_name": "meddx_candidate_pool_adjudicator_lab_v1",
+  "calibrated_reference_run_name": "meddx_calibrated_candidate_pool_resolver_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_candidate_signal_augmentation_lab_v1",
+  "live_api_used": false,
+  "selected_policy": "calibrated_augmented_signal_resolver_v1",
+  "selected_threshold": {
+    "min_score_margin_vs_current": 0.05,
+    "min_top_score": 0.0,
+    "min_augmented_signal_delta_vs_current": -1.0,
+    "min_augmented_weighted_delta_vs_current": -999.0
+  },
+  "model_family": "L2-regularized logistic regression over augmented candidate-level signals",
+  "hgb_diagnostic_run": false,
+  "strict_nested_diagnostic_run": false,
+  "case_blocking": "dataset_name|case_id; all budgets for a held-out case are predicted by models trained without that case"
+}

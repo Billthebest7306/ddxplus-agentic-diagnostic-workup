@@ -6060,3 +6060,326 @@ Follow-up live `v1_pilot3` diagnosis and patch:
   - `python3 -m py_compile scripts/universal_branching_resolver_meddx_driver_nb45.py` passed
   - Notebook `45` code cells parsed with `ast.parse`
   - no-API smoke passed under `artifacts/universal_meddx/universal_branching_resolver_meddx_driver_dryrun_smoke_v1_pilot4/`
+
+## 94. Notebook 46 MEDDx-Aligned Dataset-Native Driver
+
+Added Notebook `46` as the successor to Notebook `45` for the MEDDxAgent-style multi-dataset phase.
+
+- notebook: `notebooks/46_meddx_aligned_dataset_native_driver.ipynb`
+- script mirror: `scripts/meddx_aligned_dataset_native_driver_nb46.py`
+- report: `reports/algorithmic_ledger/meddx_aligned_dataset_native_driver_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_aligned_dataset_native_driver_dryrun_smoke_v1_pilot1/`
+
+Purpose:
+
+Notebook `45` over-universalized the system by pushing DDXPlus through the same natural-language profile simulator used for iCraft-MD/RareBench. MEDDxAgent is better understood as a shared benchmark driver with dataset-specific adapters. Notebook `46` follows that pattern:
+
+```text
+shared MEDDx budget/evaluation loop
+  -> DDXPlus native structured evidence-root driver
+  -> iCraft-MD profile Q/A driver
+  -> RareBench phenotype graph driver
+```
+
+Key implementation details:
+
+- keeps budgets `[5, 10, 15]`, shared top-1/top-3/top-5 metrics, and common artifact contract
+- routes DDXPlus cases to `ddxplus_native_structured_root_driver`
+- DDXPlus base evidence acquisition now asks legal evidence-root IDs rather than generic profile questions
+- DDXPlus row reveal is exact present/absent root state
+- DDXPlus root utility is train/validate-derived pairwise candidate separation over the current partial-evidence MLP top candidates
+- DDXPlus child roots are legal only when their parent root has already been revealed present
+- DDXPlus partial-evidence MLP remains the stop/monitor signal
+- iCraft-MD and RareBench continue through the profile/phenotype MEDDx-style path
+- RareBench keeps the conservative graph/discriminator gate from Notebook `45`
+
+Dry-run verification:
+
+- `python3 -m py_compile scripts/meddx_aligned_dataset_native_driver_nb46.py` passed
+- all Notebook `46` code cells parsed with `ast.parse`
+- no-API smoke executed successfully
+- all three adapters loaded
+- DDXPlus MLP monitor loaded
+- DDXPlus native root stats built from `30,000` validate cases
+- artifact contract passed
+
+Dry-run smoke result, not a live performance claim:
+
+| Dataset | Case | Architecture mode | Top-1 | Top-3 | Top-5 | Questions |
+|---|---|---|---:|---:|---:|---:|
+| DDXPlus | `test:18312` | `ddxplus_native_structured_root_driver` | 1 | 1 | 1 | 5 |
+| iCraft-MD | `icraft_md:55` | `profile_adapter_branching_resolver` | 0 | 0 | 1 | 5 |
+| RareBench | `rarebench:LIRICAL:289` | `profile_adapter_branching_resolver` | 1 | 1 | 1 | 5 |
+
+Interpretation:
+
+Notebook `46` should supersede Notebook `45` for the next small live pilot. The important correction is conceptual: the multi-dataset system is unified at the driver/evaluation layer, while evidence acquisition is dataset-native. This matches MEDDxAgent more closely and avoids corrupting DDXPlus by approximating structured evidence roots with prose retrieval.
+
+Follow-up live `v1_pilot1` result:
+
+- live `v1_pilot1` completed one case per dataset across budgets `[5, 10, 15]`, for `9` workups
+- overall result: `9/9` top-1, `9/9` top-3, `9/9` top-5
+- mean questions: `6.00`
+- budget `5`: `3/3`, mean questions `4.00`
+- budget `10`: `3/3`, mean questions `6.67`
+- budget `15`: `3/3`, mean questions `7.33`
+- DDXPlus `test:18312` true `Influenza` was correct at all budgets under the native structured-root driver
+- iCraft-MD `icraft_md:55` true `Levamisole-induced antineutrophil cytoplasmic antibody vasculitis` was correct at all budgets
+- RareBench `rarebench:LIRICAL:289` true `Cockayne syndrome` was correct at all budgets, with graph support agreeing rather than regressing
+- interpretation: this is a very strong wiring/behavior pilot but still only one case per dataset, so it should trigger a scaled evaluation rather than a headline claim
+
+Scaled-run config:
+
+- active suffix changed to `RUN_VERSION_SUFFIX = "v1_eval30"`
+- active live cap changed to `LIVE_TOTAL_MAX_CASES = 30`
+- budgets remain `[5, 10, 15]`
+- intended run shape is `30` unique cases x `3` budgets = `90` live workups, balanced across loaded datasets by the existing sampler
+- pilot cost profile was about `18.9k` input tokens, `1.1k` output tokens, and `10` API calls per workup, with RareBench the cost-heavy slice
+
+Follow-up live `v1_eval30` interpretation:
+
+- live `v1_eval30` completed `30` unique cases x budgets `[5, 10, 15]` = `90` workups
+- overall top-1 was `73/90` (`0.811`), top-3/top-5 `77/90` (`0.856`), mean questions `6.08`
+- budget `15` reached top-5 `0.900`, but top-1 stayed `0.833`
+- DDXPlus was the weak slice: `21/30` top-1, top-5 `23/30`
+- iCraft-MD was strong: `28/30` top-1, top-3/top-5 `30/30`
+- RareBench was middling: `24/30` top-1/top-3/top-5
+- diagnosis:
+  - DDXPlus root acquisition is native but not Notebook `13`/`41`-quality; it sometimes asks statistically high-utility but clinically unhelpful generic roots
+  - DDXPlus branches/resolver can regress a very high-confidence correct MLP answer
+  - RareBench graph/LLM lock can confidently preserve a wrong nearest neighbor
+  - iCraft-MD misses are small-candidate top-2 adjudication failures
+
+## 95. Notebook 47 MEDDx Candidate-Pool Repair Lab
+
+Added Notebook `47` as an offline repair lab over Notebook `46` `v1_eval30`.
+
+- notebook: `notebooks/47_meddx_candidate_pool_repair_lab.ipynb`
+- script mirror: `scripts/meddx_candidate_pool_repair_lab_nb47.py`
+- report: `reports/algorithmic_ledger/meddx_candidate_pool_repair_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_repair_lab_v1/`
+
+Purpose:
+
+Test whether the old DDXPlus candidate-pool architecture idea survived the MEDDx multi-dataset adaptation and identify general, label-free repair rules before spending on another live run.
+
+Key findings:
+
+- Notebook `46` broad candidate-pool recall is `88/90`
+- current Notebook `46` final top-1 is only `73/90`
+- candidate-pool oracle reaches `88/90`, so the main bottleneck is resolver discrimination, not candidate generation
+- current top-5 oracle reaches `77/90`
+- selected no-API repair, `ddxplus_high_conf_mlp_guard_v1`, reaches `75/90` with two wins and zero regressions
+
+Selected repair rule:
+
+```text
+if dataset == DDXPlus
+and DDXPlus MLP confidence >= 0.70
+and DDXPlus MLP margin >= 0.20
+then protect DDXPlus MLP top-1 as final top-1.
+```
+
+Failure taxonomy:
+
+- DDXPlus: six workups have truth in broad pool but not final top-5, two are high-confidence MLP regressions, one is a candidate-pool/acquisition miss
+- iCraft-MD: two small-option top-k adjudication failures
+- RareBench: five wrong LLM/graph locks, one candidate-pool/acquisition miss
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_candidate_pool_repair_lab_nb47.py` passed
+- Notebook `47` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- artifact contract passed
+
+Interpretation:
+
+Notebook `47` confirms that the prior candidate-pool idea is still the right architecture. The final live system should not merely ask more questions; it should add a stronger candidate-pool adjudicator plus the DDXPlus high-confidence MLP protection before any larger paid run.
+
+## 96. Notebook 48 MEDDx Candidate-Pool Adjudicator Lab
+
+Added Notebook `48` as an offline candidate-pool adjudicator lab over the Notebook `46` `v1_eval30` live artifacts and Notebook `47` candidate-pool reconstruction.
+
+- notebook: `notebooks/48_meddx_candidate_pool_adjudicator_lab.ipynb`
+- script mirror: `scripts/meddx_candidate_pool_adjudicator_lab_nb48.py`
+- report: `reports/algorithmic_ledger/meddx_candidate_pool_adjudicator_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_adjudicator_lab_v1/`
+
+Purpose:
+
+Test whether the broad candidate pool can be adjudicated by a general resolver using existing signals only: final/LLM ranks, branch ranks, casebase priors, RareBench graph scores, DDXPlus MLP fields, and train-derived DDXPlus graph replay over the revealed evidence ledger.
+
+Key results:
+
+- Notebook `46` current: `73/90` top-1, `77/90` top-3/top-5
+- selected conservative pool educator: `75/90` top-1, `77/90` top-3/top-5, `2` wins, `0` regressions
+- case-blocked HGB educator diagnostic: `77/90` top-1, `80/90` top-3, `83/90` top-5, `4` wins, `0` regressions
+- label-fit logistic diagnostic: `78/90` top-1, `87/90` top-3, `88/90` top-5
+- label-fit HGB diagnostic: `86/90` top-1, `88/90` top-3/top-5
+- candidate-pool oracle remains `88/90`
+
+Selected offline candidate:
+
+`conservative_pool_educator_v1`.
+
+It protects high-confidence DDXPlus MLP top-1, allows only strict DDXPlus graph contradiction overrides, and otherwise requires a source-weighted challenger to have both a large score margin and more independent support than the current answer. In this saved run, the real gains are the same two DDXPlus MLP-protection wins from Notebook `47`; the graph replay agrees with those cases but does not safely rescue the remaining ambiguous DDXPlus misses.
+
+Interpretation:
+
+Notebook `48` confirms that candidate generation is not the main blocker in this MEDDx multi-dataset run. The signal to resolve the pool exists: label-fit learned adjudication gets close to the `88/90` oracle. But the case-blocked result is much lower, so a learned universal resolver cannot honestly be promoted from this `90`-workup cohort alone. The credible next step is a separate calibration/held-out split or a frozen candidate-pool educator trained on prior artifacts and tested in a future live run.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_candidate_pool_adjudicator_lab_nb48.py` passed
+- Notebook `48` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- artifact contract passed
+
+## 97. Notebook 49 MEDDx Calibrated Candidate-Pool Resolver
+
+Added Notebook `49` as a proper learned candidate-pool resolver lab over Notebook `48` candidate-level features.
+
+- notebook: `notebooks/49_meddx_calibrated_candidate_pool_resolver.ipynb`
+- script mirror: `scripts/meddx_calibrated_candidate_pool_resolver_nb49.py`
+- report: `reports/algorithmic_ledger/meddx_calibrated_candidate_pool_resolver_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_calibrated_candidate_pool_resolver_v1/`
+
+Purpose:
+
+Resolve the Notebook `46` candidate-pool adjudication bottleneck with one system-wide learned resolver rather than case-specific fixes.
+
+Selected resolver:
+
+`calibrated_logistic_pool_resolver_v1`.
+
+It trains an L2-regularized logistic candidate scorer over Notebook `48` candidate features, normalizes predicted candidate probabilities inside each workup pool, and uses a calibrated base-protection gate. The model is trained/evaluated across DDXPlus, iCraft-MD, and RareBench with dataset as a feature; it is not a per-case patch.
+
+Key results:
+
+- Notebook `46` current: `73/90` top-1, `77/90` top-3/top-5
+- Notebook `48` conservative educator: `75/90`, `2` wins, `0` regressions
+- Notebook `49` selected calibrated logistic resolver: `78/90` top-1, `80/90` top-3, `81/90` top-5, `5` wins, `0` regressions
+- strict nested threshold diagnostic: `77/90` top-1, `80/90` top-3, `81/90` top-5, `4` wins, `0` regressions
+- label-fit HGB diagnostic remains `86/90`
+- candidate-pool oracle remains `88/90`
+
+Fixed cases:
+
+- DDXPlus `test:100196` budget `5`: Acute laryngitis -> Pancreatic neoplasm
+- DDXPlus `test:122530` budget `10`: Bronchitis -> URTI
+- DDXPlus `test:122530` budget `15`: Bronchitis -> URTI
+- DDXPlus `test:126130` budget `5`: Pneumonia -> Bronchitis
+- DDXPlus `test:127667` budget `10`: Tuberculosis -> Acute otitis media
+
+Interpretation:
+
+Notebook `49` is the strongest defensible multi-dataset resolver result so far. It materially improves the live Notebook `46` artifact with zero regressions under case-blocked out-of-fold evaluation. The strict nested threshold diagnostic is slightly lower, so the method should be presented as an offline calibration candidate rather than final held-out performance. The next paid run should freeze this resolver and test it prospectively.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_calibrated_candidate_pool_resolver_nb49.py` passed
+- Notebook `49` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- artifact contract passed
+
+## 98. Notebook 50 MEDDx Candidate-Signal Augmentation Lab
+
+Added Notebook `50` as an offline candidate-quality and signal-separability lab over the Notebook `46` live artifacts and Notebook `48`/`49` resolver features.
+
+- notebook: `notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb`
+- script mirror: `scripts/meddx_candidate_signal_augmentation_lab_nb50.py`
+- report: `reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_signal_augmentation_lab_v1/`
+
+Purpose:
+
+Test whether the remaining resolver failures are caused by a weak resolver alone or by under-instrumented candidate pools. The notebook keeps the live traces frozen and adds stronger candidate-level signals:
+
+- DDXPlus exact-outcome train-derived Naive Bayes support over visible evidence roots
+- RareBench leave-one-case-out HPO phenotype reference overlap
+- iCraft-MD leave-one-case-out vignette/exemplar TF-IDF support
+- generic visible-text/candidate-label overlap features
+
+Key results:
+
+- Notebook `46` current: `73/90` top-1, `77/90` top-3/top-5
+- Notebook `49` calibrated logistic resolver: `78/90` top-1, `80/90` top-3, `81/90` top-5, `5` wins, `0` regressions
+- Notebook `50` selected augmented resolver: `77/90` top-1, `83/90` top-3/top-5, `4` wins, `0` regressions
+- Notebook `50` label-fit augmented logistic diagnostic: `85/90` top-1, `88/90` top-3/top-5
+- candidate-pool oracle remains `88/90`
+
+Interpretation:
+
+Notebook `50` is not promoted because it does not beat Notebook `49` top-1 under case-blocked evaluation. It is still valuable because it improves differential ranking and shows that the augmented signals contain real information: label-fit logistic reaches `85/90`, close to the `88/90` oracle. The gap between label-fit and case-blocked performance points to calibration-data scarcity rather than one missing hand threshold.
+
+Failure analysis:
+
+- DDXPlus `test:51945` remains a weak acquisition/signal case: URTI is poorly supported by the visible ledger.
+- iCraft-MD `icraft_md:14` remains hard because the true `EBS-Dowling Meara` label has no same-label exemplar after leave-one-case exclusion.
+- RareBench `MME:21` lacks a useful same-disease reference exemplar for the true disease.
+- RareBench `RAMEDIS:369` is a true close-neighbor phenotype-overlap problem where the visible HPO profile favors ornithine transcarbamylase deficiency.
+
+Decision:
+
+Notebook `49` remains the strongest current MEDDx top-1 resolver calibration candidate. Notebook `50` should be cited as the candidate-signal audit that explains why further progress likely needs a larger live-like calibration corpus or a stronger externally grounded medical knowledge source, not more retrospective threshold tuning.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_candidate_signal_augmentation_lab_nb50.py` passed
+- Notebook `50` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- `selected_augmented_signal_policy.json` contains valid JSON with no `NaN`
+
+## 99. Notebook 51 MEDDx-Scale Hypothesis-Branching Confirmation
+
+Added Notebook `51` as the frozen MEDDx-scale live confirmation runner.
+
+- notebook: `notebooks/51_meddx_scale_hypothesis_branching_confirmation.ipynb`
+- script mirror: `scripts/meddx_scale_hypothesis_branching_confirmation_nb51.py`
+- report: `reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md`
+- dry-run artifact root: `artifacts/universal_meddx/meddx_scale_hypothesis_branching_confirmation_dryrun_smoke_v1_meddx100/`
+- intended live artifact root: `artifacts/universal_meddx/meddx_scale_hypothesis_branching_confirmation_v1_meddx100/`
+
+Purpose:
+
+Generate the large live calibration corpus needed for a real cross-cohort MEDDx claim. The notebook follows the MEDDxAgent interactive benchmark shape: `100` unique cases per dataset across DDXPlus, iCraft-MD, and RareBench, evaluated at budgets `[5, 10, 15]`, for `900` live workups.
+
+Architecture:
+
+- shared MEDDx-style budget/evaluation loop
+- dataset-native adapters from Notebook `46`
+- DDXPlus structured evidence-root ledger and partial-evidence MLP monitor
+- iCraft-MD profile Q/A adapter
+- RareBench phenotype graph adapter and conservative discriminator gate
+- hypothesis branching under unused budget
+- candidate-pool resolver score export for later calibration
+- top-1/top-3/top-5/request-cost artifacts
+
+Key configuration:
+
+- `RUN_LIVE_API = False` by default for safety; set it to `True` in the notebook to run the paid cohort
+- `MEDDX_SAMPLE_MODE = "meddxagent_seed42_shuffle_first_n"`
+- `RANDOM_SEED = 42`
+- `LIVE_CASES_PER_DATASET = 100`
+- `LIVE_TOTAL_MAX_CASES = 300`
+- `LIVE_BUDGETS_TO_RUN = [5, 10, 15]`
+- `LLM_MODEL = "gpt-4.1-mini"`
+- `TEMPERATURE = 0.0`
+- `TOP_P = 1.0`
+- `BRANCH_MAX_BRANCHES = 2`
+- `BRANCH_MAX_QUESTIONS_PER_BRANCH = 2`
+- total question cap: base plus branch questions may not exceed the active MEDDx budget
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_scale_hypothesis_branching_confirmation_nb51.py` passed
+- Notebook `51` code cells parsed with `ast.parse`
+- no-API smoke executed top-to-bottom
+- smoke loaded one case from each enabled dataset and ran all three budgets
+- artifact contract passed
+- `resolved_run_config.json` records `live_cases_per_dataset = 100`, active budgets `[5, 10, 15]`, and enabled datasets `ddxplus`, `icraft_md`, `rarebench`
+
+Interpretation:
+
+This notebook is intentionally not another retrospective optimizer. It produces the MEDDx-scale live corpus we need before claiming generalization. After it runs, train/calibrate the next offline resolver on this large cohort, freeze the policy, then apply it back to the old Notebook `46` `90`-workup artifact as a cross-cohort transfer/regression test.

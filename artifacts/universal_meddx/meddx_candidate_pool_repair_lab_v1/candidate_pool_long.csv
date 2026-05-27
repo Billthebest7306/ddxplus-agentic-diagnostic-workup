@@ -1,0 +1,962 @@
+dataset_name,case_id,budget,pool_rank,label,source,source_rank,source_score,is_truth
+ddxplus,test:100196,5,1,Acute laryngitis,final_rank,1,,False
+ddxplus,test:100196,5,2,Acute otitis media,final_rank,2,,False
+ddxplus,test:100196,5,3,Viral pharyngitis,final_rank,3,,False
+ddxplus,test:100196,5,4,Bronchitis,final_rank,4,,False
+ddxplus,test:100196,5,5,URTI,final_rank,5,,False
+ddxplus,test:100196,5,6,Chronic rhinosinusitis,final_rank,6,,False
+ddxplus,test:100196,5,7,Acute rhinosinusitis,final_rank,7,,False
+ddxplus,test:100196,5,8,Bronchiectasis,final_rank,8,,False
+ddxplus,test:100196,5,9,Allergic sinusitis,final_rank,9,,False
+ddxplus,test:100196,5,10,Croup,final_rank,10,,False
+ddxplus,test:100196,5,11,Pancreatic neoplasm,llm_rank,2,,True
+ddxplus,test:100196,5,12,Influenza,llm_rank,4,,False
+ddxplus,test:100196,5,13,GERD,llm_rank,7,,False
+ddxplus,test:100196,10,1,Pancreatic neoplasm,final_rank,1,,True
+ddxplus,test:100196,10,2,Influenza,final_rank,2,,False
+ddxplus,test:100196,10,3,Pneumonia,final_rank,3,,False
+ddxplus,test:100196,10,4,Inguinal hernia,final_rank,4,,False
+ddxplus,test:100196,10,5,HIV (initial infection),final_rank,5,,False
+ddxplus,test:100196,10,6,Bronchitis,final_rank,6,,False
+ddxplus,test:100196,10,7,Viral pharyngitis,final_rank,7,,False
+ddxplus,test:100196,10,8,URTI,final_rank,8,,False
+ddxplus,test:100196,10,9,Acute rhinosinusitis,final_rank,9,,False
+ddxplus,test:100196,10,10,Anemia,final_rank,10,,False
+ddxplus,test:100196,10,11,SLE,llm_rank,2,,False
+ddxplus,test:100196,10,12,Anaphylaxis,llm_rank,6,,False
+ddxplus,test:100196,10,13,Spontaneous rib fracture,llm_rank,7,,False
+ddxplus,test:100196,15,1,Pancreatic neoplasm,final_rank,1,,True
+ddxplus,test:100196,15,2,Influenza,final_rank,2,,False
+ddxplus,test:100196,15,3,Pneumonia,final_rank,3,,False
+ddxplus,test:100196,15,4,Bronchitis,final_rank,4,,False
+ddxplus,test:100196,15,5,HIV (initial infection),final_rank,5,,False
+ddxplus,test:100196,15,6,URTI,final_rank,6,,False
+ddxplus,test:100196,15,7,Viral pharyngitis,final_rank,7,,False
+ddxplus,test:100196,15,8,Anemia,final_rank,8,,False
+ddxplus,test:100196,15,9,Acute COPD exacerbation / infection,final_rank,9,,False
+ddxplus,test:100196,15,10,Bronchiectasis,final_rank,10,,False
+ddxplus,test:100196,15,11,Scombroid food poisoning,llm_rank,3,,False
+ddxplus,test:100196,15,12,Inguinal hernia,llm_rank,5,,False
+ddxplus,test:100196,15,13,Anaphylaxis,llm_rank,7,,False
+ddxplus,test:100196,15,14,SLE,llm_rank,8,,False
+ddxplus,test:100196,15,15,Spontaneous rib fracture,llm_rank,9,,False
+ddxplus,test:100196,15,16,Acute rhinosinusitis,branch_1_rank,6,,False
+ddxplus,test:100196,15,17,Bronchospasm / acute asthma exacerbation,branch_1_rank,7,,False
+ddxplus,test:100196,15,18,Bronchiolitis,branch_1_rank,8,,False
+ddxplus,test:100196,15,19,Acute laryngitis,branch_1_rank,9,,False
+ddxplus,test:119540,5,1,Viral pharyngitis,final_rank,1,,True
+ddxplus,test:119540,5,2,Bronchitis,final_rank,2,,False
+ddxplus,test:119540,5,3,Pulmonary neoplasm,final_rank,3,,False
+ddxplus,test:119540,5,4,Pulmonary embolism,final_rank,4,,False
+ddxplus,test:119540,5,5,Bronchiectasis,final_rank,5,,False
+ddxplus,test:119540,5,6,Spontaneous pneumothorax,final_rank,6,,False
+ddxplus,test:119540,5,7,Tuberculosis,final_rank,7,,False
+ddxplus,test:119540,5,8,Myocarditis,final_rank,8,,False
+ddxplus,test:119540,5,9,Spontaneous rib fracture,final_rank,9,,False
+ddxplus,test:119540,5,10,Pericarditis,final_rank,10,,False
+ddxplus,test:119540,5,11,Acute otitis media,llm_rank,2,,False
+ddxplus,test:119540,5,12,HIV (initial infection),llm_rank,3,,False
+ddxplus,test:119540,5,13,URTI,llm_rank,4,,False
+ddxplus,test:119540,5,14,Acute laryngitis,llm_rank,5,,False
+ddxplus,test:119540,5,15,Cluster headache,llm_rank,6,,False
+ddxplus,test:119540,5,16,Influenza,llm_rank,7,,False
+ddxplus,test:119540,5,17,Pneumonia,llm_rank,8,,False
+ddxplus,test:119540,5,18,Inguinal hernia,llm_rank,9,,False
+ddxplus,test:119540,10,1,Viral pharyngitis,final_rank,1,,True
+ddxplus,test:119540,10,2,URTI,final_rank,2,,False
+ddxplus,test:119540,10,3,Pulmonary embolism,final_rank,3,,False
+ddxplus,test:119540,10,4,Pulmonary neoplasm,final_rank,4,,False
+ddxplus,test:119540,10,5,Acute otitis media,final_rank,5,,False
+ddxplus,test:119540,10,6,Acute laryngitis,final_rank,6,,False
+ddxplus,test:119540,10,7,Ebola,final_rank,7,,False
+ddxplus,test:119540,10,8,Spontaneous pneumothorax,final_rank,8,,False
+ddxplus,test:119540,10,9,Cluster headache,final_rank,9,,False
+ddxplus,test:119540,10,10,Larygospasm,final_rank,10,,False
+ddxplus,test:119540,10,11,Pneumonia,llm_rank,4,,False
+ddxplus,test:119540,10,12,Tuberculosis,llm_rank,6,,False
+ddxplus,test:119540,10,13,Bronchiectasis,llm_rank,7,,False
+ddxplus,test:119540,10,14,HIV (initial infection),llm_rank,9,,False
+ddxplus,test:119540,15,1,Viral pharyngitis,final_rank,1,,True
+ddxplus,test:119540,15,2,URTI,final_rank,2,,False
+ddxplus,test:119540,15,3,Pneumonia,final_rank,3,,False
+ddxplus,test:119540,15,4,Pulmonary embolism,final_rank,4,,False
+ddxplus,test:119540,15,5,Bronchitis,final_rank,5,,False
+ddxplus,test:119540,15,6,Bronchiectasis,final_rank,6,,False
+ddxplus,test:119540,15,7,Pulmonary neoplasm,final_rank,7,,False
+ddxplus,test:119540,15,8,Ebola,final_rank,8,,False
+ddxplus,test:119540,15,9,Spontaneous pneumothorax,final_rank,9,,False
+ddxplus,test:119540,15,10,Myocarditis,final_rank,10,,False
+ddxplus,test:119540,15,11,Acute otitis media,llm_rank,4,,False
+ddxplus,test:119540,15,12,Tuberculosis,llm_rank,7,,False
+ddxplus,test:119540,15,13,Acute laryngitis,llm_rank,8,,False
+ddxplus,test:119540,15,14,HIV (initial infection),llm_rank,9,,False
+ddxplus,test:119540,15,15,Cluster headache,llm_rank,10,,False
+ddxplus,test:119540,15,16,Influenza,branch_1_rank,3,,False
+ddxplus,test:119540,15,17,Acute rhinosinusitis,branch_1_rank,6,,False
+ddxplus,test:119540,15,18,Bronchiolitis,branch_1_rank,7,,False
+ddxplus,test:119540,15,19,Whooping cough,branch_1_rank,8,,False
+ddxplus,test:119540,15,20,Acute COPD exacerbation / infection,branch_2_rank,6,,False
+ddxplus,test:119540,15,21,Acute pulmonary edema,branch_2_rank,8,,False
+ddxplus,test:122530,5,1,URTI,final_rank,1,,True
+ddxplus,test:122530,5,2,Bronchitis,final_rank,2,,False
+ddxplus,test:122530,5,3,Pneumonia,final_rank,3,,False
+ddxplus,test:122530,5,4,Viral pharyngitis,final_rank,4,,False
+ddxplus,test:122530,5,5,Bronchiectasis,final_rank,5,,False
+ddxplus,test:122530,5,6,Acute COPD exacerbation / infection,final_rank,6,,False
+ddxplus,test:122530,5,7,Inguinal hernia,final_rank,7,,False
+ddxplus,test:122530,5,8,Pancreatic neoplasm,final_rank,8,,False
+ddxplus,test:122530,5,9,Ebola,final_rank,9,,False
+ddxplus,test:122530,5,10,Spontaneous pneumothorax,final_rank,10,,False
+ddxplus,test:122530,5,11,Influenza,llm_rank,6,,False
+ddxplus,test:122530,5,12,Pulmonary neoplasm,llm_rank,7,,False
+ddxplus,test:122530,5,13,Possible NSTEMI / STEMI,llm_rank,8,,False
+ddxplus,test:122530,5,14,Unstable angina,llm_rank,9,,False
+ddxplus,test:122530,10,1,Bronchitis,final_rank,1,,False
+ddxplus,test:122530,10,2,Pneumonia,final_rank,2,,False
+ddxplus,test:122530,10,3,URTI,final_rank,3,,True
+ddxplus,test:122530,10,4,Viral pharyngitis,final_rank,4,,False
+ddxplus,test:122530,10,5,Bronchiectasis,final_rank,5,,False
+ddxplus,test:122530,10,6,Acute COPD exacerbation / infection,final_rank,6,,False
+ddxplus,test:122530,10,7,Inguinal hernia,final_rank,7,,False
+ddxplus,test:122530,10,8,Pancreatic neoplasm,final_rank,8,,False
+ddxplus,test:122530,10,9,Ebola,final_rank,9,,False
+ddxplus,test:122530,10,10,Spontaneous pneumothorax,final_rank,10,,False
+ddxplus,test:122530,10,11,Influenza,llm_rank,6,,False
+ddxplus,test:122530,10,12,Pulmonary neoplasm,llm_rank,7,,False
+ddxplus,test:122530,10,13,Possible NSTEMI / STEMI,llm_rank,8,,False
+ddxplus,test:122530,10,14,Unstable angina,llm_rank,9,,False
+ddxplus,test:122530,10,15,Bronchospasm / acute asthma exacerbation,branch_1_rank,3,,False
+ddxplus,test:122530,10,16,Acute rhinosinusitis,branch_1_rank,4,,False
+ddxplus,test:122530,10,17,Acute laryngitis,branch_1_rank,5,,False
+ddxplus,test:122530,10,18,Acute otitis media,branch_1_rank,6,,False
+ddxplus,test:122530,10,19,Bronchiolitis,branch_1_rank,7,,False
+ddxplus,test:122530,10,20,Whooping cough,branch_1_rank,8,,False
+ddxplus,test:122530,10,21,Tuberculosis,branch_2_rank,8,,False
+ddxplus,test:122530,10,22,Acute pulmonary edema,branch_2_rank,9,,False
+ddxplus,test:122530,10,23,Pulmonary embolism,branch_2_rank,10,,False
+ddxplus,test:122530,15,1,Bronchitis,final_rank,1,,False
+ddxplus,test:122530,15,2,Pneumonia,final_rank,2,,False
+ddxplus,test:122530,15,3,URTI,final_rank,3,,True
+ddxplus,test:122530,15,4,Viral pharyngitis,final_rank,4,,False
+ddxplus,test:122530,15,5,Bronchiectasis,final_rank,5,,False
+ddxplus,test:122530,15,6,Acute COPD exacerbation / infection,final_rank,6,,False
+ddxplus,test:122530,15,7,Inguinal hernia,final_rank,7,,False
+ddxplus,test:122530,15,8,Pancreatic neoplasm,final_rank,8,,False
+ddxplus,test:122530,15,9,Ebola,final_rank,9,,False
+ddxplus,test:122530,15,10,Spontaneous pneumothorax,final_rank,10,,False
+ddxplus,test:122530,15,11,Influenza,llm_rank,6,,False
+ddxplus,test:122530,15,12,Pulmonary neoplasm,llm_rank,7,,False
+ddxplus,test:122530,15,13,Possible NSTEMI / STEMI,llm_rank,8,,False
+ddxplus,test:122530,15,14,Unstable angina,llm_rank,9,,False
+ddxplus,test:122530,15,15,Bronchospasm / acute asthma exacerbation,branch_1_rank,3,,False
+ddxplus,test:122530,15,16,Acute rhinosinusitis,branch_1_rank,4,,False
+ddxplus,test:122530,15,17,Acute laryngitis,branch_1_rank,5,,False
+ddxplus,test:122530,15,18,Whooping cough,branch_1_rank,7,,False
+ddxplus,test:122530,15,19,Bronchiolitis,branch_1_rank,8,,False
+ddxplus,test:122530,15,20,Tuberculosis,branch_1_rank,9,,False
+ddxplus,test:122530,15,21,Acute pulmonary edema,branch_2_rank,9,,False
+ddxplus,test:122530,15,22,Pulmonary embolism,branch_2_rank,10,,False
+ddxplus,test:124172,5,1,Bronchiectasis,final_rank,1,,True
+ddxplus,test:124172,5,2,Acute COPD exacerbation / infection,final_rank,2,,False
+ddxplus,test:124172,5,3,Bronchitis,final_rank,3,,False
+ddxplus,test:124172,5,4,Bronchospasm / acute asthma exacerbation,final_rank,4,,False
+ddxplus,test:124172,5,5,Myasthenia gravis,final_rank,5,,False
+ddxplus,test:124172,5,6,Epiglottitis,final_rank,6,,False
+ddxplus,test:124172,5,7,Bronchiolitis,final_rank,7,,False
+ddxplus,test:124172,5,8,Croup,final_rank,8,,False
+ddxplus,test:124172,5,9,Myocarditis,final_rank,9,,False
+ddxplus,test:124172,5,10,Sarcoidosis,final_rank,10,,False
+ddxplus,test:124172,5,11,Pneumonia,llm_rank,2,,False
+ddxplus,test:124172,5,12,URTI,llm_rank,3,,False
+ddxplus,test:124172,5,13,Tuberculosis,llm_rank,6,,False
+ddxplus,test:124172,5,14,Pulmonary neoplasm,llm_rank,7,,False
+ddxplus,test:124172,5,15,Panic attack,llm_rank,9,,False
+ddxplus,test:124172,5,16,Influenza,llm_rank,10,,False
+ddxplus,test:124172,10,1,Bronchiectasis,final_rank,1,,True
+ddxplus,test:124172,10,2,Acute COPD exacerbation / infection,final_rank,2,,False
+ddxplus,test:124172,10,3,Bronchitis,final_rank,3,,False
+ddxplus,test:124172,10,4,Pneumonia,final_rank,4,,False
+ddxplus,test:124172,10,5,Bronchiolitis,final_rank,5,,False
+ddxplus,test:124172,10,6,Epiglottitis,final_rank,6,,False
+ddxplus,test:124172,10,7,Croup,final_rank,7,,False
+ddxplus,test:124172,10,8,Anaphylaxis,final_rank,8,,False
+ddxplus,test:124172,10,9,Scombroid food poisoning,final_rank,9,,False
+ddxplus,test:124172,10,10,SLE,final_rank,10,,False
+ddxplus,test:124172,10,11,URTI,llm_rank,3,,False
+ddxplus,test:124172,10,12,Pulmonary neoplasm,llm_rank,6,,False
+ddxplus,test:124172,10,13,Bronchospasm / acute asthma exacerbation,llm_rank,7,,False
+ddxplus,test:124172,10,14,Tuberculosis,llm_rank,8,,False
+ddxplus,test:124172,10,15,Allergic sinusitis,llm_rank,9,,False
+ddxplus,test:124172,10,16,Panic attack,llm_rank,10,,False
+ddxplus,test:124172,15,1,Bronchiectasis,final_rank,1,,True
+ddxplus,test:124172,15,2,Acute COPD exacerbation / infection,final_rank,2,,False
+ddxplus,test:124172,15,3,Bronchitis,final_rank,3,,False
+ddxplus,test:124172,15,4,Pneumonia,final_rank,4,,False
+ddxplus,test:124172,15,5,Bronchiolitis,final_rank,5,,False
+ddxplus,test:124172,15,6,Epiglottitis,final_rank,6,,False
+ddxplus,test:124172,15,7,Croup,final_rank,7,,False
+ddxplus,test:124172,15,8,Anaphylaxis,final_rank,8,,False
+ddxplus,test:124172,15,9,Scombroid food poisoning,final_rank,9,,False
+ddxplus,test:124172,15,10,SLE,final_rank,10,,False
+ddxplus,test:124172,15,11,URTI,llm_rank,3,,False
+ddxplus,test:124172,15,12,Pulmonary neoplasm,llm_rank,6,,False
+ddxplus,test:124172,15,13,Bronchospasm / acute asthma exacerbation,llm_rank,7,,False
+ddxplus,test:124172,15,14,Tuberculosis,llm_rank,8,,False
+ddxplus,test:124172,15,15,Allergic sinusitis,llm_rank,9,,False
+ddxplus,test:124172,15,16,Panic attack,llm_rank,10,,False
+ddxplus,test:126130,5,1,Pneumonia,final_rank,1,,False
+ddxplus,test:126130,5,2,Spontaneous pneumothorax,final_rank,2,,False
+ddxplus,test:126130,5,3,Stable angina,final_rank,3,,False
+ddxplus,test:126130,5,4,Viral pharyngitis,final_rank,4,,False
+ddxplus,test:126130,5,5,URTI,final_rank,5,,False
+ddxplus,test:126130,5,6,Myocarditis,final_rank,6,,False
+ddxplus,test:126130,5,7,Acute pulmonary edema,final_rank,7,,False
+ddxplus,test:126130,5,8,Pulmonary embolism,final_rank,8,,False
+ddxplus,test:126130,5,9,Chronic rhinosinusitis,final_rank,9,,False
+ddxplus,test:126130,5,10,Acute rhinosinusitis,final_rank,10,,False
+ddxplus,test:126130,5,11,Pulmonary neoplasm,llm_rank,2,,False
+ddxplus,test:126130,5,12,Bronchitis,llm_rank,3,,True
+ddxplus,test:126130,5,13,Possible NSTEMI / STEMI,llm_rank,4,,False
+ddxplus,test:126130,5,14,SLE,llm_rank,5,,False
+ddxplus,test:126130,5,15,Influenza,llm_rank,6,,False
+ddxplus,test:126130,5,16,Pancreatic neoplasm,llm_rank,7,,False
+ddxplus,test:126130,5,17,Acute laryngitis,llm_rank,9,,False
+ddxplus,test:126130,10,1,Bronchitis,final_rank,1,,True
+ddxplus,test:126130,10,2,URTI,final_rank,2,,False
+ddxplus,test:126130,10,3,Pneumonia,final_rank,3,,False
+ddxplus,test:126130,10,4,Influenza,final_rank,4,,False
+ddxplus,test:126130,10,5,Spontaneous pneumothorax,final_rank,5,,False
+ddxplus,test:126130,10,6,Viral pharyngitis,final_rank,6,,False
+ddxplus,test:126130,10,7,Myocarditis,final_rank,7,,False
+ddxplus,test:126130,10,8,Pulmonary embolism,final_rank,8,,False
+ddxplus,test:126130,10,9,Acute pulmonary edema,final_rank,9,,False
+ddxplus,test:126130,10,10,Stable angina,final_rank,10,,False
+ddxplus,test:126130,10,11,Acute COPD exacerbation / infection,llm_rank,2,,False
+ddxplus,test:126130,10,12,Bronchiectasis,llm_rank,4,,False
+ddxplus,test:126130,10,13,Pulmonary neoplasm,llm_rank,6,,False
+ddxplus,test:126130,10,14,Possible NSTEMI / STEMI,llm_rank,7,,False
+ddxplus,test:126130,10,15,Bronchospasm / acute asthma exacerbation,llm_rank,9,,False
+ddxplus,test:126130,10,16,Unstable angina,llm_rank,10,,False
+ddxplus,test:126130,15,1,Bronchitis,final_rank,1,,True
+ddxplus,test:126130,15,2,Viral pharyngitis,final_rank,2,,False
+ddxplus,test:126130,15,3,Acute laryngitis,final_rank,3,,False
+ddxplus,test:126130,15,4,Spontaneous pneumothorax,final_rank,4,,False
+ddxplus,test:126130,15,5,Possible NSTEMI / STEMI,final_rank,5,,False
+ddxplus,test:126130,15,6,Stable angina,final_rank,6,,False
+ddxplus,test:126130,15,7,Unstable angina,final_rank,7,,False
+ddxplus,test:126130,15,8,Acute pulmonary edema,final_rank,8,,False
+ddxplus,test:126130,15,9,Anaphylaxis,final_rank,9,,False
+ddxplus,test:126130,15,10,Pneumonia,final_rank,10,,False
+ddxplus,test:126130,15,11,Acute otitis media,llm_rank,3,,False
+ddxplus,test:126130,15,12,Tuberculosis,llm_rank,4,,False
+ddxplus,test:126130,15,13,URTI,llm_rank,5,,False
+ddxplus,test:126130,15,14,Pulmonary neoplasm,llm_rank,6,,False
+ddxplus,test:126130,15,15,Epiglottitis,llm_rank,7,,False
+ddxplus,test:126130,15,16,Anemia,llm_rank,9,,False
+ddxplus,test:126130,15,17,Bronchiectasis,llm_rank,10,,False
+ddxplus,test:127667,5,1,Pericarditis,final_rank,1,,False
+ddxplus,test:127667,5,2,Bronchitis,final_rank,2,,False
+ddxplus,test:127667,5,3,URTI,final_rank,3,,False
+ddxplus,test:127667,5,4,Cluster headache,final_rank,4,,False
+ddxplus,test:127667,5,5,Viral pharyngitis,final_rank,5,,False
+ddxplus,test:127667,5,6,Acute COPD exacerbation / infection,final_rank,6,,False
+ddxplus,test:127667,5,7,Bronchiectasis,final_rank,7,,False
+ddxplus,test:127667,5,8,Chronic rhinosinusitis,final_rank,8,,False
+ddxplus,test:127667,5,9,Acute rhinosinusitis,final_rank,9,,False
+ddxplus,test:127667,5,10,Ebola,final_rank,10,,False
+ddxplus,test:127667,5,11,Pneumonia,llm_rank,2,,False
+ddxplus,test:127667,5,12,Acute otitis media,llm_rank,3,,True
+ddxplus,test:127667,5,13,Anemia,llm_rank,4,,False
+ddxplus,test:127667,5,14,Acute laryngitis,llm_rank,6,,False
+ddxplus,test:127667,5,15,PSVT,llm_rank,7,,False
+ddxplus,test:127667,5,16,Pulmonary neoplasm,llm_rank,8,,False
+ddxplus,test:127667,5,17,Spontaneous rib fracture,llm_rank,9,,False
+ddxplus,test:127667,5,18,Sarcoidosis,llm_rank,10,,False
+ddxplus,test:127667,10,1,Tuberculosis,final_rank,1,,False
+ddxplus,test:127667,10,2,Bronchitis,final_rank,2,,False
+ddxplus,test:127667,10,3,Viral pharyngitis,final_rank,3,,False
+ddxplus,test:127667,10,4,Chronic rhinosinusitis,final_rank,4,,False
+ddxplus,test:127667,10,5,URTI,final_rank,5,,False
+ddxplus,test:127667,10,6,Pneumonia,final_rank,6,,False
+ddxplus,test:127667,10,7,Anaphylaxis,final_rank,7,,False
+ddxplus,test:127667,10,8,Pancreatic neoplasm,final_rank,8,,False
+ddxplus,test:127667,10,9,Acute COPD exacerbation / infection,final_rank,9,,False
+ddxplus,test:127667,10,10,SLE,final_rank,10,,False
+ddxplus,test:127667,10,11,Acute otitis media,llm_rank,2,,True
+ddxplus,test:127667,10,12,GERD,llm_rank,4,,False
+ddxplus,test:127667,10,13,Acute laryngitis,llm_rank,5,,False
+ddxplus,test:127667,10,14,Bronchospasm / acute asthma exacerbation,llm_rank,6,,False
+ddxplus,test:127667,10,15,Spontaneous rib fracture,llm_rank,7,,False
+ddxplus,test:127667,10,16,Bronchiectasis,llm_rank,8,,False
+ddxplus,test:127667,15,1,Acute otitis media,final_rank,1,,True
+ddxplus,test:127667,15,2,Bronchitis,final_rank,2,,False
+ddxplus,test:127667,15,3,Acute rhinosinusitis,final_rank,3,,False
+ddxplus,test:127667,15,4,Viral pharyngitis,final_rank,4,,False
+ddxplus,test:127667,15,5,URTI,final_rank,5,,False
+ddxplus,test:127667,15,6,Pneumonia,final_rank,6,,False
+ddxplus,test:127667,15,7,Acute laryngitis,final_rank,7,,False
+ddxplus,test:127667,15,8,Chronic rhinosinusitis,final_rank,8,,False
+ddxplus,test:127667,15,9,Acute COPD exacerbation / infection,final_rank,9,,False
+ddxplus,test:127667,15,10,Bronchiectasis,final_rank,10,,False
+ddxplus,test:127667,15,11,Tuberculosis,llm_rank,7,,False
+ddxplus,test:127667,15,12,GERD,llm_rank,9,,False
+ddxplus,test:51518,5,1,Acute pulmonary edema,final_rank,1,,True
+ddxplus,test:51518,5,2,Unstable angina,final_rank,2,,False
+ddxplus,test:51518,5,3,Possible NSTEMI / STEMI,final_rank,3,,False
+ddxplus,test:51518,5,4,Stable angina,final_rank,4,,False
+ddxplus,test:51518,5,5,Atrial fibrillation,final_rank,5,,False
+ddxplus,test:51518,5,6,Myocarditis,final_rank,6,,False
+ddxplus,test:51518,5,7,Spontaneous pneumothorax,final_rank,7,,False
+ddxplus,test:51518,5,8,Pulmonary embolism,final_rank,8,,False
+ddxplus,test:51518,5,9,Pericarditis,final_rank,9,,False
+ddxplus,test:51518,5,10,Localized edema,final_rank,10,,False
+ddxplus,test:51518,5,11,URTI,llm_rank,4,,False
+ddxplus,test:51518,5,12,Panic attack,llm_rank,7,,False
+ddxplus,test:51518,5,13,HIV (initial infection),llm_rank,9,,False
+ddxplus,test:51518,5,14,Pneumonia,branch_1_rank,9,,False
+ddxplus,test:51518,5,15,Bronchospasm / acute asthma exacerbation,branch_1_rank,10,,False
+ddxplus,test:51518,10,1,Acute pulmonary edema,final_rank,1,,True
+ddxplus,test:51518,10,2,Unstable angina,final_rank,2,,False
+ddxplus,test:51518,10,3,Myocarditis,final_rank,3,,False
+ddxplus,test:51518,10,4,Possible NSTEMI / STEMI,final_rank,4,,False
+ddxplus,test:51518,10,5,Stable angina,final_rank,5,,False
+ddxplus,test:51518,10,6,Atrial fibrillation,final_rank,6,,False
+ddxplus,test:51518,10,7,Pericarditis,final_rank,7,,False
+ddxplus,test:51518,10,8,Pulmonary embolism,final_rank,8,,False
+ddxplus,test:51518,10,9,Spontaneous pneumothorax,final_rank,9,,False
+ddxplus,test:51518,10,10,Localized edema,final_rank,10,,False
+ddxplus,test:51518,10,11,URTI,llm_rank,6,,False
+ddxplus,test:51518,10,12,Panic attack,llm_rank,7,,False
+ddxplus,test:51518,10,13,HIV (initial infection),llm_rank,10,,False
+ddxplus,test:51518,10,14,Pneumonia,branch_1_rank,9,,False
+ddxplus,test:51518,10,15,Bronchospasm / acute asthma exacerbation,branch_1_rank,10,,False
+ddxplus,test:51518,10,16,Acute COPD exacerbation / infection,branch_2_rank,10,,False
+ddxplus,test:51518,15,1,Acute pulmonary edema,final_rank,1,,True
+ddxplus,test:51518,15,2,Unstable angina,final_rank,2,,False
+ddxplus,test:51518,15,3,Myocarditis,final_rank,3,,False
+ddxplus,test:51518,15,4,Possible NSTEMI / STEMI,final_rank,4,,False
+ddxplus,test:51518,15,5,Stable angina,final_rank,5,,False
+ddxplus,test:51518,15,6,Atrial fibrillation,final_rank,6,,False
+ddxplus,test:51518,15,7,Spontaneous pneumothorax,final_rank,7,,False
+ddxplus,test:51518,15,8,Pulmonary embolism,final_rank,8,,False
+ddxplus,test:51518,15,9,Localized edema,final_rank,9,,False
+ddxplus,test:51518,15,10,Pericarditis,final_rank,10,,False
+ddxplus,test:51518,15,11,URTI,llm_rank,5,,False
+ddxplus,test:51518,15,12,Panic attack,llm_rank,6,,False
+ddxplus,test:51518,15,13,Pneumonia,llm_rank,8,,False
+ddxplus,test:51518,15,14,HIV (initial infection),llm_rank,9,,False
+ddxplus,test:51518,15,15,Anaphylaxis,llm_rank,10,,False
+ddxplus,test:51945,5,1,Pneumonia,final_rank,1,,False
+ddxplus,test:51945,5,2,Acute laryngitis,final_rank,2,,False
+ddxplus,test:51945,5,3,Acute otitis media,final_rank,3,,False
+ddxplus,test:51945,5,4,Cluster headache,final_rank,4,,False
+ddxplus,test:51945,5,5,Viral pharyngitis,final_rank,5,,False
+ddxplus,test:51945,5,6,Ebola,final_rank,6,,False
+ddxplus,test:51945,5,7,Epiglottitis,final_rank,7,,False
+ddxplus,test:51945,5,8,URTI,final_rank,8,,True
+ddxplus,test:51945,5,9,Pulmonary embolism,final_rank,9,,False
+ddxplus,test:51945,5,10,Localized edema,final_rank,10,,False
+ddxplus,test:51945,5,11,Pericarditis,llm_rank,2,,False
+ddxplus,test:51945,5,12,Panic attack,llm_rank,3,,False
+ddxplus,test:51945,5,13,Spontaneous pneumothorax,llm_rank,4,,False
+ddxplus,test:51945,5,14,Spontaneous rib fracture,llm_rank,5,,False
+ddxplus,test:51945,5,15,Anemia,llm_rank,6,,False
+ddxplus,test:51945,5,16,Sarcoidosis,llm_rank,7,,False
+ddxplus,test:51945,5,17,Myocarditis,llm_rank,8,,False
+ddxplus,test:51945,5,18,SLE,llm_rank,9,,False
+ddxplus,test:51945,10,1,Anemia,final_rank,1,,False
+ddxplus,test:51945,10,2,Cluster headache,final_rank,2,,False
+ddxplus,test:51945,10,3,Anaphylaxis,final_rank,3,,False
+ddxplus,test:51945,10,4,Acute laryngitis,final_rank,4,,False
+ddxplus,test:51945,10,5,Pericarditis,final_rank,5,,False
+ddxplus,test:51945,10,6,Pancreatic neoplasm,final_rank,6,,False
+ddxplus,test:51945,10,7,Ebola,final_rank,7,,False
+ddxplus,test:51945,10,8,HIV (initial infection),final_rank,8,,False
+ddxplus,test:51945,10,9,Pulmonary embolism,final_rank,9,,False
+ddxplus,test:51945,10,10,Inguinal hernia,final_rank,10,,False
+ddxplus,test:51945,10,11,Panic attack,llm_rank,3,,False
+ddxplus,test:51945,10,12,Sarcoidosis,llm_rank,4,,False
+ddxplus,test:51945,10,13,Stable angina,llm_rank,5,,False
+ddxplus,test:51945,10,14,PSVT,llm_rank,6,,False
+ddxplus,test:51945,10,15,Chronic rhinosinusitis,llm_rank,7,,False
+ddxplus,test:51945,10,16,GERD,llm_rank,8,,False
+ddxplus,test:51945,10,17,Acute otitis media,llm_rank,9,,False
+ddxplus,test:51945,10,18,URTI,llm_rank,10,,True
+ddxplus,test:51945,15,1,Panic attack,final_rank,1,,False
+ddxplus,test:51945,15,2,Cluster headache,final_rank,2,,False
+ddxplus,test:51945,15,3,Pericarditis,final_rank,3,,False
+ddxplus,test:51945,15,4,Anemia,final_rank,4,,False
+ddxplus,test:51945,15,5,Anaphylaxis,final_rank,5,,False
+ddxplus,test:51945,15,6,Epiglottitis,final_rank,6,,False
+ddxplus,test:51945,15,7,Pneumonia,final_rank,7,,False
+ddxplus,test:51945,15,8,Pancreatic neoplasm,final_rank,8,,False
+ddxplus,test:51945,15,9,Pulmonary embolism,final_rank,9,,False
+ddxplus,test:51945,15,10,HIV (initial infection),final_rank,10,,False
+ddxplus,test:51945,15,11,GERD,llm_rank,3,,False
+ddxplus,test:51945,15,12,Chronic rhinosinusitis,llm_rank,4,,False
+ddxplus,test:51945,15,13,Stable angina,llm_rank,5,,False
+ddxplus,test:51945,15,14,Boerhaave,llm_rank,6,,False
+ddxplus,test:51945,15,15,Acute rhinosinusitis,llm_rank,7,,False
+ddxplus,test:51945,15,16,Unstable angina,llm_rank,8,,False
+ddxplus,test:51945,15,17,Possible NSTEMI / STEMI,llm_rank,9,,False
+ddxplus,test:56012,5,1,Localized edema,final_rank,1,,True
+ddxplus,test:56012,5,2,Acute pulmonary edema,final_rank,2,,False
+ddxplus,test:56012,5,3,Pulmonary embolism,final_rank,3,,False
+ddxplus,test:56012,5,4,Cluster headache,final_rank,4,,False
+ddxplus,test:56012,5,5,Viral pharyngitis,final_rank,5,,False
+ddxplus,test:56012,5,6,Ebola,final_rank,6,,False
+ddxplus,test:56012,5,7,URTI,final_rank,7,,False
+ddxplus,test:56012,5,8,Acute otitis media,final_rank,8,,False
+ddxplus,test:56012,5,9,Chronic rhinosinusitis,final_rank,9,,False
+ddxplus,test:56012,5,10,Spontaneous pneumothorax,final_rank,10,,False
+ddxplus,test:56012,5,11,Anaphylaxis,llm_rank,4,,False
+ddxplus,test:56012,5,12,Pneumonia,llm_rank,5,,False
+ddxplus,test:56012,5,13,Myocarditis,llm_rank,6,,False
+ddxplus,test:56012,5,14,Chagas,llm_rank,7,,False
+ddxplus,test:56012,5,15,Sarcoidosis,llm_rank,8,,False
+ddxplus,test:56012,5,16,Anemia,llm_rank,9,,False
+ddxplus,test:56012,5,17,Inguinal hernia,llm_rank,10,,False
+ddxplus,test:56012,10,1,Localized edema,final_rank,1,,True
+ddxplus,test:56012,10,2,Pulmonary embolism,final_rank,2,,False
+ddxplus,test:56012,10,3,Acute pulmonary edema,final_rank,3,,False
+ddxplus,test:56012,10,4,Bronchospasm / acute asthma exacerbation,final_rank,4,,False
+ddxplus,test:56012,10,5,Pericarditis,final_rank,5,,False
+ddxplus,test:56012,10,6,Myocarditis,final_rank,6,,False
+ddxplus,test:56012,10,7,Ebola,final_rank,7,,False
+ddxplus,test:56012,10,8,Myasthenia gravis,final_rank,8,,False
+ddxplus,test:56012,10,9,Spontaneous pneumothorax,final_rank,9,,False
+ddxplus,test:56012,10,10,Pulmonary neoplasm,final_rank,10,,False
+ddxplus,test:56012,10,11,Anaphylaxis,llm_rank,4,,False
+ddxplus,test:56012,10,12,Pneumonia,llm_rank,5,,False
+ddxplus,test:56012,10,13,Inguinal hernia,llm_rank,6,,False
+ddxplus,test:56012,10,14,Acute otitis media,llm_rank,8,,False
+ddxplus,test:56012,10,15,Chagas,llm_rank,9,,False
+ddxplus,test:56012,10,16,HIV (initial infection),llm_rank,10,,False
+ddxplus,test:56012,10,17,Heart failure,branch_1_rank,3,,False
+ddxplus,test:56012,10,18,Acute COPD exacerbation / infection,branch_1_rank,5,,False
+ddxplus,test:56012,10,19,Anemia,branch_1_rank,9,,False
+ddxplus,test:56012,10,20,Atrial fibrillation,branch_1_rank,10,,False
+ddxplus,test:56012,10,21,Possible NSTEMI / STEMI,branch_2_rank,5,,False
+ddxplus,test:56012,10,22,Stable angina,branch_2_rank,7,,False
+ddxplus,test:56012,10,23,Unstable angina,branch_2_rank,8,,False
+ddxplus,test:56012,15,1,Localized edema,final_rank,1,,True
+ddxplus,test:56012,15,2,Pulmonary embolism,final_rank,2,,False
+ddxplus,test:56012,15,3,Acute pulmonary edema,final_rank,3,,False
+ddxplus,test:56012,15,4,Pericarditis,final_rank,4,,False
+ddxplus,test:56012,15,5,Bronchospasm / acute asthma exacerbation,final_rank,5,,False
+ddxplus,test:56012,15,6,Myocarditis,final_rank,6,,False
+ddxplus,test:56012,15,7,Ebola,final_rank,7,,False
+ddxplus,test:56012,15,8,Myasthenia gravis,final_rank,8,,False
+ddxplus,test:56012,15,9,Spontaneous pneumothorax,final_rank,9,,False
+ddxplus,test:56012,15,10,Pulmonary neoplasm,final_rank,10,,False
+ddxplus,test:56012,15,11,Anaphylaxis,llm_rank,4,,False
+ddxplus,test:56012,15,12,Pneumonia,llm_rank,5,,False
+ddxplus,test:56012,15,13,Inguinal hernia,llm_rank,6,,False
+ddxplus,test:56012,15,14,Acute otitis media,llm_rank,8,,False
+ddxplus,test:56012,15,15,Chagas,llm_rank,9,,False
+ddxplus,test:56012,15,16,HIV (initial infection),llm_rank,10,,False
+ddxplus,test:56012,15,17,Heart failure,branch_1_rank,3,,False
+ddxplus,test:56012,15,18,Acute COPD exacerbation / infection,branch_1_rank,4,,False
+ddxplus,test:56012,15,19,Possible NSTEMI / STEMI,branch_1_rank,9,,False
+ddxplus,test:56012,15,20,Unstable angina,branch_1_rank,10,,False
+ddxplus,test:56012,15,21,Atrial fibrillation,branch_2_rank,4,,False
+ddxplus,test:56012,15,22,Stable angina,branch_2_rank,7,,False
+ddxplus,test:89931,5,1,Pneumonia,final_rank,1,,True
+ddxplus,test:89931,5,2,Influenza,final_rank,2,,False
+ddxplus,test:89931,5,3,Bronchitis,final_rank,3,,False
+ddxplus,test:89931,5,4,URTI,final_rank,4,,False
+ddxplus,test:89931,5,5,Tuberculosis,final_rank,5,,False
+ddxplus,test:89931,5,6,Acute otitis media,final_rank,6,,False
+ddxplus,test:89931,5,7,HIV (initial infection),final_rank,7,,False
+ddxplus,test:89931,5,8,Bronchiectasis,final_rank,8,,False
+ddxplus,test:89931,5,9,Bronchiolitis,final_rank,9,,False
+ddxplus,test:89931,5,10,Croup,final_rank,10,,False
+ddxplus,test:89931,5,11,Viral pharyngitis,llm_rank,8,,False
+ddxplus,test:89931,5,12,Acute rhinosinusitis,llm_rank,10,,False
+ddxplus,test:89931,5,13,Whooping cough,branch_1_rank,8,,False
+ddxplus,test:89931,5,14,Bronchospasm / acute asthma exacerbation,branch_1_rank,10,,False
+ddxplus,test:89931,10,1,Pneumonia,final_rank,1,,True
+ddxplus,test:89931,10,2,Influenza,final_rank,2,,False
+ddxplus,test:89931,10,3,Bronchitis,final_rank,3,,False
+ddxplus,test:89931,10,4,URTI,final_rank,4,,False
+ddxplus,test:89931,10,5,Bronchiolitis,final_rank,5,,False
+ddxplus,test:89931,10,6,Acute otitis media,final_rank,6,,False
+ddxplus,test:89931,10,7,HIV (initial infection),final_rank,7,,False
+ddxplus,test:89931,10,8,Bronchiectasis,final_rank,8,,False
+ddxplus,test:89931,10,9,Croup,final_rank,9,,False
+ddxplus,test:89931,10,10,Acute COPD exacerbation / infection,final_rank,10,,False
+ddxplus,test:89931,10,11,Tuberculosis,llm_rank,6,,False
+ddxplus,test:89931,10,12,Viral pharyngitis,llm_rank,8,,False
+ddxplus,test:89931,10,13,Acute rhinosinusitis,llm_rank,10,,False
+ddxplus,test:89931,10,14,Bronchospasm / acute asthma exacerbation,branch_1_rank,7,,False
+ddxplus,test:89931,10,15,Whooping cough,branch_1_rank,10,,False
+ddxplus,test:89931,15,1,Pneumonia,final_rank,1,,True
+ddxplus,test:89931,15,2,Influenza,final_rank,2,,False
+ddxplus,test:89931,15,3,Bronchitis,final_rank,3,,False
+ddxplus,test:89931,15,4,URTI,final_rank,4,,False
+ddxplus,test:89931,15,5,Acute otitis media,final_rank,5,,False
+ddxplus,test:89931,15,6,Viral pharyngitis,final_rank,6,,False
+ddxplus,test:89931,15,7,Tuberculosis,final_rank,7,,False
+ddxplus,test:89931,15,8,Bronchiectasis,final_rank,8,,False
+ddxplus,test:89931,15,9,HIV (initial infection),final_rank,9,,False
+ddxplus,test:89931,15,10,Acute COPD exacerbation / infection,final_rank,10,,False
+ddxplus,test:89931,15,11,Acute rhinosinusitis,llm_rank,8,,False
+ddxplus,test:89931,15,12,Bronchiolitis,branch_1_rank,4,,False
+ddxplus,test:89931,15,13,Bronchospasm / acute asthma exacerbation,branch_1_rank,7,,False
+ddxplus,test:89931,15,14,Whooping cough,branch_1_rank,10,,False
+icraft_md,icraft_md:109,5,1,Acrodermatitis enteropathica,final_rank,1,,True
+icraft_md,icraft_md:109,5,2,Jacquet's dermatitis,final_rank,2,,False
+icraft_md,icraft_md:109,5,3,Langerhans cell histiocytosis,final_rank,3,,False
+icraft_md,icraft_md:109,5,4,Eczema coxsackium,final_rank,4,,False
+icraft_md,icraft_md:109,10,1,Acrodermatitis enteropathica,final_rank,1,,True
+icraft_md,icraft_md:109,10,2,Jacquet's dermatitis,final_rank,2,,False
+icraft_md,icraft_md:109,10,3,Langerhans cell histiocytosis,final_rank,3,,False
+icraft_md,icraft_md:109,10,4,Eczema coxsackium,final_rank,4,,False
+icraft_md,icraft_md:109,15,1,Acrodermatitis enteropathica,final_rank,1,,True
+icraft_md,icraft_md:109,15,2,Jacquet's dermatitis,final_rank,2,,False
+icraft_md,icraft_md:109,15,3,Langerhans cell histiocytosis,final_rank,3,,False
+icraft_md,icraft_md:109,15,4,Eczema coxsackium,final_rank,4,,False
+icraft_md,icraft_md:111,5,1,Pyoderma grangrenosum,final_rank,1,,True
+icraft_md,icraft_md:111,5,2,Venous ulcer,final_rank,2,,False
+icraft_md,icraft_md:111,5,3,Arterial ulcer,final_rank,3,,False
+icraft_md,icraft_md:111,5,4,Traumatic wound,final_rank,4,,False
+icraft_md,icraft_md:111,10,1,Pyoderma grangrenosum,final_rank,1,,True
+icraft_md,icraft_md:111,10,2,Venous ulcer,final_rank,2,,False
+icraft_md,icraft_md:111,10,3,Arterial ulcer,final_rank,3,,False
+icraft_md,icraft_md:111,10,4,Traumatic wound,final_rank,4,,False
+icraft_md,icraft_md:111,15,1,Pyoderma grangrenosum,final_rank,1,,True
+icraft_md,icraft_md:111,15,2,Venous ulcer,final_rank,2,,False
+icraft_md,icraft_md:111,15,3,Arterial ulcer,final_rank,3,,False
+icraft_md,icraft_md:111,15,4,Traumatic wound,final_rank,4,,False
+icraft_md,icraft_md:113,5,1,Mycoplasma pneumoniae-induced rash and mucositis,final_rank,1,,True
+icraft_md,icraft_md:113,5,2,Erythema multiforme major,final_rank,2,,False
+icraft_md,icraft_md:113,5,3,Stevens-Johnson Syndrome,final_rank,3,,False
+icraft_md,icraft_md:113,5,4,Herpetic gingivostomatitis,final_rank,4,,False
+icraft_md,icraft_md:113,10,1,Mycoplasma pneumoniae-induced rash and mucositis,final_rank,1,,True
+icraft_md,icraft_md:113,10,2,Erythema multiforme major,final_rank,2,,False
+icraft_md,icraft_md:113,10,3,Stevens-Johnson Syndrome,final_rank,3,,False
+icraft_md,icraft_md:113,10,4,Herpetic gingivostomatitis,final_rank,4,,False
+icraft_md,icraft_md:113,15,1,Mycoplasma pneumoniae-induced rash and mucositis,final_rank,1,,True
+icraft_md,icraft_md:113,15,2,Erythema multiforme major,final_rank,2,,False
+icraft_md,icraft_md:113,15,3,Stevens-Johnson Syndrome,final_rank,3,,False
+icraft_md,icraft_md:113,15,4,Herpetic gingivostomatitis,final_rank,4,,False
+icraft_md,icraft_md:135,5,1,Molluscum contagiosum,final_rank,1,,True
+icraft_md,icraft_md:135,5,2,Herpes virus infection,final_rank,2,,False
+icraft_md,icraft_md:135,5,3,Fibrous papule,final_rank,3,,False
+icraft_md,icraft_md:135,5,4,Basal cell carcinoma,final_rank,4,,False
+icraft_md,icraft_md:135,10,1,Molluscum contagiosum,final_rank,1,,True
+icraft_md,icraft_md:135,10,2,Herpes virus infection,final_rank,2,,False
+icraft_md,icraft_md:135,10,3,Fibrous papule,final_rank,3,,False
+icraft_md,icraft_md:135,10,4,Basal cell carcinoma,final_rank,4,,False
+icraft_md,icraft_md:135,15,1,Molluscum contagiosum,final_rank,1,,True
+icraft_md,icraft_md:135,15,2,Herpes virus infection,final_rank,2,,False
+icraft_md,icraft_md:135,15,3,Fibrous papule,final_rank,3,,False
+icraft_md,icraft_md:135,15,4,Basal cell carcinoma,final_rank,4,,False
+icraft_md,icraft_md:14,5,1,Severe recessive dystrophic EB,final_rank,1,,False
+icraft_md,icraft_md:14,5,2,EBS-Dowling Meara,final_rank,2,,True
+icraft_md,icraft_md:14,5,3,Junctional EB,final_rank,3,,False
+icraft_md,icraft_md:14,5,4,Sweet syndrome,final_rank,4,,False
+icraft_md,icraft_md:14,10,1,EBS-Dowling Meara,final_rank,1,,True
+icraft_md,icraft_md:14,10,2,Junctional EB,final_rank,2,,False
+icraft_md,icraft_md:14,10,3,Severe recessive dystrophic EB,final_rank,3,,False
+icraft_md,icraft_md:14,10,4,Sweet syndrome,final_rank,4,,False
+icraft_md,icraft_md:14,15,1,Severe recessive dystrophic EB,final_rank,1,,False
+icraft_md,icraft_md:14,15,2,EBS-Dowling Meara,final_rank,2,,True
+icraft_md,icraft_md:14,15,3,Junctional EB,final_rank,3,,False
+icraft_md,icraft_md:14,15,4,Sweet syndrome,final_rank,4,,False
+icraft_md,icraft_md:18,5,1,Anetoderma associated with SLE,final_rank,1,,True
+icraft_md,icraft_md:18,5,2,Post-inflammatory elastolysis,final_rank,2,,False
+icraft_md,icraft_md:18,5,3,Mid-dermal elastolysis,final_rank,3,,False
+icraft_md,icraft_md:18,5,4,Cutis laxa,final_rank,4,,False
+icraft_md,icraft_md:18,10,1,Anetoderma associated with SLE,final_rank,1,,True
+icraft_md,icraft_md:18,10,2,Post-inflammatory elastolysis,final_rank,2,,False
+icraft_md,icraft_md:18,10,3,Mid-dermal elastolysis,final_rank,3,,False
+icraft_md,icraft_md:18,10,4,Cutis laxa,final_rank,4,,False
+icraft_md,icraft_md:18,15,1,Anetoderma associated with SLE,final_rank,1,,True
+icraft_md,icraft_md:18,15,2,Mid-dermal elastolysis,final_rank,2,,False
+icraft_md,icraft_md:18,15,3,Post-inflammatory elastolysis,final_rank,3,,False
+icraft_md,icraft_md:18,15,4,Cutis laxa,final_rank,4,,False
+icraft_md,icraft_md:38,5,1,Toxicodendron dermatitis,final_rank,1,,True
+icraft_md,icraft_md:38,5,2,Phytophotodermatitis,final_rank,2,,False
+icraft_md,icraft_md:38,5,3,Bullous impetigo,final_rank,3,,False
+icraft_md,icraft_md:38,5,4,Shingles,final_rank,4,,False
+icraft_md,icraft_md:38,10,1,Toxicodendron dermatitis,final_rank,1,,True
+icraft_md,icraft_md:38,10,2,Phytophotodermatitis,final_rank,2,,False
+icraft_md,icraft_md:38,10,3,Bullous impetigo,final_rank,3,,False
+icraft_md,icraft_md:38,10,4,Shingles,final_rank,4,,False
+icraft_md,icraft_md:38,15,1,Toxicodendron dermatitis,final_rank,1,,True
+icraft_md,icraft_md:38,15,2,Phytophotodermatitis,final_rank,2,,False
+icraft_md,icraft_md:38,15,3,Bullous impetigo,final_rank,3,,False
+icraft_md,icraft_md:38,15,4,Shingles,final_rank,4,,False
+icraft_md,icraft_md:55,5,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,final_rank,1,,True
+icraft_md,icraft_md:55,5,2,Disseminated intravascular coagulation,final_rank,2,,False
+icraft_md,icraft_md:55,5,3,Warfarin-induced skin necrosis,final_rank,3,,False
+icraft_md,icraft_md:55,5,4,Tinea incognito,final_rank,4,,False
+icraft_md,icraft_md:55,10,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,final_rank,1,,True
+icraft_md,icraft_md:55,10,2,Disseminated intravascular coagulation,final_rank,2,,False
+icraft_md,icraft_md:55,10,3,Warfarin-induced skin necrosis,final_rank,3,,False
+icraft_md,icraft_md:55,10,4,Tinea incognito,final_rank,4,,False
+icraft_md,icraft_md:55,15,1,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,final_rank,1,,True
+icraft_md,icraft_md:55,15,2,Disseminated intravascular coagulation,final_rank,2,,False
+icraft_md,icraft_md:55,15,3,Warfarin-induced skin necrosis,final_rank,3,,False
+icraft_md,icraft_md:55,15,4,Tinea incognito,final_rank,4,,False
+icraft_md,icraft_md:78,5,1,Urticarial vasculitis,final_rank,1,,True
+icraft_md,icraft_md:78,5,2,Schnitzler syndrome,final_rank,2,,False
+icraft_md,icraft_md:78,5,3,Systemic lupus erythematosus,final_rank,3,,False
+icraft_md,icraft_md:78,5,4,Photodermatitis,final_rank,4,,False
+icraft_md,icraft_md:78,10,1,Urticarial vasculitis,final_rank,1,,True
+icraft_md,icraft_md:78,10,2,Systemic lupus erythematosus,final_rank,2,,False
+icraft_md,icraft_md:78,10,3,Photodermatitis,final_rank,3,,False
+icraft_md,icraft_md:78,10,4,Schnitzler syndrome,final_rank,4,,False
+icraft_md,icraft_md:78,15,1,Urticarial vasculitis,final_rank,1,,True
+icraft_md,icraft_md:78,15,2,Schnitzler syndrome,final_rank,2,,False
+icraft_md,icraft_md:78,15,3,Systemic lupus erythematosus,final_rank,3,,False
+icraft_md,icraft_md:78,15,4,Photodermatitis,final_rank,4,,False
+icraft_md,icraft_md:81,5,1,Alopecia areata,final_rank,1,,True
+icraft_md,icraft_md:81,5,2,Tinea capitis,final_rank,2,,False
+icraft_md,icraft_md:81,5,3,Trichotillomania,final_rank,3,,False
+icraft_md,icraft_md:81,5,4,Androgenetic alopecia,final_rank,4,,False
+icraft_md,icraft_md:81,10,1,Alopecia areata,final_rank,1,,True
+icraft_md,icraft_md:81,10,2,Tinea capitis,final_rank,2,,False
+icraft_md,icraft_md:81,10,3,Trichotillomania,final_rank,3,,False
+icraft_md,icraft_md:81,10,4,Androgenetic alopecia,final_rank,4,,False
+icraft_md,icraft_md:81,15,1,Alopecia areata,final_rank,1,,True
+icraft_md,icraft_md:81,15,2,Tinea capitis,final_rank,2,,False
+icraft_md,icraft_md:81,15,3,Trichotillomania,final_rank,3,,False
+icraft_md,icraft_md:81,15,4,Androgenetic alopecia,final_rank,4,,False
+rarebench,rarebench:LIRICAL:289,5,1,Cockayne syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:289,5,2,TBCK-related intellectual disability syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:289,5,3,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,3,,False
+rarebench,rarebench:LIRICAL:289,5,4,"Osteogenesis imperfecta, type XII",final_rank,4,,False
+rarebench,rarebench:LIRICAL:289,5,5,Hypomyelinating leukodystrophy,final_rank,5,,False
+rarebench,rarebench:LIRICAL:289,5,6,Aarskog-Scott syndrome,final_rank,6,,False
+rarebench,rarebench:LIRICAL:289,5,7,"Microcephaly 5, primary, autosomal recessive",final_rank,7,,False
+rarebench,rarebench:LIRICAL:289,5,8,Intellectual developmental disorder with dysmorphic facies and ptosis,final_rank,8,,False
+rarebench,rarebench:LIRICAL:289,5,9,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",final_rank,9,,False
+rarebench,rarebench:LIRICAL:289,5,10,Smith-Magenis syndrome,final_rank,10,,False
+rarebench,rarebench:LIRICAL:289,5,11,Acromicric dysplasia,llm_rank,9,,False
+rarebench,rarebench:LIRICAL:289,5,12,"Acromesomelic dysplasia, Maroteaux type",llm_rank,10,,False
+rarebench,rarebench:LIRICAL:289,10,1,Cockayne syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:289,10,2,TBCK-related intellectual disability syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:289,10,3,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,3,,False
+rarebench,rarebench:LIRICAL:289,10,4,"Osteogenesis imperfecta, type XII",final_rank,4,,False
+rarebench,rarebench:LIRICAL:289,10,5,Hypomyelinating leukodystrophy,final_rank,5,,False
+rarebench,rarebench:LIRICAL:289,10,6,"Microcephaly 5, primary, autosomal recessive",final_rank,6,,False
+rarebench,rarebench:LIRICAL:289,10,7,Aarskog-Scott syndrome,final_rank,7,,False
+rarebench,rarebench:LIRICAL:289,10,8,Intellectual developmental disorder with dysmorphic facies and ptosis,final_rank,8,,False
+rarebench,rarebench:LIRICAL:289,10,9,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",final_rank,9,,False
+rarebench,rarebench:LIRICAL:289,10,10,Smith-Lemli-Opitz syndrome,final_rank,10,,False
+rarebench,rarebench:LIRICAL:289,15,1,Cockayne syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:289,15,2,TBCK-related intellectual disability syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:289,15,3,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,3,,False
+rarebench,rarebench:LIRICAL:289,15,4,"Osteogenesis imperfecta, type XII",final_rank,4,,False
+rarebench,rarebench:LIRICAL:289,15,5,Hypomyelinating leukodystrophy,final_rank,5,,False
+rarebench,rarebench:LIRICAL:289,15,6,"Microcephaly 5, primary, autosomal recessive",final_rank,6,,False
+rarebench,rarebench:LIRICAL:289,15,7,Aarskog-Scott syndrome,final_rank,7,,False
+rarebench,rarebench:LIRICAL:289,15,8,Intellectual developmental disorder with dysmorphic facies and ptosis,final_rank,8,,False
+rarebench,rarebench:LIRICAL:289,15,9,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",final_rank,9,,False
+rarebench,rarebench:LIRICAL:289,15,10,Smith-Lemli-Opitz syndrome,final_rank,10,,False
+rarebench,rarebench:LIRICAL:289,15,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:LIRICAL:365,5,1,TBCK-related intellectual disability syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:365,5,2,Rett syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:365,5,3,"Mental retardation, autosomal recessive 18",final_rank,3,,False
+rarebench,rarebench:LIRICAL:365,5,4,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,4,,False
+rarebench,rarebench:LIRICAL:365,5,5,Stankiewicz-Isidor syndrome,final_rank,5,,False
+rarebench,rarebench:LIRICAL:365,5,6,"Mental retardation, autosomal recessive 38",final_rank,6,,False
+rarebench,rarebench:LIRICAL:365,5,7,Muenke syndrome,final_rank,7,,False
+rarebench,rarebench:LIRICAL:365,5,8,Glutaric acidemia type I,final_rank,8,,False
+rarebench,rarebench:LIRICAL:365,5,9,Smith-Lemli-Opitz syndrome,final_rank,9,,False
+rarebench,rarebench:LIRICAL:365,5,10,Tuberous sclerosis,final_rank,10,,False
+rarebench,rarebench:LIRICAL:365,5,11,Immunoskeletal dysplasia with neurodevelopmental abnormalities,llm_rank,10,,False
+rarebench,rarebench:LIRICAL:365,10,1,TBCK-related intellectual disability syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:365,10,2,Rett syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:365,10,3,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,3,,False
+rarebench,rarebench:LIRICAL:365,10,4,Stankiewicz-Isidor syndrome,final_rank,4,,False
+rarebench,rarebench:LIRICAL:365,10,5,"Mental retardation, autosomal recessive 18",final_rank,5,,False
+rarebench,rarebench:LIRICAL:365,10,6,"Mental retardation, autosomal recessive 38",final_rank,6,,False
+rarebench,rarebench:LIRICAL:365,10,7,Muenke syndrome,final_rank,7,,False
+rarebench,rarebench:LIRICAL:365,10,8,Glutaric acidemia type I,final_rank,8,,False
+rarebench,rarebench:LIRICAL:365,10,9,Smith-Lemli-Opitz syndrome,final_rank,9,,False
+rarebench,rarebench:LIRICAL:365,10,10,Tuberous sclerosis,final_rank,10,,False
+rarebench,rarebench:LIRICAL:365,10,11,Immunoskeletal dysplasia with neurodevelopmental abnormalities,llm_rank,5,,False
+rarebench,rarebench:LIRICAL:365,10,12,Homocystinuria,llm_rank,6,,False
+rarebench,rarebench:LIRICAL:365,15,1,TBCK-related intellectual disability syndrome,final_rank,1,,True
+rarebench,rarebench:LIRICAL:365,15,2,Rett syndrome,final_rank,2,,False
+rarebench,rarebench:LIRICAL:365,15,3,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",final_rank,3,,False
+rarebench,rarebench:LIRICAL:365,15,4,Stankiewicz-Isidor syndrome,final_rank,4,,False
+rarebench,rarebench:LIRICAL:365,15,5,"Mental retardation, autosomal recessive 18",final_rank,5,,False
+rarebench,rarebench:LIRICAL:365,15,6,Smith-Magenis syndrome,final_rank,6,,False
+rarebench,rarebench:LIRICAL:365,15,7,"Mental retardation, autosomal recessive 38",final_rank,7,,False
+rarebench,rarebench:LIRICAL:365,15,8,Muenke syndrome,final_rank,8,,False
+rarebench,rarebench:LIRICAL:365,15,9,Smith-Lemli-Opitz syndrome,final_rank,9,,False
+rarebench,rarebench:LIRICAL:365,15,10,Tuberous sclerosis,final_rank,10,,False
+rarebench,rarebench:LIRICAL:365,15,11,Immunoskeletal dysplasia with neurodevelopmental abnormalities,llm_rank,10,,False
+rarebench,rarebench:MME:21,5,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,final_rank,1,,False
+rarebench,rarebench:MME:21,5,2,Methylmalonate semialdehyde dehydrogenase deficiency,final_rank,2,,False
+rarebench,rarebench:MME:21,5,3,Autosomal recessive primary microcephaly,final_rank,3,,False
+rarebench,rarebench:MME:21,5,4,Poretti-Boltshauser syndrome,final_rank,4,,False
+rarebench,rarebench:MME:21,5,5,Cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,final_rank,5,,False
+rarebench,rarebench:MME:21,5,6,Beaulieu-Boycott-Innes syndrome,final_rank,6,,False
+rarebench,rarebench:MME:21,5,7,Cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,final_rank,7,,False
+rarebench,rarebench:MME:21,5,8,Mandibulofacial dysostosis-microcephaly syndrome,final_rank,8,,False
+rarebench,rarebench:MME:21,5,9,"Spondylometaphyseal dysplasia, Sedaghatian type",final_rank,9,,False
+rarebench,rarebench:MME:21,5,10,Cerebrocostomandibular syndrome,final_rank,10,,False
+rarebench,rarebench:MME:21,5,11,Combined immunodeficiency-enteropathy spectrum,llm_rank,9,,False
+rarebench,rarebench:MME:21,5,12,"Epilepsy, focal, with speech disorder and mental retardation",llm_rank,10,,True
+rarebench,rarebench:MME:21,10,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,final_rank,1,,False
+rarebench,rarebench:MME:21,10,2,Methylmalonate semialdehyde dehydrogenase deficiency,final_rank,2,,False
+rarebench,rarebench:MME:21,10,3,Autosomal recessive primary microcephaly,final_rank,3,,False
+rarebench,rarebench:MME:21,10,4,Poretti-Boltshauser syndrome,final_rank,4,,False
+rarebench,rarebench:MME:21,10,5,Cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,final_rank,5,,False
+rarebench,rarebench:MME:21,10,6,Mandibulofacial dysostosis-microcephaly syndrome,final_rank,6,,False
+rarebench,rarebench:MME:21,10,7,Beaulieu-Boycott-Innes syndrome,final_rank,7,,False
+rarebench,rarebench:MME:21,10,8,Cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,final_rank,8,,False
+rarebench,rarebench:MME:21,10,9,Cerebrocostomandibular syndrome,final_rank,9,,False
+rarebench,rarebench:MME:21,10,10,Perrault syndrome,final_rank,10,,False
+rarebench,rarebench:MME:21,10,11,Short syndrome,llm_rank,10,,False
+rarebench,rarebench:MME:21,15,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,final_rank,1,,False
+rarebench,rarebench:MME:21,15,2,Methylmalonate semialdehyde dehydrogenase deficiency,final_rank,2,,False
+rarebench,rarebench:MME:21,15,3,Poretti-Boltshauser syndrome,final_rank,3,,False
+rarebench,rarebench:MME:21,15,4,Autosomal recessive primary microcephaly,final_rank,4,,False
+rarebench,rarebench:MME:21,15,5,Cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,final_rank,5,,False
+rarebench,rarebench:MME:21,15,6,Mandibulofacial dysostosis-microcephaly syndrome,final_rank,6,,False
+rarebench,rarebench:MME:21,15,7,Beaulieu-Boycott-Innes syndrome,final_rank,7,,False
+rarebench,rarebench:MME:21,15,8,Cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,final_rank,8,,False
+rarebench,rarebench:MME:21,15,9,Cerebrocostomandibular syndrome,final_rank,9,,False
+rarebench,rarebench:MME:21,15,10,"Spondylometaphyseal dysplasia, Sedaghatian type",final_rank,10,,False
+rarebench,rarebench:MME:21,15,11,Microcephaly-capillary malformation syndrome,llm_rank,9,,False
+rarebench,rarebench:MME:21,15,12,"Epilepsy, focal, with speech disorder and mental retardation",llm_rank,10,,True
+rarebench,rarebench:RAMEDIS:30,5,1,Biotinidase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:30,5,2,Glutaric acidemia type I,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:30,5,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:30,5,4,Ornithine transcarbamylase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:30,5,5,Glutathione synthetase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:30,5,6,Maple syrup urine disease,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:30,5,7,Carbamoyl-phosphate synthetase 1 deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:30,5,8,Citrullinemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:30,5,9,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:30,5,10,PMM2-CDG,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:30,10,1,Biotinidase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:30,10,2,Maple syrup urine disease,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:30,10,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:30,10,4,Glutaric acidemia type I,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:30,10,5,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:30,10,6,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:30,10,7,Ornithine transcarbamylase deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:30,10,8,Glutathione synthetase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:30,10,9,Succinic semialdehyde dehydrogenase deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:30,10,10,Phenylketonuria,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:30,15,1,Biotinidase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:30,15,2,Maple syrup urine disease,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:30,15,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:30,15,4,Glutaric acidemia type I,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:30,15,5,Succinic semialdehyde dehydrogenase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:30,15,6,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:30,15,7,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:30,15,8,Glutathione synthetase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:30,15,9,Phenylketonuria,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:30,15,10,Ornithine transcarbamylase deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:369,5,1,Ornithine transcarbamylase deficiency,final_rank,1,,False
+rarebench,rarebench:RAMEDIS:369,5,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:369,5,3,Canavan disease,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:369,5,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:369,5,5,Orotic aciduria,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:369,5,6,Maple syrup urine disease,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:369,5,7,Citrullinemia type I,final_rank,7,,True
+rarebench,rarebench:RAMEDIS:369,5,8,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:369,5,9,Mitochondrial complex IV deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:369,5,10,Short chain acyl-CoA dehydrogenase deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:369,5,11,Argininosuccinic aciduria,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:369,10,1,Ornithine transcarbamylase deficiency,final_rank,1,,False
+rarebench,rarebench:RAMEDIS:369,10,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:369,10,3,Canavan disease,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:369,10,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:369,10,5,Orotic aciduria,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:369,10,6,Citrullinemia type I,final_rank,6,,True
+rarebench,rarebench:RAMEDIS:369,10,7,Maple syrup urine disease,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:369,10,8,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:369,10,9,Mitochondrial complex IV deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:369,10,10,Short chain acyl-CoA dehydrogenase deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:369,10,11,Argininosuccinic aciduria,llm_rank,3,,False
+rarebench,rarebench:RAMEDIS:369,10,12,Glutaric acidemia type I,llm_rank,8,,False
+rarebench,rarebench:RAMEDIS:369,10,13,Methylmalonic acidemia,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:369,10,14,Medium chain acyl-CoA dehydrogenase deficiency,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:369,15,1,Ornithine transcarbamylase deficiency,final_rank,1,,False
+rarebench,rarebench:RAMEDIS:369,15,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:369,15,3,Canavan disease,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:369,15,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:369,15,5,Orotic aciduria,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:369,15,6,Citrullinemia type I,final_rank,6,,True
+rarebench,rarebench:RAMEDIS:369,15,7,Maple syrup urine disease,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:369,15,8,Mitochondrial complex IV deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:369,15,9,Short chain acyl-CoA dehydrogenase deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:369,15,10,Carbamoyl-phosphate synthetase 1 deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:369,15,11,Argininosuccinic aciduria,llm_rank,3,,False
+rarebench,rarebench:RAMEDIS:369,15,12,Glutaric acidemia type I,llm_rank,8,,False
+rarebench,rarebench:RAMEDIS:369,15,13,Methylmalonic acidemia,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:459,5,1,Tyrosinemia type 1,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:459,5,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:459,5,3,Hyperphenylalaninemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:459,5,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:459,5,5,Smith-Lemli-Opitz syndrome,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:459,5,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:459,5,7,Tyrosinemia type III,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:459,5,8,Citrullinemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:459,5,9,Methylmalonic acidemia,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:459,5,10,Galactosemia,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:459,5,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:459,10,1,Tyrosinemia type 1,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:459,10,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:459,10,3,Hyperphenylalaninemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:459,10,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:459,10,5,Smith-Lemli-Opitz syndrome,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:459,10,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:459,10,7,Tyrosinemia type III,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:459,10,8,Citrullinemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:459,10,9,Methylmalonic acidemia,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:459,10,10,Galactosemia,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:459,10,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:459,15,1,Tyrosinemia type 1,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:459,15,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:459,15,3,Hyperphenylalaninemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:459,15,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:459,15,5,Smith-Lemli-Opitz syndrome,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:459,15,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:459,15,7,Tyrosinemia type III,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:459,15,8,Citrullinemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:459,15,9,Methylmalonic acidemia,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:459,15,10,Galactosemia,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:459,15,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,5,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:482,5,2,PMM2-CDG,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:482,5,3,Citrullinemia type I,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:482,5,4,Tyrosinemia type 1,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:482,5,5,Homocystinuria,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:482,5,6,Primary carnitine deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:482,5,7,Argininemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:482,5,8,Propionic acidemia,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:482,5,9,Mitochondrial DNA depletion syndrome 3,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:482,5,10,Methylmalonic acidemia,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,5,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,10,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:482,10,2,PMM2-CDG,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:482,10,3,Citrullinemia type I,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:482,10,4,Tyrosinemia type 1,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:482,10,5,Primary carnitine deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:482,10,6,Argininemia,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:482,10,7,Propionic acidemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:482,10,8,Homocystinuria,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:482,10,9,Mitochondrial DNA depletion syndrome 3,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:482,10,10,Methylmalonic acidemia,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,10,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,15,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:482,15,2,PMM2-CDG,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:482,15,3,Citrullinemia type I,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:482,15,4,Primary carnitine deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:482,15,5,Argininemia,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:482,15,6,Propionic acidemia,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:482,15,7,Tyrosinemia type 1,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:482,15,8,Homocystinuria,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:482,15,9,Methylmalonic acidemia,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:482,15,10,Mitochondrial DNA depletion syndrome 3,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:482,15,11,Glutaric acidemia type I,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,5,1,Glutaric acidemia type I,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:589,5,2,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:589,5,3,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:589,5,4,Methylmalonic acidemia,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:589,5,5,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:589,5,6,Phenylketonuria,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:589,5,7,Galactosemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:589,5,8,L-2-hydroxyglutaric aciduria,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:589,5,9,Biotinidase deficiency,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:589,5,10,Citrullinemia type II,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,5,11,Carnitine-acylcarnitine translocase deficiency,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,5,12,3-Methylglutaconic aciduria type I,branch_1_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,10,1,Glutaric acidemia type I,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:589,10,2,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:589,10,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:589,10,4,Phenylketonuria,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:589,10,5,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:589,10,6,Galactosemia,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:589,10,7,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:589,10,8,Biotinidase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:589,10,9,L-2-hydroxyglutaric aciduria,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:589,10,10,Citrullinemia type II,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,10,11,3-Methylglutaconic aciduria type I,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:589,10,12,3-Methylglutaconic aciduria type IV,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,15,1,Glutaric acidemia type I,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:589,15,2,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:589,15,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:589,15,4,Phenylketonuria,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:589,15,5,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:589,15,6,Galactosemia,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:589,15,7,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:589,15,8,Biotinidase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:589,15,9,L-2-hydroxyglutaric aciduria,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:589,15,10,Citrullinemia type II,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:589,15,11,3-Methylglutaconic aciduria type I,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:589,15,12,3-Methylglutaconic aciduria type IV,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:598,5,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:598,5,2,Biotinidase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:598,5,3,Tyrosinemia type III,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:598,5,4,Maple syrup urine disease,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:598,5,5,Tyrosinemia type 1,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:598,5,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:598,5,7,Methylmalonic acidemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:598,5,8,Glutaric acidemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:598,5,9,Citrullinemia type I,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:598,5,10,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:598,10,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:598,10,2,Biotinidase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:598,10,3,Tyrosinemia type III,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:598,10,4,Tyrosinemia type 1,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:598,10,5,Maple syrup urine disease,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:598,10,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:598,10,7,Methylmalonic acidemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:598,10,8,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:598,10,9,Glutaric acidemia type I,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:598,10,10,Citrullinemia type I,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:598,15,1,Phenylketonuria,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:598,15,2,Biotinidase deficiency,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:598,15,3,Tyrosinemia type III,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:598,15,4,Tyrosinemia type 1,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:598,15,5,Maple syrup urine disease,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:598,15,6,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:598,15,7,Methylmalonic acidemia,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:598,15,8,Glutaric acidemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:598,15,9,Citrullinemia type I,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:598,15,10,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:608,5,1,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:608,5,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:608,5,3,Biotinidase deficiency,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:608,5,4,Methylmalonic acidemia,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:608,5,5,Glutaric acidemia type I,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:608,5,6,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:608,5,7,Very long-chain acyl-CoA dehydrogenase deficiency,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:608,5,8,Citrullinemia type I,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:608,5,9,Citrullinemia type II,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:608,5,10,Tyrosinemia type III,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:608,5,11,Primary carnitine deficiency,llm_rank,2,,False
+rarebench,rarebench:RAMEDIS:608,10,1,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:608,10,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:608,10,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:608,10,4,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:608,10,5,Biotinidase deficiency,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:608,10,6,Citrullinemia type I,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:608,10,7,Glutaric acidemia type I,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:608,10,8,Citrullinemia type II,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:608,10,9,Tyrosinemia type III,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:608,10,10,Homocystinuria,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:608,10,11,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,llm_rank,9,,False
+rarebench,rarebench:RAMEDIS:608,10,12,Propionic acidemia,llm_rank,10,,False
+rarebench,rarebench:RAMEDIS:608,15,1,Medium chain acyl-CoA dehydrogenase deficiency,final_rank,1,,True
+rarebench,rarebench:RAMEDIS:608,15,2,Phenylketonuria,final_rank,2,,False
+rarebench,rarebench:RAMEDIS:608,15,3,Methylmalonic acidemia,final_rank,3,,False
+rarebench,rarebench:RAMEDIS:608,15,4,Biotinidase deficiency,final_rank,4,,False
+rarebench,rarebench:RAMEDIS:608,15,5,Citrullinemia type I,final_rank,5,,False
+rarebench,rarebench:RAMEDIS:608,15,6,Glutaric acidemia type I,final_rank,6,,False
+rarebench,rarebench:RAMEDIS:608,15,7,Citrullinemia type II,final_rank,7,,False
+rarebench,rarebench:RAMEDIS:608,15,8,3-Methylcrotonyl-CoA carboxylase deficiency,final_rank,8,,False
+rarebench,rarebench:RAMEDIS:608,15,9,Tyrosinemia type III,final_rank,9,,False
+rarebench,rarebench:RAMEDIS:608,15,10,Homocystinuria,final_rank,10,,False
+rarebench,rarebench:RAMEDIS:608,15,11,3-Methylglutaconic aciduria type I,llm_rank,9,,False

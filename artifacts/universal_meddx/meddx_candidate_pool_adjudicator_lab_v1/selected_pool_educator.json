@@ -1,0 +1,85 @@
+{
+  "selected_policy_name": "conservative_pool_educator_v1",
+  "status": "offline_candidate_not_yet_live_confirmed",
+  "input_run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "current_overall": {
+    "policy_name": "notebook46_current",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8111111111111111,
+    "top3": 0.8555555555555555,
+    "top5": 0.8555555555555555,
+    "wins_vs_current": 0,
+    "regressions_vs_current": 0,
+    "changed_predictions": 0
+  },
+  "selected_overall": {
+    "policy_name": "conservative_pool_educator_v1",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8333333333333334,
+    "top3": 0.8555555555555555,
+    "top5": 0.8555555555555555,
+    "wins_vs_current": 2,
+    "regressions_vs_current": 0,
+    "changed_predictions": 2
+  },
+  "case_blocked_learned_diagnostic_overall": {
+    "policy_name": "case_blocked_hgb_candidate_educator_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8555555555555555,
+    "top3": 0.8888888888888888,
+    "top5": 0.9222222222222223,
+    "wins_vs_current": 4,
+    "regressions_vs_current": 0,
+    "changed_predictions": 7
+  },
+  "label_fit_learned_diagnostic_overall": {
+    "policy_name": "label_fit_hgb_candidate_educator_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.9555555555555556,
+    "top3": 0.9777777777777777,
+    "top5": 0.9777777777777777,
+    "wins_vs_current": 13,
+    "regressions_vs_current": 0,
+    "changed_predictions": 15
+  },
+  "candidate_pool_oracle_overall": {
+    "policy_name": "candidate_pool_oracle_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.9777777777777777,
+    "top3": 0.9777777777777777,
+    "top5": 0.9777777777777777,
+    "wins_vs_current": 15,
+    "regressions_vs_current": 0,
+    "changed_predictions": 15
+  },
+  "promotion_decision": "Do not claim the learned educator as final. The selected label-free policy is safe but only modestly improves Notebook 46; the label-fit diagnostic exposes resolver headroom but needs a separate calibration cohort before deployment.",
+  "interpretation": [
+    "The broad pool remains the right abstraction: candidate-pool oracle is near ceiling, so acquisition is no longer the main failure on this run.",
+    "The conservative educator mainly protects high-confidence DDXPlus MLP decisions and avoids regressions.",
+    "Train-derived DDXPlus graph replay agrees with the MLP on the clean URTI/Bronchitis failures, but does not rescue the remaining ambiguous DDXPlus cases.",
+    "A label-fit learned educator can approach the candidate-pool ceiling, but case-blocked validation is much weaker, meaning the current 90-workup cohort is too small to deploy a learned universal resolver honestly."
+  ],
+  "artifact_contract": [
+    "resolved_run_config.json",
+    "candidate_level_educator_features.csv",
+    "ddxplus_graph_replay_candidate_features.csv",
+    "label_free_pool_educator_results.csv",
+    "label_free_pool_educator_summary.csv",
+    "case_level_learned_diagnostic_results.csv",
+    "learned_pool_educator_summary.csv",
+    "signal_failure_audit.csv",
+    "truth_source_signal_coverage.csv",
+    "selected_pool_educator.json",
+    "figures/"
+  ]
+}

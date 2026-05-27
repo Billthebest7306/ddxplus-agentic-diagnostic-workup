@@ -1,0 +1,8 @@
+source_signal,truth_coverage_rate,truth_coverage_count,num_workups_with_truth_in_pool
+final_top5,0.875,77,88
+llm_top5,0.9431818181818182,83,88
+ddxplus_mlp_top5,0.3068181818181818,27,88
+casebase_prior,0.5227272727272727,46,88
+rarebench_graph,0.3068181818181818,27,88
+branch_rank,0.1590909090909091,14,88
+ddxplus_graph_top5,0.2840909090909091,25,88

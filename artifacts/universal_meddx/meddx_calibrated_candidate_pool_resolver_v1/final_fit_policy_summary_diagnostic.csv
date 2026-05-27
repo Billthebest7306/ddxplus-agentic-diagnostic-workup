@@ -1,0 +1,11 @@
+policy_name,dataset_name,budget,num_workups,top1,top3,top5,wins_vs_current,regressions_vs_current,changed_predictions
+final_fit_logistic_pool_resolver_diagnostic,ALL,-1,90,0.8666666666666667,0.9666666666666667,0.9777777777777777,5,0,6
+final_fit_logistic_pool_resolver_diagnostic,ddxplus,5,10,0.8,0.9,1.0,2,0,2
+final_fit_logistic_pool_resolver_diagnostic,ddxplus,10,10,0.9,1.0,1.0,2,0,2
+final_fit_logistic_pool_resolver_diagnostic,ddxplus,15,10,0.9,0.9,0.9,1,0,2
+final_fit_logistic_pool_resolver_diagnostic,icraft_md,5,10,0.9,1.0,1.0,0,0,0
+final_fit_logistic_pool_resolver_diagnostic,icraft_md,10,10,1.0,1.0,1.0,0,0,0
+final_fit_logistic_pool_resolver_diagnostic,icraft_md,15,10,0.9,1.0,1.0,0,0,0
+final_fit_logistic_pool_resolver_diagnostic,rarebench,5,10,0.8,1.0,1.0,0,0,0
+final_fit_logistic_pool_resolver_diagnostic,rarebench,10,10,0.8,0.9,0.9,0,0,0
+final_fit_logistic_pool_resolver_diagnostic,rarebench,15,10,0.8,1.0,1.0,0,0,0

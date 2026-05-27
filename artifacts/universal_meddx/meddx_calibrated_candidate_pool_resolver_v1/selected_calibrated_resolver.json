@@ -1,0 +1,97 @@
+{
+  "selected_policy_name": "calibrated_logistic_pool_resolver_v1",
+  "status": "offline_calibration_candidate_needs_heldout_live_confirmation",
+  "current_overall": {
+    "policy_name": "notebook46_current",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8111111111111111,
+    "top3": 0.8555555555555555,
+    "top5": 0.8555555555555555,
+    "wins_vs_current": 0,
+    "regressions_vs_current": 0,
+    "changed_predictions": 0
+  },
+  "selected_case_blocked_overall": {
+    "policy_name": "calibrated_logistic_pool_resolver_v1",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8666666666666667,
+    "top3": 0.8888888888888888,
+    "top5": 0.9,
+    "wins_vs_current": 5,
+    "regressions_vs_current": 0,
+    "changed_predictions": 7
+  },
+  "strict_nested_threshold_overall": {
+    "policy_name": "strict_nested_threshold_logistic_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8555555555555555,
+    "top3": 0.8888888888888888,
+    "top5": 0.9,
+    "wins_vs_current": 4,
+    "regressions_vs_current": 0,
+    "changed_predictions": 5
+  },
+  "final_fit_diagnostic_overall": {
+    "policy_name": "final_fit_logistic_pool_resolver_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.8666666666666667,
+    "top3": 0.9666666666666667,
+    "top5": 0.9777777777777777,
+    "wins_vs_current": 5,
+    "regressions_vs_current": 0,
+    "changed_predictions": 6
+  },
+  "candidate_pool_oracle_overall": {
+    "policy_name": "candidate_pool_oracle_diagnostic",
+    "dataset_name": "ALL",
+    "budget": -1,
+    "num_workups": 90,
+    "top1": 0.9777777777777776,
+    "top3": 0.9777777777777776,
+    "top5": 0.9777777777777776,
+    "wins_vs_current": 15,
+    "regressions_vs_current": 0,
+    "changed_predictions": 15
+  },
+  "selected_threshold": {
+    "min_probability_margin_vs_current": 0.0,
+    "min_top_probability": 0.0,
+    "min_independent_signal_delta_vs_current": -1.0,
+    "min_source_weighted_delta_vs_current": -999.0
+  },
+  "model_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_calibrated_candidate_pool_resolver_v1/calibrated_logistic_pool_resolver_v1.joblib",
+  "feature_contract_path": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_calibrated_candidate_pool_resolver_v1/candidate_resolver_feature_contract.json",
+  "interpretation": [
+    "The calibrated logistic resolver improves Notebook 46 from 73/90 to 78/90 under case-blocked out-of-fold evaluation with zero regressions.",
+    "The selected model is system-wide: one candidate scorer across DDXPlus, iCraft-MD, and RareBench, with dataset as a feature rather than case-specific rules.",
+    "The strict nested threshold diagnostic is more conservative; this warns that threshold selection from only 30 case groups is still fragile.",
+    "The candidate-pool oracle remains 88/90, so remaining misses are mostly resolver discrimination and two true pool/acquisition misses.",
+    "Do not claim final deployment performance until this frozen resolver is run on a fresh held-out live cohort."
+  ],
+  "artifact_contract": [
+    "resolved_run_config.json",
+    "candidate_resolver_feature_contract.json",
+    "case_blocked_candidate_scores.csv",
+    "case_blocked_workup_decision_features.csv",
+    "resolver_threshold_sweep.csv",
+    "case_level_calibrated_resolver_results.csv",
+    "calibrated_resolver_policy_summary.csv",
+    "strict_nested_threshold_results.csv",
+    "strict_nested_threshold_summary.csv",
+    "calibrated_logistic_pool_resolver_v1.joblib",
+    "logistic_feature_coefficients.csv",
+    "final_fit_candidate_scores_diagnostic.csv",
+    "final_fit_policy_summary_diagnostic.csv",
+    "selected_resolver_failure_audit.csv",
+    "selected_calibrated_resolver.json",
+    "figures/"
+  ]
+}

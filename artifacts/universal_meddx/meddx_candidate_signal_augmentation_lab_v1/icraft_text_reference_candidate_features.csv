@@ -1,0 +1,962 @@
+workup_id,label_key,icraft_ref_count,icraft_no_reference,icraft_tfidf_max_similarity,icraft_tfidf_mean_similarity
+ddxplus|test:100196|5,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,allergic sinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,croup,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:100196|5,gerd,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,sle,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|10,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,scombroid food poisoning,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,sle,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:100196|15,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:119540|5,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,larygospasm,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,whooping cough,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:119540|15,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:122530|5,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,whooping cough,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:122530|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,whooping cough,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:122530|15,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,myasthenia gravis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,croup,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,sarcoidosis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:124172|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,croup,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,scombroid food poisoning,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,sle,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,allergic sinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|10,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,croup,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,scombroid food poisoning,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,sle,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,allergic sinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:124172|15,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,sle,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:126130|5,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:126130|10,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:126130|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,psvt,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:127667|5,sarcoidosis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,sle,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,gerd,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:127667|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:127667|15,gerd,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,atrial fibrillation,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:51518|5,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,atrial fibrillation,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:51518|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,atrial fibrillation,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:51518|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,spontaneous rib fracture,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,sarcoidosis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|5,sle,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,acute laryngitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,sarcoidosis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,psvt,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,gerd,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:51945|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,panic attack,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,epiglottitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,pancreatic neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,gerd,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,boerhaave,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:51945|15,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,cluster headache,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,chronic rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,chagas,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,sarcoidosis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|5,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,myasthenia gravis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,chagas,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,heart failure,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,anemia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,atrial fibrillation,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:56012|10,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,localized edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,pulmonary embolism,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,acute pulmonary edema,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,pericarditis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,myocarditis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,ebola,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,myasthenia gravis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,spontaneous pneumothorax,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,pulmonary neoplasm,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,anaphylaxis,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,inguinal hernia,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,chagas,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,heart failure,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,possible nstemi / stemi,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,unstable angina,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,atrial fibrillation,0.0,0.0,0.0,0.0
+ddxplus|test:56012|15,stable angina,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,urti,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,croup,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,whooping cough,0.0,0.0,0.0,0.0
+ddxplus|test:89931|5,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,urti,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,croup,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:89931|10,whooping cough,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,pneumonia,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,influenza,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,bronchitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,urti,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,acute otitis media,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,viral pharyngitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,tuberculosis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,bronchiectasis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,hiv (initial infection),0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,acute copd exacerbation / infection,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,acute rhinosinusitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,bronchiolitis,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,bronchospasm / acute asthma exacerbation,0.0,0.0,0.0,0.0
+ddxplus|test:89931|15,whooping cough,0.0,0.0,0.0,0.0
+icraft_md|icraft_md:109|5,acrodermatitis enteropathica,1.0,0.0,0.1486331168128553,0.1486331168128553
+icraft_md|icraft_md:109|5,jacquet's dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|5,langerhans cell histiocytosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|5,eczema coxsackium,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|10,acrodermatitis enteropathica,1.0,0.0,0.1692015304668647,0.1692015304668647
+icraft_md|icraft_md:109|10,jacquet's dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|10,langerhans cell histiocytosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|10,eczema coxsackium,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|15,acrodermatitis enteropathica,1.0,0.0,0.16980037497383652,0.16980037497383652
+icraft_md|icraft_md:109|15,jacquet's dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|15,langerhans cell histiocytosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:109|15,eczema coxsackium,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|5,pyoderma grangrenosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|5,venous ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|5,arterial ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|5,traumatic wound,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|10,pyoderma grangrenosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|10,venous ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|10,arterial ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|10,traumatic wound,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|15,pyoderma grangrenosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|15,venous ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|15,arterial ulcer,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:111|15,traumatic wound,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|5,mycoplasma pneumoniae-induced rash and mucositis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|5,erythema multiforme major,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|5,stevens-johnson syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|5,herpetic gingivostomatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|10,mycoplasma pneumoniae-induced rash and mucositis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|10,erythema multiforme major,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|10,stevens-johnson syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|10,herpetic gingivostomatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|15,mycoplasma pneumoniae-induced rash and mucositis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|15,erythema multiforme major,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|15,stevens-johnson syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:113|15,herpetic gingivostomatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|5,molluscum contagiosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|5,herpes virus infection,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|5,fibrous papule,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|5,basal cell carcinoma,1.0,0.0,0.08795658438759524,0.08795658438759524
+icraft_md|icraft_md:135|10,molluscum contagiosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|10,herpes virus infection,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|10,fibrous papule,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|10,basal cell carcinoma,1.0,0.0,0.0773623070305523,0.0773623070305523
+icraft_md|icraft_md:135|15,molluscum contagiosum,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|15,herpes virus infection,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|15,fibrous papule,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:135|15,basal cell carcinoma,1.0,0.0,0.08321848299854982,0.08321848299854982
+icraft_md|icraft_md:14|5,severe recessive dystrophic eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|5,ebs-dowling meara,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|5,junctional eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|5,sweet syndrome,1.0,0.0,0.08282405368705159,0.08282405368705159
+icraft_md|icraft_md:14|10,ebs-dowling meara,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|10,junctional eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|10,severe recessive dystrophic eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|10,sweet syndrome,1.0,0.0,0.0571277240763228,0.0571277240763228
+icraft_md|icraft_md:14|15,severe recessive dystrophic eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|15,ebs-dowling meara,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|15,junctional eb,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:14|15,sweet syndrome,1.0,0.0,0.07354527807422691,0.07354527807422691
+icraft_md|icraft_md:18|5,anetoderma associated with sle,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|5,post-inflammatory elastolysis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|5,mid-dermal elastolysis,1.0,0.0,0.07813250978396155,0.07813250978396155
+icraft_md|icraft_md:18|5,cutis laxa,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|10,anetoderma associated with sle,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|10,post-inflammatory elastolysis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|10,mid-dermal elastolysis,1.0,0.0,0.10258628453226973,0.10258628453226973
+icraft_md|icraft_md:18|10,cutis laxa,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|15,anetoderma associated with sle,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|15,mid-dermal elastolysis,1.0,0.0,0.10358586933632045,0.10358586933632045
+icraft_md|icraft_md:18|15,post-inflammatory elastolysis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:18|15,cutis laxa,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|5,toxicodendron dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|5,phytophotodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|5,bullous impetigo,1.0,0.0,0.1366746929513373,0.1366746929513373
+icraft_md|icraft_md:38|5,shingles,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|10,toxicodendron dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|10,phytophotodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|10,bullous impetigo,1.0,0.0,0.12634817231472148,0.12634817231472148
+icraft_md|icraft_md:38|10,shingles,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|15,toxicodendron dermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|15,phytophotodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:38|15,bullous impetigo,1.0,0.0,0.1549927833954513,0.1549927833954513
+icraft_md|icraft_md:38|15,shingles,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|5,levamisole-induced antineutrophil cytoplasmic antibody vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|5,disseminated intravascular coagulation,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|5,warfarin-induced skin necrosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|5,tinea incognito,1.0,0.0,0.21150541021871833,0.21150541021871833
+icraft_md|icraft_md:55|10,levamisole-induced antineutrophil cytoplasmic antibody vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|10,disseminated intravascular coagulation,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|10,warfarin-induced skin necrosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|10,tinea incognito,1.0,0.0,0.10175013131654936,0.10175013131654936
+icraft_md|icraft_md:55|15,levamisole-induced antineutrophil cytoplasmic antibody vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|15,disseminated intravascular coagulation,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|15,warfarin-induced skin necrosis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:55|15,tinea incognito,1.0,0.0,0.14977716702728464,0.14977716702728464
+icraft_md|icraft_md:78|5,urticarial vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|5,schnitzler syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|5,systemic lupus erythematosus,2.0,0.0,0.25358598807253074,0.1755927851399406
+icraft_md|icraft_md:78|5,photodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|10,urticarial vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|10,systemic lupus erythematosus,2.0,0.0,0.20552405309632216,0.1394819893772959
+icraft_md|icraft_md:78|10,photodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|10,schnitzler syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|15,urticarial vasculitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|15,schnitzler syndrome,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:78|15,systemic lupus erythematosus,2.0,0.0,0.19711360954097248,0.1368325316624216
+icraft_md|icraft_md:78|15,photodermatitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|5,alopecia areata,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|5,tinea capitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|5,trichotillomania,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|5,androgenetic alopecia,1.0,0.0,0.25980904285074213,0.25980904285074213
+icraft_md|icraft_md:81|10,alopecia areata,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|10,tinea capitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|10,trichotillomania,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|10,androgenetic alopecia,1.0,0.0,0.23919976990047404,0.23919976990047404
+icraft_md|icraft_md:81|15,alopecia areata,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|15,tinea capitis,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|15,trichotillomania,0.0,1.0,0.0,0.0
+icraft_md|icraft_md:81|15,androgenetic alopecia,1.0,0.0,0.2365241179752394,0.2365241179752394
+rarebench|rarebench:LIRICAL:289|5,cockayne syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,"osteogenesis imperfecta, type xii",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,hypomyelinating leukodystrophy,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,aarskog-scott syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,"microcephaly 5, primary, autosomal recessive",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,intellectual developmental disorder with dysmorphic facies and ptosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,"intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,smith-magenis syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,acromicric dysplasia,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|5,"acromesomelic dysplasia, maroteaux type",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,cockayne syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,"osteogenesis imperfecta, type xii",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,hypomyelinating leukodystrophy,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,"microcephaly 5, primary, autosomal recessive",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,aarskog-scott syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,intellectual developmental disorder with dysmorphic facies and ptosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,"intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|10,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,cockayne syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,"osteogenesis imperfecta, type xii",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,hypomyelinating leukodystrophy,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,"microcephaly 5, primary, autosomal recessive",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,aarskog-scott syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,intellectual developmental disorder with dysmorphic facies and ptosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,"intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:289|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,rett syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,"mental retardation, autosomal recessive 18",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,stankiewicz-isidor syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,"mental retardation, autosomal recessive 38",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,muenke syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,tuberous sclerosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|5,immunoskeletal dysplasia with neurodevelopmental abnormalities,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,rett syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,stankiewicz-isidor syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,"mental retardation, autosomal recessive 18",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,"mental retardation, autosomal recessive 38",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,muenke syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,tuberous sclerosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,immunoskeletal dysplasia with neurodevelopmental abnormalities,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|10,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,tbck-related intellectual disability syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,rett syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,"neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,stankiewicz-isidor syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,"mental retardation, autosomal recessive 18",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,smith-magenis syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,"mental retardation, autosomal recessive 38",0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,muenke syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,tuberous sclerosis,0.0,0.0,0.0,0.0
+rarebench|rarebench:LIRICAL:365|15,immunoskeletal dysplasia with neurodevelopmental abnormalities,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,alacrimia-choreoathetosis-liver dysfunction syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,methylmalonate semialdehyde dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,autosomal recessive primary microcephaly,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,poretti-boltshauser syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,beaulieu-boycott-innes syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,mandibulofacial dysostosis-microcephaly syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,"spondylometaphyseal dysplasia, sedaghatian type",0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,cerebrocostomandibular syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,combined immunodeficiency-enteropathy spectrum,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|5,"epilepsy, focal, with speech disorder and mental retardation",0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,alacrimia-choreoathetosis-liver dysfunction syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,methylmalonate semialdehyde dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,autosomal recessive primary microcephaly,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,poretti-boltshauser syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,mandibulofacial dysostosis-microcephaly syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,beaulieu-boycott-innes syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,cerebrocostomandibular syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,perrault syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|10,short syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,alacrimia-choreoathetosis-liver dysfunction syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,methylmalonate semialdehyde dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,poretti-boltshauser syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,autosomal recessive primary microcephaly,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,mandibulofacial dysostosis-microcephaly syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,beaulieu-boycott-innes syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,cerebrocostomandibular syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,"spondylometaphyseal dysplasia, sedaghatian type",0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,microcephaly-capillary malformation syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:MME:21|15,"epilepsy, focal, with speech disorder and mental retardation",0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,glutathione synthetase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,carbamoyl-phosphate synthetase 1 deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|5,pmm2-cdg,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,glutathione synthetase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,succinic semialdehyde dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,succinic semialdehyde dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,glutathione synthetase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:30|15,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,canavan disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,orotic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,mitochondrial complex iv deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,short chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|5,argininosuccinic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,canavan disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,orotic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,mitochondrial complex iv deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,short chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,argininosuccinic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|10,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,ornithine transcarbamylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,canavan disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,orotic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,mitochondrial complex iv deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,short chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,carbamoyl-phosphate synthetase 1 deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,argininosuccinic aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:369|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,hyperphenylalaninemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,hyperphenylalaninemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,hyperphenylalaninemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,smith-lemli-opitz syndrome,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:459|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,pmm2-cdg,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,primary carnitine deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,argininemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,propionic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,mitochondrial dna depletion syndrome 3,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,pmm2-cdg,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,primary carnitine deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,argininemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,propionic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,mitochondrial dna depletion syndrome 3,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,pmm2-cdg,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,primary carnitine deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,argininemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,propionic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,mitochondrial dna depletion syndrome 3,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:482|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,l-2-hydroxyglutaric aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,carnitine-acylcarnitine translocase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|5,3-methylglutaconic aciduria type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,l-2-hydroxyglutaric aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,3-methylglutaconic aciduria type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|10,3-methylglutaconic aciduria type iv,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,galactosemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,l-2-hydroxyglutaric aciduria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,3-methylglutaconic aciduria type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:589|15,3-methylglutaconic aciduria type iv,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|5,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|10,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,tyrosinemia type 1,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,maple syrup urine disease,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:598|15,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,very long-chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|5,primary carnitine deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,3-hydroxy-3-methylglutaryl-coa lyase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|10,propionic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,medium chain acyl-coa dehydrogenase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,phenylketonuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,methylmalonic acidemia,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,biotinidase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,citrullinemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,glutaric acidemia type i,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,citrullinemia type ii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,3-methylcrotonyl-coa carboxylase deficiency,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,tyrosinemia type iii,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,homocystinuria,0.0,0.0,0.0,0.0
+rarebench|rarebench:RAMEDIS:608|15,3-methylglutaconic aciduria type i,0.0,0.0,0.0,0.0

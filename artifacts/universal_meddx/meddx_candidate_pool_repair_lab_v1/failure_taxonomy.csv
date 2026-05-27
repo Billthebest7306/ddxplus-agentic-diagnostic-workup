@@ -1,0 +1,91 @@
+dataset_name,case_id,budget,ground_truth_diagnosis,prediction,correct_top1,gtpa_at_3,gtpa_at_5,candidate_pool_hit,candidate_pool_rank,failure_type,num_questions,stop_reason,ddxplus_mlp_top1,ddxplus_mlp_confidence,ddxplus_mlp_margin,rarebench_graph_top_label,rarebench_gate_action
+ddxplus,test:100196,5,Pancreatic neoplasm,Acute laryngitis,False,False,False,True,11,truth_in_broad_pool_but_not_final_top5,5,budget_exhausted_forced_final,Acute laryngitis,0.289907693862915,0.1302277147769928,,not_applicable
+ddxplus,test:100196,10,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,True,1,correct,10,budget_exhausted_forced_final,Pancreatic neoplasm,0.4221847653388977,0.1716842949390411,,not_applicable
+ddxplus,test:100196,15,Pancreatic neoplasm,Pancreatic neoplasm,True,True,True,True,1,correct,15,budget_exhausted_forced_final,Pancreatic neoplasm,0.9990088939666748,0.998735643515829,,not_applicable
+ddxplus,test:119540,5,Viral pharyngitis,Viral pharyngitis,True,True,True,True,1,correct,5,budget_exhausted_forced_final,Viral pharyngitis,0.1963577717542648,0.0215498358011245,,not_applicable
+ddxplus,test:119540,10,Viral pharyngitis,Viral pharyngitis,True,True,True,True,1,correct,4,ddxplus_native_mlp_stop,Viral pharyngitis,0.968166172504425,0.9519876651465892,,not_applicable
+ddxplus,test:119540,15,Viral pharyngitis,Viral pharyngitis,True,True,True,True,1,correct,11,ddxplus_native_mlp_stop,Viral pharyngitis,0.9364833831787108,0.9055387638509274,,not_applicable
+ddxplus,test:122530,5,URTI,URTI,True,True,True,True,1,correct,5,budget_exhausted_forced_final,URTI,0.973990797996521,0.9523398280143738,,not_applicable
+ddxplus,test:122530,10,URTI,Bronchitis,False,True,True,True,3,resolver_regressed_high_confidence_ddxplus_mlp,9,ddxplus_native_mlp_stop,URTI,0.973990797996521,0.9523398280143738,,not_applicable
+ddxplus,test:122530,15,URTI,Bronchitis,False,True,True,True,3,resolver_regressed_high_confidence_ddxplus_mlp,9,ddxplus_native_mlp_stop,URTI,0.973990797996521,0.9523398280143738,,not_applicable
+ddxplus,test:124172,5,Bronchiectasis,Bronchiectasis,True,True,True,True,1,correct,5,budget_exhausted_forced_final,Bronchiectasis,0.8611648082733154,0.7844518795609474,,not_applicable
+ddxplus,test:124172,10,Bronchiectasis,Bronchiectasis,True,True,True,True,1,correct,10,budget_exhausted_forced_final,Bronchiectasis,0.8985962271690369,0.8398619256913662,,not_applicable
+ddxplus,test:124172,15,Bronchiectasis,Bronchiectasis,True,True,True,True,1,correct,10,ddxplus_native_mlp_stop,Bronchiectasis,0.8985962271690369,0.8398619256913662,,not_applicable
+ddxplus,test:126130,5,Bronchitis,Pneumonia,False,False,False,True,12,truth_in_broad_pool_but_not_final_top5,5,budget_exhausted_forced_final,Pneumonia,0.2451778799295425,0.0779519379138946,,not_applicable
+ddxplus,test:126130,10,Bronchitis,Bronchitis,True,True,True,True,1,correct,10,budget_exhausted_forced_final,Bronchitis,0.8274439573287964,0.7238615974783897,,not_applicable
+ddxplus,test:126130,15,Bronchitis,Bronchitis,True,True,True,True,1,correct,15,budget_exhausted_forced_final,Bronchitis,0.3234592974185943,0.1217595040798187,,not_applicable
+ddxplus,test:127667,5,Acute otitis media,Pericarditis,False,False,False,True,12,truth_in_broad_pool_but_not_final_top5,5,budget_exhausted_forced_final,Pericarditis,0.1576040387153625,0.0747098177671432,,not_applicable
+ddxplus,test:127667,10,Acute otitis media,Tuberculosis,False,False,False,True,11,truth_in_broad_pool_but_not_final_top5,10,budget_exhausted_forced_final,Tuberculosis,0.2854661643505096,0.0317599177360534,,not_applicable
+ddxplus,test:127667,15,Acute otitis media,Acute otitis media,True,True,True,True,1,correct,15,budget_exhausted_forced_final,Acute otitis media,0.9982012510299684,0.9966955846175553,,not_applicable
+ddxplus,test:51518,5,Acute pulmonary edema,Acute pulmonary edema,True,True,True,True,1,correct,5,budget_exhausted_forced_final,Acute pulmonary edema,0.9706758856773376,0.9418574776500463,,not_applicable
+ddxplus,test:51518,10,Acute pulmonary edema,Acute pulmonary edema,True,True,True,True,1,correct,9,ddxplus_native_mlp_stop,Acute pulmonary edema,0.992612600326538,0.98541219253093,,not_applicable
+ddxplus,test:51518,15,Acute pulmonary edema,Acute pulmonary edema,True,True,True,True,1,correct,5,ddxplus_native_mlp_stop,Acute pulmonary edema,0.99984610080719,0.9996965268510394,,not_applicable
+ddxplus,test:51945,5,URTI,Pneumonia,False,False,False,True,8,truth_in_broad_pool_but_not_final_top5,5,budget_exhausted_forced_final,Pneumonia,0.3038079142570495,0.094361662864685,,not_applicable
+ddxplus,test:51945,10,URTI,Anemia,False,False,False,True,18,truth_in_broad_pool_but_not_final_top5,10,budget_exhausted_forced_final,Anemia,0.4247120320796966,0.2644457221031189,,not_applicable
+ddxplus,test:51945,15,URTI,Panic attack,False,False,False,False,99,candidate_pool_miss_or_acquisition_failure,15,budget_exhausted_forced_final,Panic attack,0.1951119005680084,0.0120431780815124,,not_applicable
+ddxplus,test:56012,5,Localized edema,Localized edema,True,True,True,True,1,correct,5,budget_exhausted_forced_final,Localized edema,0.578477680683136,0.2283322513103485,,not_applicable
+ddxplus,test:56012,10,Localized edema,Localized edema,True,True,True,True,1,correct,10,budget_exhausted_forced_final,Localized edema,0.8889067769050598,0.8021354749798775,,not_applicable
+ddxplus,test:56012,15,Localized edema,Localized edema,True,True,True,True,1,correct,10,ddxplus_native_mlp_stop,Localized edema,0.8889067769050598,0.8021354749798775,,not_applicable
+ddxplus,test:89931,5,Pneumonia,Pneumonia,True,True,True,True,1,correct,5,budget_exhausted_forced_final,Pneumonia,0.992010235786438,0.988235397497192,,not_applicable
+ddxplus,test:89931,10,Pneumonia,Pneumonia,True,True,True,True,1,correct,8,ddxplus_native_mlp_stop,Pneumonia,0.992010235786438,0.988235397497192,,not_applicable
+ddxplus,test:89931,15,Pneumonia,Pneumonia,True,True,True,True,1,correct,9,ddxplus_native_mlp_stop,Pneumonia,0.9646221399307252,0.9476613067090512,,not_applicable
+icraft_md,icraft_md:109,5,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:109,10,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,True,True,1,correct,6,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:109,15,Acrodermatitis enteropathica,Acrodermatitis enteropathica,True,True,True,True,1,correct,6,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:111,5,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:111,10,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:111,15,Pyoderma grangrenosum,Pyoderma grangrenosum,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:113,5,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:113,10,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:113,15,Mycoplasma pneumoniae-induced rash and mucositis,Mycoplasma pneumoniae-induced rash and mucositis,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:135,5,Molluscum contagiosum,Molluscum contagiosum,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:135,10,Molluscum contagiosum,Molluscum contagiosum,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:135,15,Molluscum contagiosum,Molluscum contagiosum,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:14,5,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,True,True,2,small_option_topk_adjudication_failure,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:14,10,EBS-Dowling Meara,EBS-Dowling Meara,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:14,15,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,True,True,2,small_option_topk_adjudication_failure,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:18,5,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:18,10,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:18,15,Anetoderma associated with SLE,Anetoderma associated with SLE,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:38,5,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:38,10,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:38,15,Toxicodendron dermatitis,Toxicodendron dermatitis,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:55,5,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:55,10,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:55,15,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,Levamisole-induced antineutrophil cytoplasmic antibody vasculitis,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:78,5,Urticarial vasculitis,Urticarial vasculitis,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:78,10,Urticarial vasculitis,Urticarial vasculitis,True,True,True,True,1,correct,8,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:78,15,Urticarial vasculitis,Urticarial vasculitis,True,True,True,True,1,correct,15,budget_exhausted_forced_final,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:81,5,Alopecia areata,Alopecia areata,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:81,10,Alopecia areata,Alopecia areata,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,,not_applicable
+icraft_md,icraft_md:81,15,Alopecia areata,Alopecia areata,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,,not_applicable
+rarebench,rarebench:LIRICAL:289,5,Cockayne syndrome,Cockayne syndrome,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Cockayne syndrome,locked_llm_graph_agreement
+rarebench,rarebench:LIRICAL:289,10,Cockayne syndrome,Cockayne syndrome,True,True,True,True,1,correct,7,universal_confidence_stop,,0.0,0.0,Cockayne syndrome,accepted
+rarebench,rarebench:LIRICAL:289,15,Cockayne syndrome,Cockayne syndrome,True,True,True,True,1,correct,6,universal_confidence_stop,,0.0,0.0,Cockayne syndrome,accepted
+rarebench,rarebench:LIRICAL:365,5,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,TBCK-related intellectual disability syndrome,locked_llm_graph_agreement
+rarebench,rarebench:LIRICAL:365,10,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,TBCK-related intellectual disability syndrome,locked_llm_graph_agreement
+rarebench,rarebench:LIRICAL:365,15,TBCK-related intellectual disability syndrome,TBCK-related intellectual disability syndrome,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,TBCK-related intellectual disability syndrome,locked_llm_graph_agreement
+rarebench,rarebench:MME:21,5,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,True,12,rarebench_wrong_llm_graph_lock,3,universal_confidence_stop,,0.0,0.0,Alacrimia-choreoathetosis-liver dysfunction syndrome,locked_llm_graph_agreement
+rarebench,rarebench:MME:21,10,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,False,99,candidate_pool_miss_or_acquisition_failure,10,budget_exhausted_forced_final,,0.0,0.0,Alacrimia-choreoathetosis-liver dysfunction syndrome,locked_llm_graph_agreement
+rarebench,rarebench:MME:21,15,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,True,12,rarebench_wrong_llm_graph_lock,15,budget_exhausted_forced_final,,0.0,0.0,Alacrimia-choreoathetosis-liver dysfunction syndrome,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:30,5,Biotinidase deficiency,Biotinidase deficiency,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,Biotinidase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:30,10,Biotinidase deficiency,Biotinidase deficiency,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Biotinidase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:30,15,Biotinidase deficiency,Biotinidase deficiency,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,Biotinidase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:369,5,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,False,True,7,rarebench_wrong_llm_graph_lock,5,budget_exhausted_forced_final,,0.0,0.0,Ornithine transcarbamylase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:369,10,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,False,True,6,rarebench_wrong_llm_graph_lock,5,universal_confidence_stop,,0.0,0.0,Ornithine transcarbamylase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:369,15,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,False,True,6,rarebench_wrong_llm_graph_lock,5,universal_confidence_stop,,0.0,0.0,Ornithine transcarbamylase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:459,5,Tyrosinemia type 1,Tyrosinemia type 1,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,Tyrosinemia type 1,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:459,10,Tyrosinemia type 1,Tyrosinemia type 1,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Tyrosinemia type 1,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:459,15,Tyrosinemia type 1,Tyrosinemia type 1,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,Tyrosinemia type 1,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:482,5,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:482,10,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:482,15,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:589,5,Glutaric acidemia type I,Glutaric acidemia type I,True,True,True,True,1,correct,5,budget_exhausted_forced_final,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,blocked_weak_graph_override
+rarebench,rarebench:RAMEDIS:589,10,Glutaric acidemia type I,Glutaric acidemia type I,True,True,True,True,1,correct,8,universal_confidence_stop,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,blocked_weak_graph_override
+rarebench,rarebench:RAMEDIS:589,15,Glutaric acidemia type I,Glutaric acidemia type I,True,True,True,True,1,correct,9,universal_confidence_stop,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,blocked_weak_graph_override
+rarebench,rarebench:RAMEDIS:598,5,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:598,10,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:598,15,Phenylketonuria,Phenylketonuria,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,Phenylketonuria,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:608,5,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,True,1,correct,3,universal_confidence_stop,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:608,10,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,True,1,correct,4,universal_confidence_stop,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,locked_llm_graph_agreement
+rarebench,rarebench:RAMEDIS:608,15,Medium chain acyl-CoA dehydrogenase deficiency,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,True,1,correct,5,universal_confidence_stop,,0.0,0.0,Medium chain acyl-CoA dehydrogenase deficiency,locked_llm_graph_agreement

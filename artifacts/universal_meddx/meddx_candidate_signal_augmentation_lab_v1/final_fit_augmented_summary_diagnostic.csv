@@ -1,0 +1,11 @@
+policy_name,dataset_name,budget,num_workups,top1_count,top1,top3_count,top3,top5_count,top5,wins_vs_current,regressions_vs_current,changed_predictions
+label_fit_augmented_logistic_top1_diagnostic,ALL,-1,90,85,0.9444444444444444,88,0.9777777777777777,88,0.9777777777777777,12,0,13
+label_fit_augmented_logistic_top1_diagnostic,ddxplus,5,10,10,1.0,10,1.0,10,1.0,4,0,4
+label_fit_augmented_logistic_top1_diagnostic,ddxplus,10,10,10,1.0,10,1.0,10,1.0,3,0,3
+label_fit_augmented_logistic_top1_diagnostic,ddxplus,15,10,9,0.9,9,0.9,9,0.9,1,0,2
+label_fit_augmented_logistic_top1_diagnostic,icraft_md,5,10,9,0.9,10,1.0,10,1.0,0,0,0
+label_fit_augmented_logistic_top1_diagnostic,icraft_md,10,10,10,1.0,10,1.0,10,1.0,0,0,0
+label_fit_augmented_logistic_top1_diagnostic,icraft_md,15,10,9,0.9,10,1.0,10,1.0,0,0,0
+label_fit_augmented_logistic_top1_diagnostic,rarebench,5,10,9,0.9,10,1.0,10,1.0,1,0,1
+label_fit_augmented_logistic_top1_diagnostic,rarebench,10,10,9,0.9,9,0.9,9,0.9,1,0,1
+label_fit_augmented_logistic_top1_diagnostic,rarebench,15,10,10,1.0,10,1.0,10,1.0,2,0,2

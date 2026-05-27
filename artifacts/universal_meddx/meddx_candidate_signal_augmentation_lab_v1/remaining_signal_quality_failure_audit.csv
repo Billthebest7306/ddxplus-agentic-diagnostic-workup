@@ -1,0 +1,18 @@
+workup_id,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct,truth_in_pool,truth_best_signal_rank,augmented_weighted_top_label,augmented_weighted_top_is_truth,candidate_pool_size,truth_final_rank,truth_llm_rank,truth_mlp_rank,truth_candidate_resolver_rank,truth_ddxplus_graph_rank,truth_ddxplus_bayes_rank,truth_rarebench_hpo_max_idf_fraction_rank_within_pool,truth_rarebench_hpo_max_jaccard_rank_within_pool,truth_icraft_tfidf_max_similarity_rank_within_pool
+ddxplus|test:100196|5,ddxplus,test:100196,5,Pancreatic neoplasm,Acute laryngitis,False,True,1,Acute laryngitis,False,13,99.0,2.0,2.0,99.0,4.0,2.0,1.0,1.0,1.0
+ddxplus|test:122530|10,ddxplus,test:122530,10,URTI,Bronchitis,False,True,1,URTI,True,23,3.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:122530|15,ddxplus,test:122530,15,URTI,Bronchitis,False,True,1,Bronchitis,False,22,3.0,1.0,1.0,3.0,1.0,1.0,1.0,1.0,1.0
+ddxplus|test:126130|5,ddxplus,test:126130,5,Bronchitis,Pneumonia,False,True,1,Pneumonia,False,17,99.0,3.0,3.0,99.0,9.0,5.0,1.0,1.0,1.0
+ddxplus|test:127667|10,ddxplus,test:127667,10,Acute otitis media,Tuberculosis,False,True,1,Tuberculosis,False,16,99.0,2.0,2.0,99.0,2.0,1.0,1.0,1.0,1.0
+ddxplus|test:127667|5,ddxplus,test:127667,5,Acute otitis media,Pericarditis,False,True,1,Pericarditis,False,18,99.0,3.0,3.0,99.0,6.0,4.0,1.0,1.0,1.0
+ddxplus|test:51945|10,ddxplus,test:51945,10,URTI,Anemia,False,True,1,Anemia,False,18,99.0,10.0,99.0,99.0,19.0,10.0,1.0,1.0,1.0
+ddxplus|test:51945|15,ddxplus,test:51945,15,URTI,Panic attack,False,False,99,Panic attack,False,17,,,,,,,,,
+ddxplus|test:51945|5,ddxplus,test:51945,5,URTI,Pneumonia,False,True,1,Pneumonia,False,18,8.0,99.0,99.0,8.0,29.0,19.0,1.0,1.0,1.0
+icraft_md|icraft_md:14|15,icraft_md,icraft_md:14,15,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,1,Severe recessive dystrophic EB,False,4,2.0,2.0,99.0,2.0,99.0,99.0,1.0,1.0,2.0
+icraft_md|icraft_md:14|5,icraft_md,icraft_md:14,5,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,1,Severe recessive dystrophic EB,False,4,2.0,2.0,99.0,2.0,99.0,99.0,1.0,1.0,2.0
+rarebench|rarebench:MME:21|10,rarebench,rarebench:MME:21,10,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,99,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,11,,,,,,,,,
+rarebench|rarebench:MME:21|15,rarebench,rarebench:MME:21,15,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,True,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,12,99.0,10.0,99.0,99.0,99.0,99.0,9.0,9.0,1.0
+rarebench|rarebench:MME:21|5,rarebench,rarebench:MME:21,5,"Epilepsy, focal, with speech disorder and mental retardation",Alacrimia-choreoathetosis-liver dysfunction syndrome,False,True,1,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,12,99.0,10.0,99.0,99.0,99.0,99.0,9.0,9.0,1.0
+rarebench|rarebench:RAMEDIS:369|10,rarebench,rarebench:RAMEDIS:369,10,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,14,6.0,2.0,99.0,6.0,99.0,99.0,8.0,8.0,1.0
+rarebench|rarebench:RAMEDIS:369|15,rarebench,rarebench:RAMEDIS:369,15,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,13,6.0,2.0,99.0,6.0,99.0,99.0,8.0,8.0,1.0
+rarebench|rarebench:RAMEDIS:369|5,rarebench,rarebench:RAMEDIS:369,5,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,True,1,Ornithine transcarbamylase deficiency,False,11,7.0,10.0,99.0,7.0,99.0,99.0,8.0,8.0,1.0

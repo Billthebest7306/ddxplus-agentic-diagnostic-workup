@@ -685,7 +685,17 @@ Strong claim: evidence-efficient sequential workup with MLP-guided stopping, plu
 
 Notebook `37` shows that the adaptive candidate-pool architecture improves the base, but the old 49-case replay was optimistic. Notebook `38` shows that a more sensitive calibration policy can restore near-complete candidate-pool recall on a larger live cohort. Notebook `39` shows that saved artifacts can produce a modest no-regression calibration layer, but not a fully general resolver. Notebook `40` shows that synthetic-state resolver training alone is not enough. The next credible DDXPlus work is to freeze a confirmation policy with a global request cap, resolver-margin/base-protection safeguards, and any calibrated close-confounder rescue only if pre-registered, then run a separate held-out confirmation cohort before making any new headline claim.
 
-For the multi-dataset MEDDx phase, Notebook `45` is the next architecture pilot. It ports the DDXPlus MLP stop, hypothesis-branching, and candidate-pool resolver stack into the universal DDXPlus/iCraft-MD/RareBench harness while keeping each case under the active MEDDx budget cap. The first tiny live pilot was diagnostically useful rather than successful: iCraft-MD and RareBench solved their selected cases at all budgets, but DDXPlus regressed on the selected Influenza case because early stopping treated a disagreeing MLP signal as safe. The active `v1_pilot4` patch now requires DDXPlus LLM/MLP top-1 agreement before early stop and preserves the conservative RareBench graph/discriminator gate.
+For the multi-dataset MEDDx phase, Notebook `46` is now the cleaner architecture pilot. Notebook `45` showed that pushing DDXPlus through the same natural-language profile simulator used for iCraft-MD/RareBench can regress DDXPlus, even when the broader MEDDx-style shell is sound. Notebook `46` follows MEDDxAgent more closely: one shared budgeted driver and artifact contract, but dataset-native evidence adapters inside it. DDXPlus uses structured evidence-root acquisition with exact present/absent row reveals and the partial-evidence MLP monitor; iCraft-MD uses the profile Q/A adapter; RareBench uses the phenotype graph adapter and conservative graph/discriminator gate. The no-API smoke passed and recovered the DDXPlus Influenza smoke case after legal parent/child root gating was added. Live `v1_pilot1` then reached `9/9` top-1/top-3/top-5 across one case per dataset and budgets `[5, 10, 15]`.
+
+The scaled Notebook `46` `v1_eval30` run was more sober: `73/90` top-1 and `77/90` top-3/top-5. Notebook `47` explains why this is not a dead end. The broad candidate pool contains the true diagnosis in `88/90` workups, so the old branch/candidate-pool idea is still working at the candidate-generation layer. The selected no-API repair, a DDXPlus high-confidence MLP guard, improves the saved artifacts to `75/90` with zero regressions. The remaining gap is a resolver problem: the next live notebook should add MLP protection, stricter RareBench graph-lock behavior, and a candidate-pool final adjudicator for flagged cases.
+
+Notebook `48` implements that candidate-pool adjudicator lab offline. The selected label-free educator remains conservative at `75/90`, but the diagnostic learned educators show the signal is real: case-blocked HGB reaches `77/90` with zero regressions and label-fit HGB reaches `86/90` against the `88/90` candidate-pool oracle. This is not a deployable final claim yet; it says the universal MEDDx phase has moved from evidence acquisition to resolver calibration.
+
+Notebook `49` then makes the resolver calibration concrete. It trains one L2 logistic candidate-pool resolver across DDXPlus, iCraft-MD, and RareBench. In case-blocked out-of-fold evaluation it reaches `78/90` top-1, with five wins and zero regressions versus Notebook `46`; a stricter nested threshold diagnostic reaches `77/90`. This is the strongest current MEDDx resolver candidate, but it remains an offline calibration result until prospectively confirmed.
+
+Notebook `50` asks whether the issue is really the resolver or the quality of the candidate signals. It adds DDXPlus exact-outcome Bayes, RareBench HPO reference overlap, iCraft-MD text-exemplar support, and generic candidate/text overlap. The selected augmented resolver is not promoted because it reaches `77/90` top-1, below Notebook `49`, but it raises top-3/top-5 to `83/90`. The label-fit augmented logistic diagnostic reaches `85/90`, close to the `88/90` oracle, so the honest conclusion is that the signal exists but is not learnable robustly from only `30` case groups.
+
+Notebook `51` is the response to that limitation. It freezes the current dataset-native MEDDx architecture and prepares a MEDDx-scale live run: `100` cases each from DDXPlus, iCraft-MD, and RareBench, evaluated at budgets `5`, `10`, and `15` for `900` total workups. Sampling follows the bundled MEDDxAgent driver pattern: shuffle patients with seed `42`, then take the first `N`. It keeps the DDXPlus structured ledger, partial-evidence MLP monitor, hypothesis branching, RareBench phenotype graph support, and candidate-pool score export, but does not tune a new resolver inside the live notebook. The no-API smoke passed; the intended use is to generate a large calibration corpus, train a frozen offline resolver afterward, then test that resolver back on the older `90`-workup Notebook `46` artifact as a cross-cohort transfer check.
 
 ## Key Files
 
@@ -726,6 +736,12 @@ For the multi-dataset MEDDx phase, Notebook `45` is the next architecture pilot.
 - `notebooks/43_unified_meddxstyle_hybrid_driver.ipynb`
 - `notebooks/44_unified_graph_phenotype_meddx_driver.ipynb`
 - `notebooks/45_universal_branching_resolver_meddx_driver.ipynb`
+- `notebooks/46_meddx_aligned_dataset_native_driver.ipynb`
+- `notebooks/47_meddx_candidate_pool_repair_lab.ipynb`
+- `notebooks/48_meddx_candidate_pool_adjudicator_lab.ipynb`
+- `notebooks/49_meddx_calibrated_candidate_pool_resolver.ipynb`
+- `notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb`
+- `notebooks/51_meddx_scale_hypothesis_branching_confirmation.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -758,3 +774,9 @@ For the multi-dataset MEDDx phase, Notebook `45` is the next architecture pilot.
 - `reports/algorithmic_ledger/unified_meddxstyle_hybrid_driver_report.md`
 - `reports/algorithmic_ledger/unified_graph_phenotype_meddx_driver_report.md`
 - `reports/algorithmic_ledger/universal_branching_resolver_meddx_driver_report.md`
+- `reports/algorithmic_ledger/meddx_aligned_dataset_native_driver_report.md`
+- `reports/algorithmic_ledger/meddx_candidate_pool_repair_lab_report.md`
+- `reports/algorithmic_ledger/meddx_candidate_pool_adjudicator_lab_report.md`
+- `reports/algorithmic_ledger/meddx_calibrated_candidate_pool_resolver_report.md`
+- `reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md`
+- `reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md`

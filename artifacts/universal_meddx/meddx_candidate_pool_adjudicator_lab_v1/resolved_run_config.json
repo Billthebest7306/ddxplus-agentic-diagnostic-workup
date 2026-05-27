@@ -1,0 +1,25 @@
+{
+  "run_name": "meddx_candidate_pool_adjudicator_lab_v1",
+  "input_run_name": "meddx_aligned_dataset_native_driver_v1_eval30",
+  "repair_run_name": "meddx_candidate_pool_repair_lab_v1",
+  "input_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_aligned_dataset_native_driver_v1_eval30",
+  "repair_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_candidate_pool_repair_lab_v1",
+  "artifact_root": "/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/meddx_candidate_pool_adjudicator_lab_v1",
+  "live_api_used": false,
+  "selected_policy_name": "conservative_pool_educator_v1",
+  "label_free_thresholds": {
+    "ddxplus_mlp_guard_confidence_min": 0.7,
+    "ddxplus_mlp_guard_margin_min": 0.2,
+    "ddxplus_graph_override_margin_min": 1.0,
+    "ddxplus_graph_current_score_max": 0.0,
+    "source_weighted_override_margin_min": 0.5
+  },
+  "feature_sources": [
+    "Notebook 46 final and LLM ranked differentials",
+    "Notebook 46 branch ranked differentials",
+    "Notebook 46 casebase prior and RareBench graph scores",
+    "Notebook 46 DDXPlus MLP top-5 and confidence fields",
+    "Notebook 47 broad candidate pool",
+    "Notebook 16 train-derived DDXPlus graph edges replayed over Notebook 46 revealed evidence"
+  ]
+}
