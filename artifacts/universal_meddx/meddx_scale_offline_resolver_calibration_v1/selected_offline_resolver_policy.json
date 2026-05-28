@@ -1,0 +1,53 @@
+{
+  "case_split": {
+    "grouping": "all budgets for one dataset/case stay in the same split",
+    "test_fraction": 0.2,
+    "train_fraction": 0.6,
+    "validate_fraction": 0.2
+  },
+  "claim_status": "not_promoted",
+  "feature_count": 55,
+  "internal_test_selected": {
+    "num_workups": 180,
+    "regressions_vs_current": 2,
+    "top1": 0.7944444444444444,
+    "top1_count": 143,
+    "wins_vs_current": 1
+  },
+  "interpretation": [
+    "The 900-workup live run is not mainly a solved-resolver problem; candidate-pool recall is only about 0.899.",
+    "The selected logistic resolver gives at most a very small internal split improvement and does not improve the old 90-workup transfer set.",
+    "Notebook 51 should be treated as a calibration corpus and failure map, not as evidence that the current universal MEDDx architecture is ready to claim superiority."
+  ],
+  "model": "scale_logistic_candidate_resolver_v1",
+  "old90_transfer_current": {
+    "num_workups": 90,
+    "top1": 0.8111111111111111,
+    "top1_count": 73
+  },
+  "old90_transfer_selected": {
+    "num_workups": 90,
+    "regressions_vs_current": 3,
+    "top1": 0.8,
+    "top1_count": 72,
+    "wins_vs_current": 2
+  },
+  "scale_candidate_pool_oracle": {
+    "num_workups": 900,
+    "top1": 0.8988888888888888,
+    "top1_count": 809
+  },
+  "scale_input_run": "meddx_scale_hypothesis_branching_confirmation_v1_meddx100",
+  "scale_live_current": {
+    "num_workups": 900,
+    "top1": 0.7944444444444444,
+    "top1_count": 715,
+    "top3": 0.8588888888888889,
+    "top5": 0.8788888888888889
+  },
+  "selected_policy_name": "selected_logistic_resolver_transfer_old90",
+  "selected_threshold": 0.05,
+  "split_seed": 52,
+  "threshold_selection_rule": "maximize validation top1, then minimize regressions, then minimize changed predictions",
+  "transfer_input_run": "meddx_aligned_dataset_native_driver_v1_eval30"
+}

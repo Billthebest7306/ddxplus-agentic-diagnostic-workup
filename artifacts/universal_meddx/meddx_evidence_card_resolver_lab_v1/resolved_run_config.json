@@ -1,0 +1,12 @@
+{
+  "artifact_root": "artifacts/universal_meddx/meddx_evidence_card_resolver_lab_v1",
+  "no_api_calls": true,
+  "notebook": "notebooks/54_meddx_evidence_card_resolver_lab.ipynb",
+  "pool_input": "meddx_candidate_pool_recovery_lab_v1",
+  "run_name": "meddx_evidence_card_resolver_lab_v1",
+  "scale_input": "meddx_scale_hypothesis_branching_confirmation_v1_meddx100",
+  "script": "scripts/meddx_evidence_card_resolver_lab_nb54.py",
+  "selected_pool_policy": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+  "selected_resolver_policy": "recovered_pool_logistic_evidence_card_resolver_v1",
+  "transfer_input": "meddx_aligned_dataset_native_driver_v1_eval30"
+}

@@ -1,0 +1,95 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+scale_meddx100,ddxplus,test:122283,5,Localized edema,Pulmonary embolism,False,True,True,True,True,8,3,False,0,5.0,0.1618881683564459,0.4028463363647461,test
+scale_meddx100,ddxplus,test:122283,15,Localized edema,Bronchitis,False,False,True,True,True,8,5,False,0,15.0,0.5041890245984548,0.1096981838345527,test
+scale_meddx100,ddxplus,test:64339,5,GERD,Scombroid food poisoning,False,False,True,True,True,8,4,False,0,5.0,1.0693466040022956,0.3461374640464782,train
+scale_meddx100,ddxplus,test:64339,10,GERD,Possible NSTEMI / STEMI,False,False,False,True,True,8,6,False,0,10.0,0.9471663475048472,0.2493253201246261,train
+scale_meddx100,ddxplus,test:64339,15,GERD,Boerhaave,False,True,True,True,True,8,2,False,0,15.0,0.3242071939017992,0.1076211854815483,train
+scale_meddx100,ddxplus,test:116148,5,Acute rhinosinusitis,Chronic rhinosinusitis,False,False,False,True,True,8,7,False,0,5.0,0.282755949348211,0.2185884267091751,train
+scale_meddx100,ddxplus,test:31708,10,GERD,Bronchitis,False,False,True,True,True,8,4,False,0,10.0,0.6919849746571671,0.1719868630170822,train
+scale_meddx100,ddxplus,test:82573,5,Cluster headache,GERD,False,True,True,True,True,8,2,False,0,5.0,0.9605304639519192,0.2699286639690399,train
+scale_meddx100,ddxplus,test:64224,15,Viral pharyngitis,Acute otitis media,False,True,True,True,True,8,2,False,0,15.0,0.4970802590416077,0.4208854436874389,train
+scale_meddx100,ddxplus,test:77547,10,Acute dystonic reactions,Scombroid food poisoning,False,True,True,True,True,8,2,False,0,10.0,0.9737211527100592,0.5143496990203857,train
+scale_meddx100,ddxplus,test:77547,15,Acute dystonic reactions,URTI,False,True,True,True,True,8,2,False,0,15.0,1.065367939731708,0.1621988266706466,train
+scale_meddx100,ddxplus,test:12095,5,Influenza,HIV (initial infection),False,True,True,True,True,8,2,True,1,5.0,0.2462527969398804,0.8829114437103271,train
+scale_meddx100,ddxplus,test:26095,10,GERD,Acute dystonic reactions,False,False,True,True,True,8,4,False,0,10.0,1.1120639062691866,0.4727427363395691,train
+scale_meddx100,ddxplus,test:105429,5,Chronic rhinosinusitis,Bronchitis,False,False,False,True,True,8,6,False,0,5.0,0.3099966481328009,0.2964189946651459,train
+scale_meddx100,ddxplus,test:105429,10,Chronic rhinosinusitis,Allergic sinusitis,False,True,True,True,True,8,3,False,0,10.0,0.8376237840087835,0.3023125529289245,train
+scale_meddx100,ddxplus,test:105429,15,Chronic rhinosinusitis,Allergic sinusitis,False,True,True,True,True,8,2,False,0,15.0,0.2464180249295793,0.3023125529289245,train
+scale_meddx100,ddxplus,test:63286,5,Pneumonia,URTI,False,True,True,True,True,8,2,True,1,5.0,0.2057491542204546,0.9959964752197266,train
+scale_meddx100,ddxplus,test:70907,10,Pericarditis,Epiglottitis,False,True,True,True,True,8,3,False,0,10.0,0.0456401925579468,0.1126781851053237,train
+scale_meddx100,ddxplus,test:70907,15,Pericarditis,Boerhaave,False,False,True,True,True,8,5,False,0,15.0,0.2808780631495674,0.1485500484704971,train
+scale_meddx100,ddxplus,test:131462,5,Pericarditis,Panic attack,False,True,True,True,True,8,2,False,0,5.0,0.6094158380004335,0.4752604365348816,train
+scale_meddx100,ddxplus,test:131462,10,Pericarditis,Viral pharyngitis,False,True,True,True,True,8,3,False,0,10.0,0.8817347717011144,0.1179369091987609,train
+scale_meddx100,ddxplus,test:131462,15,Pericarditis,Acute otitis media,False,False,True,True,True,8,4,False,0,15.0,0.3661218236566655,0.1499926000833511,train
+scale_meddx100,ddxplus,test:82290,5,Viral pharyngitis,Acute laryngitis,False,False,True,True,True,8,5,False,0,5.0,0.6963108719081641,0.2909598350524902,validate
+scale_meddx100,ddxplus,test:82290,10,Viral pharyngitis,Bronchitis,False,False,True,True,True,8,4,False,0,10.0,0.7677250188522338,0.4402636289596557,validate
+scale_meddx100,ddxplus,test:82290,15,Viral pharyngitis,Acute rhinosinusitis,False,True,True,True,True,8,3,True,2,15.0,0.8254592419900593,0.9331550002098083,validate
+scale_meddx100,ddxplus,test:42352,5,Acute otitis media,Cluster headache,False,False,True,True,True,8,5,False,0,5.0,0.2980876165857967,0.3514811396598816,train
+scale_meddx100,ddxplus,test:67788,10,GERD,Pulmonary neoplasm,False,False,False,True,True,8,7,False,0,10.0,0.2544450268752415,0.1584394723176956,validate
+scale_meddx100,ddxplus,test:116274,5,URTI,Viral pharyngitis,False,True,True,True,True,8,2,False,0,5.0,0.709299758200503,0.6666296124458313,validate
+scale_meddx100,ddxplus,test:31616,15,Acute rhinosinusitis,Chronic rhinosinusitis,False,True,True,True,True,8,2,False,0,14.0,0.8886797156430346,0.8224712610244751,train
+scale_meddx100,ddxplus,test:74894,15,Sarcoidosis,Epiglottitis,False,False,True,True,True,8,5,False,0,15.0,0.2497060550215371,0.3159559369087219,validate
+scale_meddx100,ddxplus,test:9155,5,URTI,Acute laryngitis,False,False,True,True,True,8,4,False,0,5.0,0.6958471492619276,0.2896349132061004,test
+scale_meddx100,ddxplus,test:9155,10,URTI,Bronchitis,False,True,True,True,True,8,3,False,0,10.0,0.7827034591503343,0.2662436068058014,test
+scale_meddx100,ddxplus,test:84973,5,Acute laryngitis,Chagas,False,False,True,True,True,8,5,False,0,5.0,0.4832236662507057,0.3806390464305877,train
+scale_meddx100,ddxplus,test:84973,10,Acute laryngitis,Bronchitis,False,False,False,True,True,8,8,False,0,10.0,0.4187674780527561,0.0775424689054489,train
+scale_meddx100,ddxplus,test:84973,15,Acute laryngitis,Acute otitis media,False,False,False,True,True,8,7,False,0,15.0,0.4194534379167609,0.1211266294121742,train
+scale_meddx100,ddxplus,test:68000,5,Acute otitis media,Pericarditis,False,True,True,True,True,8,3,False,0,5.0,0.2938824770678873,0.1576040387153625,validate
+scale_meddx100,ddxplus,test:31233,5,URTI,Viral pharyngitis,False,True,True,True,True,8,2,False,0,5.0,0.6717332265206961,0.592751145362854,train
+scale_meddx100,ddxplus,test:31233,10,URTI,Viral pharyngitis,False,True,True,True,True,8,2,False,0,10.0,0.6398534827236797,0.5577728748321533,train
+scale_meddx100,icraft_md,icraft_md:1,5,Acute contact dermatitis,Acrodermatitis continua of Hallopeau,False,True,True,True,True,4,3,False,0,3.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:1,10,Acute contact dermatitis,Acrodermatitis continua of Hallopeau,False,True,True,True,True,4,3,False,0,4.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:1,15,Acute contact dermatitis,Acrodermatitis continua of Hallopeau,False,False,True,True,True,4,4,False,0,5.0,0.8899999999999999,0.9,train
+scale_meddx100,icraft_md,icraft_md:31,5,Darier disease,Hailey-Hailey disease,False,True,True,True,True,4,2,False,0,3.0,0.8724999999999998,0.85,validate
+scale_meddx100,icraft_md,icraft_md:31,10,Darier disease,Hailey-Hailey disease,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,validate
+scale_meddx100,icraft_md,icraft_md:31,15,Darier disease,Hailey-Hailey disease,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,validate
+scale_meddx100,icraft_md,icraft_md:129,5,Pemphigus vulgaris,Pemphigus foliaceous,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:129,10,Pemphigus vulgaris,Pemphigus foliaceous,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:129,15,Pemphigus vulgaris,Pemphigus foliaceous,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:121,5,Conradi-Hünermann-Happle syndrome,Nicolau-Balus syndrome,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,test
+scale_meddx100,icraft_md,icraft_md:14,5,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:14,15,EBS-Dowling Meara,Severe recessive dystrophic EB,False,True,True,True,True,4,3,False,0,5.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:47,10,Spiradenoma,Glomus tumor,False,True,True,True,True,4,2,False,0,4.0,0.8724999999999998,0.85,test
+scale_meddx100,icraft_md,icraft_md:47,15,Spiradenoma,Glomus tumor,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,test
+scale_meddx100,icraft_md,icraft_md:106,5,Keratoderma blenorrhagicum,Secondary syphilis,False,True,True,True,True,4,3,False,0,5.0,0.8199999999999998,0.7,train
+scale_meddx100,icraft_md,icraft_md:106,10,Keratoderma blenorrhagicum,Secondary syphilis,False,True,True,True,True,4,3,False,0,10.0,0.8199999999999998,0.7,train
+scale_meddx100,icraft_md,icraft_md:106,15,Keratoderma blenorrhagicum,Secondary syphilis,False,True,True,True,True,4,2,False,0,11.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:119,5,Mastocytoma,Congenital melanocytic nevus,False,True,True,True,True,4,2,False,0,3.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:119,10,Mastocytoma,Congenital melanocytic nevus,False,True,True,True,True,4,3,False,0,5.0,0.8724999999999998,0.85,train
+scale_meddx100,icraft_md,icraft_md:119,15,Mastocytoma,Congenital melanocytic nevus,False,True,True,True,True,4,2,False,0,6.0,0.8724999999999998,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:40,5,Ehlers-Danlos syndrome,Loeys-Dietz syndrome,False,True,True,True,True,8,2,False,0,3.0,1.4991228785205704,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:40,10,Ehlers-Danlos syndrome,Loeys-Dietz syndrome,False,True,True,True,True,8,2,False,0,4.0,1.3894957608373448,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:40,15,Ehlers-Danlos syndrome,Loeys-Dietz syndrome,False,True,True,True,True,8,2,False,0,5.0,1.4664093168116938,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:402,15,Argininemia,Ornithine transcarbamylase deficiency,False,True,True,True,True,8,3,True,2,10.0,0.9830023287715104,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:292,10,Smith-Lemli-Opitz syndrome,Robinow syndrome,False,True,True,True,True,8,2,True,2,8.0,0.8369281524926686,0.95,train
+scale_meddx100,rarebench,rarebench:LIRICAL:292,15,Smith-Lemli-Opitz syndrome,Freeman-Sheldon syndrome,False,False,True,True,True,8,4,False,0,5.0,1.1351075245911044,0.95,train
+scale_meddx100,rarebench,rarebench:LIRICAL:57,5,Congenital myasthenic syndrome,Spinal muscular atrophy with progressive myoclonic epilepsy,False,True,True,True,True,8,3,False,0,3.0,1.024615776056944,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:57,10,Congenital myasthenic syndrome,Spinal muscular atrophy with progressive myoclonic epilepsy,False,True,True,True,True,8,3,False,0,8.0,0.5432167059456687,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:57,15,Congenital myasthenic syndrome,Spinal muscular atrophy with progressive myoclonic epilepsy,False,True,True,True,True,8,3,False,0,7.0,0.572825358511555,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:319,5,Ataxia-pancytopenia syndrome,"Spastic paraplegia 7, autosomal recessive",False,False,True,True,True,8,4,False,0,3.0,0.7346947789072025,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:319,10,Ataxia-pancytopenia syndrome,"Spastic paraplegia 76, autosomal recessive",False,False,False,True,True,8,6,False,0,4.0,1.0234918169074585,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:319,15,Ataxia-pancytopenia syndrome,"Spastic paraplegia 76, autosomal recessive",False,True,True,True,True,8,3,False,0,5.0,1.0235617642503008,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:12,5,Medium chain acyl-CoA dehydrogenase deficiency,Beta-ketothiolase deficiency,False,True,True,True,True,8,2,False,0,5.0,0.0065869829906195,0.85,train
+scale_meddx100,rarebench,rarebench:HMS:6,5,Sjögren syndrome,Eosinophilic granulomatosis with polyangiitis,False,False,False,True,True,8,8,False,0,5.0,1.7098224179401988,0.75,test
+scale_meddx100,rarebench,rarebench:HMS:73,5,Sjögren syndrome,Systemic lupus erythematosus,False,False,False,True,True,8,7,False,0,5.0,0.8466733189237741,0.85,train
+scale_meddx100,rarebench,rarebench:HMS:73,15,Sjögren syndrome,Systemic sclerosis,False,False,False,True,True,8,8,True,2,12.0,0.9004508278282417,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:225,15,Geleophysic dysplasia,Immunoskeletal dysplasia with neurodevelopmental abnormalities,False,True,True,True,True,8,2,True,2,15.0,0.8744387142483285,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:77,5,Geleophysic dysplasia,Weill-Marchesani syndrome,False,False,False,True,True,8,6,False,0,3.0,1.2407377281647094,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:77,10,Geleophysic dysplasia,Weill-Marchesani syndrome,False,False,False,True,True,8,6,False,0,4.0,1.3271291093215651,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:77,15,Geleophysic dysplasia,Weill-Marchesani syndrome,False,False,False,True,True,8,6,False,0,5.0,1.3271556076211677,0.85,train
+scale_meddx100,rarebench,rarebench:HMS:50,10,Cryoglobulinemic vasculitis,Systemic lupus erythematosus,False,True,True,True,True,8,2,True,2,10.0,0.277160069692417,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:595,5,Methylmalonic acidemia,Ornithine transcarbamylase deficiency,False,False,True,True,True,8,4,False,0,3.0,1.0675567915466715,0.85,test
+scale_meddx100,rarebench,rarebench:RAMEDIS:595,10,Methylmalonic acidemia,Ornithine transcarbamylase deficiency,False,True,True,True,True,8,3,False,0,4.0,1.1209118988318043,0.85,test
+scale_meddx100,rarebench,rarebench:RAMEDIS:595,15,Methylmalonic acidemia,Ornithine transcarbamylase deficiency,False,True,True,True,True,8,3,False,0,5.0,1.1707194067388258,0.85,test
+scale_meddx100,rarebench,rarebench:RAMEDIS:261,15,Citrullinemia type II,Phenylketonuria,False,False,True,True,True,8,5,False,0,5.0,1.000589512921518,0.9,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:149,5,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,Glycogen storage disease type Ia,False,False,True,True,True,8,4,False,0,4.0,0.621175165967794,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:149,10,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,Glycogen storage disease type Ia,False,False,False,True,True,8,7,False,0,10.0,0.3560706150341679,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:149,15,3-Hydroxy-3-methylglutaryl-CoA lyase deficiency,Glycogen storage disease type Ia,False,False,False,True,True,8,7,False,0,7.0,0.3560706150341679,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:170,5,Immunoskeletal dysplasia with neurodevelopmental abnormalities,Robinow syndrome,False,True,True,True,True,8,2,False,0,4.0,0.6506093659066643,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:170,10,Immunoskeletal dysplasia with neurodevelopmental abnormalities,Robinow syndrome,False,True,True,True,True,8,3,False,0,4.0,0.9671148471810248,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:170,15,Immunoskeletal dysplasia with neurodevelopmental abnormalities,Robinow syndrome,False,True,True,True,True,8,2,False,0,5.0,0.8361204749545901,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:193,5,Biotinidase deficiency,Methylmalonic acidemia,False,False,False,True,True,8,7,False,0,3.0,1.071191244826032,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:193,10,Biotinidase deficiency,Methylmalonic acidemia,False,False,False,True,True,8,7,False,0,4.0,1.0710320879324455,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:193,15,Biotinidase deficiency,Methylmalonic acidemia,False,False,False,True,True,8,7,False,0,5.0,1.0813846306172183,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:491,5,Propionic acidemia,Methylmalonic acidemia,False,True,True,True,True,8,2,False,0,5.0,0.8501418965044913,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:491,15,Propionic acidemia,Methylmalonic acidemia,False,True,True,True,True,8,3,True,2,10.0,0.3956284768741582,0.85,validate

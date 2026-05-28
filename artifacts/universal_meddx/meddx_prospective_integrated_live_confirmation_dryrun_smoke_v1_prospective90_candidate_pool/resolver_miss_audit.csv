@@ -1,0 +1,4 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+prospective90,icraft_md,icraft_md:26,5,Perniosis,Raynaud disease,False,True,True,True,True,4,3,True,2,5.0,0.2908333333333335,0.35,train
+prospective90,icraft_md,icraft_md:26,10,Perniosis,Raynaud disease,False,True,True,True,True,4,3,True,2,6.0,0.2908333333333335,0.35,train
+prospective90,icraft_md,icraft_md:26,15,Perniosis,Raynaud disease,False,True,True,True,True,4,3,True,2,6.0,0.2908333333333335,0.35,train

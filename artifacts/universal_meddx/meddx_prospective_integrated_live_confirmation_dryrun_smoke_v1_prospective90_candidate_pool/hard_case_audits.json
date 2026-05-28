@@ -1,0 +1,57 @@
+{
+  "pool_recoveries": [
+    {
+      "branch_count": 0,
+      "branch_triggered": false,
+      "budget": 5,
+      "candidate_pool_has_truth": true,
+      "candidate_pool_labels": "[\"Pericarditis\", \"Anemia\", \"Acute otitis media\", \"Panic attack\", \"Viral pharyngitis\", \"URTI\", \"Cluster headache\", \"Pulmonary embolism\", \"Localized edema\", \"GERD\", \"Sarcoidosis\", \"Myocarditis\", \"Inguinal hernia\", \"PSVT\", \"HIV (initial infection)\", \"Pneumonia\", \"Possible NSTEMI / STEMI\", \"Unstable angina\", \"Epiglottitis\", \"Stable angina\", \"Boerhaave\"]",
+      "candidate_pool_size": 21,
+      "candidate_pool_truth_rank": 15,
+      "case_id": "test:19782",
+      "cohort": "prospective90",
+      "current_candidate_pool_has_truth": false,
+      "current_candidate_pool_size": 8,
+      "current_correct_top1": false,
+      "current_gtpa_at_3": false,
+      "current_gtpa_at_5": false,
+      "current_prediction": "Pericarditis",
+      "dataset_name": "ddxplus",
+      "ground_truth_diagnosis": "HIV (initial infection)",
+      "lost_truth_vs_current_pool": false,
+      "num_questions": 5.0,
+      "policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+      "pool_size_delta": 13,
+      "recovered_truth_vs_current_pool": true,
+      "split": "train"
+    }
+  ],
+  "remaining_pool_misses": [],
+  "transfer_remaining_pool_misses": [
+    {
+      "branch_count": 0,
+      "branch_triggered": false,
+      "budget": 10,
+      "candidate_pool_has_truth": false,
+      "candidate_pool_labels": "[\"Alacrimia-choreoathetosis-liver dysfunction syndrome\", \"Methylmalonate semialdehyde dehydrogenase deficiency\", \"Autosomal recessive primary microcephaly\", \"Poretti-Boltshauser syndrome\", \"Cataract-growth hormone deficiency-sensory neuropathy-sensorineural hearing loss-skeletal dysplasia syndrome\", \"Mandibulofacial dysostosis-microcephaly syndrome\", \"Beaulieu-Boycott-Innes syndrome\", \"Cerebellar ataxia-areflexia-pes cavus-optic atrophy-sensorineural hearing loss syndrome\", \"Cerebrocostomandibular syndrome\", \"Perrault syndrome\", \"Short syndrome\", \"Spondylometaphyseal dysplasia, Sedaghatian type\", \"Shprintzen-Goldberg syndrome\"]",
+      "candidate_pool_size": 13,
+      "candidate_pool_truth_rank": 999,
+      "case_id": "rarebench:MME:21",
+      "cohort": "transfer_old90",
+      "current_candidate_pool_has_truth": false,
+      "current_candidate_pool_size": 8,
+      "current_correct_top1": false,
+      "current_gtpa_at_3": false,
+      "current_gtpa_at_5": false,
+      "current_prediction": "Alacrimia-choreoathetosis-liver dysfunction syndrome",
+      "dataset_name": "rarebench",
+      "ground_truth_diagnosis": "Epilepsy, focal, with speech disorder and mental retardation",
+      "lost_truth_vs_current_pool": false,
+      "num_questions": 10.0,
+      "policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+      "pool_size_delta": 5,
+      "recovered_truth_vs_current_pool": false,
+      "split": "transfer"
+    }
+  ]
+}

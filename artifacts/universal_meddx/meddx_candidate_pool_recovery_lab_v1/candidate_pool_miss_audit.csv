@@ -1,0 +1,92 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+scale_meddx100,ddxplus,test:116148,10,Acute rhinosinusitis,Bronchitis,False,False,False,False,False,8,999,False,0,10.0,0.9526315167255436,0.5144731402397156,train
+scale_meddx100,ddxplus,test:116148,15,Acute rhinosinusitis,Pulmonary neoplasm,False,False,False,False,False,8,999,False,0,15.0,0.1669279138738246,0.1283958256244659,train
+scale_meddx100,ddxplus,test:31708,5,GERD,Bronchitis,False,False,False,False,False,8,999,False,0,5.0,0.8312563059655611,0.227080151438713,train
+scale_meddx100,ddxplus,test:31708,15,GERD,Possible NSTEMI / STEMI,False,False,False,False,False,8,999,False,0,15.0,0.2765909609198569,0.4474027454853058,train
+scale_meddx100,ddxplus,test:82573,10,Cluster headache,Anemia,False,False,False,True,False,8,999,False,0,10.0,1.1154269773272223,0.2505183219909668,train
+scale_meddx100,ddxplus,test:82573,15,Cluster headache,Spontaneous rib fracture,False,False,False,False,False,8,999,False,0,15.0,0.070835067007396,0.1691499054431915,train
+scale_meddx100,ddxplus,test:100261,5,Chagas,Anemia,False,False,False,False,False,8,999,False,0,5.0,0.8931067051246662,0.1933950185775756,test
+scale_meddx100,ddxplus,test:100261,10,Chagas,Acute otitis media,False,False,False,False,False,8,999,False,0,10.0,0.2837500231528902,0.1286977082490921,test
+scale_meddx100,ddxplus,test:100261,15,Chagas,Anemia,False,False,False,False,False,8,999,False,0,15.0,1.153650128091218,0.0912724584341049,test
+scale_meddx100,ddxplus,test:76123,5,Panic attack,Possible NSTEMI / STEMI,False,False,False,False,False,8,999,False,0,5.0,0.5974531275556869,0.109631672501564,test
+scale_meddx100,ddxplus,test:76123,10,Panic attack,Chagas,False,False,False,False,False,8,999,False,0,10.0,0.2982718829333769,0.1423010230064392,test
+scale_meddx100,ddxplus,test:75422,5,Panic attack,Acute otitis media,False,False,False,False,False,8,999,False,0,5.0,0.1168310598795108,0.5976381301879883,train
+scale_meddx100,ddxplus,test:75422,10,Panic attack,Inguinal hernia,False,False,False,False,False,8,999,False,0,10.0,0.2662249742310179,0.2978070378303528,train
+scale_meddx100,ddxplus,test:130606,5,Scombroid food poisoning,Atrial fibrillation,False,False,False,False,False,8,999,False,0,5.0,0.738885283012495,0.4561206996440887,validate
+scale_meddx100,ddxplus,test:42352,10,Acute otitis media,Pericarditis,False,False,False,True,False,8,999,False,0,10.0,0.9337862821050806,0.2033546566963195,train
+scale_meddx100,ddxplus,test:42352,15,Acute otitis media,Acute dystonic reactions,False,False,False,False,False,8,999,False,0,15.0,0.4084291368722914,0.1669403910636901,train
+scale_meddx100,ddxplus,test:53671,5,Unstable angina,Acute otitis media,False,False,False,False,False,8,999,False,0,5.0,0.6744708291376571,0.2647578418254852,train
+scale_meddx100,ddxplus,test:53671,15,Unstable angina,Possible NSTEMI / STEMI,False,False,False,False,False,8,999,False,0,15.0,0.9420337587658688,0.368991881608963,train
+scale_meddx100,ddxplus,test:67788,5,GERD,Pericarditis,False,False,False,False,False,8,999,False,0,5.0,0.5590768816384444,0.1453487575054168,validate
+scale_meddx100,ddxplus,test:67788,15,GERD,Bronchitis,False,False,False,True,False,8,999,False,0,15.0,0.0348682547609009,0.1948616802692413,validate
+scale_meddx100,ddxplus,test:75853,5,Panic attack,Acute otitis media,False,False,False,False,False,8,999,False,0,5.0,0.6744708291376571,0.2647578418254852,train
+scale_meddx100,ddxplus,test:75853,10,Panic attack,Acute laryngitis,False,False,False,False,False,8,999,False,0,10.0,0.0910846233035027,0.1399025022983551,train
+scale_meddx100,ddxplus,test:111425,5,SLE,Anemia,False,False,False,False,False,8,999,False,0,5.0,1.0052790639849658,0.2775842845439911,train
+scale_meddx100,ddxplus,test:111425,10,SLE,Bronchitis,False,False,False,False,False,8,999,False,0,10.0,0.5667484456832546,0.2447246015071869,train
+scale_meddx100,ddxplus,test:111425,15,SLE,Bronchitis,False,False,False,False,False,8,999,False,0,15.0,0.7705736780648789,0.2338675111532211,train
+scale_meddx100,ddxplus,test:121730,5,Spontaneous rib fracture,Acute otitis media,False,False,False,False,False,8,999,False,0,5.0,0.1400554613624571,0.2556756734848022,test
+scale_meddx100,ddxplus,test:32845,5,SLE,Possible NSTEMI / STEMI,False,False,False,False,False,8,999,False,0,5.0,0.5974531275556869,0.109631672501564,train
+scale_meddx100,ddxplus,test:32845,10,SLE,Epiglottitis,False,False,False,False,False,8,999,False,0,10.0,0.0122053580979504,0.1301105469465255,train
+scale_meddx100,ddxplus,test:32845,15,SLE,Acute dystonic reactions,False,False,False,False,False,8,999,False,0,15.0,0.0361270763621959,0.2570075094699859,train
+scale_meddx100,ddxplus,test:43968,5,PSVT,Possible NSTEMI / STEMI,False,False,False,False,False,8,999,False,0,5.0,0.6017918267623965,0.1220279559493064,train
+scale_meddx100,ddxplus,test:43968,10,PSVT,Bronchitis,False,False,False,False,False,8,999,False,0,10.0,1.0057782399650188,0.2958705723285675,train
+scale_meddx100,ddxplus,test:43968,15,PSVT,Bronchitis,False,False,False,False,False,8,999,False,0,15.0,0.8299102066905351,0.3240337669849396,train
+scale_meddx100,ddxplus,test:22785,5,Pancreatic neoplasm,Inguinal hernia,False,False,False,False,False,8,999,False,0,5.0,0.3003640686472255,0.4058021008968353,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:402,5,Argininemia,Ornithine transcarbamylase deficiency,False,False,False,False,False,8,999,False,0,4.0,1.032416088668243,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:402,10,Argininemia,Ornithine transcarbamylase deficiency,False,False,False,False,False,8,999,True,2,8.0,0.5555223658123865,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:114,5,Chitayat syndrome,Skraban-Deardorff syndrome,False,False,False,False,False,8,999,False,0,4.0,0.696496181266586,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:114,10,Chitayat syndrome,Skraban-Deardorff syndrome,False,False,False,False,False,8,999,False,0,4.0,0.672719617703325,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:114,15,Chitayat syndrome,Skraban-Deardorff syndrome,False,False,False,False,False,8,999,False,0,5.0,0.6931497412482059,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:93,10,Aarskog-Scott syndrome,Apert syndrome,False,False,False,False,False,8,999,False,0,8.0,0.9363950021487382,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:93,15,Aarskog-Scott syndrome,Apert syndrome,False,False,False,False,False,8,999,False,0,15.0,1.2898503183747532,0.85,test
+scale_meddx100,rarebench,rarebench:HMS:6,10,Sjögren syndrome,Eosinophilic granulomatosis with polyangiitis,False,False,False,False,False,8,999,False,0,10.0,1.5122976554305638,0.85,test
+scale_meddx100,rarebench,rarebench:HMS:6,15,Sjögren syndrome,Eosinophilic granulomatosis with polyangiitis,False,False,False,False,False,8,999,False,0,8.0,1.5334148201255469,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:38,5,Hypotrichosis with juvenile macular degeneration,Ichthyosis-hypotrichosis syndrome,False,False,False,False,False,8,999,False,0,5.0,0.4526405410092144,0.75,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:38,10,Hypotrichosis with juvenile macular degeneration,Ichthyosis-hypotrichosis syndrome,False,False,False,False,False,8,999,False,0,10.0,0.4555502879252082,0.85,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:38,15,Hypotrichosis with juvenile macular degeneration,Alagille syndrome,False,False,False,False,False,8,999,False,0,6.0,0.5672869095567155,0.85,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:104,5,Hypomyelinating leukodystrophy,"Mental retardation, autosomal recessive 18",False,False,False,False,False,8,999,False,0,3.0,1.0216622229612775,0.85,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:104,10,Hypomyelinating leukodystrophy,"Mental retardation, autosomal recessive 18",False,False,False,False,False,8,999,False,0,6.0,0.4843361153262515,0.85,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:104,15,Hypomyelinating leukodystrophy,"Mental retardation, autosomal recessive 18",False,False,False,False,False,8,999,False,0,6.0,0.676002781992918,0.85,validate
+scale_meddx100,rarebench,rarebench:HMS:73,10,Sjögren syndrome,Systemic lupus erythematosus,False,False,False,True,False,8,999,False,0,6.0,0.9162830884416988,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:4,5,DYRK1A-related intellectual disability syndrome,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",False,False,False,False,False,8,999,False,0,4.0,0.3644768650710976,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:4,10,DYRK1A-related intellectual disability syndrome,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",False,False,False,False,False,8,999,False,0,5.0,0.3887571882514478,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:4,15,DYRK1A-related intellectual disability syndrome,"Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies",False,False,False,False,False,8,999,False,0,5.0,0.3644768650710976,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:157,5,Glutathione synthetase deficiency,Biotinidase deficiency,False,False,False,False,False,8,999,False,0,5.0,0.5955441429146151,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:157,10,Glutathione synthetase deficiency,Phenylketonuria,False,False,False,False,False,8,999,False,0,10.0,0.9914667511561291,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:157,15,Glutathione synthetase deficiency,Biotinidase deficiency,False,False,False,False,False,8,999,True,2,12.0,0.0936859044143196,0.85,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:149,5,"GM1-gangliosidosis, type III",Galactosialidosis,False,False,False,False,False,8,999,False,0,3.0,2.3588855013550134,0.9,test
+scale_meddx100,rarebench,rarebench:LIRICAL:149,10,"GM1-gangliosidosis, type III",Galactosialidosis,False,False,False,True,False,8,999,False,0,4.0,2.4273621001922328,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:149,15,"GM1-gangliosidosis, type III",Galactosialidosis,False,False,False,False,False,8,999,False,0,5.0,2.3608466831461232,0.85,test
+scale_meddx100,rarebench,rarebench:MME:1,5,Microcephaly-capillary malformation syndrome,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,False,False,8,999,False,0,5.0,1.420655581901075,0.65,train
+scale_meddx100,rarebench,rarebench:MME:1,10,Microcephaly-capillary malformation syndrome,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,False,False,8,999,False,0,10.0,1.2566470200219646,0.75,train
+scale_meddx100,rarebench,rarebench:MME:1,15,Microcephaly-capillary malformation syndrome,Alacrimia-choreoathetosis-liver dysfunction syndrome,False,False,False,False,False,8,999,False,0,15.0,1.2302311683887774,0.7,train
+scale_meddx100,rarebench,rarebench:LIRICAL:236,5,Long QT syndrome 15,Sick sinus syndrome,False,False,False,False,False,8,999,False,0,3.0,1.8048295998133088,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:236,10,Long QT syndrome 15,Sick sinus syndrome,False,False,False,False,False,8,999,False,0,4.0,1.805039579584604,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:236,15,Long QT syndrome 15,Sick sinus syndrome,False,False,False,False,False,8,999,False,0,5.0,1.6013311688311689,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:205,5,Nemaline myopathy,Spondylocostal dysostosis,False,False,False,True,False,8,999,False,0,4.0,0.9245548196852238,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:205,10,Nemaline myopathy,Bethlem myopathy,False,False,False,False,False,8,999,True,2,8.0,0.4177069719240225,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:205,15,Nemaline myopathy,Congenital myasthenic syndrome,False,False,False,True,False,8,999,True,2,9.0,2.117626149195531,0.85,test
+scale_meddx100,rarebench,rarebench:RAMEDIS:599,5,Dihydropyrimidinuria,Dihydropyrimidine dehydrogenase deficiency,False,False,False,False,False,8,999,False,0,3.0,1.0055376129718232,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:599,10,Dihydropyrimidinuria,Dihydropyrimidine dehydrogenase deficiency,False,False,False,False,False,8,999,False,0,4.0,0.658029827447294,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:599,15,Dihydropyrimidinuria,Dihydropyrimidine dehydrogenase deficiency,False,False,False,False,False,8,999,False,0,5.0,0.658029827447294,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:411,5,Mucopolysaccharidosis type II,Phenylketonuria,False,False,False,False,False,8,999,False,0,5.0,1.6138722474689828,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:411,10,Mucopolysaccharidosis type II,Phenylketonuria,False,False,False,False,False,8,999,False,0,10.0,1.6066164407911034,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:411,15,Mucopolysaccharidosis type II,Methylmalonic acidemia,False,False,False,False,False,8,999,False,0,5.0,0.4668854555968997,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:201,5,Diamond-Blackfan anemia,"Cutis laxa, autosomal recessive, type IIC",False,False,False,False,False,8,999,False,0,5.0,0.3571681973962843,0.7,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:201,10,Diamond-Blackfan anemia,"Cutis laxa, autosomal recessive, type IIC",False,False,False,False,False,8,999,False,0,10.0,1.1090889830508472,0.7,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:201,15,Diamond-Blackfan anemia,"Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",False,False,False,False,False,8,999,False,0,15.0,1.1538276836158192,0.7,validate
+scale_meddx100,rarebench,rarebench:LIRICAL:85,5,Waardenburg syndrome type 3,Tietz syndrome,False,False,False,False,False,8,999,False,0,3.0,1.9494861238904675,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:85,10,Waardenburg syndrome type 3,Tietz syndrome,False,False,False,False,False,8,999,False,0,4.0,1.5742577456507814,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:85,15,Waardenburg syndrome type 3,Tietz syndrome,False,False,False,False,False,8,999,False,0,5.0,1.5742577456507814,0.85,test
+scale_meddx100,rarebench,rarebench:LIRICAL:3,5,Galactosialidosis,"GM1-gangliosidosis, type III",False,False,False,False,False,8,999,False,0,3.0,2.075564328784946,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:3,10,Galactosialidosis,"GM1-gangliosidosis, type III",False,False,False,False,False,8,999,False,0,4.0,2.0412499840641765,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:3,15,Galactosialidosis,"GM1-gangliosidosis, type III",False,False,False,False,False,8,999,False,0,5.0,2.0060620349326106,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:381,5,Tyrosinemia type III,Phenylketonuria,False,False,False,False,False,8,999,False,0,3.0,1.7553555045807552,0.95,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:381,10,Tyrosinemia type III,Phenylketonuria,False,False,False,False,False,8,999,False,0,4.0,1.7555681062398183,0.95,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:381,15,Tyrosinemia type III,Phenylketonuria,False,False,False,False,False,8,999,False,0,5.0,1.7075383964979576,0.85,validate
+scale_meddx100,rarebench,rarebench:RAMEDIS:439,5,Neuronal ceroid lipofuscinosis,Phenylketonuria,False,False,False,False,False,8,999,False,0,5.0,1.0541639320677736,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:439,10,Neuronal ceroid lipofuscinosis,Glutaric acidemia type I,False,False,False,False,False,8,999,False,0,4.0,1.804730854605993,0.85,train
+scale_meddx100,rarebench,rarebench:RAMEDIS:439,15,Neuronal ceroid lipofuscinosis,Phenylketonuria,False,False,False,False,False,8,999,False,0,5.0,0.984382989254525,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:307,5,Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities,Aarskog-Scott syndrome,False,False,False,False,False,8,999,False,0,3.0,0.3574399206093761,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:307,10,Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities,Smith-Magenis syndrome,False,False,False,False,False,8,999,True,2,10.0,0.0681623829220203,0.85,train
+scale_meddx100,rarebench,rarebench:LIRICAL:307,15,Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities,TBCK-related intellectual disability syndrome,False,False,False,False,False,8,999,True,2,10.0,0.3794139918175538,0.85,train

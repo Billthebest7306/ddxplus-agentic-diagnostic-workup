@@ -1,0 +1,2 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+prospective90,ddxplus,test:19782,5,HIV (initial infection),Pericarditis,False,False,False,False,False,8,999,False,0,5.0,0.0938360727722671,0.1453487575054168,train

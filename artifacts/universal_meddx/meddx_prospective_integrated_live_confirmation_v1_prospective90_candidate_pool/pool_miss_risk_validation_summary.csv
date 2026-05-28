@@ -1,0 +1,4 @@
+split,num_workups,pool_misses,auroc,auprc,p80_trigger_rate,p80_pool_miss_recall
+test,18,0,,,0.2222222222222222,0.0
+train,54,8,0.9483695652173912,0.678125,0.2037037037037037,0.875
+validate,18,0,,,0.2222222222222222,0.0

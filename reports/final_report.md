@@ -697,6 +697,16 @@ Notebook `50` asks whether the issue is really the resolver or the quality of th
 
 Notebook `51` is the response to that limitation. It freezes the current dataset-native MEDDx architecture and prepares a MEDDx-scale live run: `100` cases each from DDXPlus, iCraft-MD, and RareBench, evaluated at budgets `5`, `10`, and `15` for `900` total workups. Sampling follows the bundled MEDDxAgent driver pattern: shuffle patients with seed `42`, then take the first `N`. It keeps the DDXPlus structured ledger, partial-evidence MLP monitor, hypothesis branching, RareBench phenotype graph support, and candidate-pool score export, but does not tune a new resolver inside the live notebook. The no-API smoke passed; the intended use is to generate a large calibration corpus, train a frozen offline resolver afterward, then test that resolver back on the older `90`-workup Notebook `46` artifact as a cross-cohort transfer check.
 
+Notebook `52` completes that offline calibration step and gives a negative but clarifying result. The completed Notebook `51` scale artifact reaches `715/900` top-1, `773/900` top-3, `791/900` top-5, and `809/900` candidate-pool recall. A validation-selected L2 logistic resolver improves validation by one case (`148/180` vs `147/180`) but regresses on internal test (`143/180` vs `144/180`) and on the old Notebook `46` transfer artifact (`72/90` vs `73/90`). It is not promoted. The main MEDDx-scale lesson is that the current system is not merely missing a perfect final classifier: `91/900` workups do not contain the true diagnosis in the candidate pool, with the weakest candidate-generation behavior on RareBench and DDXPlus.
+
+Notebook `53` addresses that exact bottleneck. It keeps the Notebook `51` live traces frozen and expands the formal candidate pool using saved ranked differentials, raw LLM differential top-10, DDXPlus MLP top-5, branch candidates, casebase/graph priors, DDXPlus visible-evidence Bayes top-10, and RareBench visible-HPO top-10. This raises candidate-pool recall from `809/900` to `866/900`, reaches `180/180` on the held-out test split, and transfers from `81/90` to `89/90` on the old Notebook `46` artifact. This passes the Stage 1 minimum and strong pool-recovery targets.
+
+Notebook `54` then tests whether the recovered pool can be resolved without label leakage. The selected L2 logistic evidence-card resolver is trained on case-blocked train cases only and uses a validation-selected conservative threshold. It improves the held-out test split from `150/180` to `154/180` with zero regressions, equivalent to `770/900`, and transfers positively from `73/90` to `75/90` on the old Notebook `46` artifact. The all-900 final row is `742/900`, but that row includes train cases and is therefore diagnostic rather than the generalization claim.
+
+Notebook `55` freezes the integrated policy, `integrated_recovered_pool_evidence_card_policy_v1`. The offline gate audit passes: pool recall `866/900`, held-out final `154/180`, old-artifact transfer `75/90`, zero held-out regressions, and manageable pool size with mean `13.02` and p90 `22.0`. The policy is ready for a small live pilot, but not yet a prospectively confirmed MEDDx-scale final result.
+
+Notebook `56` implements that small prospective pilot as a prepared runner. It uses the Notebook `51` dataset-native live driver with a new seed and prior-case exclusion, runs `10` cases per dataset at budgets `5`, `10`, and `15`, then applies the frozen Notebook `55` pool/resolver policy without recalibrating on prospective labels. The no-API smoke completed and wrote paired current-vs-integrated artifacts; the live result should be treated as the next clean confirmation test.
+
 ## Key Files
 
 - `notebooks/01_one_shot_classifier_baselines.ipynb`
@@ -742,6 +752,11 @@ Notebook `51` is the response to that limitation. It freezes the current dataset
 - `notebooks/49_meddx_calibrated_candidate_pool_resolver.ipynb`
 - `notebooks/50_meddx_candidate_signal_augmentation_lab.ipynb`
 - `notebooks/51_meddx_scale_hypothesis_branching_confirmation.ipynb`
+- `notebooks/52_meddx_scale_offline_resolver_calibration.ipynb`
+- `notebooks/53_meddx_candidate_pool_recovery_lab.ipynb`
+- `notebooks/54_meddx_evidence_card_resolver_lab.ipynb`
+- `notebooks/55_meddx_integrated_candidate_pool_resolver_policy.ipynb`
+- `notebooks/56_meddx_prospective_integrated_live_confirmation.ipynb`
 - `reports/final_results_summary.md`
 - `reports/hybrid/live_selected_hybrid_stopping_confirmation.md`
 - `reports/hybrid/hybrid_v2_mlp_discriminative_shortlist_report.md`
@@ -780,3 +795,8 @@ Notebook `51` is the response to that limitation. It freezes the current dataset
 - `reports/algorithmic_ledger/meddx_calibrated_candidate_pool_resolver_report.md`
 - `reports/algorithmic_ledger/meddx_candidate_signal_augmentation_lab_report.md`
 - `reports/algorithmic_ledger/meddx_scale_hypothesis_branching_confirmation_report.md`
+- `reports/algorithmic_ledger/meddx_scale_offline_resolver_calibration_report.md`
+- `reports/algorithmic_ledger/meddx_candidate_pool_recovery_lab_report.md`
+- `reports/algorithmic_ledger/meddx_evidence_card_resolver_lab_report.md`
+- `reports/algorithmic_ledger/meddx_integrated_candidate_pool_resolver_policy_report.md`
+- `reports/algorithmic_ledger/meddx_prospective_integrated_live_confirmation_report.md`

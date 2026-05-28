@@ -1,0 +1,10 @@
+cohort,dataset_name,budget,split,workups,current_top1,current_top3,current_top5,current_pool_recall,mean_pool_size,mean_questions
+prospective90,ddxplus,5,train,1,0,0,0,0,8.0,5.0
+prospective90,ddxplus,10,train,1,1,1,1,1,8.0,10.0
+prospective90,ddxplus,15,train,1,1,1,1,1,8.0,14.0
+prospective90,icraft_md,5,train,1,0,1,1,1,4.0,5.0
+prospective90,icraft_md,10,train,1,0,1,1,1,4.0,6.0
+prospective90,icraft_md,15,train,1,0,1,1,1,4.0,6.0
+prospective90,rarebench,5,train,1,1,1,1,1,8.0,5.0
+prospective90,rarebench,10,train,1,1,1,1,1,8.0,6.0
+prospective90,rarebench,15,train,1,1,1,1,1,8.0,6.0

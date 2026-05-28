@@ -1,0 +1,65 @@
+case_id,dataset_name,initial_patient_info,hidden_full_profile,ground_truth_diagnosis,candidate_disease_list,metadata
+test:19782,ddxplus,"Age: 54
+Sex: F
+Initial finding: Do you have pain somewhere, related to your reason for consulting? Answer: yes.","Age: 54.
+Sex: F.
+Known patient findings from the hidden profile:
+- Do you have swollen or painful lymph nodes? Answer: yes.
+- Have you ever had a sexually transmitted infection? Answer: yes.
+- Have you had significantly increased sweating? Answer: yes.
+- Do you have pain somewhere, related to your reason for consulting? Answer: yes.
+- Characterize your pain: Answer: sensitive.
+- Characterize your pain: Answer: a pulse.
+- Do you feel pain somewhere? Answer: back of head.
+- Do you feel pain somewhere? Answer: temple(R).
+- How intense is the pain? Answer: 4.
+- Does the pain radiate to another location? Answer: nowhere.
+- How precisely is the pain located? Answer: 3.
+- How fast did the pain appear? Answer: 0.
+- Are you currently using intravenous drugs? Answer: yes.
+- Do you have a fever (either felt or measured with a thermometer)? Answer: yes.
+- Have you had unprotected sex with more than one partner in the last 6 months? Answer: yes.
+- Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? Answer: yes.
+- What color is the rash? Answer: pale.
+- Do your lesions peel off? Answer: N.
+- Is the rash swollen? Answer: 4.
+- Where is the affected region located? Answer: lower gum.
+- Where is the affected region located? Answer: upper gum.
+- Where is the affected region located? Answer: labia majora(R).
+- Where is the affected region located? Answer: labia majora(L).
+- Where is the affected region located? Answer: internal cheek(L).
+- How intense is the pain caused by the rash? Answer: 8.
+- Is the lesion (or are the lesions) larger than 1cm? Answer: Y.
+- How severe is the itching? Answer: 0.
+- Do you have diffuse (widespread) muscle pain? Answer: yes.
+- Are you feeling nauseous or do you feel like vomiting? Answer: yes.
+- Have you had sexual intercourse with an HIV-positive partner in the past 12 months? Answer: yes.
+- Have you traveled out of the country in the last 4 weeks? Answer: N.",HIV (initial infection),"[""Acute COPD exacerbation / infection"", ""Acute dystonic reactions"", ""Acute laryngitis"", ""Acute otitis media"", ""Acute pulmonary edema"", ""Acute rhinosinusitis"", ""Allergic sinusitis"", ""Anaphylaxis"", ""Anemia"", ""Atrial fibrillation"", ""Boerhaave"", ""Bronchiectasis"", ""Bronchiolitis"", ""Bronchitis"", ""Bronchospasm / acute asthma exacerbation"", ""Chagas"", ""Chronic rhinosinusitis"", ""Cluster headache"", ""Croup"", ""Ebola"", ""Epiglottitis"", ""GERD"", ""Guillain-Barr\u00e9 syndrome"", ""HIV (initial infection)"", ""Influenza"", ""Inguinal hernia"", ""Larygospasm"", ""Localized edema"", ""Myasthenia gravis"", ""Myocarditis"", ""PSVT"", ""Pancreatic neoplasm"", ""Panic attack"", ""Pericarditis"", ""Pneumonia"", ""Possible NSTEMI / STEMI"", ""Pulmonary embolism"", ""Pulmonary neoplasm"", ""SLE"", ""Sarcoidosis"", ""Scombroid food poisoning"", ""Spontaneous pneumothorax"", ""Spontaneous rib fracture"", ""Stable angina"", ""Tuberculosis"", ""URTI"", ""Unstable angina"", ""Viral pharyngitis"", ""Whooping cough""]","{""age"": 54, ""sex"": ""F"", ""official_differential"": [""HIV (initial infection)"", ""Chagas"", ""Possible NSTEMI / STEMI"", ""Scombroid food poisoning"", ""Sarcoidosis""], ""initial_evidence"": ""E_53"", ""evidence_tokens"": [""E_9"", ""E_27"", ""E_50"", ""E_53"", ""E_54_@_V_161"", ""E_54_@_V_184"", ""E_55_@_V_25"", ""E_55_@_V_166"", ""E_56_@_4"", ""E_57_@_V_123"", ""E_58_@_3"", ""E_59_@_0"", ""E_61"", ""E_91"", ""E_115"", ""E_129"", ""E_130_@_V_138"", ""E_131_@_V_10"", ""E_132_@_4"", ""E_133_@_V_90"", ""E_133_@_V_91"", ""E_133_@_V_95"", ""E_133_@_V_96"", ""E_133_@_V_111"", ""E_134_@_8"", ""E_135_@_V_12"", ""E_136_@_0"", ""E_144"", ""E_148"", ""E_189"", ""E_204_@_V_10""], ""span_token_map"": {""Do you have swollen or painful lymph nodes? Answer: yes."": ""E_9"", ""Have you ever had a sexually transmitted infection? Answer: yes."": ""E_27"", ""Have you had significantly increased sweating? Answer: yes."": ""E_50"", ""Do you have pain somewhere, related to your reason for consulting? Answer: yes."": ""E_53"", ""Characterize your pain: Answer: sensitive."": ""E_54_@_V_161"", ""Characterize your pain: Answer: a pulse."": ""E_54_@_V_184"", ""Do you feel pain somewhere? Answer: back of head."": ""E_55_@_V_25"", ""Do you feel pain somewhere? Answer: temple(R)."": ""E_55_@_V_166"", ""How intense is the pain? Answer: 4."": ""E_56_@_4"", ""Does the pain radiate to another location? Answer: nowhere."": ""E_57_@_V_123"", ""How precisely is the pain located? Answer: 3."": ""E_58_@_3"", ""How fast did the pain appear? Answer: 0."": ""E_59_@_0"", ""Are you currently using intravenous drugs? Answer: yes."": ""E_61"", ""Do you have a fever (either felt or measured with a thermometer)? Answer: yes."": ""E_91"", ""Have you had unprotected sex with more than one partner in the last 6 months? Answer: yes."": ""E_115"", ""Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for? Answer: yes."": ""E_129"", ""What color is the rash? Answer: pale."": ""E_130_@_V_138"", ""Do your lesions peel off? Answer: N."": ""E_131_@_V_10"", ""Is the rash swollen? Answer: 4."": ""E_132_@_4"", ""Where is the affected region located? Answer: lower gum."": ""E_133_@_V_90"", ""Where is the affected region located? Answer: upper gum."": ""E_133_@_V_91"", ""Where is the affected region located? Answer: labia majora(R)."": ""E_133_@_V_95"", ""Where is the affected region located? Answer: labia majora(L)."": ""E_133_@_V_96"", ""Where is the affected region located? Answer: internal cheek(L)."": ""E_133_@_V_111"", ""How intense is the pain caused by the rash? Answer: 8."": ""E_134_@_8"", ""Is the lesion (or are the lesions) larger than 1cm? Answer: Y."": ""E_135_@_V_12"", ""How severe is the itching? Answer: 0."": ""E_136_@_0"", ""Do you have diffuse (widespread) muscle pain? Answer: yes."": ""E_144"", ""Are you feeling nauseous or do you feel like vomiting? Answer: yes."": ""E_148"", ""Have you had sexual intercourse with an HIV-positive partner in the past 12 months? Answer: yes."": ""E_189"", ""Have you traveled out of the country in the last 4 weeks? Answer: N."": ""E_204_@_V_10""}, ""source"": ""ddxplus_structured_to_profile_v1""}"
+icraft_md:26,icraft_md,"Age: 13 years
+Sex: male
+Chief complaint: A 13-year-old boy presents to the dermatology clinic concerned about the development of red, itchy, and sometimes painful bumps on his fingers","- A 13-year-old boy presents to the dermatology clinic concerned about the development of red, itchy, and sometimes painful bumps on his fingers
+- He first noted seeing the lesions 2 months prior, in early December
+- Although the initial lesions have since resolved, new lesions appeared after a skiing trip the previous weekend
+- The patient is otherwise healthy, with no significant past medical history, and he does not take any medications
+- Physical examination reveals erythematous, tender papules on the lateral and dorsal aspects of the distal fingers.
+- 1. A 13-year-old boy presents to the dermatology clinic.
+- 2. The boy is concerned about red, itchy, and sometimes painful bumps on his fingers.
+- 3. He first noticed the lesions 2 months ago.
+- 4. The lesions first appeared in early December.
+- 5. The initial lesions have resolved.
+- 6. New lesions appeared after a skiing trip the previous weekend.
+- 7. The patient is otherwise healthy.
+- 8. The patient has no significant past medical history.
+- 9. The patient does not take any medications.
+- 10. Physical examination reveals erythematous, tender papules.
+- 11. The papules are located on the lateral and dorsal aspects of the distal fingers.",Perniosis,"[""Raynaud disease"", ""Cryoglobulinemia,"", ""Perniosis"", ""Chronic myelomonocytic leukemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl"", ""source"": ""meddxagent_icraftmd_jsonl_v1"", ""answer_idx"": ""C"", ""all_diagnosis_options_count"": 393, ""case_option_count"": 4}"
+rarebench:RAMEDIS:477,rarebench,"- Abnormality of prenatal development or birth
+- Death in infancy","- Abnormality of prenatal development or birth
+- Death in infancy
+- Vomiting
+- Neonatal death
+- Death in childhood
+- Gastrointestinal inflammation
+- Recurrent viral infections
+- Decreased plasma free carnitine
+- Decreased 3-hydroxyacyl-CoA dehydrogenase level",Medium chain acyl-CoA dehydrogenase deficiency,"[""3-Hydroxy-3-methylglutaryl-CoA lyase deficiency"", ""3-Methylcrotonyl-CoA carboxylase deficiency"", ""3-Methylglutaconic aciduria type I"", ""3-Methylglutaconic aciduria type IV"", ""Acute intermittent porphyria"", ""Alkaptonuria"", ""Argininemia"", ""Argininosuccinic aciduria"", ""Beta-ketothiolase deficiency"", ""Biotinidase deficiency"", ""Canavan disease"", ""Carbamoyl-phosphate synthetase 1 deficiency"", ""Carnitine palmitoyltransferase I deficiency"", ""Carnitine palmitoyltransferase II deficiency"", ""Carnitine-acylcarnitine translocase deficiency"", ""Citrullinemia type I"", ""Citrullinemia type II"", ""Congenital adrenal hyperplasia"", ""Congenital hyperinsulinism"", ""Cystinuria"", ""D-2-hydroxyglutaric aciduria"", ""Dihydropyrimidine dehydrogenase deficiency"", ""Dihydropyrimidinuria"", ""Dopa-responsive dystonia"", ""Fanconi-Bickel syndrome"", ""Fructose-1,6-bisphosphatase deficiency"", ""Galactosemia"", ""Glutaric acidemia type I"", ""Glutathione synthetase deficiency"", ""Glycerol kinase deficiency"", ""Glycogen storage disease type Ia"", ""Glycogen storage disease type Ib"", ""Glycogen storage disease type III"", ""Glycogen storage disease type IX"", ""Gyrate atrophy of choroid and retina"", ""Hawkinsinuria"", ""Hereditary fructose intolerance"", ""Holocarboxylase synthetase deficiency"", ""Homocystinuria"", ""Hyperphenylalaninemia"", ""Isovaleric acidemia"", ""Krabbe disease"", ""L-2-hydroxyglutaric aciduria"", ""Maple syrup urine disease"", ""Maturity-onset diabetes of the young"", ""Medium chain acyl-CoA dehydrogenase deficiency"", ""Methylmalonic acidemia"", ""Mitochondrial complex IV deficiency"", ""Mitochondrial DNA depletion syndrome 3"", ""Mucopolysaccharidosis type II"", ""N-acetylglutamate synthase deficiency"", ""Neuronal ceroid lipofuscinosis"", ""Ornithine transcarbamylase deficiency"", ""Orotic aciduria"", ""Pearson syndrome"", ""Phenylketonuria"", ""PMM2-CDG"", ""Primary carnitine deficiency"", ""Propionic acidemia"", ""Refsum disease"", ""Short chain acyl-CoA dehydrogenase deficiency"", ""Smith-Lemli-Opitz syndrome"", ""Succinic semialdehyde dehydrogenase deficiency"", ""Tyrosinemia type 1"", ""Tyrosinemia type 2"", ""Tyrosinemia type III"", ""Very long-chain acyl-CoA dehydrogenase deficiency"", ""Wilson disease"", ""X-linked hypophosphatemia""]","{""source_path"": ""/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip"", ""mapping_dir"": ""/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/rarebench"", ""source"": ""rarebench_hf_zip_with_meddxagent_mappings_v1"", ""subset"": ""RAMEDIS"", ""subset_candidate_count"": 69, ""raw_disease_codes"": [""OMIM:201450"", ""ORPHA:42"", ""CCRD:70""]}"

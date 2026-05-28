@@ -1,0 +1,10 @@
+dataset_name,budget,split,failure_type,num_workups
+ddxplus,5,train,candidate_pool_recovered_truth,1
+ddxplus,10,train,already_correct,1
+ddxplus,15,train,already_correct,1
+icraft_md,5,train,resolver_failure_truth_already_in_current_pool,1
+icraft_md,10,train,resolver_failure_truth_already_in_current_pool,1
+icraft_md,15,train,resolver_failure_truth_already_in_current_pool,1
+rarebench,5,train,already_correct,1
+rarebench,10,train,already_correct,1
+rarebench,15,train,already_correct,1

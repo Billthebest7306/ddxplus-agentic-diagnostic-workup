@@ -1,0 +1,8 @@
+{
+  "base_live_run_name": "meddx_prospective_integrated_live_confirmation_dryrun_smoke_v1_prospective90",
+  "cohort_name": "prospective90",
+  "final_summary_truncated_for_small_smoke_runs": true,
+  "selected_policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+  "source_script": "scripts/meddx_candidate_pool_recovery_lab_nb53.py",
+  "stage": "prospective_candidate_pool_materialization"
+}

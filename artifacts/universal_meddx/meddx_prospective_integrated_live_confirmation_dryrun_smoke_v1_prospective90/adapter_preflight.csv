@@ -1,0 +1,4 @@
+dataset_name,status,num_cases,source_path,message
+ddxplus,loaded,50,/Users/alfred/Documents/baseline_model/dataset,Loaded 50 DDXPlus cases from test split. Filtered prospective exclusions: 0 removed.
+icraft_md,loaded,11,/Users/alfred/Documents/baseline_model/external/meddxagent/ddxdriver/benchmarks/data/icraftmd/all_craft_md.jsonl,Loaded 50 iCraft-MD cases from MEDDxAgent JSONL. Filtered prospective exclusions: 39 removed.
+rarebench,loaded,47,/Users/alfred/Documents/baseline_model/artifacts/universal_meddx/cache/rarebench_data.zip,Loaded 50 RareBench cases from HuggingFace zip and MEDDxAgent mappings. Filtered prospective exclusions: 3 removed.

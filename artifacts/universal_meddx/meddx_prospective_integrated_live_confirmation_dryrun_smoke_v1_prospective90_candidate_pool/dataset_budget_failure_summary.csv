@@ -1,0 +1,10 @@
+dataset_name,budget,workups,current_top1,current_top3,current_top5,current_pool_recall,pool_misses,resolver_misses,branch_rate,mean_questions
+ddxplus,5,1,0,0,0,0,1,1,0.0,5.0
+ddxplus,10,1,1,1,1,1,0,0,0.0,10.0
+ddxplus,15,1,1,1,1,1,0,0,1.0,14.0
+icraft_md,5,1,0,1,1,1,0,1,1.0,5.0
+icraft_md,10,1,0,1,1,1,0,1,1.0,6.0
+icraft_md,15,1,0,1,1,1,0,1,1.0,6.0
+rarebench,5,1,1,1,1,1,0,0,1.0,5.0
+rarebench,10,1,1,1,1,1,0,0,1.0,6.0
+rarebench,15,1,1,1,1,1,0,0,1.0,6.0

@@ -1,0 +1,23 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+prospective90,ddxplus,test:62404,5,Unstable angina,Stable angina,False,True,True,True,True,8,3,False,0,5.0,0.6839104983768771,0.2875875830650329,test
+prospective90,ddxplus,test:62404,10,Unstable angina,Pancreatic neoplasm,False,False,True,True,True,8,4,False,0,10.0,0.0184607836972936,0.3269463777542114,test
+prospective90,ddxplus,test:62404,15,Unstable angina,SLE,False,False,True,True,True,8,5,False,0,15.0,0.2677963199465865,0.0978902578353881,test
+prospective90,icraft_md,icraft_md:19,5,Type I minocycline hyperpigmentation,Type II minocycline hyperpigmentation,False,True,True,True,True,4,2,False,0,3.0,0.8899999999999999,0.9,train
+prospective90,icraft_md,icraft_md:19,10,Type I minocycline hyperpigmentation,Type II minocycline hyperpigmentation,False,True,True,True,True,4,2,False,0,6.0,0.8899999999999999,0.9,train
+prospective90,icraft_md,icraft_md:19,15,Type I minocycline hyperpigmentation,Type II minocycline hyperpigmentation,False,True,True,True,True,4,2,False,0,5.0,0.8899999999999999,0.9,train
+prospective90,icraft_md,icraft_md:54,10,Tinea incognito,Eczema,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,test
+prospective90,icraft_md,icraft_md:54,15,Tinea incognito,Eczema,False,True,True,True,True,4,2,False,0,7.0,0.8724999999999998,0.85,test
+prospective90,icraft_md,icraft_md:57,5,Pilar cyst,Pilomatricoma,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,train
+prospective90,icraft_md,icraft_md:57,10,Pilar cyst,Pilomatricoma,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,train
+prospective90,icraft_md,icraft_md:57,15,Pilar cyst,Pilomatricoma,False,True,True,True,True,4,2,False,0,5.0,0.8724999999999998,0.85,train
+prospective90,rarebench,rarebench:HMS:65,5,Thrombotic thrombocytopenic purpura,Fabry disease,False,False,False,True,True,8,7,True,1,5.0,1.2770345177973377,0.85,validate
+prospective90,rarebench,rarebench:HMS:65,10,Thrombotic thrombocytopenic purpura,Granulomatosis with polyangiitis,False,False,False,True,True,8,6,True,2,8.0,0.4885666018698513,0.85,validate
+prospective90,rarebench,rarebench:LIRICAL:137,10,"Ectodermal dysplasia 9, Hair/nail type",X-linked hypohidrotic ectodermal dysplasia,False,False,True,True,True,8,4,True,2,10.0,0.0094444444444445,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:296,10,Severe combined immunodeficiency due to adenosine deaminase deficiency,Chronic mucocutaneous candidiasis,False,True,True,True,True,8,2,True,2,10.0,0.4859785534006158,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:296,15,Severe combined immunodeficiency due to adenosine deaminase deficiency,Chronic mucocutaneous candidiasis,False,True,True,True,True,8,2,True,2,9.0,0.7054308638840316,0.85,train
+prospective90,rarebench,rarebench:RAMEDIS:229,5,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,True,True,True,8,5,False,0,3.0,1.3571472103454705,0.85,train
+prospective90,rarebench,rarebench:RAMEDIS:229,10,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,True,True,True,8,5,False,0,6.0,1.3827386227726923,0.85,train
+prospective90,rarebench,rarebench:RAMEDIS:229,15,Citrullinemia type I,Ornithine transcarbamylase deficiency,False,False,True,True,True,8,5,False,0,5.0,1.382033890978395,0.85,train
+prospective90,rarebench,rarebench:RAMEDIS:429,5,Galactosemia,Phenylketonuria,False,True,True,True,True,8,2,False,0,3.0,1.0851211138699952,0.9,test
+prospective90,rarebench,rarebench:RAMEDIS:429,10,Galactosemia,Phenylketonuria,False,False,False,True,True,8,7,False,0,4.0,1.2577359226898055,0.95,test
+prospective90,rarebench,rarebench:RAMEDIS:429,15,Galactosemia,Phenylketonuria,False,True,True,True,True,8,2,False,0,5.0,1.1171333256603662,0.95,test

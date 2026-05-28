@@ -804,6 +804,51 @@ Notebook `51` is the next live-run scaffold:
 
 It freezes the current dataset-native MEDDx architecture and scales the live run to the original MEDDx-style shape: `100` cases per dataset, budgets `[5, 10, 15]`, and `900` budgeted workups. Sampling follows the MEDDxAgent driver pattern: shuffle patients with seed `42`, then take the first `N`. It keeps hypothesis branching and candidate-pool resolver exports, but does not train a new offline optimizer inside the live notebook. The no-API smoke passed and confirmed the artifact contract. After the live run, use its artifacts to train/calibrate the next resolver, then apply that frozen layer back to the old `90`-workup Notebook `46` artifact as a cross-cohort transfer test.
 
+Notebook `52` performs that offline resolver calibration:
+
+- `notebooks/52_meddx_scale_offline_resolver_calibration.ipynb`
+- `scripts/meddx_scale_offline_resolver_calibration_nb52.py`
+- `reports/algorithmic_ledger/meddx_scale_offline_resolver_calibration_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_scale_offline_resolver_calibration_v1/`
+
+The corrected Notebook `51` live artifact is sobering: `715/900` top-1, `773/900` top-3, `791/900` top-5, and `809/900` candidate-pool recall. The selected L2 logistic resolver gives a tiny validation gain (`148/180` vs `147/180`) but regresses on internal test (`143/180` vs `144/180`) and on the old Notebook `46` transfer set (`72/90` vs `73/90`). It is not promoted. The main conclusion is that the current MEDDx-scale bottleneck is not only resolver discrimination; `91/900` workups are candidate-generation misses, especially in DDXPlus and RareBench.
+
+Notebook `53` repairs that ceiling as a no-API Stage 1 candidate-pool recovery layer:
+
+- `notebooks/53_meddx_candidate_pool_recovery_lab.ipynb`
+- `scripts/meddx_candidate_pool_recovery_lab_nb53.py`
+- `reports/algorithmic_ledger/meddx_candidate_pool_recovery_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_recovery_lab_v1/`
+
+The selected pool policy unions the current pool with saved ranked differentials, raw LLM differential top-10, DDXPlus MLP top-5, branch differentials, casebase/graph priors, DDXPlus visible-evidence Bayes top-10, and RareBench visible-HPO top-10. It raises pool recall from `809/900` to `866/900`, clears the strong Stage 1 target, reaches `180/180` on the held-out test split, and transfers from `81/90` to `89/90` on the old Notebook `46` artifact.
+
+Notebook `54` then trains the Stage 2 evidence-card resolver over that recovered pool:
+
+- `notebooks/54_meddx_evidence_card_resolver_lab.ipynb`
+- `scripts/meddx_evidence_card_resolver_lab_nb54.py`
+- `reports/algorithmic_ledger/meddx_evidence_card_resolver_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_evidence_card_resolver_lab_v1/`
+
+The selected resolver is an L2 logistic candidate scorer with a validation-selected conservative threshold. It improves the held-out case-blocked test split from `150/180` to `154/180` with zero regressions, equivalent to `770/900`, and transfers positively on the old Notebook `46` artifact from `73/90` to `75/90`.
+
+Notebook `55` freezes the integrated policy:
+
+- `notebooks/55_meddx_integrated_candidate_pool_resolver_policy.ipynb`
+- `scripts/meddx_integrated_candidate_pool_resolver_policy_nb55.py`
+- `reports/algorithmic_ledger/meddx_integrated_candidate_pool_resolver_policy_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_integrated_candidate_pool_resolver_policy_v1/`
+
+The integrated policy passes the offline gate audit and is ready for a small live pilot. Keep the claim precise: the all-900 final row (`742/900`) is diagnostic because it includes train cases; the defensible generalization evidence is the held-out test improvement plus old-artifact transfer.
+
+Notebook `56` is that small prospective live confirmation runner:
+
+- `notebooks/56_meddx_prospective_integrated_live_confirmation.ipynb`
+- `scripts/meddx_prospective_integrated_live_confirmation_nb56.py`
+- `reports/algorithmic_ledger/meddx_prospective_integrated_live_confirmation_report.md`
+- dry-run final artifact root: `artifacts/universal_meddx/meddx_prospective_integrated_live_confirmation_dryrun_smoke_v1_prospective90_frozen_policy/`
+
+It runs `10` fresh cases per dataset at budgets `[5, 10, 15]` for `90` prospective workups, excluding prior artifact cases where possible. It reports the current live driver, the frozen Notebook `55` integrated policy, and the candidate-pool oracle side by side. The no-API dry-run smoke completed; for the real run, set `RUN_LIVE_API = True` in the first notebook cell and keep the frozen policy/threshold unchanged.
+
 ## Current Practical Recommendation
 
 For the next clean experiment:
@@ -840,6 +885,11 @@ For the next clean experiment:
 - treat notebook `49` as the strongest current MEDDx resolver calibration candidate: a system-wide logistic candidate-pool resolver reaches `78/90` case-blocked with zero regressions, while a stricter nested threshold stress test reaches `77/90`; freeze and prospectively confirm before making a final universal claim
 - treat notebook `50` as the MEDDx candidate-signal audit: augmented signals improve top-3/top-5 to `83/90` and label-fit top-1 to `85/90`, but the case-blocked top-1 falls to `77/90`, so Notebook `49` remains the stronger top-1 candidate
 - treat notebook `51` as the MEDDx-scale live confirmation runner: `100` cases per dataset, budgets `[5, 10, 15]`, all three datasets enabled, hypothesis branching preserved, and no-API smoke complete
+- treat notebook `52` as the MEDDx-scale offline calibration/failure-map result: the selected resolver is not promoted because it regresses on internal test and old-90 transfer, while the scale candidate-pool oracle is only `809/900`
+- treat notebook `53` as the promoted MEDDx Stage 1 candidate-pool recovery result: selected pool recall improves from `809/900` to `866/900`, reaches `180/180` on the held-out test split, and transfers from `81/90` to `89/90` on the old Notebook `46` artifact
+- treat notebook `54` as the promoted MEDDx Stage 2 resolver result: the selected evidence-card logistic resolver improves the held-out test split from `150/180` to `154/180` with zero regressions and transfers from `73/90` to `75/90`
+- treat notebook `55` as the frozen integrated MEDDx offline policy gate: candidate-pool recovery target passed, held-out final target passed, old-artifact transfer passed, and the policy is ready for a small live pilot; do not overclaim the diagnostic all-900 final row as held-out performance
+- treat notebook `56` as the prepared prospective MEDDx live confirmation runner: `90` workups across DDXPlus, iCraft-MD, and RareBench, frozen Notebook `55` post-processing, paired current-vs-integrated outputs, and no prospective recalibration
 - use notebook `25` if collecting more live base trajectories; it runs rescue-disabled base replicates for the branching/divergence lab
 - still present notebook `13` as the live evidence-acquisition backbone; present Notebook `23` as an offline enhancement candidate rather than a live-confirmed replacement
 - if improving the method after Notebook `41`, analyze the held-out 100-case artifacts before adding any new controller; the intended next comparison is a capped-cost MEDDxAgent-style evidence-budget table, not another retrospective calibration layer

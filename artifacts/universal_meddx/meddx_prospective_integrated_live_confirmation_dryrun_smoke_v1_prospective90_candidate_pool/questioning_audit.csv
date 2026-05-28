@@ -1,0 +1,10 @@
+dataset_name,case_id,budget,split,ground_truth_diagnosis,current_candidate_pool_has_truth,current_correct_top1,branch_triggered,branch_count,num_questions,resolver_margin,confidence
+ddxplus,test:19782,5,train,HIV (initial infection),False,False,False,0,5.0,0.0938360727722671,0.1453487575054168
+ddxplus,test:19782,10,train,HIV (initial infection),True,True,False,0,10.0,0.8827791600545947,0.875681459903717
+ddxplus,test:19782,15,train,HIV (initial infection),True,True,True,2,14.0,0.1572208399454053,0.875681459903717
+icraft_md,icraft_md:26,5,train,Perniosis,True,False,True,2,5.0,0.2908333333333335,0.35
+icraft_md,icraft_md:26,10,train,Perniosis,True,False,True,2,6.0,0.2908333333333335,0.35
+icraft_md,icraft_md:26,15,train,Perniosis,True,False,True,2,6.0,0.2908333333333335,0.35
+rarebench,rarebench:RAMEDIS:477,5,train,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,2,5.0,0.0330822573996449,0.35
+rarebench,rarebench:RAMEDIS:477,10,train,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,2,6.0,0.0330822573996449,0.35
+rarebench,rarebench:RAMEDIS:477,15,train,Medium chain acyl-CoA dehydrogenase deficiency,True,True,True,2,6.0,0.0330822573996449,0.35

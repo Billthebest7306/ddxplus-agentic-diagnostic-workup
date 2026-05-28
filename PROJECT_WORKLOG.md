@@ -6383,3 +6383,186 @@ Verification:
 Interpretation:
 
 This notebook is intentionally not another retrospective optimizer. It produces the MEDDx-scale live corpus we need before claiming generalization. After it runs, train/calibrate the next offline resolver on this large cohort, freeze the policy, then apply it back to the old Notebook `46` `90`-workup artifact as a cross-cohort transfer/regression test.
+
+## 100. Notebook 52 MEDDx-Scale Offline Resolver Calibration
+
+Added Notebook `52` as the no-API offline calibration layer over the completed Notebook `51` live artifacts.
+
+- notebook: `notebooks/52_meddx_scale_offline_resolver_calibration.ipynb`
+- script mirror: `scripts/meddx_scale_offline_resolver_calibration_nb52.py`
+- report: `reports/algorithmic_ledger/meddx_scale_offline_resolver_calibration_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_scale_offline_resolver_calibration_v1/`
+
+Purpose:
+
+Use the new MEDDx-scale live corpus (`900` workups: `100` cases per dataset at budgets `5`, `10`, and `15`) to test whether a calibrated candidate-pool resolver can repair the disappointing Notebook `51` final results and transfer back to the older Notebook `46` `90`-workup artifact.
+
+Notebook `51` live result:
+
+| Slice | Top-1 | Top-3 | Top-5 | Pool recall | Mean questions |
+|---|---:|---:|---:|---:|---:|
+| Overall | 715/900 | 773/900 | 791/900 | 809/900 | 5.47 |
+| DDXPlus B5/B10/B15 | 72/78/79 of 100 | 80/84/85 of 100 | 85/87/89 of 100 | 87/90/90 of 100 | 4.42/7.63/9.69 |
+| iCraft-MD B5/B10/B15 | 93/94/93 of 100 | 100/100/99 of 100 | 100/100/100 of 100 | 100/100/100 of 100 | 3.10/4.18/5.24 |
+| RareBench B5/B10/B15 | 70/69/67 of 100 | 75/75/75 of 100 | 78/75/77 of 100 | 82/79/81 of 100 | 3.52/5.18/6.23 |
+
+Calibration result:
+
+- selected model: L2 logistic candidate scorer
+- feature count after leakage guard: `55`
+- validation split: `148/180` vs current `147/180`, `1` win, `0` regressions
+- internal test split: `143/180` vs current `144/180`, `1` win, `2` regressions
+- old Notebook `46` transfer: `72/90` vs current `73/90`, `2` wins, `3` regressions
+- case-blocked OOF logistic diagnostic: `729/900`, `16` wins, `2` regressions
+- candidate-pool oracle: `809/900`
+
+Implementation note:
+
+The first execution exposed a feature-leakage bug: `is_truth_candidate` was accidentally collected by the generic `is_` feature prefix. The script now excludes label-derived columns and raises if feature names contain truth/correct/top-k label fragments. The final artifact was regenerated after this guard passed.
+
+Decision:
+
+Notebook `52` is not promoted. The selected offline resolver does not transfer cleanly and does not solve the scale run. The main finding is diagnostic: the candidate-pool ceiling is only `809/900`, with `91/900` workups missing the true diagnosis from the candidate pool. iCraft-MD is mostly a resolver-discrimination problem, but DDXPlus and especially RareBench still have candidate-generation/evidence-representation misses. The next credible MEDDx improvement should repair candidate generation and dataset-native evidence signals before trying another stronger resolver.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_scale_offline_resolver_calibration_nb52.py` passed
+- Notebook `52` code cells parsed by construction from the script mirror
+- script executed top-to-bottom with no API calls
+- artifact contract passed
+- `selected_offline_resolver_policy.json` records `claim_status = "not_promoted"`
+
+## 101. Notebook 53 MEDDx Candidate-Pool Recovery Lab
+
+Added Notebook `53` as the Stage 1 no-API candidate-pool recovery lab over the completed Notebook `51` MEDDx-scale artifact.
+
+- notebook: `notebooks/53_meddx_candidate_pool_recovery_lab.ipynb`
+- script mirror: `scripts/meddx_candidate_pool_recovery_lab_nb53.py`
+- report: `reports/algorithmic_ledger/meddx_candidate_pool_recovery_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_candidate_pool_recovery_lab_v1/`
+
+Selected pool policy:
+
+`saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1`
+
+It unions the current resolver pool with saved ranked differentials, raw LLM differential top-10, DDXPlus MLP top-5, branch differentials, casebase prior, RareBench graph top label, DDXPlus visible-evidence Bayes top-10, and RareBench visible-HPO exemplar top-10.
+
+Result:
+
+| Evaluation | Current pool recall | Selected pool recall | Recoveries | Mean pool size | P90 pool size |
+|---|---:|---:|---:|---:|---:|
+| Scale all | 809/900 | 866/900 | 57 | 13.02 | 22.0 |
+| Scale held-out test | 161/180 | 180/180 | 19 | 13.27 | 23.0 |
+| Old Notebook 46 transfer | 81/90 | 89/90 | 8 | 12.62 | 20.2 |
+
+Decision:
+
+Stage 1 is promoted. The selected pool policy clears both the minimum target (`>=850/900`) and the strong target (`>=865/900`) with zero pool-regression cases versus the current pool and positive old-artifact transfer.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_candidate_pool_recovery_lab_nb53.py` passed
+- Notebook `53` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- `selected_policy.json` records `stage1_candidate_pool_recovery_passed = true`
+
+## 102. Notebook 54 MEDDx Evidence-Card Resolver Lab
+
+Added Notebook `54` as the Stage 2 resolver lab over the recovered Notebook `53` pool.
+
+- notebook: `notebooks/54_meddx_evidence_card_resolver_lab.ipynb`
+- script mirror: `scripts/meddx_evidence_card_resolver_lab_nb54.py`
+- report: `reports/algorithmic_ledger/meddx_evidence_card_resolver_lab_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_evidence_card_resolver_lab_v1/`
+
+Selected resolver:
+
+`recovered_pool_logistic_evidence_card_resolver_v1`
+
+- model: L2 logistic candidate scorer, `C=2.0`, class-balanced
+- threshold: `0.8`, selected on validation only
+- action: preserve current prediction unless the learned top candidate clears the threshold
+
+Result:
+
+| Evaluation | Current | Selected resolver | Top-3 | Top-5 | Wins | Regressions |
+|---|---:|---:|---:|---:|---:|---:|
+| Validation | 145/180 | 148/180 | 157/180 | 159/180 | 3 | 0 |
+| Held-out test | 150/180 | 154/180 | 167/180 | 170/180 | 4 | 0 |
+| Scale all diagnostic | 715/900 | 742/900 | 811/900 | 829/900 | 27 | 0 |
+| Old Notebook 46 transfer | 73/90 | 75/90 | 81/90 | 82/90 | 2 | 0 |
+
+Decision:
+
+Stage 2 is promoted to integration. The held-out test result `154/180` is equivalent to `770/900`, clearing the minimum final target of `>=760/900` under case-blocked evaluation. The all-900 row is diagnostic because it includes train cases and should not be stated as the generalization claim.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_evidence_card_resolver_lab_nb54.py` passed
+- Notebook `54` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- `selected_policy.json` records `stage2_minimum_passed = true` and `transfer_nonnegative = true`
+
+## 103. Notebook 55 MEDDx Integrated Candidate-Pool Resolver Policy
+
+Added Notebook `55` as the Stage 3 integrated frozen policy and offline gate audit.
+
+- notebook: `notebooks/55_meddx_integrated_candidate_pool_resolver_policy.ipynb`
+- script mirror: `scripts/meddx_integrated_candidate_pool_resolver_policy_nb55.py`
+- report: `reports/algorithmic_ledger/meddx_integrated_candidate_pool_resolver_policy_report.md`
+- artifact root: `artifacts/universal_meddx/meddx_integrated_candidate_pool_resolver_policy_v1/`
+
+Frozen policy:
+
+`integrated_recovered_pool_evidence_card_policy_v1`
+
+Gate audit:
+
+| Gate | Target | Observed | Passed |
+|---|---:|---:|---:|
+| Stage 1 scale pool recall | >=850/900 | 866/900 | yes |
+| Stage 1 old90 transfer pool recall | >= current | 89/90 vs 81/90 | yes |
+| Stage 2 case-blocked test top-1 | >=152/180 | 154/180 | yes |
+| Stage 2 old90 transfer top-1 | >= current | 75/90 vs 73/90 | yes |
+| Held-out test regressions | 0 | 0 | yes |
+| Pool size | mean <=15, p90 <=25 | mean 13.02, p90 22.0 | yes |
+
+Decision:
+
+The integrated policy passes the offline gates and is ready for a small live pilot. The honest headline is not the diagnostic all-900 final row; it is candidate-pool recovery to `866/900`, held-out final improvement from `150/180` to `154/180`, and old-artifact transfer from `73/90` to `75/90`.
+
+Verification:
+
+- `python3 -m py_compile scripts/meddx_integrated_candidate_pool_resolver_policy_nb55.py` passed
+- Notebook `55` code cells parsed with `ast.parse`
+- script executed top-to-bottom with no API calls
+- `selected_policy.json` records `offline_gates_passed = true`
+
+## 104. Notebook 56 Prospective Integrated MEDDx Live Confirmation
+
+Added Notebook `56` as the small prospective confirmation runner for the frozen Notebook `55` policy.
+
+- notebook: `notebooks/56_meddx_prospective_integrated_live_confirmation.ipynb`
+- script mirror: `scripts/meddx_prospective_integrated_live_confirmation_nb56.py`
+- report: `reports/algorithmic_ledger/meddx_prospective_integrated_live_confirmation_report.md`
+- intended live driver artifact root: `artifacts/universal_meddx/meddx_prospective_integrated_live_confirmation_v1_prospective90/`
+- intended live final policy root: `artifacts/universal_meddx/meddx_prospective_integrated_live_confirmation_v1_prospective90_frozen_policy/`
+
+Live design:
+
+| Dataset | Unique cases | Budgets | Workups |
+|---|---:|---|---:|
+| DDXPlus | 10 | 5, 10, 15 | 30 |
+| iCraft-MD | 10 | 5, 10, 15 | 30 |
+| RareBench | 10 | 5, 10, 15 | 30 |
+| Total | 30 | 5, 10, 15 | 90 |
+
+Notebook `56` reuses the Notebook `51` dataset-native live driver with seed `560`, excludes prior artifact case IDs where possible, then materializes the Notebook `53` selected candidate-pool policy and applies the Notebook `54` frozen evidence-card resolver. It reports current live, frozen integrated policy, and candidate-pool oracle rows side by side. Prospective labels are used only for evaluation, not recalibration.
+
+Dry-run verification:
+
+- `python3 -m py_compile scripts/meddx_prospective_integrated_live_confirmation_nb56.py` passed
+- Notebook `56` code cells parsed with `ast.parse`
+- script executed in no-API dry mode over `9` workups
+- dry artifacts were written under `artifacts/universal_meddx/meddx_prospective_integrated_live_confirmation_dryrun_smoke_v1_prospective90*`
+- final artifact contract completed, including paired current-vs-integrated policy outputs

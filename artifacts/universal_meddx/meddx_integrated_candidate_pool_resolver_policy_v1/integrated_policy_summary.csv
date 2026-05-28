@@ -1,0 +1,4 @@
+policy_name,evaluation_scope,cohort,top1_count,num_workups,top1,top3,top5,candidate_pool_recall,wins_vs_current,regressions_vs_current,mean_pool_size,mean_questions,claim_status
+integrated_recovered_pool_evidence_card_policy_v1,scale_all_diagnostic,scale_meddx100,742,900,0.8244444444444444,0.9011111111111112,0.9211111111111112,0.9622222222222222,27,0,13.015555555555556,5.4655555555555555,diagnostic_contains_train_cases
+integrated_recovered_pool_evidence_card_policy_v1,scale_case_blocked_test,scale_meddx100,154,180,0.8555555555555555,0.9277777777777778,0.9444444444444444,1.0,4,0,13.266666666666667,5.455555555555556,primary_case_blocked_generalization_gate
+integrated_recovered_pool_evidence_card_policy_v1,transfer_old90,transfer_old90,75,90,0.8333333333333334,0.9,0.9111111111111112,0.9888888888888888,2,0,12.622222222222222,6.0777777777777775,transfer_regression_check

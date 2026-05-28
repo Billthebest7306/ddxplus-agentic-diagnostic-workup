@@ -1,0 +1,9 @@
+cohort,dataset_name,case_id,budget,ground_truth_diagnosis,current_prediction,current_correct_top1,current_gtpa_at_3,current_gtpa_at_5,current_ranked_has_truth_top10,current_candidate_pool_has_truth,current_candidate_pool_size,current_candidate_pool_truth_rank,branch_triggered,branch_count,num_questions,resolver_margin,confidence,split
+prospective90,rarebench,rarebench:HMS:24,5,Kimura disease,Eosinophilic granulomatosis with polyangiitis,False,False,False,False,False,8,999,False,0,3.0,1.8557275148850776,0.85,train
+prospective90,rarebench,rarebench:HMS:24,10,Kimura disease,Eosinophilic granulomatosis with polyangiitis,False,False,False,False,False,8,999,False,0,4.0,1.8356185475662232,0.85,train
+prospective90,rarebench,rarebench:HMS:24,15,Kimura disease,Eosinophilic granulomatosis with polyangiitis,False,False,False,False,False,8,999,False,0,5.0,1.7743051141129491,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:137,5,"Ectodermal dysplasia 9, Hair/nail type",Retinitis pigmentosa,False,False,False,False,False,8,999,False,0,5.0,1.677811788749922,0.75,train
+prospective90,rarebench,rarebench:LIRICAL:137,15,"Ectodermal dysplasia 9, Hair/nail type",Retinitis pigmentosa,False,False,False,False,False,8,999,False,0,6.0,1.8266440307039875,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:241,5,Tietz syndrome,Waardenburg syndrome type 3,False,False,False,False,False,8,999,False,0,3.0,1.543046578894873,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:241,10,Tietz syndrome,Waardenburg syndrome type 3,False,False,False,False,False,8,999,False,0,4.0,1.543046578894873,0.85,train
+prospective90,rarebench,rarebench:LIRICAL:241,15,Tietz syndrome,Waardenburg syndrome type 3,False,False,False,False,False,8,999,False,0,5.0,1.5099999999999998,0.85,train

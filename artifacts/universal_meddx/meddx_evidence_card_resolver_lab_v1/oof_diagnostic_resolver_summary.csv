@@ -1,0 +1,9 @@
+policy_name,model_name,threshold,top1_count,top1,top3,top5,wins_vs_current,regressions_vs_current,changed_predictions,diagnostic_only
+oof_logistic_C2_balanced_raw_diagnostic,logistic_C2_balanced,,752,0.8355555555555556,0.8911111111111111,0.9133333333333333,43,6,92,True
+oof_logistic_C2_balanced_selected_threshold_diagnostic,logistic_C2_balanced,0.8,735,0.8166666666666667,0.8911111111111111,0.9133333333333333,20,0,36,True
+oof_logistic_C05_balanced_raw_diagnostic,logistic_C05_balanced,,753,0.8366666666666667,0.89,0.9111111111111111,42,4,89,True
+oof_logistic_C05_balanced_selected_threshold_diagnostic,logistic_C05_balanced,0.8,734,0.8155555555555556,0.89,0.9111111111111111,19,0,34,True
+oof_extra_trees_diagnostic_raw_diagnostic,extra_trees_diagnostic,,748,0.8311111111111111,0.8855555555555555,0.9044444444444445,34,1,65,True
+oof_extra_trees_diagnostic_selected_threshold_diagnostic,extra_trees_diagnostic,0.8,715,0.7944444444444444,0.8855555555555555,0.9044444444444445,0,0,1,True
+oof_hgb_diagnostic_raw_diagnostic,hgb_diagnostic,,745,0.8277777777777777,0.8944444444444445,0.91,40,10,101,True
+oof_hgb_diagnostic_selected_threshold_diagnostic,hgb_diagnostic,0.8,725,0.8055555555555556,0.8933333333333333,0.9088888888888889,10,0,10,True

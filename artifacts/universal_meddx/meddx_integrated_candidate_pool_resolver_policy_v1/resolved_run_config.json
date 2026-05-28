@@ -1,0 +1,10 @@
+{
+  "artifact_root": "artifacts/universal_meddx/meddx_integrated_candidate_pool_resolver_policy_v1",
+  "no_api_calls": true,
+  "notebook": "notebooks/55_meddx_integrated_candidate_pool_resolver_policy.ipynb",
+  "pool_input": "meddx_candidate_pool_recovery_lab_v1",
+  "resolver_input": "meddx_evidence_card_resolver_lab_v1",
+  "run_name": "meddx_integrated_candidate_pool_resolver_policy_v1",
+  "script": "scripts/meddx_integrated_candidate_pool_resolver_policy_nb55.py",
+  "selected_policy": "integrated_recovered_pool_evidence_card_policy_v1"
+}

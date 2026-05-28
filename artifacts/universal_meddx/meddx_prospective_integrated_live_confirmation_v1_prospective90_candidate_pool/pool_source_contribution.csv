@@ -1,0 +1,19 @@
+cohort,step_index,added_source,cumulative_sources,candidate_pool_recall_count,candidate_pool_recall,new_recoveries_at_step
+prospective90,1,current_pool,"[""current_pool""]",82,0.9111111111111111,82
+prospective90,2,ranked_diff_top10,"[""current_pool"", ""ranked_diff_top10""]",82,0.9111111111111111,0
+prospective90,3,llm_diff_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10""]",84,0.9333333333333333,2
+prospective90,4,ddxplus_mlp_top5,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5""]",84,0.9333333333333333,0
+prospective90,5,branch_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10""]",84,0.9333333333333333,0
+prospective90,6,casebase_prior_top1,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1""]",84,0.9333333333333333,0
+prospective90,7,rarebench_graph_top1,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1""]",84,0.9333333333333333,0
+prospective90,8,ddxplus_visible_bayes_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1"", ""ddxplus_visible_bayes_top10""]",84,0.9333333333333333,0
+prospective90,9,rarebench_visible_hpo_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1"", ""ddxplus_visible_bayes_top10"", ""rarebench_visible_hpo_top10""]",84,0.9333333333333333,0
+transfer_old90,1,current_pool,"[""current_pool""]",81,0.9,81
+transfer_old90,2,ranked_diff_top10,"[""current_pool"", ""ranked_diff_top10""]",81,0.9,0
+transfer_old90,3,llm_diff_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10""]",88,0.9777777777777777,7
+transfer_old90,4,ddxplus_mlp_top5,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5""]",88,0.9777777777777777,0
+transfer_old90,5,branch_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10""]",88,0.9777777777777777,0
+transfer_old90,6,casebase_prior_top1,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1""]",88,0.9777777777777777,0
+transfer_old90,7,rarebench_graph_top1,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1""]",88,0.9777777777777777,0
+transfer_old90,8,ddxplus_visible_bayes_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1"", ""ddxplus_visible_bayes_top10""]",89,0.9888888888888889,1
+transfer_old90,9,rarebench_visible_hpo_top10,"[""current_pool"", ""ranked_diff_top10"", ""llm_diff_top10"", ""ddxplus_mlp_top5"", ""branch_top10"", ""casebase_prior_top1"", ""rarebench_graph_top1"", ""ddxplus_visible_bayes_top10"", ""rarebench_visible_hpo_top10""]",89,0.9888888888888889,0

@@ -1,0 +1,101 @@
+{
+  "deployability": "offline_deployable_final_resolution_layer",
+  "guardrails": [
+    "No API calls.",
+    "No test labels are used as decision-time features.",
+    "Truth/correctness fields are used only for evaluation.",
+    "RareBench HPO scorer uses initial patient phenotypes plus revealed retrieved spans, not the hidden full profile.",
+    "DDXPlus Bayes scorer distinguishes absent, present, and unknown evidence outcomes."
+  ],
+  "inputs_used": {
+    "ddxplus_bayes_tables": "artifacts/bayesian_voi_ledger/bayesian_voi_offline_notebook13_49case_v1",
+    "rarebench_mapping_dir": "external/meddxagent/ddxdriver/benchmarks/data/rarebench",
+    "rarebench_zip": "artifacts/universal_meddx/cache/rarebench_data.zip",
+    "scale_run": "meddx_scale_hypothesis_branching_confirmation_v1_meddx100",
+    "transfer_run": "meddx_aligned_dataset_native_driver_v1_eval30"
+  },
+  "promotion_decision": {
+    "decision": "promote_to_stage2_resolver_lab",
+    "minimum_pool_recall_target": ">=850/900",
+    "stage1_candidate_pool_recovery_passed": true,
+    "strong_pool_recall_target": ">=865/900",
+    "transfer_requirement": "selected policy candidate-pool recall non-negative versus current pool on old Notebook 46 artifact"
+  },
+  "scale_all": {
+    "budget": -1,
+    "candidate_pool_recall": 0.9622222222222222,
+    "candidate_pool_recall_count": 866,
+    "cohort": "scale_meddx100",
+    "current_pool_recall": 0.8988888888888888,
+    "current_pool_recall_count": 809,
+    "dataset_name": "ALL",
+    "lost_truth_vs_current_pool": 0,
+    "mean_pool_size": 13.015555555555556,
+    "mean_pool_size_delta": 6.348888888888889,
+    "mean_questions": 5.4655555555555555,
+    "median_pool_size": 15.0,
+    "num_workups": 900,
+    "p90_pool_size": 22.0,
+    "policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+    "recoveries_vs_current_pool": 57,
+    "split": "ALL"
+  },
+  "scale_test": {
+    "budget": -1,
+    "candidate_pool_recall": 1.0,
+    "candidate_pool_recall_count": 180,
+    "cohort": "scale_meddx100",
+    "current_pool_recall": 0.8944444444444445,
+    "current_pool_recall_count": 161,
+    "dataset_name": "ALL",
+    "lost_truth_vs_current_pool": 0,
+    "mean_pool_size": 13.266666666666667,
+    "mean_pool_size_delta": 6.6,
+    "mean_questions": 5.455555555555556,
+    "median_pool_size": 14.0,
+    "num_workups": 180,
+    "p90_pool_size": 23.0,
+    "policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+    "recoveries_vs_current_pool": 19,
+    "split": "test"
+  },
+  "selected_policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+  "source_order": [
+    "current_pool",
+    "ranked_diff_top10",
+    "llm_diff_top10",
+    "ddxplus_mlp_top5",
+    "branch_top10",
+    "casebase_prior_top1",
+    "rarebench_graph_top1",
+    "ddxplus_visible_bayes_top10",
+    "rarebench_visible_hpo_top10"
+  ],
+  "split_strategy": {
+    "grouping": "dataset_name|case_id; all budgets for each case stay in the same split",
+    "seed": 53,
+    "test_fraction": 0.2,
+    "train_fraction": 0.6,
+    "validate_fraction": 0.2
+  },
+  "stage": "stage1_candidate_pool_recovery",
+  "transfer_old90": {
+    "budget": -1,
+    "candidate_pool_recall": 0.9888888888888889,
+    "candidate_pool_recall_count": 89,
+    "cohort": "transfer_old90",
+    "current_pool_recall": 0.9,
+    "current_pool_recall_count": 81,
+    "dataset_name": "ALL",
+    "lost_truth_vs_current_pool": 0,
+    "mean_pool_size": 12.622222222222222,
+    "mean_pool_size_delta": 5.955555555555556,
+    "mean_questions": 6.0777777777777775,
+    "median_pool_size": 13.5,
+    "num_workups": 90,
+    "p90_pool_size": 20.200000000000017,
+    "policy_name": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+    "recoveries_vs_current_pool": 8,
+    "split": "transfer"
+  }
+}

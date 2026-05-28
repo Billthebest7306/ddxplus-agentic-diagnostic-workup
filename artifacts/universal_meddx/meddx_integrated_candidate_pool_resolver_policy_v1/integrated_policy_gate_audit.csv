@@ -1,0 +1,8 @@
+gate,target,observed,denominator,passed,notes
+stage1_pool_recall_scale_all,>=850/900,866.0,900,True,Strong target is >=865/900.
+stage1_pool_recall_scale_test,held-out split should not collapse,180.0,180,True,Held-out test split had complete recovered-pool recall in this split.
+stage1_pool_transfer_nonnegative,old90 pool recall >= current old90 pool recall,89.0,90,True,Current old90 pool recall was 81/90.
+stage2_final_case_blocked_test,">=152/180, equivalent to >=760/900",154.0,180,True,This is the main deployable generalization gate for the final resolver.
+stage2_final_transfer_nonnegative,old90 final top-1 >= current old90 top-1,75.0,90,True,Current old90 top-1 was 73/90.
+stage2_no_test_regressions,0 regressions on held-out test under selected threshold,0.0,180,True,Validation-selected conservative threshold protects current answers.
+pool_size_manageable,mean <=15 and p90 <=25,13.015555555555556,900,True,p90 pool size was 22.0.

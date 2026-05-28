@@ -1,0 +1,10 @@
+dataset_name,budget,workups,current_top1,current_top3,current_top5,current_pool_recall,pool_misses,resolver_misses,branch_rate,mean_questions
+ddxplus,5,100,72,80,85,87,13,28,0.17,4.42
+ddxplus,10,100,78,84,87,90,10,22,0.32,7.63
+ddxplus,15,100,79,85,89,90,10,21,0.35,9.69
+icraft_md,5,100,93,100,100,100,0,7,0.0,3.1
+icraft_md,10,100,94,100,100,100,0,6,0.0,4.18
+icraft_md,15,100,93,99,100,100,0,7,0.0,5.24
+rarebench,5,100,70,75,78,82,18,30,0.05,3.52
+rarebench,10,100,69,75,75,79,21,31,0.09,5.18
+rarebench,15,100,67,75,77,81,19,33,0.13,6.23

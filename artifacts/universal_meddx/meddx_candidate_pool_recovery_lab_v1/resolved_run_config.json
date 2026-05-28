@@ -1,0 +1,21 @@
+{
+  "artifact_root": "artifacts/universal_meddx/meddx_candidate_pool_recovery_lab_v1",
+  "no_api_calls": true,
+  "notebook": "notebooks/53_meddx_candidate_pool_recovery_lab.ipynb",
+  "run_name": "meddx_candidate_pool_recovery_lab_v1",
+  "scale_input": "meddx_scale_hypothesis_branching_confirmation_v1_meddx100",
+  "script": "scripts/meddx_candidate_pool_recovery_lab_nb53.py",
+  "selected_policy": "saved_sources_plus_ddx_bayes10_plus_visible_rare_hpo10_v1",
+  "selected_source_order": [
+    "current_pool",
+    "ranked_diff_top10",
+    "llm_diff_top10",
+    "ddxplus_mlp_top5",
+    "branch_top10",
+    "casebase_prior_top1",
+    "rarebench_graph_top1",
+    "ddxplus_visible_bayes_top10",
+    "rarebench_visible_hpo_top10"
+  ],
+  "transfer_input": "meddx_aligned_dataset_native_driver_v1_eval30"
+}
